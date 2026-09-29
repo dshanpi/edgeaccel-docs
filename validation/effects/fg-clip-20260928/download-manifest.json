@@ -1,0 +1,117 @@
+{
+  "modelId": "FG-CLIP",
+  "repo": "AXERA-TECH/FG-CLIP",
+  "revision": "1681903f53b528b37d0220e8d5f52291aace19f9",
+  "complete": true,
+  "files": [
+    {
+      "path": "README.md",
+      "size": 1944,
+      "url": "https://huggingface.co/AXERA-TECH/FG-CLIP/resolve/1681903f53b528b37d0220e8d5f52291aace19f9/README.md",
+      "verifiedHashes": {
+        "sha256": "3b497e250892bd68e805a89d0a3ca1ccf1f20cce96d64ebf84ce4dee6ceb6997",
+        "gitBlob": "2699a2e48fa235a5d009d7f517b66917bae100d9"
+      }
+    },
+    {
+      "path": "bedroom.jpg",
+      "size": 46091,
+      "url": "https://huggingface.co/AXERA-TECH/FG-CLIP/resolve/1681903f53b528b37d0220e8d5f52291aace19f9/bedroom.jpg",
+      "verifiedHashes": {
+        "sha256": "5782fca47690e74052ed7587b475dea2975bf9926097da7a80988b2933b85e6c",
+        "gitBlob": "00870cd555f087b076d8af9efa2c05aaced3000d"
+      }
+    },
+    {
+      "path": "fg-clip2-base/config.json",
+      "size": 1107,
+      "url": "https://huggingface.co/AXERA-TECH/FG-CLIP/resolve/1681903f53b528b37d0220e8d5f52291aace19f9/fg-clip2-base/config.json",
+      "verifiedHashes": {
+        "sha256": "030a2f607e2090c2bd580be40361f228e7849381f025e5e2dc8955c84d53fb8f",
+        "gitBlob": "2ad35bbec5f7c2120f50294f207e793891dce09d"
+      }
+    },
+    {
+      "path": "fg-clip2-base/configuration_fgclip2.py",
+      "size": 13267,
+      "url": "https://huggingface.co/AXERA-TECH/FG-CLIP/resolve/1681903f53b528b37d0220e8d5f52291aace19f9/fg-clip2-base/configuration_fgclip2.py",
+      "verifiedHashes": {
+        "sha256": "a554895ce535aacb123cbca527376b8bf97186201f80130d4925b44895674187",
+        "gitBlob": "be2bc5ea41eaf9c0b58aea1f0d69d770e8630ceb"
+      }
+    },
+    {
+      "path": "fg-clip2-base/modeling_fgclip2.py",
+      "size": 60139,
+      "url": "https://huggingface.co/AXERA-TECH/FG-CLIP/resolve/1681903f53b528b37d0220e8d5f52291aace19f9/fg-clip2-base/modeling_fgclip2.py",
+      "verifiedHashes": {
+        "sha256": "190fd0710336a885b74a1a2b3a7054824cd095d28348833ff45f5c0a3458c2d1",
+        "gitBlob": "0e0e9e19c27766666cacafa4f468142830f0894b"
+      }
+    },
+    {
+      "path": "fg-clip2-base/preprocessor_config.json",
+      "size": 393,
+      "url": "https://huggingface.co/AXERA-TECH/FG-CLIP/resolve/1681903f53b528b37d0220e8d5f52291aace19f9/fg-clip2-base/preprocessor_config.json",
+      "verifiedHashes": {
+        "sha256": "1125703e5446d5b6ff4d5893a33bac128cdd21dc12e3dad2469a648fb0ae3bf7",
+        "gitBlob": "0b394ef874fa00123ca80d5456646592a052e50e"
+      }
+    },
+    {
+      "path": "fg-clip2-base/special_tokens_map.json",
+      "size": 636,
+      "url": "https://huggingface.co/AXERA-TECH/FG-CLIP/resolve/1681903f53b528b37d0220e8d5f52291aace19f9/fg-clip2-base/special_tokens_map.json",
+      "verifiedHashes": {
+        "sha256": "baec30ea10906f16adb8c18af7a34023002c1746542612b8b41c9f09e1351351",
+        "gitBlob": "8d6368f7e735fbe4781bf6e956b7c6ad0586df80"
+      }
+    },
+    {
+      "path": "fg-clip2-base/tokenizer.json",
+      "size": 34356304,
+      "url": "https://huggingface.co/AXERA-TECH/FG-CLIP/resolve/1681903f53b528b37d0220e8d5f52291aace19f9/fg-clip2-base/tokenizer.json",
+      "verifiedHashes": {
+        "sha256": "58a1696e79c9d97937389ed116f552a15c84811d7b8023918b86f4bc5775b1b0",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "fg-clip2-base/tokenizer_config.json",
+      "size": 40160,
+      "url": "https://huggingface.co/AXERA-TECH/FG-CLIP/resolve/1681903f53b528b37d0220e8d5f52291aace19f9/fg-clip2-base/tokenizer_config.json",
+      "verifiedHashes": {
+        "sha256": "607049b4766b302a66e31906a6b4729e01f623597c82262fb52e552f0d4f7fb4",
+        "gitBlob": "4a4ff7eb80376befb0d7e78c78c42f635b26e89c"
+      }
+    },
+    {
+      "path": "image_encoder.axmodel",
+      "size": 114512330,
+      "url": "https://huggingface.co/AXERA-TECH/FG-CLIP/resolve/1681903f53b528b37d0220e8d5f52291aace19f9/image_encoder.axmodel",
+      "verifiedHashes": {
+        "sha256": "024194ab037ad0f3046723c0dc15c327a59e1656ac57db7fa012559dc9f5bdaf",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "run_axmodel.py",
+      "size": 2911,
+      "url": "https://huggingface.co/AXERA-TECH/FG-CLIP/resolve/1681903f53b528b37d0220e8d5f52291aace19f9/run_axmodel.py",
+      "verifiedHashes": {
+        "sha256": "cf0ab16c7af21c3bd8dbbc22bc5affff4f2e8417b09267f85c44ac2feb5c5153",
+        "gitBlob": "62545266fe5983c16669a29927fed88b20bb68ab"
+      }
+    },
+    {
+      "path": "text_encoder.axmodel",
+      "size": 881729309,
+      "url": "https://huggingface.co/AXERA-TECH/FG-CLIP/resolve/1681903f53b528b37d0220e8d5f52291aace19f9/text_encoder.axmodel",
+      "verifiedHashes": {
+        "sha256": "bc77a064b4d463f45532bd46e37414582ee0d8562d6c7e900b6c252d092daed7",
+        "gitBlob": null
+      }
+    }
+  ],
+  "runnerSha256": "a9050a59384ffc4a28d9d6158a3292219ffd687acc1ffc01a037c64ac28f0c3e"
+}

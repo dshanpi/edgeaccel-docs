@@ -1,0 +1,127 @@
+{
+  "repo": "AXERA-TECH/LowLightImageEnhancement",
+  "revision": "61df6da7399d54fbe8786235ceb06a5cef1118fa",
+  "complete": true,
+  "files": [
+    {
+      "path": "Zero-DCE/python/axmodel_infer.py",
+      "size": 3021,
+      "sha256": null,
+      "gitBlob": "77392dce64c7c0d5febe9c37122ddc2ce1190cd2",
+      "verifiedHashes": {
+        "sha256": "c8bc085817ca706fd476e4ee5b25e089259738e9dc95fb0ef5ba5d240914f7e7",
+        "gitBlob": "77392dce64c7c0d5febe9c37122ddc2ce1190cd2"
+      }
+    },
+    {
+      "path": "Zero-DCE/pic/10.jpg",
+      "size": 210119,
+      "sha256": "9f281f827c51dbcd7dd30e532e43745109f6f71018db4333371215c4699cd62b",
+      "gitBlob": "dad5c3e4b74e92040949ffe6d04be3e9ea3b6bb4",
+      "verifiedHashes": {
+        "sha256": "9f281f827c51dbcd7dd30e532e43745109f6f71018db4333371215c4699cd62b",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Zero-DCE/model_convert/axmodel/Zero-DCE.axmodel",
+      "size": 149747,
+      "sha256": "d65aa69f66db11d8391d9040ae58cc8de3ed4e0a52001535505dfe773455ad11",
+      "gitBlob": "433d44ba35cccb966ba0bc91bc067fa36bb5989d",
+      "verifiedHashes": {
+        "sha256": "d65aa69f66db11d8391d9040ae58cc8de3ed4e0a52001535505dfe773455ad11",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Zero-DCE++/python/axmodel_infer.py",
+      "size": 4864,
+      "sha256": null,
+      "gitBlob": "a50bcd24b490ef71ac09ec1d1b288af2cf1ecf96",
+      "verifiedHashes": {
+        "sha256": "f3ffcdec57f6d3d1b63952863e898d847509f4726414d4b11995fe258da1dafa",
+        "gitBlob": "a50bcd24b490ef71ac09ec1d1b288af2cf1ecf96"
+      }
+    },
+    {
+      "path": "Zero-DCE++/pic/101_3_.png",
+      "size": 263230,
+      "sha256": "28e77ab4aa0b768aa7568781e85e0cdc17403ed681b028980ec7ef14a569e338",
+      "gitBlob": "1d046323111d374197b4d504b57aa49f5c133b7f",
+      "verifiedHashes": {
+        "sha256": "28e77ab4aa0b768aa7568781e85e0cdc17403ed681b028980ec7ef14a569e338",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Zero-DCE++/model_convert/axmodel/zerodcepp_512_sf8.axmodel",
+      "size": 92713,
+      "sha256": "fbadc0afb701b8328fdbd55e784c900ddd38b48a9abf711f069759072d068496",
+      "gitBlob": "8b0918654d6b22488b36ee12b55ceaf7efe7b152",
+      "verifiedHashes": {
+        "sha256": "fbadc0afb701b8328fdbd55e784c900ddd38b48a9abf711f069759072d068496",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "SCI/python/axmodel_infer.py",
+      "size": 3060,
+      "sha256": null,
+      "gitBlob": "5b800dc4b4b0ac4ce592200e0e62fd26e89b7bfa",
+      "verifiedHashes": {
+        "sha256": "00a448296602ec024ad09b1a69d4f9c411fa1925a2edd43331b668d9d998cd7f",
+        "gitBlob": "5b800dc4b4b0ac4ce592200e0e62fd26e89b7bfa"
+      }
+    },
+    {
+      "path": "SCI/pic/00001.png",
+      "size": 346317,
+      "sha256": "12f3b5d4c3823dbf2503e825944213974248e788726b6f7aebb275b644c76c89",
+      "gitBlob": "f1e17c053794762f6ec9fb5bdbb4ab96fdd9318e",
+      "verifiedHashes": {
+        "sha256": "12f3b5d4c3823dbf2503e825944213974248e788726b6f7aebb275b644c76c89",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "SCI/model_convert/axmodel/SCI_TPAMI_600_400.axmodel",
+      "size": 36705,
+      "sha256": "8aef592a22301da25d534344ff4569a2d6583bb25163e1a706e9cc80a2e7bfc2",
+      "gitBlob": "2b4e2aa98653728677c8d69a0df69eb80814744e",
+      "verifiedHashes": {
+        "sha256": "8aef592a22301da25d534344ff4569a2d6583bb25163e1a706e9cc80a2e7bfc2",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Retinexformer/python/axmodel_infer.py",
+      "size": 5016,
+      "sha256": null,
+      "gitBlob": "d879d1045e8b9b555877d9d61dae53c7bf87f7c1",
+      "verifiedHashes": {
+        "sha256": "c546d9da09c01afb379f2f87d7e888dc328dbf3618a694203af740b2066f65bf",
+        "gitBlob": "d879d1045e8b9b555877d9d61dae53c7bf87f7c1"
+      }
+    },
+    {
+      "path": "Retinexformer/pic/1.png",
+      "size": 346317,
+      "sha256": "12f3b5d4c3823dbf2503e825944213974248e788726b6f7aebb275b644c76c89",
+      "gitBlob": "f1e17c053794762f6ec9fb5bdbb4ab96fdd9318e",
+      "verifiedHashes": {
+        "sha256": "12f3b5d4c3823dbf2503e825944213974248e788726b6f7aebb275b644c76c89",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Retinexformer/model_convert/axmodel/Retinexformer_224_224.axmodel",
+      "size": 4860914,
+      "sha256": "1b91a600d1e973a888f77f8ca113dbfa7e21e3b0a42f303939285164b53b97f5",
+      "gitBlob": "8494db9727c286f25569cbc63ec3dad66afd9e2c",
+      "verifiedHashes": {
+        "sha256": "1b91a600d1e973a888f77f8ca113dbfa7e21e3b0a42f303939285164b53b97f5",
+        "gitBlob": null
+      }
+    }
+  ]
+}

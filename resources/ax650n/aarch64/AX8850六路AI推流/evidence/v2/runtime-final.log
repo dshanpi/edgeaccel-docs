@@ -1,0 +1,238 @@
+json file
+17:08:10.696 INF operator():132 | AXCL engine VNPU kind=0
+17:08:10.759 INF operator():132 | AXCL engine VNPU kind=0
+[2026-09-16T17:08:10.786] [INFO] [T:281473284222656] Added path: /pcd
+[2026-09-16T17:08:10.787] [INFO] [T:281473284222656] RTSP server started on 0.0.0.0:8554
+17:08:10.846 INF operator():132 | AXCL engine VNPU kind=0
+[2026-09-16T17:08:11.068] [INFO] [T:281473284222656] Added path: /vehicle
+{"event":"model","input":[1,640,640,3],"kind":"seg","outputs":[{"bytes":102400,"name":"output0","shape":[1,80,80,4]},{"bytes":2048000,"name":"output1","shape":[1,80,80,80]},{"bytes":819200,"name":"674","shape":[1,80,80,32]},{"bytes":25600,"name":"696","shape":[1,40,40,4]},{"bytes":512000,"name":"736","shape":[1,40,40,80]},{"bytes":204800,"name":"758","shape":[1,40,40,32]},{"bytes":6400,"name":"780","shape":[1,20,20,4]},{"bytes":128000,"name":"820","shape":[1,20,20,80]},{"bytes":51200,"name":"842","shape":[1,20,20,32]},{"bytes":3276800,"name":"935","shape":[1,32,160,160]}]}
+[2026-09-16T17:08:11.245] [INFO] [T:281473284222656] Added path: /seg
+17:08:11.298 INF operator():132 | AXCL engine VNPU kind=0
+[2026-09-16T17:08:11.388] [INFO] [T:281473284222656] Added path: /driving
+{"event":"model","input":[1,768,768,3],"kind":"depth","outputs":[{"bytes":2359296,"name":"depth","shape":[1,1,768,768]}]}
+[2026-09-16T17:08:11.592] [INFO] [T:281473284222656] Added path: /depth
+[2026-09-16T17:08:11.851] [INFO] [T:281473284222656] Added path: /count
+[2026-09-16T17:08:11.859] [INFO] [T:281473284222656] Added path: /overview
+pipeline demux: pkt=0 bytes=435554 pts=0 dur=83333 key=1
+pipeline demux: pkt=0 bytes=195392 pts=120000 dur=40000 key=1
+pipeline demux: pkt=0 bytes=218394 pts=0 dur=33333 key=1
+pipeline demux: pkt=0 bytes=320653 pts=0 dur=33366 key=1
+pipeline demux: pkt=0 bytes=268325 pts=0 dur=41708 key=1
+pipeline demux: pkt=0 bytes=282655 pts=0 dur=41666 key=1
+pipeline demux: pkt=1 bytes=21852 pts=33333 dur=33333 key=0
+pipeline demux: pkt=1 bytes=89831 pts=33366 dur=33366 key=0
+pipeline demux: pkt=1 bytes=68400 pts=240000 dur=40000 key=0
+pipeline demux: pkt=1 bytes=6279 pts=41708 dur=41708 key=0
+pipeline demux: pkt=1 bytes=32929 pts=41666 dur=41666 key=0
+pipeline demux: pkt=2 bytes=44752 pts=66666 dur=33333 key=0
+pipeline demux: pkt=2 bytes=102209 pts=66733 dur=33366 key=0
+pipeline demux: pkt=2 bytes=22014 pts=160000 dur=40000 key=0
+pipeline demux: pkt=1 bytes=39182 pts=83333 dur=83333 key=0
+pipeline demux: pkt=2 bytes=9049 pts=83416 dur=41708 key=0
+pipeline demux: pkt=2 bytes=55694 pts=83333 dur=41666 key=0
+pipeline demux: pkt=2 bytes=64122 pts=166666 dur=83333 key=0
+[2026-09-16T17:08:12.072] [INFO] [T:281472552332992] Auto-updated H264 parameter sets for path: /pcd
+[2026-09-16T17:08:12.253] [INFO] [T:281471320096448] Auto-updated H264 parameter sets for path: /seg
+[2026-09-16T17:08:12.255] [INFO] [T:281470971264704] Auto-updated H264 parameter sets for path: /driving
+[2026-09-16T17:08:12.267] [INFO] [T:281470673284800] Auto-updated H264 parameter sets for path: /depth
+[2026-09-16T17:08:12.271] [INFO] [T:281470518750912] Auto-updated H264 parameter sets for path: /count
+[2026-09-16T17:08:12.447] [INFO] [T:281471587155648] Auto-updated H264 parameter sets for path: /vehicle
+[2026-09-16T17:08:12.518] [INFO] [T:281470388338368] Auto-updated H264 parameter sets for path: /overview
+{"direction":"right_to_left","event":"crossing","id":27,"lr":0,"rl":1}
+{"channels":[{"decoded":121,"dropped":0,"encoded":99,"infer_fps":6.793782375207714,"inferred":68,"lr":0,"mux_errors":0,"name":"pcd","objects":3,"process_ms":87.28826100195874,"result_age":0.13683372300147312,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":249,"dropped":0,"encoded":96,"infer_fps":3.7965254449690167,"inferred":38,"lr":0,"mux_errors":0,"name":"vehicle","objects":5,"process_ms":269.0324560026056,"result_age":0.21068955900045694,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":302,"dropped":0,"encoded":98,"infer_fps":2.397805544190958,"inferred":24,"lr":0,"mux_errors":0,"name":"seg","objects":5,"process_ms":361.986464002257,"result_age":0.01986934399974416,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":302,"dropped":0,"encoded":97,"infer_fps":3.896434009310307,"inferred":39,"lr":0,"mux_errors":0,"name":"driving","objects":0,"process_ms":231.83078600050067,"result_age":0.2139129969982605,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":241,"dropped":0,"encoded":97,"infer_fps":4.196159702334176,"inferred":42,"lr":0,"mux_errors":0,"name":"depth","objects":0,"process_ms":227.10750400074176,"result_age":0.12315067099916632,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":241,"dropped":0,"encoded":97,"infer_fps":3.9963425736515967,"inferred":40,"lr":0,"mux_errors":0,"name":"count","objects":7,"process_ms":231.06748999998672,"result_age":0.1766126600014104,"rl":1,"submit_errors":0,"upload_replaced":0}],"elapsed":10.009151934002148,"event":"stats","overview_dropped":0,"overview_encoded":95,"overview_mux_errors":0}
+[2026-09-16T17:08:22.998] [INFO] [T:281466693537472] RTSP DESCRIBE rtsp://192.168.1.44:8554/pcd
+[2026-09-16T17:08:23.009] [INFO] [T:281466685083328] RTSP DESCRIBE rtsp://192.168.1.44:8554/vehicle
+[2026-09-16T17:08:23.011] [INFO] [T:281466693537472] RTSP DESCRIBE rtsp://192.168.1.44:8554/seg
+[2026-09-16T17:08:23.025] [INFO] [T:281466676629184] RTSP DESCRIBE rtsp://192.168.1.44:8554/driving
+[2026-09-16T17:08:23.040] [INFO] [T:281466668175040] RTSP DESCRIBE rtsp://192.168.1.44:8554/depth
+[2026-09-16T17:08:23.055] [INFO] [T:281466659720896] RTSP DESCRIBE rtsp://192.168.1.44:8554/count
+[2026-09-16T17:08:23.070] [INFO] [T:281466651266752] RTSP DESCRIBE rtsp://192.168.1.44:8554/overview
+{"event":"count_loop_reset","loop":1}
+[2026-09-16T17:08:25.725] [INFO] [T:281466651266752] RTSP OPTIONS rtsp://127.0.0.1:8554/overview
+[2026-09-16T17:08:25.727] [INFO] [T:281466651266752] RTSP DESCRIBE rtsp://127.0.0.1:8554/overview
+[2026-09-16T17:08:25.730] [INFO] [T:281466651266752] RTSP SETUP rtsp://127.0.0.1:8554/overview/stream
+[2026-09-16T17:08:25.736] [INFO] [T:281466651266752] RTSP PLAY rtsp://127.0.0.1:8554/overview/
+[2026-09-16T17:08:25.827] [INFO] [T:281466668175040] RTSP OPTIONS rtsp://127.0.0.1:8554/vehicle
+[2026-09-16T17:08:25.827] [INFO] [T:281466668175040] RTSP DESCRIBE rtsp://127.0.0.1:8554/vehicle
+[2026-09-16T17:08:25.828] [INFO] [T:281466668175040] RTSP SETUP rtsp://127.0.0.1:8554/vehicle/stream
+[2026-09-16T17:08:25.829] [INFO] [T:281466668175040] RTSP PLAY rtsp://127.0.0.1:8554/vehicle/
+[2026-09-16T17:08:25.836] [INFO] [T:281466687315648] RTSP OPTIONS rtsp://127.0.0.1:8554/pcd
+[2026-09-16T17:08:25.837] [INFO] [T:281466687315648] RTSP DESCRIBE rtsp://127.0.0.1:8554/pcd
+[2026-09-16T17:08:25.838] [INFO] [T:281466687315648] RTSP SETUP rtsp://127.0.0.1:8554/pcd/stream
+[2026-09-16T17:08:25.839] [INFO] [T:281466687315648] RTSP PLAY rtsp://127.0.0.1:8554/pcd/
+{"direction":"right_to_left","event":"crossing","id":85,"lr":0,"rl":2}
+[2026-09-16T17:08:29.203] [INFO] [T:281466687315648] RTSP TEARDOWN rtsp://127.0.0.1:8554/pcd/
+[2026-09-16T17:08:29.204] [WARNING] [T:281466687315648] RTSP response send timeout/failed, closing connection
+[2026-09-16T17:08:29.434] [INFO] [T:281466687315648] RTSP OPTIONS rtsp://127.0.0.1:8554/pcd
+[2026-09-16T17:08:29.435] [INFO] [T:281466687315648] RTSP DESCRIBE rtsp://127.0.0.1:8554/pcd
+[2026-09-16T17:08:29.436] [INFO] [T:281466687315648] RTSP SETUP rtsp://127.0.0.1:8554/pcd/stream
+[2026-09-16T17:08:29.437] [INFO] [T:281466687315648] RTSP PLAY rtsp://127.0.0.1:8554/pcd/
+[2026-09-16T17:08:29.546] [INFO] [T:281466668175040] RTSP TEARDOWN rtsp://127.0.0.1:8554/vehicle/
+[2026-09-16T17:08:29.546] [WARNING] [T:281466668175040] RTSP response send timeout/failed, closing connection
+[2026-09-16T17:08:29.794] [INFO] [T:281466668175040] RTSP OPTIONS rtsp://127.0.0.1:8554/vehicle
+[2026-09-16T17:08:29.795] [INFO] [T:281466668175040] RTSP DESCRIBE rtsp://127.0.0.1:8554/vehicle
+[2026-09-16T17:08:29.796] [INFO] [T:281466668175040] RTSP SETUP rtsp://127.0.0.1:8554/vehicle/stream
+[2026-09-16T17:08:29.798] [INFO] [T:281466668175040] RTSP PLAY rtsp://127.0.0.1:8554/vehicle/
+[2026-09-16T17:08:31.089] [WARNING] [T:281466636590784] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:08:31.089] [WARNING] [T:281466636590784] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:08:31.090] [WARNING] [T:281466636590784] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:08:31.090] [WARNING] [T:281466636590784] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:08:31.090] [WARNING] [T:281466636590784] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:08:31.090] [WARNING] [T:281466636590784] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:08:31.090] [WARNING] [T:281466636590784] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:08:31.090] [WARNING] [T:281466636590784] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:08:31.090] [WARNING] [T:281466636590784] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:08:31.090] [WARNING] [T:281466636590784] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:08:31.090] [WARNING] [T:281466636590784] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:08:31.090] [WARNING] [T:281466636590784] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:08:31.090] [WARNING] [T:281466636590784] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:08:31.090] [WARNING] [T:281466636590784] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:08:31.090] [WARNING] [T:281466636590784] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:08:31.090] [WARNING] [T:281466636590784] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:08:31.090] [WARNING] [T:281466636590784] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:08:31.090] [WARNING] [T:281466636590784] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:08:31.090] [WARNING] [T:281466636590784] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:08:31.090] [WARNING] [T:281466636590784] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:08:31.090] [WARNING] [T:281466636590784] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:08:31.090] [WARNING] [T:281466636590784] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:08:31.090] [WARNING] [T:281466636590784] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:08:31.091] [WARNING] [T:281466636590784] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:08:31.091] [WARNING] [T:281466636590784] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:08:31.093] [INFO] [T:281466687315648] RTSP TEARDOWN rtsp://127.0.0.1:8554/pcd/
+[2026-09-16T17:08:31.094] [WARNING] [T:281466687315648] RTSP response send timeout/failed, closing connection
+[2026-09-16T17:08:31.341] [INFO] [T:281466687315648] RTSP OPTIONS rtsp://127.0.0.1:8554/seg
+[2026-09-16T17:08:31.342] [INFO] [T:281466687315648] RTSP DESCRIBE rtsp://127.0.0.1:8554/seg
+[2026-09-16T17:08:31.343] [INFO] [T:281466687315648] RTSP SETUP rtsp://127.0.0.1:8554/seg/stream
+[2026-09-16T17:08:31.345] [INFO] [T:281466687315648] RTSP PLAY rtsp://127.0.0.1:8554/seg/
+[2026-09-16T17:08:31.429] [INFO] [T:281466668175040] RTSP TEARDOWN rtsp://127.0.0.1:8554/vehicle/
+[2026-09-16T17:08:31.430] [WARNING] [T:281466668175040] RTSP response send timeout/failed, closing connection
+[2026-09-16T17:08:31.650] [INFO] [T:281466668175040] RTSP OPTIONS rtsp://127.0.0.1:8554/driving
+[2026-09-16T17:08:31.651] [INFO] [T:281466668175040] RTSP DESCRIBE rtsp://127.0.0.1:8554/driving
+[2026-09-16T17:08:31.653] [INFO] [T:281466668175040] RTSP SETUP rtsp://127.0.0.1:8554/driving/stream
+[2026-09-16T17:08:31.655] [INFO] [T:281466668175040] RTSP PLAY rtsp://127.0.0.1:8554/driving/
+{"channels":[{"decoded":243,"dropped":0,"encoded":201,"infer_fps":7.128493852901069,"inferred":140,"lr":0,"mux_errors":0,"name":"pcd","objects":1,"process_ms":124.97651699959533,"result_age":0.04640135700174142,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":503,"dropped":0,"encoded":198,"infer_fps":3.7622606445866755,"inferred":76,"lr":0,"mux_errors":0,"name":"vehicle","objects":5,"process_ms":317.76774500031024,"result_age":0.05311673600226641,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":606,"dropped":0,"encoded":200,"infer_fps":2.178150899497549,"inferred":46,"lr":0,"mux_errors":0,"name":"seg","objects":8,"process_ms":475.1283160003368,"result_age":0.2797977369991713,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":606,"dropped":0,"encoded":199,"infer_fps":3.8612675036547457,"inferred":78,"lr":0,"mux_errors":0,"name":"driving","objects":0,"process_ms":285.78306999770575,"result_age":0.0717303629971866,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":484,"dropped":0,"encoded":199,"infer_fps":3.9602743627228163,"inferred":82,"lr":0,"mux_errors":0,"name":"depth","objects":0,"process_ms":251.1993350017292,"result_age":0.015011019000667147,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":485,"dropped":0,"encoded":199,"infer_fps":3.663253785518605,"inferred":77,"lr":0,"mux_errors":0,"name":"count","objects":6,"process_ms":271.10980399811524,"result_age":0.12356084099883446,"rl":2,"submit_errors":0,"upload_replaced":0}],"elapsed":20.109462250002252,"event":"stats","overview_dropped":0,"overview_encoded":196,"overview_mux_errors":0}
+[2026-09-16T17:08:35.316] [INFO] [T:281466668175040] RTSP TEARDOWN rtsp://127.0.0.1:8554/driving/
+[2026-09-16T17:08:35.316] [WARNING] [T:281466668175040] RTSP response send timeout/failed, closing connection
+[2026-09-16T17:08:35.354] [WARNING] [T:281466636590784] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:08:35.354] [WARNING] [T:281466636590784] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:08:35.354] [WARNING] [T:281466636590784] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:08:35.354] [WARNING] [T:281466636590784] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:08:35.354] [WARNING] [T:281466636590784] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:08:35.354] [WARNING] [T:281466636590784] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:08:35.354] [WARNING] [T:281466636590784] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:08:35.354] [WARNING] [T:281466636590784] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:08:35.354] [WARNING] [T:281466636590784] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:08:35.354] [WARNING] [T:281466636590784] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:08:35.354] [WARNING] [T:281466636590784] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:08:35.354] [WARNING] [T:281466636590784] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:08:35.354] [WARNING] [T:281466636590784] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:08:35.355] [INFO] [T:281466687315648] RTSP TEARDOWN rtsp://127.0.0.1:8554/seg/
+[2026-09-16T17:08:35.355] [WARNING] [T:281466687315648] RTSP response send timeout/failed, closing connection
+[2026-09-16T17:08:35.566] [INFO] [T:281466687315648] RTSP OPTIONS rtsp://127.0.0.1:8554/driving
+[2026-09-16T17:08:35.567] [INFO] [T:281466687315648] RTSP DESCRIBE rtsp://127.0.0.1:8554/driving
+[2026-09-16T17:08:35.568] [INFO] [T:281466687315648] RTSP SETUP rtsp://127.0.0.1:8554/driving/stream
+[2026-09-16T17:08:35.569] [INFO] [T:281466687315648] RTSP PLAY rtsp://127.0.0.1:8554/driving/
+[2026-09-16T17:08:35.624] [INFO] [T:281466668175040] RTSP OPTIONS rtsp://127.0.0.1:8554/seg
+[2026-09-16T17:08:35.625] [INFO] [T:281466668175040] RTSP DESCRIBE rtsp://127.0.0.1:8554/seg
+[2026-09-16T17:08:35.626] [INFO] [T:281466668175040] RTSP SETUP rtsp://127.0.0.1:8554/seg/stream
+[2026-09-16T17:08:35.627] [INFO] [T:281466668175040] RTSP PLAY rtsp://127.0.0.1:8554/seg/
+[2026-09-16T17:08:37.219] [INFO] [T:281466668175040] RTSP TEARDOWN rtsp://127.0.0.1:8554/seg/
+[2026-09-16T17:08:37.220] [WARNING] [T:281466668175040] RTSP response send timeout/failed, closing connection
+[2026-09-16T17:08:37.342] [INFO] [T:281466687315648] RTSP TEARDOWN rtsp://127.0.0.1:8554/driving/
+[2026-09-16T17:08:37.342] [WARNING] [T:281466687315648] RTSP response send timeout/failed, closing connection
+[2026-09-16T17:08:37.473] [INFO] [T:281466687315648] RTSP OPTIONS rtsp://127.0.0.1:8554/depth
+[2026-09-16T17:08:37.474] [INFO] [T:281466687315648] RTSP DESCRIBE rtsp://127.0.0.1:8554/depth
+[2026-09-16T17:08:37.475] [INFO] [T:281466687315648] RTSP SETUP rtsp://127.0.0.1:8554/depth/stream
+[2026-09-16T17:08:37.476] [INFO] [T:281466687315648] RTSP PLAY rtsp://127.0.0.1:8554/depth/
+{"event":"count_loop_reset","loop":2}
+[2026-09-16T17:08:37.587] [INFO] [T:281466668175040] RTSP OPTIONS rtsp://127.0.0.1:8554/count
+[2026-09-16T17:08:37.587] [INFO] [T:281466668175040] RTSP DESCRIBE rtsp://127.0.0.1:8554/count
+[2026-09-16T17:08:37.588] [INFO] [T:281466668175040] RTSP SETUP rtsp://127.0.0.1:8554/count/stream
+[2026-09-16T17:08:37.589] [INFO] [T:281466668175040] RTSP PLAY rtsp://127.0.0.1:8554/count/
+{"direction":"right_to_left","event":"crossing","id":116,"lr":0,"rl":3}
+[2026-09-16T17:08:41.308] [INFO] [T:281466687315648] RTSP TEARDOWN rtsp://127.0.0.1:8554/depth/
+[2026-09-16T17:08:41.308] [WARNING] [T:281466687315648] RTSP response send timeout/failed, closing connection
+[2026-09-16T17:08:41.517] [INFO] [T:281466668175040] RTSP TEARDOWN rtsp://127.0.0.1:8554/count/
+[2026-09-16T17:08:41.523] [WARNING] [T:281466668175040] RTSP response send timeout/failed, closing connection
+[2026-09-16T17:08:41.538] [INFO] [T:281466676629184] RTSP OPTIONS rtsp://127.0.0.1:8554/depth
+[2026-09-16T17:08:41.539] [INFO] [T:281466676629184] RTSP DESCRIBE rtsp://127.0.0.1:8554/depth
+[2026-09-16T17:08:41.540] [INFO] [T:281466676629184] RTSP SETUP rtsp://127.0.0.1:8554/depth/stream
+[2026-09-16T17:08:41.542] [INFO] [T:281466676629184] RTSP PLAY rtsp://127.0.0.1:8554/depth/
+[2026-09-16T17:08:41.732] [INFO] [T:281466687315648] RTSP OPTIONS rtsp://127.0.0.1:8554/count
+[2026-09-16T17:08:41.732] [INFO] [T:281466687315648] RTSP DESCRIBE rtsp://127.0.0.1:8554/count
+[2026-09-16T17:08:41.733] [INFO] [T:281466687315648] RTSP SETUP rtsp://127.0.0.1:8554/count/stream
+[2026-09-16T17:08:41.734] [INFO] [T:281466687315648] RTSP PLAY rtsp://127.0.0.1:8554/count/
+{"channels":[{"decoded":362,"dropped":0,"encoded":299,"infer_fps":7.099779190477274,"inferred":211,"lr":0,"mux_errors":0,"name":"pcd","objects":2,"process_ms":152.32928700061166,"result_age":0.08504707900283393,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":750,"dropped":0,"encoded":297,"infer_fps":3.5998880402419977,"inferred":112,"lr":0,"mux_errors":0,"name":"vehicle","objects":1,"process_ms":271.13976200053,"result_age":0.28281659099957324,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":905,"dropped":0,"encoded":298,"infer_fps":2.29992847015461,"inferred":69,"lr":0,"mux_errors":0,"name":"seg","objects":0,"process_ms":460.7583020006132,"result_age":0.16059538400077145,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":906,"dropped":0,"encoded":298,"infer_fps":3.7998818202554423,"inferred":116,"lr":0,"mux_errors":0,"name":"driving","objects":0,"process_ms":216.18509600011748,"result_age":0.20547248100047,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":723,"dropped":0,"encoded":298,"infer_fps":4.099872490275609,"inferred":123,"lr":0,"mux_errors":0,"name":"depth","objects":0,"process_ms":222.4650969983486,"result_age":0.019282214001577813,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":726,"dropped":0,"encoded":298,"infer_fps":3.4998911502352756,"inferred":112,"lr":0,"mux_errors":0,"name":"count","objects":6,"process_ms":272.7051469992148,"result_age":0.20980784499988658,"rl":3,"submit_errors":0,"upload_replaced":0}],"elapsed":30.109773259002395,"event":"stats","overview_dropped":0,"overview_encoded":296,"overview_mux_errors":0}
+[2026-09-16T17:08:43.325] [INFO] [T:281466676629184] RTSP TEARDOWN rtsp://127.0.0.1:8554/depth/
+[2026-09-16T17:08:43.325] [WARNING] [T:281466676629184] RTSP response send timeout/failed, closing connection
+[2026-09-16T17:08:43.365] [INFO] [T:281466687315648] RTSP TEARDOWN rtsp://127.0.0.1:8554/count/
+[2026-09-16T17:08:43.366] [WARNING] [T:281466687315648] RTSP response send timeout/failed, closing connection
+[2026-09-16T17:08:43.554] [INFO] [T:281466687315648] RTSP OPTIONS rtsp://127.0.0.1:8554/overview
+[2026-09-16T17:08:43.555] [INFO] [T:281466687315648] RTSP DESCRIBE rtsp://127.0.0.1:8554/overview
+[2026-09-16T17:08:43.556] [INFO] [T:281466687315648] RTSP SETUP rtsp://127.0.0.1:8554/overview/stream
+[2026-09-16T17:08:43.557] [INFO] [T:281466687315648] RTSP PLAY rtsp://127.0.0.1:8554/overview/
+[2026-09-16T17:08:47.569] [WARNING] [T:281466636590784] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:08:47.569] [WARNING] [T:281466636590784] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:08:47.569] [WARNING] [T:281466636590784] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:08:47.569] [INFO] [T:281466687315648] RTSP TEARDOWN rtsp://127.0.0.1:8554/overview/
+[2026-09-16T17:08:47.570] [WARNING] [T:281466687315648] RTSP response send timeout/failed, closing connection
+[2026-09-16T17:08:47.802] [INFO] [T:281466687315648] RTSP OPTIONS rtsp://127.0.0.1:8554/overview
+[2026-09-16T17:08:47.803] [INFO] [T:281466687315648] RTSP DESCRIBE rtsp://127.0.0.1:8554/overview
+[2026-09-16T17:08:47.804] [INFO] [T:281466687315648] RTSP SETUP rtsp://127.0.0.1:8554/overview/stream
+[2026-09-16T17:08:47.805] [INFO] [T:281466687315648] RTSP PLAY rtsp://127.0.0.1:8554/overview/
+[2026-09-16T17:08:49.332] [INFO] [T:281466687315648] RTSP TEARDOWN rtsp://127.0.0.1:8554/overview/
+[2026-09-16T17:08:49.333] [WARNING] [T:281466687315648] RTSP response send timeout/failed, closing connection
+{"event":"count_loop_reset","loop":3}
+{"channels":[{"decoded":484,"dropped":0,"encoded":401,"infer_fps":7.030251080691766,"inferred":282,"lr":0,"mux_errors":0,"name":"pcd","objects":5,"process_ms":157.91553199960617,"result_age":0.036065202999452595,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":1006,"dropped":0,"encoded":399,"infer_fps":3.960704834192544,"inferred":152,"lr":0,"mux_errors":0,"name":"vehicle","objects":6,"process_ms":249.46390600234736,"result_age":0.014391598000656813,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":1209,"dropped":0,"encoded":401,"infer_fps":2.2774052796607127,"inferred":92,"lr":0,"mux_errors":0,"name":"seg","objects":1,"process_ms":375.10163499973714,"result_age":0.3452729749988066,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":1210,"dropped":0,"encoded":401,"infer_fps":3.960704834192544,"inferred":156,"lr":0,"mux_errors":0,"name":"driving","objects":2,"process_ms":215.83284299777006,"result_age":0.029862494997360045,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":967,"dropped":0,"encoded":400,"infer_fps":4.1587400759021715,"inferred":165,"lr":0,"mux_errors":0,"name":"depth","objects":0,"process_ms":208.14029200118966,"result_age":0.04922812699805945,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":970,"dropped":0,"encoded":400,"infer_fps":3.663651971628103,"inferred":149,"lr":0,"mux_errors":0,"name":"count","objects":6,"process_ms":248.13702200117405,"result_age":0.2472443079968798,"rl":3,"submit_errors":0,"upload_replaced":0}],"elapsed":40.20898581700021,"event":"stats","overview_dropped":0,"overview_encoded":398,"overview_mux_errors":0}
+{"direction":"right_to_left","event":"crossing","id":159,"lr":0,"rl":4}
+[2026-09-16T17:08:55.773] [INFO] [T:281466651266752] RTSP OPTIONS rtsp://127.0.0.1:8554/overview/
+{"channels":[{"decoded":604,"dropped":0,"encoded":501,"infer_fps":6.997189117175737,"inferred":352,"lr":0,"mux_errors":0,"name":"pcd","objects":7,"process_ms":117.0111290011846,"result_age":0.0929956330001005,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":1255,"dropped":0,"encoded":498,"infer_fps":3.8984339367121965,"inferred":191,"lr":0,"mux_errors":0,"name":"vehicle","objects":3,"process_ms":245.32016900047893,"result_age":0.17210850500123342,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":1509,"dropped":0,"encoded":500,"infer_fps":2.299076424214885,"inferred":115,"lr":0,"mux_errors":0,"name":"seg","objects":5,"process_ms":370.86902300143265,"result_age":0.37569138999970164,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":1510,"dropped":0,"encoded":500,"infer_fps":3.8984339367121965,"inferred":195,"lr":0,"mux_errors":0,"name":"driving","objects":0,"process_ms":241.58797699783463,"result_age":0.13043197000297369,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":1206,"dropped":0,"encoded":499,"infer_fps":4.198313470305442,"inferred":207,"lr":0,"mux_errors":0,"name":"depth","objects":0,"process_ms":181.616526999278,"result_age":0.018044665001070825,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":1209,"dropped":0,"encoded":499,"infer_fps":3.8984339367121965,"inferred":188,"lr":0,"mux_errors":0,"name":"count","objects":6,"process_ms":258.7655110000924,"result_age":0.19480315900000278,"rl":4,"submit_errors":0,"upload_replaced":0}],"elapsed":50.21300297700145,"event":"stats","overview_dropped":0,"overview_encoded":497,"overview_mux_errors":0}
+{"event":"count_loop_reset","loop":4}
+{"direction":"right_to_left","event":"crossing","id":212,"lr":0,"rl":5}
+{"channels":[{"decoded":725,"dropped":0,"encoded":602,"infer_fps":6.834157789787679,"inferred":421,"lr":0,"mux_errors":0,"name":"pcd","objects":8,"process_ms":122.64491799942334,"result_age":0.12715469899922027,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":1508,"dropped":0,"encoded":599,"infer_fps":3.961830602775466,"inferred":231,"lr":0,"mux_errors":0,"name":"vehicle","objects":1,"process_ms":240.37251000117976,"result_age":0.1145357379973575,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":1812,"dropped":0,"encoded":600,"infer_fps":2.278052596595893,"inferred":138,"lr":0,"mux_errors":0,"name":"seg","objects":6,"process_ms":440.21520399837755,"result_age":0.20341759199800435,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":1814,"dropped":0,"encoded":600,"infer_fps":3.862784837706079,"inferred":234,"lr":0,"mux_errors":0,"name":"driving","objects":2,"process_ms":246.7374709995056,"result_age":0.17930826200245065,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":1448,"dropped":0,"encoded":601,"infer_fps":4.1599221329142395,"inferred":249,"lr":0,"mux_errors":0,"name":"depth","objects":0,"process_ms":220.11533099794178,"result_age":0.04669381799976691,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":1453,"dropped":0,"encoded":600,"infer_fps":3.862784837706079,"inferred":227,"lr":0,"mux_errors":0,"name":"count","objects":7,"process_ms":238.55287300102646,"result_age":0.14787221399819828,"rl":5,"submit_errors":0,"upload_replaced":0}],"elapsed":60.30934580699977,"event":"stats","overview_dropped":0,"overview_encoded":598,"overview_mux_errors":0}
+{"event":"count_loop_reset","loop":5}
+{"direction":"right_to_left","event":"crossing","id":257,"lr":0,"rl":6}
+{"channels":[{"decoded":845,"dropped":0,"encoded":702,"infer_fps":6.998849900690385,"inferred":491,"lr":0,"mux_errors":0,"name":"pcd","objects":10,"process_ms":139.4642829982331,"result_age":0.06400493500041193,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":1756,"dropped":0,"encoded":699,"infer_fps":3.7993756603747806,"inferred":269,"lr":0,"mux_errors":0,"name":"vehicle","objects":6,"process_ms":325.71250799810514,"result_age":0.06349459899865906,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":2112,"dropped":0,"encoded":701,"infer_fps":2.299622110226841,"inferred":161,"lr":0,"mux_errors":0,"name":"seg","objects":0,"process_ms":385.64429100006237,"result_age":0.3271731839995482,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":2115,"dropped":0,"encoded":701,"infer_fps":3.9993428003945057,"inferred":274,"lr":0,"mux_errors":0,"name":"driving","objects":2,"process_ms":230.77290399669437,"result_age":0.1873031909999554,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":1688,"dropped":0,"encoded":701,"infer_fps":4.199309940414231,"inferred":291,"lr":0,"mux_errors":0,"name":"depth","objects":0,"process_ms":247.8086869996332,"result_age":0.043477879000420216,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":1694,"dropped":0,"encoded":701,"infer_fps":3.7993756603747806,"inferred":265,"lr":0,"mux_errors":0,"name":"count","objects":7,"process_ms":314.7048499995435,"result_age":0.0629229279984429,"rl":6,"submit_errors":0,"upload_replaced":0}],"elapsed":70.31098907600244,"event":"stats","overview_dropped":0,"overview_encoded":698,"overview_mux_errors":0}
+[2026-09-16T17:09:25.795] [INFO] [T:281466651266752] RTSP OPTIONS rtsp://127.0.0.1:8554/overview/
+[2026-09-16T17:09:26.081] [WARNING] [T:281466659720896] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:09:26.081] [INFO] [T:281466651266752] RTSP TEARDOWN rtsp://127.0.0.1:8554/overview/
+[2026-09-16T17:09:26.081] [WARNING] [T:281466659720896] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:09:26.081] [WARNING] [T:281466659720896] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:09:26.081] [WARNING] [T:281466659720896] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:09:26.081] [WARNING] [T:281466659720896] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:09:26.081] [WARNING] [T:281466659720896] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:09:26.081] [WARNING] [T:281466659720896] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:09:26.081] [WARNING] [T:281466659720896] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:09:26.081] [WARNING] [T:281466659720896] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:09:26.081] [WARNING] [T:281466659720896] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:09:26.081] [WARNING] [T:281466659720896] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:09:26.081] [WARNING] [T:281466659720896] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:09:26.081] [WARNING] [T:281466659720896] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:09:26.081] [WARNING] [T:281466659720896] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:09:26.081] [WARNING] [T:281466659720896] interleaved send timeout/failed, dropping session send loop
+[2026-09-16T17:09:26.082] [WARNING] [T:281466651266752] RTSP response send timeout/failed, closing connection
+{"event":"count_loop_reset","loop":6}
+{"direction":"right_to_left","event":"crossing","id":324,"lr":0,"rl":7}
+{"channels":[{"decoded":966,"dropped":0,"encoded":803,"infer_fps":6.7339401534917185,"inferred":559,"lr":0,"mux_errors":0,"name":"pcd","objects":7,"process_ms":114.02719299803721,"result_age":0.16158539100069902,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":2011,"dropped":0,"encoded":800,"infer_fps":3.8621127350908386,"inferred":308,"lr":0,"mux_errors":0,"name":"vehicle","objects":4,"process_ms":268.44853600050556,"result_age":0.20832062599947676,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":2416,"dropped":0,"encoded":802,"infer_fps":2.3766847600559005,"inferred":185,"lr":0,"mux_errors":0,"name":"seg","objects":1,"process_ms":358.1988549995003,"result_age":0.3803822959998797,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":2418,"dropped":0,"encoded":801,"infer_fps":4.06016979842883,"inferred":315,"lr":0,"mux_errors":0,"name":"driving","objects":4,"process_ms":266.58698099709,"result_age":0.19035637799970573,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":1931,"dropped":0,"encoded":801,"infer_fps":4.159198330097826,"inferred":333,"lr":0,"mux_errors":0,"name":"depth","objects":0,"process_ms":226.990545001172,"result_age":0.16983165599958738,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":1937,"dropped":0,"encoded":801,"infer_fps":3.664055671752847,"inferred":302,"lr":0,"mux_errors":0,"name":"count","objects":6,"process_ms":288.2592530004331,"result_age":0.16849085499779903,"rl":7,"submit_errors":0,"upload_replaced":0}],"elapsed":80.40908891800063,"event":"stats","overview_dropped":0,"overview_encoded":799,"overview_mux_errors":0}
+{"event":"count_loop_reset","loop":7}
+{"channels":[{"decoded":1086,"dropped":0,"encoded":903,"infer_fps":6.8997546785316555,"inferred":628,"lr":0,"mux_errors":0,"name":"pcd","objects":5,"process_ms":88.84518799823127,"result_age":0.13542146300096647,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":2260,"dropped":0,"encoded":900,"infer_fps":3.9998577846560326,"inferred":348,"lr":0,"mux_errors":0,"name":"vehicle","objects":1,"process_ms":263.03437299793586,"result_age":0.14996560299914563,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":2715,"dropped":0,"encoded":902,"infer_fps":2.2999182261772186,"inferred":208,"lr":0,"mux_errors":0,"name":"seg","objects":4,"process_ms":458.7157469977683,"result_age":0.386151211001561,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":2719,"dropped":0,"encoded":901,"infer_fps":3.9998577846560326,"inferred":355,"lr":0,"mux_errors":0,"name":"driving","objects":2,"process_ms":269.62804300274,"result_age":0.15216945200154441,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":2171,"dropped":0,"encoded":901,"infer_fps":4.199850673888834,"inferred":375,"lr":0,"mux_errors":0,"name":"depth","objects":0,"process_ms":243.09182000069995,"result_age":0.1800572669999383,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":2178,"dropped":0,"encoded":901,"infer_fps":3.7998648954232306,"inferred":340,"lr":0,"mux_errors":0,"name":"count","objects":6,"process_ms":292.17898799834074,"result_age":0.12941288100046222,"rl":7,"submit_errors":0,"upload_replaced":0}],"elapsed":90.40944446900176,"event":"stats","overview_dropped":0,"overview_encoded":899,"overview_mux_errors":0}
+{"direction":"right_to_left","event":"crossing","id":376,"lr":0,"rl":8}
+{"channels":[{"decoded":1206,"dropped":0,"encoded":1003,"infer_fps":7.0988740461676585,"inferred":699,"lr":0,"mux_errors":0,"name":"pcd","objects":6,"process_ms":120.91794799925992,"result_age":0.06349343200054136,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":2511,"dropped":0,"encoded":999,"infer_fps":3.8993815183174463,"inferred":387,"lr":0,"mux_errors":0,"name":"vehicle","objects":6,"process_ms":273.0834419999155,"result_age":0.17060991100152023,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":3016,"dropped":0,"encoded":1002,"infer_fps":2.399619395887659,"inferred":232,"lr":0,"mux_errors":0,"name":"seg","objects":4,"process_ms":417.87163499975577,"result_age":0.08741280299727805,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":3019,"dropped":0,"encoded":1001,"infer_fps":3.9993656598127654,"inferred":395,"lr":0,"mux_errors":0,"name":"driving","objects":1,"process_ms":252.75472000066657,"result_age":0.16347773700181278,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":2410,"dropped":0,"encoded":1001,"infer_fps":4.299318084298723,"inferred":418,"lr":0,"mux_errors":0,"name":"depth","objects":0,"process_ms":231.0788640024839,"result_age":0.13716009999916423,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":2418,"dropped":0,"encoded":1001,"infer_fps":3.799397376822127,"inferred":378,"lr":0,"mux_errors":0,"name":"count","objects":8,"process_ms":248.4681490022922,"result_age":0.11385723300190875,"rl":8,"submit_errors":0,"upload_replaced":0}],"elapsed":100.4110305710019,"event":"stats","overview_dropped":0,"overview_encoded":999,"overview_mux_errors":0}
+{"event":"count_loop_reset","loop":8}
+{"direction":"right_to_left","event":"crossing","id":422,"lr":0,"rl":9}
+{"channels":[{"decoded":1326,"dropped":0,"encoded":1103,"infer_fps":6.898098492244017,"inferred":768,"lr":0,"mux_errors":0,"name":"pcd","objects":7,"process_ms":139.30794800035073,"result_age":0.14241721899816184,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":2761,"dropped":0,"encoded":1101,"infer_fps":3.7989527928300384,"inferred":425,"lr":0,"mux_errors":0,"name":"vehicle","objects":3,"process_ms":291.67090199916856,"result_age":0.15990508799950476,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":3316,"dropped":0,"encoded":1102,"infer_fps":2.399338605997919,"inferred":256,"lr":0,"mux_errors":0,"name":"seg","objects":1,"process_ms":463.5699879981985,"result_age":0.11074221200033207,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":3320,"dropped":0,"encoded":1102,"infer_fps":3.9988976766631983,"inferred":435,"lr":0,"mux_errors":0,"name":"driving","objects":0,"process_ms":241.82035400008317,"result_age":0.15250224600094953,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":2651,"dropped":0,"encoded":1102,"infer_fps":4.198842560496358,"inferred":460,"lr":0,"mux_errors":0,"name":"depth","objects":0,"process_ms":242.54319200190366,"result_age":0.12498439200135181,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":2659,"dropped":0,"encoded":1102,"infer_fps":3.7989527928300384,"inferred":416,"lr":0,"mux_errors":0,"name":"count","objects":7,"process_ms":202.48600299964892,"result_age":0.04932204399665352,"rl":9,"submit_errors":0,"upload_replaced":0}],"elapsed":110.41378713900122,"event":"stats","overview_dropped":0,"overview_encoded":1099,"overview_mux_errors":0}
+{"event":"count_loop_reset","loop":9}
+{"direction":"right_to_left","event":"crossing","id":463,"lr":0,"rl":10}
+{"channels":[{"decoded":1447,"dropped":0,"encoded":1204,"infer_fps":6.8349231099996475,"inferred":837,"lr":0,"mux_errors":0,"name":"pcd","objects":11,"process_ms":114.8500730014348,"result_age":0.12316467200071202,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":3015,"dropped":0,"encoded":1201,"infer_fps":3.962274266666462,"inferred":465,"lr":0,"mux_errors":0,"name":"vehicle","objects":4,"process_ms":262.72024599893484,"result_age":0.19824339099795907,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":3620,"dropped":0,"encoded":1203,"infer_fps":2.278307703333216,"inferred":279,"lr":0,"mux_errors":0,"name":"seg","objects":1,"process_ms":433.38665699775447,"result_age":0.3706787720002467,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":3623,"dropped":0,"encoded":1203,"infer_fps":4.061331123333124,"inferred":476,"lr":0,"mux_errors":0,"name":"driving","objects":0,"process_ms":248.14381299802335,"result_age":0.09424493299957248,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":2894,"dropped":0,"encoded":1203,"infer_fps":4.259444836666447,"inferred":503,"lr":0,"mux_errors":0,"name":"depth","objects":0,"process_ms":200.93082599851186,"result_age":0.04887199900258565,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":2902,"dropped":0,"encoded":1202,"infer_fps":3.7641605533331393,"inferred":454,"lr":0,"mux_errors":0,"name":"count","objects":8,"process_ms":296.4825599992764,"result_age":0.1363078440008394,"rl":10,"submit_errors":0,"upload_replaced":0}],"elapsed":120.50899946100253,"event":"stats","overview_dropped":0,"overview_encoded":1200,"overview_mux_errors":0}
+{"event":"count_loop_reset","loop":10}
+{"direction":"right_to_left","event":"crossing","id":522,"lr":0,"rl":11}
+{"channels":[{"decoded":1569,"dropped":0,"encoded":1305,"infer_fps":7.1286924458191265,"inferred":909,"lr":0,"mux_errors":0,"name":"pcd","objects":12,"process_ms":122.10562299878802,"result_age":0.008995936001156224,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":3267,"dropped":0,"encoded":1302,"infer_fps":3.76236545751565,"inferred":503,"lr":0,"mux_errors":0,"name":"vehicle","objects":6,"process_ms":269.1010809976433,"result_age":0.12157253600162221,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":3923,"dropped":0,"encoded":1304,"infer_fps":2.2772211979699986,"inferred":302,"lr":0,"mux_errors":0,"name":"seg","objects":6,"process_ms":383.1009410023398,"result_age":0.353504447000887,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":3927,"dropped":0,"encoded":1304,"infer_fps":3.9603846921217367,"inferred":516,"lr":0,"mux_errors":0,"name":"driving","objects":0,"process_ms":278.050434000761,"result_age":0.18294478700045147,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":3136,"dropped":0,"encoded":1303,"infer_fps":4.257413544030867,"inferred":546,"lr":0,"mux_errors":0,"name":"depth","objects":0,"process_ms":197.0245070006058,"result_age":0.01035598700036644,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":3146,"dropped":0,"encoded":1304,"infer_fps":3.76236545751565,"inferred":492,"lr":0,"mux_errors":0,"name":"count","objects":6,"process_ms":253.01613899864606,"result_age":0.10892715799855068,"rl":11,"submit_errors":0,"upload_replaced":0}],"elapsed":130.609028400002,"event":"stats","overview_dropped":0,"overview_encoded":1301,"overview_mux_errors":0}
+{"event":"count_loop_reset","loop":11}
+{"channels":[{"decoded":1688,"dropped":0,"encoded":1405,"infer_fps":6.596889485466399,"inferred":975,"lr":0,"mux_errors":0,"name":"pcd","objects":2,"process_ms":183.59550000241143,"result_age":0.13568463100091321,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":3519,"dropped":0,"encoded":1402,"infer_fps":3.89816196868469,"inferred":542,"lr":0,"mux_errors":0,"name":"vehicle","objects":3,"process_ms":177.602501000365,"result_age":0.22590095399937127,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":4223,"dropped":0,"encoded":1404,"infer_fps":2.298916032814048,"inferred":325,"lr":0,"mux_errors":0,"name":"seg","objects":7,"process_ms":442.62584500029334,"result_age":0.30682521299968357,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":4228,"dropped":0,"encoded":1403,"infer_fps":4.198020581660435,"inferred":558,"lr":0,"mux_errors":0,"name":"driving","objects":1,"process_ms":224.11235899926396,"result_age":0.17983072299830383,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":3376,"dropped":0,"encoded":1403,"infer_fps":4.09806771066852,"inferred":587,"lr":0,"mux_errors":0,"name":"depth","objects":0,"process_ms":230.39840199999162,"result_age":0.15465175999997882,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":3387,"dropped":0,"encoded":1403,"infer_fps":3.7982090976927747,"inferred":530,"lr":0,"mux_errors":0,"name":"count","objects":6,"process_ms":265.5692660009663,"result_age":0.12323904700315325,"rl":11,"submit_errors":0,"upload_replaced":0}],"elapsed":140.61374352300118,"event":"stats","overview_dropped":0,"overview_encoded":1401,"overview_mux_errors":0}
+{"direction":"right_to_left","event":"crossing","id":574,"lr":0,"rl":12}
+{"channels":[{"decoded":1810,"dropped":0,"encoded":1506,"infer_fps":6.9336488288830855,"inferred":1045,"lr":0,"mux_errors":0,"name":"pcd","objects":4,"process_ms":172.80930099877878,"result_age":0.1090511999973387,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":3772,"dropped":0,"encoded":1503,"infer_fps":3.9620850450760488,"inferred":582,"lr":0,"mux_errors":0,"name":"vehicle","objects":4,"process_ms":272.48831299948506,"result_age":0.11360960599995451,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":4526,"dropped":0,"encoded":1505,"infer_fps":2.3772510270456295,"inferred":349,"lr":0,"mux_errors":0,"name":"seg","objects":0,"process_ms":370.10622699745,"result_age":0.2665979810008139,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":4532,"dropped":0,"encoded":1505,"infer_fps":3.9620850450760488,"inferred":598,"lr":0,"mux_errors":0,"name":"driving","objects":1,"process_ms":220.9125449990097,"result_age":0.0435079209964897,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":3618,"dropped":0,"encoded":1505,"infer_fps":4.358293549583654,"inferred":631,"lr":0,"mux_errors":0,"name":"depth","objects":0,"process_ms":259.10851400112733,"result_age":0.09842037900307332,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":3629,"dropped":0,"encoded":1505,"infer_fps":3.7639807928222466,"inferred":568,"lr":0,"mux_errors":0,"name":"count","objects":8,"process_ms":259.6938919996319,"result_age":0.0640994370005501,"rl":12,"submit_errors":0,"upload_replaced":0}],"elapsed":150.7094379730006,"event":"stats","overview_dropped":0,"overview_encoded":1503,"overview_mux_errors":0}
+{"event":"count_loop_reset","loop":12}
+{"direction":"right_to_left","event":"crossing","id":611,"lr":0,"rl":13}
+{"channels":[{"decoded":1931,"dropped":0,"encoded":1607,"infer_fps":7.326586215534431,"inferred":1119,"lr":0,"mux_errors":0,"name":"pcd","objects":3,"process_ms":145.96607600105926,"result_age":0.0028056440023647156,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":4023,"dropped":0,"encoded":1605,"infer_fps":3.861308951430308,"inferred":621,"lr":0,"mux_errors":0,"name":"vehicle","objects":6,"process_ms":236.1232729999756,"result_age":0.01595077499951003,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":4831,"dropped":0,"encoded":1607,"infer_fps":2.2771822021255663,"inferred":372,"lr":0,"mux_errors":0,"name":"seg","objects":1,"process_ms":430.95530699793017,"result_age":0.4388388199986366,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":4836,"dropped":0,"encoded":1606,"infer_fps":3.9603168732618546,"inferred":638,"lr":0,"mux_errors":0,"name":"driving","objects":1,"process_ms":280.9031619981397,"result_age":0.15027760599696194,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":3862,"dropped":0,"encoded":1606,"infer_fps":4.257340638756494,"inferred":674,"lr":0,"mux_errors":0,"name":"depth","objects":0,"process_ms":208.0586250012857,"result_age":0.07243532599750324,"rl":0,"submit_errors":0,"upload_replaced":0},{"decoded":3873,"dropped":0,"encoded":1606,"infer_fps":3.6632931077672155,"inferred":605,"lr":0,"mux_errors":0,"name":"count","objects":8,"process_ms":274.84782800092944,"result_age":0.24620917500215,"rl":13,"submit_errors":0,"upload_replaced":0}],"elapsed":160.8096398710004,"event":"stats","overview_dropped":0,"overview_encoded":1604,"overview_mux_errors":0}
+{"event":"count_loop_reset","loop":13}
+{"direction":"right_to_left","event":"crossing","id":650,"lr":0,"rl":14}

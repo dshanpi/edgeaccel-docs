@@ -1,0 +1,58 @@
+[
+  {
+    "stream": "pcd",
+    "decode_rc": 0,
+    "snapshot_rc": 0,
+    "seconds": 7.227895736694336,
+    "frames_requested": 30,
+    "decode_log": "/home/baiwen/ax-pipeline/six/evidence/pcd-decode.log"
+  },
+  {
+    "stream": "vehicle",
+    "decode_rc": 0,
+    "snapshot_rc": 0,
+    "seconds": 5.33263373374939,
+    "frames_requested": 30,
+    "decode_log": "/home/baiwen/ax-pipeline/six/evidence/vehicle-decode.log"
+  },
+  {
+    "stream": "helmet",
+    "decode_rc": 0,
+    "snapshot_rc": 0,
+    "seconds": 5.8017418384552,
+    "frames_requested": 30,
+    "decode_log": "/home/baiwen/ax-pipeline/six/evidence/helmet-decode.log"
+  },
+  {
+    "stream": "depth",
+    "decode_rc": 0,
+    "snapshot_rc": 0,
+    "seconds": 6.092727899551392,
+    "frames_requested": 30,
+    "decode_log": "/home/baiwen/ax-pipeline/six/evidence/depth-decode.log"
+  },
+  {
+    "stream": "seg",
+    "decode_rc": 0,
+    "snapshot_rc": 0,
+    "seconds": 6.275386333465576,
+    "frames_requested": 30,
+    "decode_log": "/home/baiwen/ax-pipeline/six/evidence/seg-decode.log"
+  },
+  {
+    "stream": "count",
+    "decode_rc": 0,
+    "snapshot_rc": 0,
+    "seconds": 6.13141655921936,
+    "frames_requested": 30,
+    "decode_log": "/home/baiwen/ax-pipeline/six/evidence/count-decode.log"
+  },
+  {
+    "stream": "overview",
+    "decode_rc": 0,
+    "snapshot_rc": 0,
+    "seconds": 6.057089567184448,
+    "frames_requested": 30,
+    "decode_log": "/home/baiwen/ax-pipeline/six/evidence/overview-decode.log"
+  }
+]

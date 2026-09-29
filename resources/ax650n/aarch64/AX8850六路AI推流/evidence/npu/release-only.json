@@ -1,0 +1,166 @@
+{
+  "label": "release-only",
+  "invocation": "aab21270bbe54a8886f71e564a68088b",
+  "window_seconds": 70.09953865299758,
+  "channels": [
+    {
+      "decoded": 11.997,
+      "rendered": 11.997,
+      "inferred": 11.983,
+      "encoded": 11.997,
+      "name": "pcd",
+      "render_ms": 4.669445999752497,
+      "drops": 0,
+      "errors": 0
+    },
+    {
+      "decoded": 25.022,
+      "rendered": 24.936,
+      "inferred": 9.444,
+      "encoded": 24.936,
+      "name": "vehicle",
+      "render_ms": 9.647810999013018,
+      "drops": 0,
+      "errors": 0
+    },
+    {
+      "decoded": 30.029,
+      "rendered": 30.014,
+      "inferred": 5.592,
+      "encoded": 30.014,
+      "name": "seg",
+      "render_ms": 13.077540999802295,
+      "drops": 0,
+      "errors": 0
+    },
+    {
+      "decoded": 29.957,
+      "rendered": 29.915,
+      "inferred": 9.544,
+      "encoded": 29.929,
+      "name": "driving",
+      "render_ms": 9.766978000698145,
+      "drops": 0,
+      "errors": 0
+    },
+    {
+      "decoded": 23.994,
+      "rendered": 24.009,
+      "inferred": 10.285,
+      "encoded": 23.994,
+      "name": "depth",
+      "render_ms": 12.307245000556577,
+      "drops": 0,
+      "errors": 0
+    },
+    {
+      "decoded": 24.08,
+      "rendered": 24.08,
+      "inferred": 9.244,
+      "encoded": 24.08,
+      "name": "count",
+      "render_ms": 8.465679002256365,
+      "drops": 0,
+      "errors": 0
+    }
+  ],
+  "overview_fps": 30.014462868508897,
+  "npu_average": 14.928571428571429,
+  "npu_range": [
+    14,
+    16
+  ],
+  "temperature_range": [
+    58,
+    59
+  ],
+  "host_process_cpu_percent": 208.8123126306762,
+  "host_busy_percent": 60.30465800808209,
+  "telemetry": [
+    {
+      "t": 0.62,
+      "temp": 58,
+      "cpu": 12,
+      "npu": 15
+    },
+    {
+      "t": 6.27,
+      "temp": 58,
+      "cpu": 16,
+      "npu": 15
+    },
+    {
+      "t": 11.88,
+      "temp": 58,
+      "cpu": 13,
+      "npu": 14
+    },
+    {
+      "t": 17.51,
+      "temp": 58,
+      "cpu": 14,
+      "npu": 15
+    },
+    {
+      "t": 23.14,
+      "temp": 58,
+      "cpu": 15,
+      "npu": 15
+    },
+    {
+      "t": 28.76,
+      "temp": 58,
+      "cpu": 15,
+      "npu": 15
+    },
+    {
+      "t": 34.4,
+      "temp": 58,
+      "cpu": 16,
+      "npu": 15
+    },
+    {
+      "t": 40.03,
+      "temp": 58,
+      "cpu": 14,
+      "npu": 16
+    },
+    {
+      "t": 45.65,
+      "temp": 58,
+      "cpu": 14,
+      "npu": 15
+    },
+    {
+      "t": 51.26,
+      "temp": 59,
+      "cpu": 15,
+      "npu": 15
+    },
+    {
+      "t": 56.89,
+      "temp": 59,
+      "cpu": 13,
+      "npu": 14
+    },
+    {
+      "t": 62.5,
+      "temp": 58,
+      "cpu": 14,
+      "npu": 15
+    },
+    {
+      "t": 68.13,
+      "temp": 58,
+      "cpu": 15,
+      "npu": 15
+    },
+    {
+      "t": 73.76,
+      "temp": 58,
+      "cpu": 15,
+      "npu": 15
+    }
+  ],
+  "failures": []
+}

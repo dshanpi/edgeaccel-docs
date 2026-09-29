@@ -1,0 +1,147 @@
+{
+  "kind": "text",
+  "task": "text",
+  "model": "AXERA-TECH/MiniCPM5-2B-GPTQ-Int4-AX650-C128-P4K-CTX6K",
+  "requests": [
+    {
+      "endpoint": "/v1/chat/completions",
+      "request": {
+        "model": "AXERA-TECH/MiniCPM5-2B-GPTQ-Int4-AX650-C128-P4K-CTX6K",
+        "messages": [
+          {
+            "role": "user",
+            "content": "What is 2 + 3? Answer with only the number."
+          }
+        ],
+        "max_tokens": 128,
+        "temperature": 0,
+        "enable_thinking": false,
+        "stream": false
+      },
+      "elapsedSeconds": 4.062318682000296,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "content": "5",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1790160108,
+        "id": "chatcmpl-dd6b48096725955450d71e85",
+        "model": "AXERA-TECH/MiniCPM5-2B-GPTQ-Int4-AX650-C128-P4K-CTX6K",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 1,
+          "prefill_tokens": 26,
+          "prefill_tps": 45.648231506347656,
+          "prompt_tokens": 26,
+          "total_tokens": 27,
+          "ttft_ms": 3818.22705078125
+        }
+      },
+      "checks": {
+        "nonemptyText": true,
+        "containsReplacementCharacter": false,
+        "finishReason": "stop"
+      }
+    },
+    {
+      "endpoint": "/v1/chat/completions",
+      "request": {
+        "model": "AXERA-TECH/MiniCPM5-2B-GPTQ-Int4-AX650-C128-P4K-CTX6K",
+        "messages": [
+          {
+            "role": "user",
+            "content": "请用一句话说明 PCIe 的用途。"
+          }
+        ],
+        "max_tokens": 128,
+        "temperature": 0,
+        "enable_thinking": false,
+        "stream": false
+      },
+      "elapsedSeconds": 8.100302455999554,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "content": "PCIe 是一种高速数据传输接口，用于连接计算机内部组件，提升数据传输效率。",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1790160116,
+        "id": "chatcmpl-69751c0706112615e7f8884a",
+        "model": "AXERA-TECH/MiniCPM5-2B-GPTQ-Int4-AX650-C128-P4K-CTX6K",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 19,
+          "decode_tps": 3.7695565223693848,
+          "prefill_tokens": 21,
+          "prefill_tps": 33.74762725830078,
+          "prompt_tokens": 21,
+          "total_tokens": 40,
+          "ttft_ms": 3319.346923828125
+        }
+      },
+      "checks": {
+        "nonemptyText": true,
+        "containsReplacementCharacter": false,
+        "finishReason": "stop"
+      }
+    },
+    {
+      "endpoint": "/v1/chat/completions",
+      "request": {
+        "model": "AXERA-TECH/MiniCPM5-2B-GPTQ-Int4-AX650-C128-P4K-CTX6K",
+        "messages": [
+          {
+            "role": "user",
+            "content": "只输出 JSON：把苹果的数量 3 和梨的数量 2 写成一个对象，键名分别为 apple 和 pear。"
+          }
+        ],
+        "max_tokens": 128,
+        "temperature": 0,
+        "enable_thinking": false,
+        "stream": false
+      },
+      "elapsedSeconds": 5.903437488999771,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "content": "{\"apple\": 3, \"pear\": 2}",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1790160122,
+        "id": "chatcmpl-fb1ab4066f6387875a966ed9",
+        "model": "AXERA-TECH/MiniCPM5-2B-GPTQ-Int4-AX650-C128-P4K-CTX6K",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 12,
+          "decode_tps": 3.926560401916504,
+          "prefill_tokens": 38,
+          "prefill_tps": 71.856201171875,
+          "prompt_tokens": 38,
+          "total_tokens": 50,
+          "ttft_ms": 3096.193115234375
+        }
+      },
+      "checks": {
+        "nonemptyText": true,
+        "containsReplacementCharacter": false,
+        "finishReason": "stop"
+      }
+    }
+  ]
+}

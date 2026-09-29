@@ -1,0 +1,1174 @@
+{
+  "modelId": "GCRN",
+  "revision": "5e2371051382c0dedd6bc560379059af79121e5f",
+  "date": "2026-09-28",
+  "variants": [
+    {
+      "label": "官方音频",
+      "observation": "输入与输出样本数相同，两次 NPU 原始输出和最终音频一致。 4秒和8秒分块处出现幅度跳变，连续性及听感仍需评估。",
+      "previews": [
+        {
+          "caption": "同一幅度范围的输入与输出",
+          "path": "/validation/effects/gcrn-20260928/official-waveform.png"
+        },
+        {
+          "caption": "4秒和8秒拼接处的实际波形",
+          "path": "/validation/effects/gcrn-20260928/official-boundaries.png"
+        }
+      ],
+      "audio": [
+        {
+          "caption": "实际输入 · 官方音频",
+          "path": "/validation/effects/gcrn-20260928/official-input.wav"
+        },
+        {
+          "caption": "本次输出 · 官方音频",
+          "path": "/validation/effects/gcrn-20260928/official-output.wav"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "项目",
+            "实测结果"
+          ],
+          "rows": [
+            [
+              "样本数",
+              "156302"
+            ],
+            [
+              "有效音频块 / 预热调用",
+              "3 / 1"
+            ],
+            [
+              "单遍完整处理",
+              "0.3296 s"
+            ],
+            [
+              "RTF",
+              "0.0337"
+            ]
+          ]
+        },
+        {
+          "headers": [
+            "分块时刻",
+            "输入相邻点差",
+            "输出相邻点差"
+          ],
+          "rows": [
+            [
+              "4 s",
+              "0.037140",
+              "-0.028167"
+            ],
+            [
+              "8 s",
+              "0.003143",
+              "-0.068143"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "modelId": "GCRN",
+        "provider": "AXCLRTExecutionProvider",
+        "completed": true,
+        "sessions": [
+          {
+            "model": "models/model.axmodel",
+            "loadSeconds": 1.0558890179963782,
+            "inputs": [
+              {
+                "name": "stft_input",
+                "shape": [
+                  1,
+                  2,
+                  401,
+                  161
+                ],
+                "dtype": "float32"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "stft_output",
+                "shape": [
+                  1,
+                  2,
+                  401,
+                  161
+                ]
+              }
+            ],
+            "allFinite": true,
+            "runMilliseconds": [
+              50.83107197424397,
+              45.86658498737961,
+              45.94679502770305,
+              46.06375301955268,
+              46.03050299920142,
+              46.262378979008645,
+              45.93396099517122,
+              47.45063598966226,
+              46.278420952148736,
+              46.373505028896034,
+              46.26500396989286,
+              46.125587017741054,
+              45.7190009765327,
+              46.158253971952945,
+              46.09000403434038,
+              46.17575398879126,
+              46.36825597845018,
+              46.444088977295905,
+              46.2801709654741,
+              46.40208894852549,
+              46.37846403056756,
+              46.43825499806553,
+              46.301464026328176,
+              46.26471298979595,
+              46.74800799693912,
+              46.29183898214251
+            ],
+            "outputHashes": [
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "e7745b8d967fdb3e2e41b94a9748f8b7f08bad8ad3f0cc44dc6f202cdef4f4dd"
+              ],
+              [
+                "0e730d5596bb410aebb374c634dae9f1d8a23bd29ca62fd5007e67e97f335faf"
+              ],
+              [
+                "ce6a836cac59335e4417ce63318ae6f019daaf2cb0b5b1a4ac792dd42715d42e"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "e7745b8d967fdb3e2e41b94a9748f8b7f08bad8ad3f0cc44dc6f202cdef4f4dd"
+              ],
+              [
+                "0e730d5596bb410aebb374c634dae9f1d8a23bd29ca62fd5007e67e97f335faf"
+              ],
+              [
+                "ce6a836cac59335e4417ce63318ae6f019daaf2cb0b5b1a4ac792dd42715d42e"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "ec7f3d6c40ca19b5edabe9056881d1ac5f5a701c809383f4ee3886b9593cefab"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "ec7f3d6c40ca19b5edabe9056881d1ac5f5a701c809383f4ee3886b9593cefab"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "e7745b8d967fdb3e2e41b94a9748f8b7f08bad8ad3f0cc44dc6f202cdef4f4dd"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "e7745b8d967fdb3e2e41b94a9748f8b7f08bad8ad3f0cc44dc6f202cdef4f4dd"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "e7745b8d967fdb3e2e41b94a9748f8b7f08bad8ad3f0cc44dc6f202cdef4f4dd"
+              ],
+              [
+                "a467a06b1095385b61d82d912fd7d52d33eb911f76999039a5b3705031bed3bd"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "e7745b8d967fdb3e2e41b94a9748f8b7f08bad8ad3f0cc44dc6f202cdef4f4dd"
+              ],
+              [
+                "a467a06b1095385b61d82d912fd7d52d33eb911f76999039a5b3705031bed3bd"
+              ]
+            ]
+          }
+        ],
+        "results": [
+          {
+            "name": "official",
+            "sampleRate": 16000,
+            "samples": 156302,
+            "durationSeconds": 9.768875,
+            "pipelineSeconds": 0.32959623099304736,
+            "repeatPipelineSeconds": 0.35884576599346474,
+            "realTimeFactor": 0.033739425572857404,
+            "dataChunks": 3,
+            "warmupCallsPerPass": 1,
+            "npuCallsPerPass": 4,
+            "repeatExact": true,
+            "allFinite": true,
+            "outputRms": 0.06059048583975419,
+            "outputPeak": 0.43484926223754883,
+            "outputClippedFraction": 0.0,
+            "inputSha256": "8d47e1d03eeb457c2549be79c8ec33a349ccd79f21c3add05f946f8f760c5a99",
+            "outputSha256": "22b07bc801bd43b4bfc378086a386b45d9687b573d116d254dcf76c94e7169b5",
+            "boundaries": [
+              {
+                "sample": 64000,
+                "seconds": 4.0,
+                "inputAdjacentJump": 0.037139892578125,
+                "outputAdjacentJump": -0.028167417272925377
+              },
+              {
+                "sample": 128000,
+                "seconds": 8.0,
+                "inputAdjacentJump": 0.003143310546875,
+                "outputAdjacentJump": -0.06814342737197876
+              }
+            ]
+          }
+        ],
+        "upstreamSha256": {
+          "audio.py": "b5ef3e12db0a075ded3e5d35e1d91f03762c0a840ce631c5736341d144f991f9",
+          "inference.py": "759e5761ed1b1e199448b45e45f875219aff1533656c91b2a5c80d866afe797f",
+          "runtime.py": "abf4f9ac396192df389938e34d13882ea983513d7a290fd91699565c171e748c"
+        },
+        "timingScope": "One complete enhance call, including zero-input warmup, chunk DSP, AXCL and recording; excludes model load, WAV read/save and second pass.",
+        "sourceSha256": "8d47e1d03eeb457c2549be79c8ec33a349ccd79f21c3add05f946f8f760c5a99",
+        "chunkChecks": {
+          "exact4sEqualsOfficialFirstChunk": true,
+          "above4sPreservesFirstChunk": true
+        }
+      }
+    },
+    {
+      "label": "两秒静音",
+      "observation": "输入与输出样本数相同，两次 NPU 原始输出和最终音频一致。 静音输出不是全零：RMS 0.002996，峰值 0.012729；静音降噪效果未通过核对。",
+      "previews": [
+        {
+          "caption": "同一幅度范围的输入与输出",
+          "path": "/validation/effects/gcrn-20260928/silence-waveform.png"
+        }
+      ],
+      "audio": [
+        {
+          "caption": "实际输入 · 两秒静音",
+          "path": "/validation/effects/gcrn-20260928/silence-input.wav"
+        },
+        {
+          "caption": "本次输出 · 两秒静音",
+          "path": "/validation/effects/gcrn-20260928/silence-output.wav"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "项目",
+            "实测结果"
+          ],
+          "rows": [
+            [
+              "样本数",
+              "32000"
+            ],
+            [
+              "有效音频块 / 预热调用",
+              "1 / 1"
+            ],
+            [
+              "单遍完整处理",
+              "0.1468 s"
+            ],
+            [
+              "RTF",
+              "0.0734"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "modelId": "GCRN",
+        "provider": "AXCLRTExecutionProvider",
+        "completed": true,
+        "sessions": [
+          {
+            "model": "models/model.axmodel",
+            "loadSeconds": 1.0558890179963782,
+            "inputs": [
+              {
+                "name": "stft_input",
+                "shape": [
+                  1,
+                  2,
+                  401,
+                  161
+                ],
+                "dtype": "float32"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "stft_output",
+                "shape": [
+                  1,
+                  2,
+                  401,
+                  161
+                ]
+              }
+            ],
+            "allFinite": true,
+            "runMilliseconds": [
+              50.83107197424397,
+              45.86658498737961,
+              45.94679502770305,
+              46.06375301955268,
+              46.03050299920142,
+              46.262378979008645,
+              45.93396099517122,
+              47.45063598966226,
+              46.278420952148736,
+              46.373505028896034,
+              46.26500396989286,
+              46.125587017741054,
+              45.7190009765327,
+              46.158253971952945,
+              46.09000403434038,
+              46.17575398879126,
+              46.36825597845018,
+              46.444088977295905,
+              46.2801709654741,
+              46.40208894852549,
+              46.37846403056756,
+              46.43825499806553,
+              46.301464026328176,
+              46.26471298979595,
+              46.74800799693912,
+              46.29183898214251
+            ],
+            "outputHashes": [
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "e7745b8d967fdb3e2e41b94a9748f8b7f08bad8ad3f0cc44dc6f202cdef4f4dd"
+              ],
+              [
+                "0e730d5596bb410aebb374c634dae9f1d8a23bd29ca62fd5007e67e97f335faf"
+              ],
+              [
+                "ce6a836cac59335e4417ce63318ae6f019daaf2cb0b5b1a4ac792dd42715d42e"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "e7745b8d967fdb3e2e41b94a9748f8b7f08bad8ad3f0cc44dc6f202cdef4f4dd"
+              ],
+              [
+                "0e730d5596bb410aebb374c634dae9f1d8a23bd29ca62fd5007e67e97f335faf"
+              ],
+              [
+                "ce6a836cac59335e4417ce63318ae6f019daaf2cb0b5b1a4ac792dd42715d42e"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "ec7f3d6c40ca19b5edabe9056881d1ac5f5a701c809383f4ee3886b9593cefab"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "ec7f3d6c40ca19b5edabe9056881d1ac5f5a701c809383f4ee3886b9593cefab"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "e7745b8d967fdb3e2e41b94a9748f8b7f08bad8ad3f0cc44dc6f202cdef4f4dd"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "e7745b8d967fdb3e2e41b94a9748f8b7f08bad8ad3f0cc44dc6f202cdef4f4dd"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "e7745b8d967fdb3e2e41b94a9748f8b7f08bad8ad3f0cc44dc6f202cdef4f4dd"
+              ],
+              [
+                "a467a06b1095385b61d82d912fd7d52d33eb911f76999039a5b3705031bed3bd"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "e7745b8d967fdb3e2e41b94a9748f8b7f08bad8ad3f0cc44dc6f202cdef4f4dd"
+              ],
+              [
+                "a467a06b1095385b61d82d912fd7d52d33eb911f76999039a5b3705031bed3bd"
+              ]
+            ]
+          }
+        ],
+        "results": [
+          {
+            "name": "silence",
+            "sampleRate": 16000,
+            "samples": 32000,
+            "durationSeconds": 2.0,
+            "pipelineSeconds": 0.1468109330162406,
+            "repeatPipelineSeconds": 0.14586796902585775,
+            "realTimeFactor": 0.0734054665081203,
+            "dataChunks": 1,
+            "warmupCallsPerPass": 1,
+            "npuCallsPerPass": 2,
+            "repeatExact": true,
+            "allFinite": true,
+            "outputRms": 0.002995501404019855,
+            "outputPeak": 0.012729227542877197,
+            "outputClippedFraction": 0.0,
+            "inputSha256": "20eaebffe1816e0ffa6f7f854f5ef4ea80d5349faaf0ce1fec1b713e7fde58fa",
+            "outputSha256": "ccdab5bbf7203fc3414bc7da7a555d4d48cd0c8e66bda6991066072c2655c2bd",
+            "boundaries": []
+          }
+        ],
+        "upstreamSha256": {
+          "audio.py": "b5ef3e12db0a075ded3e5d35e1d91f03762c0a840ce631c5736341d144f991f9",
+          "inference.py": "759e5761ed1b1e199448b45e45f875219aff1533656c91b2a5c80d866afe797f",
+          "runtime.py": "abf4f9ac396192df389938e34d13882ea983513d7a290fd91699565c171e748c"
+        },
+        "timingScope": "One complete enhance call, including zero-input warmup, chunk DSP, AXCL and recording; excludes model load, WAV read/save and second pass.",
+        "sourceSha256": "8d47e1d03eeb457c2549be79c8ec33a349ccd79f21c3add05f946f8f760c5a99",
+        "chunkChecks": {
+          "exact4sEqualsOfficialFirstChunk": true,
+          "above4sPreservesFirstChunk": true
+        }
+      }
+    },
+    {
+      "label": "4秒少1个采样点",
+      "observation": "输入与输出样本数相同，两次 NPU 原始输出和最终音频一致。",
+      "previews": [
+        {
+          "caption": "同一幅度范围的输入与输出",
+          "path": "/validation/effects/gcrn-20260928/below-4s-waveform.png"
+        }
+      ],
+      "audio": [
+        {
+          "caption": "实际输入 · 4秒少1个采样点",
+          "path": "/validation/effects/gcrn-20260928/below-4s-input.wav"
+        },
+        {
+          "caption": "本次输出 · 4秒少1个采样点",
+          "path": "/validation/effects/gcrn-20260928/below-4s-output.wav"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "项目",
+            "实测结果"
+          ],
+          "rows": [
+            [
+              "样本数",
+              "63999"
+            ],
+            [
+              "有效音频块 / 预热调用",
+              "1 / 1"
+            ],
+            [
+              "单遍完整处理",
+              "0.1452 s"
+            ],
+            [
+              "RTF",
+              "0.0363"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "modelId": "GCRN",
+        "provider": "AXCLRTExecutionProvider",
+        "completed": true,
+        "sessions": [
+          {
+            "model": "models/model.axmodel",
+            "loadSeconds": 1.0558890179963782,
+            "inputs": [
+              {
+                "name": "stft_input",
+                "shape": [
+                  1,
+                  2,
+                  401,
+                  161
+                ],
+                "dtype": "float32"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "stft_output",
+                "shape": [
+                  1,
+                  2,
+                  401,
+                  161
+                ]
+              }
+            ],
+            "allFinite": true,
+            "runMilliseconds": [
+              50.83107197424397,
+              45.86658498737961,
+              45.94679502770305,
+              46.06375301955268,
+              46.03050299920142,
+              46.262378979008645,
+              45.93396099517122,
+              47.45063598966226,
+              46.278420952148736,
+              46.373505028896034,
+              46.26500396989286,
+              46.125587017741054,
+              45.7190009765327,
+              46.158253971952945,
+              46.09000403434038,
+              46.17575398879126,
+              46.36825597845018,
+              46.444088977295905,
+              46.2801709654741,
+              46.40208894852549,
+              46.37846403056756,
+              46.43825499806553,
+              46.301464026328176,
+              46.26471298979595,
+              46.74800799693912,
+              46.29183898214251
+            ],
+            "outputHashes": [
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "e7745b8d967fdb3e2e41b94a9748f8b7f08bad8ad3f0cc44dc6f202cdef4f4dd"
+              ],
+              [
+                "0e730d5596bb410aebb374c634dae9f1d8a23bd29ca62fd5007e67e97f335faf"
+              ],
+              [
+                "ce6a836cac59335e4417ce63318ae6f019daaf2cb0b5b1a4ac792dd42715d42e"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "e7745b8d967fdb3e2e41b94a9748f8b7f08bad8ad3f0cc44dc6f202cdef4f4dd"
+              ],
+              [
+                "0e730d5596bb410aebb374c634dae9f1d8a23bd29ca62fd5007e67e97f335faf"
+              ],
+              [
+                "ce6a836cac59335e4417ce63318ae6f019daaf2cb0b5b1a4ac792dd42715d42e"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "ec7f3d6c40ca19b5edabe9056881d1ac5f5a701c809383f4ee3886b9593cefab"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "ec7f3d6c40ca19b5edabe9056881d1ac5f5a701c809383f4ee3886b9593cefab"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "e7745b8d967fdb3e2e41b94a9748f8b7f08bad8ad3f0cc44dc6f202cdef4f4dd"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "e7745b8d967fdb3e2e41b94a9748f8b7f08bad8ad3f0cc44dc6f202cdef4f4dd"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "e7745b8d967fdb3e2e41b94a9748f8b7f08bad8ad3f0cc44dc6f202cdef4f4dd"
+              ],
+              [
+                "a467a06b1095385b61d82d912fd7d52d33eb911f76999039a5b3705031bed3bd"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "e7745b8d967fdb3e2e41b94a9748f8b7f08bad8ad3f0cc44dc6f202cdef4f4dd"
+              ],
+              [
+                "a467a06b1095385b61d82d912fd7d52d33eb911f76999039a5b3705031bed3bd"
+              ]
+            ]
+          }
+        ],
+        "results": [
+          {
+            "name": "below-4s",
+            "sampleRate": 16000,
+            "samples": 63999,
+            "durationSeconds": 3.9999375,
+            "pipelineSeconds": 0.14523709000786766,
+            "repeatPipelineSeconds": 0.1461549709783867,
+            "realTimeFactor": 0.03630983984321447,
+            "dataChunks": 1,
+            "warmupCallsPerPass": 1,
+            "npuCallsPerPass": 2,
+            "repeatExact": true,
+            "allFinite": true,
+            "outputRms": 0.05840964573451184,
+            "outputPeak": 0.42990195751190186,
+            "outputClippedFraction": 0.0,
+            "inputSha256": "fa5a8903310f5f3a9c7a4a5218d85d12d25f39e516d567513b181181b6a6038f",
+            "outputSha256": "4e4c30df041a31fead417939afa502643dcb23b262b592afd96ffc3da42ff8cf",
+            "boundaries": []
+          }
+        ],
+        "upstreamSha256": {
+          "audio.py": "b5ef3e12db0a075ded3e5d35e1d91f03762c0a840ce631c5736341d144f991f9",
+          "inference.py": "759e5761ed1b1e199448b45e45f875219aff1533656c91b2a5c80d866afe797f",
+          "runtime.py": "abf4f9ac396192df389938e34d13882ea983513d7a290fd91699565c171e748c"
+        },
+        "timingScope": "One complete enhance call, including zero-input warmup, chunk DSP, AXCL and recording; excludes model load, WAV read/save and second pass.",
+        "sourceSha256": "8d47e1d03eeb457c2549be79c8ec33a349ccd79f21c3add05f946f8f760c5a99",
+        "chunkChecks": {
+          "exact4sEqualsOfficialFirstChunk": true,
+          "above4sPreservesFirstChunk": true
+        }
+      }
+    },
+    {
+      "label": "恰好4秒",
+      "observation": "输入与输出样本数相同，两次 NPU 原始输出和最终音频一致。",
+      "previews": [
+        {
+          "caption": "同一幅度范围的输入与输出",
+          "path": "/validation/effects/gcrn-20260928/exact-4s-waveform.png"
+        }
+      ],
+      "audio": [
+        {
+          "caption": "实际输入 · 恰好4秒",
+          "path": "/validation/effects/gcrn-20260928/exact-4s-input.wav"
+        },
+        {
+          "caption": "本次输出 · 恰好4秒",
+          "path": "/validation/effects/gcrn-20260928/exact-4s-output.wav"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "项目",
+            "实测结果"
+          ],
+          "rows": [
+            [
+              "样本数",
+              "64000"
+            ],
+            [
+              "有效音频块 / 预热调用",
+              "1 / 1"
+            ],
+            [
+              "单遍完整处理",
+              "0.1464 s"
+            ],
+            [
+              "RTF",
+              "0.0366"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "modelId": "GCRN",
+        "provider": "AXCLRTExecutionProvider",
+        "completed": true,
+        "sessions": [
+          {
+            "model": "models/model.axmodel",
+            "loadSeconds": 1.0558890179963782,
+            "inputs": [
+              {
+                "name": "stft_input",
+                "shape": [
+                  1,
+                  2,
+                  401,
+                  161
+                ],
+                "dtype": "float32"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "stft_output",
+                "shape": [
+                  1,
+                  2,
+                  401,
+                  161
+                ]
+              }
+            ],
+            "allFinite": true,
+            "runMilliseconds": [
+              50.83107197424397,
+              45.86658498737961,
+              45.94679502770305,
+              46.06375301955268,
+              46.03050299920142,
+              46.262378979008645,
+              45.93396099517122,
+              47.45063598966226,
+              46.278420952148736,
+              46.373505028896034,
+              46.26500396989286,
+              46.125587017741054,
+              45.7190009765327,
+              46.158253971952945,
+              46.09000403434038,
+              46.17575398879126,
+              46.36825597845018,
+              46.444088977295905,
+              46.2801709654741,
+              46.40208894852549,
+              46.37846403056756,
+              46.43825499806553,
+              46.301464026328176,
+              46.26471298979595,
+              46.74800799693912,
+              46.29183898214251
+            ],
+            "outputHashes": [
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "e7745b8d967fdb3e2e41b94a9748f8b7f08bad8ad3f0cc44dc6f202cdef4f4dd"
+              ],
+              [
+                "0e730d5596bb410aebb374c634dae9f1d8a23bd29ca62fd5007e67e97f335faf"
+              ],
+              [
+                "ce6a836cac59335e4417ce63318ae6f019daaf2cb0b5b1a4ac792dd42715d42e"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "e7745b8d967fdb3e2e41b94a9748f8b7f08bad8ad3f0cc44dc6f202cdef4f4dd"
+              ],
+              [
+                "0e730d5596bb410aebb374c634dae9f1d8a23bd29ca62fd5007e67e97f335faf"
+              ],
+              [
+                "ce6a836cac59335e4417ce63318ae6f019daaf2cb0b5b1a4ac792dd42715d42e"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "ec7f3d6c40ca19b5edabe9056881d1ac5f5a701c809383f4ee3886b9593cefab"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "ec7f3d6c40ca19b5edabe9056881d1ac5f5a701c809383f4ee3886b9593cefab"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "e7745b8d967fdb3e2e41b94a9748f8b7f08bad8ad3f0cc44dc6f202cdef4f4dd"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "e7745b8d967fdb3e2e41b94a9748f8b7f08bad8ad3f0cc44dc6f202cdef4f4dd"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "e7745b8d967fdb3e2e41b94a9748f8b7f08bad8ad3f0cc44dc6f202cdef4f4dd"
+              ],
+              [
+                "a467a06b1095385b61d82d912fd7d52d33eb911f76999039a5b3705031bed3bd"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "e7745b8d967fdb3e2e41b94a9748f8b7f08bad8ad3f0cc44dc6f202cdef4f4dd"
+              ],
+              [
+                "a467a06b1095385b61d82d912fd7d52d33eb911f76999039a5b3705031bed3bd"
+              ]
+            ]
+          }
+        ],
+        "results": [
+          {
+            "name": "exact-4s",
+            "sampleRate": 16000,
+            "samples": 64000,
+            "durationSeconds": 4.0,
+            "pipelineSeconds": 0.14640318101737648,
+            "repeatPipelineSeconds": 0.14631976297823712,
+            "realTimeFactor": 0.03660079525434412,
+            "dataChunks": 1,
+            "warmupCallsPerPass": 1,
+            "npuCallsPerPass": 2,
+            "repeatExact": true,
+            "allFinite": true,
+            "outputRms": 0.05841066136362441,
+            "outputPeak": 0.42990195751190186,
+            "outputClippedFraction": 0.0,
+            "inputSha256": "5e39cbd99b910799b3dc84e39c351aa0ee3f47baff966a6a9122c9b575204142",
+            "outputSha256": "aa601b130f6b54c3cbc042bbb3ffe45a9fb094bfcad30a47e3787b115c15e28d",
+            "boundaries": []
+          }
+        ],
+        "upstreamSha256": {
+          "audio.py": "b5ef3e12db0a075ded3e5d35e1d91f03762c0a840ce631c5736341d144f991f9",
+          "inference.py": "759e5761ed1b1e199448b45e45f875219aff1533656c91b2a5c80d866afe797f",
+          "runtime.py": "abf4f9ac396192df389938e34d13882ea983513d7a290fd91699565c171e748c"
+        },
+        "timingScope": "One complete enhance call, including zero-input warmup, chunk DSP, AXCL and recording; excludes model load, WAV read/save and second pass.",
+        "sourceSha256": "8d47e1d03eeb457c2549be79c8ec33a349ccd79f21c3add05f946f8f760c5a99",
+        "chunkChecks": {
+          "exact4sEqualsOfficialFirstChunk": true,
+          "above4sPreservesFirstChunk": true
+        }
+      }
+    },
+    {
+      "label": "4秒多1个采样点",
+      "observation": "输入与输出样本数相同，两次 NPU 原始输出和最终音频一致。 多出的1个采样点进入第二块，第一块与恰好4秒的结果完全一致。",
+      "previews": [
+        {
+          "caption": "同一幅度范围的输入与输出",
+          "path": "/validation/effects/gcrn-20260928/above-4s-waveform.png"
+        }
+      ],
+      "audio": [
+        {
+          "caption": "实际输入 · 4秒多1个采样点",
+          "path": "/validation/effects/gcrn-20260928/above-4s-input.wav"
+        },
+        {
+          "caption": "本次输出 · 4秒多1个采样点",
+          "path": "/validation/effects/gcrn-20260928/above-4s-output.wav"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "项目",
+            "实测结果"
+          ],
+          "rows": [
+            [
+              "样本数",
+              "64001"
+            ],
+            [
+              "有效音频块 / 预热调用",
+              "2 / 1"
+            ],
+            [
+              "单遍完整处理",
+              "0.2316 s"
+            ],
+            [
+              "RTF",
+              "0.0579"
+            ]
+          ]
+        },
+        {
+          "headers": [
+            "分块时刻",
+            "输入相邻点差",
+            "输出相邻点差"
+          ],
+          "rows": [
+            [
+              "4 s",
+              "0.037140",
+              "-0.032877"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "modelId": "GCRN",
+        "provider": "AXCLRTExecutionProvider",
+        "completed": true,
+        "sessions": [
+          {
+            "model": "models/model.axmodel",
+            "loadSeconds": 1.0558890179963782,
+            "inputs": [
+              {
+                "name": "stft_input",
+                "shape": [
+                  1,
+                  2,
+                  401,
+                  161
+                ],
+                "dtype": "float32"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "stft_output",
+                "shape": [
+                  1,
+                  2,
+                  401,
+                  161
+                ]
+              }
+            ],
+            "allFinite": true,
+            "runMilliseconds": [
+              50.83107197424397,
+              45.86658498737961,
+              45.94679502770305,
+              46.06375301955268,
+              46.03050299920142,
+              46.262378979008645,
+              45.93396099517122,
+              47.45063598966226,
+              46.278420952148736,
+              46.373505028896034,
+              46.26500396989286,
+              46.125587017741054,
+              45.7190009765327,
+              46.158253971952945,
+              46.09000403434038,
+              46.17575398879126,
+              46.36825597845018,
+              46.444088977295905,
+              46.2801709654741,
+              46.40208894852549,
+              46.37846403056756,
+              46.43825499806553,
+              46.301464026328176,
+              46.26471298979595,
+              46.74800799693912,
+              46.29183898214251
+            ],
+            "outputHashes": [
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "e7745b8d967fdb3e2e41b94a9748f8b7f08bad8ad3f0cc44dc6f202cdef4f4dd"
+              ],
+              [
+                "0e730d5596bb410aebb374c634dae9f1d8a23bd29ca62fd5007e67e97f335faf"
+              ],
+              [
+                "ce6a836cac59335e4417ce63318ae6f019daaf2cb0b5b1a4ac792dd42715d42e"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "e7745b8d967fdb3e2e41b94a9748f8b7f08bad8ad3f0cc44dc6f202cdef4f4dd"
+              ],
+              [
+                "0e730d5596bb410aebb374c634dae9f1d8a23bd29ca62fd5007e67e97f335faf"
+              ],
+              [
+                "ce6a836cac59335e4417ce63318ae6f019daaf2cb0b5b1a4ac792dd42715d42e"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "ec7f3d6c40ca19b5edabe9056881d1ac5f5a701c809383f4ee3886b9593cefab"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "ec7f3d6c40ca19b5edabe9056881d1ac5f5a701c809383f4ee3886b9593cefab"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "e7745b8d967fdb3e2e41b94a9748f8b7f08bad8ad3f0cc44dc6f202cdef4f4dd"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "e7745b8d967fdb3e2e41b94a9748f8b7f08bad8ad3f0cc44dc6f202cdef4f4dd"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "e7745b8d967fdb3e2e41b94a9748f8b7f08bad8ad3f0cc44dc6f202cdef4f4dd"
+              ],
+              [
+                "a467a06b1095385b61d82d912fd7d52d33eb911f76999039a5b3705031bed3bd"
+              ],
+              [
+                "0a3be9b279ae8614340c08ee8e0b3ebb036d07624493310397047a9567e1dd89"
+              ],
+              [
+                "e7745b8d967fdb3e2e41b94a9748f8b7f08bad8ad3f0cc44dc6f202cdef4f4dd"
+              ],
+              [
+                "a467a06b1095385b61d82d912fd7d52d33eb911f76999039a5b3705031bed3bd"
+              ]
+            ]
+          }
+        ],
+        "results": [
+          {
+            "name": "above-4s",
+            "sampleRate": 16000,
+            "samples": 64001,
+            "durationSeconds": 4.0000625,
+            "pipelineSeconds": 0.23155310697620735,
+            "repeatPipelineSeconds": 0.23406028799945489,
+            "realTimeFactor": 0.05788737225386036,
+            "dataChunks": 2,
+            "warmupCallsPerPass": 1,
+            "npuCallsPerPass": 3,
+            "repeatExact": true,
+            "allFinite": true,
+            "outputRms": 0.058410205035900754,
+            "outputPeak": 0.42990195751190186,
+            "outputClippedFraction": 0.0,
+            "inputSha256": "51806c093e323eeb4214eefb11b61695e54aa0986758b2cb8208ccc3097419a0",
+            "outputSha256": "9f2cfd008676a280745ffc84eb2c92467bae1c7ec63bf4d20121e48bdeaf1fbf",
+            "boundaries": [
+              {
+                "sample": 64000,
+                "seconds": 4.0,
+                "inputAdjacentJump": 0.037139892578125,
+                "outputAdjacentJump": -0.032876551151275635
+              }
+            ]
+          }
+        ],
+        "upstreamSha256": {
+          "audio.py": "b5ef3e12db0a075ded3e5d35e1d91f03762c0a840ce631c5736341d144f991f9",
+          "inference.py": "759e5761ed1b1e199448b45e45f875219aff1533656c91b2a5c80d866afe797f",
+          "runtime.py": "abf4f9ac396192df389938e34d13882ea983513d7a290fd91699565c171e748c"
+        },
+        "timingScope": "One complete enhance call, including zero-input warmup, chunk DSP, AXCL and recording; excludes model load, WAV read/save and second pass.",
+        "sourceSha256": "8d47e1d03eeb457c2549be79c8ec33a349ccd79f21c3add05f946f8f760c5a99",
+        "chunkChecks": {
+          "exact4sEqualsOfficialFirstChunk": true,
+          "above4sPreservesFirstChunk": true
+        }
+      }
+    }
+  ]
+}

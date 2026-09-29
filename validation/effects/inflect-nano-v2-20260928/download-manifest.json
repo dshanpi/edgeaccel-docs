@@ -1,0 +1,288 @@
+{
+  "modelId": "inflect_nano_v2",
+  "repo": "AXERA-TECH/inflect_nano_v2",
+  "revision": "b57a7ddf5bed32338a79153a43479ea9eee3cde2",
+  "complete": true,
+  "files": [
+    {
+      "path": "LICENSE",
+      "size": 10455,
+      "url": "https://huggingface.co/AXERA-TECH/inflect_nano_v2/resolve/b57a7ddf5bed32338a79153a43479ea9eee3cde2/LICENSE",
+      "verifiedHashes": {
+        "sha256": "12c48c640d1d0baf158d45175a4238b9227c71c77f50b0d15791b8efc08cd793",
+        "gitBlob": "531c95bdb639e27404d285adb83619753443ffcf"
+      }
+    },
+    {
+      "path": "NOTICE.md",
+      "size": 1196,
+      "url": "https://huggingface.co/AXERA-TECH/inflect_nano_v2/resolve/b57a7ddf5bed32338a79153a43479ea9eee3cde2/NOTICE.md",
+      "verifiedHashes": {
+        "sha256": "63244410b3d73a0e4715ff11f428957f6372fbdfcaf5c23fb6e95e07478801f8",
+        "gitBlob": "791a5766862707ca925203a41afe2f8d70de00a4"
+      }
+    },
+    {
+      "path": "README.md",
+      "size": 3296,
+      "url": "https://huggingface.co/AXERA-TECH/inflect_nano_v2/resolve/b57a7ddf5bed32338a79153a43479ea9eee3cde2/README.md",
+      "verifiedHashes": {
+        "sha256": "225fefbda692ce72b84c1fbbc13f233c0352e1a416490ad561d98edba4343b08",
+        "gitBlob": "eb441fb4b3b1f47f85dcffdcd5507f99d5891c5f"
+      }
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "size": 1233,
+      "url": "https://huggingface.co/AXERA-TECH/inflect_nano_v2/resolve/b57a7ddf5bed32338a79153a43479ea9eee3cde2/THIRD_PARTY_NOTICES.md",
+      "verifiedHashes": {
+        "sha256": "2ead63b7d9cddd6c1d12a96d88de0ade6fd3eabd1278825c0a3a2c1d3647ab4b",
+        "gitBlob": "f9403536a2683de51b5ed0ca3d0e9e18a18546e0"
+      }
+    },
+    {
+      "path": "models/config.json",
+      "size": 1210,
+      "url": "https://huggingface.co/AXERA-TECH/inflect_nano_v2/resolve/b57a7ddf5bed32338a79153a43479ea9eee3cde2/models/config.json",
+      "verifiedHashes": {
+        "sha256": "8669007c29a215dfc6c4cbb4962c01440f4d806022584699404aee58e5249f03",
+        "gitBlob": "e3c049121673683eaf8ebd9f189ded5fdfa7cffa"
+      }
+    },
+    {
+      "path": "models/dp.onnx",
+      "size": 1016818,
+      "url": "https://huggingface.co/AXERA-TECH/inflect_nano_v2/resolve/b57a7ddf5bed32338a79153a43479ea9eee3cde2/models/dp.onnx",
+      "verifiedHashes": {
+        "sha256": "f900bd96d1f318ae2f5175f75bc53dd34f44923344d9bd40b0ab9f38e48aefc5",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/emb_weight.npy",
+      "size": 51392,
+      "url": "https://huggingface.co/AXERA-TECH/inflect_nano_v2/resolve/b57a7ddf5bed32338a79153a43479ea9eee3cde2/models/emb_weight.npy",
+      "verifiedHashes": {
+        "sha256": "4511be00eca15dff6e5e8e65b6428a0fca3b5d5f4661ccafff688d5f4d5d025e",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/inflect_decoder.axmodel",
+      "size": 5737622,
+      "url": "https://huggingface.co/AXERA-TECH/inflect_nano_v2/resolve/b57a7ddf5bed32338a79153a43479ea9eee3cde2/models/inflect_decoder.axmodel",
+      "verifiedHashes": {
+        "sha256": "a80a07079c6929a6b64fd5c1e7dcdeb6b1572c90210f834f784f3becb6921e48",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/inflect_encoder.axmodel",
+      "size": 1071548,
+      "url": "https://huggingface.co/AXERA-TECH/inflect_nano_v2/resolve/b57a7ddf5bed32338a79153a43479ea9eee3cde2/models/inflect_encoder.axmodel",
+      "verifiedHashes": {
+        "sha256": "318a522cb0860f5f17a04f014c01a60930fb88d13c367e9bd1d97d121621e048",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/model_meta.json",
+      "size": 698,
+      "url": "https://huggingface.co/AXERA-TECH/inflect_nano_v2/resolve/b57a7ddf5bed32338a79153a43479ea9eee3cde2/models/model_meta.json",
+      "verifiedHashes": {
+        "sha256": "0ebee26ce2c2a3f946e8a7432ea36cc41a8a3e2f922647528484c286f85df339",
+        "gitBlob": "82e83e52237835d9e6e9c7c85bb107feeb0137d5"
+      }
+    },
+    {
+      "path": "python/inflect_tts_sdk/README.md",
+      "size": 395,
+      "url": "https://huggingface.co/AXERA-TECH/inflect_nano_v2/resolve/b57a7ddf5bed32338a79153a43479ea9eee3cde2/python/inflect_tts_sdk/README.md",
+      "verifiedHashes": {
+        "sha256": "6d90d764143ccf069d7d0d9c665dbc00cbd5bd3152396990c00c8937ea90e05b",
+        "gitBlob": "9e37495932c7f5649428174601f76860509f0d36"
+      }
+    },
+    {
+      "path": "python/inflect_tts_sdk/__init__.py",
+      "size": 41,
+      "url": "https://huggingface.co/AXERA-TECH/inflect_nano_v2/resolve/b57a7ddf5bed32338a79153a43479ea9eee3cde2/python/inflect_tts_sdk/__init__.py",
+      "verifiedHashes": {
+        "sha256": "8c2b05069d21e564283fb96b42b4ea1eb51656cc1e15ec1dc01f3f31cc6df654",
+        "gitBlob": "d01421d462450368fda36070801a6c516598a384"
+      }
+    },
+    {
+      "path": "python/inflect_tts_sdk/__main__.py",
+      "size": 2293,
+      "url": "https://huggingface.co/AXERA-TECH/inflect_nano_v2/resolve/b57a7ddf5bed32338a79153a43479ea9eee3cde2/python/inflect_tts_sdk/__main__.py",
+      "verifiedHashes": {
+        "sha256": "98d7b8f9cb0af10aa9c0493d4780707fab60854ed51651be2f3c2aebcdcc0111",
+        "gitBlob": "1ff13d97b51ba4cf5a45e7f962860fd9938721dd"
+      }
+    },
+    {
+      "path": "python/inflect_tts_sdk/inference.py",
+      "size": 7311,
+      "url": "https://huggingface.co/AXERA-TECH/inflect_nano_v2/resolve/b57a7ddf5bed32338a79153a43479ea9eee3cde2/python/inflect_tts_sdk/inference.py",
+      "verifiedHashes": {
+        "sha256": "9bccc990aafa8e363a34269367a034fc69d8216f7317650be0e389bdd545eae3",
+        "gitBlob": "433efaebbe3910430d86fb147ae2fc733053cdb9"
+      }
+    },
+    {
+      "path": "python/inflect_tts_sdk/inflect_nano_v2_frontend.py",
+      "size": 11892,
+      "url": "https://huggingface.co/AXERA-TECH/inflect_nano_v2/resolve/b57a7ddf5bed32338a79153a43479ea9eee3cde2/python/inflect_tts_sdk/inflect_nano_v2_frontend.py",
+      "verifiedHashes": {
+        "sha256": "399cba29408d594d655157ab6af925dc12edcd4207cf00595386106e7e53190a",
+        "gitBlob": "4cc96bb59d639648a7821686198af6870398cbb0"
+      }
+    },
+    {
+      "path": "python/inflect_tts_sdk/inflect_vits_frontend.py",
+      "size": 2031,
+      "url": "https://huggingface.co/AXERA-TECH/inflect_nano_v2/resolve/b57a7ddf5bed32338a79153a43479ea9eee3cde2/python/inflect_tts_sdk/inflect_vits_frontend.py",
+      "verifiedHashes": {
+        "sha256": "70eb4cdb96b2752015f72be984f5e62e0f26d7dc80e708875601702057b95cc2",
+        "gitBlob": "7d921b2818e87e84b6aa8757ca917f54c50773e9"
+      }
+    },
+    {
+      "path": "python/inflect_tts_sdk/requirements.txt",
+      "size": 90,
+      "url": "https://huggingface.co/AXERA-TECH/inflect_nano_v2/resolve/b57a7ddf5bed32338a79153a43479ea9eee3cde2/python/inflect_tts_sdk/requirements.txt",
+      "verifiedHashes": {
+        "sha256": "1dbfaa418a54fc3384537f2cd004e0661c58b219c9f1e7c8dccfd5952098783d",
+        "gitBlob": "e1104f2b521308fda0b3c2d9cfd974e5f8d60271"
+      }
+    },
+    {
+      "path": "python/inflect_tts_sdk/runtime/attentions.py",
+      "size": 11780,
+      "url": "https://huggingface.co/AXERA-TECH/inflect_nano_v2/resolve/b57a7ddf5bed32338a79153a43479ea9eee3cde2/python/inflect_tts_sdk/runtime/attentions.py",
+      "verifiedHashes": {
+        "sha256": "dc65085d0e5d67da9f7603c98efad1e27eaf42c572f632a58080a5cc0f577f92",
+        "gitBlob": "4e0b0c1fd48c962e21e1fbe60b23fc574927435c"
+      }
+    },
+    {
+      "path": "python/inflect_tts_sdk/runtime/commons.py",
+      "size": 4778,
+      "url": "https://huggingface.co/AXERA-TECH/inflect_nano_v2/resolve/b57a7ddf5bed32338a79153a43479ea9eee3cde2/python/inflect_tts_sdk/runtime/commons.py",
+      "verifiedHashes": {
+        "sha256": "f223dc1df791d2fb2953cfebd7014a7bc2a6ed614c05de6c17c7b44718a42cdd",
+        "gitBlob": "9ad0444b61cbadaa388619986c2889c707d873ce"
+      }
+    },
+    {
+      "path": "python/inflect_tts_sdk/runtime/inflect_alias_free.py",
+      "size": 4670,
+      "url": "https://huggingface.co/AXERA-TECH/inflect_nano_v2/resolve/b57a7ddf5bed32338a79153a43479ea9eee3cde2/python/inflect_tts_sdk/runtime/inflect_alias_free.py",
+      "verifiedHashes": {
+        "sha256": "d2144153504a8986b737f2043468bf8bc73027ae8158cd1d8ca58ef54bf82ea7",
+        "gitBlob": "75e30a053bb563c37611e34d27bafe4dd4544594"
+      }
+    },
+    {
+      "path": "python/inflect_tts_sdk/runtime/models.py",
+      "size": 22039,
+      "url": "https://huggingface.co/AXERA-TECH/inflect_nano_v2/resolve/b57a7ddf5bed32338a79153a43479ea9eee3cde2/python/inflect_tts_sdk/runtime/models.py",
+      "verifiedHashes": {
+        "sha256": "f47a50c3381e7022dbd263c489f3c6b8f6c6c7ebb192729584af0ce0596b7aff",
+        "gitBlob": "712e12a402554dc8ff8c4a44821f88f16d58cefd"
+      }
+    },
+    {
+      "path": "python/inflect_tts_sdk/runtime/modules.py",
+      "size": 13166,
+      "url": "https://huggingface.co/AXERA-TECH/inflect_nano_v2/resolve/b57a7ddf5bed32338a79153a43479ea9eee3cde2/python/inflect_tts_sdk/runtime/modules.py",
+      "verifiedHashes": {
+        "sha256": "f6514eaf7fab47d866ee0f9da94ca6ab6e45ebaf246151408da20dd14f242a75",
+        "gitBlob": "9c7fd9cd6eb8b7e0ec0e08957e970744a374a924"
+      }
+    },
+    {
+      "path": "python/inflect_tts_sdk/runtime/monotonic_align.py",
+      "size": 206,
+      "url": "https://huggingface.co/AXERA-TECH/inflect_nano_v2/resolve/b57a7ddf5bed32338a79153a43479ea9eee3cde2/python/inflect_tts_sdk/runtime/monotonic_align.py",
+      "verifiedHashes": {
+        "sha256": "16ca4890f3e0107250b4a522c0127779994a5a2b99fc35d6a27f93496a72153a",
+        "gitBlob": "69f7bfbdd87fa4b13c7967e4f0cc7656a611a421"
+      }
+    },
+    {
+      "path": "python/inflect_tts_sdk/runtime/text/LICENSE",
+      "size": 1053,
+      "url": "https://huggingface.co/AXERA-TECH/inflect_nano_v2/resolve/b57a7ddf5bed32338a79153a43479ea9eee3cde2/python/inflect_tts_sdk/runtime/text/LICENSE",
+      "verifiedHashes": {
+        "sha256": "f89accd9d66f6a011f19997d7a21cf71a35ffe2e2d0911b5460cbd0cab52a581",
+        "gitBlob": "4ad4ed1d5e34d95c8380768ec16405d789cc6de4"
+      }
+    },
+    {
+      "path": "python/inflect_tts_sdk/runtime/text/__init__.py",
+      "size": 1572,
+      "url": "https://huggingface.co/AXERA-TECH/inflect_nano_v2/resolve/b57a7ddf5bed32338a79153a43479ea9eee3cde2/python/inflect_tts_sdk/runtime/text/__init__.py",
+      "verifiedHashes": {
+        "sha256": "7f88b1aae463edcb42e1dce6f5c4227b167b3f5a40853bc644c73db015c1e471",
+        "gitBlob": "4ac41f9025755d8ffd74068af14c6cfc8e5a4173"
+      }
+    },
+    {
+      "path": "python/inflect_tts_sdk/runtime/text/cleaners.py",
+      "size": 2880,
+      "url": "https://huggingface.co/AXERA-TECH/inflect_nano_v2/resolve/b57a7ddf5bed32338a79153a43479ea9eee3cde2/python/inflect_tts_sdk/runtime/text/cleaners.py",
+      "verifiedHashes": {
+        "sha256": "11dc7325547290e529c597e620f3aaf8d0bd8a2a2987d48eb42d2289534e42d1",
+        "gitBlob": "2658f667a7d59ca99a3e16ba0c157d2ab5d795eb"
+      }
+    },
+    {
+      "path": "python/inflect_tts_sdk/runtime/text/symbols.py",
+      "size": 642,
+      "url": "https://huggingface.co/AXERA-TECH/inflect_nano_v2/resolve/b57a7ddf5bed32338a79153a43479ea9eee3cde2/python/inflect_tts_sdk/runtime/text/symbols.py",
+      "verifiedHashes": {
+        "sha256": "e8871acbc37bd79f61ed063a2b3aa20e20555ddec15c6b9f29e1ab05e7f8b776",
+        "gitBlob": "869a53e763ae825bc02921842280ac9efe7f85dd"
+      }
+    },
+    {
+      "path": "python/inflect_tts_sdk/runtime/transforms.py",
+      "size": 8490,
+      "url": "https://huggingface.co/AXERA-TECH/inflect_nano_v2/resolve/b57a7ddf5bed32338a79153a43479ea9eee3cde2/python/inflect_tts_sdk/runtime/transforms.py",
+      "verifiedHashes": {
+        "sha256": "9d95e518610c35581c4f1c3b4e8eeca91b7c3d6899e7f0ebb86a0387394d3046",
+        "gitBlob": "4793d67ca5a5630e0ffe0f9fb29445c949e64dae"
+      }
+    },
+    {
+      "path": "python/inflect_tts_sdk/runtime/utils.py",
+      "size": 7526,
+      "url": "https://huggingface.co/AXERA-TECH/inflect_nano_v2/resolve/b57a7ddf5bed32338a79153a43479ea9eee3cde2/python/inflect_tts_sdk/runtime/utils.py",
+      "verifiedHashes": {
+        "sha256": "db11ba9b5ffd342abffc59229de7575a7d9e23468f91c6398e70eb4e01636716",
+        "gitBlob": "4d6fa9273bda9755412dfe7171f9a51b4fd60f07"
+      }
+    },
+    {
+      "path": "python/inflect_tts_sdk/server.py",
+      "size": 3251,
+      "url": "https://huggingface.co/AXERA-TECH/inflect_nano_v2/resolve/b57a7ddf5bed32338a79153a43479ea9eee3cde2/python/inflect_tts_sdk/server.py",
+      "verifiedHashes": {
+        "sha256": "15d7e3dfbfe8d99e753d87c6a8aa28d05586c6a46205db0936dfe623429e4e9a",
+        "gitBlob": "4b886eb1eae3815fbbf17a4ac70e0042e4ce3512"
+      }
+    },
+    {
+      "path": "python/inflect_tts_sdk/tts_engine.py",
+      "size": 7405,
+      "url": "https://huggingface.co/AXERA-TECH/inflect_nano_v2/resolve/b57a7ddf5bed32338a79153a43479ea9eee3cde2/python/inflect_tts_sdk/tts_engine.py",
+      "verifiedHashes": {
+        "sha256": "daac49a85169578f850d4ce63f7c4a42bad840ef604caf4fd93cfed8eca500ea",
+        "gitBlob": "020d8d7a3d740905d52f8fbc4627265cb2136509"
+      }
+    }
+  ],
+  "runnerSha256": "a6d44ed333a0ec2ada44164b1dd0a3bf75be4bb48a43bfdd75d022d6b2893e3f"
+}

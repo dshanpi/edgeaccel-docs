@@ -1,0 +1,65 @@
+[
+  {
+    "modelId": "ImageDenosing",
+    "name": "dncnn",
+    "entry": "DnCNN/python/axmodel_infer.py",
+    "weight": "DnCNN/model_convert/axmodel/dncnn_color_blind_416x416_sim.axmodel",
+    "weights": [
+      "DnCNN/model_convert/axmodel/dncnn_color_blind_416x416_sim.axmodel"
+    ],
+    "input": "DnCNN/pic/3096.png",
+    "args": [],
+    "patches": [
+      [
+        "AXMODEL_PATH = \"dncnn_color_blind_416x416_sim.axmodel\"",
+        "AXMODEL_PATH = {weight_literal}"
+      ],
+      [
+        "img_path = './3096.png'",
+        "img_path = {input_literal}"
+      ]
+    ]
+  },
+  {
+    "modelId": "ImageDenosing",
+    "name": "ffdnet",
+    "entry": "FFDNet/python/axmodel_infer.py",
+    "weight": "FFDNet/model_convert/axmodel/ffdnet_color_fixed_sigma10_640x640_sim.axmodel",
+    "weights": [
+      "FFDNet/model_convert/axmodel/ffdnet_color_fixed_sigma10_640x640_sim.axmodel"
+    ],
+    "input": "FFDNet/pic/3096.png",
+    "args": [],
+    "patches": [
+      [
+        "AXMODEL_PATH = './ffdnet_color_fixed_sigma10_640x640_sim.axmodel'",
+        "AXMODEL_PATH = {weight_literal}"
+      ],
+      [
+        "img_path = './3096.png'",
+        "img_path = {input_literal}"
+      ]
+    ]
+  },
+  {
+    "modelId": "ImageDenosing",
+    "name": "nafnet",
+    "entry": "NAFNet/python/axmodel_infer.py",
+    "weight": "NAFNet/model_convert/axmodel/NAFNet_1_3_256_256.axmodel",
+    "weights": [
+      "NAFNet/model_convert/axmodel/NAFNet_1_3_256_256.axmodel"
+    ],
+    "input": "NAFNet/pic/noisy.png",
+    "args": [],
+    "patches": [
+      [
+        "AXMODEL_PATH = 'NAFNet_1_3_256_256.axmodel'",
+        "AXMODEL_PATH = {weight_literal}"
+      ],
+      [
+        "INPUT_PATH = 'demo/noisy.png'",
+        "INPUT_PATH = {input_literal}"
+      ]
+    ]
+  }
+]

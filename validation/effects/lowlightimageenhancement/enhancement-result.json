@@ -1,0 +1,241 @@
+{
+  "modelId": "LowLightImageEnhancement",
+  "revision": "61df6da7399d54fbe8786235ceb06a5cef1118fa",
+  "variants": [
+    {
+      "name": "zero-dce",
+      "label": "Zero-DCE",
+      "observation": "左为输入，右为输出。人物和道路更亮，细节明显变软。",
+      "input": {
+        "file": "Zero-DCE/pic/10.jpg",
+        "sha256": "9f281f827c51dbcd7dd30e532e43745109f6f71018db4333371215c4699cd62b"
+      },
+      "weights": [
+        "Zero-DCE/model_convert/axmodel/Zero-DCE.axmodel"
+      ],
+      "sessions": [
+        {
+          "weight": "Zero-DCE/model_convert/axmodel/Zero-DCE.axmodel",
+          "sha256": "d65aa69f66db11d8391d9040ae58cc8de3ed4e0a52001535505dfe773455ad11",
+          "loadSeconds": 0.5424018249996152,
+          "inputs": [
+            {
+              "name": "input",
+              "shape": [
+                1,
+                3,
+                256,
+                256
+              ],
+              "dtype": "uint8"
+            }
+          ],
+          "calls": [
+            {
+              "seconds": 0.014433750000534928,
+              "outputs": [
+                {
+                  "shape": [
+                    1,
+                    3,
+                    256,
+                    256
+                  ],
+                  "dtype": "float32",
+                  "min": 0.0,
+                  "max": 0.9999847412109375
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "seconds": 1.2046294150004542,
+      "previews": [
+        {
+          "caption": "本次运行输出",
+          "path": "/validation/effects/lowlightimageenhancement/outputs/zero-dce.png"
+        }
+      ]
+    },
+    {
+      "name": "zero-dcepp",
+      "label": "Zero-DCE++",
+      "observation": "左为输入，右为输出。室内物体可见度提高，噪点也被放大。",
+      "input": {
+        "file": "Zero-DCE++/pic/101_3_.png",
+        "sha256": "28e77ab4aa0b768aa7568781e85e0cdc17403ed681b028980ec7ef14a569e338"
+      },
+      "weights": [
+        "Zero-DCE++/model_convert/axmodel/zerodcepp_512_sf8.axmodel"
+      ],
+      "sessions": [
+        {
+          "weight": "Zero-DCE++/model_convert/axmodel/zerodcepp_512_sf8.axmodel",
+          "sha256": "fbadc0afb701b8328fdbd55e784c900ddd38b48a9abf711f069759072d068496",
+          "loadSeconds": 0.5560766569997213,
+          "inputs": [
+            {
+              "name": "input",
+              "shape": [
+                1,
+                3,
+                512,
+                512
+              ],
+              "dtype": "uint8"
+            }
+          ],
+          "calls": [
+            {
+              "seconds": 0.05450390899932245,
+              "outputs": [
+                {
+                  "shape": [
+                    1,
+                    3,
+                    512,
+                    512
+                  ],
+                  "dtype": "float32",
+                  "min": 0.0,
+                  "max": 0.7436026334762573
+                },
+                {
+                  "shape": [
+                    1,
+                    3,
+                    512,
+                    512
+                  ],
+                  "dtype": "float32",
+                  "min": -0.34375,
+                  "max": -0.2109375
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "seconds": 1.280266385001596,
+      "previews": [
+        {
+          "caption": "本次运行输出",
+          "path": "/validation/effects/lowlightimageenhancement/outputs/zero-dcepp.png"
+        }
+      ]
+    },
+    {
+      "name": "sci",
+      "label": "SCI",
+      "observation": "左为输入，右为输出。书柜和冰箱更亮，暗部仍有噪点。",
+      "input": {
+        "file": "SCI/pic/00001.png",
+        "sha256": "12f3b5d4c3823dbf2503e825944213974248e788726b6f7aebb275b644c76c89"
+      },
+      "weights": [
+        "SCI/model_convert/axmodel/SCI_TPAMI_600_400.axmodel"
+      ],
+      "sessions": [
+        {
+          "weight": "SCI/model_convert/axmodel/SCI_TPAMI_600_400.axmodel",
+          "sha256": "8aef592a22301da25d534344ff4569a2d6583bb25163e1a706e9cc80a2e7bfc2",
+          "loadSeconds": 0.5812383550000959,
+          "inputs": [
+            {
+              "name": "input",
+              "shape": [
+                1,
+                3,
+                400,
+                600
+              ],
+              "dtype": "uint8"
+            }
+          ],
+          "calls": [
+            {
+              "seconds": 0.03522235200034629,
+              "outputs": [
+                {
+                  "shape": [
+                    1,
+                    3,
+                    400,
+                    600
+                  ],
+                  "dtype": "float32",
+                  "min": 0.0,
+                  "max": 0.9500868916511536
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "seconds": 1.189178037999227,
+      "previews": [
+        {
+          "caption": "本次运行输出",
+          "path": "/validation/effects/lowlightimageenhancement/outputs/sci.png"
+        }
+      ]
+    },
+    {
+      "name": "retinexformer",
+      "label": "Retinexformer",
+      "observation": "左为输入，右为输出。亮度提高，但文字和边缘经过 224×224 模型缩放后变软。",
+      "input": {
+        "file": "Retinexformer/pic/1.png",
+        "sha256": "12f3b5d4c3823dbf2503e825944213974248e788726b6f7aebb275b644c76c89"
+      },
+      "weights": [
+        "Retinexformer/model_convert/axmodel/Retinexformer_224_224.axmodel"
+      ],
+      "sessions": [
+        {
+          "weight": "Retinexformer/model_convert/axmodel/Retinexformer_224_224.axmodel",
+          "sha256": "1b91a600d1e973a888f77f8ca113dbfa7e21e3b0a42f303939285164b53b97f5",
+          "loadSeconds": 0.6439280780014087,
+          "inputs": [
+            {
+              "name": "input",
+              "shape": [
+                1,
+                3,
+                224,
+                224
+              ],
+              "dtype": "uint8"
+            }
+          ],
+          "calls": [
+            {
+              "seconds": 0.045213130999400164,
+              "outputs": [
+                {
+                  "shape": [
+                    1,
+                    3,
+                    224,
+                    224
+                  ],
+                  "dtype": "float32",
+                  "min": -0.012157723307609558,
+                  "max": 0.9981172680854797
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "seconds": 0.8877807860008033,
+      "previews": [
+        {
+          "caption": "本次运行输出",
+          "path": "/validation/effects/lowlightimageenhancement/outputs/retinexformer.png"
+        }
+      ]
+    }
+  ]
+}

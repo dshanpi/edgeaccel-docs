@@ -1,0 +1,62 @@
+{
+  "unpacked_module_builds": [
+    {
+      "module": "ax_pcie_host_dev.ko",
+      "size": "0x380",
+      "cleanup_offset": "0x340",
+      "vermagic": "6.1.115-vendor-rk35xx SMP mod_unload modversions aarch64",
+      "imported_symbol_crcs_match_working_module": true,
+      "imported_symbol_count": 61
+    },
+    {
+      "module": "ax_pcie_mmb.ko",
+      "size": "0x380",
+      "cleanup_offset": "0x340",
+      "vermagic": "6.1.115-vendor-rk35xx SMP mod_unload modversions aarch64",
+      "imported_symbol_crcs_match_working_module": true,
+      "imported_symbol_count": 25
+    },
+    {
+      "module": "ax_pcie_msg.ko",
+      "size": "0x380",
+      "cleanup_offset": "0x340",
+      "vermagic": "6.1.115-vendor-rk35xx SMP mod_unload modversions aarch64",
+      "imported_symbol_crcs_match_working_module": true,
+      "imported_symbol_count": 33
+    },
+    {
+      "module": "ax_pcie_net_host.ko",
+      "size": "0x380",
+      "cleanup_offset": "0x340",
+      "vermagic": "6.1.115-vendor-rk35xx SMP mod_unload modversions aarch64"
+    },
+    {
+      "module": "ax_pcie_p2p_rc.ko",
+      "size": "0x380",
+      "cleanup_offset": "0x340",
+      "vermagic": "6.1.115-vendor-rk35xx SMP mod_unload modversions aarch64",
+      "imported_symbol_crcs_match_working_module": true,
+      "imported_symbol_count": 14
+    },
+    {
+      "module": "axcl_host.ko",
+      "size": "0x380",
+      "cleanup_offset": "0x340",
+      "vermagic": "6.1.115-vendor-rk35xx SMP mod_unload modversions aarch64",
+      "imported_symbol_crcs_match_working_module": true,
+      "imported_symbol_count": 56
+    },
+    {
+      "module": "vtty.ko",
+      "size": "0x380",
+      "cleanup_offset": "0x340",
+      "vermagic": "6.1.115-vendor-rk35xx SMP mod_unload modversions aarch64"
+    }
+  ],
+  "unpacked_md5sums_pass": true,
+  "checker_rejects_changed_config": true,
+  "apt_simulation_pass": true,
+  "active_files_and_package_versions_unchanged": true,
+  "package_installed": false,
+  "new_modules_loaded": false
+}

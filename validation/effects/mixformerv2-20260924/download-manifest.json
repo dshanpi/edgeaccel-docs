@@ -1,0 +1,44 @@
+{
+  "modelId": "MixFormerV2",
+  "repo": "AXERA-TECH/MixFormerV2",
+  "revision": "f4f94e988421b7a03fb70148ea97ab5811297d09",
+  "complete": true,
+  "files": [
+    {
+      "path": "README.md",
+      "size": 4052,
+      "url": "https://huggingface.co/AXERA-TECH/MixFormerV2/resolve/f4f94e988421b7a03fb70148ea97ab5811297d09/README.md",
+      "verifiedHashes": {
+        "sha256": "cb48aeef2c3f9601cdf53ea38b0ea2ead170d27b097adf21babe2b005911dd08",
+        "gitBlob": "700ade3b92268918b068a8f66e84a3d62b17e5bd"
+      }
+    },
+    {
+      "path": "ax650/mixformer_v2.axmodel",
+      "size": 23041126,
+      "url": "https://huggingface.co/AXERA-TECH/MixFormerV2/resolve/f4f94e988421b7a03fb70148ea97ab5811297d09/ax650/mixformer_v2.axmodel",
+      "verifiedHashes": {
+        "sha256": "7ae9b045601ccb716a7bcec3a72a601e279db421a98de779f0283d750694f84d",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "run_mixformer2_axmodel.py",
+      "size": 14347,
+      "url": "https://huggingface.co/AXERA-TECH/MixFormerV2/resolve/f4f94e988421b7a03fb70148ea97ab5811297d09/run_mixformer2_axmodel.py",
+      "verifiedHashes": {
+        "sha256": "ad19eb3371ed3358a45636b4dc6040281b449ede10f781c7dc3b425f4a9099de",
+        "gitBlob": "4fa337a9dbba051aedd100a064f8790b585cd251"
+      }
+    },
+    {
+      "path": "car.avi",
+      "size": 65474094,
+      "url": "https://huggingface.co/AXERA-TECH/MixFormerV2/resolve/f4f94e988421b7a03fb70148ea97ab5811297d09/car.avi",
+      "verifiedHashes": {
+        "sha256": "12085e86f5791f9936f382027d51ed02e2485636a03480aeaec2ac03e2bd2bd1",
+        "gitBlob": null
+      }
+    }
+  ]
+}

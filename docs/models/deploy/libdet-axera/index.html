@@ -1,0 +1,487 @@
+<!doctype html><html lang=zh-Hans dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-models/deploy/libdet-axera" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>libdet.axera 部署指南 · EdgeAccel 文档</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://dshanpi.github.io/edgeaccel-docs/docs/models/deploy/libdet-axera /><meta data-rh=true property=og:locale content=zh_Hans /><meta data-rh=true name=docusaurus_locale content=zh-Hans /><meta data-rh=true name=docsearch:language content=zh-Hans /><meta data-rh=true name=docusaurus_version content=current /><meta data-rh=true name=docusaurus_tag content=docs-default-current /><meta data-rh=true name=docsearch:version content=current /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-current /><meta data-rh=true property=og:title content="libdet.axera 部署指南 · EdgeAccel 文档"/><meta data-rh=true name=description content="libdet.axera 的 M.2 算力卡部署步骤、配套文件与效果展示。"/><meta data-rh=true property=og:description content="libdet.axera 的 M.2 算力卡部署步骤、配套文件与效果展示。"/><link data-rh=true rel=icon href=/edgeaccel-docs/img/edgeaccel.svg /><link data-rh=true rel=canonical href=https://dshanpi.github.io/edgeaccel-docs/docs/models/deploy/libdet-axera /><link data-rh=true rel=alternate href=https://dshanpi.github.io/edgeaccel-docs/docs/models/deploy/libdet-axera hreflang=zh-Hans /><link data-rh=true rel=alternate href=https://dshanpi.github.io/edgeaccel-docs/docs/models/deploy/libdet-axera hreflang=x-default /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://dshanpi.github.io/edgeaccel-docs/docs/models/deploy/libdet-axera","name":"libdet.axera","position":1}]}</script><link rel=stylesheet href=/edgeaccel-docs/assets/css/styles.392c4b40.css /><script src=/edgeaccel-docs/assets/js/runtime~main.b86cd81f.js defer></script><script src=/edgeaccel-docs/assets/js/main.6a3326bb.js defer></script></head><body><svg style="display: none;"><defs>
+<symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme-3a2")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><link rel=preload as=image href=/edgeaccel-docs/img/edgeaccel.svg /><div role=region aria-label=跳到主要内容><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>跳到主要内容</a></div><nav aria-label=主导航 class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_m1mJ"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label=切换导航栏 aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/edgeaccel-docs/><div class=navbar__logo><img src=/edgeaccel-docs/img/edgeaccel.svg alt="" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/edgeaccel-docs/img/edgeaccel.svg alt="" class="themedComponent_mlkZ themedComponent--dark_xIcU"/></div><b class="navbar__title text--truncate">EdgeAccel</b></a><a aria-current=page class="navbar__item navbar__link navbar__link--active" href=/edgeaccel-docs/docs/>AX8850</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type=button disabled title="system mode" aria-label="切换浅色/暗黑模式（当前为system mode）"><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill=currentColor d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill=currentColor d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill=currentColor d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"/></svg></button></div><div class=navbarSearchContainer_Bca1><div class="navbar__search searchBarContainer_NW3z" dir=ltr><input placeholder=搜索 aria-label=Search class="navbar__search-input searchInput_YFbd" value="" /><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div role=presentation class=navbar-sidebar__backdrop></div></nav><div id=__docusaurus_skipToContent_fallback class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class=docsWrapper_hBAB><button aria-label=回到顶部 class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type=button></button><div class=docRoot_UBD9><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class=sidebarViewport_aRkj><div class="sidebar_njMd sidebarWithHideableNavbar_wUlq"><a tabindex=-1 class=sidebarLogo_isFc href=/edgeaccel-docs/><img src=/edgeaccel-docs/img/edgeaccel.svg alt="" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/edgeaccel-docs/img/edgeaccel.svg alt="" class="themedComponent_mlkZ themedComponent--dark_xIcU"/><b>EdgeAccel</b></a><nav aria-label=文档侧边栏 class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class=menu__link href=/edgeaccel-docs/docs/><span class=linkLabel_WmDU>M.2 算力卡使用指南</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class=menu__link href=/edgeaccel-docs/docs/ax650n/roadmap><span class=linkLabel_WmDU>算力卡上手路线</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/edgeaccel-docs/docs/ax650n/user-guide><span class=categoryLinkLabel_W154>接卡与安装</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=true href=/edgeaccel-docs/docs/usage/first-inference><span class=categoryLinkLabel_W154>完成首次推理</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/edgeaccel-docs/docs/usage/first-inference><span class=linkLabel_WmDU>脚本运行：首次推理</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/edgeaccel-docs/docs/usage/device-check><span class=linkLabel_WmDU>手动操作：检查设备</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/edgeaccel-docs/docs/usage/download-models><span class=linkLabel_WmDU>手动操作：下载模型</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/edgeaccel-docs/docs/usage/build-samples><span class=linkLabel_WmDU>手动操作：编译示例</span></a></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role=button aria-expanded=true href=/edgeaccel-docs/docs/models/selection><span class=categoryLinkLabel_W154>选择与部署模型</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/edgeaccel-docs/docs/models/selection><span class=linkLabel_WmDU>按任务和容量选择模型</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/edgeaccel-docs/docs/models/catalog><span class=linkLabel_WmDU>模型目录与独立部署文档</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role=button aria-expanded=true tabindex=0 href=/edgeaccel-docs/docs/models/deploy/3d-speaker><span class=categoryLinkLabel_W154>模型部署与效果</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/edgeaccel-docs/docs/models/deploy/3d-speaker><span class=categoryLinkLabel_W154>语音识别与处理</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/edgeaccel-docs/docs/models/deploy/3d-speaker-meeting-summary><span class=categoryLinkLabel_W154>组合应用</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/edgeaccel-docs/docs/models/deploy/abot-recon-axera><span class=categoryLinkLabel_W154>姿态、深度与三维</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/edgeaccel-docs/docs/models/deploy/awesome-files><span class=categoryLinkLabel_W154>工具与配套资源</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role=button aria-expanded=true tabindex=0 href=/edgeaccel-docs/docs/models/deploy/bevformer><span class=categoryLinkLabel_W154>视觉检测与分割</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/edgeaccel-docs/docs/models/deploy/bevformer><span class=linkLabel_WmDU>bevformer</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/edgeaccel-docs/docs/models/deploy/centerpoint><span class=linkLabel_WmDU>centerpoint</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/edgeaccel-docs/docs/models/deploy/cow-axera><span class=linkLabel_WmDU>Cow-axera</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/edgeaccel-docs/docs/models/deploy/deeplabv3plus><span class=linkLabel_WmDU>DeepLabv3Plus</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/edgeaccel-docs/docs/models/deploy/deformable-detr><span class=linkLabel_WmDU>Deformable-Detr</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/edgeaccel-docs/docs/models/deploy/deimv2><span class=linkLabel_WmDU>DEIMv2</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/edgeaccel-docs/docs/models/deploy/drone-axera><span class=linkLabel_WmDU>Drone-axera</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/edgeaccel-docs/docs/models/deploy/e-bike-axera><span class=linkLabel_WmDU>E_bike-axera</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/edgeaccel-docs/docs/models/deploy/edgetam><span class=linkLabel_WmDU>EdgeTAM</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/edgeaccel-docs/docs/models/deploy/fall-axera><span class=linkLabel_WmDU>Fall-axera</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/edgeaccel-docs/docs/models/deploy/gesture-axera><span class=linkLabel_WmDU>Gesture-axera</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/edgeaccel-docs/docs/models/deploy/helmet-axera><span class=linkLabel_WmDU>Helmet-axera</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link menu__link--active" aria-current=page tabindex=0 href=/edgeaccel-docs/docs/models/deploy/libdet-axera><span class=linkLabel_WmDU>libdet.axera</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/edgeaccel-docs/docs/models/deploy/locateanything-3b><span class=linkLabel_WmDU>LocateAnything-3B</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/edgeaccel-docs/docs/models/deploy/mixformerv2><span class=linkLabel_WmDU>MixFormerV2</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/edgeaccel-docs/docs/models/deploy/mobilesam><span class=linkLabel_WmDU>MobileSAM</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/edgeaccel-docs/docs/models/deploy/owlvit2><span class=linkLabel_WmDU>OWLViT2</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/edgeaccel-docs/docs/models/deploy/package-axera><span class=linkLabel_WmDU>Package-axera</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/edgeaccel-docs/docs/models/deploy/person-car-axera><span class=linkLabel_WmDU>Person_car-axera</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/edgeaccel-docs/docs/models/deploy/pet-axera><span class=linkLabel_WmDU>Pet-axera</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/edgeaccel-docs/docs/models/deploy/plate-axera><span class=linkLabel_WmDU>Plate-axera</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/edgeaccel-docs/docs/models/deploy/qrcode-axera><span class=linkLabel_WmDU>QRCode-axera</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/edgeaccel-docs/docs/models/deploy/rf-detr><span class=linkLabel_WmDU>RF-DETR</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/edgeaccel-docs/docs/models/deploy/rf-detr-large><span class=linkLabel_WmDU>rf-detr-large</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/edgeaccel-docs/docs/models/deploy/rf-detr-small><span class=linkLabel_WmDU>rf-detr-small</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/edgeaccel-docs/docs/models/deploy/rmbg-1-4><span class=linkLabel_WmDU>RMBG-1.4</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/edgeaccel-docs/docs/models/deploy/rt-detr><span class=linkLabel_WmDU>RT-DETR</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/edgeaccel-docs/docs/models/deploy/visdrone-yolov11s><span class=linkLabel_WmDU>visdrone-yolov11s</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/edgeaccel-docs/docs/models/deploy/wedetect-axera><span class=linkLabel_WmDU>WeDetect.axera</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/edgeaccel-docs/docs/models/deploy/yolo-world-v2><span class=linkLabel_WmDU>YOLO-World-V2</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/edgeaccel-docs/docs/models/deploy/yolo11><span class=linkLabel_WmDU>YOLO11</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/edgeaccel-docs/docs/models/deploy/yolo11-obb><span class=linkLabel_WmDU>yolo11-obb</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/edgeaccel-docs/docs/models/deploy/yolo11-seg><span class=linkLabel_WmDU>YOLO11-Seg</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/edgeaccel-docs/docs/models/deploy/yolo26><span class=linkLabel_WmDU>yolo26</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/edgeaccel-docs/docs/models/deploy/yolo26-obb><span class=linkLabel_WmDU>yolo26-obb</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/edgeaccel-docs/docs/models/deploy/yolo26-seg><span class=linkLabel_WmDU>yolo26-seg</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/edgeaccel-docs/docs/models/deploy/yoloe-26n-seg><span class=linkLabel_WmDU>yoloe-26n-seg</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/edgeaccel-docs/docs/models/deploy/yolov5><span class=linkLabel_WmDU>YOLOv5</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/edgeaccel-docs/docs/models/deploy/yolov5-seg><span class=linkLabel_WmDU>YOLOv5-Seg</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/edgeaccel-docs/docs/models/deploy/yolov7-face><span class=linkLabel_WmDU>YOLOv7-Face</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/edgeaccel-docs/docs/models/deploy/yolov8><span class=linkLabel_WmDU>YOLOv8</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/edgeaccel-docs/docs/models/deploy/yolov8-aquarium><span class=linkLabel_WmDU>YOLOv8-Aquarium</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/edgeaccel-docs/docs/models/deploy/yolov8-seg><span class=linkLabel_WmDU>YOLOv8-Seg</span></a></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/edgeaccel-docs/docs/models/deploy/bge-m3><span class=categoryLinkLabel_W154>OCR、分类与检索</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/edgeaccel-docs/docs/models/deploy/chatterbox-onestep><span class=categoryLinkLabel_W154>语音合成</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/edgeaccel-docs/docs/models/deploy/codeformer><span class=categoryLinkLabel_W154>图像增强与生成</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/edgeaccel-docs/docs/models/deploy/deepseek-r1-distill-qwen-1-5b><span class=categoryLinkLabel_W154>文本生成与翻译</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/edgeaccel-docs/docs/models/deploy/fastvlm-0-5b><span class=categoryLinkLabel_W154>多模态理解</span></a></div></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/edgeaccel-docs/docs/models/detection><span class=categoryLinkLabel_W154>选择视觉模型</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/edgeaccel-docs/docs/models/llm-runtime><span class=categoryLinkLabel_W154>选择文本与多模态模型</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/edgeaccel-docs/docs/models/speech-recognition><span class=categoryLinkLabel_W154>选择语音与扩展模型</span></a></div></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist" href=/edgeaccel-docs/docs/usage/application-guide><span class=categoryLinkLabel_W154>接入应用与维护</span></a><button aria-label="展开侧边栏分类 '接入应用与维护'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=true href=/edgeaccel-docs/docs/projects/six-streams><span class=categoryLinkLabel_W154>项目实战</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex=0 href=/edgeaccel-docs/docs/projects/six-streams><span class=categoryLinkLabel_W154>AX8850 六路 AI 视频推流</span></a><button aria-label="展开侧边栏分类 'AX8850 六路 AI 视频推流'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/edgeaccel-docs/docs/projects/laya-games><span class=linkLabel_WmDU>Laya 游戏实验室</span></a></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/edgeaccel-docs/docs/reference/validation><span class=categoryLinkLabel_W154>检查方法与参考</span></a></div></ul></nav><button type=button title=收起侧边栏 aria-label=收起侧边栏 class="button button--secondary button--outline collapseSidebarButton_PEFL"><svg width=20 height=20 aria-hidden=true class=collapseSidebarButtonIcon_kv0_><g fill=#7a7a7a><path d="M9.992 10.023c0 .2-.062.399-.172.547l-4.996 7.492a.982.982 0 01-.828.454H1c-.55 0-1-.453-1-1 0-.2.059-.403.168-.551l4.629-6.942L.168 3.078A.939.939 0 010 2.528c0-.548.45-.997 1-.997h2.996c.352 0 .649.18.828.45L9.82 9.472c.11.148.172.347.172.55zm0 0"/><path d="M19.98 10.023c0 .2-.058.399-.168.547l-4.996 7.492a.987.987 0 01-.828.454h-3c-.547 0-.996-.453-.996-1 0-.2.059-.403.168-.551l4.625-6.942-4.625-6.945a.939.939 0 01-.168-.55 1 1 0 01.996-.997h3c.348 0 .649.18.828.45l4.996 7.492c.11.148.168.347.168.55zm0 0"/></g></svg></button></div></div></aside><main class=docMainContainer_TBSr><div class="container padding-top--md padding-bottom--lg"><div class=row><div class="col docItemCol_VOVn"><div class=docItemContainer_Djhp><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label=页面路径><ul class=breadcrumbs><li class=breadcrumbs__item><a aria-label=主页面 class=breadcrumbs__link href=/edgeaccel-docs/><svg viewBox="0 0 24 24" class=breadcrumbHomeIcon_YNFT><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill=currentColor /></svg></a><li class=breadcrumbs__item><span class=breadcrumbs__link>选择与部署模型</span><li class=breadcrumbs__item><span class=breadcrumbs__link>模型部署与效果</span><li class=breadcrumbs__item><span class=breadcrumbs__link>视觉检测与分割</span><li class="breadcrumbs__item breadcrumbs__item--active"><span class=breadcrumbs__link>libdet.axera</span></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type=button class="clean-btn tocCollapsibleButton_TO0P">本页总览</button></div><div class="theme-doc-markdown markdown"><header><h1>libdet.axera 部署指南</h1></header>
+<p>libdet.axera 用于目标检测。本页说明 M.2 算力卡的接入条件、部署步骤与结果检查方法。</p>
+<blockquote>
+<p>已实测，效果仍需评估。<a href=#%E6%9F%A5%E7%9C%8B%E9%83%A8%E7%BD%B2%E6%95%88%E6%9E%9C class="">查看部署效果</a>。</p>
+</blockquote>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=准备运行环境>准备运行环境<a href=#准备运行环境 class=hash-link aria-label=准备运行环境的直接链接 title=准备运行环境的直接链接 translate=no>​</a></h2>
+<p>本页效果展示使用 <strong>RK3576 + AX8850 16GB M.2</strong>；其他容量或平台需重新确认模型能否加载并正确运行。</p>
+<p>在连接算力卡的 Linux 主机终端执行，RK3576 使用 ARM64 环境。首次部署先完成<a class="" href=/edgeaccel-docs/docs/usage/device-check>驱动与设备检查</a>、<a class="" href=/edgeaccel-docs/docs/getting-started/prepare>准备主机环境</a>和<a class="" href=/edgeaccel-docs/docs/usage/download-models#%E4%BD%BF%E7%94%A8-hugging-face-%E4%B8%8B%E8%BD%BD>下载工具安装</a>。已完成这些步骤可直接下载模型。</p>
+<p>后文使用设备 0，运行前用 <code>axcl-smi</code> 确认设备可用。</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=下载模型与样例>下载模型与样例<a href=#下载模型与样例 class=hash-link aria-label=下载模型与样例的直接链接 title=下载模型与样例的直接链接 translate=no>​</a></h2>
+<p>本页使用 <code>AXERA-TECH/libdet.axera</code> 的固定版本。下面下载本页选用的 10 个文件。</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token assign-left variable" style=color:#36acaa>MODEL_DIR</span><span class="token operator" style=color:#393A34>=~</span><span class="token plain">/edgeaccel/models/libdet-axera/0a50691f9581</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"></span><span class="token function" style=color:#d73a49>mkdir</span><span class="token plain"> </span><span class="token parameter variable" style=color:#36acaa>-p</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"</span><span class="token string variable" style=color:#36acaa>$MODEL_DIR</span><span class="token string" style=color:#e3116c>"</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">~/edgeaccel/hf-env/bin/hf download AXERA-TECH/libdet.axera </span><span class="token punctuation" style=color:#393A34>\</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  </span><span class="token string" style=color:#e3116c>"README.md"</span><span class="token plain"> </span><span class="token punctuation" style=color:#393A34>\</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  </span><span class="token string" style=color:#e3116c>"lib/aarch64/libdet.so"</span><span class="token plain"> </span><span class="token punctuation" style=color:#393A34>\</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  </span><span class="token string" style=color:#e3116c>"lib/pyaxdev.py"</span><span class="token plain"> </span><span class="token punctuation" style=color:#393A34>\</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  </span><span class="token string" style=color:#e3116c>"lib/pydet.py"</span><span class="token plain"> </span><span class="token punctuation" style=color:#393A34>\</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  </span><span class="token string" style=color:#e3116c>"lib/example.py"</span><span class="token plain"> </span><span class="token punctuation" style=color:#393A34>\</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  </span><span class="token string" style=color:#e3116c>"lib/gradio_example.py"</span><span class="token plain"> </span><span class="token punctuation" style=color:#393A34>\</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  </span><span class="token string" style=color:#e3116c>"lib/requirements.txt"</span><span class="token plain"> </span><span class="token punctuation" style=color:#393A34>\</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  </span><span class="token string" style=color:#e3116c>"include/libdet.h"</span><span class="token plain"> </span><span class="token punctuation" style=color:#393A34>\</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  </span><span class="token string" style=color:#e3116c>"include/ax_devices.h"</span><span class="token plain"> </span><span class="token punctuation" style=color:#393A34>\</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  </span><span class="token string" style=color:#e3116c>"examples/test_det.cpp"</span><span class="token plain"> </span><span class="token punctuation" style=color:#393A34>\</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  </span><span class="token parameter variable" style=color:#36acaa>--revision</span><span class="token plain"> 0a50691f9581143c28be91c0e7247250fbc52daf </span><span class="token punctuation" style=color:#393A34>\</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  --local-dir </span><span class="token string" style=color:#e3116c>"</span><span class="token string variable" style=color:#36acaa>$MODEL_DIR</span><span class="token string" style=color:#e3116c>"</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain"></span><span class="token builtin class-name">cd</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"</span><span class="token string variable" style=color:#36acaa>$MODEL_DIR</span><span class="token string" style=color:#e3116c>"</span><br/></div></code></pre></div></div>
+<p>保留当前终端中的 <code>MODEL_DIR</code> 变量，后续命令沿用此目录。下载受阻或需要离线复制时，见<a class="" href=/edgeaccel-docs/docs/usage/download-models>下载方式与文件校验</a>。</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=安装推理依赖>安装推理依赖<a href=#安装推理依赖 class=hash-link aria-label=安装推理依赖的直接链接 title=安装推理依赖的直接链接 translate=no>​</a></h2>
+<p>libdet.axera 提供统一的目标检测和人体姿态接口，模型权重来自配套的官方仓库。本页在 RK3576 + AX8850 16GB M.2 上运行官方 ARM64 SDK，显式选择 <code>AxDeviceType.axcl_device</code>、设备0。</p>
+<p>在 RK3576 主机执行，<code>$MODEL_DIR</code> 为上方下载的 SDK 目录：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token builtin class-name">source</span><span class="token plain"> ~/edgeaccel/python-env/bin/activate</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">python </span><span class="token parameter variable" style=color:#36acaa>-m</span><span class="token plain"> pip </span><span class="token function" style=color:#d73a49>install</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>'numpy==1.26.4'</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>'opencv-python-headless==4.11.0.86'</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">ldd </span><span class="token string" style=color:#e3116c>"</span><span class="token string variable" style=color:#36acaa>$MODEL_DIR</span><span class="token string" style=color:#e3116c>/lib/aarch64/libdet.so"</span><br/></div></code></pre></div></div>
+<p>确认依赖没有 <code>not found</code>。示例检查固定版本库及 Python 封装的校验值；如果主机另外安装了 <code>/home/axera/libdet.axera/build/libdet.so</code>，先整理库的加载配置，避免官方封装优先加载另一份库。</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=下载配套权重和输入图片>下载配套权重和输入图片<a href=#下载配套权重和输入图片 class=hash-link aria-label=下载配套权重和输入图片的直接链接 title=下载配套权重和输入图片的直接链接 translate=no>​</a></h2>
+<p>SDK 与权重需要匹配。下面为 YOLOv8s 选用官方历史版本的三输出头权重；当前仓库的六输出头权重不能直接交给本页 SDK。YOLO11s、YOLO11x 和 YOLO11x-Pose 使用各自固定版本。</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token assign-left variable" style=color:#36acaa>WEIGHTS_DIR</span><span class="token operator" style=color:#393A34>=~</span><span class="token plain">/edgeaccel/models/libdet-weights</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"></span><span class="token assign-left variable" style=color:#36acaa>INPUT_DIR</span><span class="token operator" style=color:#393A34>=~</span><span class="token plain">/edgeaccel/inputs/libdet</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"></span><span class="token function" style=color:#d73a49>mkdir</span><span class="token plain"> </span><span class="token parameter variable" style=color:#36acaa>-p</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"</span><span class="token string variable" style=color:#36acaa>$WEIGHTS_DIR</span><span class="token string" style=color:#e3116c>"</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"</span><span class="token string variable" style=color:#36acaa>$INPUT_DIR</span><span class="token string" style=color:#e3116c>"</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">~/edgeaccel/hf-env/bin/hf download AXERA-TECH/YOLOv8 </span><span class="token punctuation" style=color:#393A34>\</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  ax650/yolov8s.axmodel </span><span class="token punctuation" style=color:#393A34>\</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  </span><span class="token parameter variable" style=color:#36acaa>--revision</span><span class="token plain"> 6380cf5da7db0efa8414ea0e3dbbc801fe22d9a0 </span><span class="token punctuation" style=color:#393A34>\</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  --local-dir </span><span class="token string" style=color:#e3116c>"</span><span class="token string variable" style=color:#36acaa>$WEIGHTS_DIR</span><span class="token string" style=color:#e3116c>/yolov8"</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">~/edgeaccel/hf-env/bin/hf download AXERA-TECH/YOLO11 </span><span class="token punctuation" style=color:#393A34>\</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  ax650/yolo11s.axmodel ax650/yolo11x.axmodel </span><span class="token punctuation" style=color:#393A34>\</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  </span><span class="token parameter variable" style=color:#36acaa>--revision</span><span class="token plain"> e178719ba1b03eaf07c981f859027f3278c1cb29 </span><span class="token punctuation" style=color:#393A34>\</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  --local-dir </span><span class="token string" style=color:#e3116c>"</span><span class="token string variable" style=color:#36acaa>$WEIGHTS_DIR</span><span class="token string" style=color:#e3116c>/yolo11"</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">~/edgeaccel/hf-env/bin/hf download AXERA-TECH/YOLO11-Pose </span><span class="token punctuation" style=color:#393A34>\</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  ax650/yolo11x-pose.axmodel </span><span class="token punctuation" style=color:#393A34>\</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  </span><span class="token parameter variable" style=color:#36acaa>--revision</span><span class="token plain"> 156938308275ed3dbe3772898d8766a399aeb173 </span><span class="token punctuation" style=color:#393A34>\</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  --local-dir </span><span class="token string" style=color:#e3116c>"</span><span class="token string variable" style=color:#36acaa>$WEIGHTS_DIR</span><span class="token string" style=color:#e3116c>/yolo11-pose"</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">~/edgeaccel/hf-env/bin/hf download AXERA-TECH/YOLOv8 bus.jpg </span><span class="token punctuation" style=color:#393A34>\</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  </span><span class="token parameter variable" style=color:#36acaa>--revision</span><span class="token plain"> 65567714c2388b9c6b85bfb10b21535e7db0dee0 </span><span class="token punctuation" style=color:#393A34>\</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  --local-dir </span><span class="token string" style=color:#e3116c>"</span><span class="token string variable" style=color:#36acaa>$INPUT_DIR</span><span class="token string" style=color:#e3116c>"</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">~/edgeaccel/hf-env/bin/hf download AXERA-TECH/YOLO11 </span><span class="token punctuation" style=color:#393A34>\</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  football.jpg ssd_horse.jpg </span><span class="token punctuation" style=color:#393A34>\</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  </span><span class="token parameter variable" style=color:#36acaa>--revision</span><span class="token plain"> e178719ba1b03eaf07c981f859027f3278c1cb29 </span><span class="token punctuation" style=color:#393A34>\</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  --local-dir </span><span class="token string" style=color:#e3116c>"</span><span class="token string variable" style=color:#36acaa>$INPUT_DIR</span><span class="token string" style=color:#e3116c>"</span><br/></div></code></pre></div></div>
+<p>四份权重合计约145 MB。下载受阻时可参考<a class="" href=/edgeaccel-docs/docs/usage/download-models>下载方式与文件校验</a>。请保留文件名和目录层级，示例会逐一校验权重与输入。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>运行名称<th style=text-align:right>SDK模型类型<th style=text-align:right>类别数<th style=text-align:right>关键点数<tbody><tr><td><code>yolov8s</code><td style=text-align:right>1<td style=text-align:right>80<td style=text-align:right>0<tr><td><code>yolo11s</code>、<code>yolo11x</code><td style=text-align:right>3<td style=text-align:right>80<td style=text-align:right>0<tr><td><code>yolo11x-pose</code><td style=text-align:right>4<td style=text-align:right>1<td style=text-align:right>17</table>
+<p>姿态模型只检测人体，不会输出车辆或动物类别。本页没有验证 YOLOv5 和 YOLOv8-Pose 入口。</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=执行检测和姿态估计>执行检测和姿态估计<a href=#执行检测和姿态估计 class=hash-link aria-label=执行检测和姿态估计的直接链接 title=执行检测和姿态估计的直接链接 translate=no>​</a></h2>
+<p>下载 <a href=/edgeaccel-docs/examples/libdet_card.py target=_blank class="">LibDet 算力卡示例</a>，保存为 <code>~/edgeaccel/libdet_card.py</code>。沿用当前终端中的三个目录变量：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">python ~/edgeaccel/libdet_card.py </span><span class="token punctuation" style=color:#393A34>\</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  --sdk-dir </span><span class="token string" style=color:#e3116c>"</span><span class="token string variable" style=color:#36acaa>$MODEL_DIR</span><span class="token string" style=color:#e3116c>"</span><span class="token plain"> </span><span class="token punctuation" style=color:#393A34>\</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  --yolov8-dir </span><span class="token string" style=color:#e3116c>"</span><span class="token string variable" style=color:#36acaa>$WEIGHTS_DIR</span><span class="token string" style=color:#e3116c>/yolov8"</span><span class="token plain"> </span><span class="token punctuation" style=color:#393A34>\</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  --yolo11-dir </span><span class="token string" style=color:#e3116c>"</span><span class="token string variable" style=color:#36acaa>$WEIGHTS_DIR</span><span class="token string" style=color:#e3116c>/yolo11"</span><span class="token plain"> </span><span class="token punctuation" style=color:#393A34>\</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  --pose-dir </span><span class="token string" style=color:#e3116c>"</span><span class="token string variable" style=color:#36acaa>$WEIGHTS_DIR</span><span class="token string" style=color:#e3116c>/yolo11-pose"</span><span class="token plain"> </span><span class="token punctuation" style=color:#393A34>\</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  --input-dir </span><span class="token string" style=color:#e3116c>"</span><span class="token string variable" style=color:#36acaa>$INPUT_DIR</span><span class="token string" style=color:#e3116c>"</span><span class="token plain"> </span><span class="token punctuation" style=color:#393A34>\</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  </span><span class="token parameter variable" style=color:#36acaa>--output</span><span class="token plain"> ~/edgeaccel/results/libdet-01</span><br/></div></code></pre></div></div>
+<p>输出目录须尚不存在。程序逐个加载和释放四个模型，每个模型依次处理三张原图、足球图重复输入和灰色空白图。默认分数阈值为0.25。</p>
+<p><code>deployment-result.json</code> 中 <code>"completed": true</code> 表示全部步骤完成。打开 <code>yolo11s-bus-result.png</code> 查看车辆和行人检测，打开 <code>yolo11x-pose-football-result.png</code> 查看人体关键点。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>输出<th>内容<tbody><tr><td><code>&lt;模型>-&lt;样例>-input.png</code><td>实际输入图片<tr><td><code>&lt;模型>-&lt;样例>-result.png</code><td>本次框、类别、分数和关键点绘图<tr><td><code>deployment-result.json</code><td>完整坐标、输入输出校验值和SDK调用耗时<tr><td><code>*-native.bin</code><td>原始SDK结果结构，可保留用于复核</table>
+<p>检测框使用 <code>x、y、宽、高</code>。接口接收 RGB、<code>uint8</code> 的连续内存图像，示例负责从 OpenCV 的 BGR 格式转换。每次结果最多64个对象。</p>
+<p>姿态接口只返回关键点坐标，没有逐点置信度或可见性。示例用固定人体拓扑连接图像范围内的点；连线不表示每个关节都准确可见，图像外的点保留在JSON中，但不绘制。</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=使用自己的图片>使用自己的图片<a href=#使用自己的图片 class=hash-link aria-label=使用自己的图片的直接链接 title=使用自己的图片的直接链接 translate=no>​</a></h2>
+<p>只运行 YOLO11s 时，可以省略其他两组权重目录，使用 <code>--image</code> 代替默认输入目录：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">python ~/edgeaccel/libdet_card.py </span><span class="token punctuation" style=color:#393A34>\</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  --sdk-dir </span><span class="token string" style=color:#e3116c>"</span><span class="token string variable" style=color:#36acaa>$MODEL_DIR</span><span class="token string" style=color:#e3116c>"</span><span class="token plain"> </span><span class="token punctuation" style=color:#393A34>\</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  --yolo11-dir </span><span class="token string" style=color:#e3116c>"</span><span class="token string variable" style=color:#36acaa>$WEIGHTS_DIR</span><span class="token string" style=color:#e3116c>/yolo11"</span><span class="token plain"> </span><span class="token punctuation" style=color:#393A34>\</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  </span><span class="token parameter variable" style=color:#36acaa>--variant</span><span class="token plain"> yolo11s </span><span class="token punctuation" style=color:#393A34>\</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  </span><span class="token parameter variable" style=color:#36acaa>--image</span><span class="token plain"> ~/Pictures/input.jpg </span><span class="token punctuation" style=color:#393A34>\</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  </span><span class="token parameter variable" style=color:#36acaa>--output</span><span class="token plain"> ~/edgeaccel/results/libdet-custom-01</span><br/></div></code></pre></div></div>
+<p><code>--image</code> 可重复传入多张图片，自定义输入按 <code>custom-1</code> 等名称保存。示例限制每边不超过4096像素。用 <code>--threshold</code> 调整传入SDK的阈值后，需要重新检查漏检、误检及相邻目标的保留情况；本次效果展示只对应0.25。</p>
+<p>本页检查了输入、SDK返回结构、重复执行和绘图坐标。检测数量不能直接当成正确目标数，不同模型的返回数量也不代表准确率排名。完整数据集精度、关键点误差、长期运行和实际8GB卡仍需分别验证。</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=查看部署效果>查看部署效果<a href=#查看部署效果 class=hash-link aria-label=查看部署效果的直接链接 title=查看部署效果的直接链接 translate=no>​</a></h2>
+<p><strong>已运行，效果仍需评估</strong> · 2026-09-28 · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。</p>
+<p>使用固定SDK完成YOLOv8s、YOLO11s、YOLO11x与YOLO11x-Pose的20次串行调用，展示三种场景、原始检测数量与17点人体姿态。</p>
+<p><strong>yolov8s 检测效果</strong></p>
+<p>本次使用与SDK匹配的官方历史三输出头权重。公交图返回4个人和1辆公交车；足球图返回6个人、2个球；马匹场景返回6个框。小目标和被遮挡区域仍需逐项核对。</p>
+<div class=model-effect-gallery>
+<figure>
+<p><a href=/edgeaccel-docs/validation/effects/libdet-axera-20260928/bus-input.png target=_blank class=""><img decoding=async loading=lazy alt=公交与行人：本次实际输入 src=/edgeaccel-docs/validation/effects/libdet-axera-20260928/bus-input.png width=810 height=1080 class=img_ev3q /></a></p>
+<figcaption>公交与行人：本次实际输入</figcaption>
+</figure>
+<figure>
+<p><a href=/edgeaccel-docs/validation/effects/libdet-axera-20260928/football-input.png target=_blank class=""><img decoding=async loading=lazy alt=足球场景：本次实际输入 src=/edgeaccel-docs/validation/effects/libdet-axera-20260928/football-input.png width=1920 height=1282 class=img_ev3q /></a></p>
+<figcaption>足球场景：本次实际输入</figcaption>
+</figure>
+<figure>
+<p><a href=/edgeaccel-docs/validation/effects/libdet-axera-20260928/ssd_horse-input.png target=_blank class=""><img decoding=async loading=lazy alt=马匹场景：本次实际输入 src=/edgeaccel-docs/validation/effects/libdet-axera-20260928/ssd_horse-input.png width=500 height=375 class=img_ev3q /></a></p>
+<figcaption>马匹场景：本次实际输入</figcaption>
+</figure>
+<figure>
+<p><a href=/edgeaccel-docs/validation/effects/libdet-axera-20260928/yolov8s-bus-result.png target=_blank class=""><img decoding=async loading=lazy alt="yolov8s / 公交与行人：本次实际输出" src=/edgeaccel-docs/validation/effects/libdet-axera-20260928/yolov8s-bus-result.png width=810 height=1080 class=img_ev3q /></a></p>
+<figcaption>yolov8s / 公交与行人：本次实际输出</figcaption>
+</figure>
+<figure>
+<p><a href=/edgeaccel-docs/validation/effects/libdet-axera-20260928/yolov8s-football-result.png target=_blank class=""><img decoding=async loading=lazy alt="yolov8s / 足球场景：本次实际输出" src=/edgeaccel-docs/validation/effects/libdet-axera-20260928/yolov8s-football-result.png width=1920 height=1282 class=img_ev3q /></a></p>
+<figcaption>yolov8s / 足球场景：本次实际输出</figcaption>
+</figure>
+<figure>
+<p><a href=/edgeaccel-docs/validation/effects/libdet-axera-20260928/yolov8s-ssd_horse-result.png target=_blank class=""><img decoding=async loading=lazy alt="yolov8s / 马匹场景：本次实际输出" src=/edgeaccel-docs/validation/effects/libdet-axera-20260928/yolov8s-ssd_horse-result.png width=500 height=375 class=img_ev3q /></a></p>
+<figcaption>yolov8s / 马匹场景：本次实际输出</figcaption>
+</figure>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>输入<th>对象数<th>SDK返回类别<th>SDK调用 / ms<tbody><tr><td>公交与行人<td>5<td>person × 4、bus × 1<td>36.458<tr><td>足球场景<td>8<td>person × 6、sports ball × 2<td>36.072<tr><td>马匹场景<td>6<td>horse × 1、dog × 1、person × 2、truck × 1、bench × 1<td>32.365<tr><td>足球重复输入<td>8<td>person × 6、sports ball × 2<td>35.808<tr><td>灰色空白<td>0<td>无<td>30.599</table>
+<p><strong>yolo11s 检测效果</strong></p>
+<p>公交图返回5个框，足球图8个框，马匹图8个框。框内标注为类别与分数，结果保留远处的小目标；没有据此计算准确率或召回率。</p>
+<div class=model-effect-gallery>
+<figure>
+<p><a href=/edgeaccel-docs/validation/effects/libdet-axera-20260928/yolo11s-bus-result.png target=_blank class=""><img decoding=async loading=lazy alt="yolo11s / 公交与行人：本次实际输出" src=/edgeaccel-docs/validation/effects/libdet-axera-20260928/yolo11s-bus-result.png width=810 height=1080 class=img_ev3q /></a></p>
+<figcaption>yolo11s / 公交与行人：本次实际输出</figcaption>
+</figure>
+<figure>
+<p><a href=/edgeaccel-docs/validation/effects/libdet-axera-20260928/yolo11s-football-result.png target=_blank class=""><img decoding=async loading=lazy alt="yolo11s / 足球场景：本次实际输出" src=/edgeaccel-docs/validation/effects/libdet-axera-20260928/yolo11s-football-result.png width=1920 height=1282 class=img_ev3q /></a></p>
+<figcaption>yolo11s / 足球场景：本次实际输出</figcaption>
+</figure>
+<figure>
+<p><a href=/edgeaccel-docs/validation/effects/libdet-axera-20260928/yolo11s-ssd_horse-result.png target=_blank class=""><img decoding=async loading=lazy alt="yolo11s / 马匹场景：本次实际输出" src=/edgeaccel-docs/validation/effects/libdet-axera-20260928/yolo11s-ssd_horse-result.png width=500 height=375 class=img_ev3q /></a></p>
+<figcaption>yolo11s / 马匹场景：本次实际输出</figcaption>
+</figure>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>输入<th>对象数<th>SDK返回类别<th>SDK调用 / ms<tbody><tr><td>公交与行人<td>5<td>bus × 1、person × 4<td>34.476<tr><td>足球场景<td>8<td>person × 6、sports ball × 2<td>35.324<tr><td>马匹场景<td>8<td>horse × 1、dog × 1、person × 4、bench × 1、truck × 1<td>32.395<tr><td>足球重复输入<td>8<td>person × 6、sports ball × 2<td>36.188<tr><td>灰色空白<td>0<td>无<td>33.098</table>
+<p><strong>yolo11x 检测效果</strong></p>
+<p>公交图返回5个框，足球图11个框，马匹图9个框。与较小版本相比，远处目标和车辆类别的结果有所不同；返回更多框不能直接判定效果更好。</p>
+<div class=model-effect-gallery>
+<figure>
+<p><a href=/edgeaccel-docs/validation/effects/libdet-axera-20260928/yolo11x-bus-result.png target=_blank class=""><img decoding=async loading=lazy alt="yolo11x / 公交与行人：本次实际输出" src=/edgeaccel-docs/validation/effects/libdet-axera-20260928/yolo11x-bus-result.png width=810 height=1080 class=img_ev3q /></a></p>
+<figcaption>yolo11x / 公交与行人：本次实际输出</figcaption>
+</figure>
+<figure>
+<p><a href=/edgeaccel-docs/validation/effects/libdet-axera-20260928/yolo11x-football-result.png target=_blank class=""><img decoding=async loading=lazy alt="yolo11x / 足球场景：本次实际输出" src=/edgeaccel-docs/validation/effects/libdet-axera-20260928/yolo11x-football-result.png width=1920 height=1282 class=img_ev3q /></a></p>
+<figcaption>yolo11x / 足球场景：本次实际输出</figcaption>
+</figure>
+<figure>
+<p><a href=/edgeaccel-docs/validation/effects/libdet-axera-20260928/yolo11x-ssd_horse-result.png target=_blank class=""><img decoding=async loading=lazy alt="yolo11x / 马匹场景：本次实际输出" src=/edgeaccel-docs/validation/effects/libdet-axera-20260928/yolo11x-ssd_horse-result.png width=500 height=375 class=img_ev3q /></a></p>
+<figcaption>yolo11x / 马匹场景：本次实际输出</figcaption>
+</figure>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>输入<th>对象数<th>SDK返回类别<th>SDK调用 / ms<tbody><tr><td>公交与行人<td>5<td>bus × 1、person × 4<td>59.201<tr><td>足球场景<td>11<td>person × 8、sports ball × 3<td>57.442<tr><td>马匹场景<td>9<td>horse × 2、dog × 1、person × 4、car × 1、bench × 1<td>54.160<tr><td>足球重复输入<td>11<td>person × 8、sports ball × 3<td>58.468<tr><td>灰色空白<td>0<td>无<td>51.537</table>
+<p><strong>yolo11x-pose 检测效果</strong></p>
+<p>公交、足球和马匹图分别返回4、6、1个人体，每个对象返回17个坐标。公交图有一个关键点位于图像外，未绘制该点；JSON保留原始值。远处人物可能漏检，连接线未按逐点置信度筛选。</p>
+<div class=model-effect-gallery>
+<figure>
+<p><a href=/edgeaccel-docs/validation/effects/libdet-axera-20260928/yolo11x-pose-bus-result.png target=_blank class=""><img decoding=async loading=lazy alt="yolo11x-pose / 公交与行人：本次实际输出" src=/edgeaccel-docs/validation/effects/libdet-axera-20260928/yolo11x-pose-bus-result.png width=810 height=1080 class=img_ev3q /></a></p>
+<figcaption>yolo11x-pose / 公交与行人：本次实际输出</figcaption>
+</figure>
+<figure>
+<p><a href=/edgeaccel-docs/validation/effects/libdet-axera-20260928/yolo11x-pose-football-result.png target=_blank class=""><img decoding=async loading=lazy alt="yolo11x-pose / 足球场景：本次实际输出" src=/edgeaccel-docs/validation/effects/libdet-axera-20260928/yolo11x-pose-football-result.png width=1920 height=1282 class=img_ev3q /></a></p>
+<figcaption>yolo11x-pose / 足球场景：本次实际输出</figcaption>
+</figure>
+<figure>
+<p><a href=/edgeaccel-docs/validation/effects/libdet-axera-20260928/yolo11x-pose-ssd_horse-result.png target=_blank class=""><img decoding=async loading=lazy alt="yolo11x-pose / 马匹场景：本次实际输出" src=/edgeaccel-docs/validation/effects/libdet-axera-20260928/yolo11x-pose-ssd_horse-result.png width=500 height=375 class=img_ev3q /></a></p>
+<figcaption>yolo11x-pose / 马匹场景：本次实际输出</figcaption>
+</figure>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>输入<th>对象数<th>SDK返回类别<th>SDK调用 / ms<tbody><tr><td>公交与行人<td>4<td>person × 4<td>52.450<tr><td>足球场景<td>6<td>person × 6<td>54.649<tr><td>马匹场景<td>1<td>person × 1<td>50.895<tr><td>足球重复输入<td>6<td>person × 6<td>54.199<tr><td>灰色空白<td>0<td>无<td>48.514</table>
+<p><strong>重复输入、空白结果与接口范围</strong></p>
+<p>四个模型的足球图重复输入，原始结果结构和标注PNG均完全一致；灰色空白图均返回0个对象，输出像素保持不变。SDK调用时间包含预处理、传输、推理和后处理，不含加载、文件读写、绘图与保存；每模型仅5次且包含首次调用，没有预热。</p>
+<div class=model-effect-gallery>
+<figure>
+<p><a href=/edgeaccel-docs/validation/effects/libdet-axera-20260928/blank-result.png target=_blank class=""><img decoding=async loading=lazy alt=灰色空白图：四个模型均未检出，图示为YOLOv8s本次输出 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAoAAAAHgCAIAAAC6s0uzAAAIw0lEQVR4Ae3BMQEAAAjAIK28/octvICtBgD4tdUAAL+2GgDg11YDAPzaagCAX1sNAPBrqwEAfm01AMCvrQYA+LXVAAC/thoA4NdWAwD82moAgF9bDQDwa6sBAH5tNQDAr60GAPi11QAAv7YaAODXVgMA/NpqAIBfWw0A8GurAQB+bTUAwK+tBgD4tdUAAL+2GgDg11YDAPzaagCAX1sNAPBrqwEAfm01AMCvrQYA+LXVAAC/thoA4NdWAwD82moAgF9bDQDwa6sBAH5tNQDAr60GAPi11QAAv7YaAODXVgMA/NpqAIBfWw0A8GurAQB+bTUAwK+tBgD4tdUAAL+2GgDg11YDAPzaagCAX1sNAPBrqwEAfm01AMCvrQYA+LXVAAC/thoA4NdWAwD82moAgF9bDQDwa6sBAH5tNQDAr60GAPi11QAAv7YaAODXVgMA/NpqAIBfWw0A8GurAQB+bTUAwK+tBgD4tdUAAL+2GgDg11YDAPzaagCAX1sNAPBrqwEAfm01AMCvrQYA+LXVAAC/thoA4NdWAwD82moAgF9bDQDwa6sBAH5tNQDAr60GAPi11QAAv7YaAODXVgMA/NpqAIBfWw0A8GurAQB+bTUAwK+tBgD4tdUAAL+2GgDg11YDAPzaagCAX1sNAPBrqwEAfm01AMCvrQYA+LXVAAC/thoA4NdWAwD82moAgF9bDQDwa6sBAH5tNQDAr60GAPi11QAAv7YaAODXVgMA/NpqAIBfWw0A8GurAQB+bTUAwK+tBgD4tdUAAL+2GgDg11YDAPzaagCAX1sNAPBrqwEAfm01AMCvrQYA+LXVAAC/thoA4NdWAwD82moAgF9bDQDwa6sBAH5tNQDAr60GAPi11QAAv7YaAODXVgMA/NpqAIBfWw0A8GurAQB+bTUAwK+tBgD4tdUAAL+2GgDg11YDAPzaagCAX1sNAPBrqwEAfm01AMCvrQYA+LXVAAC/thoA4NdWAwD82moAgF9bDQDwa6sBAH5tNQDAr60GAPi11QAAv7YaAODXVgMA/NpqAIBfWw0A8GurAQB+bTUAwK+tBgD4tdUAAL+2GgDg11YDAPzaagCAX1sNAPBrqwEAfm01AMCvrQYA+LXVAAC/thoA4NdWAwD82moAgF9bDQDwa6sBAH5tNQDAr60GAPi11QAAv7YaAODXVgMA/NpqAIBfWw0A8GurAQB+bTUAwK+tBgD4tdUAAL+2GgDg11YDAPzaagCAX1sNAPBrqwEAfm01AMCvrQYA+LXVAAC/thoA4NdWAwD82moAgF9bDQDwa6sBAH5tNQDAr60GAPi11QAAv7YaAODXVgMA/NpqAIBfWw0A8GurAQB+bTUAwK+tBgD4tdUAAL+2GgDg11YDAPzaagCAX1sNAPBrqwEAfm01AMCvrQYA+LXVAAC/thoA4NdWAwD82moAgF9bDQDwa6sBAH5tNQDAr60GAPi11QAAv7YaAODXVgMA/NpqAIBfWw0A8GurAQB+bTUAwK+tBgD4tdUAAL+2GgDg11YDAPzaagCAX1sNAPBrqwEAfm01AMCvrQYA+LXVAAC/thoA4NdWAwD82moAgF9bDQDwa6sBAH5tNQDAr60GAPi11QAAv7YaAODXVgMA/NpqAIBfWw0A8GurAQB+bTUAwK+tBgD4tdUAAL+2GgDg11YDAPzaagCAX1sNAPBrqwEAfm01AMCvrQYA+LXVAAC/thoA4NdWAwD82moAgF9bDQDwa6sBAH5tNQDAr60GAPi11QAAv7YaAODXVgMA/NpqAIBfWw0A8GurAQB+bTUAwK+tBgD4tdUAAL+2GgDg11YDAPzaagCAX1sNAPBrqwEAfm01AMCvrQYA+LXVAAC/thoA4NdWAwD82moAgF9bDQDwa6sBAH5tNQDAr60GAPi11QAAv7YaAODXVgMA/NpqAIBfWw0A8GurAQB+bTUAwK+tBgD4tdUAAL+2GgDg11YDAPzaagCAX1sNAPBrqwEAfm01AMCvrQYA+LXVAAC/thoA4NdWAwD82moAgF9bDQDwa6sBAH5tNQDAr60GAPi11QAAv7YaAODXVgMA/NpqAIBfWw0A8GurAQB+bTUAwK+tBgD4tdUAAL+2GgDg11YDAPzaagCAX1sNAPBrqwEAfm01AMCvrQYA+LXVAAC/thoA4NdWAwD82moAgF9bDQDwa6sBAH5tNQDAr60GAPi11QAAv7YaAODXVgMA/NpqAIBfWw0A8GurAQB+bTUAwK+tBgD4tdUAAL+2GgDg11YDAPzaagCAX1sNAPBrqwEAfm01AMCvrQYA+LXVAAC/thoA4NdWAwD82moAgF9bDQDwa6sBAH5tNQDAr60GAPi11QAAv7YaAODXVgMA/NpqAIBfWw0A8GurAQB+bTUAwK+tBgD4tdUAAL+2GgDg11YDAPzaagCAX1sNAPBrqwEAfm01AMCvrQYA+LXVAAC/thoA4NdWAwD82moAgF9bDQDwa6sBAH5tNQDAr60GAPi11QAAv7YaAODXVgMA/NpqAIBfWw0A8GurAQB+bTUAwK+tBgD4tdUAAL+2GgDg11YDAPzaagCAX1sNAPBrqwEAfm01AMCvrQYA+LXVAAC/thoA4NdWAwD82moAgF9bDQDwa6sBAH5tNQDAr60GAPi11QAAv7YaAODXVgMA/NpqAIBfWw0A8GurAQB+bTUAwK+tBgD4tdUAAL+2GgDg11YDAPzaagCAX1sNAPBrqwEAfm01AMCvrQYA+LXVAAC/thoA4NdWAwD82moAgF9bDQDwa6sBAH5tNQDAr60GAPi11QAAv7YaAODXVgMA/NpqAIBfWw0A8GurAQB+bTUAwK+tBgD4tdUAAL+2GgDg11YDAPzaagCAX1sNAPBrqwEAfm01AMCvrQYA+LXVAAC/thoA4NdWAwD82moAgF9bDQDwa6sBAH5tNQDAr60GAPi11QAAv7YaAODXVgMA/NpqAIBfWw0A8GurAQB+bTUAwK8DrU2DP3S0LqkAAAAASUVORK5CYII=" width=640 height=480 class=img_ev3q /></a></p>
+<figcaption>灰色空白图：四个模型均未检出，图示为YOLOv8s本次输出</figcaption>
+</figure>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>模型<th>调用次数<th>平均SDK调用 / ms<tbody><tr><td>yolov8s<td>5<td>34.260<tr><td>yolo11s<td>5<td>34.296<tr><td>yolo11x<td>5<td>56.161<tr><td>yolo11x-pose<td>5<td>52.141</table>
+<p><strong>使用时注意：</strong></p>
+<ul>
+<li class="">YOLOv8使用明确固定的历史三输出头权重；当前六输出头版本未通过本SDK的接口匹配，不能直接替换。</li>
+<li class="">姿态结果没有逐点置信度；有一个坐标位于图像外，远处人物可能漏检。</li>
+</ul>
+<p>这些结果用于对照部署后的输出，未覆盖完整数据集精度或长期连续运行。</p>
+<details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>查看样例环境与运行耗时</summary><div><div class=collapsibleContent_i85q>
+<!-- -->
+<p>环境：RK3576 + AX8850 16GB M.2。日期：2026-09-28。模型版本：<code>0a50691f9581143c28be91c0e7247250fbc52daf</code>。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>组件<th>版本或配置<tbody><tr><td>主机 / 内核<td>RK3576，约 4GB RAM，6.1.115-vendor-rk35xx<tr><td>AXCL / 驱动<td>V3.16.0_20260729180218<tr><td>固件 / CMM<td>V3.16.0 / 15232 MiB<tr><td>运行方式<td>官方 libdet.so ARM64 AXCL SDK / Python ctypes，显式设备0；四模型依次加载与释放</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>指标<th>实测值<th>计时或统计范围<tbody><tr><td>已运行组合<td>4个模型 / 20次调用<td>固定SDK与本页列出的兼容权重，非所有模型类型或版本。<tr><td>重复输入<td>4组结果一致<td>原始SDK结果结构、坐标分数及绘图文件一致。<tr><td>空白输入<td>均为0个对象<td>固定灰色输入、分数阈值0.25。</table>
+<p>适用范围：</p>
+<ul>
+<li class="">YOLOv8使用明确固定的历史三输出头权重；当前六输出头版本未通过本SDK的接口匹配，不能直接替换。</li>
+<li class="">姿态结果没有逐点置信度；有一个坐标位于图像外，远处人物可能漏检。</li>
+<li class="">检测数量不是正确目标数量；未完成COCO精度、关键点误差、浮点对照或实际8GB回归。</li>
+<li class="">本次验证原生SDK整体流程，未捕获底层输入输出张量，也未测试Gradio网页界面。</li>
+</ul>
+</div></div></details>
+<p>遇到加载、内存或后端错误时，按<a class="" href=/edgeaccel-docs/docs/usage/troubleshooting>常见问题</a>处理。需要更换输入或接入业务时，按<a class="" href=/edgeaccel-docs/docs/reference/validation>检查输出与记录结果</a>保留自己的结果。</p>
+<details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>查看文件用途与版本信息</summary><div><div class=collapsibleContent_i85q>
+<!-- -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>文件 / 目录内路径<th>用途<tbody><tr><td><a href=https://huggingface.co/AXERA-TECH/libdet.axera/blob/0a50691f9581143c28be91c0e7247250fbc52daf/lib/gradio_example.py target=_blank rel="noopener noreferrer" class=""><code>lib/gradio_example.py</code></a><td>Python 程序 / 前后处理<tr><td><a href=https://huggingface.co/AXERA-TECH/libdet.axera/blob/0a50691f9581143c28be91c0e7247250fbc52daf/lib/requirements.txt target=_blank rel="noopener noreferrer" class=""><code>lib/requirements.txt</code></a><td>Python 依赖清单</table>
+<p>仓库提交：<code>0a50691f9581143c28be91c0e7247250fbc52daf</code>。仓库中的 0 个 <code>.axmodel</code> 文件可能包括多个芯片、规格和分片。运行时使用本页指定的配套文件，完整列表见<a href=https://huggingface.co/AXERA-TECH/libdet.axera/tree/0a50691f9581143c28be91c0e7247250fbc52daf target=_blank rel="noopener noreferrer" class="">固定版本目录</a>。</p>
+</div></div></details>
+<details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>补充说明与版本差异</summary><div><div class=collapsibleContent_i85q>
+<!-- -->
+<ul>
+<li class="">该提交未直接列出 .axmodel 文件；先核对模型卡指向的实际权重或程序仓库，不能将该目录直接交给 axcl_run_model。</li>
+</ul>
+</div></div></details>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=参考资料>参考资料<a href=#参考资料 class=hash-link aria-label=参考资料的直接链接 title=参考资料的直接链接 translate=no>​</a></h2>
+<ul>
+<li class=""><a class="" href=/edgeaccel-docs/docs/reference/glossary>常用术语</a>：AXCL、CMM、分词器与推理指标。</li>
+<li class=""><a href=https://huggingface.co/AXERA-TECH/libdet.axera/tree/0a50691f9581143c28be91c0e7247250fbc52daf target=_blank rel="noopener noreferrer" class="">固定版本文件表</a>。</li>
+<li class=""><a href=https://huggingface.co/AXERA-TECH/libdet.axera/blob/0a50691f9581143c28be91c0e7247250fbc52daf/README.md target=_blank rel="noopener noreferrer" class="">模型卡 / 使用说明</a>。</li>
+<li class=""><a href=https://huggingface.co/AXERA-TECH/libdet.axera/blob/0a50691f9581143c28be91c0e7247250fbc52daf/lib/gradio_example.py target=_blank rel="noopener noreferrer" class="">主要程序入口：lib/gradio_example.py</a>。</li>
+<li class=""><a href=https://github.com/AXERA-TECH/libdet.axera target=_blank rel="noopener noreferrer" class="">配套项目：AXERA-TECH/libdet.axera</a>。</li>
+</ul>
+<p>返回<a class="" href=/edgeaccel-docs/docs/models/catalog>完整模型目录</a>。</div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href=https://github.com/dshanpi/edgeaccel-docs/tree/main/docs/models/deploy/libdet-axera.md target=_blank rel="noopener noreferrer" class=theme-edit-this-page><svg fill=currentColor height=20 width=20 viewBox="0 0 40 40" class=iconEdit_Z9Sw aria-hidden=true><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"/></g></svg>编辑此页</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label=文件选项卡><a class="pagination-nav__link pagination-nav__link--prev" href=/edgeaccel-docs/docs/models/deploy/helmet-axera><div class=pagination-nav__sublabel>上一页</div><div class=pagination-nav__label>Helmet-axera</div></a><a class="pagination-nav__link pagination-nav__link--next" href=/edgeaccel-docs/docs/models/deploy/locateanything-3b><div class=pagination-nav__sublabel>下一页</div><div class=pagination-nav__label>LocateAnything-3B</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href=#准备运行环境 class="table-of-contents__link toc-highlight">准备运行环境</a><li><a href=#下载模型与样例 class="table-of-contents__link toc-highlight">下载模型与样例</a><li><a href=#安装推理依赖 class="table-of-contents__link toc-highlight">安装推理依赖</a><li><a href=#下载配套权重和输入图片 class="table-of-contents__link toc-highlight">下载配套权重和输入图片</a><li><a href=#执行检测和姿态估计 class="table-of-contents__link toc-highlight">执行检测和姿态估计</a><li><a href=#使用自己的图片 class="table-of-contents__link toc-highlight">使用自己的图片</a><li><a href=#查看部署效果 class="table-of-contents__link toc-highlight">查看部署效果</a><li><a href=#参考资料 class="table-of-contents__link toc-highlight">参考资料</a></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class=footer__title>开始使用</div><ul class="footer__items clean-list"><li class=footer__item><a class=footer__link-item href=/edgeaccel-docs/docs/>文档总览</a><li class=footer__item><a class=footer__link-item href=/edgeaccel-docs/docs/ax650n/user-guide>算力卡用户指南</a><li class=footer__item><a class=footer__link-item href=/edgeaccel-docs/docs/ax650n/roadmap>上手路线</a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>应用与资料</div><ul class="footer__items clean-list"><li class=footer__item><a class=footer__link-item href=/edgeaccel-docs/docs/reference/validation>输出检查方法</a><li class=footer__item><a class=footer__link-item href=/edgeaccel-docs/docs/models/catalog>模型目录</a><li class=footer__item><a class=footer__link-item href=/edgeaccel-docs/docs/downloads>资料下载</a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>项目</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://github.com/dshanpi/edgeaccel-docs target=_blank rel="noopener noreferrer" class=footer__link-item>GitHub<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_nPIU><use href=#theme-svg-external-link /></svg></a></ul></div></div><div class="footer__bottom text--center"><div class=footer__copyright>Copyright © 2026 100askTeam. Built with Docusaurus.</div></div></div></footer></div></body>

@@ -1,0 +1,54 @@
+{
+  "modelId": "bge-m3",
+  "repo": "AXERA-TECH/bge-m3",
+  "revision": "46734ad9f85c79a243364ba51f5ffa64a628079a",
+  "complete": true,
+  "files": [
+    {
+      "path": "README.md",
+      "size": 5844,
+      "url": "https://huggingface.co/AXERA-TECH/bge-m3/resolve/46734ad9f85c79a243364ba51f5ffa64a628079a/README.md",
+      "verifiedHashes": {
+        "sha256": "8d40d32e16ced6507a14fbed42ce7e71ecfdc71bfa4aa814231a052e8f030acb",
+        "gitBlob": "1a1509547dcdd59647c92fbca86628a6547a1ad8"
+      }
+    },
+    {
+      "path": "model/bge-m3_u16_npu3.axmodel",
+      "size": 860384452,
+      "url": "https://huggingface.co/AXERA-TECH/bge-m3/resolve/46734ad9f85c79a243364ba51f5ffa64a628079a/model/bge-m3_u16_npu3.axmodel",
+      "verifiedHashes": {
+        "sha256": "5613a9315e7578caa96efdc3201830eeb4bdad661a56dcb5d66e75ac34c40f36",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "python/axmodel_infer.py",
+      "size": 7073,
+      "url": "https://huggingface.co/AXERA-TECH/bge-m3/resolve/46734ad9f85c79a243364ba51f5ffa64a628079a/python/axmodel_infer.py",
+      "verifiedHashes": {
+        "sha256": "1c895826be2fb2185a5e942618172e96e9bd093f3b9f1ba50882324c640c2c77",
+        "gitBlob": "517e8b94459933190c3c4656496cb26eafb9b05f"
+      }
+    },
+    {
+      "path": "python/compare_bge_m3_onnx_axmodel.py",
+      "size": 14757,
+      "url": "https://huggingface.co/AXERA-TECH/bge-m3/resolve/46734ad9f85c79a243364ba51f5ffa64a628079a/python/compare_bge_m3_onnx_axmodel.py",
+      "verifiedHashes": {
+        "sha256": "2887c6ec80a3bae4cacf5e65ebde7ded7a5ba536a00dac1c82e23b122ef5a2ee",
+        "gitBlob": "fa8fb5bbb2b2308701aa011ebef935bdc8d8158c"
+      }
+    },
+    {
+      "path": "python/onnx_infer.py",
+      "size": 7076,
+      "url": "https://huggingface.co/AXERA-TECH/bge-m3/resolve/46734ad9f85c79a243364ba51f5ffa64a628079a/python/onnx_infer.py",
+      "verifiedHashes": {
+        "sha256": "f64a41a482941c4ce7038f66950c9124cecf80e270b27049cc65178516ef537e",
+        "gitBlob": "ee4bccf1b9587e4f5625f495043400da9d3b0f4d"
+      }
+    }
+  ],
+  "runnerSha256": "93dac73cbfd2d2a69defd6ec3625e315629eb1780fd217e34e20d4f35dfef6d8"
+}

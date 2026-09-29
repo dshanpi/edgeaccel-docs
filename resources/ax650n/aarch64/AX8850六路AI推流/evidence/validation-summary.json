@@ -1,0 +1,101 @@
+{
+  "device": "192.168.1.44 / DShanPi-A1 / AX8850 16GB",
+  "service": "ax-six-rtsp",
+  "invocation": "5aafa388b853400e8c836cde5c7c6217",
+  "sample_elapsed_seconds": 120.8091468950006,
+  "measurement_window_seconds": 100.69954029300061,
+  "channels": [
+    {
+      "name": "pcd",
+      "decoder_fps": 12.006013100777132,
+      "new_inference_fps": 6.643525859735237,
+      "hardware_encoder_fps": 9.990115119422494,
+      "encoded_frames": 1206,
+      "encode_dropped": 0,
+      "mux_errors": 0,
+      "submit_errors": 0,
+      "upload_replaced": 0,
+      "latest_result_age_seconds": 0.04598459499902674
+    },
+    {
+      "name": "vehicle",
+      "decoder_fps": 25.034870990123366,
+      "new_inference_fps": 3.743810536801471,
+      "hardware_encoder_fps": 9.990115119422494,
+      "encoded_frames": 1203,
+      "encode_dropped": 0,
+      "mux_errors": 0,
+      "submit_errors": 0,
+      "upload_replaced": 0,
+      "latest_result_age_seconds": 0.1817780000019411
+    },
+    {
+      "name": "helmet",
+      "decoder_fps": 30.02992854983461,
+      "new_inference_fps": 7.209566179622993,
+      "hardware_encoder_fps": 10.00004565135035,
+      "encoded_frames": 1206,
+      "encode_dropped": 0,
+      "mux_errors": 0,
+      "submit_errors": 0,
+      "upload_replaced": 0,
+      "latest_result_age_seconds": 0.08849047200055793
+    },
+    {
+      "name": "depth",
+      "decoder_fps": 30.05972014561818,
+      "new_inference_fps": 4.1608928777713965,
+      "hardware_encoder_fps": 10.00004565135035,
+      "encoded_frames": 1204,
+      "encode_dropped": 0,
+      "mux_errors": 0,
+      "submit_errors": 0,
+      "upload_replaced": 0,
+      "latest_result_age_seconds": 0.13780766100171604
+    },
+    {
+      "name": "seg",
+      "decoder_fps": 24.00209566962641,
+      "new_inference_fps": 2.0258285132824936,
+      "hardware_encoder_fps": 10.00004565135035,
+      "encoded_frames": 1203,
+      "encode_dropped": 0,
+      "mux_errors": 0,
+      "submit_errors": 0,
+      "upload_replaced": 0,
+      "latest_result_age_seconds": 0.27730786800020724
+    },
+    {
+      "name": "count",
+      "decoder_fps": 24.061678861193542,
+      "new_inference_fps": 3.674296813306484,
+      "hardware_encoder_fps": 10.00004565135035,
+      "encoded_frames": 1204,
+      "encode_dropped": 0,
+      "mux_errors": 0,
+      "submit_errors": 0,
+      "upload_replaced": 0,
+      "latest_result_age_seconds": 0.1697860890017182
+    }
+  ],
+  "overview_encoder_fps": 10.00004565135035,
+  "overview_encoded": 1203,
+  "overview_dropped": 0,
+  "overview_mux_errors": 0,
+  "count_crossing_events": 10,
+  "count_loop_resets": 9,
+  "hardware_decode_npu_encode": true,
+  "host_processing": [
+    "overlay",
+    "segmentation postprocess",
+    "depth colormap",
+    "mosaic",
+    "BGR to NV12"
+  ],
+  "limitations": [
+    "Inference update rate differs from display rate; latest rendered result is repeated.",
+    "Current Helmet snapshots contain zero detections.",
+    "Moving camera count is not fixed-site traffic flow.",
+    "Single-board functional test; not production stability qualification."
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "modelId": "visdrone-yolov11s",
+  "repo": "AXERA-TECH/visdrone-yolov11s",
+  "revision": "cdf29a6bd81b0980e68e6725abe0f8e1d52c6eb2",
+  "complete": true,
+  "files": [
+    {
+      "path": "README.md",
+      "size": 1958,
+      "url": "https://huggingface.co/AXERA-TECH/visdrone-yolov11s/resolve/cdf29a6bd81b0980e68e6725abe0f8e1d52c6eb2/README.md",
+      "verifiedHashes": {
+        "sha256": "7b6b1e9eed1b706ff6db0a4eedf77861affd11e309b3463980fb2dfba9ee151e",
+        "gitBlob": "c89ce31d4a2ac0381871bc1f97099496787f35b9"
+      }
+    },
+    {
+      "path": "cpp/lib/libdet.so",
+      "size": 1113752,
+      "url": "https://huggingface.co/AXERA-TECH/visdrone-yolov11s/resolve/cdf29a6bd81b0980e68e6725abe0f8e1d52c6eb2/cpp/lib/libdet.so",
+      "verifiedHashes": {
+        "sha256": "2f3d69c4cf4d69761283ceac26935f553eb544bffaf6b137f4437b6b93b07e32",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "demo/demo_00.jpg",
+      "size": 82297,
+      "url": "https://huggingface.co/AXERA-TECH/visdrone-yolov11s/resolve/cdf29a6bd81b0980e68e6725abe0f8e1d52c6eb2/demo/demo_00.jpg",
+      "verifiedHashes": {
+        "sha256": "6a3193c5d9537dd1f4e4fe659a35c710887357ce1fb568bfabe29eba14e369a4",
+        "gitBlob": "a4062d308808bd8ee1959feacbe6eb463dd38999"
+      }
+    },
+    {
+      "path": "demo/demo_01.jpg",
+      "size": 172673,
+      "url": "https://huggingface.co/AXERA-TECH/visdrone-yolov11s/resolve/cdf29a6bd81b0980e68e6725abe0f8e1d52c6eb2/demo/demo_01.jpg",
+      "verifiedHashes": {
+        "sha256": "2b441c84e4c9feea3f6210e67aed6f0faadb6382ec9e2dc3b46af7733d62b285",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "demo/demo_02.jpg",
+      "size": 204905,
+      "url": "https://huggingface.co/AXERA-TECH/visdrone-yolov11s/resolve/cdf29a6bd81b0980e68e6725abe0f8e1d52c6eb2/demo/demo_02.jpg",
+      "verifiedHashes": {
+        "sha256": "6599368de2af20f975f9b6efa69905de9b6b799c503c8ad37f3ea375bd963d50",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/model.axmodel",
+      "size": 10696194,
+      "url": "https://huggingface.co/AXERA-TECH/visdrone-yolov11s/resolve/cdf29a6bd81b0980e68e6725abe0f8e1d52c6eb2/models/model.axmodel",
+      "verifiedHashes": {
+        "sha256": "2e52c7098c8766c8c045738483dfd9bfab22ae5036e849654291769838f91c26",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/model_meta.json",
+      "size": 1842,
+      "url": "https://huggingface.co/AXERA-TECH/visdrone-yolov11s/resolve/cdf29a6bd81b0980e68e6725abe0f8e1d52c6eb2/models/model_meta.json",
+      "verifiedHashes": {
+        "sha256": "1669d7323139bbc593aee19100a23cd20e6298de7cf5aca27c566e95674e4dd1",
+        "gitBlob": "5b4dd4d3326694c70a6762bd0004a9c69dca3af4"
+      }
+    },
+    {
+      "path": "python/README.md",
+      "size": 1700,
+      "url": "https://huggingface.co/AXERA-TECH/visdrone-yolov11s/resolve/cdf29a6bd81b0980e68e6725abe0f8e1d52c6eb2/python/README.md",
+      "verifiedHashes": {
+        "sha256": "3f1cf5b97cea634307b8653f5775f0d8fa90d4a77612651d863061a160d48ef2",
+        "gitBlob": "5da317fd8bc47d2e238e285278b2c384b9ff20a5"
+      }
+    },
+    {
+      "path": "python/example.py",
+      "size": 1611,
+      "url": "https://huggingface.co/AXERA-TECH/visdrone-yolov11s/resolve/cdf29a6bd81b0980e68e6725abe0f8e1d52c6eb2/python/example.py",
+      "verifiedHashes": {
+        "sha256": "478420dd31ed400042e5f7180370fdc6b077803d878126c486be1a09f5531a86",
+        "gitBlob": "941fcc10d6d5d57f8b913023392815d10dad1946"
+      }
+    },
+    {
+      "path": "python/requirements.txt",
+      "size": 106,
+      "url": "https://huggingface.co/AXERA-TECH/visdrone-yolov11s/resolve/cdf29a6bd81b0980e68e6725abe0f8e1d52c6eb2/python/requirements.txt",
+      "verifiedHashes": {
+        "sha256": "c6032123f37126ed4050ec32cf46efdedd2eb40c089a2fb758078b107d2e3963",
+        "gitBlob": "535237dca0b7c3e03eb4d0324a758f737385041a"
+      }
+    },
+    {
+      "path": "python/visdrone_yolov26s_sdk/__init__.py",
+      "size": 149,
+      "url": "https://huggingface.co/AXERA-TECH/visdrone-yolov11s/resolve/cdf29a6bd81b0980e68e6725abe0f8e1d52c6eb2/python/visdrone_yolov26s_sdk/__init__.py",
+      "verifiedHashes": {
+        "sha256": "1fcf5369f35c949a9fe162489ee028796ff7f884804792d0b9fe84eca4987a11",
+        "gitBlob": "d3341dc4b63e04c9cf71cd612e6bad25682a3a54"
+      }
+    },
+    {
+      "path": "python/visdrone_yolov26s_sdk/inference.py",
+      "size": 2304,
+      "url": "https://huggingface.co/AXERA-TECH/visdrone-yolov11s/resolve/cdf29a6bd81b0980e68e6725abe0f8e1d52c6eb2/python/visdrone_yolov26s_sdk/inference.py",
+      "verifiedHashes": {
+        "sha256": "05994271e8cec20ae83fb6a0617e0ef1250a0d64535c2dd51f2a78eb9ddf51dd",
+        "gitBlob": "d9de6a36cc7a97aa93cc11cd8ec32317e2c48d65"
+      }
+    },
+    {
+      "path": "python/visdrone_yolov26s_sdk/postprocess.py",
+      "size": 1259,
+      "url": "https://huggingface.co/AXERA-TECH/visdrone-yolov11s/resolve/cdf29a6bd81b0980e68e6725abe0f8e1d52c6eb2/python/visdrone_yolov26s_sdk/postprocess.py",
+      "verifiedHashes": {
+        "sha256": "74a43e47a8156c2e5a23783e013b6c0a58ff790a32bf3a72ee4f69058a2ee8c3",
+        "gitBlob": "2de19678163280dc34ab8eb952dab6eef97dfe91"
+      }
+    },
+    {
+      "path": "python/visdrone_yolov26s_sdk/preprocess.py",
+      "size": 767,
+      "url": "https://huggingface.co/AXERA-TECH/visdrone-yolov11s/resolve/cdf29a6bd81b0980e68e6725abe0f8e1d52c6eb2/python/visdrone_yolov26s_sdk/preprocess.py",
+      "verifiedHashes": {
+        "sha256": "abfe06d5c7792bf8bdf2e1ea856802f329a675c3e1d39c89b39d142ec7e6a1c7",
+        "gitBlob": "761ef4f10aec92c449dd4a9fa104af2927de7ccc"
+      }
+    },
+    {
+      "path": "python/visdrone_yolov26s_sdk/pydet/__init__.py",
+      "size": 114,
+      "url": "https://huggingface.co/AXERA-TECH/visdrone-yolov11s/resolve/cdf29a6bd81b0980e68e6725abe0f8e1d52c6eb2/python/visdrone_yolov26s_sdk/pydet/__init__.py",
+      "verifiedHashes": {
+        "sha256": "8183739e47a5daade0f424dcc9ef99e4dc081bfb5050ab9b3ade2c369061ec24",
+        "gitBlob": "a46fdbfc8e07154068205bf23e0d7e6efcd7b981"
+      }
+    },
+    {
+      "path": "python/visdrone_yolov26s_sdk/pydet/pyaxdev.py",
+      "size": 3550,
+      "url": "https://huggingface.co/AXERA-TECH/visdrone-yolov11s/resolve/cdf29a6bd81b0980e68e6725abe0f8e1d52c6eb2/python/visdrone_yolov26s_sdk/pydet/pyaxdev.py",
+      "verifiedHashes": {
+        "sha256": "1a428bc3f43db4cc27fa5baae885eba5e321621694fbb3bd2bfc6d2d9b0fba10",
+        "gitBlob": "1d789eb71db08f3540dba6bfca88bcdc51f0fd61"
+      }
+    },
+    {
+      "path": "python/visdrone_yolov26s_sdk/pydet/pydet.py",
+      "size": 4146,
+      "url": "https://huggingface.co/AXERA-TECH/visdrone-yolov11s/resolve/cdf29a6bd81b0980e68e6725abe0f8e1d52c6eb2/python/visdrone_yolov26s_sdk/pydet/pydet.py",
+      "verifiedHashes": {
+        "sha256": "69b9683dc63923bf185c132c530e5c584e2f9bc59591f3713e396772badec3a7",
+        "gitBlob": "c05c20325e0aceaa28dc47207aec181615ed89ef"
+      }
+    }
+  ]
+}

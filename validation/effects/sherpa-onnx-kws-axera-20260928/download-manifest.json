@@ -1,0 +1,279 @@
+{
+  "modelId": "Sherpa-ONNX-KWS.AXERA",
+  "repo": "AXERA-TECH/Sherpa-ONNX-KWS.AXERA",
+  "revision": "7420e0d67d20c246b0cd58b5255a0f89d0e4c42e",
+  "complete": true,
+  "files": [
+    {
+      "path": "README.md",
+      "size": 3305,
+      "url": "https://huggingface.co/AXERA-TECH/Sherpa-ONNX-KWS.AXERA/resolve/7420e0d67d20c246b0cd58b5255a0f89d0e4c42e/README.md",
+      "verifiedHashes": {
+        "sha256": "6713e6dfcb6618262abc8a25f15bf321d874f9daa5b1442a55701667da909af4",
+        "gitBlob": "d3bc1a8b7bbce13c06399739bdfb4ca3bb1c918b"
+      }
+    },
+    {
+      "path": "audio/sherpa/en_0.wav",
+      "size": 212044,
+      "url": "https://huggingface.co/AXERA-TECH/Sherpa-ONNX-KWS.AXERA/resolve/7420e0d67d20c246b0cd58b5255a0f89d0e4c42e/audio/sherpa/en_0.wav",
+      "verifiedHashes": {
+        "sha256": "6bc58a4efdf20daac252b6b1502632601a71efe0308f6757dc1eda34891a7e4f",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "audio/sherpa/en_1.wav",
+      "size": 534924,
+      "url": "https://huggingface.co/AXERA-TECH/Sherpa-ONNX-KWS.AXERA/resolve/7420e0d67d20c246b0cd58b5255a0f89d0e4c42e/audio/sherpa/en_1.wav",
+      "verifiedHashes": {
+        "sha256": "5143a6ba93c4b274e2c4ac22deb75c2c48936c853f0519add1de828b6c79cc5a",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "audio/sherpa/zh_0.wav",
+      "size": 179646,
+      "url": "https://huggingface.co/AXERA-TECH/Sherpa-ONNX-KWS.AXERA/resolve/7420e0d67d20c246b0cd58b5255a0f89d0e4c42e/audio/sherpa/zh_0.wav",
+      "verifiedHashes": {
+        "sha256": "668bf8df51a10027b84d5d8816a1ce11ae93545538dc05cfe2aa6811d399c250",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "audio/sherpa/zh_1.wav",
+      "size": 164976,
+      "url": "https://huggingface.co/AXERA-TECH/Sherpa-ONNX-KWS.AXERA/resolve/7420e0d67d20c246b0cd58b5255a0f89d0e4c42e/audio/sherpa/zh_1.wav",
+      "verifiedHashes": {
+        "sha256": "30edbabea84ca4c076f5b43bb44495f436f6711319c32a200d3fc5c67c1fee1d",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "audio/sherpa/zh_2.wav",
+      "size": 144856,
+      "url": "https://huggingface.co/AXERA-TECH/Sherpa-ONNX-KWS.AXERA/resolve/7420e0d67d20c246b0cd58b5255a0f89d0e4c42e/audio/sherpa/zh_2.wav",
+      "verifiedHashes": {
+        "sha256": "04a579c23bdd6de049814f1cbfb470d735d7747ba37eb0a92d813c89da942706",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "audio/sherpa/zh_3.wav",
+      "size": 257006,
+      "url": "https://huggingface.co/AXERA-TECH/Sherpa-ONNX-KWS.AXERA/resolve/7420e0d67d20c246b0cd58b5255a0f89d0e4c42e/audio/sherpa/zh_3.wav",
+      "verifiedHashes": {
+        "sha256": "710e79fb3450042be50bb2f6432a2a549b53577aea041a577e53a926fcabb614",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "audio/sherpa/zh_4.wav",
+      "size": 147216,
+      "url": "https://huggingface.co/AXERA-TECH/Sherpa-ONNX-KWS.AXERA/resolve/7420e0d67d20c246b0cd58b5255a0f89d0e4c42e/audio/sherpa/zh_4.wav",
+      "verifiedHashes": {
+        "sha256": "d46ca3a2ce52b5059f3d84e2cfdc62907e8579faa7078b1becaea614dd41b35d",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "audio/sherpa/zh_5.wav",
+      "size": 132938,
+      "url": "https://huggingface.co/AXERA-TECH/Sherpa-ONNX-KWS.AXERA/resolve/7420e0d67d20c246b0cd58b5255a0f89d0e4c42e/audio/sherpa/zh_5.wav",
+      "verifiedHashes": {
+        "sha256": "55321b6d1ab4bd9a16928957a52cf943b2ae864543cca7f39e9844b4889e9bb8",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "audio/sherpa/zh_6.wav",
+      "size": 113518,
+      "url": "https://huggingface.co/AXERA-TECH/Sherpa-ONNX-KWS.AXERA/resolve/7420e0d67d20c246b0cd58b5255a0f89d0e4c42e/audio/sherpa/zh_6.wav",
+      "verifiedHashes": {
+        "sha256": "f5da5689f1960431a53855d7fbe78c9ab0b73e5495ffba631cd43458225d9039",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "config.json",
+      "size": 250,
+      "url": "https://huggingface.co/AXERA-TECH/Sherpa-ONNX-KWS.AXERA/resolve/7420e0d67d20c246b0cd58b5255a0f89d0e4c42e/config.json",
+      "verifiedHashes": {
+        "sha256": "4731206ead8f587a16c60b89c3e3f83cde2b8abfe835931352e5762d48f662fe",
+        "gitBlob": "659774ae4baabad14d40e120e73650b3357beb03"
+      }
+    },
+    {
+      "path": "config/keywords.txt",
+      "size": 325,
+      "url": "https://huggingface.co/AXERA-TECH/Sherpa-ONNX-KWS.AXERA/resolve/7420e0d67d20c246b0cd58b5255a0f89d0e4c42e/config/keywords.txt",
+      "verifiedHashes": {
+        "sha256": "a1a19ed9c80602291ee2b8c7106634e2f782042972c1a8b8100789ff19a544d0",
+        "gitBlob": "00bc9f695f3a4c45a57c9922d10fb9bf9a06d80f"
+      }
+    },
+    {
+      "path": "config/keywords_raw.txt",
+      "size": 235,
+      "url": "https://huggingface.co/AXERA-TECH/Sherpa-ONNX-KWS.AXERA/resolve/7420e0d67d20c246b0cd58b5255a0f89d0e4c42e/config/keywords_raw.txt",
+      "verifiedHashes": {
+        "sha256": "97c8051387c7211d43705393f6e9c40b3d87c25e57e00e4ce4cfd5e796fc5495",
+        "gitBlob": "b6a9cdf5ed7a9a00e757bdae4ff719afff5988d7"
+      }
+    },
+    {
+      "path": "config/sherpa_decoder_initial.bin",
+      "size": 1296,
+      "url": "https://huggingface.co/AXERA-TECH/Sherpa-ONNX-KWS.AXERA/resolve/7420e0d67d20c246b0cd58b5255a0f89d0e4c42e/config/sherpa_decoder_initial.bin",
+      "verifiedHashes": {
+        "sha256": "10131e54ec30ac36c963c533073f4fd33b6d1570f5b18fcafcaa9b38ea5447dd",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "config/sherpa_decoder_initial.npy",
+      "size": 1408,
+      "url": "https://huggingface.co/AXERA-TECH/Sherpa-ONNX-KWS.AXERA/resolve/7420e0d67d20c246b0cd58b5255a0f89d0e4c42e/config/sherpa_decoder_initial.npy",
+      "verifiedHashes": {
+        "sha256": "e2e7e46877961af5b3793da14819b3d9852c776abd36237edf32ca6bc1ec86de",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "config/tokens.txt",
+      "size": 1928,
+      "url": "https://huggingface.co/AXERA-TECH/Sherpa-ONNX-KWS.AXERA/resolve/7420e0d67d20c246b0cd58b5255a0f89d0e4c42e/config/tokens.txt",
+      "verifiedHashes": {
+        "sha256": "2d3f32311f9b692b964da3c90e830258d3e78e013cb0c992dbfb15cd5a1a71b0",
+        "gitBlob": "1d0c44fce10a39ad38f4b7e73ba046cf95eb1552"
+      }
+    },
+    {
+      "path": "manifest.json",
+      "size": 9062,
+      "url": "https://huggingface.co/AXERA-TECH/Sherpa-ONNX-KWS.AXERA/resolve/7420e0d67d20c246b0cd58b5255a0f89d0e4c42e/manifest.json",
+      "verifiedHashes": {
+        "sha256": "3c588a1bf885670155a31295b2212bd25ec82ecd2a8d645429f6c12ea5e67db4",
+        "gitBlob": "c418b2be7481c8d292ca2996a7f5f448e151508e"
+      }
+    },
+    {
+      "path": "models/650/sherpa__decoder-epoch-13-avg-2-chunk-16-left-64.axmodel",
+      "size": 300671,
+      "url": "https://huggingface.co/AXERA-TECH/Sherpa-ONNX-KWS.AXERA/resolve/7420e0d67d20c246b0cd58b5255a0f89d0e4c42e/models/650/sherpa__decoder-epoch-13-avg-2-chunk-16-left-64.axmodel",
+      "verifiedHashes": {
+        "sha256": "d35113e1d84b6e1a5696f33392a23c8fee833e93acb7ebd807b1eecb95543970",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/650/sherpa__decoder-epoch-13-avg-2-chunk-8-left-64.axmodel",
+      "size": 300671,
+      "url": "https://huggingface.co/AXERA-TECH/Sherpa-ONNX-KWS.AXERA/resolve/7420e0d67d20c246b0cd58b5255a0f89d0e4c42e/models/650/sherpa__decoder-epoch-13-avg-2-chunk-8-left-64.axmodel",
+      "verifiedHashes": {
+        "sha256": "d35113e1d84b6e1a5696f33392a23c8fee833e93acb7ebd807b1eecb95543970",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/650/sherpa__encoder-epoch-13-avg-2-chunk-16-left-64.axmodel",
+      "size": 4445375,
+      "url": "https://huggingface.co/AXERA-TECH/Sherpa-ONNX-KWS.AXERA/resolve/7420e0d67d20c246b0cd58b5255a0f89d0e4c42e/models/650/sherpa__encoder-epoch-13-avg-2-chunk-16-left-64.axmodel",
+      "verifiedHashes": {
+        "sha256": "eb95d621c00ad50b088c1291ecbecdadbe9d63fc77f0557ab4575972369cbab4",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/650/sherpa__encoder-epoch-13-avg-2-chunk-8-left-64.axmodel",
+      "size": 4312853,
+      "url": "https://huggingface.co/AXERA-TECH/Sherpa-ONNX-KWS.AXERA/resolve/7420e0d67d20c246b0cd58b5255a0f89d0e4c42e/models/650/sherpa__encoder-epoch-13-avg-2-chunk-8-left-64.axmodel",
+      "verifiedHashes": {
+        "sha256": "304ecc93b68567ed8aa1f8d618db74a581f85c06ab9a3d1df7c7b0bb378cadf3",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/650/sherpa__joiner-epoch-13-avg-2-chunk-16-left-64.axmodel",
+      "size": 100456,
+      "url": "https://huggingface.co/AXERA-TECH/Sherpa-ONNX-KWS.AXERA/resolve/7420e0d67d20c246b0cd58b5255a0f89d0e4c42e/models/650/sherpa__joiner-epoch-13-avg-2-chunk-16-left-64.axmodel",
+      "verifiedHashes": {
+        "sha256": "988574b1ef3d48a55058b42829e6fbe39be6bf5362eb5d771257a0f716b65716",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/650/sherpa__joiner-epoch-13-avg-2-chunk-8-left-64.axmodel",
+      "size": 100456,
+      "url": "https://huggingface.co/AXERA-TECH/Sherpa-ONNX-KWS.AXERA/resolve/7420e0d67d20c246b0cd58b5255a0f89d0e4c42e/models/650/sherpa__joiner-epoch-13-avg-2-chunk-8-left-64.axmodel",
+      "verifiedHashes": {
+        "sha256": "988574b1ef3d48a55058b42829e6fbe39be6bf5362eb5d771257a0f716b65716",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "reference/local_inference_results.json",
+      "size": 15035,
+      "url": "https://huggingface.co/AXERA-TECH/Sherpa-ONNX-KWS.AXERA/resolve/7420e0d67d20c246b0cd58b5255a0f89d0e4c42e/reference/local_inference_results.json",
+      "verifiedHashes": {
+        "sha256": "3e4319055ee7b4a7fae93203411acdf71d5596427c63beb2ee07b749ca090a1f",
+        "gitBlob": "02e984ce5b19d9e90c064e2cebcb0d2bd982caa1"
+      }
+    },
+    {
+      "path": "requirements.txt",
+      "size": 54,
+      "url": "https://huggingface.co/AXERA-TECH/Sherpa-ONNX-KWS.AXERA/resolve/7420e0d67d20c246b0cd58b5255a0f89d0e4c42e/requirements.txt",
+      "verifiedHashes": {
+        "sha256": "07f8d27ea2b2b5b952a41ba53844b9321fea98a6e60d653f310d4939805fd476",
+        "gitBlob": "11d5248cbb14202d8cf32117e3cf74826f827145"
+      }
+    },
+    {
+      "path": "scripts/generate_keyword_tokens.py",
+      "size": 2121,
+      "url": "https://huggingface.co/AXERA-TECH/Sherpa-ONNX-KWS.AXERA/resolve/7420e0d67d20c246b0cd58b5255a0f89d0e4c42e/scripts/generate_keyword_tokens.py",
+      "verifiedHashes": {
+        "sha256": "923b596b7bf13b344b377f6e5511c96f34e1f26834330291b2ab3172eaf46c4d",
+        "gitBlob": "c186b9a77dc47d2138066dc02adac966b1e2dc4c"
+      }
+    },
+    {
+      "path": "scripts/runtime.py",
+      "size": 5296,
+      "url": "https://huggingface.co/AXERA-TECH/Sherpa-ONNX-KWS.AXERA/resolve/7420e0d67d20c246b0cd58b5255a0f89d0e4c42e/scripts/runtime.py",
+      "verifiedHashes": {
+        "sha256": "99b9f762b630a186cf3b010f57b11987564cb76e41ab403e78d3ada57729b0fb",
+        "gitBlob": "9702fc45bbbbbfa6d748f90932e3b77604a10b94"
+      }
+    },
+    {
+      "path": "scripts/sherpa_kws_ax.py",
+      "size": 18038,
+      "url": "https://huggingface.co/AXERA-TECH/Sherpa-ONNX-KWS.AXERA/resolve/7420e0d67d20c246b0cd58b5255a0f89d0e4c42e/scripts/sherpa_kws_ax.py",
+      "verifiedHashes": {
+        "sha256": "f6205b7cbcce709635893668ae99e737d05f4358db67ff8ecc73e1b88ffede22",
+        "gitBlob": "6afaec9fe7c531deba3d561f871dda75c441236e"
+      }
+    },
+    {
+      "path": "scripts/sherpa_kws_ax630c.py",
+      "size": 319,
+      "url": "https://huggingface.co/AXERA-TECH/Sherpa-ONNX-KWS.AXERA/resolve/7420e0d67d20c246b0cd58b5255a0f89d0e4c42e/scripts/sherpa_kws_ax630c.py",
+      "verifiedHashes": {
+        "sha256": "d2f3ac0ac7fc7cca24a8bf13356ec84c42dc092c5650bf7cef1aa398d5176693",
+        "gitBlob": "e50a209e2bae8d4ad035424daeef8ccd4dcfc33f"
+      }
+    },
+    {
+      "path": "scripts/sherpa_kws_ax650.py",
+      "size": 316,
+      "url": "https://huggingface.co/AXERA-TECH/Sherpa-ONNX-KWS.AXERA/resolve/7420e0d67d20c246b0cd58b5255a0f89d0e4c42e/scripts/sherpa_kws_ax650.py",
+      "verifiedHashes": {
+        "sha256": "2dbae30b014176b35862438ee301dad8bb3ae281d1ff42ead5bcaf563c9fb547",
+        "gitBlob": "0e19cc20c33d0071e503967e3cefb7c0cfccffe2"
+      }
+    }
+  ],
+  "runnerSha256": "c70d47b7925c57f92da6da962ad171bcd3f9d6391716153914c3dad0ae16aeda"
+}

@@ -1,0 +1,1916 @@
+{
+  "modelId": "DiariZen",
+  "revision": "4067c933f38204b128f29adbda48a4d0f52d5454",
+  "date": "2026-09-28",
+  "variants": [
+    {
+      "label": "会议录音：逐窗口活动分布",
+      "observation": "实际处理全部30秒录音，末窗补零两秒。每行图中的S1～S4只对当前窗口有效，没有跨窗口聚类，不能用这些编号推断会议总人数。",
+      "previews": [
+        {
+          "caption": "八个窗口的实际活动预测；每个窗口的说话人编号独立",
+          "path": "/validation/effects/diarizen-20260928/window-activity.png"
+        }
+      ],
+      "audio": [
+        {
+          "caption": "实际输入：上游 EN2002a 会议录音，30 秒",
+          "path": "/validation/effects/diarizen-20260928/input.wav"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "录音区间",
+            "局部人数",
+            "CNN / ms",
+            "CPU / ms",
+            "总耗时 / s"
+          ],
+          "rows": [
+            [
+              "0–4 s",
+              "2",
+              "10.323",
+              "1279.829",
+              "1.295948"
+            ],
+            [
+              "4–8 s",
+              "2",
+              "6.384",
+              "1233.335",
+              "1.242045"
+            ],
+            [
+              "8–12 s",
+              "3",
+              "6.773",
+              "1160.146",
+              "1.169305"
+            ],
+            [
+              "12–16 s",
+              "3",
+              "7.555",
+              "1183.836",
+              "1.194883"
+            ],
+            [
+              "16–20 s",
+              "3",
+              "6.595",
+              "1162.252",
+              "1.171290"
+            ],
+            [
+              "20–24 s",
+              "3",
+              "6.775",
+              "1158.076",
+              "1.167236"
+            ],
+            [
+              "24–28 s",
+              "1",
+              "6.101",
+              "1251.868",
+              "1.260175"
+            ],
+            [
+              "28–30 s（补零2 s）",
+              "1",
+              "6.380",
+              "1204.539",
+              "1.213375"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "modelId": "DiariZen",
+        "provider": "AXCLRTExecutionProvider",
+        "completed": true,
+        "sourceHashes": {
+          "inference.py": "cdb71bd935d9438aec0174f202679e59211a204ba395b3c56be1e3f8f71105e7",
+          "postprocess.py": "1b7cc5c80c3d46d89dadcffd2d86d68ba93fdcd1a7796dfea6014c8141a835e0",
+          "preprocess.py": "cb39a2c674521e1b62412874b8c43ca66b221b6d7094f025448857317c176dea",
+          "__init__.py": "a2c913e14953552825ae7139a195b728c18204f3054789c7d2b0058ec97f1b42"
+        },
+        "inputSha256": "55aa90540de2a01e6824ee2862d08763026d1752a3d7f6f8870015c74424e900",
+        "audioSeconds": 30.0,
+        "sampleRate": 16000,
+        "settings": {
+          "windowSeconds": 4,
+          "cpuThreads": 4,
+          "cpuInterOpThreads": 1,
+          "powersetClasses": [
+            [],
+            [
+              0
+            ],
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "speakerLabelsAreWindowLocal": true,
+          "crossWindowClustering": false
+        },
+        "sessions": [
+          {
+            "model": "models/cnn_features.axmodel",
+            "weightSha256": "8f119ae2b4c44bf018c50f13b3fae73171255f42001e582bd3322f807971a271",
+            "loadSeconds": 0.5829867059946992,
+            "allFinite": true,
+            "inputs": [
+              {
+                "name": "waveform_ln",
+                "shape": [
+                  1,
+                  64000
+                ],
+                "dtype": "float32"
+              }
+            ],
+            "runMilliseconds": [
+              10.322679998353124,
+              6.384007981978357,
+              6.77250896114856,
+              7.555051997769624,
+              6.595175014808774,
+              6.774550012778491,
+              6.101383012719452,
+              6.380216043908149,
+              6.932926014997065,
+              7.5296759605407715
+            ],
+            "calls": [
+              {
+                "sampleIndex": 1,
+                "inputHash": "0b843334e9964b8a9952da66f8601d95294dcb1aef75792502e7d2e9cb584a07",
+                "outputHash": "554cad2fd627b8f21c3119482401faa32ecb7b815fbc3b81018b9206d2a5ae7c"
+              },
+              {
+                "sampleIndex": 2,
+                "inputHash": "2aca7140e2397d2b78ebd25d9d33edee105c9600d98b988f457c747d62462ad3",
+                "outputHash": "4e23753dca3dcf5a5c5ff1a88e8ab0bab24cecfdb6f52d374072b88967619925"
+              },
+              {
+                "sampleIndex": 3,
+                "inputHash": "640039025861cf92340d8ae5a9f4bb956c79c5c510509a09eb71b031d5e10b27",
+                "outputHash": "11c13bfb3f6108c9a10b9cb2cbf3bcfd6540d1abfae24a01c41380d1c1b322cf"
+              },
+              {
+                "sampleIndex": 4,
+                "inputHash": "479c84b85133027b2564806e91cd588cfb882d6aa72a06ca325491463368dd27",
+                "outputHash": "037a22cb1e146f883a9b668e373826758ef5a8a4dad9cb3a8bcdf78c7ee7da9e"
+              },
+              {
+                "sampleIndex": 5,
+                "inputHash": "6b4a9e657783a50aa7d9750ce9ebc2115ec98f7449700af67dbc4b48c29b8157",
+                "outputHash": "9bf66e298104d33cb64e519c47d865d9ec27e7d275ffb6833c9b50ef97caacc7"
+              },
+              {
+                "sampleIndex": 6,
+                "inputHash": "cd2a7b907da4f8b4eda47bd4d6538734db9b70a383586bc15db7a3c8d94a7180",
+                "outputHash": "6e4b6f7c62e007a9e8351e5d4a111b618861f9a6a88737612f9e9809fb74f34b"
+              },
+              {
+                "sampleIndex": 7,
+                "inputHash": "49970e2646b558e1e7c4b08803796aeb8e02e2260f63ebddfbcde257033f0ec8",
+                "outputHash": "51a00ad08a09d93d0fed8b374910dea967c15eb295b4738f09e01dbe77f25d7c"
+              },
+              {
+                "sampleIndex": 8,
+                "inputHash": "d0f9666b2b4ccaf6292a568261d85625e7d5e0db06032314e5ab48c6c9e16b03",
+                "outputHash": "bc765949f152d56c8d8c2ac2787670309e2f9febf588e3524e14ac610a7ef9dc"
+              },
+              {
+                "sampleIndex": 9,
+                "inputHash": "0b843334e9964b8a9952da66f8601d95294dcb1aef75792502e7d2e9cb584a07",
+                "outputHash": "554cad2fd627b8f21c3119482401faa32ecb7b815fbc3b81018b9206d2a5ae7c"
+              },
+              {
+                "sampleIndex": 10,
+                "inputHash": "24a046dc04fefdb652e4077b41162490b344a4dd45f918505477f84c592f3070",
+                "outputHash": "fe0582f01206d6bb5f8c162dfe58caa1775eb7bd120c1a385b8c4ae7051dd2ce"
+              }
+            ]
+          }
+        ],
+        "samples": [
+          {
+            "kind": "window",
+            "startSeconds": 0.0,
+            "inputSeconds": 4.0,
+            "paddedSeconds": 0.0,
+            "processSeconds": 1.2959481190191582,
+            "cnnMilliseconds": 10.322679998353124,
+            "cpuMilliseconds": 1279.8288490157574,
+            "availableBeforeKiB": 2642308,
+            "availableAfterKiB": 2623780,
+            "activeLocalSpeakers": 2,
+            "classFrameCounts": [
+              0,
+              69,
+              41,
+              0,
+              0,
+              89,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "speakerActiveFrameCounts": [
+              158,
+              130,
+              0,
+              0
+            ],
+            "rawFile": "window-01.npz",
+            "rawSha256": "b1de51f24f6c724fd294e4725221ea5ae38afe40ed063a6206f30c7362eecdaa"
+          },
+          {
+            "kind": "window",
+            "startSeconds": 4.0,
+            "inputSeconds": 4.0,
+            "paddedSeconds": 0.0,
+            "processSeconds": 1.2420454249950126,
+            "cnnMilliseconds": 6.384007981978357,
+            "cpuMilliseconds": 1233.3347899839282,
+            "availableBeforeKiB": 2623528,
+            "availableAfterKiB": 2591184,
+            "activeLocalSpeakers": 2,
+            "classFrameCounts": [
+              0,
+              166,
+              0,
+              0,
+              0,
+              33,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "speakerActiveFrameCounts": [
+              199,
+              33,
+              0,
+              0
+            ],
+            "rawFile": "window-02.npz",
+            "rawSha256": "b178abe5c4b6ef9091a7fda090e7b133a77e604d75d4f615a97815f51536d4e6"
+          },
+          {
+            "kind": "window",
+            "startSeconds": 8.0,
+            "inputSeconds": 4.0,
+            "paddedSeconds": 0.0,
+            "processSeconds": 1.1693054159986787,
+            "cnnMilliseconds": 6.77250896114856,
+            "cpuMilliseconds": 1160.1456120260991,
+            "availableBeforeKiB": 2591184,
+            "availableAfterKiB": 2591176,
+            "activeLocalSpeakers": 3,
+            "classFrameCounts": [
+              0,
+              4,
+              0,
+              0,
+              0,
+              138,
+              0,
+              0,
+              57,
+              0,
+              0
+            ],
+            "speakerActiveFrameCounts": [
+              142,
+              195,
+              57,
+              0
+            ],
+            "rawFile": "window-03.npz",
+            "rawSha256": "bd29cc7bc8fb6d6c3cc1f6e791b8d794bd61f7460dd347bec0ce074be4430dbe"
+          },
+          {
+            "kind": "window",
+            "startSeconds": 12.0,
+            "inputSeconds": 4.0,
+            "paddedSeconds": 0.0,
+            "processSeconds": 1.1948834480135702,
+            "cnnMilliseconds": 7.555051997769624,
+            "cpuMilliseconds": 1183.8359750108793,
+            "availableBeforeKiB": 2591176,
+            "availableAfterKiB": 2590992,
+            "activeLocalSpeakers": 3,
+            "classFrameCounts": [
+              3,
+              5,
+              115,
+              3,
+              0,
+              21,
+              52,
+              0,
+              0,
+              0,
+              0
+            ],
+            "speakerActiveFrameCounts": [
+              78,
+              136,
+              55,
+              0
+            ],
+            "rawFile": "window-04.npz",
+            "rawSha256": "062e2c931381b8182f70054ee31fa8ccacecab940b42deec68406d9d11463723"
+          },
+          {
+            "kind": "window",
+            "startSeconds": 16.0,
+            "inputSeconds": 4.0,
+            "paddedSeconds": 0.0,
+            "processSeconds": 1.1712896259850822,
+            "cnnMilliseconds": 6.595175014808774,
+            "cpuMilliseconds": 1162.2520310338587,
+            "availableBeforeKiB": 2591188,
+            "availableAfterKiB": 2590968,
+            "activeLocalSpeakers": 3,
+            "classFrameCounts": [
+              67,
+              17,
+              93,
+              22,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "speakerActiveFrameCounts": [
+              17,
+              93,
+              22,
+              0
+            ],
+            "rawFile": "window-05.npz",
+            "rawSha256": "91065beadf4f128180c1bcf947b942857ccb6f4c03f77ab49f39e4868ca288a3"
+          },
+          {
+            "kind": "window",
+            "startSeconds": 20.0,
+            "inputSeconds": 4.0,
+            "paddedSeconds": 0.0,
+            "processSeconds": 1.1672357459901832,
+            "cnnMilliseconds": 6.774550012778491,
+            "cpuMilliseconds": 1158.0762340454385,
+            "availableBeforeKiB": 2591164,
+            "availableAfterKiB": 2590928,
+            "activeLocalSpeakers": 3,
+            "classFrameCounts": [
+              69,
+              96,
+              25,
+              7,
+              0,
+              0,
+              0,
+              0,
+              2,
+              0,
+              0
+            ],
+            "speakerActiveFrameCounts": [
+              96,
+              27,
+              9,
+              0
+            ],
+            "rawFile": "window-06.npz",
+            "rawSha256": "9ceb9ff8ccb18230bddf3b5cf2e3756e3392ed913336ff757077bb8912496b10"
+          },
+          {
+            "kind": "window",
+            "startSeconds": 24.0,
+            "inputSeconds": 4.0,
+            "paddedSeconds": 0.0,
+            "processSeconds": 1.2601745740394108,
+            "cnnMilliseconds": 6.101383012719452,
+            "cpuMilliseconds": 1251.868479012046,
+            "availableBeforeKiB": 2591124,
+            "availableAfterKiB": 2590908,
+            "activeLocalSpeakers": 1,
+            "classFrameCounts": [
+              0,
+              199,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "speakerActiveFrameCounts": [
+              199,
+              0,
+              0,
+              0
+            ],
+            "rawFile": "window-07.npz",
+            "rawSha256": "aeba845890392551568693919cf46acf15638c6bf17f398950d2882d4e6f383c"
+          },
+          {
+            "kind": "window",
+            "startSeconds": 28.0,
+            "inputSeconds": 2.0,
+            "paddedSeconds": 2.0,
+            "processSeconds": 1.213375138991978,
+            "cnnMilliseconds": 6.380216043908149,
+            "cpuMilliseconds": 1204.5387940015644,
+            "availableBeforeKiB": 2591104,
+            "availableAfterKiB": 2590892,
+            "activeLocalSpeakers": 1,
+            "classFrameCounts": [
+              110,
+              89,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "speakerActiveFrameCounts": [
+              89,
+              0,
+              0,
+              0
+            ],
+            "rawFile": "window-08.npz",
+            "rawSha256": "40675e8e5eeb12cd9703cb6f27bbaca425550f5bbabe33956b4a992bf5c4770b"
+          },
+          {
+            "kind": "repeat",
+            "startSeconds": 0.0,
+            "inputSeconds": 4.0,
+            "paddedSeconds": 0.0,
+            "processSeconds": 1.2740640499978326,
+            "cnnMilliseconds": 6.932926014997065,
+            "cpuMilliseconds": 1264.4177460460924,
+            "availableBeforeKiB": 2590892,
+            "availableAfterKiB": 2590972,
+            "activeLocalSpeakers": 2,
+            "classFrameCounts": [
+              0,
+              69,
+              41,
+              0,
+              0,
+              89,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "speakerActiveFrameCounts": [
+              158,
+              130,
+              0,
+              0
+            ],
+            "rawFile": "window-09.npz",
+            "rawSha256": "b1de51f24f6c724fd294e4725221ea5ae38afe40ed063a6206f30c7362eecdaa"
+          },
+          {
+            "kind": "silence",
+            "startSeconds": 0.0,
+            "inputSeconds": 4.0,
+            "paddedSeconds": 0.0,
+            "processSeconds": 1.2270012400113046,
+            "cnnMilliseconds": 7.5296759605407715,
+            "cpuMilliseconds": 1216.1853510187939,
+            "availableBeforeKiB": 2590972,
+            "availableAfterKiB": 2584544,
+            "activeLocalSpeakers": 0,
+            "classFrameCounts": [
+              199,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "speakerActiveFrameCounts": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "rawFile": "window-10.npz",
+            "rawSha256": "ca2b6c23295a5a0fa070b27f5854a4e1148adbdfad78dbc4a51959f68b7439fc"
+          }
+        ],
+        "cpuSession": {
+          "model": "models/backend.onnx",
+          "provider": "CPUExecutionProvider",
+          "weightSha256": "d45641b9270d9bd52fa63076ccc85c5af573da23cc1da0bd82b1adfee43803bb",
+          "loadSeconds": 2.8288153339526616,
+          "allFinite": true,
+          "inputs": [
+            {
+              "name": "cnn_features",
+              "shape": [
+                1,
+                199,
+                211
+              ],
+              "dtype": "tensor(float)"
+            }
+          ],
+          "runMilliseconds": [
+            1279.8288490157574,
+            1233.3347899839282,
+            1160.1456120260991,
+            1183.8359750108793,
+            1162.2520310338587,
+            1158.0762340454385,
+            1251.868479012046,
+            1204.5387940015644,
+            1264.4177460460924,
+            1216.1853510187939
+          ],
+          "calls": [
+            {
+              "sampleIndex": 1,
+              "inputHash": "554cad2fd627b8f21c3119482401faa32ecb7b815fbc3b81018b9206d2a5ae7c",
+              "outputHash": "bc8a975224c33996e017c564e09964bd7976b889d105d358ecb371a9a45badec"
+            },
+            {
+              "sampleIndex": 2,
+              "inputHash": "4e23753dca3dcf5a5c5ff1a88e8ab0bab24cecfdb6f52d374072b88967619925",
+              "outputHash": "1f811b2fdeaff2d58c38f1e21902c6662488d386d2fda30ae76ca7fc136f9f1a"
+            },
+            {
+              "sampleIndex": 3,
+              "inputHash": "11c13bfb3f6108c9a10b9cb2cbf3bcfd6540d1abfae24a01c41380d1c1b322cf",
+              "outputHash": "52f2adc5d2944cb975abc46335bcb32e8eadd6f1e8ba6af4fafd8d50f4e7bb06"
+            },
+            {
+              "sampleIndex": 4,
+              "inputHash": "037a22cb1e146f883a9b668e373826758ef5a8a4dad9cb3a8bcdf78c7ee7da9e",
+              "outputHash": "24e450623c9b0e19ca9e0f6c43e502f22465578f187de2b9d8cd04685c8a24ce"
+            },
+            {
+              "sampleIndex": 5,
+              "inputHash": "9bf66e298104d33cb64e519c47d865d9ec27e7d275ffb6833c9b50ef97caacc7",
+              "outputHash": "7e3eba2ec8bbb6176be201ceebe5468b78f253db6342d1c5f77483122f8743a4"
+            },
+            {
+              "sampleIndex": 6,
+              "inputHash": "6e4b6f7c62e007a9e8351e5d4a111b618861f9a6a88737612f9e9809fb74f34b",
+              "outputHash": "aa70331e90c0cba7fb56d1492c672e899a60b7470b45ec9dadeef0c55cef4758"
+            },
+            {
+              "sampleIndex": 7,
+              "inputHash": "51a00ad08a09d93d0fed8b374910dea967c15eb295b4738f09e01dbe77f25d7c",
+              "outputHash": "ecb58375e35acbfdfa19bfab48075685ab4c5bd7e3494c50f920a6506d477a06"
+            },
+            {
+              "sampleIndex": 8,
+              "inputHash": "bc765949f152d56c8d8c2ac2787670309e2f9febf588e3524e14ac610a7ef9dc",
+              "outputHash": "6b8d08c91e9103938e57dca90ab0568bbac308cf1bee07ccdd63d4cd949b6612"
+            },
+            {
+              "sampleIndex": 9,
+              "inputHash": "554cad2fd627b8f21c3119482401faa32ecb7b815fbc3b81018b9206d2a5ae7c",
+              "outputHash": "bc8a975224c33996e017c564e09964bd7976b889d105d358ecb371a9a45badec"
+            },
+            {
+              "sampleIndex": 10,
+              "inputHash": "fe0582f01206d6bb5f8c162dfe58caa1775eb7bd120c1a385b8c4ae7051dd2ce",
+              "outputHash": "e602775791d650d157ed3abac67d15ff1d409cd7395106142e30c2409d453817"
+            }
+          ]
+        },
+        "review": {
+          "sourceAndWeightHashesMatched": true,
+          "preprocessingIndependentlyVerified": true,
+          "cnnOutputExactlyFeedsCpu": true,
+          "repeatAllRawArraysAndIOExact": true,
+          "probabilitiesAndClassMappingIndependentlyVerified": true,
+          "upstreamProvenance": {
+            "repo": "BUTSpeechFIT/DiariZen",
+            "revision": "844f5555b0a98acd0931511fc641a8c5b8ba92c7",
+            "files": [
+              {
+                "path": "README.md",
+                "bytes": 6238,
+                "sha256": "d49d5390d340ceb89a294deb81b3f656ec0f788c498996849116822572c32d7a",
+                "blobId": "9cab751e4d5749a9ab3401db3300efcb8294f0f0"
+              },
+              {
+                "path": "example/EN2002a_30s.wav",
+                "bytes": 966432,
+                "sha256": "55aa90540de2a01e6824ee2862d08763026d1752a3d7f6f8870015c74424e900",
+                "blobId": "d6d5c3bedb51cd773085e2747c2530a836c49edd"
+              },
+              {
+                "path": "diarizen/models/eend/model_wavlm_conformer.py",
+                "bytes": 8255,
+                "sha256": "f18ace1b09514efe1781a334fdb031a3d6869bf1da1667dd64d91ee3653e8e04",
+                "blobId": "c425c90a6d8e31bbf0cb5163d1dabc1b22c32a8c"
+              },
+              {
+                "path": "pyannote-audio/pyannote/audio/utils/powerset.py",
+                "bytes": 8200,
+                "sha256": "5124bdbf7557124333b9be08a9ec37bc69292b3eb4e9da041b456b7b77b741ec",
+                "blobId": "6a0716df96c8c6ea3dd934789d415dd93ca2cc7e"
+              }
+            ]
+          },
+          "mappingScope": "4 local speakers, combinations of size 0..2 from upstream defaults; no global clustering, no annotation baseline",
+          "scope": "All 30 seconds in eight nonoverlapping windows; last window padded two seconds. Final padded frames are included in per-window counts, not real speech duration."
+        }
+      }
+    },
+    {
+      "label": "首个窗口：类别概率",
+      "observation": "颜色由本次后端输出的概率绘制。S1+S2等标签表示同一帧的双人重叠组合，概率较高不等同于经过人工标注的准确率。",
+      "previews": [
+        {
+          "caption": "首个四秒窗口的实际类别概率：静音、单人和双人重叠",
+          "path": "/validation/effects/diarizen-20260928/probabilities.png"
+        }
+      ],
+      "record": {
+        "modelId": "DiariZen",
+        "provider": "AXCLRTExecutionProvider",
+        "completed": true,
+        "sourceHashes": {
+          "inference.py": "cdb71bd935d9438aec0174f202679e59211a204ba395b3c56be1e3f8f71105e7",
+          "postprocess.py": "1b7cc5c80c3d46d89dadcffd2d86d68ba93fdcd1a7796dfea6014c8141a835e0",
+          "preprocess.py": "cb39a2c674521e1b62412874b8c43ca66b221b6d7094f025448857317c176dea",
+          "__init__.py": "a2c913e14953552825ae7139a195b728c18204f3054789c7d2b0058ec97f1b42"
+        },
+        "inputSha256": "55aa90540de2a01e6824ee2862d08763026d1752a3d7f6f8870015c74424e900",
+        "audioSeconds": 30.0,
+        "sampleRate": 16000,
+        "settings": {
+          "windowSeconds": 4,
+          "cpuThreads": 4,
+          "cpuInterOpThreads": 1,
+          "powersetClasses": [
+            [],
+            [
+              0
+            ],
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "speakerLabelsAreWindowLocal": true,
+          "crossWindowClustering": false
+        },
+        "sessions": [
+          {
+            "model": "models/cnn_features.axmodel",
+            "weightSha256": "8f119ae2b4c44bf018c50f13b3fae73171255f42001e582bd3322f807971a271",
+            "loadSeconds": 0.5829867059946992,
+            "allFinite": true,
+            "inputs": [
+              {
+                "name": "waveform_ln",
+                "shape": [
+                  1,
+                  64000
+                ],
+                "dtype": "float32"
+              }
+            ],
+            "runMilliseconds": [
+              10.322679998353124,
+              6.384007981978357,
+              6.77250896114856,
+              7.555051997769624,
+              6.595175014808774,
+              6.774550012778491,
+              6.101383012719452,
+              6.380216043908149,
+              6.932926014997065,
+              7.5296759605407715
+            ],
+            "calls": [
+              {
+                "sampleIndex": 1,
+                "inputHash": "0b843334e9964b8a9952da66f8601d95294dcb1aef75792502e7d2e9cb584a07",
+                "outputHash": "554cad2fd627b8f21c3119482401faa32ecb7b815fbc3b81018b9206d2a5ae7c"
+              },
+              {
+                "sampleIndex": 2,
+                "inputHash": "2aca7140e2397d2b78ebd25d9d33edee105c9600d98b988f457c747d62462ad3",
+                "outputHash": "4e23753dca3dcf5a5c5ff1a88e8ab0bab24cecfdb6f52d374072b88967619925"
+              },
+              {
+                "sampleIndex": 3,
+                "inputHash": "640039025861cf92340d8ae5a9f4bb956c79c5c510509a09eb71b031d5e10b27",
+                "outputHash": "11c13bfb3f6108c9a10b9cb2cbf3bcfd6540d1abfae24a01c41380d1c1b322cf"
+              },
+              {
+                "sampleIndex": 4,
+                "inputHash": "479c84b85133027b2564806e91cd588cfb882d6aa72a06ca325491463368dd27",
+                "outputHash": "037a22cb1e146f883a9b668e373826758ef5a8a4dad9cb3a8bcdf78c7ee7da9e"
+              },
+              {
+                "sampleIndex": 5,
+                "inputHash": "6b4a9e657783a50aa7d9750ce9ebc2115ec98f7449700af67dbc4b48c29b8157",
+                "outputHash": "9bf66e298104d33cb64e519c47d865d9ec27e7d275ffb6833c9b50ef97caacc7"
+              },
+              {
+                "sampleIndex": 6,
+                "inputHash": "cd2a7b907da4f8b4eda47bd4d6538734db9b70a383586bc15db7a3c8d94a7180",
+                "outputHash": "6e4b6f7c62e007a9e8351e5d4a111b618861f9a6a88737612f9e9809fb74f34b"
+              },
+              {
+                "sampleIndex": 7,
+                "inputHash": "49970e2646b558e1e7c4b08803796aeb8e02e2260f63ebddfbcde257033f0ec8",
+                "outputHash": "51a00ad08a09d93d0fed8b374910dea967c15eb295b4738f09e01dbe77f25d7c"
+              },
+              {
+                "sampleIndex": 8,
+                "inputHash": "d0f9666b2b4ccaf6292a568261d85625e7d5e0db06032314e5ab48c6c9e16b03",
+                "outputHash": "bc765949f152d56c8d8c2ac2787670309e2f9febf588e3524e14ac610a7ef9dc"
+              },
+              {
+                "sampleIndex": 9,
+                "inputHash": "0b843334e9964b8a9952da66f8601d95294dcb1aef75792502e7d2e9cb584a07",
+                "outputHash": "554cad2fd627b8f21c3119482401faa32ecb7b815fbc3b81018b9206d2a5ae7c"
+              },
+              {
+                "sampleIndex": 10,
+                "inputHash": "24a046dc04fefdb652e4077b41162490b344a4dd45f918505477f84c592f3070",
+                "outputHash": "fe0582f01206d6bb5f8c162dfe58caa1775eb7bd120c1a385b8c4ae7051dd2ce"
+              }
+            ]
+          }
+        ],
+        "samples": [
+          {
+            "kind": "window",
+            "startSeconds": 0.0,
+            "inputSeconds": 4.0,
+            "paddedSeconds": 0.0,
+            "processSeconds": 1.2959481190191582,
+            "cnnMilliseconds": 10.322679998353124,
+            "cpuMilliseconds": 1279.8288490157574,
+            "availableBeforeKiB": 2642308,
+            "availableAfterKiB": 2623780,
+            "activeLocalSpeakers": 2,
+            "classFrameCounts": [
+              0,
+              69,
+              41,
+              0,
+              0,
+              89,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "speakerActiveFrameCounts": [
+              158,
+              130,
+              0,
+              0
+            ],
+            "rawFile": "window-01.npz",
+            "rawSha256": "b1de51f24f6c724fd294e4725221ea5ae38afe40ed063a6206f30c7362eecdaa"
+          },
+          {
+            "kind": "window",
+            "startSeconds": 4.0,
+            "inputSeconds": 4.0,
+            "paddedSeconds": 0.0,
+            "processSeconds": 1.2420454249950126,
+            "cnnMilliseconds": 6.384007981978357,
+            "cpuMilliseconds": 1233.3347899839282,
+            "availableBeforeKiB": 2623528,
+            "availableAfterKiB": 2591184,
+            "activeLocalSpeakers": 2,
+            "classFrameCounts": [
+              0,
+              166,
+              0,
+              0,
+              0,
+              33,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "speakerActiveFrameCounts": [
+              199,
+              33,
+              0,
+              0
+            ],
+            "rawFile": "window-02.npz",
+            "rawSha256": "b178abe5c4b6ef9091a7fda090e7b133a77e604d75d4f615a97815f51536d4e6"
+          },
+          {
+            "kind": "window",
+            "startSeconds": 8.0,
+            "inputSeconds": 4.0,
+            "paddedSeconds": 0.0,
+            "processSeconds": 1.1693054159986787,
+            "cnnMilliseconds": 6.77250896114856,
+            "cpuMilliseconds": 1160.1456120260991,
+            "availableBeforeKiB": 2591184,
+            "availableAfterKiB": 2591176,
+            "activeLocalSpeakers": 3,
+            "classFrameCounts": [
+              0,
+              4,
+              0,
+              0,
+              0,
+              138,
+              0,
+              0,
+              57,
+              0,
+              0
+            ],
+            "speakerActiveFrameCounts": [
+              142,
+              195,
+              57,
+              0
+            ],
+            "rawFile": "window-03.npz",
+            "rawSha256": "bd29cc7bc8fb6d6c3cc1f6e791b8d794bd61f7460dd347bec0ce074be4430dbe"
+          },
+          {
+            "kind": "window",
+            "startSeconds": 12.0,
+            "inputSeconds": 4.0,
+            "paddedSeconds": 0.0,
+            "processSeconds": 1.1948834480135702,
+            "cnnMilliseconds": 7.555051997769624,
+            "cpuMilliseconds": 1183.8359750108793,
+            "availableBeforeKiB": 2591176,
+            "availableAfterKiB": 2590992,
+            "activeLocalSpeakers": 3,
+            "classFrameCounts": [
+              3,
+              5,
+              115,
+              3,
+              0,
+              21,
+              52,
+              0,
+              0,
+              0,
+              0
+            ],
+            "speakerActiveFrameCounts": [
+              78,
+              136,
+              55,
+              0
+            ],
+            "rawFile": "window-04.npz",
+            "rawSha256": "062e2c931381b8182f70054ee31fa8ccacecab940b42deec68406d9d11463723"
+          },
+          {
+            "kind": "window",
+            "startSeconds": 16.0,
+            "inputSeconds": 4.0,
+            "paddedSeconds": 0.0,
+            "processSeconds": 1.1712896259850822,
+            "cnnMilliseconds": 6.595175014808774,
+            "cpuMilliseconds": 1162.2520310338587,
+            "availableBeforeKiB": 2591188,
+            "availableAfterKiB": 2590968,
+            "activeLocalSpeakers": 3,
+            "classFrameCounts": [
+              67,
+              17,
+              93,
+              22,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "speakerActiveFrameCounts": [
+              17,
+              93,
+              22,
+              0
+            ],
+            "rawFile": "window-05.npz",
+            "rawSha256": "91065beadf4f128180c1bcf947b942857ccb6f4c03f77ab49f39e4868ca288a3"
+          },
+          {
+            "kind": "window",
+            "startSeconds": 20.0,
+            "inputSeconds": 4.0,
+            "paddedSeconds": 0.0,
+            "processSeconds": 1.1672357459901832,
+            "cnnMilliseconds": 6.774550012778491,
+            "cpuMilliseconds": 1158.0762340454385,
+            "availableBeforeKiB": 2591164,
+            "availableAfterKiB": 2590928,
+            "activeLocalSpeakers": 3,
+            "classFrameCounts": [
+              69,
+              96,
+              25,
+              7,
+              0,
+              0,
+              0,
+              0,
+              2,
+              0,
+              0
+            ],
+            "speakerActiveFrameCounts": [
+              96,
+              27,
+              9,
+              0
+            ],
+            "rawFile": "window-06.npz",
+            "rawSha256": "9ceb9ff8ccb18230bddf3b5cf2e3756e3392ed913336ff757077bb8912496b10"
+          },
+          {
+            "kind": "window",
+            "startSeconds": 24.0,
+            "inputSeconds": 4.0,
+            "paddedSeconds": 0.0,
+            "processSeconds": 1.2601745740394108,
+            "cnnMilliseconds": 6.101383012719452,
+            "cpuMilliseconds": 1251.868479012046,
+            "availableBeforeKiB": 2591124,
+            "availableAfterKiB": 2590908,
+            "activeLocalSpeakers": 1,
+            "classFrameCounts": [
+              0,
+              199,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "speakerActiveFrameCounts": [
+              199,
+              0,
+              0,
+              0
+            ],
+            "rawFile": "window-07.npz",
+            "rawSha256": "aeba845890392551568693919cf46acf15638c6bf17f398950d2882d4e6f383c"
+          },
+          {
+            "kind": "window",
+            "startSeconds": 28.0,
+            "inputSeconds": 2.0,
+            "paddedSeconds": 2.0,
+            "processSeconds": 1.213375138991978,
+            "cnnMilliseconds": 6.380216043908149,
+            "cpuMilliseconds": 1204.5387940015644,
+            "availableBeforeKiB": 2591104,
+            "availableAfterKiB": 2590892,
+            "activeLocalSpeakers": 1,
+            "classFrameCounts": [
+              110,
+              89,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "speakerActiveFrameCounts": [
+              89,
+              0,
+              0,
+              0
+            ],
+            "rawFile": "window-08.npz",
+            "rawSha256": "40675e8e5eeb12cd9703cb6f27bbaca425550f5bbabe33956b4a992bf5c4770b"
+          },
+          {
+            "kind": "repeat",
+            "startSeconds": 0.0,
+            "inputSeconds": 4.0,
+            "paddedSeconds": 0.0,
+            "processSeconds": 1.2740640499978326,
+            "cnnMilliseconds": 6.932926014997065,
+            "cpuMilliseconds": 1264.4177460460924,
+            "availableBeforeKiB": 2590892,
+            "availableAfterKiB": 2590972,
+            "activeLocalSpeakers": 2,
+            "classFrameCounts": [
+              0,
+              69,
+              41,
+              0,
+              0,
+              89,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "speakerActiveFrameCounts": [
+              158,
+              130,
+              0,
+              0
+            ],
+            "rawFile": "window-09.npz",
+            "rawSha256": "b1de51f24f6c724fd294e4725221ea5ae38afe40ed063a6206f30c7362eecdaa"
+          },
+          {
+            "kind": "silence",
+            "startSeconds": 0.0,
+            "inputSeconds": 4.0,
+            "paddedSeconds": 0.0,
+            "processSeconds": 1.2270012400113046,
+            "cnnMilliseconds": 7.5296759605407715,
+            "cpuMilliseconds": 1216.1853510187939,
+            "availableBeforeKiB": 2590972,
+            "availableAfterKiB": 2584544,
+            "activeLocalSpeakers": 0,
+            "classFrameCounts": [
+              199,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "speakerActiveFrameCounts": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "rawFile": "window-10.npz",
+            "rawSha256": "ca2b6c23295a5a0fa070b27f5854a4e1148adbdfad78dbc4a51959f68b7439fc"
+          }
+        ],
+        "cpuSession": {
+          "model": "models/backend.onnx",
+          "provider": "CPUExecutionProvider",
+          "weightSha256": "d45641b9270d9bd52fa63076ccc85c5af573da23cc1da0bd82b1adfee43803bb",
+          "loadSeconds": 2.8288153339526616,
+          "allFinite": true,
+          "inputs": [
+            {
+              "name": "cnn_features",
+              "shape": [
+                1,
+                199,
+                211
+              ],
+              "dtype": "tensor(float)"
+            }
+          ],
+          "runMilliseconds": [
+            1279.8288490157574,
+            1233.3347899839282,
+            1160.1456120260991,
+            1183.8359750108793,
+            1162.2520310338587,
+            1158.0762340454385,
+            1251.868479012046,
+            1204.5387940015644,
+            1264.4177460460924,
+            1216.1853510187939
+          ],
+          "calls": [
+            {
+              "sampleIndex": 1,
+              "inputHash": "554cad2fd627b8f21c3119482401faa32ecb7b815fbc3b81018b9206d2a5ae7c",
+              "outputHash": "bc8a975224c33996e017c564e09964bd7976b889d105d358ecb371a9a45badec"
+            },
+            {
+              "sampleIndex": 2,
+              "inputHash": "4e23753dca3dcf5a5c5ff1a88e8ab0bab24cecfdb6f52d374072b88967619925",
+              "outputHash": "1f811b2fdeaff2d58c38f1e21902c6662488d386d2fda30ae76ca7fc136f9f1a"
+            },
+            {
+              "sampleIndex": 3,
+              "inputHash": "11c13bfb3f6108c9a10b9cb2cbf3bcfd6540d1abfae24a01c41380d1c1b322cf",
+              "outputHash": "52f2adc5d2944cb975abc46335bcb32e8eadd6f1e8ba6af4fafd8d50f4e7bb06"
+            },
+            {
+              "sampleIndex": 4,
+              "inputHash": "037a22cb1e146f883a9b668e373826758ef5a8a4dad9cb3a8bcdf78c7ee7da9e",
+              "outputHash": "24e450623c9b0e19ca9e0f6c43e502f22465578f187de2b9d8cd04685c8a24ce"
+            },
+            {
+              "sampleIndex": 5,
+              "inputHash": "9bf66e298104d33cb64e519c47d865d9ec27e7d275ffb6833c9b50ef97caacc7",
+              "outputHash": "7e3eba2ec8bbb6176be201ceebe5468b78f253db6342d1c5f77483122f8743a4"
+            },
+            {
+              "sampleIndex": 6,
+              "inputHash": "6e4b6f7c62e007a9e8351e5d4a111b618861f9a6a88737612f9e9809fb74f34b",
+              "outputHash": "aa70331e90c0cba7fb56d1492c672e899a60b7470b45ec9dadeef0c55cef4758"
+            },
+            {
+              "sampleIndex": 7,
+              "inputHash": "51a00ad08a09d93d0fed8b374910dea967c15eb295b4738f09e01dbe77f25d7c",
+              "outputHash": "ecb58375e35acbfdfa19bfab48075685ab4c5bd7e3494c50f920a6506d477a06"
+            },
+            {
+              "sampleIndex": 8,
+              "inputHash": "bc765949f152d56c8d8c2ac2787670309e2f9febf588e3524e14ac610a7ef9dc",
+              "outputHash": "6b8d08c91e9103938e57dca90ab0568bbac308cf1bee07ccdd63d4cd949b6612"
+            },
+            {
+              "sampleIndex": 9,
+              "inputHash": "554cad2fd627b8f21c3119482401faa32ecb7b815fbc3b81018b9206d2a5ae7c",
+              "outputHash": "bc8a975224c33996e017c564e09964bd7976b889d105d358ecb371a9a45badec"
+            },
+            {
+              "sampleIndex": 10,
+              "inputHash": "fe0582f01206d6bb5f8c162dfe58caa1775eb7bd120c1a385b8c4ae7051dd2ce",
+              "outputHash": "e602775791d650d157ed3abac67d15ff1d409cd7395106142e30c2409d453817"
+            }
+          ]
+        },
+        "review": {
+          "sourceAndWeightHashesMatched": true,
+          "preprocessingIndependentlyVerified": true,
+          "cnnOutputExactlyFeedsCpu": true,
+          "repeatAllRawArraysAndIOExact": true,
+          "probabilitiesAndClassMappingIndependentlyVerified": true,
+          "upstreamProvenance": {
+            "repo": "BUTSpeechFIT/DiariZen",
+            "revision": "844f5555b0a98acd0931511fc641a8c5b8ba92c7",
+            "files": [
+              {
+                "path": "README.md",
+                "bytes": 6238,
+                "sha256": "d49d5390d340ceb89a294deb81b3f656ec0f788c498996849116822572c32d7a",
+                "blobId": "9cab751e4d5749a9ab3401db3300efcb8294f0f0"
+              },
+              {
+                "path": "example/EN2002a_30s.wav",
+                "bytes": 966432,
+                "sha256": "55aa90540de2a01e6824ee2862d08763026d1752a3d7f6f8870015c74424e900",
+                "blobId": "d6d5c3bedb51cd773085e2747c2530a836c49edd"
+              },
+              {
+                "path": "diarizen/models/eend/model_wavlm_conformer.py",
+                "bytes": 8255,
+                "sha256": "f18ace1b09514efe1781a334fdb031a3d6869bf1da1667dd64d91ee3653e8e04",
+                "blobId": "c425c90a6d8e31bbf0cb5163d1dabc1b22c32a8c"
+              },
+              {
+                "path": "pyannote-audio/pyannote/audio/utils/powerset.py",
+                "bytes": 8200,
+                "sha256": "5124bdbf7557124333b9be08a9ec37bc69292b3eb4e9da041b456b7b77b741ec",
+                "blobId": "6a0716df96c8c6ea3dd934789d415dd93ca2cc7e"
+              }
+            ]
+          },
+          "mappingScope": "4 local speakers, combinations of size 0..2 from upstream defaults; no global clustering, no annotation baseline",
+          "scope": "All 30 seconds in eight nonoverlapping windows; last window padded two seconds. Final padded frames are included in per-window counts, not real speech duration."
+        }
+      }
+    },
+    {
+      "label": "重复窗口与静音",
+      "observation": "重复首个四秒窗口，CNN与CPU后端的原始输入输出及活动矩阵全部一致。四秒静音的199帧均输出静音类，活跃说话人数为0。",
+      "previews": [],
+      "tables": [
+        {
+          "headers": [
+            "输入",
+            "局部人数",
+            "静音帧 / 总帧",
+            "处理耗时 / s"
+          ],
+          "rows": [
+            [
+              "重复0–4 s",
+              "2",
+              "0 / 199",
+              "1.274064"
+            ],
+            [
+              "四秒静音",
+              "0",
+              "199 / 199",
+              "1.227001"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "modelId": "DiariZen",
+        "provider": "AXCLRTExecutionProvider",
+        "completed": true,
+        "sourceHashes": {
+          "inference.py": "cdb71bd935d9438aec0174f202679e59211a204ba395b3c56be1e3f8f71105e7",
+          "postprocess.py": "1b7cc5c80c3d46d89dadcffd2d86d68ba93fdcd1a7796dfea6014c8141a835e0",
+          "preprocess.py": "cb39a2c674521e1b62412874b8c43ca66b221b6d7094f025448857317c176dea",
+          "__init__.py": "a2c913e14953552825ae7139a195b728c18204f3054789c7d2b0058ec97f1b42"
+        },
+        "inputSha256": "55aa90540de2a01e6824ee2862d08763026d1752a3d7f6f8870015c74424e900",
+        "audioSeconds": 30.0,
+        "sampleRate": 16000,
+        "settings": {
+          "windowSeconds": 4,
+          "cpuThreads": 4,
+          "cpuInterOpThreads": 1,
+          "powersetClasses": [
+            [],
+            [
+              0
+            ],
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "speakerLabelsAreWindowLocal": true,
+          "crossWindowClustering": false
+        },
+        "sessions": [
+          {
+            "model": "models/cnn_features.axmodel",
+            "weightSha256": "8f119ae2b4c44bf018c50f13b3fae73171255f42001e582bd3322f807971a271",
+            "loadSeconds": 0.5829867059946992,
+            "allFinite": true,
+            "inputs": [
+              {
+                "name": "waveform_ln",
+                "shape": [
+                  1,
+                  64000
+                ],
+                "dtype": "float32"
+              }
+            ],
+            "runMilliseconds": [
+              10.322679998353124,
+              6.384007981978357,
+              6.77250896114856,
+              7.555051997769624,
+              6.595175014808774,
+              6.774550012778491,
+              6.101383012719452,
+              6.380216043908149,
+              6.932926014997065,
+              7.5296759605407715
+            ],
+            "calls": [
+              {
+                "sampleIndex": 1,
+                "inputHash": "0b843334e9964b8a9952da66f8601d95294dcb1aef75792502e7d2e9cb584a07",
+                "outputHash": "554cad2fd627b8f21c3119482401faa32ecb7b815fbc3b81018b9206d2a5ae7c"
+              },
+              {
+                "sampleIndex": 2,
+                "inputHash": "2aca7140e2397d2b78ebd25d9d33edee105c9600d98b988f457c747d62462ad3",
+                "outputHash": "4e23753dca3dcf5a5c5ff1a88e8ab0bab24cecfdb6f52d374072b88967619925"
+              },
+              {
+                "sampleIndex": 3,
+                "inputHash": "640039025861cf92340d8ae5a9f4bb956c79c5c510509a09eb71b031d5e10b27",
+                "outputHash": "11c13bfb3f6108c9a10b9cb2cbf3bcfd6540d1abfae24a01c41380d1c1b322cf"
+              },
+              {
+                "sampleIndex": 4,
+                "inputHash": "479c84b85133027b2564806e91cd588cfb882d6aa72a06ca325491463368dd27",
+                "outputHash": "037a22cb1e146f883a9b668e373826758ef5a8a4dad9cb3a8bcdf78c7ee7da9e"
+              },
+              {
+                "sampleIndex": 5,
+                "inputHash": "6b4a9e657783a50aa7d9750ce9ebc2115ec98f7449700af67dbc4b48c29b8157",
+                "outputHash": "9bf66e298104d33cb64e519c47d865d9ec27e7d275ffb6833c9b50ef97caacc7"
+              },
+              {
+                "sampleIndex": 6,
+                "inputHash": "cd2a7b907da4f8b4eda47bd4d6538734db9b70a383586bc15db7a3c8d94a7180",
+                "outputHash": "6e4b6f7c62e007a9e8351e5d4a111b618861f9a6a88737612f9e9809fb74f34b"
+              },
+              {
+                "sampleIndex": 7,
+                "inputHash": "49970e2646b558e1e7c4b08803796aeb8e02e2260f63ebddfbcde257033f0ec8",
+                "outputHash": "51a00ad08a09d93d0fed8b374910dea967c15eb295b4738f09e01dbe77f25d7c"
+              },
+              {
+                "sampleIndex": 8,
+                "inputHash": "d0f9666b2b4ccaf6292a568261d85625e7d5e0db06032314e5ab48c6c9e16b03",
+                "outputHash": "bc765949f152d56c8d8c2ac2787670309e2f9febf588e3524e14ac610a7ef9dc"
+              },
+              {
+                "sampleIndex": 9,
+                "inputHash": "0b843334e9964b8a9952da66f8601d95294dcb1aef75792502e7d2e9cb584a07",
+                "outputHash": "554cad2fd627b8f21c3119482401faa32ecb7b815fbc3b81018b9206d2a5ae7c"
+              },
+              {
+                "sampleIndex": 10,
+                "inputHash": "24a046dc04fefdb652e4077b41162490b344a4dd45f918505477f84c592f3070",
+                "outputHash": "fe0582f01206d6bb5f8c162dfe58caa1775eb7bd120c1a385b8c4ae7051dd2ce"
+              }
+            ]
+          }
+        ],
+        "samples": [
+          {
+            "kind": "window",
+            "startSeconds": 0.0,
+            "inputSeconds": 4.0,
+            "paddedSeconds": 0.0,
+            "processSeconds": 1.2959481190191582,
+            "cnnMilliseconds": 10.322679998353124,
+            "cpuMilliseconds": 1279.8288490157574,
+            "availableBeforeKiB": 2642308,
+            "availableAfterKiB": 2623780,
+            "activeLocalSpeakers": 2,
+            "classFrameCounts": [
+              0,
+              69,
+              41,
+              0,
+              0,
+              89,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "speakerActiveFrameCounts": [
+              158,
+              130,
+              0,
+              0
+            ],
+            "rawFile": "window-01.npz",
+            "rawSha256": "b1de51f24f6c724fd294e4725221ea5ae38afe40ed063a6206f30c7362eecdaa"
+          },
+          {
+            "kind": "window",
+            "startSeconds": 4.0,
+            "inputSeconds": 4.0,
+            "paddedSeconds": 0.0,
+            "processSeconds": 1.2420454249950126,
+            "cnnMilliseconds": 6.384007981978357,
+            "cpuMilliseconds": 1233.3347899839282,
+            "availableBeforeKiB": 2623528,
+            "availableAfterKiB": 2591184,
+            "activeLocalSpeakers": 2,
+            "classFrameCounts": [
+              0,
+              166,
+              0,
+              0,
+              0,
+              33,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "speakerActiveFrameCounts": [
+              199,
+              33,
+              0,
+              0
+            ],
+            "rawFile": "window-02.npz",
+            "rawSha256": "b178abe5c4b6ef9091a7fda090e7b133a77e604d75d4f615a97815f51536d4e6"
+          },
+          {
+            "kind": "window",
+            "startSeconds": 8.0,
+            "inputSeconds": 4.0,
+            "paddedSeconds": 0.0,
+            "processSeconds": 1.1693054159986787,
+            "cnnMilliseconds": 6.77250896114856,
+            "cpuMilliseconds": 1160.1456120260991,
+            "availableBeforeKiB": 2591184,
+            "availableAfterKiB": 2591176,
+            "activeLocalSpeakers": 3,
+            "classFrameCounts": [
+              0,
+              4,
+              0,
+              0,
+              0,
+              138,
+              0,
+              0,
+              57,
+              0,
+              0
+            ],
+            "speakerActiveFrameCounts": [
+              142,
+              195,
+              57,
+              0
+            ],
+            "rawFile": "window-03.npz",
+            "rawSha256": "bd29cc7bc8fb6d6c3cc1f6e791b8d794bd61f7460dd347bec0ce074be4430dbe"
+          },
+          {
+            "kind": "window",
+            "startSeconds": 12.0,
+            "inputSeconds": 4.0,
+            "paddedSeconds": 0.0,
+            "processSeconds": 1.1948834480135702,
+            "cnnMilliseconds": 7.555051997769624,
+            "cpuMilliseconds": 1183.8359750108793,
+            "availableBeforeKiB": 2591176,
+            "availableAfterKiB": 2590992,
+            "activeLocalSpeakers": 3,
+            "classFrameCounts": [
+              3,
+              5,
+              115,
+              3,
+              0,
+              21,
+              52,
+              0,
+              0,
+              0,
+              0
+            ],
+            "speakerActiveFrameCounts": [
+              78,
+              136,
+              55,
+              0
+            ],
+            "rawFile": "window-04.npz",
+            "rawSha256": "062e2c931381b8182f70054ee31fa8ccacecab940b42deec68406d9d11463723"
+          },
+          {
+            "kind": "window",
+            "startSeconds": 16.0,
+            "inputSeconds": 4.0,
+            "paddedSeconds": 0.0,
+            "processSeconds": 1.1712896259850822,
+            "cnnMilliseconds": 6.595175014808774,
+            "cpuMilliseconds": 1162.2520310338587,
+            "availableBeforeKiB": 2591188,
+            "availableAfterKiB": 2590968,
+            "activeLocalSpeakers": 3,
+            "classFrameCounts": [
+              67,
+              17,
+              93,
+              22,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "speakerActiveFrameCounts": [
+              17,
+              93,
+              22,
+              0
+            ],
+            "rawFile": "window-05.npz",
+            "rawSha256": "91065beadf4f128180c1bcf947b942857ccb6f4c03f77ab49f39e4868ca288a3"
+          },
+          {
+            "kind": "window",
+            "startSeconds": 20.0,
+            "inputSeconds": 4.0,
+            "paddedSeconds": 0.0,
+            "processSeconds": 1.1672357459901832,
+            "cnnMilliseconds": 6.774550012778491,
+            "cpuMilliseconds": 1158.0762340454385,
+            "availableBeforeKiB": 2591164,
+            "availableAfterKiB": 2590928,
+            "activeLocalSpeakers": 3,
+            "classFrameCounts": [
+              69,
+              96,
+              25,
+              7,
+              0,
+              0,
+              0,
+              0,
+              2,
+              0,
+              0
+            ],
+            "speakerActiveFrameCounts": [
+              96,
+              27,
+              9,
+              0
+            ],
+            "rawFile": "window-06.npz",
+            "rawSha256": "9ceb9ff8ccb18230bddf3b5cf2e3756e3392ed913336ff757077bb8912496b10"
+          },
+          {
+            "kind": "window",
+            "startSeconds": 24.0,
+            "inputSeconds": 4.0,
+            "paddedSeconds": 0.0,
+            "processSeconds": 1.2601745740394108,
+            "cnnMilliseconds": 6.101383012719452,
+            "cpuMilliseconds": 1251.868479012046,
+            "availableBeforeKiB": 2591124,
+            "availableAfterKiB": 2590908,
+            "activeLocalSpeakers": 1,
+            "classFrameCounts": [
+              0,
+              199,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "speakerActiveFrameCounts": [
+              199,
+              0,
+              0,
+              0
+            ],
+            "rawFile": "window-07.npz",
+            "rawSha256": "aeba845890392551568693919cf46acf15638c6bf17f398950d2882d4e6f383c"
+          },
+          {
+            "kind": "window",
+            "startSeconds": 28.0,
+            "inputSeconds": 2.0,
+            "paddedSeconds": 2.0,
+            "processSeconds": 1.213375138991978,
+            "cnnMilliseconds": 6.380216043908149,
+            "cpuMilliseconds": 1204.5387940015644,
+            "availableBeforeKiB": 2591104,
+            "availableAfterKiB": 2590892,
+            "activeLocalSpeakers": 1,
+            "classFrameCounts": [
+              110,
+              89,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "speakerActiveFrameCounts": [
+              89,
+              0,
+              0,
+              0
+            ],
+            "rawFile": "window-08.npz",
+            "rawSha256": "40675e8e5eeb12cd9703cb6f27bbaca425550f5bbabe33956b4a992bf5c4770b"
+          },
+          {
+            "kind": "repeat",
+            "startSeconds": 0.0,
+            "inputSeconds": 4.0,
+            "paddedSeconds": 0.0,
+            "processSeconds": 1.2740640499978326,
+            "cnnMilliseconds": 6.932926014997065,
+            "cpuMilliseconds": 1264.4177460460924,
+            "availableBeforeKiB": 2590892,
+            "availableAfterKiB": 2590972,
+            "activeLocalSpeakers": 2,
+            "classFrameCounts": [
+              0,
+              69,
+              41,
+              0,
+              0,
+              89,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "speakerActiveFrameCounts": [
+              158,
+              130,
+              0,
+              0
+            ],
+            "rawFile": "window-09.npz",
+            "rawSha256": "b1de51f24f6c724fd294e4725221ea5ae38afe40ed063a6206f30c7362eecdaa"
+          },
+          {
+            "kind": "silence",
+            "startSeconds": 0.0,
+            "inputSeconds": 4.0,
+            "paddedSeconds": 0.0,
+            "processSeconds": 1.2270012400113046,
+            "cnnMilliseconds": 7.5296759605407715,
+            "cpuMilliseconds": 1216.1853510187939,
+            "availableBeforeKiB": 2590972,
+            "availableAfterKiB": 2584544,
+            "activeLocalSpeakers": 0,
+            "classFrameCounts": [
+              199,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "speakerActiveFrameCounts": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "rawFile": "window-10.npz",
+            "rawSha256": "ca2b6c23295a5a0fa070b27f5854a4e1148adbdfad78dbc4a51959f68b7439fc"
+          }
+        ],
+        "cpuSession": {
+          "model": "models/backend.onnx",
+          "provider": "CPUExecutionProvider",
+          "weightSha256": "d45641b9270d9bd52fa63076ccc85c5af573da23cc1da0bd82b1adfee43803bb",
+          "loadSeconds": 2.8288153339526616,
+          "allFinite": true,
+          "inputs": [
+            {
+              "name": "cnn_features",
+              "shape": [
+                1,
+                199,
+                211
+              ],
+              "dtype": "tensor(float)"
+            }
+          ],
+          "runMilliseconds": [
+            1279.8288490157574,
+            1233.3347899839282,
+            1160.1456120260991,
+            1183.8359750108793,
+            1162.2520310338587,
+            1158.0762340454385,
+            1251.868479012046,
+            1204.5387940015644,
+            1264.4177460460924,
+            1216.1853510187939
+          ],
+          "calls": [
+            {
+              "sampleIndex": 1,
+              "inputHash": "554cad2fd627b8f21c3119482401faa32ecb7b815fbc3b81018b9206d2a5ae7c",
+              "outputHash": "bc8a975224c33996e017c564e09964bd7976b889d105d358ecb371a9a45badec"
+            },
+            {
+              "sampleIndex": 2,
+              "inputHash": "4e23753dca3dcf5a5c5ff1a88e8ab0bab24cecfdb6f52d374072b88967619925",
+              "outputHash": "1f811b2fdeaff2d58c38f1e21902c6662488d386d2fda30ae76ca7fc136f9f1a"
+            },
+            {
+              "sampleIndex": 3,
+              "inputHash": "11c13bfb3f6108c9a10b9cb2cbf3bcfd6540d1abfae24a01c41380d1c1b322cf",
+              "outputHash": "52f2adc5d2944cb975abc46335bcb32e8eadd6f1e8ba6af4fafd8d50f4e7bb06"
+            },
+            {
+              "sampleIndex": 4,
+              "inputHash": "037a22cb1e146f883a9b668e373826758ef5a8a4dad9cb3a8bcdf78c7ee7da9e",
+              "outputHash": "24e450623c9b0e19ca9e0f6c43e502f22465578f187de2b9d8cd04685c8a24ce"
+            },
+            {
+              "sampleIndex": 5,
+              "inputHash": "9bf66e298104d33cb64e519c47d865d9ec27e7d275ffb6833c9b50ef97caacc7",
+              "outputHash": "7e3eba2ec8bbb6176be201ceebe5468b78f253db6342d1c5f77483122f8743a4"
+            },
+            {
+              "sampleIndex": 6,
+              "inputHash": "6e4b6f7c62e007a9e8351e5d4a111b618861f9a6a88737612f9e9809fb74f34b",
+              "outputHash": "aa70331e90c0cba7fb56d1492c672e899a60b7470b45ec9dadeef0c55cef4758"
+            },
+            {
+              "sampleIndex": 7,
+              "inputHash": "51a00ad08a09d93d0fed8b374910dea967c15eb295b4738f09e01dbe77f25d7c",
+              "outputHash": "ecb58375e35acbfdfa19bfab48075685ab4c5bd7e3494c50f920a6506d477a06"
+            },
+            {
+              "sampleIndex": 8,
+              "inputHash": "bc765949f152d56c8d8c2ac2787670309e2f9febf588e3524e14ac610a7ef9dc",
+              "outputHash": "6b8d08c91e9103938e57dca90ab0568bbac308cf1bee07ccdd63d4cd949b6612"
+            },
+            {
+              "sampleIndex": 9,
+              "inputHash": "554cad2fd627b8f21c3119482401faa32ecb7b815fbc3b81018b9206d2a5ae7c",
+              "outputHash": "bc8a975224c33996e017c564e09964bd7976b889d105d358ecb371a9a45badec"
+            },
+            {
+              "sampleIndex": 10,
+              "inputHash": "fe0582f01206d6bb5f8c162dfe58caa1775eb7bd120c1a385b8c4ae7051dd2ce",
+              "outputHash": "e602775791d650d157ed3abac67d15ff1d409cd7395106142e30c2409d453817"
+            }
+          ]
+        },
+        "review": {
+          "sourceAndWeightHashesMatched": true,
+          "preprocessingIndependentlyVerified": true,
+          "cnnOutputExactlyFeedsCpu": true,
+          "repeatAllRawArraysAndIOExact": true,
+          "probabilitiesAndClassMappingIndependentlyVerified": true,
+          "upstreamProvenance": {
+            "repo": "BUTSpeechFIT/DiariZen",
+            "revision": "844f5555b0a98acd0931511fc641a8c5b8ba92c7",
+            "files": [
+              {
+                "path": "README.md",
+                "bytes": 6238,
+                "sha256": "d49d5390d340ceb89a294deb81b3f656ec0f788c498996849116822572c32d7a",
+                "blobId": "9cab751e4d5749a9ab3401db3300efcb8294f0f0"
+              },
+              {
+                "path": "example/EN2002a_30s.wav",
+                "bytes": 966432,
+                "sha256": "55aa90540de2a01e6824ee2862d08763026d1752a3d7f6f8870015c74424e900",
+                "blobId": "d6d5c3bedb51cd773085e2747c2530a836c49edd"
+              },
+              {
+                "path": "diarizen/models/eend/model_wavlm_conformer.py",
+                "bytes": 8255,
+                "sha256": "f18ace1b09514efe1781a334fdb031a3d6869bf1da1667dd64d91ee3653e8e04",
+                "blobId": "c425c90a6d8e31bbf0cb5163d1dabc1b22c32a8c"
+              },
+              {
+                "path": "pyannote-audio/pyannote/audio/utils/powerset.py",
+                "bytes": 8200,
+                "sha256": "5124bdbf7557124333b9be08a9ec37bc69292b3eb4e9da041b456b7b77b741ec",
+                "blobId": "6a0716df96c8c6ea3dd934789d415dd93ca2cc7e"
+              }
+            ]
+          },
+          "mappingScope": "4 local speakers, combinations of size 0..2 from upstream defaults; no global clustering, no annotation baseline",
+          "scope": "All 30 seconds in eight nonoverlapping windows; last window padded two seconds. Final padded frames are included in per-window counts, not real speech duration."
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "repo": "AXERA-TECH/YOLOv8-Pose",
+  "revision": "f8bd38d5e1bd439ac22e1503c314ea16a3b4a885",
+  "complete": true,
+  "files": [
+    {
+      "path": "ax_infer.py",
+      "size": 11162,
+      "sha256": null,
+      "gitBlob": "177dde22db110fe3657b72f76ac92c75176ddbea",
+      "verifiedHashes": {
+        "sha256": "43dbb7eba13a2cbb0e124606d167b2cb09e96820277dabcab518a3bd4e42f2f5",
+        "gitBlob": "177dde22db110fe3657b72f76ac92c75176ddbea"
+      }
+    },
+    {
+      "path": "AX650/yolov8n-pose_640x640_npu3.axmodel",
+      "size": 3943725,
+      "sha256": "6deff323b0091b1aaa684694876c36a482437408f0916c8a9259e44beae6948f",
+      "gitBlob": "9e48644c3cd4f04a83bb60f1abbc33cf8d465361",
+      "verifiedHashes": {
+        "sha256": "6deff323b0091b1aaa684694876c36a482437408f0916c8a9259e44beae6948f",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "bus.jpg",
+      "size": 487438,
+      "sha256": "33b198a1d2839bb9ac4c65d61f9e852196793cae9a0781360859425f6022b69c",
+      "gitBlob": "2cf0dab1214b3c06668e2c6e3a1666463acfe88c",
+      "verifiedHashes": {
+        "sha256": "33b198a1d2839bb9ac4c65d61f9e852196793cae9a0781360859425f6022b69c",
+        "gitBlob": null
+      }
+    }
+  ]
+}

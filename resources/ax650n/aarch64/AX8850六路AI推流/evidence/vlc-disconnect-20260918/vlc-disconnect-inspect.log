@@ -1,0 +1,163 @@
+2026-09-18T11:17:50+08:00
+ 11:17:50 up 1 day, 23:54,  8 users,  load average: 3.44, 3.20, 3.54
+               total        used        free      shared  buff/cache   available
+Mem:           3.8Gi       1.3Gi       864Mi       255Mi       2.0Gi       2.5Gi
+Swap:          1.9Gi       135Mi       1.8Gi
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/mmcblk0p1   29G  8.1G   20G  29% /
+tmpfs           2.0G   35M  1.9G   2% /tmp
+MainPID=83794
+Result=success
+ExecMainCode=0
+ExecMainStatus=0
+ExecStart={ path=/bin/bash ; argv[]=/bin/bash /home/baiwen/ax-pipeline/six/run.sh ; ignore_errors=no ; start_time=[Wed 2026-09-16 19:28:21 CST] ; stop_time=[n/a] ; pid=83794 ; code=(null) ; status=0/0 }
+MemoryCurrent=173301760
+CPUUsageNSec=301511791156000
+Id=ax-six-rtsp.service
+ActiveState=active
+SubState=running
+ActiveEnterTimestamp=Wed 2026-09-16 19:28:21 CST
+InactiveEnterTimestamp=Wed 2026-09-16 19:28:21 CST
+
+MainPID=63479
+Result=success
+ExecMainCode=0
+ExecMainStatus=0
+ExecStart={ path=/usr/bin/python3 ; argv[]=/usr/bin/python3 /home/baiwen/ax-pipeline/six/local-preview.py ; ignore_errors=no ; start_time=[Wed 2026-09-16 18:12:36 CST] ; stop_time=[n/a] ; pid=63479 ; code=(null) ; status=0/0 }
+MemoryCurrent=23937024
+CPUUsageNSec=7239463326000
+Id=ax-six-local-preview.service
+ActiveState=active
+SubState=running
+ActiveEnterTimestamp=Wed 2026-09-16 18:12:36 CST
+InactiveEnterTimestamp=
+    PID    PPID S     ELAPSED %CPU %MEM   RSS COMMAND
+  91401   91395 R       00:00  300  0.0  3920 ps -eo pid,ppid,state,etime,pcpu,pmem,rss,args --sort=-pcpu
+  65983   12432 S  1-17:00:06  238  9.2 369184 vlc
+  83794       1 S  1-15:49:29  210 27.3 1093176 ./bin/six_app ./config.json 0
+  91394   91392 S       00:00 65.2  0.1  5788 sudo -S -p  bash -c set -u date -Is uptime free -h df -h / /tmp systemctl show ax-six-rtsp ax-six-local-preview -p Id -p ActiveState -p SubState -p MainPID -p Result -p ExecMainCode -p ExecMainStatus -p ActiveEnterTimestamp -p InactiveEnterTimestamp -p ExecStart -p MemoryCurrent -p CPUUsageNSec ps -eo pid,ppid,state,etime,pcpu,pmem,rss,args --sort=-pcpu | head -n 24 ss -ltnp | grep -E '8554|8850' || true ss -tnp | grep -E '8554|8850' | head -n 24 || true printf '\nPREVIEW_LOG\n' journalctl -u ax-six-local-preview -n 100 --no-pager -o short-iso printf '\nPIPELINE_LOG\n' journalctl -u ax-six-rtsp -n 250 --no-pager -o cat | python3 -c 'import sys,json; lines=sys.stdin.read().splitlines(); stats=[]; others=[] for s in lines:  try:   r=json.loads(s)  except ValueError:   others.append(s);continue  if r.get("event")=="stats": stats.append(r)  else: others.append(s) print("\n".join(others[-50:]));print("LAST_STATS",json.dumps(stats[-2:]))' printf '\nKERNEL_EVENTS\n' journalctl -k -b --no-pager -o short-iso | grep -Ei 'axcl|ax_pcie|pcie.*(error|fail|timeout)|oom|out of memory|killed process|suspend|thermal|throttl|watchdog|gpu.*(fault|error)' | tail -n 65 printf '\nVLC_STATE\n' runuser -u baiwen -- env DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1001/bus gdbus call --session --dest org.mpris.MediaPlayer2.vlc --object-path /org/mpris/MediaPlayer2 --method org.freedesktop.DBus.Properties.GetAll org.mpris.MediaPlayer2.Player || true printf '\nPREVIEW_SCRIPTS\n' cat /home/baiwen/ax-pipeline/six/preview-local.sh cat /home/baiwen/ax-pipeline/six/start.sh printf '\nRECENT_BOOT\n' last -x -n 6 
+   1960    1787 S  1-23:54:15 16.4  7.8 312876 /usr/bin/gnome-shell
+  91094    3150 S       00:02  7.7  0.2  8648 sshd: baiwen [priv]
+    414       2 S  1-23:54:30  4.9  0.0     0 [irq/114-0000:01:00.0]
+   2712    1960 S  1-23:54:10  4.6  1.5 60632 /usr/bin/Xwayland :0 -rootless -noreset -accessx -core -auth /run/user/1001/.mutter-Xwaylandauth.3YDWV3 -listenfd 4 -listenfd 5 -displayfd 6 -initfd 7 -byteswappedclients
+  63479       1 S  1-17:05:13  1.2  0.3 15560 /usr/bin/python3 /home/baiwen/ax-pipeline/six/local-preview.py
+    512       2 S  1-23:54:29  1.2  0.0     0 [irq/106-panfrost-job]
+  90541       2 I    02:32:39  0.4  0.0     0 [kworker/u16:0-devfreq_wq]
+  90709       2 I    01:24:59  0.3  0.0     0 [kworker/u16:4-events_freezable_power_]
+     14       2 I  1-23:54:35  0.2  0.0     0 [rcu_sched]
+  90936       2 I       29:30  0.1  0.0     0 [kworker/u16:5-events_freezable_power_]
+     18       2 S  1-23:54:35  0.1  0.0     0 [migration/1]
+   1815    1787 S  1-23:54:15  0.0  0.1  4700 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+     23       2 S  1-23:54:35  0.0  0.0     0 [migration/2]
+   2430    1787 S  1-23:54:11  0.0  0.4 19916 /usr/libexec/gsd-media-keys
+  91069       2 I       05:34  0.0  0.0     0 [kworker/6:0-events_freezable]
+     28       2 S  1-23:54:35  0.0  0.0     0 [migration/3]
+     15       2 S  1-23:54:35  0.0  0.0     0 [migration/0]
+  91093       2 I       00:18  0.0  0.0     0 [kworker/6:2-events_freezable]
+    688       1 S  1-23:54:27  0.0  0.3 14076 /usr/lib/systemd/systemd-journald
+LISTEN 0      128          0.0.0.0:8554      0.0.0.0:*    users:(("six_app",pid=83794,fd=12))                      
+LISTEN 0      5          127.0.0.1:8850      0.0.0.0:*    users:(("python3",pid=63479,fd=3))                       
+
+PREVIEW_LOG
+2026-09-18T10:28:41+08:00 dshanpi-a1 python3[63479]: 2026-09-18 10:28:41,677 Preview closed: overview
+2026-09-18T10:30:03+08:00 dshanpi-a1 python3[63479]: 2026-09-18 10:30:03,713 "GET /overview.ts HTTP/1.1" 200 -
+2026-09-18T10:30:03+08:00 dshanpi-a1 python3[63479]: 2026-09-18 10:30:03,714 Preview opened: overview
+2026-09-18T10:33:08+08:00 dshanpi-a1 python3[63479]: 2026-09-18 10:33:08,465 Preview closed: overview
+2026-09-18T10:43:35+08:00 dshanpi-a1 python3[63479]: 2026-09-18 10:43:35,716 "GET /overview.ts HTTP/1.1" 200 -
+2026-09-18T10:43:35+08:00 dshanpi-a1 python3[63479]: 2026-09-18 10:43:35,716 Preview opened: overview
+2026-09-18T10:47:12+08:00 dshanpi-a1 python3[63479]: 2026-09-18 10:47:12,294 Preview closed: overview
+2026-09-18T10:55:19+08:00 dshanpi-a1 python3[90957]: [rtsp @ 0xaaaaf6325a60] Stream #0: not enough frames to estimate rate; consider increasing probesize
+2026-09-18T10:55:19+08:00 dshanpi-a1 python3[90957]: [mpegts @ 0xaaaaf6340900] Invalid DTS: 65999 PTS: 65970 in output stream 0:0, replacing by guess
+2026-09-18T10:55:19+08:00 dshanpi-a1 python3[63479]: 2026-09-18 10:55:19,869 "GET /overview.ts HTTP/1.1" 200 -
+2026-09-18T10:55:19+08:00 dshanpi-a1 python3[63479]: 2026-09-18 10:55:19,870 Preview opened: overview
+2026-09-18T10:55:19+08:00 dshanpi-a1 python3[90957]: [mpegts @ 0xaaaaf6340900] Invalid DTS: 74999 PTS: 74970 in output stream 0:0, replacing by guess
+2026-09-18T10:58:13+08:00 dshanpi-a1 python3[63479]: 2026-09-18 10:58:13,062 Preview closed: overview
+
+PIPELINE_LOG
+{"event":"count_loop_reset","loop":11331}
+{"direction":"right_to_left","event":"crossing","id":501515,"lr":0,"rl":11342}
+{"event":"count_loop_reset","loop":11332}
+{"direction":"right_to_left","event":"crossing","id":501576,"lr":0,"rl":11343}
+{"event":"count_loop_reset","loop":11333}
+{"direction":"right_to_left","event":"crossing","id":501646,"lr":0,"rl":11344}
+{"event":"count_loop_reset","loop":11334}
+{"direction":"right_to_left","event":"crossing","id":501700,"lr":0,"rl":11345}
+{"event":"count_loop_reset","loop":11335}
+{"direction":"right_to_left","event":"crossing","id":501741,"lr":0,"rl":11346}
+{"event":"count_loop_reset","loop":11336}
+{"direction":"right_to_left","event":"crossing","id":501779,"lr":0,"rl":11347}
+{"event":"count_loop_reset","loop":11337}
+{"direction":"right_to_left","event":"crossing","id":501816,"lr":0,"rl":11348}
+{"event":"count_loop_reset","loop":11338}
+{"direction":"right_to_left","event":"crossing","id":501875,"lr":0,"rl":11349}
+{"event":"count_loop_reset","loop":11339}
+{"direction":"right_to_left","event":"crossing","id":501911,"lr":0,"rl":11350}
+{"event":"count_loop_reset","loop":11340}
+{"direction":"right_to_left","event":"crossing","id":501943,"lr":0,"rl":11351}
+{"event":"count_loop_reset","loop":11341}
+{"direction":"right_to_left","event":"crossing","id":501991,"lr":0,"rl":11352}
+{"event":"count_loop_reset","loop":11342}
+{"direction":"right_to_left","event":"crossing","id":502018,"lr":0,"rl":11353}
+{"event":"count_loop_reset","loop":11343}
+{"direction":"right_to_left","event":"crossing","id":502086,"lr":0,"rl":11354}
+{"event":"count_loop_reset","loop":11344}
+{"direction":"right_to_left","event":"crossing","id":502124,"lr":0,"rl":11355}
+{"event":"count_loop_reset","loop":11345}
+{"direction":"right_to_left","event":"crossing","id":502159,"lr":0,"rl":11356}
+{"event":"count_loop_reset","loop":11346}
+{"direction":"right_to_left","event":"crossing","id":502193,"lr":0,"rl":11357}
+{"event":"count_loop_reset","loop":11347}
+{"direction":"right_to_left","event":"crossing","id":502224,"lr":0,"rl":11358}
+{"event":"count_loop_reset","loop":11348}
+{"direction":"right_to_left","event":"crossing","id":502274,"lr":0,"rl":11359}
+{"event":"count_loop_reset","loop":11349}
+{"direction":"right_to_left","event":"crossing","id":502296,"lr":0,"rl":11360}
+{"event":"count_loop_reset","loop":11350}
+{"direction":"right_to_left","event":"crossing","id":502327,"lr":0,"rl":11361}
+{"event":"count_loop_reset","loop":11351}
+{"direction":"right_to_left","event":"crossing","id":502379,"lr":0,"rl":11362}
+{"event":"count_loop_reset","loop":11352}
+{"direction":"right_to_left","event":"crossing","id":502410,"lr":0,"rl":11363}
+{"event":"count_loop_reset","loop":11353}
+{"direction":"right_to_left","event":"crossing","id":502470,"lr":0,"rl":11364}
+{"event":"count_loop_reset","loop":11354}
+{"direction":"right_to_left","event":"crossing","id":502530,"lr":0,"rl":11365}
+{"event":"count_loop_reset","loop":11355}
+{"direction":"right_to_left","event":"crossing","id":502578,"lr":0,"rl":11366}
+LAST_STATS [{"channels": [{"decoded": 1720402, "dropped": 0, "encoded": 1720402, "infer_fps": 12.0603362423502, "inferred": 1720397, "lr": 0, "mux_errors": 0, "name": "pcd", "objects": 6, "process_ms": 42.09096299018711, "render_ms": 4.488611011765897, "render_replaced": 0, "rendered": 1720402, "result_age": 0.02126992100966163, "rl": 0, "submit_errors": 0}, {"decoded": 3588584, "dropped": 5, "encoded": 3569525, "infer_fps": 9.468859033250157, "inferred": 1367099, "lr": 0, "mux_errors": 0, "name": "vehicle", "objects": 1, "process_ms": 108.77920099301264, "render_ms": 5.776909994892776, "render_replaced": 0, "rendered": 3569530, "result_age": 0.024633440014440566, "rl": 0, "submit_errors": 0}, {"decoded": 4304194, "dropped": 0, "encoded": 4304169, "infer_fps": 6.080004221350101, "inferred": 864659, "lr": 0, "mux_errors": 0, "name": "seg", "objects": 3, "process_ms": 179.80733900913037, "render_ms": 8.360092004295439, "render_replaced": 0, "rendered": 4304169, "result_age": 0.16071934899082407, "rl": 0, "submit_errors": 0}, {"decoded": 4297926, "dropped": 0, "encoded": 4280757, "infer_fps": 9.468859033250157, "inferred": 1389127, "lr": 0, "mux_errors": 0, "name": "driving", "objects": 1, "process_ms": 113.80231400835328, "render_ms": 8.095257013337687, "render_replaced": 0, "rendered": 4280758, "result_age": 0.008560009999200702, "rl": 0, "submit_errors": 0}, {"decoded": 3440675, "dropped": 0, "encoded": 3440670, "infer_fps": 10.066892235350167, "inferred": 1445017, "lr": 0, "mux_errors": 0, "name": "depth", "objects": 0, "process_ms": 91.12946799723431, "render_ms": 7.968673016875982, "render_replaced": 0, "rendered": 3440670, "result_age": 0.018049026024527848, "rl": 0, "submit_errors": 0}, {"decoded": 3451829, "dropped": 0, "encoded": 3451821, "infer_fps": 9.169842432200152, "inferred": 1313411, "lr": 0, "mux_errors": 0, "name": "count", "objects": 8, "process_ms": 103.34920900641009, "render_ms": 9.34563999180682, "render_replaced": 0, "rendered": 3451822, "result_age": 0.01415029400959611, "rl": 11365, "submit_errors": 0}], "elapsed": 143353.002017044, "event": "stats", "overview_dropped": 1, "overview_encoded": 4300626, "overview_mux_errors": 0}, {"channels": [{"decoded": 1720522, "dropped": 0, "encoded": 1720522, "infer_fps": 11.999646720795704, "inferred": 1720517, "lr": 0, "mux_errors": 0, "name": "pcd", "objects": 7, "process_ms": 28.691715007880703, "render_ms": 8.468135027214885, "render_replaced": 0, "rendered": 1720522, "result_age": 0.1053044299769681, "rl": 0, "submit_errors": 0}, {"decoded": 3588836, "dropped": 5, "encoded": 3569775, "infer_fps": 9.699714432643194, "inferred": 1367196, "lr": 0, "mux_errors": 0, "name": "vehicle", "objects": 3, "process_ms": 89.05728999525309, "render_ms": 4.553235019557178, "render_replaced": 0, "rendered": 3569782, "result_age": 0.005142865004017949, "rl": 0, "submit_errors": 0}, {"decoded": 4304495, "dropped": 0, "encoded": 4304470, "infer_fps": 5.79982924838459, "inferred": 864717, "lr": 0, "mux_errors": 0, "name": "seg", "objects": 6, "process_ms": 192.1139970072545, "render_ms": 8.291967009427026, "render_replaced": 0, "rendered": 4304470, "result_age": 0.058984108007280156, "rl": 0, "submit_errors": 0}, {"decoded": 4298226, "dropped": 0, "encoded": 4281058, "infer_fps": 9.599717376636564, "inferred": 1389223, "lr": 0, "mux_errors": 0, "name": "driving", "objects": 1, "process_ms": 66.95744697935879, "render_ms": 4.2093590018339455, "render_replaced": 0, "rendered": 4281059, "result_age": 0.07978881700546481, "rl": 0, "submit_errors": 0}, {"decoded": 3440914, "dropped": 0, "encoded": 3440910, "infer_fps": 10.099702656669718, "inferred": 1445118, "lr": 0, "mux_errors": 0, "name": "depth", "objects": 0, "process_ms": 93.40127400355414, "render_ms": 9.599267010344192, "render_replaced": 0, "rendered": 3440910, "result_age": 0.06561243999749422, "rl": 0, "submit_errors": 0}, {"decoded": 3452070, "dropped": 0, "encoded": 3452062, "infer_fps": 9.19972915261004, "inferred": 1313503, "lr": 0, "mux_errors": 0, "name": "count", "objects": 9, "process_ms": 92.61027001775801, "render_ms": 6.272330007050186, "render_replaced": 0, "rendered": 3452063, "result_age": 0.00903401299729012, "rl": 11366, "submit_errors": 0}], "elapsed": 143363.002311452, "event": "stats", "overview_dropped": 1, "overview_encoded": 4300926, "overview_mux_errors": 0}]
+
+KERNEL_EVENTS
+
+VLC_STATE
+({'Metadata': <{'mpris:trackid': <objectpath '/org/videolan/vlc/playlist/13'>, 'xesam:url': <'http://127.0.0.1:8850/overview.ts'>, 'vlc:publisher': <'FFmpeg'>, 'vlc:publisher': <5>}>, 'Position': <int64 0>, 'PlaybackStatus': <'Stopped'>, 'LoopStatus': <'None'>, 'Shuffle': <false>, 'Volume': <0.0>, 'Rate': <1.0>, 'MinimumRate': <0.032000000000000001>, 'MaximumRate': <32.0>, 'CanControl': <true>, 'CanPlay': <true>, 'CanGoNext': <true>, 'CanGoPrevious': <true>, 'CanPause': <false>, 'CanSeek': <false>},)
+
+PREVIEW_SCRIPTS
+#!/bin/bash
+set -euo pipefail
+STREAM=${1:-overview}
+case "$STREAM" in
+  overview|pcd|vehicle|seg|driving|depth|count) ;;
+  *) echo 'Usage: ./preview-local.sh [overview|pcd|vehicle|seg|driving|depth|count]'; exit 2 ;;
+esac
+if ! systemctl is-active --quiet ax-six-local-preview; then
+  echo 'Run ./start.sh first.'
+  exit 1
+fi
+exec vlc --network-caching=500 "http://127.0.0.1:8850/$STREAM.ts"
+#!/bin/bash
+set -euo pipefail
+ROOT=$(cd "$(dirname "$0")" && pwd)
+if ! systemctl is-active --quiet ax-six-rtsp; then
+  sudo systemctl stop ax-pipeline-pcd 2>/dev/null || true
+  sudo systemd-run --unit=ax-six-rtsp --collect --property=WorkingDirectory="$ROOT" --property=TimeoutStopSec=30 /bin/bash "$ROOT/run.sh"
+fi
+if ! systemctl is-active --quiet ax-six-local-preview; then
+  sudo systemd-run --unit=ax-six-local-preview --collect --property=WorkingDirectory="$ROOT" --property=User=baiwen --property=TimeoutStopSec=12 /usr/bin/python3 "$ROOT/local-preview.py"
+fi
+echo 'LAN RTSP: rtsp://192.168.1.44:8554/overview'
+echo 'Board VLC: http://127.0.0.1:8850/overview.ts'
+echo 'Run ./preview-local.sh to open VLC on the board desktop.'
+
+RECENT_BOOT
+
+wtmp begins Fri Sep 18 00:15:02 2026

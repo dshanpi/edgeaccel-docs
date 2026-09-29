@@ -1,0 +1,37 @@
+{
+  "repo": "AXERA-TECH/E_bike-axera",
+  "revision": "72ffc10a3f5802e280e4ed0ad4ee74d62869cf31",
+  "complete": true,
+  "files": [
+    {
+      "path": "ax_emd_infer.py",
+      "size": 10245,
+      "sha256": null,
+      "gitBlob": "0c7790bc3986e9725c8c5a45fe4a159e715aed4c",
+      "verifiedHashes": {
+        "sha256": "e4b4ace7440274917c0abee4d25baad35497e6f114be5b4d45274fadf804a644",
+        "gitBlob": "0c7790bc3986e9725c8c5a45fe4a159e715aed4c"
+      }
+    },
+    {
+      "path": "AX650/ax_ax650_emd_algo_V1.0.0.axmodel",
+      "size": 1271040,
+      "sha256": "163feb3d6da8fdea9371348eb9224b01e183a42d99e0d0aa3a8fc22797b3af6e",
+      "gitBlob": "57b6813a890caf341474234d6e808e29256f3849",
+      "verifiedHashes": {
+        "sha256": "163feb3d6da8fdea9371348eb9224b01e183a42d99e0d0aa3a8fc22797b3af6e",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "test.jpg",
+      "size": 113055,
+      "sha256": "25f83fb507bb0731fa470d7ae9f97657d9180db29f42c61bb87abeda794823e4",
+      "gitBlob": "aca5ca31190a9b7d7305705074a35e76d99b0d35",
+      "verifiedHashes": {
+        "sha256": "25f83fb507bb0731fa470d7ae9f97657d9180db29f42c61bb87abeda794823e4",
+        "gitBlob": null
+      }
+    }
+  ]
+}

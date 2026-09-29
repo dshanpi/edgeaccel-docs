@@ -1,0 +1,23 @@
+ new Debian package, version 2.0.
+ size 16489368 bytes: control archive=466808 bytes.
+     326 bytes,     5 lines      changelog
+     773 bytes,    14 lines      control
+ 2359101 bytes, 21398 lines      md5sums
+     285 bytes,     9 lines   *  postinst             #!/bin/sh
+      17 bytes,     2 lines   *  postrm               #!/bin/sh
+     532 bytes,    10 lines   *  preinst              #!/bin/sh
+      99 bytes,     3 lines   *  prerm                #!/bin/sh
+ Package: linux-headers-vendor-rk35xx
+ Version: 25.11.0-trunk+ax8850.1
+ Architecture: arm64
+ Maintainer: AX8850 Local Build <root@localhost>
+ Section: devel
+ Priority: optional
+ Provides: linux-headers, linux-headers-armbian, armbian-vendor
+ Depends: make, gcc, libc6 (>= 2.38), libc6-dev, bison, flex, libssl-dev, libelf-dev, pahole (>= 1.25), python3 (>= 3.11), coreutils, gzip
+ Installed-Size: 77094
+ X-AX8850-Base-Deb-SHA256: 8cbba4243297b94f76c555dc8e339eabe340ee4b3f76fdf1220b6f6dcab79bb2
+ Description: Matched headers for DShanPi-A1 6.1.115 AX8850 host
+  Locally corrected Armbian headers for the verified 6.1.115-vendor-rk35xx
+  kernel Image and configuration. Preserves BTF_MODULES ABI, includes native
+  ARM64 build helpers, and verifies target identity without reconfiguring.

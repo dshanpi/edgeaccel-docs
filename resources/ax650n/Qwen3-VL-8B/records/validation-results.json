@@ -1,0 +1,30 @@
+[
+  {
+    "case": "text",
+    "prompt": "只回答数字：1加1等于几？",
+    "media": "",
+    "elapsed_s": 1.796,
+    "output": "\r\n[I][                             Run][ 709]: input token num : 29, prefill_split_num : 1\r\n[I][                             Run][ 743]: input_num_token:29\r\n[I][                             Run][ 922]: ttft: 853.21 ms\r\n2\r\n\r\n[N][                             Run][1075]: hit eos,avg 3.11 token/s\r\n\r\n"
+  },
+  {
+    "case": "image",
+    "prompt": "请用一句中文描述图片中的主要内容。",
+    "media": "images/ssd_car.jpg",
+    "elapsed_s": 7.769,
+    "output": "images/ssd_car.jpg\r\n[I][                     EncodeImage][ 531]: pixel_values size 1\r\n[I][                     EncodeImage][ 532]: grid_h 24 grid_w 24\r\n[I][                     EncodeImage][ 580]: image encode time : 401.377991 ms, size : 1\r\n[I][                          Encode][ 633]: input_ids size:174\r\n[I][                          Encode][ 641]: offset 15\r\n[I][                          Encode][ 670]: img_embed.size:1, 589824\r\n[I][                          Encode][ 684]: out_embed size:712704\r\n[I][                          Encode][ 685]: input_ids size 174\r\n[I][                          Encode][ 687]: position_ids size:174\r\n[I][                             Run][ 709]: input token num : 174, prefill_split_num : 2\r\n[I][                             Run][ 743]: input_num_token:128\r\n[I][                             Run][ 743]: input_num_token:46\r\n[I][                             Run][ 922]: ttft: 1740.96 ms\r\n一位女士站在伦敦街头，身后是一辆经典的红色双层巴士。\r\n\r\n[N][                             Run][1075]: hit eos,avg 3.09 token/s\r\n\r\n"
+  },
+  {
+    "case": "video",
+    "prompt": "请用两句中文描述这段视频的主要内容。",
+    "media": "video",
+    "elapsed_s": 20.737,
+    "output": "video\r\nvideo/frame_0000.jpg\r\nvideo/frame_0008.jpg\r\nvideo/frame_0016.jpg\r\nvideo/frame_0024.jpg\r\nvideo/frame_0032.jpg\r\nvideo/frame_0040.jpg\r\nvideo/frame_0048.jpg\r\nvideo/frame_0056.jpg\r\n[I][                     EncodeImage][ 531]: pixel_values size 4\r\n[I][                     EncodeImage][ 532]: grid_h 24 grid_w 24\r\n[I][                     EncodeImage][ 580]: image encode time : 1321.511963 ms, size : 4\r\n[I][                          Encode][ 633]: input_ids size:607\r\n[I][                          Encode][ 641]: offset 15\r\n[I][                          Encode][ 670]: img_embed.size:4, 589824\r\n[I][                          Encode][ 675]: offset:159\r\n[I][                          Encode][ 675]: offset:303\r\n[I][                          Encode][ 675]: offset:447\r\n[I][                          Encode][ 684]: out_embed size:2486272\r\n[I][                          Encode][ 685]: input_ids size 607\r\n[I][                          Encode][ 687]: position_ids size:607\r\n[I][                             Run][ 709]: input token num : 607, prefill_split_num : 5\r\n[I][                             Run][ 743]: input_num_token:128\r\n[I][                             Run][ 743]: input_num_token:128\r\n[I][                             Run][ 743]: input_num_token:128\r\n[I][                             Run][ 743]: input_num_token:128\r\n[I][                             Run][ 743]: input_num_token:95\r\n[I][                             Run][ 922]: ttft: 4749.89 ms\r\n一群土拨鼠在山野间活泼地玩耍，它们互相追逐、打闹，展现出灵动可爱的天性。背景是苍翠的山峦和蓝天，构成一幅生动的自然画卷。\r\n\r\n[N][                             Run][1075]: hit eos,avg 3.03 token/s\r\n\r\n"
+  },
+  {
+    "case": "traffic",
+    "prompt": "请用两句中文描述这段视频的道路交通状况。",
+    "media": "deployment/traffic_frames",
+    "elapsed_s": 21.249,
+    "output": "deployment/traffic_frames\r\ndeployment/traffic_frames/frame_0001.jpg\r\ndeployment/traffic_frames/frame_0002.jpg\r\ndeployment/traffic_frames/frame_0003.jpg\r\ndeployment/traffic_frames/frame_0004.jpg\r\ndeployment/traffic_frames/frame_0005.jpg\r\ndeployment/traffic_frames/frame_0006.jpg\r\ndeployment/traffic_frames/frame_0007.jpg\r\ndeployment/traffic_frames/frame_0008.jpg\r\n[I][                     EncodeImage][ 531]: pixel_values size 4\r\n[I][                     EncodeImage][ 532]: grid_h 24 grid_w 24\r\n[I][                     EncodeImage][ 580]: image encode time : 1243.989990 ms, size : 4\r\n[I][                          Encode][ 633]: input_ids size:608\r\n[I][                          Encode][ 641]: offset 15\r\n[I][                          Encode][ 670]: img_embed.size:4, 589824\r\n[I][                          Encode][ 675]: offset:159\r\n[I][                          Encode][ 675]: offset:303\r\n[I][                          Encode][ 675]: offset:447\r\n[I][                          Encode][ 684]: out_embed size:2490368\r\n[I][                          Encode][ 685]: input_ids size 608\r\n[I][                          Encode][ 687]: position_ids size:608\r\n[I][                             Run][ 709]: input token num : 608, prefill_split_num : 5\r\n[I][                             Run][ 743]: input_num_token:128\r\n[I][                             Run][ 743]: input_num_token:128\r\n[I][                             Run][ 743]: input_num_token:128\r\n[I][                             Run][ 743]: input_num_token:128\r\n[I][                             Run][ 743]: input_num_token:96\r\n[I][                             Run][ 922]: ttft: 4717.92 ms\r\n这是一条宽阔的多车道城市主干道，车流密集，车辆在多个车道上有序行驶，道路中央设有公交专用道，交通标志和标线清晰，整体交通运行秩序井然。\r\n\r\n[N][                             Run][1075]: hit eos,avg 3.09 token/s\r\n\r\n"
+  }
+]

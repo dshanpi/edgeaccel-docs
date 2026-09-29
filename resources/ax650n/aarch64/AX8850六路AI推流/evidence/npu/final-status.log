@@ -1,0 +1,7 @@
+active
+active
+(<'Playing'>,)
+3898ed19bef0c95b99de74957f62ac0f65d06c4ee51211cf09407f95aa8d7465  /home/baiwen/ax-pipeline/six/bin/six_app
+74f21bcf65f985fca1063ac8d3861f846d47008b427523e311cdc46980d92d11  /home/baiwen/ax-pipeline/six/npu-release/plugins/libax_plugin_pcd.so
+be717cee94e486f9adfca0ef3f7a36ae39f998109112f288efdda630e31349c5  /home/baiwen/ax-pipeline/six/npu-release/plugins/libax_plugin_yolo26.so
+929c17faf280d45eea2362fc20743c4c1ff598cd7f608b59f5a1a73f61323a48  /home/baiwen/ax-pipeline/six/npu-release/plugins/libax_plugin_yolov8_split.so

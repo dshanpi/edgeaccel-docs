@@ -1,0 +1,68 @@
+BACKUP /home/baiwen/ax-pipeline/six/backups/before-seg-half-speed-20260918-20260918-151352
+NEW_CHANNEL {"name": "seg", "kind": "seg", "title": "YOLO26n instance masks", "input": "/home/baiwen/ax-pipeline/video/1080p/traffic3_slow_0p5x.mp4", "source_name": "traffic3_slow_0p5x.mp4", "model": "/home/baiwen/ax-pipeline/six/models/seg.axmodel", "output": "rtsp://0.0.0.0:8554/seg", "source_fps": 30}
+active
+active
+()
+{
+  "sample_seconds": 10.031427284004167,
+  "channels": [
+    {
+      "name": "pcd",
+      "decode_fps": 11.962405408784514,
+      "infer_fps": 12.062092120524387,
+      "encode_fps": 12.062092120524387,
+      "dropped": 0,
+      "mux_errors": 0,
+      "submit_errors": 0
+    },
+    {
+      "name": "vehicle",
+      "decode_fps": 25.02136464670761,
+      "infer_fps": 9.968671173987095,
+      "encode_fps": 25.02136464670761,
+      "dropped": 0,
+      "mux_errors": 0,
+      "submit_errors": 0
+    },
+    {
+      "name": "seg",
+      "decode_fps": 30.10538694544103,
+      "infer_fps": 6.1805761278719995,
+      "encode_fps": 29.806326810221417,
+      "dropped": 0,
+      "mux_errors": 0,
+      "submit_errors": 0
+    },
+    {
+      "name": "driving",
+      "decode_fps": 29.906013521961288,
+      "infer_fps": 9.868984462247225,
+      "encode_fps": 30.00570023370116,
+      "dropped": 0,
+      "mux_errors": 0,
+      "submit_errors": 0
+    },
+    {
+      "name": "depth",
+      "decode_fps": 24.0244975293089,
+      "infer_fps": 10.566791444426322,
+      "encode_fps": 23.92481081756903,
+      "dropped": 0,
+      "mux_errors": 0,
+      "submit_errors": 0
+    },
+    {
+      "name": "count",
+      "decode_fps": 24.0244975293089,
+      "infer_fps": 9.669611038767483,
+      "encode_fps": 24.124184241048773,
+      "dropped": 0,
+      "mux_errors": 0,
+      "submit_errors": 0
+    }
+  ],
+  "overview_encode_fps": 29.906013521961288
+}
+(<'Playing'>,)
+MainPID=101666
+Result=success

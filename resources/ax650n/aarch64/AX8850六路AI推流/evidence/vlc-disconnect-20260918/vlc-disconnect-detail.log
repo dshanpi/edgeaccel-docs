@@ -1,0 +1,192 @@
+
+RTSP_SOURCE_FILES
+./six/evidence/npu-opt/rtsp-validation.json
+./six/evidence/rtsp-validation.json
+./six/evidence/v2/rtsp-validation.json
+./six/evidence/v2/lan-rtsp.json
+./six/evidence/perf/rtsp-validation.json
+./six/evidence/traffic7/vlc-rtsp-probe.log
+./six/evidence/rtsp-snapshots.json
+./six/backups/before-yolo26-20260916-170303/evidence/rtsp-validation.json
+./six/backups/before-yolo26-20260916-170303/evidence/rtsp-snapshots.json
+./build_axcl-aarch64_ci/deps/ax-video-sdk-build/third-party/rtsp-sdk/rtsp-sdk-config-version.cmake
+./build_axcl-aarch64_ci/deps/ax-video-sdk-build/third-party/rtsp-sdk/rtsp-sdk-config.cmake
+./build_axcl-aarch64_ci/deps/ax-video-sdk-build/third-party/rtsp-sdk/librtsp-sdk.a
+./build_axcl-aarch64_ci/deps/ax-video-sdk-build/third-party/rtsp-sdk/CMakeFiles/rtsp-sdk.dir/src/server/rtsp_server.cpp.o.d
+./build_axcl-aarch64_ci/deps/ax-video-sdk-build/third-party/rtsp-sdk/CMakeFiles/rtsp-sdk.dir/src/server/rtsp_server.cpp.o
+./build_axcl-aarch64_ci/deps/ax-video-sdk-build/third-party/rtsp-sdk/CMakeFiles/rtsp-sdk.dir/src/publisher/rtsp_publisher.cpp.o
+./build_axcl-aarch64_ci/deps/ax-video-sdk-build/third-party/rtsp-sdk/CMakeFiles/rtsp-sdk.dir/src/publisher/rtsp_publisher.cpp.o.d
+./build_axcl-aarch64_ci/deps/ax-video-sdk-build/third-party/rtsp-sdk/CMakeFiles/rtsp-sdk.dir/src/client/rtsp_client.cpp.o
+./build_axcl-aarch64_ci/deps/ax-video-sdk-build/third-party/rtsp-sdk/CMakeFiles/rtsp-sdk.dir/src/client/rtsp_client.cpp.o.d
+./build_axcl-aarch64_ci/deps/ax-video-sdk-build/third-party/rtsp-sdk/CMakeFiles/rtsp-sdk.dir/src/rtsp-common/rtsp_request.cpp.o.d
+./build_axcl-aarch64_ci/deps/ax-video-sdk-build/third-party/rtsp-sdk/CMakeFiles/rtsp-sdk.dir/src/rtsp-common/rtsp_request.cpp.o
+./build_axcl-aarch64_ci/deps/ax-video-sdk-build/third-party/rtsp-sdk/CMakeFiles/Export/7b11c1dc3ba2352ee12f255d93290d8f/rtsp-sdk-targets-noconfig.cmake
+./build_axcl-aarch64_ci/deps/ax-video-sdk-build/third-party/rtsp-sdk/CMakeFiles/Export/7b11c1dc3ba2352ee12f255d93290d8f/rtsp-sdk-targets.cmake
+./build_axcl-aarch64_ci/deps/ax-video-sdk-build/CMakeFiles/ax_video_sdk.dir/src/pipeline/ax_demuxer.cpp.o
+./build_axcl-aarch64_ci/deps/ax-video-sdk-build/CMakeFiles/ax_video_sdk.dir/src/pipeline/ax_muxer.cpp.o.d
+./build_axcl-aarch64_ci/deps/ax-video-sdk-build/CMakeFiles/ax_video_sdk.dir/src/pipeline/ax_demuxer.cpp.o.d
+./build_axcl-aarch64_ci/deps/ax-video-sdk-build/CMakeFiles/ax_video_sdk.dir/src/pipeline/ax_muxer.cpp.o
+./build_axcl-aarch64_ci/deps/ax-video-sdk-build/CMakeFiles/ax_video_sdk.dir/src/codec/ax_mp4_demuxer.cpp.o.d
+./build_axcl-aarch64_ci/deps/ax-video-sdk-build/CMakeFiles/ax_video_sdk.dir/src/codec/ax_mp4_demuxer.cpp.o
+./logs/pcd_rtsp.plugin-tracking.json
+./logs/rtsp-decode-25s.log
+./logs/rtsp-probe.json
+./docs/rtsp.md
+./pcd_rtsp.json
+./deps/ax-video-sdk/include/pipeline/ax_demuxer.h
+./deps/ax-video-sdk/include/pipeline/ax_muxer.h
+./deps/ax-video-sdk/tools/ax_mp4_demux_probe.cpp
+./deps/ax-video-sdk/tools/ax_rtsp_transcode_smoke.cpp
+./deps/ax-video-sdk/tools/remote/ax650_dual_mux_gdb.sh
+./deps/ax-video-sdk/tools/remote/ax650_dual_mux_selfcheck.sh
+./deps/ax-video-sdk/docs/demuxer.md
+./deps/ax-video-sdk/docs/muxer.md
+./deps/ax-video-sdk/third-party/rtsp-sdk/include/rtsp-server/rtsp_server.h
+./deps/ax-video-sdk/third-party/rtsp-sdk/include/rtsp-server/rtsp-server.h
+./deps/ax-video-sdk/third-party/rtsp-sdk/include/rtsp-rtmp/rtsp-rtmp.h
+./deps/ax-video-sdk/third-party/rtsp-sdk/include/rtsp-client/rtsp_client.h
+./deps/ax-video-sdk/third-party/rtsp-sdk/include/rtsp-client/rtsp-client.h
+./deps/ax-video-sdk/third-party/rtsp-sdk/include/rtsp-publisher/rtsp-publisher.h
+./deps/ax-video-sdk/third-party/rtsp-sdk/include/rtsp-publisher/rtsp_publisher.h
+./deps/ax-video-sdk/third-party/rtsp-sdk/include/rtsp-onvif/rtsp-onvif.h
+./deps/ax-video-sdk/third-party/rtsp-sdk/cmake/rtsp-sdk-config.cmake.in
+./deps/ax-video-sdk/third-party/rtsp-sdk/src/server/rtsp_server.cpp
+./deps/ax-video-sdk/third-party/rtsp-sdk/src/publisher/rtsp_publisher.cpp
+./deps/ax-video-sdk/third-party/rtsp-sdk/src/client/rtsp_client.cpp
+./deps/ax-video-sdk/third-party/rtsp-sdk/src/rtsp-common/rtsp_request.h
+./deps/ax-video-sdk/third-party/rtsp-sdk/src/rtsp-common/rtsp_request.cpp
+./deps/ax-video-sdk/src/pipeline/ax_muxer.cpp
+./deps/ax-video-sdk/src/pipeline/ax_rtsp_internal.h
+./deps/ax-video-sdk/src/pipeline/ax_demuxer.cpp
+./deps/ax-video-sdk/src/codec/ax_mp4_demuxer.h
+./deps/ax-video-sdk/src/codec/ax_mp4_demuxer.cpp
+./artifacts/axcl-aarch64/ax_pipeline_axcl-aarch64/configs/pcd_rtsp.json
+./PCD_RTSP使用说明.md
+
+VLC_CONFIG_AND_FDS
+grep: /home/baiwen/.config/vlc/vlcrc: No such file or directory
+lrwx------ 1 baiwen baiwen 64 Sep 18 11:17 /proc/65983/fd/1 -> /dev/pts/2
+lrwx------ 1 baiwen baiwen 64 Sep 18 11:17 /proc/65983/fd/2 -> /dev/pts/2
+vlc 
+VLC_LOG_FILES
+/home/baiwen/ax-pipeline/six/evidence/traffic7/vlc-driving-http.log
+/home/baiwen/ax-pipeline/six/evidence/traffic7/vlc-rtsp-probe.log
+/home/baiwen/ax-pipeline/six/evidence/traffic7/vlc-http-validation.json
+/home/baiwen/ax-pipeline/six/evidence/traffic7/vlc-overview-http.log
+/tmp/six-vlc-http-test.py
+
+JOURNAL_ERROR_EVENTS
+[2026-09-18T10:44:03.879] [INFO] [T:281467172548288] RTSP OPTIONS rtsp://127.0.0.1:8554/overview/
+[2026-09-18T10:44:33.880] [INFO] [T:281467172548288] RTSP OPTIONS rtsp://127.0.0.1:8554/overview/
+[2026-09-18T10:45:03.963] [INFO] [T:281467172548288] RTSP OPTIONS rtsp://127.0.0.1:8554/overview/
+[2026-09-18T10:45:34.189] [INFO] [T:281467172548288] RTSP OPTIONS rtsp://127.0.0.1:8554/overview/
+[2026-09-18T10:46:04.322] [INFO] [T:281467172548288] RTSP OPTIONS rtsp://127.0.0.1:8554/overview/
+[2026-09-18T10:46:34.599] [INFO] [T:281467172548288] RTSP OPTIONS rtsp://127.0.0.1:8554/overview/
+[2026-09-18T10:46:55.288] [WARNING] [T:281467164094144] interleaved send timeout/failed, dropping session send loop
+[2026-09-18T10:46:55.288] [WARNING] [T:281467164094144] interleaved send timeout/failed, dropping session send loop
+[2026-09-18T10:46:55.288] [WARNING] [T:281467164094144] interleaved send timeout/failed, dropping session send loop
+[2026-09-18T10:46:55.288] [WARNING] [T:281467164094144] interleaved send timeout/failed, dropping session send loop
+[2026-09-18T10:46:55.288] [WARNING] [T:281467164094144] interleaved send timeout/failed, dropping session send loop
+[2026-09-18T10:46:55.289] [WARNING] [T:281467164094144] interleaved send timeout/failed, dropping session send loop
+[2026-09-18T10:46:55.289] [WARNING] [T:281467164094144] interleaved send timeout/failed, dropping session send loop
+[2026-09-18T10:46:55.289] [WARNING] [T:281467164094144] interleaved send timeout/failed, dropping session send loop
+[2026-09-18T10:46:55.289] [WARNING] [T:281467164094144] interleaved send timeout/failed, dropping session send loop
+[2026-09-18T10:46:55.289] [WARNING] [T:281467164094144] interleaved send timeout/failed, dropping session send loop
+[2026-09-18T10:46:55.289] [WARNING] [T:281467164094144] interleaved send timeout/failed, dropping session send loop
+[2026-09-18T10:46:55.289] [WARNING] [T:281467164094144] interleaved send timeout/failed, dropping session send loop
+[2026-09-18T10:46:55.289] [WARNING] [T:281467164094144] interleaved send timeout/failed, dropping session send loop
+[2026-09-18T10:46:55.289] [WARNING] [T:281467164094144] interleaved send timeout/failed, dropping session send loop
+[2026-09-18T10:46:55.289] [WARNING] [T:281467164094144] interleaved send timeout/failed, dropping session send loop
+[2026-09-18T10:46:55.289] [WARNING] [T:281467164094144] interleaved send timeout/failed, dropping session send loop
+[2026-09-18T10:46:55.289] [WARNING] [T:281467164094144] interleaved send timeout/failed, dropping session send loop
+[2026-09-18T10:55:18.914] [INFO] [T:281467172548288] RTSP OPTIONS rtsp://127.0.0.1:8554/overview
+[2026-09-18T10:55:18.915] [INFO] [T:281467172548288] RTSP DESCRIBE rtsp://127.0.0.1:8554/overview
+[2026-09-18T10:55:18.916] [INFO] [T:281467172548288] RTSP SETUP rtsp://127.0.0.1:8554/overview/stream
+[2026-09-18T10:55:18.917] [INFO] [T:281467172548288] RTSP PLAY rtsp://127.0.0.1:8554/overview/
+[2026-09-18T10:55:48.926] [INFO] [T:281467172548288] RTSP OPTIONS rtsp://127.0.0.1:8554/overview/
+[2026-09-18T10:56:18.985] [INFO] [T:281467172548288] RTSP OPTIONS rtsp://127.0.0.1:8554/overview/
+[2026-09-18T10:56:49.105] [INFO] [T:281467172548288] RTSP OPTIONS rtsp://127.0.0.1:8554/overview/
+[2026-09-18T10:57:19.289] [INFO] [T:281467172548288] RTSP OPTIONS rtsp://127.0.0.1:8554/overview/
+[2026-09-18T10:57:49.912] [INFO] [T:281467172548288] RTSP OPTIONS rtsp://127.0.0.1:8554/overview/
+[2026-09-18T10:57:56.828] [WARNING] [T:281467164094144] interleaved send timeout/failed, dropping session send loop
+[2026-09-18T10:57:56.828] [WARNING] [T:281467164094144] interleaved send timeout/failed, dropping session send loop
+[2026-09-18T10:57:56.828] [WARNING] [T:281467164094144] interleaved send timeout/failed, dropping session send loop
+[2026-09-18T10:57:56.828] [WARNING] [T:281467164094144] interleaved send timeout/failed, dropping session send loop
+[2026-09-18T10:57:56.828] [WARNING] [T:281467164094144] interleaved send timeout/failed, dropping session send loop
+[2026-09-18T10:57:56.829] [WARNING] [T:281467164094144] interleaved send timeout/failed, dropping session send loop
+[2026-09-18T10:57:56.829] [WARNING] [T:281467164094144] interleaved send timeout/failed, dropping session send loop
+[2026-09-18T10:57:56.829] [WARNING] [T:281467164094144] interleaved send timeout/failed, dropping session send loop
+[2026-09-18T10:57:56.829] [WARNING] [T:281467164094144] interleaved send timeout/failed, dropping session send loop
+[2026-09-18T10:57:56.829] [WARNING] [T:281467164094144] interleaved send timeout/failed, dropping session send loop
+[2026-09-18T10:57:56.829] [WARNING] [T:281467164094144] interleaved send timeout/failed, dropping session send loop
+[2026-09-18T10:57:56.829] [WARNING] [T:281467164094144] interleaved send timeout/failed, dropping session send loop
+[2026-09-18T10:57:56.829] [WARNING] [T:281467164094144] interleaved send timeout/failed, dropping session send loop
+[2026-09-18T10:57:56.829] [WARNING] [T:281467164094144] interleaved send timeout/failed, dropping session send loop
+[2026-09-18T10:57:56.829] [WARNING] [T:281467164094144] interleaved send timeout/failed, dropping session send loop
+[2026-09-18T10:57:56.829] [WARNING] [T:281467164094144] interleaved send timeout/failed, dropping session send loop
+[2026-09-18T10:57:56.829] [WARNING] [T:281467164094144] interleaved send timeout/failed, dropping session send loop
+[2026-09-18T10:57:56.829] [WARNING] [T:281467164094144] interleaved send timeout/failed, dropping session send loop
+
+TOOLS
+/usr/bin/cvlc
+/usr/bin/curl
+
+RTSP_STREAM_PROBE
+{
+    "streams": [
+        {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+            "profile": "Main",
+            "codec_type": "video",
+            "codec_tag_string": "[0][0][0][0]",
+            "codec_tag": "0x0000",
+            "width": 1920,
+            "height": 1080,
+            "coded_width": 1920,
+            "coded_height": 1080,
+            "closed_captions": 0,
+            "film_grain": 0,
+            "has_b_frames": 0,
+            "pix_fmt": "yuv420p",
+            "level": 51,
+            "color_range": "tv",
+            "color_space": "bt470bg",
+            "color_transfer": "bt709",
+            "color_primaries": "bt470bg",
+            "chroma_location": "left",
+            "field_order": "progressive",
+            "refs": 1,
+            "is_avc": "false",
+            "nal_length_size": "0",
+            "r_frame_rate": "30/1",
+            "avg_frame_rate": "30/1",
+            "time_base": "1/90000",
+            "start_pts": 2970,
+            "start_time": "0.033000",
+            "bits_per_raw_sample": "8",
+            "extradata_size": 41,
+            "disposition": {
+                "default": 0,
+                "dub": 0,
+                "original": 0,
+                "comment": 0,
+                "lyrics": 0,
+                "karaoke": 0,
+                "forced": 0,
+                "hearing_impaired": 0,
+                "visual_impaired": 0,
+                "clean_effects": 0,
+                "attached_pic": 0,
+                "timed_thumbnails": 0,
+                "non_diegetic": 0,
+                "captions": 0,
+                "descriptions": 0,
+                "metadata": 0,
+                "dependent": 0,
+                "still_image": 0
+            }
+        }
+    ]
+}

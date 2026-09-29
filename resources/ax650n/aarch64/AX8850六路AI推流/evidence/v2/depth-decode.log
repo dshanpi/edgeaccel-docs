@@ -1,0 +1,16 @@
+Input #0, rtsp, from 'rtsp://127.0.0.1:8554/depth':
+  Metadata:
+    title           : RTSP Stream
+  Duration: N/A, bitrate: N/A
+  Stream #0:0: Video: h264 (Main), yuv420p(tv, bt470bg/bt470bg/bt709, progressive), 1920x1080, 10 fps, 20 tbr, 90k tbn
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> wrapped_avframe (native))
+Output #0, null, to 'pipe:':
+  Metadata:
+    title           : RTSP Stream
+    encoder         : Lavf60.16.100
+  Stream #0:0: Video: wrapped_avframe, yuv420p(tv, bt470bg/bt470bg/bt709, progressive), 1920x1080, q=2-31, 200 kb/s, 10 fps, 10 tbn
+    Metadata:
+      encoder         : Lavc60.31.102 wrapped_avframe
+frame=    0 fps=0.0 q=-0.0 size=       0kB time=00:00:00.70 bitrate=   0.0kbits/s speed=3.98x    frame=   14 fps=0.0 q=-0.0 size=N/A time=00:00:02.10 bitrate=N/A speed=2.85x    frame=   20 fps= 14 q=-0.0 size=N/A time=00:00:02.70 bitrate=N/A speed=1.86x    frame=   26 fps= 13 q=-0.0 size=N/A time=00:00:03.30 bitrate=N/A speed=1.64x    [out#0/null @ 0xaaaae6ac3ea0] video:14kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
+frame=   30 fps= 13 q=-0.0 Lsize=N/A time=00:00:03.60 bitrate=N/A speed=1.51x    

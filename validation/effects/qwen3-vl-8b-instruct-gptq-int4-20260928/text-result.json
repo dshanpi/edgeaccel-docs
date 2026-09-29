@@ -1,0 +1,138 @@
+{
+  "kind": "vision-text",
+  "modelId": "Qwen3-VL-8B-Instruct-GPTQ-Int4",
+  "provider": "AXCL C++",
+  "revision": "e9e73ad656bd299aedd92c9dad85cf0b308c77fd",
+  "date": "2026-09-28",
+  "completed": true,
+  "runtime": {
+    "repo": "AXERA-TECH/ax-llm",
+    "revision": "3be4cc3fee4a4c730ec7c9b8982ff4b398eefac7",
+    "tokenizerRevision": "0eed4120c6e1b5ea1e51b51c576924faddc8b2a1",
+    "binarySha256": "80f621266a6d302e8590744016ccb117b522de3ba725b825a3f1dbfbbb161781",
+    "vocabSha256": "7119de4966cc6a8ae87d7f083e65b315282d06c3122fdd41ce783fdd2d3c1ca2",
+    "opencv": "4.6.0",
+    "sourceModified": false
+  },
+  "postConfig": {
+    "enable_temperature": false,
+    "temperature": 0.7,
+    "enable_repetition_penalty": false,
+    "repetition_penalty": 1,
+    "penalty_window": 30,
+    "enable_top_p_sampling": false,
+    "top_p": 0.8,
+    "enable_top_k_sampling": true,
+    "top_k": 1
+  },
+  "repeatExact": true,
+  "samples": [
+    {
+      "output": "前景中有一匹马和一只狗。",
+      "requestSeconds": 6.974425880995113,
+      "processSeconds": 6.974425880995113,
+      "nativeMetricLines": [
+        "[I][                     EncodeImage][ 580]: image encode time : 320.329010 ms, size : 1",
+        "[I][                             Run][ 709]: input token num : 176, prefill_split_num : 2",
+        "[I][                             Run][ 922]: ttft: 2111.87 ms",
+        "[N][                             Run][1075]: hit eos,avg 2.41 token/s"
+      ],
+      "exitCode": 0,
+      "input": "图片：images/ssd_horse.jpg\n问题：请用一句中文说出图片前景中的两种动物。",
+      "observation": "前景中可见一匹马和一只狗，动物名称与画面一致。",
+      "mode": "smoke"
+    },
+    {
+      "output": "A man is riding a brown horse while a brown dog sits on the ground nearby.",
+      "requestSeconds": 10.264869802980684,
+      "processSeconds": 10.264869802980684,
+      "nativeMetricLines": [
+        "[I][                     EncodeImage][ 580]: image encode time : 323.263000 ms, size : 1",
+        "[I][                             Run][ 709]: input token num : 178, prefill_split_num : 2",
+        "[I][                             Run][ 922]: ttft: 2021.81 ms",
+        "[N][                             Run][1075]: hit eos,avg 2.41 token/s"
+      ],
+      "exitCode": 0,
+      "input": "图片：images/ssd_horse.jpg\n问题：Name the two animals in the foreground. Reply in one sentence.",
+      "observation": "识别出马、狗及骑乘关系；本次仅核对这些可见内容，不将人物性别当作验证项。",
+      "mode": "images"
+    },
+    {
+      "output": "2",
+      "requestSeconds": 3.506634754012339,
+      "processSeconds": 3.506634754012339,
+      "nativeMetricLines": [
+        "[I][                     EncodeImage][ 580]: image encode time : 335.272003 ms, size : 1",
+        "[I][                             Run][ 709]: input token num : 175, prefill_split_num : 2",
+        "[I][                             Run][ 922]: ttft: 2018.57 ms",
+        "[N][                             Run][1075]: hit eos,avg 2.68 token/s"
+      ],
+      "exitCode": 0,
+      "input": "图片：images/ssd_horse.jpg\n问题：画面中有几个人清晰可见？只回答人数。",
+      "observation": "回答为 2，与骑马者和右侧红衣人物这两名清晰人物一致。",
+      "mode": "images"
+    },
+    {
+      "output": "一位女士站在伦敦街头，身后是一辆经典的红色双层巴士，巴士上印有广告语“当你说‘是’时，事情就变得更好了”。",
+      "requestSeconds": 18.111654339008965,
+      "processSeconds": 18.111654339008965,
+      "nativeMetricLines": [
+        "[I][                     EncodeImage][ 580]: image encode time : 378.059998 ms, size : 1",
+        "[I][                             Run][ 709]: input token num : 174, prefill_split_num : 2",
+        "[I][                             Run][ 922]: ttft: 2300.20 ms",
+        "[N][                             Run][1075]: hit eos,avg 2.40 token/s"
+      ],
+      "exitCode": 0,
+      "input": "图片：images/ssd_car.jpg\n问题：请用一句中文描述图片中的主要内容。",
+      "observation": "正确识别红色双层巴士及其前方人物。画面不能独立确认具体城市；广告的“more exciting”译为“更好了”不够准确，不作为地点或精确 OCR 翻译通过。",
+      "mode": "images"
+    },
+    {
+      "output": "前景中有一匹马和一只狗。",
+      "requestSeconds": 6.908266315993387,
+      "processSeconds": 6.908266315993387,
+      "nativeMetricLines": [
+        "[I][                     EncodeImage][ 580]: image encode time : 335.769012 ms, size : 1",
+        "[I][                             Run][ 709]: input token num : 176, prefill_split_num : 2",
+        "[I][                             Run][ 922]: ttft: 2011.48 ms",
+        "[N][                             Run][1075]: hit eos,avg 2.61 token/s"
+      ],
+      "exitCode": 0,
+      "input": "图片：images/ssd_horse.jpg\n问题：请用一句中文说出图片前景中的两种动物。",
+      "observation": "切换图片并重新加载进程后，回复与首测“前景中有一匹马和一只狗。”逐字相同。",
+      "mode": "images"
+    },
+    {
+      "output": "几只松鼠在山间草地上活泼地追逐嬉戏，前爪互相抓握，姿态灵动。它们或跳跃或对视，展现出在自然环境中无忧无虑的天性。",
+      "requestSeconds": 24.228356601961423,
+      "processSeconds": 24.228356601961423,
+      "nativeMetricLines": [
+        "[I][                     EncodeImage][ 580]: image encode time : 1400.490967 ms, size : 4",
+        "[I][                             Run][ 709]: input token num : 609, prefill_split_num : 5",
+        "[I][                             Run][ 922]: ttft: 5528.75 ms",
+        "[N][                             Run][1075]: hit eos,avg 2.56 token/s"
+      ],
+      "exitCode": 0,
+      "input": "视频帧：video/（8 帧，按文件名排序）\n问题：请用两句中文描述这些视频帧中动物的动作。",
+      "observation": "片段可见两只动物抬起前爪、互相接触、转身和扑向对方。回复中的“追逐”“无忧无虑的天性”缺少画面依据，“几只松鼠”也未准确限定数量与物种；中文细节未通过。",
+      "mode": "video"
+    },
+    {
+      "output": "The two marmots are engaged in a playful, almost dance-like interaction, with their paws raised and bodies leaning toward each other. Their synchronized movements and focused gazes suggest a spirited game or social bonding ritual.",
+      "requestSeconds": 24.456497745995875,
+      "processSeconds": 24.456497745995875,
+      "nativeMetricLines": [
+        "[I][                     EncodeImage][ 580]: image encode time : 1357.610962 ms, size : 4",
+        "[I][                             Run][ 709]: input token num : 613, prefill_split_num : 5",
+        "[I][                             Run][ 922]: ttft: 5311.47 ms",
+        "[N][                             Run][1075]: hit eos,avg 2.59 token/s"
+      ],
+      "exitCode": 0,
+      "input": "视频帧：video/（8 帧，按文件名排序）\n问题：Describe what the two animals are doing in these video frames. Use two sentences.",
+      "observation": "英文正确描述两只动物抬爪、身体靠近的可见动作；“社交联结仪式”等动机解释无法从帧序列确定，不作行为学或物种识别结论。",
+      "mode": "video"
+    }
+  ],
+  "timingScope": "完整请求：提交图片或帧目录后至再次出现问题提示，不包含加载。native TTFT 为语言阶段计时；图像编码另列。",
+  "terminationScope": "原始运行时的 hit eos 日志为统一结束提示，不用该字符串单独证明终止 token；本次各进程正常退出，回复未见长度截断。"
+}

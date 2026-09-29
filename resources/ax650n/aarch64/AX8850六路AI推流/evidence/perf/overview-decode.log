@@ -1,0 +1,17 @@
+[rtsp @ 0xaaaad332e9d0] Stream #0: not enough frames to estimate rate; consider increasing probesize
+Input #0, rtsp, from 'rtsp://127.0.0.1:8554/overview':
+  Metadata:
+    title           : RTSP Stream
+  Duration: N/A, bitrate: N/A
+  Stream #0:0: Video: h264 (Main), yuv420p(tv, bt470bg/bt470bg/bt709, progressive), 1920x1080, 30 fps, 60 tbr, 90k tbn
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> wrapped_avframe (native))
+Output #0, null, to 'pipe:':
+  Metadata:
+    title           : RTSP Stream
+    encoder         : Lavf60.16.100
+  Stream #0:0: Video: wrapped_avframe, yuv420p(tv, bt470bg/bt470bg/bt709, progressive), 1920x1080, q=2-31, 200 kb/s, 30 fps, 30 tbn
+    Metadata:
+      encoder         : Lavc60.31.102 wrapped_avframe
+frame=    0 fps=0.0 q=-0.0 size=       0kB time=00:00:00.93 bitrate=   0.0kbits/s speed=1.84x    frame=   26 fps= 26 q=-0.0 size=N/A time=00:00:01.80 bitrate=N/A speed=1.77x    [out#0/null @ 0xaaaad3336ea0] video:14kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
+frame=   30 fps= 27 q=-0.0 Lsize=N/A time=00:00:01.90 bitrate=N/A speed=1.74x    

@@ -1,0 +1,30 @@
+{
+  "revision": "6a92e331bd8813a98e2eac602b6f9412a7eec709",
+  "sourceArchiveSha256": "bb51cfa69bd8adc74d550fe4457a6f47a7cb2954efdf47519e15db31089499f5",
+  "files": [
+    {
+      "path": "jina_retrieval_card.py",
+      "sha256": "d5cbdf8e694ef09ffe3f3e96980e89c8fb5790d5885957738e737b42e40d6996"
+    },
+    {
+      "path": "jina_retrieval_core.py",
+      "sha256": "a37d6c0c411757ac1d29a284afd523311794b40aa15ca2c5d926cf82c63cabcc"
+    },
+    {
+      "path": "jina_retrieval_native_session.py",
+      "sha256": "d5cc0002a8275519250db6b9b1d00adb3a9a28d59be2e3438c8389679aa42e3a"
+    },
+    {
+      "path": "jina_native_bridge.cpp",
+      "sha256": "d917ae8aeb744151c6925c1c0779bd1c7da6e7f8ca45327ec3c61db4adc78109"
+    },
+    {
+      "path": "libjina_native_bridge.so",
+      "sha256": "56cabe2c4eaa851fc89fb3144c745b4429e34b8843572f85858f8add6dcdd4ef"
+    },
+    {
+      "path": "jina-retrieval-shapes.json",
+      "sha256": "0929c859cffdd80017582c9990a2f3d5490d24c1d64d8a63f1daacf4da9cf421"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "repo": "AXERA-TECH/YOLO11-Pose",
+  "revision": "156938308275ed3dbe3772898d8766a399aeb173",
+  "complete": true,
+  "files": [
+    {
+      "path": "ax650/yolo11x-pose.axmodel",
+      "size": 62102573,
+      "sha256": "f7f6afc79375cab17abde9094e3c7b94ef0357a1eef431cfb239d0edb265e4a1",
+      "gitBlob": "96911f1e63520228e238bcfc87ad066b915704a7",
+      "verifiedHashes": {
+        "sha256": "f7f6afc79375cab17abde9094e3c7b94ef0357a1eef431cfb239d0edb265e4a1",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "football.jpg",
+      "size": 324944,
+      "sha256": "e7c4b752ef447bfec409888cea8709be15c01d0f6bf91bd16b7762deb90950dc",
+      "gitBlob": "6395faa97cb2b49cc65cb7647d462b5ba5564db7",
+      "verifiedHashes": {
+        "sha256": "e7c4b752ef447bfec409888cea8709be15c01d0f6bf91bd16b7762deb90950dc",
+        "gitBlob": null
+      }
+    }
+  ]
+}

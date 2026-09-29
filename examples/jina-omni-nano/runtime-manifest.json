@@ -1,0 +1,67 @@
+{
+  "modelRevision": "6181fa78a78812dde065f76ad0f73425aec43747",
+  "api": "AXCLNativeAPI",
+  "sourceVerificationArchiveSha256": "df82fae37339ab2293a5f4a1ac0c5d12dfb6706a0e37a5ee908ad19c04dfb490",
+  "files": [
+    {
+      "path": "jina-native-shapes.json",
+      "sha256": "f05b633db61a0b4cd2c2278886146d4ad3facd54a6b5bb255dfb3d2c016bdfee",
+      "testedFileSha256": "f05b633db61a0b4cd2c2278886146d4ad3facd54a6b5bb255dfb3d2c016bdfee"
+    },
+    {
+      "path": "jina_card.py",
+      "sha256": "0518c972abcbc201caf6b7ca1b7d289c042926afa574600ac6aa6d782d13c3d5",
+      "testedFileSha256": "0518c972abcbc201caf6b7ca1b7d289c042926afa574600ac6aa6d782d13c3d5"
+    },
+    {
+      "path": "jina_native_bridge.cpp",
+      "sha256": "d917ae8aeb744151c6925c1c0779bd1c7da6e7f8ca45327ec3c61db4adc78109",
+      "testedFileSha256": "d917ae8aeb744151c6925c1c0779bd1c7da6e7f8ca45327ec3c61db4adc78109"
+    },
+    {
+      "path": "jina_native_bridge_session.py",
+      "sha256": "995e0c49c2236b741f5c5a081dc1948ab24eb453261df5d11bc671ca78020a01",
+      "testedFileSha256": "995e0c49c2236b741f5c5a081dc1948ab24eb453261df5d11bc671ca78020a01"
+    },
+    {
+      "path": "jina_omni_audio.py",
+      "sha256": "b9b4786de2cb1f1aa95631212b1a7bb3ccff9636ecda2c4e482c485b2611fbe6",
+      "testedFileSha256": "b9b4786de2cb1f1aa95631212b1a7bb3ccff9636ecda2c4e482c485b2611fbe6"
+    },
+    {
+      "path": "jina_omni_core.py",
+      "sha256": "2070cc6dea1781ee27c7d19de3cf011653fd2b650978ab0bc50918e9761ea580",
+      "testedFileSha256": "0cd063c30cee5a3396c347f3d221056779afadfbd600c04f861fe871b441ef20"
+    },
+    {
+      "path": "libjina_native_bridge.so",
+      "sha256": "56cabe2c4eaa851fc89fb3144c745b4429e34b8843572f85858f8add6dcdd4ef",
+      "testedFileSha256": "56cabe2c4eaa851fc89fb3144c745b4429e34b8843572f85858f8add6dcdd4ef"
+    },
+    {
+      "path": "special-tokens/classification.bf16.bin",
+      "sha256": "322c225a8ce6ce744b9b9ccf6d14746057225dc4654f7e7007a3746d434dc8f3",
+      "testedFileSha256": "322c225a8ce6ce744b9b9ccf6d14746057225dc4654f7e7007a3746d434dc8f3"
+    },
+    {
+      "path": "special-tokens/clustering.bf16.bin",
+      "sha256": "c9293496aea883e180e5cc4c90b195994578e30255987e71d2dc6e7c44e465eb",
+      "testedFileSha256": "c9293496aea883e180e5cc4c90b195994578e30255987e71d2dc6e7c44e465eb"
+    },
+    {
+      "path": "special-tokens/manifest.json",
+      "sha256": "8bee1ce0878081029c66e75354a20673b9107047197adf1e0337b392f803cf69",
+      "testedFileSha256": "8bee1ce0878081029c66e75354a20673b9107047197adf1e0337b392f803cf69"
+    },
+    {
+      "path": "special-tokens/retrieval.bf16.bin",
+      "sha256": "b189ddfb0a4290d8b90e7c07178e6634cd940616ef1dbc7b3200a5fb5a029697",
+      "testedFileSha256": "b189ddfb0a4290d8b90e7c07178e6634cd940616ef1dbc7b3200a5fb5a029697"
+    },
+    {
+      "path": "special-tokens/text-matching.bf16.bin",
+      "sha256": "b3bc5fa393f91db6f845920675194063dba108316372452a8432ff21b411dd20",
+      "testedFileSha256": "b3bc5fa393f91db6f845920675194063dba108316372452a8432ff21b411dd20"
+    }
+  ]
+}

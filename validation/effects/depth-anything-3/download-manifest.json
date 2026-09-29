@@ -1,0 +1,37 @@
+{
+  "repo": "AXERA-TECH/Depth-Anything-3",
+  "revision": "7bf36032e88d4cfba089a6ddb05fa99724742177",
+  "complete": true,
+  "files": [
+    {
+      "path": "python/infer.py",
+      "size": 1228,
+      "sha256": null,
+      "gitBlob": "0bf7f071dc8d86c1761a9c8ed3f1a9121bae29bb",
+      "verifiedHashes": {
+        "sha256": "6fcca3d7fc0966fd30473792071807c02e2936c104c40f31eff070a930c700fa",
+        "gitBlob": "0bf7f071dc8d86c1761a9c8ed3f1a9121bae29bb"
+      }
+    },
+    {
+      "path": "models-ax650/da3-small.axmodel",
+      "size": 40927267,
+      "sha256": "f9563bff5bde0aff1ce69ae026691035207d4c813fc5190ab118adff8da77366",
+      "gitBlob": "886046892873f99fc96f08e41977509b340f7424",
+      "verifiedHashes": {
+        "sha256": "f9563bff5bde0aff1ce69ae026691035207d4c813fc5190ab118adff8da77366",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "examples/demo01.jpg",
+      "size": 488150,
+      "sha256": "35ef1bbb63f6540e49aa9b6302b9b938be4fe8b9c08c07c3694b02396b0e87e0",
+      "gitBlob": "52f8b3155e90b44bc59d1072f30821a1c63366fe",
+      "verifiedHashes": {
+        "sha256": "35ef1bbb63f6540e49aa9b6302b9b938be4fe8b9c08c07c3694b02396b0e87e0",
+        "gitBlob": null
+      }
+    }
+  ]
+}

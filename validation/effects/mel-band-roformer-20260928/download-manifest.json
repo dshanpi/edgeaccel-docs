@@ -1,0 +1,72 @@
+{
+  "modelId": "mel_band_roformer",
+  "repo": "AXERA-TECH/mel_band_roformer",
+  "revision": "f104690c6af6e4258aaad61124114fe0819451bb",
+  "complete": true,
+  "files": [
+    {
+      "path": ".gitignore",
+      "size": 23,
+      "url": "https://huggingface.co/AXERA-TECH/mel_band_roformer/resolve/f104690c6af6e4258aaad61124114fe0819451bb/.gitignore",
+      "verifiedHashes": {
+        "sha256": "1396aba20e65318d168862232824d238b7ff0f43762667b9b753473844c9346a",
+        "gitBlob": "0a7230199347a8992ca9f55616bc3a6470f5cb78"
+      }
+    },
+    {
+      "path": "MelBandRoformer.py",
+      "size": 9138,
+      "url": "https://huggingface.co/AXERA-TECH/mel_band_roformer/resolve/f104690c6af6e4258aaad61124114fe0819451bb/MelBandRoformer.py",
+      "verifiedHashes": {
+        "sha256": "754aa6483d29cf81029d5e32614dc540262dc46c5a9f10cf0da5cc01f2175cab",
+        "gitBlob": "7dc53ef74efc8db45036df96c0957fa329eb858b"
+      }
+    },
+    {
+      "path": "README.md",
+      "size": 1070,
+      "url": "https://huggingface.co/AXERA-TECH/mel_band_roformer/resolve/f104690c6af6e4258aaad61124114fe0819451bb/README.md",
+      "verifiedHashes": {
+        "sha256": "7f64c32c19dfcfc0df8cdcd9749842fab5e4f4cdeccb11c415b89ff89074f555",
+        "gitBlob": "8b78e77aebdb368fe5f4351bf0c0d1fe486b425e"
+      }
+    },
+    {
+      "path": "gradio_app.py",
+      "size": 4045,
+      "url": "https://huggingface.co/AXERA-TECH/mel_band_roformer/resolve/f104690c6af6e4258aaad61124114fe0819451bb/gradio_app.py",
+      "verifiedHashes": {
+        "sha256": "7a7fcc134c7a7532e7e61e7325663a996dca104f26cb7898677c57a0d608136c",
+        "gitBlob": "45287de166d48a3dd2fd0a0f50c6c4628cd193d4"
+      }
+    },
+    {
+      "path": "main.py",
+      "size": 3858,
+      "url": "https://huggingface.co/AXERA-TECH/mel_band_roformer/resolve/f104690c6af6e4258aaad61124114fe0819451bb/main.py",
+      "verifiedHashes": {
+        "sha256": "5a80b2f1f728f1b8b1fd1c4c04978c7bd4fbf9cf542ad8ec3c0f2ec226e438dc",
+        "gitBlob": "f0442af02f784585b1be520be3048098509845ae"
+      }
+    },
+    {
+      "path": "mel_band_roformer.axmodel",
+      "size": 95648955,
+      "url": "https://huggingface.co/AXERA-TECH/mel_band_roformer/resolve/f104690c6af6e4258aaad61124114fe0819451bb/mel_band_roformer.axmodel",
+      "verifiedHashes": {
+        "sha256": "07104323e941c08a55fc30174e40711a0c99a7aef57e7d14b7747c3c1ea4d25c",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "requirements.txt",
+      "size": 158,
+      "url": "https://huggingface.co/AXERA-TECH/mel_band_roformer/resolve/f104690c6af6e4258aaad61124114fe0819451bb/requirements.txt",
+      "verifiedHashes": {
+        "sha256": "6b7a8295410ae0ae385a7812f023e504585dcbf4d1e5c75d99d617ed73351e54",
+        "gitBlob": "e17de6b3231522dd11b83dfd368868928847d5ff"
+      }
+    }
+  ],
+  "runnerSha256": "aaeb89a9bb94761112764c019e1109832f76f0b7fa0608e4afa0779ae049e419"
+}

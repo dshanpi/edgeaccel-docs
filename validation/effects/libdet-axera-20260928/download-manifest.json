@@ -1,0 +1,270 @@
+{
+  "modelId": "libdet.axera",
+  "repo": "AXERA-TECH/libdet.axera",
+  "revision": "0a50691f9581143c28be91c0e7247250fbc52daf",
+  "complete": true,
+  "files": [
+    {
+      "path": "README.md",
+      "size": 5187,
+      "url": "https://huggingface.co/AXERA-TECH/libdet.axera/resolve/0a50691f9581143c28be91c0e7247250fbc52daf/README.md",
+      "verifiedHashes": {
+        "sha256": "b7987c8700d3d4e9bfdf353a4b7419a808ec6eabc7812293a1695de0cefca6e4",
+        "gitBlob": "cf283657c6632fb59fc824fc55bd5454d7d3e0df"
+      }
+    },
+    {
+      "path": "lib/aarch64/libdet.so",
+      "size": 4361264,
+      "url": "https://huggingface.co/AXERA-TECH/libdet.axera/resolve/0a50691f9581143c28be91c0e7247250fbc52daf/lib/aarch64/libdet.so",
+      "verifiedHashes": {
+        "sha256": "2d4c794896dee3be2c0291a0119e5dd3dcf2fc5459a750f3148ae2473f8b5d7d",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "lib/pyaxdev.py",
+      "size": 4998,
+      "url": "https://huggingface.co/AXERA-TECH/libdet.axera/resolve/0a50691f9581143c28be91c0e7247250fbc52daf/lib/pyaxdev.py",
+      "verifiedHashes": {
+        "sha256": "b78a4c3d64bba38a70f8a606789aaac61bf5920c49c8582334c15ec16034aad6",
+        "gitBlob": "9c6131a34d6ce12c8ac88b07d1194f8755e00a5d"
+      }
+    },
+    {
+      "path": "lib/pydet.py",
+      "size": 4235,
+      "url": "https://huggingface.co/AXERA-TECH/libdet.axera/resolve/0a50691f9581143c28be91c0e7247250fbc52daf/lib/pydet.py",
+      "verifiedHashes": {
+        "sha256": "7729a399ca1c6fb77999f4979731a913f815ee0e7789690ecce116c0054ccd53",
+        "gitBlob": "95e0dce15d3435e61daaa98df8075f7e27f335df"
+      }
+    },
+    {
+      "path": "lib/example.py",
+      "size": 2356,
+      "url": "https://huggingface.co/AXERA-TECH/libdet.axera/resolve/0a50691f9581143c28be91c0e7247250fbc52daf/lib/example.py",
+      "verifiedHashes": {
+        "sha256": "6cbde125330edbab4abbc22007b7e2cd1cea7d142ae81007d09302baa10dcc73",
+        "gitBlob": "896c78f3d65c2a13a20e1f62e0c2001fa7fa42c0"
+      }
+    },
+    {
+      "path": "lib/gradio_example.py",
+      "size": 3229,
+      "url": "https://huggingface.co/AXERA-TECH/libdet.axera/resolve/0a50691f9581143c28be91c0e7247250fbc52daf/lib/gradio_example.py",
+      "verifiedHashes": {
+        "sha256": "98378961e4a9e6a5df69b589436b6198a4bdaf350808cadbe8ba2866dec91096",
+        "gitBlob": "57a28577eb8c0de8a750c72949d5860d0608035c"
+      }
+    },
+    {
+      "path": "lib/requirements.txt",
+      "size": 27,
+      "url": "https://huggingface.co/AXERA-TECH/libdet.axera/resolve/0a50691f9581143c28be91c0e7247250fbc52daf/lib/requirements.txt",
+      "verifiedHashes": {
+        "sha256": "b5dc5ea9ce2df76d6c580fb4d303fbb4f44ec88c22f1ec13d5b52b35d6627914",
+        "gitBlob": "256a54dc7d610c5ff99e9c1ace029a946c274e78"
+      }
+    },
+    {
+      "path": "include/libdet.h",
+      "size": 1878,
+      "url": "https://huggingface.co/AXERA-TECH/libdet.axera/resolve/0a50691f9581143c28be91c0e7247250fbc52daf/include/libdet.h",
+      "verifiedHashes": {
+        "sha256": "75b60e67073c8eb8c380091597700c84092f814b8915ee7d5085e88601ac8794",
+        "gitBlob": "7ddb1303e3b711d97f2050934380e9436a104d6d"
+      }
+    },
+    {
+      "path": "include/ax_devices.h",
+      "size": 1536,
+      "url": "https://huggingface.co/AXERA-TECH/libdet.axera/resolve/0a50691f9581143c28be91c0e7247250fbc52daf/include/ax_devices.h",
+      "verifiedHashes": {
+        "sha256": "4fbe50e2b23a3aa5e35b34376dfa60ca0b1f0f84fdeeb7b0eed8249fee4d3518",
+        "gitBlob": "3f0fab938ac95ccc9eb7510130e28d0da2d49e84"
+      }
+    },
+    {
+      "path": "examples/test_det.cpp",
+      "size": 3683,
+      "url": "https://huggingface.co/AXERA-TECH/libdet.axera/resolve/0a50691f9581143c28be91c0e7247250fbc52daf/examples/test_det.cpp",
+      "verifiedHashes": {
+        "sha256": "44bf33b31450a9ece9a216d2073403da12d92fdb1dea926f03561b7279349207",
+        "gitBlob": "26d83e4d1f2e5e18ebbf78fc542c6b0418274764"
+      }
+    }
+  ],
+  "runnerSha256": "584610299663b9ba1e6a844359ad9f72260fc1b095de02827a1ee1f660c9e9b4",
+  "externalRepositories": [
+    {
+      "repo": "AXERA-TECH/YOLOv8",
+      "revision": "6380cf5da7db0efa8414ea0e3dbbc801fe22d9a0",
+      "files": [
+        {
+          "path": "README.md",
+          "size": 3935,
+          "url": "https://huggingface.co/AXERA-TECH/YOLOv8/resolve/6380cf5da7db0efa8414ea0e3dbbc801fe22d9a0/README.md",
+          "verifiedHashes": {
+            "sha256": "2c7aa2f3cbef9e7035d8678a3fd145df065486ca1d86574c2daddf938a94ef0e",
+            "gitBlob": "43465f3bb8567d75ea29d1433e7cd593fb8e61ce"
+          }
+        },
+        {
+          "path": "ax650/yolov8s.axmodel",
+          "size": 11824773,
+          "url": "https://huggingface.co/AXERA-TECH/YOLOv8/resolve/6380cf5da7db0efa8414ea0e3dbbc801fe22d9a0/ax650/yolov8s.axmodel",
+          "verifiedHashes": {
+            "sha256": "65da17e48e6d057fb18a1acf1e583c1534f9691944014357e35839479e3818a9",
+            "gitBlob": null
+          }
+        },
+        {
+          "path": "football.jpg",
+          "size": 324944,
+          "url": "https://huggingface.co/AXERA-TECH/YOLOv8/resolve/6380cf5da7db0efa8414ea0e3dbbc801fe22d9a0/football.jpg",
+          "verifiedHashes": {
+            "sha256": "e7c4b752ef447bfec409888cea8709be15c01d0f6bf91bd16b7762deb90950dc",
+            "gitBlob": null
+          }
+        },
+        {
+          "path": "yolov8_config.json",
+          "size": 965,
+          "url": "https://huggingface.co/AXERA-TECH/YOLOv8/resolve/6380cf5da7db0efa8414ea0e3dbbc801fe22d9a0/yolov8_config.json",
+          "verifiedHashes": {
+            "sha256": "c66ba86dd3d2af645ae64f54e77d7790271c8ea0ca58e879519fe000600961f5",
+            "gitBlob": "efa0c0ced4371409b57f11f6064d9110a70708cc"
+          }
+        }
+      ]
+    },
+    {
+      "repo": "AXERA-TECH/YOLO11",
+      "revision": "e178719ba1b03eaf07c981f859027f3278c1cb29",
+      "files": [
+        {
+          "path": "README.md",
+          "size": 4719,
+          "url": "https://huggingface.co/AXERA-TECH/YOLO11/resolve/e178719ba1b03eaf07c981f859027f3278c1cb29/README.md",
+          "verifiedHashes": {
+            "sha256": "c0dad50f97276766aee1eea40fabd26185799fa072b23f11dce6f955effe0030",
+            "gitBlob": "6e35e77cd45f639a1b2df399d27c9c06efe40002"
+          }
+        },
+        {
+          "path": "ax650/yolo11s.axmodel",
+          "size": 10491152,
+          "url": "https://huggingface.co/AXERA-TECH/YOLO11/resolve/e178719ba1b03eaf07c981f859027f3278c1cb29/ax650/yolo11s.axmodel",
+          "verifiedHashes": {
+            "sha256": "bad83368e9d68ae9740e9bb72c34e6b8173635faca7eb366e5484f578fa10fa2",
+            "gitBlob": null
+          }
+        },
+        {
+          "path": "ax650/yolo11x.axmodel",
+          "size": 60111496,
+          "url": "https://huggingface.co/AXERA-TECH/YOLO11/resolve/e178719ba1b03eaf07c981f859027f3278c1cb29/ax650/yolo11x.axmodel",
+          "verifiedHashes": {
+            "sha256": "18e3cd31f8a04750480f5e9c2d98a2684a51c6b5596da2def971427841e65d8b",
+            "gitBlob": null
+          }
+        },
+        {
+          "path": "football.jpg",
+          "size": 324944,
+          "url": "https://huggingface.co/AXERA-TECH/YOLO11/resolve/e178719ba1b03eaf07c981f859027f3278c1cb29/football.jpg",
+          "verifiedHashes": {
+            "sha256": "e7c4b752ef447bfec409888cea8709be15c01d0f6bf91bd16b7762deb90950dc",
+            "gitBlob": null
+          }
+        },
+        {
+          "path": "ssd_horse.jpg",
+          "size": 123072,
+          "url": "https://huggingface.co/AXERA-TECH/YOLO11/resolve/e178719ba1b03eaf07c981f859027f3278c1cb29/ssd_horse.jpg",
+          "verifiedHashes": {
+            "sha256": "ed22f6b4c8c33e50e391e089ede14e8fa9402c623b09dbcf010e804770698fbb",
+            "gitBlob": null
+          }
+        },
+        {
+          "path": "yolo11_axera.py",
+          "size": 8446,
+          "url": "https://huggingface.co/AXERA-TECH/YOLO11/resolve/e178719ba1b03eaf07c981f859027f3278c1cb29/yolo11_axera.py",
+          "verifiedHashes": {
+            "sha256": "8eb474ea7bf551140056fb0748b2369e5c04955fb21a54cc6c3a0cd10c1fcc47",
+            "gitBlob": "a3f8abcb1afa6d3da9d29d89639415f03834f121"
+          }
+        },
+        {
+          "path": "yolo11_config.json",
+          "size": 965,
+          "url": "https://huggingface.co/AXERA-TECH/YOLO11/resolve/e178719ba1b03eaf07c981f859027f3278c1cb29/yolo11_config.json",
+          "verifiedHashes": {
+            "sha256": "c3c2122c1368337c65f61f456d3f3bbdb498072f7cd3f2fad196bbc829bc9605",
+            "gitBlob": "6de8f716f5857c079f4c1941c4903114da32bb5a"
+          }
+        }
+      ]
+    },
+    {
+      "repo": "AXERA-TECH/YOLO11-Pose",
+      "revision": "156938308275ed3dbe3772898d8766a399aeb173",
+      "files": [
+        {
+          "path": "README.md",
+          "size": 4770,
+          "url": "https://huggingface.co/AXERA-TECH/YOLO11-Pose/resolve/156938308275ed3dbe3772898d8766a399aeb173/README.md",
+          "verifiedHashes": {
+            "sha256": "31c6a051728fe1c06cb7a4642c4e813aebf222e9509b44bf4c064529f71bc351",
+            "gitBlob": "fe89bef1bec192c84d65a2603c9a8d8f251b77d1"
+          }
+        },
+        {
+          "path": "ax650/yolo11x-pose.axmodel",
+          "size": 62102573,
+          "url": "https://huggingface.co/AXERA-TECH/YOLO11-Pose/resolve/156938308275ed3dbe3772898d8766a399aeb173/ax650/yolo11x-pose.axmodel",
+          "verifiedHashes": {
+            "sha256": "f7f6afc79375cab17abde9094e3c7b94ef0357a1eef431cfb239d0edb265e4a1",
+            "gitBlob": null
+          }
+        },
+        {
+          "path": "football.jpg",
+          "size": 324944,
+          "url": "https://huggingface.co/AXERA-TECH/YOLO11-Pose/resolve/156938308275ed3dbe3772898d8766a399aeb173/football.jpg",
+          "verifiedHashes": {
+            "sha256": "e7c4b752ef447bfec409888cea8709be15c01d0f6bf91bd16b7762deb90950dc",
+            "gitBlob": null
+          }
+        },
+        {
+          "path": "yolo11_pose_config.json",
+          "size": 1283,
+          "url": "https://huggingface.co/AXERA-TECH/YOLO11-Pose/resolve/156938308275ed3dbe3772898d8766a399aeb173/yolo11_pose_config.json",
+          "verifiedHashes": {
+            "sha256": "02b34b5923e88476248dfec77625e084a835b9cb1136c0eab14d7396972ab566",
+            "gitBlob": "3b9584579ce9ebcc30df3a7aa651a308c28a2c1e"
+          }
+        }
+      ]
+    },
+    {
+      "repo": "AXERA-TECH/YOLOv8",
+      "revision": "65567714c2388b9c6b85bfb10b21535e7db0dee0",
+      "files": [
+        {
+          "path": "bus.jpg",
+          "size": 487438,
+          "url": "https://huggingface.co/AXERA-TECH/YOLOv8/resolve/65567714c2388b9c6b85bfb10b21535e7db0dee0/bus.jpg",
+          "verifiedHashes": {
+            "sha256": "33b198a1d2839bb9ac4c65d61f9e852196793cae9a0781360859425f6022b69c",
+            "gitBlob": null
+          }
+        }
+      ]
+    }
+  ],
+  "weightCompatibility": "YOLOv8 inference uses6380cf5 legacy3heads;65567714 contributes onlybus.jpg here. Six-head weight inspected separately but not run with this SDK."
+}

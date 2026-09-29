@@ -1,0 +1,52 @@
+{
+  "provider": "AXCLRTExecutionProvider",
+  "mode": "non-streaming",
+  "loadSeconds": 4.852730353999505,
+  "samples": [
+    {
+      "file": "zh.mp3",
+      "language": "zh",
+      "text": "开放时间早上9点至下午5点。",
+      "audioSeconds": 5.621625,
+      "wallSeconds": 3.2200689450000937,
+      "wallRTF": 0.5728003815622874,
+      "sha256": "0e64de19e4ff9a02e682955c9112f32d2317cfdbb5bc2f3504664044c993f195"
+    },
+    {
+      "file": "en.mp3",
+      "language": "en",
+      "text": "The tribal chieftain called for the boy and presented him with 50 pieces of gold.",
+      "audioSeconds": 7.180125,
+      "wallSeconds": 0.6192945309994684,
+      "wallRTF": 0.08625121860684436,
+      "sha256": "f10378336a4e584f3f63799e62f99d5add3c2a401b51d3abe7d3a3a82f255ada"
+    },
+    {
+      "file": "yue.mp3",
+      "language": "yue",
+      "text": "呢几个字都表达唔到我想讲嘅意思。",
+      "audioSeconds": 5.20765625,
+      "wallSeconds": 0.8759826679997786,
+      "wallRTF": 0.16821053962610888,
+      "sha256": "5098eebc13530a66e4eac1f30d3246e65c9cfc4e096665f9d395aca8eff0d181"
+    },
+    {
+      "file": "ja.mp3",
+      "language": "ja",
+      "text": "うちの中学は弁当制で持っていきない場合は50円の学校販売のパンを買う。",
+      "audioSeconds": 7.229625,
+      "wallSeconds": 0.5986572330002673,
+      "wallRTF": 0.08280612521400035,
+      "sha256": "496dbc43b289e1d0d0cb916df9737450bca56acd8aaca046a7a2472363b1be53"
+    },
+    {
+      "file": "ko.mp3",
+      "language": "ko",
+      "text": "조금만 생각을 하면서 살면 훨씬 편할 거야.",
+      "audioSeconds": 4.6515,
+      "wallSeconds": 1.324558361000527,
+      "wallRTF": 0.2847594025584278,
+      "sha256": "8612f62db8319a6cb4ab4b1d2039bfc32f174f89611889ddafdeb5c0a6070b5f"
+    }
+  ]
+}

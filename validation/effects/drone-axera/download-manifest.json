@@ -1,0 +1,37 @@
+{
+  "repo": "AXERA-TECH/Drone-axera",
+  "revision": "bca09e938a5ef7cdf81862e4acd4b706718558a3",
+  "complete": true,
+  "files": [
+    {
+      "path": "axmodel_infer_yolo11.py",
+      "size": 8703,
+      "sha256": null,
+      "gitBlob": "f6edcd18b69b5ea66bb978398a9ca052a1dc2082",
+      "verifiedHashes": {
+        "sha256": "c59db6f724bc3018ee168ff61ffe1e6e53db5d7975ab927630c6061d0173d933",
+        "gitBlob": "f6edcd18b69b5ea66bb978398a9ca052a1dc2082"
+      }
+    },
+    {
+      "path": "AX650/yolo11s_drone_650.axmodel",
+      "size": 10164276,
+      "sha256": "841f06045c080fe0960f31c88b912d6996e3e8df235bc7b2fd826cb6b21145c9",
+      "gitBlob": "c9c425c34b2f1d33e862f608ea5092f99b563407",
+      "verifiedHashes": {
+        "sha256": "841f06045c080fe0960f31c88b912d6996e3e8df235bc7b2fd826cb6b21145c9",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "test/23.jpg",
+      "size": 21074,
+      "sha256": "e0909d98ca629d9d97a2687240351fa7d95a5d97056c7dff6065b06f5aa76bab",
+      "gitBlob": "1c19f3e1a9c383f041a2b4e69c4050762146a02b",
+      "verifiedHashes": {
+        "sha256": "e0909d98ca629d9d97a2687240351fa7d95a5d97056c7dff6065b06f5aa76bab",
+        "gitBlob": null
+      }
+    }
+  ]
+}

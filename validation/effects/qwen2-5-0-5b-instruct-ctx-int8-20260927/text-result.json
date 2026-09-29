@@ -1,0 +1,55 @@
+{
+  "kind": "legacy-text",
+  "modelId": "Qwen2.5-0.5B-Instruct-CTX-Int8",
+  "provider": "AXCL C++",
+  "completed": true,
+  "binarySha256": "1f9f1a1ca329b47f70840e8b6d104ce8248a82326aa2402bccb31144590a8fb2",
+  "postConfig": {
+    "enable_temperature": false,
+    "temperature": 0.9,
+    "enable_repetition_penalty": false,
+    "repetition_penalty": 1.2,
+    "penalty_window": 20,
+    "enable_top_p_sampling": false,
+    "top_p": 0.8,
+    "enable_top_k_sampling": true,
+    "top_k": 1
+  },
+  "revision": "2aca5290377e6fa7ec1f49e37eda6554699ccfd0",
+  "date": "2026-09-27",
+  "samples": [
+    {
+      "input": "What is 2 + 3? Reply with only the number.",
+      "output": "5",
+      "exitCode": 0,
+      "processSeconds": 18.456815717974678,
+      "observation": "精确返回 5，数值与格式正确。"
+    },
+    {
+      "input": "请用一句中文说明 PCIe 的用途。",
+      "output": "PCIe（Peripheral Component Interconnect Express）是一种高速数据传输接口，广泛应用于计算机、服务器、存储设备和网络设备等设备中。它的主要用途包括：\n\n1. **高速数据传输**：PCIe支持高速数据传输，能够实现数据的高速传输，适用于需要大量数据传输的场景，如高速网络、高速存储设备等。\n\n2. **高带宽**：PCIe的带宽非常大，可以支持更高的数据传输速率，适用于需要大量数据传输的场景，如高速网络、高速存储设备等。\n\n3. **低延迟**：PCIe的延迟非常低，可以实现极低的延迟，适用于需要高实时性的场景，如高速网络、高速存储设备等。\n\n4. **高可靠性**：PCIe设计有高可靠性，可以实现设备的高可靠性和高稳定性，适用于需要高可靠性的场景，如高速网络、高速存储设备等。\n\n5. **兼容性**：PCIe支持多种设备和协议，可以兼容各种设备和协议，适用于需要兼容各种设备和协议的场景，如高速网络、高速存储设备等。\n\n6. **扩展性**：PCIe的扩展性非常强，可以支持更多的设备和协议，适用于需要支持更多设备和协议的场景，如高速网络、高速存储设备等。\n\nPCIe的广泛使用和性能优势使其成为现代计算机和网络设备中不可或缺的接口，广泛应用于各种设备中。",
+      "exitCode": 0,
+      "processSeconds": 55.577743066998664,
+      "observation": "返回了多段重复性说明，未遵循一句话要求；其中笼统的性能和兼容性表述未作为技术结论采纳。"
+    },
+    {
+      "input": "Return only a JSON object with apple equal to 3 and pear equal to 2.",
+      "output": "```json\n{\n  \"result\": [\n    \"apple\",\n    \"pear\"\n  ]\n}\n```",
+      "exitCode": 0,
+      "processSeconds": 20.183886740007438,
+      "observation": "返回了 result 数组，没有要求的 apple=3、pear=2 字段，且附带代码围栏，内容与格式均不符合要求。"
+    }
+  ],
+  "runtimeSource": {
+    "modelId": "Qwen2.5-0.5B-Instruct-GPTQ-Int4",
+    "repo": "AXERA-TECH/Qwen2.5-0.5B-Instruct-GPTQ-Int4",
+    "revision": "10db075dd5e99796adcec79452fcae0ec03ddded",
+    "path": "main_axcl_aarch64",
+    "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-0.5B-Instruct-GPTQ-Int4/resolve/10db075dd5e99796adcec79452fcae0ec03ddded/main_axcl_aarch64",
+    "sha256": "1f9f1a1ca329b47f70840e8b6d104ce8248a82326aa2402bccb31144590a8fb2"
+  },
+  "inferenceOptions": {
+    "system_prompt": "You are Qwen, created by Alibaba Cloud. You are a helpful assistant.",
+    "live_print": "0"
+  }
+}

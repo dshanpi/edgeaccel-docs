@@ -1,0 +1,37 @@
+{
+  "repo": "AXERA-TECH/RMBG-1.4",
+  "revision": "5c6acadadf47c5da55cda5ed869d7de07dfc4ecb",
+  "complete": true,
+  "files": [
+    {
+      "path": "ax_inference.py",
+      "size": 5419,
+      "sha256": null,
+      "gitBlob": "e016852fb631570b0c9a99fefd821e9c3c35b958",
+      "verifiedHashes": {
+        "sha256": "7fbee162bbc6b153f437cc722a02ef0c6dca98b5e06cc2b329bb7db4fdd6791e",
+        "gitBlob": "e016852fb631570b0c9a99fefd821e9c3c35b958"
+      }
+    },
+    {
+      "path": "axmodel/rmbg1_4_ax650.axmodel",
+      "size": 45552006,
+      "sha256": "6849b3aad38a1f67e2098f860d0f58f20407502ce5a468200e24303763a95f0f",
+      "gitBlob": "210290cc97d29b4764fde2866bb66649d05c263f",
+      "verifiedHashes": {
+        "sha256": "6849b3aad38a1f67e2098f860d0f58f20407502ce5a468200e24303763a95f0f",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "img/example_input.jpg",
+      "size": 326645,
+      "sha256": "1e9cff13a43d13ec0d0d733a55234e862a35c282cdbfa197c85223a937f28a56",
+      "gitBlob": "d2c4734448cc6528e01235de6dc49beb8f87d396",
+      "verifiedHashes": {
+        "sha256": "1e9cff13a43d13ec0d0d733a55234e862a35c282cdbfa197c85223a937f28a56",
+        "gitBlob": null
+      }
+    }
+  ]
+}

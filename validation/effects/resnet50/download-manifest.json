@@ -1,0 +1,77 @@
+{
+  "repo": "AXERA-TECH/resnet50",
+  "revision": "e36200659c15f6c22adb5f1d1720c73459c58e20",
+  "complete": true,
+  "files": [
+    {
+      "path": "models/model.axmodel",
+      "size": 26873504,
+      "sha256": "45b969bc0d59579354cc6604d61750b15ae1925e5ca49b4e58cc88fc2ef953d3",
+      "gitBlob": "3f3136f6644ab297d9fb9dd9e4f9b29214c9bd08",
+      "verifiedHashes": {
+        "sha256": "45b969bc0d59579354cc6604d61750b15ae1925e5ca49b4e58cc88fc2ef953d3",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/model_meta.json",
+      "size": 664,
+      "sha256": null,
+      "gitBlob": "e0f35e57f420f25ef7f32c92d58be862447c76c2",
+      "verifiedHashes": {
+        "sha256": "75a061835f24f39b227456582f733dc1049c8bbab2d6c5461fd5e461fe3b7963",
+        "gitBlob": "e0f35e57f420f25ef7f32c92d58be862447c76c2"
+      }
+    },
+    {
+      "path": "python/example.py",
+      "size": 652,
+      "sha256": null,
+      "gitBlob": "7fab60540c2b440cb36a08e52118e7924bfcc782",
+      "verifiedHashes": {
+        "sha256": "0caa099acb7e353cd73fcdb946702cf00761b4ca5028e7c4107aec76959dea73",
+        "gitBlob": "7fab60540c2b440cb36a08e52118e7924bfcc782"
+      }
+    },
+    {
+      "path": "python/resnet50_sdk/__init__.py",
+      "size": 42,
+      "sha256": null,
+      "gitBlob": "82dab2066f033711bdcf05aefc36460712db16e3",
+      "verifiedHashes": {
+        "sha256": "fa11bf3568515df0de042e979e26703245e7a388fd6aa84149d5fcaf38a3423a",
+        "gitBlob": "82dab2066f033711bdcf05aefc36460712db16e3"
+      }
+    },
+    {
+      "path": "python/resnet50_sdk/inference.py",
+      "size": 569,
+      "sha256": null,
+      "gitBlob": "a1c43fb25632c9d5847ad9f7421a150e1d401c44",
+      "verifiedHashes": {
+        "sha256": "d07c0e04b756fed46e06cfeb9c4ed2c2068e80f4c0563facf02fee789454b4aa",
+        "gitBlob": "a1c43fb25632c9d5847ad9f7421a150e1d401c44"
+      }
+    },
+    {
+      "path": "python/resnet50_sdk/postprocess.py",
+      "size": 1180,
+      "sha256": null,
+      "gitBlob": "71b9d8ed798603589602fe710d28408100f800d1",
+      "verifiedHashes": {
+        "sha256": "d54993166c3ad3cd521f801c1dac09eb8ff25a48dfa3b1560bd50ebefc294af5",
+        "gitBlob": "71b9d8ed798603589602fe710d28408100f800d1"
+      }
+    },
+    {
+      "path": "python/resnet50_sdk/preprocess.py",
+      "size": 696,
+      "sha256": null,
+      "gitBlob": "8e114a0dce7895cb4c4dd92c2a2dcbb3cad903d2",
+      "verifiedHashes": {
+        "sha256": "6ebaffa1af6d0ef69549124d4911edb6c492c6cb3ce3cd0f4467a0499713471e",
+        "gitBlob": "8e114a0dce7895cb4c4dd92c2a2dcbb3cad903d2"
+      }
+    }
+  ]
+}

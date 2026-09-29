@@ -1,0 +1,103 @@
+[0000aaaaeab6e560] main libvlc debug: VLC media player - 3.0.20 Vetinari
+[0000aaaaeab6e560] main libvlc debug: Copyright © 1996-2023 the VideoLAN team
+[0000aaaaeab6e560] main libvlc debug: revision 3.0.20-0-g6f0d0ab126b
+[0000aaaaeab6e560] main libvlc debug: configured with ./configure  '--build=aarch64-linux-gnu' '--prefix=/usr' '--includedir=${prefix}/include' '--mandir=${prefix}/share/man' '--infodir=${prefix}/share/info' '--sysconfdir=/etc' '--localstatedir=/var' '--disable-option-checking' '--disable-silent-rules' '--libdir=${prefix}/lib/aarch64-linux-gnu' '--runstatedir=/run' '--disable-maintainer-mode' '--disable-dependency-tracking' '--disable-debug' '--config-cache' '--disable-update-check' '--enable-fast-install' '--docdir=/usr/share/doc/vlc' '--with-binary-version=3.0.20-3build6' '--enable-a52' '--enable-aa' '--enable-aribsub' '--enable-avahi' '--enable-bluray' '--enable-caca' '--enable-chromaprint' '--enable-chromecast' '--enable-dav1d' '--enable-dbus' '--enable-dca' '--enable-dvbpsi' '--enable-dvdnav' '--enable-faad' '--enable-flac' '--enable-fluidsynth' '--enable-freetype' '--enable-fribidi' '--enable-gles2' '--enable-gnutls' '--enable-harfbuzz' '--enable-jack' '--enable-kate' '--enable-libass' '--enable-libmpeg2' '--enable-libxml2' '--enable-lirc' '--enable-mad' '--enable-matroska' '--enable-mod' '--enable-mpc' '--enable-mpg123' '--enable-mtp' '--enable-ncurses' '--enable-notify' '--enable-ogg' '--enable-opus' '--enable-pulse' '--enable-qt' '--enable-realrtsp' '--enable-samplerate' '--enable-sftp' '--enable-shine' '--enable-shout' '--enable-skins2' '--enable-soxr' '--enable-spatialaudio' '--enable-speex' '--enable-srt' '--enable-svg' '--enable-svgdec' '--enable-taglib' '--enable-theora' '--enable-twolame' '--enable-upnp' '--enable-vdpau' '--enable-vnc' '--enable-vorbis' '--enable-x264' '--enable-x265' '--enable-zvbi' '--with-kde-solid=/usr/share/solid/actions/' '--disable-aom' '--disable-crystalhd' '--disable-d3d11va' '--disable-decklink' '--disable-directx' '--disable-dsm' '--disable-dxva2' '--disable-fdkaac' '--disable-fluidlite' '--disable-freerdp' '--disable-goom' '--disable-gst-decode' '--disable-libplacebo' '--disable-libtar' '--disable-live555' '--disable-macosx' '--disable-macosx-avfoundation' '--disable-macosx-qtkit' '--disable-mfx' '--disable-microdns' '--disable-opencv' '--disable-projectm' '--disable-schroedinger' '--disable-sdl-image' '--disable-sndio' '--disable-sparkle' '--disable-telx' '--disable-vpx' '--disable-vsxu' '--disable-wasapi' '--enable-alsa' '--enable-dc1394' '--enable-dv1394' '--enable-linsys' '--enable-nfs' '--enable-udev' '--enable-v4l2' '--enable-wayland' '--enable-vcd' '--enable-smbclient' '--disable-oss' '--disable-mmx' '--disable-sse' '--disable-neon' '--disable-altivec' '--disable-omxil' 'build_alias=aarch64-linux-gnu' 'CFLAGS=-g -O2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -ffile-prefix-map=/build/vlc-98JX8g/vlc-3.0.20=. -flto=auto -ffat-lto-objects -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -mbranch-protection=standard -fdebug-prefix-map=/build/vlc-98JX8g/vlc-3.0.20=/usr/src/vlc-3.0.20-3build6 ' 'LDFLAGS=-Wl,-Bsymbolic-functions -flto=auto -ffat-lto-objects -Wl,-z,relro -Wl,-z,now' 'CPPFLAGS=-Wdate-time -D_FORTIFY_SOURCE=3' 'CXXFLAGS=-g -O2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -ffile-prefix-map=/build/vlc-98JX8g/vlc-3.0.20=. -flto=auto -ffat-lto-objects -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -mbranch-protection=standard -fdebug-prefix-map=/build/vlc-98JX8g/vlc-3.0.20=/usr/src/vlc-3.0.20-3build6 ' 'OBJCFLAGS=-g -O2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -ffile-prefix-map=/build/vlc-98JX8g/vlc-3.0.20=. -flto=auto -ffat-lto-objects -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -mbranch-protection=standard -fdebug-prefix-map=/build/vlc-98JX8g/vlc-3.0.20=/usr/src/vlc-3.0.20-3build6'
+[0000aaaaeab6e560] main libvlc debug: searching plug-in modules
+[0000aaaaeab6e560] main libvlc debug: loading plugins cache file /usr/lib/aarch64-linux-gnu/vlc/plugins/plugins.dat
+[0000aaaaeab6e560] main libvlc debug: recursively browsing `/usr/lib/aarch64-linux-gnu/vlc/plugins'
+[0000aaaaeab6e560] main libvlc debug: plug-ins loaded: 499 modules
+[0000aaaaeab6e560] main libvlc debug: opening config file (/home/baiwen/.config/vlc/vlcrc)
+[0000aaaaeab6e8c0] main logger debug: looking for logger module matching "any": 4 candidates
+[0000aaaaeab6e8c0] main logger debug: using logger module "console"
+[0000aaaaeab6e560] main libvlc debug: translation test: code is "C"
+[0000aaaaeac043e0] main keystore debug: looking for keystore module matching "memory": 4 candidates
+[0000aaaaeac043e0] main keystore debug: using keystore module "memory"
+[0000aaaaeab6e560] main libvlc debug: CPU has capabilities FPU 
+[0000aaaaeabf8260] main playlist debug: creating audio output
+[0000aaaaeabfa500] main audio output debug: looking for audio output module matching "dummy": 5 candidates
+[0000aaaaeabfa500] main audio output debug: using audio output module "adummy"
+[0000aaaaeabf8260] main playlist debug: keeping audio output
+[0000aaaaeabfbfd0] main interface debug: looking for interface module matching "dbus,none": 17 candidates
+[0000aaaaeabfbfd0] dbus interface error: Failed to connect to the D-Bus session daemon: Unable to autolaunch a dbus-daemon without a $DISPLAY for X11
+[0000aaaaeabfbfd0] main interface debug: no interface modules matched
+[0000aaaaeabfbfd0] main interface error: no suitable interface module
+[0000aaaaeab6e560] main libvlc error: interface "dbus,none" initialization failed
+[0000aaaaeabfbfd0] main interface debug: looking for interface module matching "hotkeys,none": 17 candidates
+[0000aaaaeabfbfd0] main interface debug: using interface module "hotkeys"
+[0000aaaaeac0a660] main interface debug: looking for interface module matching "globalhotkeys,none": 17 candidates
+[0000aaaaeac0a660] main interface debug: no interface modules matched
+[0000aaaaeac0a660] main interface error: no suitable interface module
+[0000aaaaeab6e560] main libvlc error: interface "globalhotkeys,none" initialization failed
+[0000aaaaeac0a660] main interface debug: looking for interface module matching "dummy": 17 candidates
+[0000aaaaeac0a660] dummy interface: using the dummy interface module...
+[0000aaaaeac0a660] main interface debug: using interface module "dummy"
+[0000aaaaeabf8260] main playlist debug: processing request item: null, node: Playlist, skip: 0
+[0000aaaaeabf8260] main playlist debug: rebuilding array of current - root Playlist
+[0000aaaaeabf8260] main playlist debug: rebuild done - 1 items, index -1
+[0000aaaaeabf8260] main playlist debug: starting playback of new item
+[0000aaaaeabf8260] main playlist debug: resyncing on rtsp://127.0.0.1:8554/overview
+[0000aaaaeabf8260] main playlist debug: rtsp://127.0.0.1:8554/overview is at 0
+[0000aaaaeabf8260] main playlist debug: creating new input thread
+[0000ffffb0000ca0] main input debug: Creating an input for 'rtsp://127.0.0.1:8554/overview'
+[0000aaaaeabf8260] main playlist debug: requesting art for new input thread
+[0000ffffac000c40] main meta fetcher debug: looking for meta fetcher module matching "any": 1 candidates
+[0000ffffb0000ca0] main input debug: using timeshift granularity of 50 MiB
+[0000ffffb0000ca0] main input debug: using default timeshift path
+[0000ffffb0000ca0] main input debug: `rtsp://127.0.0.1:8554/overview' gives access `rtsp' demux `any' path `127.0.0.1:8554/overview'
+[0000ffffa0000fc0] main input source debug: creating demux: access='rtsp' demux='any' location='127.0.0.1:8554/overview' file='(null)'
+[0000ffffa0001160] main demux debug: looking for access_demux module matching "rtsp": 16 candidates
+[0000ffffa0001160] main demux debug: no access_demux modules matched
+[0000ffffa00015b0] main stream debug: creating access: rtsp://127.0.0.1:8554/overview
+[0000ffffa00015b0] main stream debug: looking for access module matching "rtsp": 28 candidates
+[0000ffffac000c40] lua meta fetcher debug: Trying Lua scripts in /home/baiwen/.local/share/vlc/lua/meta/fetcher
+[0000ffffac000c40] lua meta fetcher debug: Trying Lua scripts in /usr/lib/aarch64-linux-gnu/vlc/lua/meta/fetcher
+[0000ffffac000c40] lua meta fetcher debug: Trying Lua scripts in /usr/share/vlc/lua/meta/fetcher
+[0000ffffac000c40] main meta fetcher debug: no meta fetcher modules matched
+[0000ffffac000c40] main art finder debug: looking for art finder module matching "any": 2 candidates
+[0000ffffa00015b0] satip stream debug: try to open 'rtsp://127.0.0.1:8554/overview'
+[0000ffffa00015b0] satip stream debug: connect to host '127.0.0.1'
+[0000ffffa00015b0] main stream debug: net: connecting to 127.0.0.1 port 8554
+[0000ffffac000c40] lua art finder debug: Trying Lua scripts in /home/baiwen/.local/share/vlc/lua/meta/art
+[0000ffffac000c40] lua art finder debug: Trying Lua scripts in /usr/lib/aarch64-linux-gnu/vlc/lua/meta/art
+[0000ffffac000c40] lua art finder debug: Trying Lua playlist script /usr/lib/aarch64-linux-gnu/vlc/lua/meta/art/00_musicbrainz.luac
+[0000ffffac000c40] lua art finder debug: skipping script (unmatched scope) /usr/lib/aarch64-linux-gnu/vlc/lua/meta/art/00_musicbrainz.luac
+[0000ffffac000c40] lua art finder debug: Trying Lua playlist script /usr/lib/aarch64-linux-gnu/vlc/lua/meta/art/01_googleimage.luac
+[0000ffffac000c40] lua art finder debug: skipping script (unmatched scope) /usr/lib/aarch64-linux-gnu/vlc/lua/meta/art/01_googleimage.luac
+[0000ffffa00015b0] main stream debug: connection succeeded (socket = 4)
+[0000ffffac000c40] lua art finder debug: Trying Lua playlist script /usr/lib/aarch64-linux-gnu/vlc/lua/meta/art/02_frenchtv.luac
+[0000ffffa00015b0] main stream debug: net: opening 0.0.0.0 datagram port 9422
+[0000ffffa00015b0] main stream debug: net: opening 0.0.0.0 datagram port 9423
+[0000ffffac000c40] lua art finder debug: skipping script (unmatched scope) /usr/lib/aarch64-linux-gnu/vlc/lua/meta/art/02_frenchtv.luac
+[0000ffffac000c40] lua art finder debug: Trying Lua playlist script /usr/lib/aarch64-linux-gnu/vlc/lua/meta/art/03_lastfm.luac
+[0000ffffa00015b0] satip stream error: Failed to setup RTSP session
+[0000ffffac000c40] lua art finder debug: skipping script (unmatched scope) /usr/lib/aarch64-linux-gnu/vlc/lua/meta/art/03_lastfm.luac
+[0000ffffac000c40] lua art finder debug: Trying Lua scripts in /usr/share/vlc/lua/meta/art
+[0000ffffac000c40] main art finder debug: no art finder modules matched
+[0000ffffa00015b0] main stream debug: net: connecting to 127.0.0.1 port 8554
+[0000ffffa00015b0] main stream debug: connection succeeded (socket = 3)
+[0000ffffa00015b0] access_realrtsp stream warning: Cseq mismatch, got 1, assumed 0
+[0000ffffa00015b0] access_realrtsp stream debug: rtsp connected
+[0000ffffa00015b0] access_realrtsp stream warning: only real/helix rtsp servers supported for now
+[0000ffffa00015b0] main stream debug: no access modules matched
+[0000ffffb0000ca0] main input error: Your input can't be opened
+[0000ffffb0000ca0] main input error: VLC is unable to open the MRL 'rtsp://127.0.0.1:8554/overview'. Check the log for details.
+[0000aaaaeabf8260] main playlist debug: dead input
+[0000aaaaeabf8260] main playlist debug: changing item without a request (current 0/1)
+[0000aaaaeabf8260] main playlist debug: nothing to play
+[0000aaaaeabf8260] main playlist: end of playlist, exiting
+[0000aaaaeab6e560] main libvlc debug: exiting
+[0000aaaaeab6e560] main libvlc debug: exiting
+[0000aaaaeab6e560] main libvlc debug: removing all interfaces
+[0000aaaaeac0a660] main interface debug: removing module "dummy"
+[0000aaaaeabfbfd0] main interface debug: removing module "hotkeys"
+[0000aaaaeabf8260] main playlist debug: destroying
+[0000aaaaeabf8260] main playlist debug: deactivating the playlist
+[0000aaaaeabfa500] main audio output debug: removing module "adummy"
+[0000aaaaeabfa500] main playlist export debug: saving media library to file /home/baiwen/.local/share/vlc/ml.xspf.tmp62132
+[0000aaaaeabfa500] main playlist export debug: looking for playlist export module matching "export-xspf": 4 candidates
+[0000aaaaeabfa500] main playlist export debug: using playlist export module "export"
+[0000aaaaeabfa500] main playlist export debug: removing module "export"
+[0000aaaaeabf8260] main playlist debug: deleting item `Media Library'
+[0000aaaaeabf8260] main playlist debug: deleting item `rtsp://127.0.0.1:8554/overview'
+[0000aaaaeabf8260] main playlist debug: deleting item `Playlist'
+[0000aaaaeac043e0] main keystore debug: removing module "memory"

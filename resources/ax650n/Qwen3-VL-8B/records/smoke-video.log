@@ -1,0 +1,112 @@
+Mode: video | AX8850 device: 0 | Native tokenizer
+Enter a question, then an image path (blank for text-only) or a JPEG frame directory in video mode.
+Enter q at the question prompt to exit.
+[1;30;32m[I][                            Init][ 162]: LLM init start[0m
+tokenizer_type = 1
+[1;30;33m  2% | █                                 |   1 /  39 [0.40s<15.72s, 2.48 count/s] [1;30;32mtokenizer init ok[0m[1;30;32m[I][                            Init][  45]: LLaMaEmbedSelector use mmap[0m
+[1;30;33m  5% | ██                                |   2 /  39 [0.40s<7.86s, 4.96 count/s] [1;30;32membed_selector init ok[0m
+[1;30;32m[I][                             run][  30]: AXCLWorker start with devid 0[0m
+[1;30;33m  7% | ███                               |   3 /  39 [4.08s<53.01s, 0.74 count/s] [1;30;32minit 0 axmodel ok,devid(0) remain_cmm(15066 MB)[0m[1;30;33m 10% | ████                              |   4 /  39 [7.26s<70.82s, 0.55 count/s] [1;30;32minit 1 axmodel ok,devid(0) remain_cmm(14920 MB)[0m[1;30;33m 12% | █████                             |   5 /  39 [10.42s<81.31s, 0.48 count/s] [1;30;32minit 2 axmodel ok,devid(0) remain_cmm(14773 MB)[0m[1;30;33m 15% | █████                             |   6 /  39 [13.67s<88.85s, 0.44 count/s] [1;30;32minit 3 axmodel ok,devid(0) remain_cmm(14626 MB)[0m[1;30;33m 17% | ██████                            |   7 /  39 [16.92s<94.28s, 0.41 count/s] [1;30;32minit 4 axmodel ok,devid(0) remain_cmm(14479 MB)[0m[1;30;33m 20% | ███████                           |   8 /  39 [20.19s<98.41s, 0.40 count/s] [1;30;32minit 5 axmodel ok,devid(0) remain_cmm(14333 MB)[0m[1;30;33m 23% | ████████                          |   9 /  39 [23.41s<101.43s, 0.38 count/s] [1;30;32minit 6 axmodel ok,devid(0) remain_cmm(14186 MB)[0m[1;30;33m 25% | █████████                         |  10 /  39 [26.59s<103.69s, 0.38 count/s] [1;30;32minit 7 axmodel ok,devid(0) remain_cmm(14039 MB)[0m[1;30;33m 28% | ██████████                        |  11 /  39 [29.85s<105.82s, 0.37 count/s] [1;30;32minit 8 axmodel ok,devid(0) remain_cmm(13892 MB)[0m[1;30;33m 30% | ██████████                        |  12 /  39 [33.16s<107.76s, 0.36 count/s] [1;30;32minit 9 axmodel ok,devid(0) remain_cmm(13746 MB)[0m[1;30;33m 33% | ███████████                       |  13 /  39 [36.41s<109.22s, 0.36 count/s] [1;30;32minit 10 axmodel ok,devid(0) remain_cmm(13599 MB)[0m[1;30;33m 35% | ████████████                      |  14 /  39 [39.69s<110.55s, 0.35 count/s] [1;30;32minit 11 axmodel ok,devid(0) remain_cmm(13452 MB)[0m[1;30;33m 38% | █████████████                     |  15 /  39 [42.96s<111.69s, 0.35 count/s] [1;30;32minit 12 axmodel ok,devid(0) remain_cmm(13305 MB)[0m[1;30;33m 41% | ██████████████                    |  16 /  39 [46.21s<112.64s, 0.35 count/s] [1;30;32minit 13 axmodel ok,devid(0) remain_cmm(13159 MB)[0m[1;30;33m 43% | ██████████████                    |  17 /  39 [49.45s<113.45s, 0.34 count/s] [1;30;32minit 14 axmodel ok,devid(0) remain_cmm(13012 MB)[0m[1;30;33m 46% | ███████████████                   |  18 /  39 [52.79s<114.38s, 0.34 count/s] [1;30;32minit 15 axmodel ok,devid(0) remain_cmm(12865 MB)[0m[1;30;33m 48% | ████████████████                  |  19 /  39 [56.10s<115.15s, 0.34 count/s] [1;30;32minit 16 axmodel ok,devid(0) remain_cmm(12718 MB)[0m[1;30;33m 51% | █████████████████                 |  20 /  39 [59.36s<115.75s, 0.34 count/s] [1;30;32minit 17 axmodel ok,devid(0) remain_cmm(12571 MB)[0m[1;30;33m 53% | ██████████████████                |  21 /  39 [62.62s<116.29s, 0.34 count/s] [1;30;32minit 18 axmodel ok,devid(0) remain_cmm(12425 MB)[0m[1;30;33m 56% | ███████████████████               |  22 /  39 [65.95s<116.91s, 0.33 count/s] [1;30;32minit 19 axmodel ok,devid(0) remain_cmm(12278 MB)[0m[1;30;33m 58% | ███████████████████               |  23 /  39 [69.32s<117.55s, 0.33 count/s] [1;30;32minit 20 axmodel ok,devid(0) remain_cmm(12131 MB)[0m[1;30;33m 61% | ████████████████████              |  24 /  39 [72.61s<118.00s, 0.33 count/s] [1;30;32minit 21 axmodel ok,devid(0) remain_cmm(11984 MB)[0m[1;30;33m 64% | █████████████████████             |  25 /  39 [75.94s<118.47s, 0.33 count/s] [1;30;32minit 22 axmodel ok,devid(0) remain_cmm(11838 MB)[0m[1;30;33m 66% | ██████████████████████            |  26 /  39 [79.28s<118.93s, 0.33 count/s] [1;30;32minit 23 axmodel ok,devid(0) remain_cmm(11691 MB)[0m[1;30;33m 69% | ███████████████████████           |  27 /  39 [82.64s<119.37s, 0.33 count/s] [1;30;32minit 24 axmodel ok,devid(0) remain_cmm(11544 MB)[0m[1;30;33m 71% | ███████████████████████           |  28 /  39 [86.02s<119.82s, 0.33 count/s] [1;30;32minit 25 axmodel ok,devid(0) remain_cmm(11397 MB)[0m[1;30;33m 74% | ████████████████████████          |  29 /  39 [89.49s<120.35s, 0.32 count/s] [1;30;32minit 26 axmodel ok,devid(0) remain_cmm(11251 MB)[0m[1;30;33m 76% | █████████████████████████         |  30 /  39 [92.92s<120.79s, 0.32 count/s] [1;30;32minit 27 axmodel ok,devid(0) remain_cmm(11104 MB)[0m[1;30;33m 79% | ██████████████████████████        |  31 /  39 [96.27s<121.12s, 0.32 count/s] [1;30;32minit 28 axmodel ok,devid(0) remain_cmm(10957 MB)[0m[1;30;33m 82% | ███████████████████████████       |  32 /  39 [99.57s<121.35s, 0.32 count/s] [1;30;32minit 29 axmodel ok,devid(0) remain_cmm(10810 MB)[0m[1;30;33m 84% | ████████████████████████████      |  33 /  39 [102.93s<121.64s, 0.32 count/s] [1;30;32minit 30 axmodel ok,devid(0) remain_cmm(10664 MB)[0m[1;30;33m 87% | ████████████████████████████      |  34 /  39 [106.34s<121.97s, 0.32 count/s] [1;30;32minit 31 axmodel ok,devid(0) remain_cmm(10517 MB)[0m[1;30;33m 89% | █████████████████████████████     |  35 /  39 [109.70s<122.24s, 0.32 count/s] [1;30;32minit 32 axmodel ok,devid(0) remain_cmm(10370 MB)[0m[1;30;33m 92% | ██████████████████████████████    |  36 /  39 [113.09s<122.51s, 0.32 count/s] [1;30;32minit 33 axmodel ok,devid(0) remain_cmm(10223 MB)[0m[1;30;33m 94% | ███████████████████████████████   |  37 /  39 [116.39s<122.68s, 0.32 count/s] [1;30;32minit 34 axmodel ok,devid(0) remain_cmm(10077 MB)[0m[1;30;33m 97% | ████████████████████████████████  |  38 /  39 [119.64s<122.79s, 0.32 count/s] [1;30;32minit 35 axmodel ok,devid(0) remain_cmm(9930 MB)[0m[1;30;33m100% | ████████████████████████████████ |  39 /  39 [132.68s<132.68s, 0.29 count/s] [1;30;32minit post axmodel ok,remain_cmm(9282 MB)[0m[1;30;32m[I][                            Init][ 329]: image encoder output float32[0m
+
+[1;30;32m[I][                            Init][ 341]: max_token_len : 2047[0m
+[1;30;32m[I][                            Init][ 344]: kv_cache_size : 1024, kv_cache_num: 2047[0m
+[1;30;32m[I][                            Init][ 352]: prefill_token_num : 128[0m
+[1;30;32m[I][                            Init][ 356]: grp: 1, prefill_max_token_num : 1[0m
+[1;30;32m[I][                            Init][ 356]: grp: 2, prefill_max_token_num : 128[0m
+[1;30;32m[I][                            Init][ 356]: grp: 3, prefill_max_token_num : 256[0m
+[1;30;32m[I][                            Init][ 356]: grp: 4, prefill_max_token_num : 384[0m
+[1;30;32m[I][                            Init][ 356]: grp: 5, prefill_max_token_num : 512[0m
+[1;30;32m[I][                            Init][ 356]: grp: 6, prefill_max_token_num : 640[0m
+[1;30;32m[I][                            Init][ 356]: grp: 7, prefill_max_token_num : 768[0m
+[1;30;32m[I][                            Init][ 356]: grp: 8, prefill_max_token_num : 896[0m
+[1;30;32m[I][                            Init][ 356]: grp: 9, prefill_max_token_num : 1024[0m
+[1;30;32m[I][                            Init][ 356]: grp: 10, prefill_max_token_num : 1152[0m
+[1;30;32m[I][                            Init][ 360]: prefill_max_token_num : 1152[0m
+[1;30;35m________________________
+|    ID| remain cmm(MB)|
+========================
+|     0|           8646|
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+[0m[1;30;32m[I][                     load_config][ 282]: load config: 
+{
+    "enable_repetition_penalty": false,
+    "enable_temperature": true,
+    "enable_top_k_sampling": true,
+    "enable_top_p_sampling": false,
+    "penalty_window": 30,
+    "repetition_penalty": 1,
+    "temperature": 0.7,
+    "top_k": 20,
+    "top_p": 0.8
+}
+[0m
+[1;30;32m[I][                            Init][ 457]: LLM init ok[0m
+Type "q" to exit, Ctrl+c to stop current running
+prompt >> 请用两句中文描述这段视频的主要内容。
+video >> video
+video/frame_0000.jpg
+video/frame_0008.jpg
+video/frame_0016.jpg
+video/frame_0024.jpg
+video/frame_0032.jpg
+video/frame_0040.jpg
+video/frame_0048.jpg
+video/frame_0056.jpg
+[1;30;32m[I][                     EncodeImage][ 531]: pixel_values size 4[0m
+[1;30;32m[I][                     EncodeImage][ 532]: grid_h 24 grid_w 24[0m
+[1;30;32m[I][                     EncodeImage][ 580]: image encode time : 1321.511963 ms, size : 4[0m
+[1;30;32m[I][                          Encode][ 633]: input_ids size:607[0m
+[1;30;32m[I][                          Encode][ 641]: offset 15[0m
+[1;30;32m[I][                          Encode][ 670]: img_embed.size:4, 589824[0m
+[1;30;32m[I][                          Encode][ 675]: offset:159[0m
+[1;30;32m[I][                          Encode][ 675]: offset:303[0m
+[1;30;32m[I][                          Encode][ 675]: offset:447[0m
+[1;30;32m[I][                          Encode][ 684]: out_embed size:2486272[0m
+[1;30;32m[I][                          Encode][ 685]: input_ids size 607[0m
+[1;30;32m[I][                          Encode][ 687]: position_ids size:607[0m
+[1;30;32m[I][                             Run][ 709]: input token num : 607, prefill_split_num : 5[0m
+[1;30;32m[I][                             Run][ 743]: input_num_token:128[0m
+[1;30;32m[I][                             Run][ 743]: input_num_token:128[0m
+[1;30;32m[I][                             Run][ 743]: input_num_token:128[0m
+[1;30;32m[I][                             Run][ 743]: input_num_token:128[0m
+[1;30;32m[I][                             Run][ 743]: input_num_token:95[0m
+[1;30;32m[I][                             Run][ 922]: ttft: 4749.89 ms[0m
+一群土拨鼠在山野间活泼地玩耍，它们互相追逐、打闹，展现出灵动可爱的天性。背景是苍翠的山峦和蓝天，构成一幅生动的自然画卷。
+
+[1;30;35m[N][                             Run][1075]: hit eos,avg 3.03 token/s
+[0m
+prompt >> 请用两句中文描述这段视频的道路交通状况。
+video >> deployment/traffic_frames
+deployment/traffic_frames/frame_0001.jpg
+deployment/traffic_frames/frame_0002.jpg
+deployment/traffic_frames/frame_0003.jpg
+deployment/traffic_frames/frame_0004.jpg
+deployment/traffic_frames/frame_0005.jpg
+deployment/traffic_frames/frame_0006.jpg
+deployment/traffic_frames/frame_0007.jpg
+deployment/traffic_frames/frame_0008.jpg
+[1;30;32m[I][                     EncodeImage][ 531]: pixel_values size 4[0m
+[1;30;32m[I][                     EncodeImage][ 532]: grid_h 24 grid_w 24[0m
+[1;30;32m[I][                     EncodeImage][ 580]: image encode time : 1243.989990 ms, size : 4[0m
+[1;30;32m[I][                          Encode][ 633]: input_ids size:608[0m
+[1;30;32m[I][                          Encode][ 641]: offset 15[0m
+[1;30;32m[I][                          Encode][ 670]: img_embed.size:4, 589824[0m
+[1;30;32m[I][                          Encode][ 675]: offset:159[0m
+[1;30;32m[I][                          Encode][ 675]: offset:303[0m
+[1;30;32m[I][                          Encode][ 675]: offset:447[0m
+[1;30;32m[I][                          Encode][ 684]: out_embed size:2490368[0m
+[1;30;32m[I][                          Encode][ 685]: input_ids size 608[0m
+[1;30;32m[I][                          Encode][ 687]: position_ids size:608[0m
+[1;30;32m[I][                             Run][ 709]: input token num : 608, prefill_split_num : 5[0m
+[1;30;32m[I][                             Run][ 743]: input_num_token:128[0m
+[1;30;32m[I][                             Run][ 743]: input_num_token:128[0m
+[1;30;32m[I][                             Run][ 743]: input_num_token:128[0m
+[1;30;32m[I][                             Run][ 743]: input_num_token:128[0m
+[1;30;32m[I][                             Run][ 743]: input_num_token:96[0m
+[1;30;32m[I][                             Run][ 922]: ttft: 4717.92 ms[0m
+这是一条宽阔的多车道城市主干道，车流密集，车辆在多个车道上有序行驶，道路中央设有公交专用道，交通标志和标线清晰，整体交通运行秩序井然。
+
+[1;30;35m[N][                             Run][1075]: hit eos,avg 3.09 token/s
+[0m
+prompt >> q
+[1;30;32m[I][                             run][  80]: AXCLWorker exit with devid 0[0m

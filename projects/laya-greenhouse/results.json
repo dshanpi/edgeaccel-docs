@@ -1,0 +1,576 @@
+{
+  "date": "2026-09-24",
+  "platform": "RK3576 + AX8850 16GB",
+  "runs": [
+    {
+      "case": "comfort",
+      "model": "laya-multilingual",
+      "backend": "pyaxengine",
+      "answers": {
+        "action": {
+          "type": "choice",
+          "choice": "补光",
+          "probabilities": {
+            "通风": 0.07607167966303503,
+            "补水": 0.05603898618203925,
+            "补光": 0.64617813731898,
+            "保持": 0.2217111968359457
+          },
+          "confidence": 0.2976895668635601,
+          "action": {
+            "act_probability": 1.0
+          },
+          "python_latency_ms": 37.46885900000052
+        },
+        "urgency": {
+          "type": "score",
+          "probabilities": {
+            "0": 0.1057562983950623,
+            "1": 0.7710261401885248,
+            "2": 0.12321756141641295
+          },
+          "legend": {
+            "0": "无需处理",
+            "1": "需要处理",
+            "2": "立即处理"
+          },
+          "score": 1.0174612630213506,
+          "confidence": 0.36640102474810776,
+          "action": {
+            "act_probability": 1.0
+          },
+          "python_latency_ms": 33.64823800001204
+        },
+        "water": {
+          "type": "noul",
+          "noul": 0.4241821420087855,
+          "confidence": 0.5758178579912145,
+          "action": {
+            "act_probability": 1.0
+          },
+          "python_latency_ms": 33.38077399999406
+        },
+        "heat": {
+          "type": "noul",
+          "noul": 0.2554602245816952,
+          "confidence": 0.7445397754183047,
+          "action": {
+            "act_probability": 1.0
+          },
+          "python_latency_ms": 33.747990000023265
+        }
+      },
+      "total_python_latency_ms": 138.2458610000299,
+      "wallMilliseconds": 149.10133600000108,
+      "revision": "4f02f411fb9b9b09b4a4842b4486177b9594ba9e",
+      "provider": "AXCLRTExecutionProvider",
+      "request": {
+        "state": "温室温度25℃，空气湿度60%，土壤湿度65%，光照强度80%。观察：叶片舒展，土壤湿润，光照充足，植物生长正常。",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "根据温室状态，选择当前最需要的操作。",
+            "criteria": [
+              "通风",
+              "补水",
+              "补光",
+              "保持"
+            ]
+          },
+          "urgency": {
+            "type": "score",
+            "instructions": "温室需要处理的紧急程度？",
+            "criteria": [
+              "无需处理",
+              "需要处理",
+              "立即处理"
+            ]
+          },
+          "water": {
+            "type": "noul",
+            "instructions": "植物缺水，需要浇水。"
+          },
+          "heat": {
+            "type": "noul",
+            "instructions": "温室太热，需要通风降温。"
+          }
+        }
+      }
+    },
+    {
+      "case": "dry",
+      "model": "laya-multilingual",
+      "backend": "pyaxengine",
+      "answers": {
+        "action": {
+          "type": "choice",
+          "choice": "补水",
+          "probabilities": {
+            "通风": 0.01090261828556131,
+            "补水": 0.7866640726167222,
+            "补光": 0.17065758089375077,
+            "保持": 0.03177572820396567
+          },
+          "confidence": 0.5315824776750095,
+          "action": {
+            "act_probability": 1.0
+          },
+          "python_latency_ms": 32.92372300001034
+        },
+        "urgency": {
+          "type": "score",
+          "probabilities": {
+            "0": 0.03508046056822135,
+            "1": 0.7454057672552851,
+            "2": 0.21951377217649343
+          },
+          "legend": {
+            "0": "无需处理",
+            "1": "需要处理",
+            "2": "立即处理"
+          },
+          "score": 1.184433311608272,
+          "confidence": 0.39068492867252436,
+          "action": {
+            "act_probability": 1.0
+          },
+          "python_latency_ms": 33.5426529999836
+        },
+        "water": {
+          "type": "noul",
+          "noul": 0.9399503947735061,
+          "confidence": 0.9399503947735061,
+          "action": {
+            "act_probability": 1.0
+          },
+          "python_latency_ms": 33.20372900000734
+        },
+        "heat": {
+          "type": "noul",
+          "noul": 0.7725056202035658,
+          "confidence": 0.7725056202035658,
+          "action": {
+            "act_probability": 1.0
+          },
+          "python_latency_ms": 33.61265400002367
+        }
+      },
+      "total_python_latency_ms": 133.28275900002495,
+      "wallMilliseconds": 140.22544400000925,
+      "revision": "4f02f411fb9b9b09b4a4842b4486177b9594ba9e",
+      "provider": "AXCLRTExecutionProvider",
+      "request": {
+        "state": "温室温度28℃，空气湿度35%，土壤湿度10%，光照强度75%。观察：连续多日没有浇水，土壤干裂，叶片萎蔫，需要给植物补水。",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "根据温室状态，选择当前最需要的操作。",
+            "criteria": [
+              "通风",
+              "补水",
+              "补光",
+              "保持"
+            ]
+          },
+          "urgency": {
+            "type": "score",
+            "instructions": "温室需要处理的紧急程度？",
+            "criteria": [
+              "无需处理",
+              "需要处理",
+              "立即处理"
+            ]
+          },
+          "water": {
+            "type": "noul",
+            "instructions": "植物缺水，需要浇水。"
+          },
+          "heat": {
+            "type": "noul",
+            "instructions": "温室太热，需要通风降温。"
+          }
+        }
+      }
+    },
+    {
+      "case": "hot",
+      "model": "laya-multilingual",
+      "backend": "pyaxengine",
+      "answers": {
+        "action": {
+          "type": "choice",
+          "choice": "通风",
+          "probabilities": {
+            "通风": 0.9368763274965641,
+            "补水": 0.006047723718351536,
+            "补光": 0.012984455926017888,
+            "保持": 0.04409149285906632
+          },
+          "confidence": 0.7936831504471993,
+          "action": {
+            "act_probability": 1.0
+          },
+          "python_latency_ms": 32.54367399998159
+        },
+        "urgency": {
+          "type": "score",
+          "probabilities": {
+            "0": 0.032501097245582554,
+            "1": 0.5927330493759949,
+            "2": 0.37476585337842244
+          },
+          "legend": {
+            "0": "无需处理",
+            "1": "需要处理",
+            "2": "立即处理"
+          },
+          "score": 1.3422647561328398,
+          "confidence": 0.2816521404276936,
+          "action": {
+            "act_probability": 1.0
+          },
+          "python_latency_ms": 33.74565700002563
+        },
+        "water": {
+          "type": "noul",
+          "noul": 0.538129380872837,
+          "confidence": 0.538129380872837,
+          "action": {
+            "act_probability": 1.0
+          },
+          "python_latency_ms": 33.45981699999356
+        },
+        "heat": {
+          "type": "noul",
+          "noul": 0.9201970668236519,
+          "confidence": 0.9201970668236519,
+          "action": {
+            "act_probability": 1.0
+          },
+          "python_latency_ms": 33.38777399997639
+        }
+      },
+      "total_python_latency_ms": 133.13692199997718,
+      "wallMilliseconds": 140.4147400000113,
+      "revision": "4f02f411fb9b9b09b4a4842b4486177b9594ba9e",
+      "provider": "AXCLRTExecutionProvider",
+      "request": {
+        "state": "温室温度42℃，空气湿度90%，土壤湿度70%，光照强度85%。观察：温室闷热，植物因高温萎蔫，需要打开通风设备降温。",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "根据温室状态，选择当前最需要的操作。",
+            "criteria": [
+              "通风",
+              "补水",
+              "补光",
+              "保持"
+            ]
+          },
+          "urgency": {
+            "type": "score",
+            "instructions": "温室需要处理的紧急程度？",
+            "criteria": [
+              "无需处理",
+              "需要处理",
+              "立即处理"
+            ]
+          },
+          "water": {
+            "type": "noul",
+            "instructions": "植物缺水，需要浇水。"
+          },
+          "heat": {
+            "type": "noul",
+            "instructions": "温室太热，需要通风降温。"
+          }
+        }
+      }
+    },
+    {
+      "case": "dark",
+      "model": "laya-multilingual",
+      "backend": "pyaxengine",
+      "answers": {
+        "action": {
+          "type": "choice",
+          "choice": "补光",
+          "probabilities": {
+            "通风": 0.0033317245708825334,
+            "补水": 0.007153210559391475,
+            "补光": 0.9510973895342153,
+            "保持": 0.03841767533551069
+          },
+          "confidence": 0.8360791739471114,
+          "action": {
+            "act_probability": 1.0
+          },
+          "python_latency_ms": 32.8764719999981
+        },
+        "urgency": {
+          "type": "score",
+          "probabilities": {
+            "0": 0.024148951941972148,
+            "1": 0.5978499467084326,
+            "2": 0.3780011013495953
+          },
+          "legend": {
+            "0": "无需处理",
+            "1": "需要处理",
+            "2": "立即处理"
+          },
+          "score": 1.3538521494076232,
+          "confidence": 0.3034815797201643,
+          "action": {
+            "act_probability": 1.0
+          },
+          "python_latency_ms": 32.47571400001448
+        },
+        "water": {
+          "type": "noul",
+          "noul": 0.4241821420087855,
+          "confidence": 0.5758178579912145,
+          "action": {
+            "act_probability": 1.0
+          },
+          "python_latency_ms": 33.42831699998783
+        },
+        "heat": {
+          "type": "noul",
+          "noul": 0.7982396186375263,
+          "confidence": 0.7982396186375263,
+          "action": {
+            "act_probability": 1.0
+          },
+          "python_latency_ms": 32.04578899999433
+        }
+      },
+      "total_python_latency_ms": 130.82629199999474,
+      "wallMilliseconds": 138.0233149999981,
+      "revision": "4f02f411fb9b9b09b4a4842b4486177b9594ba9e",
+      "provider": "AXCLRTExecutionProvider",
+      "request": {
+        "state": "温室温度23℃，空气湿度60%，土壤湿度65%，光照强度5%。观察：日照不足，温室里很暗，植物需要补充光照。",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "根据温室状态，选择当前最需要的操作。",
+            "criteria": [
+              "通风",
+              "补水",
+              "补光",
+              "保持"
+            ]
+          },
+          "urgency": {
+            "type": "score",
+            "instructions": "温室需要处理的紧急程度？",
+            "criteria": [
+              "无需处理",
+              "需要处理",
+              "立即处理"
+            ]
+          },
+          "water": {
+            "type": "noul",
+            "instructions": "植物缺水，需要浇水。"
+          },
+          "heat": {
+            "type": "noul",
+            "instructions": "温室太热，需要通风降温。"
+          }
+        }
+      }
+    },
+    {
+      "case": "dry-repeat",
+      "model": "laya-multilingual",
+      "backend": "pyaxengine",
+      "answers": {
+        "action": {
+          "type": "choice",
+          "choice": "补水",
+          "probabilities": {
+            "通风": 0.01090261828556131,
+            "补水": 0.7866640726167222,
+            "补光": 0.17065758089375077,
+            "保持": 0.03177572820396567
+          },
+          "confidence": 0.5315824776750095,
+          "action": {
+            "act_probability": 1.0
+          },
+          "python_latency_ms": 33.25243800000521
+        },
+        "urgency": {
+          "type": "score",
+          "probabilities": {
+            "0": 0.03508046056822135,
+            "1": 0.7454057672552851,
+            "2": 0.21951377217649343
+          },
+          "legend": {
+            "0": "无需处理",
+            "1": "需要处理",
+            "2": "立即处理"
+          },
+          "score": 1.184433311608272,
+          "confidence": 0.39068492867252436,
+          "action": {
+            "act_probability": 1.0
+          },
+          "python_latency_ms": 33.056434000002355
+        },
+        "water": {
+          "type": "noul",
+          "noul": 0.9399503947735061,
+          "confidence": 0.9399503947735061,
+          "action": {
+            "act_probability": 1.0
+          },
+          "python_latency_ms": 32.31850200000963
+        },
+        "heat": {
+          "type": "noul",
+          "noul": 0.7725056202035658,
+          "confidence": 0.7725056202035658,
+          "action": {
+            "act_probability": 1.0
+          },
+          "python_latency_ms": 33.21072899998967
+        }
+      },
+      "total_python_latency_ms": 131.83810300000687,
+      "wallMilliseconds": 138.8201649999985,
+      "revision": "4f02f411fb9b9b09b4a4842b4486177b9594ba9e",
+      "provider": "AXCLRTExecutionProvider",
+      "request": {
+        "state": "温室温度28℃，空气湿度35%，土壤湿度10%，光照强度75%。观察：连续多日没有浇水，土壤干裂，叶片萎蔫，需要给植物补水。",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "根据温室状态，选择当前最需要的操作。",
+            "criteria": [
+              "通风",
+              "补水",
+              "补光",
+              "保持"
+            ]
+          },
+          "urgency": {
+            "type": "score",
+            "instructions": "温室需要处理的紧急程度？",
+            "criteria": [
+              "无需处理",
+              "需要处理",
+              "立即处理"
+            ]
+          },
+          "water": {
+            "type": "noul",
+            "instructions": "植物缺水，需要浇水。"
+          },
+          "heat": {
+            "type": "noul",
+            "instructions": "温室太热，需要通风降温。"
+          }
+        }
+      }
+    },
+    {
+      "case": "freeform",
+      "model": "laya-multilingual",
+      "backend": "pyaxengine",
+      "answers": {
+        "action": {
+          "type": "choice",
+          "choice": "补水",
+          "probabilities": {
+            "通风": 0.06780371109846528,
+            "补水": 0.49432931301616717,
+            "补光": 0.16961010541379618,
+            "保持": 0.2682568704715713
+          },
+          "confidence": 0.14545066238880744,
+          "action": {
+            "act_probability": 1.0
+          },
+          "python_latency_ms": 33.01064100000417
+        },
+        "urgency": {
+          "type": "score",
+          "probabilities": {
+            "0": 0.09381355005698806,
+            "1": 0.7968834827839645,
+            "2": 0.10930296715904744
+          },
+          "legend": {
+            "0": "无需处理",
+            "1": "需要处理",
+            "2": "立即处理"
+          },
+          "score": 1.0154894171020594,
+          "confidence": 0.4129948563027094,
+          "action": {
+            "act_probability": 1.0
+          },
+          "python_latency_ms": 32.96572399997899
+        },
+        "water": {
+          "type": "noul",
+          "noul": 0.31776304461529853,
+          "confidence": 0.6822369553847014,
+          "action": {
+            "act_probability": 1.0
+          },
+          "python_latency_ms": 33.00539200000685
+        },
+        "heat": {
+          "type": "noul",
+          "noul": 0.2855929513208074,
+          "confidence": 0.7144070486791926,
+          "action": {
+            "act_probability": 1.0
+          },
+          "python_latency_ms": 33.3772740000029
+        }
+      },
+      "total_python_latency_ms": 132.3590309999929,
+      "wallMilliseconds": 139.3857189999892,
+      "revision": "4f02f411fb9b9b09b4a4842b4486177b9594ba9e",
+      "provider": "AXCLRTExecutionProvider",
+      "request": {
+        "state": "温室温度30℃，空气湿度50%，土壤湿度15%，光照强度70%。观察：今早忘记浇水，泥土干燥，先补水。",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "根据温室状态，选择当前最需要的操作。",
+            "criteria": [
+              "通风",
+              "补水",
+              "补光",
+              "保持"
+            ]
+          },
+          "urgency": {
+            "type": "score",
+            "instructions": "温室需要处理的紧急程度？",
+            "criteria": [
+              "无需处理",
+              "需要处理",
+              "立即处理"
+            ]
+          },
+          "water": {
+            "type": "noul",
+            "instructions": "植物缺水，需要浇水。"
+          },
+          "heat": {
+            "type": "noul",
+            "instructions": "温室太热，需要通风降温。"
+          }
+        }
+      }
+    }
+  ]
+}

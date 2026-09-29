@@ -1,0 +1,90 @@
+{
+  "modelId": "MobileSAM",
+  "repo": "AXERA-TECH/MobileSAM",
+  "revision": "36552af82921ea8d253a4bf4e1893bff64544e08",
+  "complete": true,
+  "files": [
+    {
+      "path": "README.md",
+      "size": 1609,
+      "url": "https://huggingface.co/AXERA-TECH/MobileSAM/resolve/36552af82921ea8d253a4bf4e1893bff64544e08/README.md",
+      "verifiedHashes": {
+        "sha256": "c3f98353c4ecd21bd308de75bbdb4321be68d9cdd112ad8868833970e1b77255",
+        "gitBlob": "bb46e2183182a08b3340a8184644a3be475db23b"
+      }
+    },
+    {
+      "path": "requirements.txt",
+      "size": 20,
+      "url": "https://huggingface.co/AXERA-TECH/MobileSAM/resolve/36552af82921ea8d253a4bf4e1893bff64544e08/requirements.txt",
+      "verifiedHashes": {
+        "sha256": "bde8b322d81dc0a33931fc1ccae3ad2d17994448a1046bbf5e1046d7d4c8b26e",
+        "gitBlob": "54261d7a096c1647672121bf00fa971958e93f43"
+      }
+    },
+    {
+      "path": "python_ax/main.py",
+      "size": 4304,
+      "url": "https://huggingface.co/AXERA-TECH/MobileSAM/resolve/36552af82921ea8d253a4bf4e1893bff64544e08/python_ax/main.py",
+      "verifiedHashes": {
+        "sha256": "f03557808e890964f25750dd8986fd9ff1c1a24d3eed9b3eba9eaa9c64243b26",
+        "gitBlob": "f57347f0f709964f2f88b204037ac85260ce3971"
+      }
+    },
+    {
+      "path": "python_ax/sam_encoder.py",
+      "size": 2561,
+      "url": "https://huggingface.co/AXERA-TECH/MobileSAM/resolve/36552af82921ea8d253a4bf4e1893bff64544e08/python_ax/sam_encoder.py",
+      "verifiedHashes": {
+        "sha256": "50479ff33e62191abc94526804645f64803441813361c3770f69fc912e93daeb",
+        "gitBlob": "fec7b55e563c5f3212f7e083c98f1338d0f61017"
+      }
+    },
+    {
+      "path": "python_ax/sam_decoder.py",
+      "size": 1709,
+      "url": "https://huggingface.co/AXERA-TECH/MobileSAM/resolve/36552af82921ea8d253a4bf4e1893bff64544e08/python_ax/sam_decoder.py",
+      "verifiedHashes": {
+        "sha256": "1c8dcf9d0066630f47a8f7ecbbd02136e4df13f066bc12caae9a9aafa35bf22f",
+        "gitBlob": "835e72ab1034f1e82d05ef8bfaacb5fedf742bd9"
+      }
+    },
+    {
+      "path": "ax_model/mobile_sam_encoder_650.axmodel",
+      "size": 16467039,
+      "url": "https://huggingface.co/AXERA-TECH/MobileSAM/resolve/36552af82921ea8d253a4bf4e1893bff64544e08/ax_model/mobile_sam_encoder_650.axmodel",
+      "verifiedHashes": {
+        "sha256": "88ad4b13478d7adfb6db44661933e5273207dfb15c1a74588fda860944501f9f",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "ax_model/mobile_sam_decoder_650.axmodel",
+      "size": 7031379,
+      "url": "https://huggingface.co/AXERA-TECH/MobileSAM/resolve/36552af82921ea8d253a4bf4e1893bff64544e08/ax_model/mobile_sam_decoder_650.axmodel",
+      "verifiedHashes": {
+        "sha256": "bfa87a19cfa3a95518d789cc1e5684b1d8d3c8d19b4e1e8155de5b5f5627020e",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "images/test.jpg",
+      "size": 324944,
+      "url": "https://huggingface.co/AXERA-TECH/MobileSAM/resolve/36552af82921ea8d253a4bf4e1893bff64544e08/images/test.jpg",
+      "verifiedHashes": {
+        "sha256": "e7c4b752ef447bfec409888cea8709be15c01d0f6bf91bd16b7762deb90950dc",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "images/truck.jpg",
+      "size": 271475,
+      "url": "https://huggingface.co/AXERA-TECH/MobileSAM/resolve/36552af82921ea8d253a4bf4e1893bff64544e08/images/truck.jpg",
+      "verifiedHashes": {
+        "sha256": "941715e721c8864324a1425b445ea4dde0498b995c45ddce0141a58971c6ff99",
+        "gitBlob": null
+      }
+    }
+  ],
+  "runnerSha256": "38358408cd33c19f5c86ebf766568c3a96ac4a0ae85506dd98ef9c9c1995a584"
+}

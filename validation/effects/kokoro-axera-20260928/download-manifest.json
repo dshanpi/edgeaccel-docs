@@ -1,0 +1,117 @@
+{
+  "modelId": "kokoro.axera",
+  "repo": "AXERA-TECH/kokoro.axera",
+  "revision": "db9625f0270396c108d0273b01477d86b4e5e7fe",
+  "complete": true,
+  "files": [
+    {
+      "path": "README.md",
+      "size": 8826,
+      "url": "https://huggingface.co/AXERA-TECH/kokoro.axera/resolve/db9625f0270396c108d0273b01477d86b4e5e7fe/README.md",
+      "verifiedHashes": {
+        "sha256": "e107fd3d6a37f2c2490bf78c88f4b5744386b2ee673cb6cb449466d8f1dee34f",
+        "gitBlob": "d96c42e77b37444478bc1a70a71ed461851a5dfe"
+      }
+    },
+    {
+      "path": "demo_kokoro_ax.py",
+      "size": 13147,
+      "url": "https://huggingface.co/AXERA-TECH/kokoro.axera/resolve/db9625f0270396c108d0273b01477d86b4e5e7fe/demo_kokoro_ax.py",
+      "verifiedHashes": {
+        "sha256": "c82887f33e3652b9380a63fd57bf877ead38808fde4136fb22be0a89f073133a",
+        "gitBlob": "8d9ef3fff1d0e66b6381ca4e49f3bd873018370f"
+      }
+    },
+    {
+      "path": "inference_utils.py",
+      "size": 13670,
+      "url": "https://huggingface.co/AXERA-TECH/kokoro.axera/resolve/db9625f0270396c108d0273b01477d86b4e5e7fe/inference_utils.py",
+      "verifiedHashes": {
+        "sha256": "addf0507ac8b8c5c1974b345322e3ba2b9870002b23e067c9c18ff3f2dc1dd2f",
+        "gitBlob": "bd0bc2d06413f251608c30f06a9fe5186d11fbe8"
+      }
+    },
+    {
+      "path": "requirements.txt",
+      "size": 268,
+      "url": "https://huggingface.co/AXERA-TECH/kokoro.axera/resolve/db9625f0270396c108d0273b01477d86b4e5e7fe/requirements.txt",
+      "verifiedHashes": {
+        "sha256": "3838d051103a405814b0e26e93ee93e2dd0f6a4c4121da9ea489438cd02f7243",
+        "gitBlob": "3c033b9e55de34e2e761a9f28a9bf1290e4ca6f7"
+      }
+    },
+    {
+      "path": "checkpoints/config.json",
+      "size": 2351,
+      "url": "https://huggingface.co/AXERA-TECH/kokoro.axera/resolve/db9625f0270396c108d0273b01477d86b4e5e7fe/checkpoints/config.json",
+      "verifiedHashes": {
+        "sha256": "5abb01e2403b072bf03d04fde160443e209d7a0dad49a423be15196b9b43c17f",
+        "gitBlob": "14a726edd3718279eac426630879ff743955b16a"
+      }
+    },
+    {
+      "path": "checkpoints/voices_npy/zf_xiaoyi.npy",
+      "size": 522368,
+      "url": "https://huggingface.co/AXERA-TECH/kokoro.axera/resolve/db9625f0270396c108d0273b01477d86b4e5e7fe/checkpoints/voices_npy/zf_xiaoyi.npy",
+      "verifiedHashes": {
+        "sha256": "7d02569f38b012fca22ab9af2e99fc7f8a0876a7d729d58a81c1666815143313",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "checkpoints/voices_npy/af_heart.npy",
+      "size": 522368,
+      "url": "https://huggingface.co/AXERA-TECH/kokoro.axera/resolve/db9625f0270396c108d0273b01477d86b4e5e7fe/checkpoints/voices_npy/af_heart.npy",
+      "verifiedHashes": {
+        "sha256": "0212418aafafb1e9878f3300787937aa401ac937cff8c0310ffa32963d96c77b",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "checkpoints/voices_npy/jm_kumo.npy",
+      "size": 522368,
+      "url": "https://huggingface.co/AXERA-TECH/kokoro.axera/resolve/db9625f0270396c108d0273b01477d86b4e5e7fe/checkpoints/voices_npy/jm_kumo.npy",
+      "verifiedHashes": {
+        "sha256": "d55aa155da7bb3409efbc13d13de29e2c61da2271f367eefc2b6613be9bf2f6f",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/kokoro_part1_96.axmodel",
+      "size": 90991842,
+      "url": "https://huggingface.co/AXERA-TECH/kokoro.axera/resolve/db9625f0270396c108d0273b01477d86b4e5e7fe/models/kokoro_part1_96.axmodel",
+      "verifiedHashes": {
+        "sha256": "93b230fcd50e4f5f7f6672f5339b6f92e651ff47072a84bc2d8e40de0f06da44",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/kokoro_part2_96.axmodel",
+      "size": 22466347,
+      "url": "https://huggingface.co/AXERA-TECH/kokoro.axera/resolve/db9625f0270396c108d0273b01477d86b4e5e7fe/models/kokoro_part2_96.axmodel",
+      "verifiedHashes": {
+        "sha256": "812488b6166830d0a4fd29fe894ed8e20353ffda042ded92fe6b2afc49b09455",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/kokoro_part3_96.axmodel",
+      "size": 70989184,
+      "url": "https://huggingface.co/AXERA-TECH/kokoro.axera/resolve/db9625f0270396c108d0273b01477d86b4e5e7fe/models/kokoro_part3_96.axmodel",
+      "verifiedHashes": {
+        "sha256": "e76bdecc7e79d41c4bb96fd8c25f2b38ba5855a5e19d5444b3d7f52d7e375d38",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/model4_har_sim.onnx",
+      "size": 14671,
+      "url": "https://huggingface.co/AXERA-TECH/kokoro.axera/resolve/db9625f0270396c108d0273b01477d86b4e5e7fe/models/model4_har_sim.onnx",
+      "verifiedHashes": {
+        "sha256": "59ca1698756537da34325a3a5aa3ae82934305ad62e541d224dcb4f1f6e0111f",
+        "gitBlob": null
+      }
+    }
+  ],
+  "runnerSha256": "d9816f12f975314aa715b25b516e9761f8a59a8e6d20527b1075226617f11221"
+}

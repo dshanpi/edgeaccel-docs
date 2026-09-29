@@ -1,0 +1,153 @@
+{
+  "modelId": "Zipformer.axera",
+  "repo": "AXERA-TECH/Zipformer.axera",
+  "revision": "a690cb0f701b11274505209cb3dec6bf7bd91e4b",
+  "complete": true,
+  "files": [
+    {
+      "path": "README.md",
+      "size": 8354,
+      "url": "https://huggingface.co/AXERA-TECH/Zipformer.axera/resolve/a690cb0f701b11274505209cb3dec6bf7bd91e4b/README.md",
+      "verifiedHashes": {
+        "sha256": "6f72a754f0fbcf1b7553d5827be72fcbb43fb699db0bff32f39132c9832c9d3c",
+        "gitBlob": "de030a79fb304419aacad08419101fb871dd19bd"
+      }
+    },
+    {
+      "path": "ax_pretrained_infer.py",
+      "size": 20242,
+      "url": "https://huggingface.co/AXERA-TECH/Zipformer.axera/resolve/a690cb0f701b11274505209cb3dec6bf7bd91e4b/ax_pretrained_infer.py",
+      "verifiedHashes": {
+        "sha256": "883e9e71fff3224c08456e68d65f59c8d32fcf9ab0ae2794f855ff18e6711115",
+        "gitBlob": "6913e921535f4045bc9072c752eadbf495f83f5d"
+      }
+    },
+    {
+      "path": "inputs/axmodels_650N/decoder.axmodel",
+      "size": 13125811,
+      "url": "https://huggingface.co/AXERA-TECH/Zipformer.axera/resolve/a690cb0f701b11274505209cb3dec6bf7bd91e4b/inputs/axmodels_650N/decoder.axmodel",
+      "verifiedHashes": {
+        "sha256": "791398ab3ea2c3e11f9a8a71dbbbcdbe1e0369776c11fd8d500074d7163dc192",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "inputs/axmodels_650N/encoder.axmodel",
+      "size": 26237782,
+      "url": "https://huggingface.co/AXERA-TECH/Zipformer.axera/resolve/a690cb0f701b11274505209cb3dec6bf7bd91e4b/inputs/axmodels_650N/encoder.axmodel",
+      "verifiedHashes": {
+        "sha256": "cb88dba4139d4acdaeeec7f91d3237b4cde98f84b526c834e686b9d19c805079",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "inputs/axmodels_650N/joiner.axmodel",
+      "size": 3458569,
+      "url": "https://huggingface.co/AXERA-TECH/Zipformer.axera/resolve/a690cb0f701b11274505209cb3dec6bf7bd91e4b/inputs/axmodels_650N/joiner.axmodel",
+      "verifiedHashes": {
+        "sha256": "64da444bd083425bf25234e6ebb5ffbcbe23ff7df6c4ed354c64968733171a2f",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "inputs/lang_char_bpe/tokens.txt",
+      "size": 56317,
+      "url": "https://huggingface.co/AXERA-TECH/Zipformer.axera/resolve/a690cb0f701b11274505209cb3dec6bf7bd91e4b/inputs/lang_char_bpe/tokens.txt",
+      "verifiedHashes": {
+        "sha256": "a8e0e4ec53810e433789b54a5c0134a7eaa2ffca595a6334d54c00da858841d3",
+        "gitBlob": "980dd6cd2d71532898b1eac4a4ac9a91302083b6"
+      }
+    },
+    {
+      "path": "inputs/test_wavs/0.wav",
+      "size": 321744,
+      "url": "https://huggingface.co/AXERA-TECH/Zipformer.axera/resolve/a690cb0f701b11274505209cb3dec6bf7bd91e4b/inputs/test_wavs/0.wav",
+      "verifiedHashes": {
+        "sha256": "7d93384ca14702cc584a7a33fe2fed92e89e708549161cb12ea38c916882103b",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "inputs/test_wavs/002.mp3",
+      "size": 89856,
+      "url": "https://huggingface.co/AXERA-TECH/Zipformer.axera/resolve/a690cb0f701b11274505209cb3dec6bf7bd91e4b/inputs/test_wavs/002.mp3",
+      "verifiedHashes": {
+        "sha256": "4bdd7d1fb5723e253083820c659d65449e43abff0fbf7b5ac52fea3c1d7572fc",
+        "gitBlob": "dce74e511c7720ba9a7d9cec84ac59e41cec610f"
+      }
+    },
+    {
+      "path": "inputs/test_wavs/1.wav",
+      "size": 163244,
+      "url": "https://huggingface.co/AXERA-TECH/Zipformer.axera/resolve/a690cb0f701b11274505209cb3dec6bf7bd91e4b/inputs/test_wavs/1.wav",
+      "verifiedHashes": {
+        "sha256": "8bfb42c963e623ebab31b81ff4404867d07d3102507c87ac14577c4c61663b8c",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "inputs/test_wavs/2.wav",
+      "size": 150124,
+      "url": "https://huggingface.co/AXERA-TECH/Zipformer.axera/resolve/a690cb0f701b11274505209cb3dec6bf7bd91e4b/inputs/test_wavs/2.wav",
+      "verifiedHashes": {
+        "sha256": "20805bcc696b9b65f3357a2508a419d4f33b81006d47e1312e219b0fad934d1d",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "inputs/test_wavs/3.wav",
+      "size": 282604,
+      "url": "https://huggingface.co/AXERA-TECH/Zipformer.axera/resolve/a690cb0f701b11274505209cb3dec6bf7bd91e4b/inputs/test_wavs/3.wav",
+      "verifiedHashes": {
+        "sha256": "5851e31f3e8e5f741635da9466e19fccfbabd117ebcdc92db242c92483aee064",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "inputs/test_wavs/4.wav",
+      "size": 564524,
+      "url": "https://huggingface.co/AXERA-TECH/Zipformer.axera/resolve/a690cb0f701b11274505209cb3dec6bf7bd91e4b/inputs/test_wavs/4.wav",
+      "verifiedHashes": {
+        "sha256": "e8b949e985e799ed1723943aa8ff2a782cd6ae841424f77f96799e42c28626cd",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "inputs/test_wavs/46.wav",
+      "size": 124862,
+      "url": "https://huggingface.co/AXERA-TECH/Zipformer.axera/resolve/a690cb0f701b11274505209cb3dec6bf7bd91e4b/inputs/test_wavs/46.wav",
+      "verifiedHashes": {
+        "sha256": "be53e027a0c562b882c8c10806b1861c2cda0dc417a786d15a0d9d8de3d85dda",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "inputs/test_wavs/demo.wav",
+      "size": 134570,
+      "url": "https://huggingface.co/AXERA-TECH/Zipformer.axera/resolve/a690cb0f701b11274505209cb3dec6bf7bd91e4b/inputs/test_wavs/demo.wav",
+      "verifiedHashes": {
+        "sha256": "46dbc998c9d1d48111267c40741dd3200f2e5bcf4075f8c4c97f4451160dce50",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "inputs/test_wavs/fileid_144.wav",
+      "size": 96044,
+      "url": "https://huggingface.co/AXERA-TECH/Zipformer.axera/resolve/a690cb0f701b11274505209cb3dec6bf7bd91e4b/inputs/test_wavs/fileid_144.wav",
+      "verifiedHashes": {
+        "sha256": "1164f4a463048f788de6ade09ebc5d1a777940480eb2b06bdadc4b45cd8d9eb8",
+        "gitBlob": "40b7d8617e0afcbfb7b806a53dbd7dc9c314b22b"
+      }
+    },
+    {
+      "path": "inputs/test_wavs/fileid_249.wav",
+      "size": 96044,
+      "url": "https://huggingface.co/AXERA-TECH/Zipformer.axera/resolve/a690cb0f701b11274505209cb3dec6bf7bd91e4b/inputs/test_wavs/fileid_249.wav",
+      "verifiedHashes": {
+        "sha256": "bfc563a775f24a5beeb270466d739dd8f7325f0b0f243f0a991c11ed72f13a99",
+        "gitBlob": "2d4e583e1f83aaa919fdf1fb383e9e23b9be9323"
+      }
+    }
+  ],
+  "runnerSha256": "2fc05e332ce3ed9d9d1e29071cef4ba088e414ecee0e7935e8720c0bb41e15f2"
+}

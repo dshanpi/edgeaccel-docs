@@ -1,0 +1,18 @@
+{
+  "date": "2026-09-18T18:11:58.304410+08:00",
+  "host": "Linux dshanpi-a1 6.1.115-vendor-rk35xx #1 SMP Wed Sep  3 06:44:51 EDT 2025 aarch64 aarch64 aarch64 GNU/Linux",
+  "axcl": "axclhost\t3.16.0",
+  "model_source": "https://huggingface.co/AXERA-TECH/Qwen3-VL-8B-Instruct-GPTQ-Int4",
+  "model_commit": "e9e73ad656bd299aedd92c9dad85cf0b308c77fd",
+  "runtime_source": "https://github.com/AXERA-TECH/ax-llm/tree/axcl-qwen3-vl",
+  "runtime_commit": "3be4cc3fee4a4c730ec7c9b8982ff4b398eefac7",
+  "tokenizer_submodule": "0eed4120c6e1b5ea1e51b51c576924faddc8b2a1 third_party/tokenizer.axera (0eed412)",
+  "opencv": "4.6.0",
+  "runtime_source_changes": "",
+  "sha256": {
+    "deployment/bin/main_axcl_aarch64": "80f621266a6d302e8590744016ccb117b522de3ba725b825a3f1dbfbbb161781",
+    "deployment/qwen3_tokenizer.txt": "46fafa42f69d10f67677adffd3ca6285e0c97b7deddfebaa98ceeac3557f04a3",
+    "run_local.sh": "815e460cd3707e02efe8f4efaf24b8af72825ae02b8ca497523a199d66255980",
+    "prepare_video.sh": "03b1064b2fad7ed1a99f8f2b0781984bbbaa2bf638104a3394c95268f871483c"
+  }
+}

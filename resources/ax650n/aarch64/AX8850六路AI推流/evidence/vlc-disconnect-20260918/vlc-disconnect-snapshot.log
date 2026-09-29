@@ -1,0 +1,80 @@
+2026-09-18T11:21:36+08:00
+
+TCP_QUEUES
+ESTAB 0      0          127.0.0.1:8851     127.0.0.1:42956 users:(("python3",pid=92358,fd=4))                     
+ESTAB 0      0          127.0.0.1:59316    127.0.0.1:8554  users:(("ffmpeg",pid=92360,fd=4))                      
+ESTAB 0      0          127.0.0.1:41548    127.0.0.1:8850  users:(("ffmpeg",pid=92361,fd=4))                      
+ESTAB 0      0          127.0.0.1:59334    127.0.0.1:8554  users:(("ffmpeg",pid=92375,fd=3))                      
+ESTAB 0      0          127.0.0.1:59324    127.0.0.1:8554  users:(("ffmpeg",pid=92371,fd=3))                      
+ESTAB 0      0          127.0.0.1:8554     127.0.0.1:59324 users:(("six_app",pid=83794,fd=20))                    
+ESTAB 0      0          127.0.0.1:8554     127.0.0.1:59334 users:(("six_app",pid=83794,fd=21))                    
+ESTAB 0      0          127.0.0.1:8554     127.0.0.1:59316 users:(("six_app",pid=83794,fd=19))                    
+ESTAB 0      17860      127.0.0.1:8850     127.0.0.1:41548 users:(("python3",pid=63479,fd=4))                     
+ESTAB 0      0          127.0.0.1:42956    127.0.0.1:8851  users:(("vlc",pid=92362,fd=3))                         
+
+DIAGNOSTIC_BRIDGE
+2026-09-18 11:20:15,154 Local VLC preview: http://127.0.0.1:8851/overview.ts
+2026-09-18 11:20:17,708 "GET /overview.ts HTTP/1.1" 200 -
+2026-09-18 11:20:17,710 Preview opened: overview
+
+VLC_ERRORS_AND_STATS
+[0000aaaafccbd560] main libvlc debug: configured with ./configure  '--build=aarch64-linux-gnu' '--prefix=/usr' '--includedir=${prefix}/include' '--mandir=${prefix}/share/man' '--infodir=${prefix}/share/info' '--sysconfdir=/etc' '--localstatedir=/var' '--disable-option-checking' '--disable-silent-rules' '--libdir=${prefix}/lib/aarch64-linux-gnu' '--runstatedir=/run' '--disable-maintainer-mode' '--disable-dependency-tracking' '--disable-debug' '--config-cache' '--disable-update-check' '--enable-fast-install' '--docdir=/usr/share/doc/vlc' '--with-binary-version=3.0.20-3build6' '--enable-a52' '--enable-aa' '--enable-aribsub' '--enable-avahi' '--enable-bluray' '--enable-caca' '--enable-chromaprint' '--enable-chromecast' '--enable-dav1d' '--enable-dbus' '--enable-dca' '--enable-dvbpsi' '--enable-dvdnav' '--enable-faad' '--enable-flac' '--enable-fluidsynth' '--enable-freetype' '--enable-fribidi' '--enable-gles2' '--enable-gnutls' '--enable-harfbuzz' '--enable-jack' '--enable-kate' '--enable-libass' '--enable-libmpeg2' '--enable-libxml2' '--enable-lirc' '--enable-mad' '--enable-matroska' '--enable-mod' '--enable-mpc' '--enable-mpg123' '--enable-mtp' '--enable-ncurses' '--enable-notify' '--enable-ogg' '--enable-opus' '--enable-pulse' '--enable-qt' '--enable-realrtsp' '--enable-samplerate' '--enable-sftp' '--enable-shine' '--enable-shout' '--enable-skins2' '--enable-soxr' '--enable-spatialaudio' '--enable-speex' '--enable-srt' '--enable-svg' '--enable-svgdec' '--enable-taglib' '--enable-theora' '--enable-twolame' '--enable-upnp' '--enable-vdpau' '--enable-vnc' '--enable-vorbis' '--enable-x264' '--enable-x265' '--enable-zvbi' '--with-kde-solid=/usr/share/solid/actions/' '--disable-aom' '--disable-crystalhd' '--disable-d3d11va' '--disable-decklink' '--disable-directx' '--disable-dsm' '--disable-dxva2' '--disable-fdkaac' '--disable-fluidlite' '--disable-freerdp' '--disable-goom' '--disable-gst-decode' '--disable-libplacebo' '--disable-libtar' '--disable-live555' '--disable-macosx' '--disable-macosx-avfoundation' '--disable-macosx-qtkit' '--disable-mfx' '--disable-microdns' '--disable-opencv' '--disable-projectm' '--disable-schroedinger' '--disable-sdl-image' '--disable-sndio' '--disable-sparkle' '--disable-telx' '--disable-vpx' '--disable-vsxu' '--disable-wasapi' '--enable-alsa' '--enable-dc1394' '--enable-dv1394' '--enable-linsys' '--enable-nfs' '--enable-udev' '--enable-v4l2' '--enable-wayland' '--enable-vcd' '--enable-smbclient' '--disable-oss' '--disable-mmx' '--disable-sse' '--disable-neon' '--disable-altivec' '--disable-omxil' 'build_alias=aarch64-linux-gnu' 'CFLAGS=-g -O2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -ffile-prefix-map=/build/vlc-98JX8g/vlc-3.0.20=. -flto=auto -ffat-lto-objects -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -mbranch-protection=standard -fdebug-prefix-map=/build/vlc-98JX8g/vlc-3.0.20=/usr/src/vlc-3.0.20-3build6 ' 'LDFLAGS=-Wl,-Bsymbolic-functions -flto=auto -ffat-lto-objects -Wl,-z,relro -Wl,-z,now' 'CPPFLAGS=-Wdate-time -D_FORTIFY_SOURCE=3' 'CXXFLAGS=-g -O2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -ffile-prefix-map=/build/vlc-98JX8g/vlc-3.0.20=. -flto=auto -ffat-lto-objects -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -mbranch-protection=standard -fdebug-prefix-map=/build/vlc-98JX8g/vlc-3.0.20=/usr/src/vlc-3.0.20-3build6 ' 'OBJCFLAGS=-g -O2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -ffile-prefix-map=/build/vlc-98JX8g/vlc-3.0.20=. -flto=auto -ffat-lto-objects -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -mbranch-protection=standard -fdebug-prefix-map=/build/vlc-98JX8g/vlc-3.0.20=/usr/src/vlc-3.0.20-3build6'
+[0000aaaafcd4b880] dbus interface error: Failed to connect to the D-Bus session daemon: Unable to autolaunch a dbus-daemon without a $DISPLAY for X11
+[0000aaaafcd4b880] main interface error: no suitable interface module
+[0000aaaafccbd560] main libvlc error: interface "dbus,none" initialization failed
+[0000aaaafcd8b3e0] main interface error: no suitable interface module
+[0000aaaafccbd560] main libvlc error: interface "globalhotkeys,none" initialization failed
+[0000ffff84001160] ts demux debug: new PMT program number=1 version=0 pid_pcr=256
+[0000ffff84001160] ts demux debug: enabling pcr pid 256 from program 1
+error: XDG_RUNTIME_DIR is invalid or not set in the environment.
+error: XDG_RUNTIME_DIR is invalid or not set in the environment.
+| discontinuities  :        0
+| video decoded    :     1674
+| frames displayed :      826
+| frames lost      :        0
+( state playing )
+| discontinuities  :        0
+| video decoded    :     3502
+| frames displayed :     1740
+| frames lost      :        0
+( state playing )
+
+RTSP_ERRORS
+
+HTTP_ERRORS
+
+VLC_OPTIONS
+ HTTP input (http)
+      --http-reconnect, --no-http-reconnect 
+                                 Auto re-connect
+                                 (default disabled)
+          Automatically try to reconnect to the stream in case of a sudden
+--
+ HTTPS input (access)
+      --http-continuous, --no-http-continuous 
+                                 Continuous stream
+                                 (default disabled)
+          Keep reading a resource that keeps being updated.
+--
+                                 (default enabled)
+      --drop-late-frames, --no-drop-late-frames 
+                                 Drop late frames
+                                 (default enabled)
+          This drops frames that are late (arrive to the video output after
+--
+          Caching value for optical media, in milliseconds.
+      --network-caching <integer [0 .. 60000]> 
+                                 Network caching (ms)
+          Caching value for network resources, in milliseconds.
+      --cr-average <integer>     Clock reference average counter
+--
+          this to 10000.
+      --clock-synchro {-1 (Default), 0 (Disable), 1 (Enable)} 
+                                 Clock synchronisation
+          It is possible to disable the input clock synchronisation for
+          real-time sources. Use this if you experience jerky playback of
+          network streams.
+      --clock-jitter <integer>   Clock jitter
+          This defines the maximum input delay jitter that the synchronization
+          algorithms should try to compensate (in milliseconds).
+      --network-synchronisation, --no-network-synchronisation 

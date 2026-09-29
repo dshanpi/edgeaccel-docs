@@ -1,0 +1,8652 @@
+{
+  "modelId": "jina-embeddings-v5-omni-nano-retrieval",
+  "revision": "6a92e331bd8813a98e2eac602b6f9412a7eec709",
+  "completed": true,
+  "scope": "All 16 compiled files: loading and shape metadata only; not end-to-end inference",
+  "models": [
+    {
+      "model": "jina_v5_omni_nano_audio_30s.axmodel",
+      "providerActual": "AXCLRTExecutionProvider",
+      "shapeGroupCount": 1,
+      "groups": [
+        {
+          "index": 0,
+          "inputs": [
+            {
+              "name": "input_features",
+              "shape": [
+                1,
+                128,
+                3000
+              ],
+              "dtype": "float32"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "audio_tokens",
+              "shape": [
+                1,
+                750,
+                768
+              ],
+              "dtype": "float32"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "model": "jina_v5_omni_nano_audio_8s.axmodel",
+      "providerActual": "AXCLRTExecutionProvider",
+      "shapeGroupCount": 1,
+      "groups": [
+        {
+          "index": 0,
+          "inputs": [
+            {
+              "name": "input_features",
+              "shape": [
+                1,
+                128,
+                800
+              ],
+              "dtype": "float32"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "audio_tokens",
+              "shape": [
+                1,
+                200,
+                768
+              ],
+              "dtype": "float32"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "model": "jina_v5_omni_nano_vision_256x256.axmodel",
+      "providerActual": "AXCLRTExecutionProvider",
+      "shapeGroupCount": 1,
+      "groups": [
+        {
+          "index": 0,
+          "inputs": [
+            {
+              "name": "pixel_values",
+              "shape": [
+                256,
+                1536
+              ],
+              "dtype": "float32"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "vision_tokens",
+              "shape": [
+                1,
+                64,
+                768
+              ],
+              "dtype": "float32"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "model": "llama_p128_l0_together.axmodel",
+      "providerActual": "AXCLRTExecutionProvider",
+      "shapeGroupCount": 9,
+      "groups": [
+        {
+          "index": 0,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                2047,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                2047,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                1
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                1,
+                2048
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                128
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                256
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                256,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                256,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                384
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                384,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                384,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                512
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                512,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                512,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                640
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                640,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                640,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                768,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                768,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                896
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                896,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                896,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                1024
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "model": "llama_p128_l10_together.axmodel",
+      "providerActual": "AXCLRTExecutionProvider",
+      "shapeGroupCount": 9,
+      "groups": [
+        {
+          "index": 0,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                2047,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                2047,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                1
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                1,
+                2048
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                128
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                256
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                256,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                256,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                384
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                384,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                384,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                512
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                512,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                512,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                640
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                640,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                640,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                768,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                768,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                896
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                896,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                896,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                1024
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "model": "llama_p128_l11_together.axmodel",
+      "providerActual": "AXCLRTExecutionProvider",
+      "shapeGroupCount": 9,
+      "groups": [
+        {
+          "index": 0,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                2047,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                2047,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                1
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                1,
+                2048
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                128
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                256
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                256,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                256,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                384
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                384,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                384,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                512
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                512,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                512,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                640
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                640,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                640,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                768,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                768,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                896
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                896,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                896,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                1024
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "model": "llama_p128_l1_together.axmodel",
+      "providerActual": "AXCLRTExecutionProvider",
+      "shapeGroupCount": 9,
+      "groups": [
+        {
+          "index": 0,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                2047,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                2047,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                1
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                1,
+                2048
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                128
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                256
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                256,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                256,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                384
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                384,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                384,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                512
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                512,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                512,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                640
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                640,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                640,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                768,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                768,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                896
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                896,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                896,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                1024
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "model": "llama_p128_l2_together.axmodel",
+      "providerActual": "AXCLRTExecutionProvider",
+      "shapeGroupCount": 9,
+      "groups": [
+        {
+          "index": 0,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                2047,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                2047,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                1
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                1,
+                2048
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                128
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                256
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                256,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                256,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                384
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                384,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                384,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                512
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                512,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                512,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                640
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                640,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                640,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                768,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                768,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                896
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                896,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                896,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                1024
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "model": "llama_p128_l3_together.axmodel",
+      "providerActual": "AXCLRTExecutionProvider",
+      "shapeGroupCount": 9,
+      "groups": [
+        {
+          "index": 0,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                2047,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                2047,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                1
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                1,
+                2048
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                128
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                256
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                256,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                256,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                384
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                384,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                384,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                512
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                512,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                512,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                640
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                640,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                640,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                768,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                768,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                896
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                896,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                896,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                1024
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "model": "llama_p128_l4_together.axmodel",
+      "providerActual": "AXCLRTExecutionProvider",
+      "shapeGroupCount": 9,
+      "groups": [
+        {
+          "index": 0,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                2047,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                2047,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                1
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                1,
+                2048
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                128
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                256
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                256,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                256,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                384
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                384,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                384,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                512
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                512,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                512,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                640
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                640,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                640,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                768,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                768,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                896
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                896,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                896,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                1024
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "model": "llama_p128_l5_together.axmodel",
+      "providerActual": "AXCLRTExecutionProvider",
+      "shapeGroupCount": 9,
+      "groups": [
+        {
+          "index": 0,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                2047,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                2047,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                1
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                1,
+                2048
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                128
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                256
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                256,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                256,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                384
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                384,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                384,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                512
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                512,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                512,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                640
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                640,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                640,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                768,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                768,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                896
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                896,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                896,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                1024
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "model": "llama_p128_l6_together.axmodel",
+      "providerActual": "AXCLRTExecutionProvider",
+      "shapeGroupCount": 9,
+      "groups": [
+        {
+          "index": 0,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                2047,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                2047,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                1
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                1,
+                2048
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                128
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                256
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                256,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                256,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                384
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                384,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                384,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                512
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                512,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                512,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                640
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                640,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                640,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                768,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                768,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                896
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                896,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                896,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                1024
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "model": "llama_p128_l7_together.axmodel",
+      "providerActual": "AXCLRTExecutionProvider",
+      "shapeGroupCount": 9,
+      "groups": [
+        {
+          "index": 0,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                2047,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                2047,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                1
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                1,
+                2048
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                128
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                256
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                256,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                256,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                384
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                384,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                384,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                512
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                512,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                512,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                640
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                640,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                640,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                768,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                768,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                896
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                896,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                896,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                1024
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "model": "llama_p128_l8_together.axmodel",
+      "providerActual": "AXCLRTExecutionProvider",
+      "shapeGroupCount": 9,
+      "groups": [
+        {
+          "index": 0,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                2047,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                2047,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                1
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                1,
+                2048
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                128
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                256
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                256,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                256,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                384
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                384,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                384,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                512
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                512,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                512,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                640
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                640,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                640,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                768,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                768,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                896
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                896,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                896,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                1024
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "model": "llama_p128_l9_together.axmodel",
+      "providerActual": "AXCLRTExecutionProvider",
+      "shapeGroupCount": 9,
+      "groups": [
+        {
+          "index": 0,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                2047,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                2047,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                1
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                1,
+                2048
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                128
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                256
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                256,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                256,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                384
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                384,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                384,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                512
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                512,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                512,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                640
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                640,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                640,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                768,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                768,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                896
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "inputs": [
+            {
+              "name": "K_cache",
+              "shape": [
+                1,
+                896,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache",
+              "shape": [
+                1,
+                896,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "indices",
+              "shape": [
+                1,
+                128
+              ],
+              "dtype": "uint32"
+            },
+            {
+              "name": "input",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "mask",
+              "shape": [
+                1,
+                128,
+                1024
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "K_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "V_cache_out",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output",
+              "shape": [
+                1,
+                128,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "model": "llama_post.axmodel",
+      "providerActual": "AXCLRTExecutionProvider",
+      "shapeGroupCount": 1,
+      "groups": [
+        {
+          "index": 0,
+          "inputs": [
+            {
+              "name": "input",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "output",
+              "shape": [
+                1,
+                1,
+                128260
+              ],
+              "dtype": "bfloat16"
+            },
+            {
+              "name": "output_norm",
+              "shape": [
+                1,
+                1,
+                768
+              ],
+              "dtype": "bfloat16"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

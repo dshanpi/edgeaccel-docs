@@ -1,0 +1,63 @@
+{
+  "modelId": "RIFE.axera",
+  "repo": "AXERA-TECH/RIFE.axera",
+  "revision": "c3220f49ad89a3138edd70f4a5792cef4e16e0ad",
+  "complete": true,
+  "files": [
+    {
+      "path": "README.md",
+      "size": 2729,
+      "url": "https://huggingface.co/AXERA-TECH/RIFE.axera/resolve/c3220f49ad89a3138edd70f4a5792cef4e16e0ad/README.md",
+      "verifiedHashes": {
+        "sha256": "8f7b39f229e60079663081130591c0c291c500f5e23f356912dfa799934711f2",
+        "gitBlob": "e52643042c27b8b756f40022ff1ca4ac2eb0f7f1"
+      }
+    },
+    {
+      "path": "requirements.txt",
+      "size": 88,
+      "url": "https://huggingface.co/AXERA-TECH/RIFE.axera/resolve/c3220f49ad89a3138edd70f4a5792cef4e16e0ad/requirements.txt",
+      "verifiedHashes": {
+        "sha256": "6ecf0ff8ed7b42bcc4256e00888abaeef5ca9ab0fa81057b2fe8d1881bd91ace",
+        "gitBlob": "f0814589247d67d46f16a37a869dc65c34fc2336"
+      }
+    },
+    {
+      "path": "run_axmodel.py",
+      "size": 9369,
+      "url": "https://huggingface.co/AXERA-TECH/RIFE.axera/resolve/c3220f49ad89a3138edd70f4a5792cef4e16e0ad/run_axmodel.py",
+      "verifiedHashes": {
+        "sha256": "9d0f6e4b75de66a4245a91fac45c59c93cd55426ca872c11b710f1150545b3bf",
+        "gitBlob": "31850b7d47d4e769bf586a65c1740c64a0ab6b67"
+      }
+    },
+    {
+      "path": "ms_ssim.py",
+      "size": 6999,
+      "url": "https://huggingface.co/AXERA-TECH/RIFE.axera/resolve/c3220f49ad89a3138edd70f4a5792cef4e16e0ad/ms_ssim.py",
+      "verifiedHashes": {
+        "sha256": "220e4639c7dc0a4c22a50ade0f2fb51d0dac5d1fc9eedccfa4b25c16ae557425",
+        "gitBlob": "a4d30326188cf6afacf2fc84c7ae18efe14dae2e"
+      }
+    },
+    {
+      "path": "video/demo.mp4",
+      "size": 5062466,
+      "url": "https://huggingface.co/AXERA-TECH/RIFE.axera/resolve/c3220f49ad89a3138edd70f4a5792cef4e16e0ad/video/demo.mp4",
+      "verifiedHashes": {
+        "sha256": "c1b23ae46d600c365917e806dd532cae27eda768cf847b91b5e5646f9fd8f56d",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "model/rife_x2_720p.axmodel",
+      "size": 48243167,
+      "url": "https://huggingface.co/AXERA-TECH/RIFE.axera/resolve/c3220f49ad89a3138edd70f4a5792cef4e16e0ad/model/rife_x2_720p.axmodel",
+      "verifiedHashes": {
+        "sha256": "6009360a5dffcdca703f647d663b8f3463fca24b7699518c842c04be2d53215b",
+        "gitBlob": null
+      }
+    }
+  ],
+  "runnerSha256": "863fa950db0cbc35a69c61e58621a30dddb6113eb7ebaba4c879f6663338a488"
+}

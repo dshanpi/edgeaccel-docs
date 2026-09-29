@@ -1,0 +1,6 @@
+{"elapsed": 30.0, "cpu_percent": 148.5, "playing": false, "decoded": 2094, "displayed": 525, "lost": 503, "corrupted": 0}
+Traceback (most recent call last):
+  File "/tmp/vlc-x11-monitor.py", line 25, in <module>
+    assert row['playing'] and row['displayed'],row
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'elapsed': 30.0, 'cpu_percent': 148.5, 'playing': False, 'decoded': 2094, 'displayed': 525, 'lost': 503, 'corrupted': 0}

@@ -1,0 +1,78 @@
+{
+  "revision": "009e0d09a98a82227526e8c5aa7b0aa282e36163",
+  "tokenIds": [
+    128256,
+    128257,
+    128258,
+    128259
+  ],
+  "files": [
+    {
+      "task": "retrieval",
+      "file": "retrieval.bf16.bin",
+      "size": 6144,
+      "sha256": "b189ddfb0a4290d8b90e7c07178e6634cd940616ef1dbc7b3200a5fb5a029697",
+      "sourceTensor": "task_token_embeddings.retrieval",
+      "sourceDataOffsets": [
+        1795948032,
+        1795954176
+      ],
+      "dtype": "BF16",
+      "shape": [
+        4,
+        768
+      ]
+    },
+    {
+      "task": "clustering",
+      "file": "clustering.bf16.bin",
+      "size": 6144,
+      "sha256": "c9293496aea883e180e5cc4c90b195994578e30255987e71d2dc6e7c44e465eb",
+      "sourceTensor": "task_token_embeddings.clustering",
+      "sourceDataOffsets": [
+        1795941888,
+        1795948032
+      ],
+      "dtype": "BF16",
+      "shape": [
+        4,
+        768
+      ]
+    },
+    {
+      "task": "classification",
+      "file": "classification.bf16.bin",
+      "size": 6144,
+      "sha256": "322c225a8ce6ce744b9b9ccf6d14746057225dc4654f7e7007a3746d434dc8f3",
+      "sourceTensor": "task_token_embeddings.classification",
+      "sourceDataOffsets": [
+        1795935744,
+        1795941888
+      ],
+      "dtype": "BF16",
+      "shape": [
+        4,
+        768
+      ]
+    },
+    {
+      "task": "text-matching",
+      "file": "text-matching.bf16.bin",
+      "size": 6144,
+      "sha256": "b3bc5fa393f91db6f845920675194063dba108316372452a8432ff21b411dd20",
+      "sourceTensor": "task_token_embeddings.text_matching",
+      "sourceDataOffsets": [
+        1795954176,
+        1795960320
+      ],
+      "dtype": "BF16",
+      "shape": [
+        4,
+        768
+      ]
+    }
+  ],
+  "repo": "jinaai/jina-embeddings-v5-omni-nano",
+  "sourceFile": "model.safetensors",
+  "sourceSha256": "1b25867d693db0304d5030b8d6ba833b3bc371dc002b2559e49524e0ea405b4b"
+}

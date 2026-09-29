@@ -1,0 +1,117 @@
+{
+  "repo": "AXERA-TECH/3D-Speaker",
+  "revision": "19be2b978d867ad8a2f3f2acf9bd91aa949d8b91",
+  "complete": true,
+  "files": [
+    {
+      "path": "ax650/ecapa-tdnn.axmodel",
+      "size": 23193799,
+      "sha256": "4b9b70f0d7897f21332bae9af13dc2c86841a3774fa0fea0d3482b4038a02f1c",
+      "gitBlob": "0d029853b063c9fc9d7103730a16ba33ffdcb58f",
+      "verifiedHashes": {
+        "sha256": "4b9b70f0d7897f21332bae9af13dc2c86841a3774fa0fea0d3482b4038a02f1c",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "ecapa-tdnn.onnx",
+      "size": 83303532,
+      "sha256": "38fdfc7d2bc9e2925349baab9639fcaf4b4c755be83ee7d616b6e3fbc9d5eab3",
+      "gitBlob": "ee318d87bf467f08bd706876190d25f586063248",
+      "verifiedHashes": {
+        "sha256": "38fdfc7d2bc9e2925349baab9639fcaf4b4c755be83ee7d616b6e3fbc9d5eab3",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "ax650/res2netv2.axmodel",
+      "size": 19826858,
+      "sha256": "2ee95e134ae4890409e08cf318c9156e03c268d78437817b76e076d293dd9ad1",
+      "gitBlob": "d55b07b516f3de0116f4c5d7cb01d8ab2fb51cf6",
+      "verifiedHashes": {
+        "sha256": "2ee95e134ae4890409e08cf318c9156e03c268d78437817b76e076d293dd9ad1",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "res2netv2.onnx",
+      "size": 71438962,
+      "sha256": "4e31f647abaf941d5b04f1e557b0194c24f4e74361bdd2dcc044743018f8f136",
+      "gitBlob": "5441c9b9cbed8cecc6735c0136b3154b30d1e2f0",
+      "verifiedHashes": {
+        "sha256": "4e31f647abaf941d5b04f1e557b0194c24f4e74361bdd2dcc044743018f8f136",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "run_axmodel_ecapa_tdnn.py",
+      "size": 3508,
+      "sha256": null,
+      "gitBlob": "7dd780b9a5fef1373a313bafcebde7cb49a23b81",
+      "verifiedHashes": {
+        "sha256": "bcf93043edb505de462b3995ec136f707a3497abb6bc7556a6983e254786a787",
+        "gitBlob": "7dd780b9a5fef1373a313bafcebde7cb49a23b81"
+      }
+    },
+    {
+      "path": "run_axmodel_res2netv2.py",
+      "size": 3453,
+      "sha256": null,
+      "gitBlob": "1924dbd20daaa031a4946080175ccb0fed4cf207",
+      "verifiedHashes": {
+        "sha256": "622186d9054115765bc4f8600de4d14d2df27e7f3da333b518601048fe79a212",
+        "gitBlob": "1924dbd20daaa031a4946080175ccb0fed4cf207"
+      }
+    },
+    {
+      "path": "run_onnx_ecapa_tdnn.py",
+      "size": 3566,
+      "sha256": null,
+      "gitBlob": "c27f33663a54ce91b4239b8ac665d38c0644a3f4",
+      "verifiedHashes": {
+        "sha256": "4ce7cda55916ad3698c3af3365bdc4327fcc856811bb45ae75398ebc7c804096",
+        "gitBlob": "c27f33663a54ce91b4239b8ac665d38c0644a3f4"
+      }
+    },
+    {
+      "path": "run_onnx_res2netv2.py",
+      "size": 3534,
+      "sha256": null,
+      "gitBlob": "f929a5755224b06daac544f2cb3fd960ec5439c5",
+      "verifiedHashes": {
+        "sha256": "907164dfacb504d31e0ea23f679dfb601cb7a9d61a3bc7601c011eae987ac1dc",
+        "gitBlob": "f929a5755224b06daac544f2cb3fd960ec5439c5"
+      }
+    },
+    {
+      "path": "wavs/speaker1_a_cn_16k.wav",
+      "size": 118932,
+      "sha256": "5f20ce0ddc378ca3239d3ce864b1142726a46a1221ae553912e4e142045df58b",
+      "gitBlob": "35f54bae4d68542f95e312422fe7a114c6dc9f90",
+      "verifiedHashes": {
+        "sha256": "5f20ce0ddc378ca3239d3ce864b1142726a46a1221ae553912e4e142045df58b",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "wavs/speaker1_b_cn_16k.wav",
+      "size": 157058,
+      "sha256": "20745dc08a4281894d146140b99b9ef7417ac681119b7f7202f553cdf1a85f65",
+      "gitBlob": "d11b6b76ca7872444f5b3edce17eeec7eea973b8",
+      "verifiedHashes": {
+        "sha256": "20745dc08a4281894d146140b99b9ef7417ac681119b7f7202f553cdf1a85f65",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "wavs/speaker2_a_cn_16k.wav",
+      "size": 170028,
+      "sha256": "8a6cffa452df32ef10503f7992f22ffcdd7f16c4e0273d13311bc5cdcb13abf4",
+      "gitBlob": "d2f3332e48c482f7c1d55e5267122fe618e3dbe3",
+      "verifiedHashes": {
+        "sha256": "8a6cffa452df32ef10503f7992f22ffcdd7f16c4e0273d13311bc5cdcb13abf4",
+        "gitBlob": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "kind": "text",
+  "task": "text",
+  "requests": [
+    {
+      "endpoint": "/v1/chat/completions",
+      "request": {
+        "model": "AXERA-TECH/MiniCPM5-1B-AX650-C128-P1152-CTX2047",
+        "messages": [
+          {
+            "role": "user",
+            "content": "What is 2 + 3? Answer with only the number."
+          }
+        ],
+        "max_tokens": 128,
+        "temperature": 0,
+        "enable_thinking": false,
+        "stream": false
+      },
+      "elapsedSeconds": 2.0652778949988715,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "content": "5",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1790141514,
+        "id": "chatcmpl-35c94c1af3287dd8c8df0628",
+        "model": "AXERA-TECH/MiniCPM5-1B-AX650-C128-P1152-CTX2047",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 1,
+          "prefill_tokens": 27,
+          "prefill_tps": 88.1022720336914,
+          "prompt_tokens": 27,
+          "total_tokens": 28,
+          "ttft_ms": 1890.738037109375
+        }
+      },
+      "checks": {
+        "nonemptyText": true,
+        "containsReplacementCharacter": false,
+        "finishReason": "stop"
+      }
+    },
+    {
+      "endpoint": "/v1/chat/completions",
+      "request": {
+        "model": "AXERA-TECH/MiniCPM5-1B-AX650-C128-P1152-CTX2047",
+        "messages": [
+          {
+            "role": "user",
+            "content": "请用一句话说明 PCIe 的用途。"
+          }
+        ],
+        "max_tokens": 128,
+        "temperature": 0,
+        "enable_thinking": false,
+        "stream": false
+      },
+      "elapsedSeconds": 7.273258069999429,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "content": "一句话说明 PCIe 的用途是：作为高带宽、低延迟的 PCIe 接口，广泛用于连接高性能计算设备、存储设备以及网络设备。",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1790141522,
+        "id": "chatcmpl-4dd645589665de99c9b64e94",
+        "model": "AXERA-TECH/MiniCPM5-1B-AX650-C128-P1152-CTX2047",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 33,
+          "decode_tps": 4.872818946838379,
+          "prefill_tokens": 22,
+          "prefill_tps": 72.8684310913086,
+          "prompt_tokens": 22,
+          "total_tokens": 55,
+          "ttft_ms": 697.8980102539062
+        }
+      },
+      "checks": {
+        "nonemptyText": true,
+        "containsReplacementCharacter": false,
+        "finishReason": "stop"
+      }
+    },
+    {
+      "endpoint": "/v1/chat/completions",
+      "request": {
+        "model": "AXERA-TECH/MiniCPM5-1B-AX650-C128-P1152-CTX2047",
+        "messages": [
+          {
+            "role": "user",
+            "content": "只输出 JSON：把苹果的数量 3 和梨的数量 2 写成一个对象，键名分别为 apple 和 pear。"
+          }
+        ],
+        "max_tokens": 128,
+        "temperature": 0,
+        "enable_thinking": false,
+        "stream": false
+      },
+      "elapsedSeconds": 5.081220521000432,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "content": "```json\n{\n  \"apple\": 3,\n  \"pear\": 2\n}\n```",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1790141527,
+        "id": "chatcmpl-d57aec9f4f28e87f3160e518",
+        "model": "AXERA-TECH/MiniCPM5-1B-AX650-C128-P1152-CTX2047",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 20,
+          "decode_tps": 4.38493013381958,
+          "prefill_tokens": 39,
+          "prefill_tps": 119.84733581542969,
+          "prompt_tokens": 39,
+          "total_tokens": 59,
+          "ttft_ms": 739.2459716796875
+        }
+      },
+      "checks": {
+        "nonemptyText": true,
+        "containsReplacementCharacter": false,
+        "finishReason": "stop"
+      }
+    }
+  ],
+  "model": "AXERA-TECH/MiniCPM5-1B-AX650-C128-P1152-CTX2047"
+}

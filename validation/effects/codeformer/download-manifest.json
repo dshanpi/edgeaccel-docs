@@ -1,0 +1,87 @@
+{
+  "repo": "AXERA-TECH/CodeFormer",
+  "revision": "0badefa602a33ba9867c6f6dbe5518ebb3aa310b",
+  "complete": true,
+  "files": [
+    {
+      "path": "python/run_whole_image.py",
+      "size": 6726,
+      "sha256": null,
+      "gitBlob": "b11ebf05b67f8a10f542385f402b0026c83ee308",
+      "verifiedHashes": {
+        "sha256": "a020880fe181f68a42af5ef5b5efde8610c57b653ac0d104c6ee8aeb2bb049d1",
+        "gitBlob": "b11ebf05b67f8a10f542385f402b0026c83ee308"
+      }
+    },
+    {
+      "path": "images/image/02.png",
+      "size": 936993,
+      "sha256": "9c7d80aa1e999ffa9437375f00cab5e439284d00797958e175516f777a8e7129",
+      "gitBlob": "86bdf52e469777f7ce4b1327eb830b2e3bf7186c",
+      "verifiedHashes": {
+        "sha256": "9c7d80aa1e999ffa9437375f00cab5e439284d00797958e175516f777a8e7129",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "model/codeformer.axmodel",
+      "size": 94975113,
+      "sha256": "fd97c1ec3b2fb0927c375c2b3d8e149137fa34e668e6d164654e3933a8d9fd88",
+      "gitBlob": "e127e28045f54aac4dae991d1461332e7f8b9c6d",
+      "verifiedHashes": {
+        "sha256": "fd97c1ec3b2fb0927c375c2b3d8e149137fa34e668e6d164654e3933a8d9fd88",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "model/realesrgan-x2.axmodel",
+      "size": 19270519,
+      "sha256": "348f9e4d81072b4865cb1d96143134f0de44d3f2c750805b188a5c42ba5d633e",
+      "gitBlob": "24cc4c0167f41672558fa5f021fbe0b2ccaa8ef9",
+      "verifiedHashes": {
+        "sha256": "348f9e4d81072b4865cb1d96143134f0de44d3f2c750805b188a5c42ba5d633e",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "model/yolov5l-face.axmodel",
+      "size": 50252385,
+      "sha256": "99a81386792c3293207aa737af11e559e0ed09c88ad69718e02809a78401527d",
+      "gitBlob": "e2e74f0f193c607a0999898a88099879776662af",
+      "verifiedHashes": {
+        "sha256": "99a81386792c3293207aa737af11e559e0ed09c88ad69718e02809a78401527d",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "python/utils/face_detector.py",
+      "size": 5630,
+      "sha256": null,
+      "gitBlob": "1aa930a9668c42aa9adbb21a1391ffe4f1472bcf",
+      "verifiedHashes": {
+        "sha256": "858e700cb69d9a1631e05078d52e5ccb80826f3bbfd52d78e89009e42ee71a52",
+        "gitBlob": "1aa930a9668c42aa9adbb21a1391ffe4f1472bcf"
+      }
+    },
+    {
+      "path": "python/utils/general.py",
+      "size": 13731,
+      "sha256": null,
+      "gitBlob": "6feae9eccc539304809432144e2014dfeba4469d",
+      "verifiedHashes": {
+        "sha256": "96add11ee35cbbfc8ad7615efac54b4acb2fe3aee9f37a7226fde1517cc322b9",
+        "gitBlob": "6feae9eccc539304809432144e2014dfeba4469d"
+      }
+    },
+    {
+      "path": "python/utils/restoration_helper.py",
+      "size": 25253,
+      "sha256": null,
+      "gitBlob": "8f350813ad932fbc600bdfc9e601105a41b790ca",
+      "verifiedHashes": {
+        "sha256": "a5ce2a9e60c8925a54b493cd8dabf7dfdbe6a803860e79370b7f222b5d6258c2",
+        "gitBlob": "8f350813ad932fbc600bdfc9e601105a41b790ca"
+      }
+    }
+  ]
+}

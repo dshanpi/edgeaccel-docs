@@ -1,0 +1,1012 @@
+{
+  "modelId": "IGEV-plusplus",
+  "revision": "b5e505fcaeaecdcee9bae2959d29c1f1ebec08a5",
+  "date": "2026-09-28",
+  "variants": [
+    {
+      "label": "七组双目输入统计",
+      "observation": "七组输入各运行两次 AXCL 和一次 CPU ONNX，两次算力卡原始输出逐字节一致。差值以未裁剪的原始视差计算，单位为 512 × 384 输入图上的像素。",
+      "previews": [],
+      "tables": [
+        {
+          "headers": [
+            "图片组",
+            "AXCL 两次耗时 / ms",
+            "与 CPU 平均绝对差 / px",
+            "95% 分位差 / px"
+          ],
+          "rows": [
+            [
+              "Adirondack",
+              "154.267 / 150.470",
+              "0.120128",
+              "0.332392"
+            ],
+            [
+              "Backpack",
+              "150.342 / 149.677",
+              "0.117619",
+              "0.343960"
+            ],
+            [
+              "Cable",
+              "150.002 / 149.749",
+              "0.118753",
+              "0.335281"
+            ],
+            [
+              "Classroom",
+              "150.173 / 149.578",
+              "0.105799",
+              "0.272817"
+            ],
+            [
+              "PipesH",
+              "150.297 / 150.498",
+              "2.470881",
+              "10.368073"
+            ],
+            [
+              "SCARED",
+              "150.252 / 149.774",
+              "0.066494",
+              "0.171097"
+            ],
+            [
+              "sceneflow",
+              "149.857 / 149.750",
+              "0.215131",
+              "0.888204"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "modelId": "IGEV-plusplus",
+        "provider": "AXCLRTExecutionProvider",
+        "completed": true,
+        "upstreamScriptSha256": "d1c63eae541d20e24cd6612edfc25e51b49ed555320d885ce3af8bd98db0599c",
+        "sessions": [
+          {
+            "model": "models/AX650_RTIGEV.axmodel",
+            "weightSha256": "acb3a4fcbae09e38bd4f744d7fc76f3322919154108ec6ca202f8e86edcacf09",
+            "provider": "AXCLRTExecutionProvider",
+            "loadSeconds": 1.0199540089815855,
+            "allFinite": true,
+            "runMilliseconds": [
+              154.26655497867614,
+              150.46961698681116,
+              150.34186601405963,
+              149.67686199815944,
+              150.00236401101574,
+              149.74948804592714,
+              150.17328097019345,
+              149.57769500324503,
+              150.29665699694306,
+              150.49819997511804,
+              150.25174099719152,
+              149.77398799965158,
+              149.856822041329,
+              149.74978001555428
+            ],
+            "inputs": [
+              {
+                "name": "left",
+                "shape": [
+                  1,
+                  384,
+                  512,
+                  3
+                ],
+                "dtype": "uint8"
+              },
+              {
+                "name": "right",
+                "shape": [
+                  1,
+                  384,
+                  512,
+                  3
+                ],
+                "dtype": "uint8"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "pred_disp",
+                "shape": [
+                  1,
+                  1,
+                  384,
+                  512
+                ]
+              }
+            ]
+          }
+        ],
+        "cpuSessions": [
+          {
+            "model": "models/AX650.onnx",
+            "weightSha256": "a6aa8792a40f9e416a6cd8da4b6372da3da3323a72d8cb70442f5b6437e266ae",
+            "provider": "CPUExecutionProvider",
+            "loadSeconds": 0.6944379329797812,
+            "allFinite": true,
+            "runMilliseconds": [
+              18388.775897969026,
+              18830.14523400925,
+              18135.97213703906,
+              18798.94868802512,
+              18007.834683987312,
+              18858.080637990497,
+              19178.988937987015
+            ],
+            "inputs": [
+              {
+                "name": "left",
+                "shape": [
+                  1,
+                  3,
+                  384,
+                  512
+                ],
+                "dtype": "tensor(float)"
+              },
+              {
+                "name": "right",
+                "shape": [
+                  1,
+                  3,
+                  384,
+                  512
+                ],
+                "dtype": "tensor(float)"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "pred_disp",
+                "shape": [
+                  1,
+                  1,
+                  384,
+                  512
+                ]
+              }
+            ]
+          }
+        ],
+        "samples": [
+          {
+            "pair": "Adirondack",
+            "inputSize": [
+              512,
+              384
+            ],
+            "leftSource": "demo-imgs/Adirondack/im0.png",
+            "rightSource": "demo-imgs/Adirondack/im1.png",
+            "leftSourceSha256": "b322bad57398336a2730ad4363b267dff2324adcdf0b8aef2a01f931aeaf5ab9",
+            "rightSourceSha256": "aeacdae282f68f20ea7175640e061ecddab686886b4a43fe5d4eff255f27beaa",
+            "originalSize": [
+              2880,
+              1988
+            ],
+            "allFinite": true,
+            "repeatExact": true,
+            "runMilliseconds": [
+              154.26655497867614,
+              150.46961698681116
+            ],
+            "cpuMilliseconds": 18388.775897969026,
+            "rawFile": "Adirondack-raw.npz",
+            "rawSha256": "90444dd6bc7e673262ce6079cd0063dcef364d0b03fe17dad3e8ae66f7214f8f",
+            "maePixels": 0.12012848976883106,
+            "rmsePixels": 0.4172559560829096,
+            "p95AbsoluteErrorPixels": 0.33239173889160156,
+            "fractionErrorOver1Pixel": 0.0091094970703125,
+            "cardPercentiles": {
+              "0": 5.696423053741455,
+              "25": 9.034372329711914,
+              "50": 19.64105987548828,
+              "75": 26.521230697631836,
+              "95": 32.26856231689453,
+              "100": 42.69224166870117
+            },
+            "visualizationClippedFraction": 0.0
+          },
+          {
+            "pair": "Backpack",
+            "inputSize": [
+              512,
+              384
+            ],
+            "leftSource": "demo-imgs/Backpack/im0.png",
+            "rightSource": "demo-imgs/Backpack/im1.png",
+            "leftSourceSha256": "fd00169921e7787121da1de060baeff1364e115d8489fb21700f26c368016352",
+            "rightSourceSha256": "19ce5314686f1af7e84db27e69e6f43bb77507c42b33cb5a5205ebcab01be114",
+            "originalSize": [
+              2940,
+              2016
+            ],
+            "allFinite": true,
+            "repeatExact": true,
+            "runMilliseconds": [
+              150.34186601405963,
+              149.67686199815944
+            ],
+            "cpuMilliseconds": 18830.14523400925,
+            "rawFile": "Backpack-raw.npz",
+            "rawSha256": "0e86123879917e16d24eb47a1bd54532a6645d01b53f35ae2a178c201cde9eb6",
+            "maePixels": 0.11761915685686593,
+            "rmsePixels": 0.34963007551047043,
+            "p95AbsoluteErrorPixels": 0.34395952224731413,
+            "fractionErrorOver1Pixel": 0.0218658447265625,
+            "cardPercentiles": {
+              "0": 5.330408573150635,
+              "25": 12.359434127807617,
+              "50": 25.66999053955078,
+              "75": 31.80459976196289,
+              "95": 35.24217128753661,
+              "100": 38.8748664855957
+            },
+            "visualizationClippedFraction": 0.0
+          },
+          {
+            "pair": "Cable",
+            "inputSize": [
+              512,
+              384
+            ],
+            "leftSource": "demo-imgs/Cable/im0.png",
+            "rightSource": "demo-imgs/Cable/im1.png",
+            "leftSourceSha256": "3d84c5a1e50bf35925fd86820440de08993d569b71b36c16a633992a8dc4f706",
+            "rightSourceSha256": "8d258f5e14a46246f20833c8b3a04ce2142c9b76b7e24c8039a1e76a4e5c2348",
+            "originalSize": [
+              2796,
+              1984
+            ],
+            "allFinite": true,
+            "repeatExact": true,
+            "runMilliseconds": [
+              150.00236401101574,
+              149.74948804592714
+            ],
+            "cpuMilliseconds": 18135.97213703906,
+            "rawFile": "Cable-raw.npz",
+            "rawSha256": "2a73a8bb96d65571994f18874aabe2fc90898b7da49cf2c562fa2d936e6e6356",
+            "maePixels": 0.11875295373950696,
+            "rmsePixels": 0.2715961144250885,
+            "p95AbsoluteErrorPixels": 0.33528072834014894,
+            "fractionErrorOver1Pixel": 0.00469970703125,
+            "cardPercentiles": {
+              "0": 6.745492935180664,
+              "25": 9.150362968444824,
+              "50": 23.87858009338379,
+              "75": 35.632286071777344,
+              "95": 54.474300384521484,
+              "100": 66.74352264404297
+            },
+            "visualizationClippedFraction": 0.0
+          },
+          {
+            "pair": "Classroom",
+            "inputSize": [
+              512,
+              384
+            ],
+            "leftSource": "demo-imgs/Classroom/im0.png",
+            "rightSource": "demo-imgs/Classroom/im1.png",
+            "leftSourceSha256": "153d11f8d14d2483380c6328827c2191066f1a55e0905e31bbec4e24bb5502f6",
+            "rightSourceSha256": "d5aa7aa9d273a4d415f327792664e958f902058341dbaa5b7b11adf487c0e623",
+            "originalSize": [
+              3000,
+              1920
+            ],
+            "allFinite": true,
+            "repeatExact": true,
+            "runMilliseconds": [
+              150.17328097019345,
+              149.57769500324503
+            ],
+            "cpuMilliseconds": 18798.94868802512,
+            "rawFile": "Classroom-raw.npz",
+            "rawSha256": "da90d0122eab17faed3d2a3d81796ecdb0d41aa9d7b92193c8d3d30a14e9a5e5",
+            "maePixels": 0.10579919220375207,
+            "rmsePixels": 0.45119460751721063,
+            "p95AbsoluteErrorPixels": 0.2728171825408934,
+            "fractionErrorOver1Pixel": 0.007624308268229167,
+            "cardPercentiles": {
+              "0": 7.096042156219482,
+              "25": 8.176042556762695,
+              "50": 10.723967552185059,
+              "75": 15.351988792419434,
+              "95": 25.004075622558577,
+              "100": 35.87973403930664
+            },
+            "visualizationClippedFraction": 0.0
+          },
+          {
+            "pair": "PipesH",
+            "inputSize": [
+              512,
+              384
+            ],
+            "leftSource": "demo-imgs/PipesH/im0.png",
+            "rightSource": "demo-imgs/PipesH/im1.png",
+            "leftSourceSha256": "42640b0181e4dd459952b8ed7afae3342d3d69510cbda8e26272ac67f20ec944",
+            "rightSourceSha256": "51ea2620bbdfe208a3b971654a730727d0eb428e101370559887ec1d7237a02f",
+            "originalSize": [
+              960,
+              540
+            ],
+            "allFinite": true,
+            "repeatExact": true,
+            "runMilliseconds": [
+              150.29665699694306,
+              150.49819997511804
+            ],
+            "cpuMilliseconds": 18007.834683987312,
+            "rawFile": "PipesH-raw.npz",
+            "rawSha256": "3f7694780a93195f22484666f26f1a5fa19dffeff9d1ab2d05bdd40f18acfaf6",
+            "maePixels": 2.4708811671080184,
+            "rmsePixels": 5.002290239991564,
+            "p95AbsoluteErrorPixels": 10.368072509765625,
+            "fractionErrorOver1Pixel": 0.4512939453125,
+            "cardPercentiles": {
+              "0": 0.9975184202194214,
+              "25": 61.19659423828125,
+              "50": 98.42955017089844,
+              "75": 133.556640625,
+              "95": 149.90098571777344,
+              "100": 168.44915771484375
+            },
+            "visualizationClippedFraction": 0.3008982340494792
+          },
+          {
+            "pair": "SCARED",
+            "inputSize": [
+              512,
+              384
+            ],
+            "leftSource": "demo-imgs/SCARED/im0.png",
+            "rightSource": "demo-imgs/SCARED/im1.png",
+            "leftSourceSha256": "38072c300cc0304a86a39d25c50a1ccb78f16eaa770997c618781ebb282f7f32",
+            "rightSourceSha256": "c1ba497caef869519209b0449b057d63d9007eba9335bd805a94b5545fe4e3fc",
+            "originalSize": [
+              1280,
+              1024
+            ],
+            "allFinite": true,
+            "repeatExact": true,
+            "runMilliseconds": [
+              150.25174099719152,
+              149.77398799965158
+            ],
+            "cpuMilliseconds": 18858.080637990497,
+            "rawFile": "SCARED-raw.npz",
+            "rawSha256": "bdaaf665f8fcb04b28bc39a71e1a69990681db9e9e1d4f20460ffacb4f55a804",
+            "maePixels": 0.06649428989233759,
+            "rmsePixels": 0.10402862909536237,
+            "p95AbsoluteErrorPixels": 0.17109670639038083,
+            "fractionErrorOver1Pixel": 0.000396728515625,
+            "cardPercentiles": {
+              "0": 16.465497970581055,
+              "25": 22.149032592773438,
+              "50": 23.21099090576172,
+              "75": 24.626075744628906,
+              "95": 31.884504318237305,
+              "100": 36.908180236816406
+            },
+            "visualizationClippedFraction": 0.0
+          },
+          {
+            "pair": "sceneflow",
+            "inputSize": [
+              512,
+              384
+            ],
+            "leftSource": "demo-imgs/sceneflow/im0.png",
+            "rightSource": "demo-imgs/sceneflow/im1.png",
+            "leftSourceSha256": "a2e876c4134f7eb84217c1af1769455ce2632386e143c8c6a27d8cca26f5bf0d",
+            "rightSourceSha256": "dbe0a05f2145f91fe544d387c05a30a29a47490d79289c64e399debfcd5d19a6",
+            "originalSize": [
+              1470,
+              970
+            ],
+            "allFinite": true,
+            "repeatExact": true,
+            "runMilliseconds": [
+              149.856822041329,
+              149.74978001555428
+            ],
+            "cpuMilliseconds": 19178.988937987015,
+            "rawFile": "sceneflow-raw.npz",
+            "rawSha256": "0c806ea90168770a35d4f7ed6f8eb8655202badda64d3f41ecf7ebe2ad73894a",
+            "maePixels": 0.21513062466692645,
+            "rmsePixels": 0.6040211325400647,
+            "p95AbsoluteErrorPixels": 0.8882036209106429,
+            "fractionErrorOver1Pixel": 0.0418701171875,
+            "cardPercentiles": {
+              "0": 8.22243881225586,
+              "25": 15.661296844482422,
+              "50": 20.568984985351562,
+              "75": 30.24001693725586,
+              "95": 40.46780014038086,
+              "100": 46.80603790283203
+            },
+            "visualizationClippedFraction": 0.0
+          }
+        ],
+        "visualization": {
+          "quantity": "horizontal disparity in 512x384 input pixels",
+          "colormap": "jet",
+          "range": [
+            0,
+            128
+          ],
+          "clippingAffectsVisualizationOnly": true
+        },
+        "review": {
+          "sourceAndWeightHashesMatched": true,
+          "allSavedReferenceComparisonsRecomputed": true,
+          "scope": "Seven official resized stereo pairs; CPU ONNX is a numerical reference, not ground-truth depth."
+        }
+      }
+    },
+    {
+      "label": "Adirondack：输入与输出对照",
+      "observation": "椅背、扶手、杯子及前景物体轮廓可辨，算力卡与 CPU 色图整体接近。局部边缘仍存在数值差异。 两份视差图固定采用 0–128 像素色阶，超出范围仅截断颜色。",
+      "previews": [
+        {
+          "caption": "Adirondack · 实际左目输入",
+          "path": "/validation/effects/igev-plusplus-20260928/Adirondack-left.png"
+        },
+        {
+          "caption": "Adirondack · 实际右目输入",
+          "path": "/validation/effects/igev-plusplus-20260928/Adirondack-right.png"
+        },
+        {
+          "caption": "Adirondack · 算力卡视差",
+          "path": "/validation/effects/igev-plusplus-20260928/Adirondack-card.png"
+        },
+        {
+          "caption": "Adirondack · CPU ONNX 参考视差",
+          "path": "/validation/effects/igev-plusplus-20260928/Adirondack-cpu.png"
+        }
+      ],
+      "tables": [],
+      "record": {
+        "completed": true,
+        "provider": "AXCLRTExecutionProvider",
+        "sessions": [
+          {
+            "model": "models/AX650_RTIGEV.axmodel",
+            "weightSha256": "acb3a4fcbae09e38bd4f744d7fc76f3322919154108ec6ca202f8e86edcacf09",
+            "provider": "AXCLRTExecutionProvider",
+            "loadSeconds": 1.0199540089815855,
+            "allFinite": true,
+            "runMilliseconds": [
+              154.26655497867614,
+              150.46961698681116,
+              150.34186601405963,
+              149.67686199815944,
+              150.00236401101574,
+              149.74948804592714,
+              150.17328097019345,
+              149.57769500324503,
+              150.29665699694306,
+              150.49819997511804,
+              150.25174099719152,
+              149.77398799965158,
+              149.856822041329,
+              149.74978001555428
+            ],
+            "inputs": [
+              {
+                "name": "left",
+                "shape": [
+                  1,
+                  384,
+                  512,
+                  3
+                ],
+                "dtype": "uint8"
+              },
+              {
+                "name": "right",
+                "shape": [
+                  1,
+                  384,
+                  512,
+                  3
+                ],
+                "dtype": "uint8"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "pred_disp",
+                "shape": [
+                  1,
+                  1,
+                  384,
+                  512
+                ]
+              }
+            ]
+          }
+        ],
+        "cpuSessions": [
+          {
+            "model": "models/AX650.onnx",
+            "weightSha256": "a6aa8792a40f9e416a6cd8da4b6372da3da3323a72d8cb70442f5b6437e266ae",
+            "provider": "CPUExecutionProvider",
+            "loadSeconds": 0.6944379329797812,
+            "allFinite": true,
+            "runMilliseconds": [
+              18388.775897969026,
+              18830.14523400925,
+              18135.97213703906,
+              18798.94868802512,
+              18007.834683987312,
+              18858.080637990497,
+              19178.988937987015
+            ],
+            "inputs": [
+              {
+                "name": "left",
+                "shape": [
+                  1,
+                  3,
+                  384,
+                  512
+                ],
+                "dtype": "tensor(float)"
+              },
+              {
+                "name": "right",
+                "shape": [
+                  1,
+                  3,
+                  384,
+                  512
+                ],
+                "dtype": "tensor(float)"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "pred_disp",
+                "shape": [
+                  1,
+                  1,
+                  384,
+                  512
+                ]
+              }
+            ]
+          }
+        ],
+        "samples": [
+          {
+            "pair": "Adirondack",
+            "inputSize": [
+              512,
+              384
+            ],
+            "leftSource": "demo-imgs/Adirondack/im0.png",
+            "rightSource": "demo-imgs/Adirondack/im1.png",
+            "leftSourceSha256": "b322bad57398336a2730ad4363b267dff2324adcdf0b8aef2a01f931aeaf5ab9",
+            "rightSourceSha256": "aeacdae282f68f20ea7175640e061ecddab686886b4a43fe5d4eff255f27beaa",
+            "originalSize": [
+              2880,
+              1988
+            ],
+            "allFinite": true,
+            "repeatExact": true,
+            "runMilliseconds": [
+              154.26655497867614,
+              150.46961698681116
+            ],
+            "cpuMilliseconds": 18388.775897969026,
+            "rawFile": "Adirondack-raw.npz",
+            "rawSha256": "90444dd6bc7e673262ce6079cd0063dcef364d0b03fe17dad3e8ae66f7214f8f",
+            "maePixels": 0.12012848976883106,
+            "rmsePixels": 0.4172559560829096,
+            "p95AbsoluteErrorPixels": 0.33239173889160156,
+            "fractionErrorOver1Pixel": 0.0091094970703125,
+            "cardPercentiles": {
+              "0": 5.696423053741455,
+              "25": 9.034372329711914,
+              "50": 19.64105987548828,
+              "75": 26.521230697631836,
+              "95": 32.26856231689453,
+              "100": 42.69224166870117
+            },
+            "visualizationClippedFraction": 0.0
+          }
+        ],
+        "visualization": {
+          "quantity": "horizontal disparity in 512x384 input pixels",
+          "colormap": "jet",
+          "range": [
+            0,
+            128
+          ],
+          "clippingAffectsVisualizationOnly": true
+        }
+      }
+    },
+    {
+      "label": "PipesH：输入与输出对照",
+      "observation": "两份视差图的近处大平面与边界存在明显数值差异，误差图中亮色区域较集中。本组平均差值最高，需要继续核对量化与场景适用性。 两份视差图固定采用 0–128 像素色阶，超出范围仅截断颜色。",
+      "previews": [
+        {
+          "caption": "PipesH · 实际左目输入",
+          "path": "/validation/effects/igev-plusplus-20260928/PipesH-left.png"
+        },
+        {
+          "caption": "PipesH · 实际右目输入",
+          "path": "/validation/effects/igev-plusplus-20260928/PipesH-right.png"
+        },
+        {
+          "caption": "PipesH · 算力卡视差",
+          "path": "/validation/effects/igev-plusplus-20260928/PipesH-card.png"
+        },
+        {
+          "caption": "PipesH · CPU ONNX 参考视差",
+          "path": "/validation/effects/igev-plusplus-20260928/PipesH-cpu.png"
+        },
+        {
+          "caption": "PipesH · 原始视差绝对差，色阶 0–16 px",
+          "path": "/validation/effects/igev-plusplus-20260928/PipesH-error.png"
+        }
+      ],
+      "tables": [],
+      "record": {
+        "completed": true,
+        "provider": "AXCLRTExecutionProvider",
+        "sessions": [
+          {
+            "model": "models/AX650_RTIGEV.axmodel",
+            "weightSha256": "acb3a4fcbae09e38bd4f744d7fc76f3322919154108ec6ca202f8e86edcacf09",
+            "provider": "AXCLRTExecutionProvider",
+            "loadSeconds": 1.0199540089815855,
+            "allFinite": true,
+            "runMilliseconds": [
+              154.26655497867614,
+              150.46961698681116,
+              150.34186601405963,
+              149.67686199815944,
+              150.00236401101574,
+              149.74948804592714,
+              150.17328097019345,
+              149.57769500324503,
+              150.29665699694306,
+              150.49819997511804,
+              150.25174099719152,
+              149.77398799965158,
+              149.856822041329,
+              149.74978001555428
+            ],
+            "inputs": [
+              {
+                "name": "left",
+                "shape": [
+                  1,
+                  384,
+                  512,
+                  3
+                ],
+                "dtype": "uint8"
+              },
+              {
+                "name": "right",
+                "shape": [
+                  1,
+                  384,
+                  512,
+                  3
+                ],
+                "dtype": "uint8"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "pred_disp",
+                "shape": [
+                  1,
+                  1,
+                  384,
+                  512
+                ]
+              }
+            ]
+          }
+        ],
+        "cpuSessions": [
+          {
+            "model": "models/AX650.onnx",
+            "weightSha256": "a6aa8792a40f9e416a6cd8da4b6372da3da3323a72d8cb70442f5b6437e266ae",
+            "provider": "CPUExecutionProvider",
+            "loadSeconds": 0.6944379329797812,
+            "allFinite": true,
+            "runMilliseconds": [
+              18388.775897969026,
+              18830.14523400925,
+              18135.97213703906,
+              18798.94868802512,
+              18007.834683987312,
+              18858.080637990497,
+              19178.988937987015
+            ],
+            "inputs": [
+              {
+                "name": "left",
+                "shape": [
+                  1,
+                  3,
+                  384,
+                  512
+                ],
+                "dtype": "tensor(float)"
+              },
+              {
+                "name": "right",
+                "shape": [
+                  1,
+                  3,
+                  384,
+                  512
+                ],
+                "dtype": "tensor(float)"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "pred_disp",
+                "shape": [
+                  1,
+                  1,
+                  384,
+                  512
+                ]
+              }
+            ]
+          }
+        ],
+        "samples": [
+          {
+            "pair": "PipesH",
+            "inputSize": [
+              512,
+              384
+            ],
+            "leftSource": "demo-imgs/PipesH/im0.png",
+            "rightSource": "demo-imgs/PipesH/im1.png",
+            "leftSourceSha256": "42640b0181e4dd459952b8ed7afae3342d3d69510cbda8e26272ac67f20ec944",
+            "rightSourceSha256": "51ea2620bbdfe208a3b971654a730727d0eb428e101370559887ec1d7237a02f",
+            "originalSize": [
+              960,
+              540
+            ],
+            "allFinite": true,
+            "repeatExact": true,
+            "runMilliseconds": [
+              150.29665699694306,
+              150.49819997511804
+            ],
+            "cpuMilliseconds": 18007.834683987312,
+            "rawFile": "PipesH-raw.npz",
+            "rawSha256": "3f7694780a93195f22484666f26f1a5fa19dffeff9d1ab2d05bdd40f18acfaf6",
+            "maePixels": 2.4708811671080184,
+            "rmsePixels": 5.002290239991564,
+            "p95AbsoluteErrorPixels": 10.368072509765625,
+            "fractionErrorOver1Pixel": 0.4512939453125,
+            "cardPercentiles": {
+              "0": 0.9975184202194214,
+              "25": 61.19659423828125,
+              "50": 98.42955017089844,
+              "75": 133.556640625,
+              "95": 149.90098571777344,
+              "100": 168.44915771484375
+            },
+            "visualizationClippedFraction": 0.3008982340494792
+          }
+        ],
+        "visualization": {
+          "quantity": "horizontal disparity in 512x384 input pixels",
+          "colormap": "jet",
+          "range": [
+            0,
+            128
+          ],
+          "clippingAffectsVisualizationOnly": true
+        }
+      }
+    },
+    {
+      "label": "sceneflow：输入与输出对照",
+      "observation": "管道与立柱形成不同视差区域，两份输出的主要结构接近，局部遮挡边缘仍有差异。 两份视差图固定采用 0–128 像素色阶，超出范围仅截断颜色。",
+      "previews": [
+        {
+          "caption": "sceneflow · 实际左目输入",
+          "path": "/validation/effects/igev-plusplus-20260928/sceneflow-left.png"
+        },
+        {
+          "caption": "sceneflow · 实际右目输入",
+          "path": "/validation/effects/igev-plusplus-20260928/sceneflow-right.png"
+        },
+        {
+          "caption": "sceneflow · 算力卡视差",
+          "path": "/validation/effects/igev-plusplus-20260928/sceneflow-card.png"
+        },
+        {
+          "caption": "sceneflow · CPU ONNX 参考视差",
+          "path": "/validation/effects/igev-plusplus-20260928/sceneflow-cpu.png"
+        }
+      ],
+      "tables": [],
+      "record": {
+        "completed": true,
+        "provider": "AXCLRTExecutionProvider",
+        "sessions": [
+          {
+            "model": "models/AX650_RTIGEV.axmodel",
+            "weightSha256": "acb3a4fcbae09e38bd4f744d7fc76f3322919154108ec6ca202f8e86edcacf09",
+            "provider": "AXCLRTExecutionProvider",
+            "loadSeconds": 1.0199540089815855,
+            "allFinite": true,
+            "runMilliseconds": [
+              154.26655497867614,
+              150.46961698681116,
+              150.34186601405963,
+              149.67686199815944,
+              150.00236401101574,
+              149.74948804592714,
+              150.17328097019345,
+              149.57769500324503,
+              150.29665699694306,
+              150.49819997511804,
+              150.25174099719152,
+              149.77398799965158,
+              149.856822041329,
+              149.74978001555428
+            ],
+            "inputs": [
+              {
+                "name": "left",
+                "shape": [
+                  1,
+                  384,
+                  512,
+                  3
+                ],
+                "dtype": "uint8"
+              },
+              {
+                "name": "right",
+                "shape": [
+                  1,
+                  384,
+                  512,
+                  3
+                ],
+                "dtype": "uint8"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "pred_disp",
+                "shape": [
+                  1,
+                  1,
+                  384,
+                  512
+                ]
+              }
+            ]
+          }
+        ],
+        "cpuSessions": [
+          {
+            "model": "models/AX650.onnx",
+            "weightSha256": "a6aa8792a40f9e416a6cd8da4b6372da3da3323a72d8cb70442f5b6437e266ae",
+            "provider": "CPUExecutionProvider",
+            "loadSeconds": 0.6944379329797812,
+            "allFinite": true,
+            "runMilliseconds": [
+              18388.775897969026,
+              18830.14523400925,
+              18135.97213703906,
+              18798.94868802512,
+              18007.834683987312,
+              18858.080637990497,
+              19178.988937987015
+            ],
+            "inputs": [
+              {
+                "name": "left",
+                "shape": [
+                  1,
+                  3,
+                  384,
+                  512
+                ],
+                "dtype": "tensor(float)"
+              },
+              {
+                "name": "right",
+                "shape": [
+                  1,
+                  3,
+                  384,
+                  512
+                ],
+                "dtype": "tensor(float)"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "pred_disp",
+                "shape": [
+                  1,
+                  1,
+                  384,
+                  512
+                ]
+              }
+            ]
+          }
+        ],
+        "samples": [
+          {
+            "pair": "sceneflow",
+            "inputSize": [
+              512,
+              384
+            ],
+            "leftSource": "demo-imgs/sceneflow/im0.png",
+            "rightSource": "demo-imgs/sceneflow/im1.png",
+            "leftSourceSha256": "a2e876c4134f7eb84217c1af1769455ce2632386e143c8c6a27d8cca26f5bf0d",
+            "rightSourceSha256": "dbe0a05f2145f91fe544d387c05a30a29a47490d79289c64e399debfcd5d19a6",
+            "originalSize": [
+              1470,
+              970
+            ],
+            "allFinite": true,
+            "repeatExact": true,
+            "runMilliseconds": [
+              149.856822041329,
+              149.74978001555428
+            ],
+            "cpuMilliseconds": 19178.988937987015,
+            "rawFile": "sceneflow-raw.npz",
+            "rawSha256": "0c806ea90168770a35d4f7ed6f8eb8655202badda64d3f41ecf7ebe2ad73894a",
+            "maePixels": 0.21513062466692645,
+            "rmsePixels": 0.6040211325400647,
+            "p95AbsoluteErrorPixels": 0.8882036209106429,
+            "fractionErrorOver1Pixel": 0.0418701171875,
+            "cardPercentiles": {
+              "0": 8.22243881225586,
+              "25": 15.661296844482422,
+              "50": 20.568984985351562,
+              "75": 30.24001693725586,
+              "95": 40.46780014038086,
+              "100": 46.80603790283203
+            },
+            "visualizationClippedFraction": 0.0
+          }
+        ],
+        "visualization": {
+          "quantity": "horizontal disparity in 512x384 input pixels",
+          "colormap": "jet",
+          "range": [
+            0,
+            128
+          ],
+          "clippingAffectsVisualizationOnly": true
+        }
+      }
+    }
+  ]
+}

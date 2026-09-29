@@ -1,0 +1,17 @@
+Input #0, rtsp, from 'rtsp://127.0.0.1:8554/depth':
+  Metadata:
+    title           : RTSP Stream
+  Duration: N/A, bitrate: N/A
+  Stream #0:0: Video: h264 (Main), yuv420p(tv, bt470bg/bt470bg/bt709, progressive), 1920x1080, 23 fps, 46 tbr, 90k tbn
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> wrapped_avframe (native))
+Output #0, null, to 'pipe:':
+  Metadata:
+    title           : RTSP Stream
+    encoder         : Lavf60.16.100
+  Stream #0:0: Video: wrapped_avframe, yuv420p(tv, bt470bg/bt470bg/bt709, progressive), 1920x1080, q=2-31, 200 kb/s, 23 fps, 23 tbn
+    Metadata:
+      encoder         : Lavc60.31.102 wrapped_avframe
+frame=    0 fps=0.0 q=-0.0 size=       0kB time=00:00:00.82 bitrate=   0.0kbits/s speed=2.38x    [null @ 0xaaaac5a02cc0] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 35 >= 35
+frame=   25 fps=0.0 q=-0.0 size=N/A time=00:00:01.86 bitrate=N/A speed= 2.2x    [out#0/null @ 0xaaaac5801ea0] video:14kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
+frame=   30 fps=0.0 q=-0.0 Lsize=N/A time=00:00:02.04 bitrate=N/A speed= 2.1x    

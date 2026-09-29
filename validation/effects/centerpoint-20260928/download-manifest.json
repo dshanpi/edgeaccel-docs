@@ -1,0 +1,981 @@
+{
+  "modelId": "centerpoint",
+  "repo": "AXERA-TECH/centerpoint",
+  "revision": "186e6a83fac0f4e89b6989628d1e214e4746e877",
+  "complete": true,
+  "files": [
+    {
+      "path": "README.md",
+      "size": 3901,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/README.md",
+      "verifiedHashes": {
+        "sha256": "263fc67e7af22b041960bb85e9fed5702acab5969473fbb2e4a22f6f81f3ef20",
+        "gitBlob": "359ed8fc9abf8ff26529ca9da5846d8d3f89c294"
+      }
+    },
+    {
+      "path": "ax650/centerpoint.axmodel",
+      "size": 75132766,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/ax650/centerpoint.axmodel",
+      "verifiedHashes": {
+        "sha256": "952facc95199ff658adfc68b3d2f8bb94e12d663528fba009ec2cf034603730e",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "config.json",
+      "size": 3850,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/config.json",
+      "verifiedHashes": {
+        "sha256": "6e26acd752941bccb6caee89dadbf1b3f3b8c9f985d476fd55dc01b45e48a742",
+        "gitBlob": "777933c976172c4917ef288a8e9e8a26d48d46e0"
+      }
+    },
+    {
+      "path": "extracted_data/config.json",
+      "size": 1720,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/config.json",
+      "verifiedHashes": {
+        "sha256": "cfa2b9f5f29eb8a52362723f22931002e401abc10d61a486e2b98741761ecf97",
+        "gitBlob": "7e2533d57e876f71ea55459ed32dd8c111e20d0b"
+      }
+    },
+    {
+      "path": "extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151603547590.json",
+      "size": 111,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151603547590.json",
+      "verifiedHashes": {
+        "sha256": "5a4f52090a561e213064068a7cf39208aed97c7a32afa2278fd1aca16f450f65",
+        "gitBlob": "4f4023ad9a5b737bdd0ab08cc89518d22950b5f9"
+      }
+    },
+    {
+      "path": "extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151604048025.json",
+      "size": 111,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151604048025.json",
+      "verifiedHashes": {
+        "sha256": "2101b96e9a0d0856d0ee0e4f1cbebbf195f156c6427548011b9a515339b694cd",
+        "gitBlob": "3535a14e75b70ed9f4002d78d9f31cc3aff64815"
+      }
+    },
+    {
+      "path": "extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151604547893.json",
+      "size": 111,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151604547893.json",
+      "verifiedHashes": {
+        "sha256": "ad81eafb6bf67a6adafeb7e291bdf9a43430860ae1fd88fcc3195c55075f9867",
+        "gitBlob": "01aa8742fe15d5e3c7589760bd9e512957c6ce3b"
+      }
+    },
+    {
+      "path": "extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151605047769.json",
+      "size": 111,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151605047769.json",
+      "verifiedHashes": {
+        "sha256": "3be0c1e2455f2dc54f49a143893a784285c0fa97b7b58b0a6f725d7b5fc5edfd",
+        "gitBlob": "c04e483e3c9522c0f25bed9739d7fdd673d914cf"
+      }
+    },
+    {
+      "path": "extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151605548192.json",
+      "size": 111,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151605548192.json",
+      "verifiedHashes": {
+        "sha256": "649caa8be0c15cfe7cf5a0a004a3dcc5303c4b488818ff3bda45857d93f2668a",
+        "gitBlob": "c472b5b536f98c8568007776ec1c487cfee99966"
+      }
+    },
+    {
+      "path": "extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151606048630.json",
+      "size": 111,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151606048630.json",
+      "verifiedHashes": {
+        "sha256": "6f9379615ac58f62332fc282dfce2c75569195b8a3bcb90e7c37ef176f4a9410",
+        "gitBlob": "ca7577ecef2834e37b49fb8b5104ad557b715bc9"
+      }
+    },
+    {
+      "path": "extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151606549066.json",
+      "size": 111,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151606549066.json",
+      "verifiedHashes": {
+        "sha256": "86eb7e267e032b2e757a8d9183880065e72374b9a1267e8d31eed04842336186",
+        "gitBlob": "e3019196e2b736e52b0328e8735161239958d55f"
+      }
+    },
+    {
+      "path": "extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151607048933.json",
+      "size": 111,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151607048933.json",
+      "verifiedHashes": {
+        "sha256": "e89e1e60397849c8984aa0ac4ef81eef13173370205abe878cf1421a47a6dcb2",
+        "gitBlob": "023ab73f3afa0b18fbef2840b9072928d2943c36"
+      }
+    },
+    {
+      "path": "extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151607548824.json",
+      "size": 111,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151607548824.json",
+      "verifiedHashes": {
+        "sha256": "d51c69a98e466ce1f58a8f6165bd0fffc803eff63af1ca2bab39219865f507f6",
+        "gitBlob": "ecc51429168f661c3798f713116c754c8f92d19e"
+      }
+    },
+    {
+      "path": "extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151608048151.json",
+      "size": 111,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151608048151.json",
+      "verifiedHashes": {
+        "sha256": "d2451716108e14834adf04cf7fa36269410f690327741832f223e79544e34ead",
+        "gitBlob": "9868b7afdfda33a8e09a4936cc76a5b20c7e33ef"
+      }
+    },
+    {
+      "path": "extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151608548020.json",
+      "size": 111,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151608548020.json",
+      "verifiedHashes": {
+        "sha256": "4f73cbcd83e6f6d7602e76d0dcf495ba1bb79e9114ad50fe75d0833d924e3155",
+        "gitBlob": "3d663890cc929226c1638b901f49598def642877"
+      }
+    },
+    {
+      "path": "extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151609047890.json",
+      "size": 111,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151609047890.json",
+      "verifiedHashes": {
+        "sha256": "25de98345bd3cff5899759c1c3a5295d62da338f491e6eb305c94d06715702cd",
+        "gitBlob": "02c571e0434f9400c4bf9414a7fdfa00e94fffeb"
+      }
+    },
+    {
+      "path": "extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151609547766.json",
+      "size": 111,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151609547766.json",
+      "verifiedHashes": {
+        "sha256": "72dc58dfb485534c72d96acc1b1a6cac2a32f2a7658882f551fc17cdaccf18b8",
+        "gitBlob": "f594fb295e5c3b5a47b1d93f1159411965b41c5b"
+      }
+    },
+    {
+      "path": "extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151609947025.json",
+      "size": 111,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151609947025.json",
+      "verifiedHashes": {
+        "sha256": "66c3d69aa5e7d67e427e20831af5af4dc4a4ca8a4d49f5c745f53da9c23faf69",
+        "gitBlob": "7f6cc54d5b9cc747dd4fa9f21481c7424b4e57b4"
+      }
+    },
+    {
+      "path": "extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151610446899.json",
+      "size": 111,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151610446899.json",
+      "verifiedHashes": {
+        "sha256": "ab97ba3ca7ae19307442f903d5d158aa58297c5005d7fc6103ceec81f9980c94",
+        "gitBlob": "566a441fedf91d11239a73781cbf8a4ce06c67fa"
+      }
+    },
+    {
+      "path": "extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151610946785.json",
+      "size": 111,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151610946785.json",
+      "verifiedHashes": {
+        "sha256": "0613a16e2171d24d827b561b489a6ccea9bbec9785aba8ddd5c85d52e230d1fa",
+        "gitBlob": "16f9bbcb53bfea9731cc46078764eef82b9fc469"
+      }
+    },
+    {
+      "path": "extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151611446636.json",
+      "size": 111,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151611446636.json",
+      "verifiedHashes": {
+        "sha256": "63b9006a25ae63eb53cac56213a72f029fe306a02794147266d442895f3282a2",
+        "gitBlob": "30e73151d0705f89a42badd8c3fc2202d8ddba24"
+      }
+    },
+    {
+      "path": "extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151611896734.json",
+      "size": 111,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151611896734.json",
+      "verifiedHashes": {
+        "sha256": "a1ea88ca0dcffd7d6769f15140fbfa20a57a126c5594d5808b165298c6040e70",
+        "gitBlob": "49cc930f5ba56e71898efcdbd8fcee76c0b5bf9c"
+      }
+    },
+    {
+      "path": "extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151612397179.json",
+      "size": 111,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151612397179.json",
+      "verifiedHashes": {
+        "sha256": "6152f77e56f440022c3c13c7589f21c456e9d43e6c187f576495029c974fbed9",
+        "gitBlob": "503ba8195c720e5ec17c573081512e92ae00006b"
+      }
+    },
+    {
+      "path": "extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151612897588.json",
+      "size": 111,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151612897588.json",
+      "verifiedHashes": {
+        "sha256": "227d33eeacf3706047209d5da15893d4706585437fdba38abedec860a2723dac",
+        "gitBlob": "48e489fbe9b57f3a5dd413daefae18a2ad63126b"
+      }
+    },
+    {
+      "path": "extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151613398020.json",
+      "size": 111,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151613398020.json",
+      "verifiedHashes": {
+        "sha256": "aca58d59c0ee423c5c05a5e10382e85eab8842151e964f6c3bb86948b897122d",
+        "gitBlob": "bbffa9988ee7b75047c1e6e87233b9abd1f510b2"
+      }
+    },
+    {
+      "path": "extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151613948222.json",
+      "size": 111,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151613948222.json",
+      "verifiedHashes": {
+        "sha256": "8838255881b64704455eadff59e695b356c6864735a1d08bed9556042ca215e9",
+        "gitBlob": "436614e14387d8c66332c7ccf0cb3c4d474f57d9"
+      }
+    },
+    {
+      "path": "extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151614450164.json",
+      "size": 111,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151614450164.json",
+      "verifiedHashes": {
+        "sha256": "e675d43f26b0625f5635b8c1c3e333228350b0bb4786669dff6a21239c90573a",
+        "gitBlob": "ae01e8cec293c3ca70d57817cc12462206a18538"
+      }
+    },
+    {
+      "path": "extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151614948536.json",
+      "size": 111,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151614948536.json",
+      "verifiedHashes": {
+        "sha256": "df69eecb4b8481dff14c55b6588d37fb649e90c1e1b99c0a35db8a4de3305819",
+        "gitBlob": "f62e5d553043ba55ccb154d0a7fb53d1336a1dea"
+      }
+    },
+    {
+      "path": "extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151615448397.json",
+      "size": 111,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151615448397.json",
+      "verifiedHashes": {
+        "sha256": "ebba05747711005d477841f891cd498b349a8dc70970352baa9be2dea378b5ab",
+        "gitBlob": "7fb1f41d3d7fe3a93cdf95b0fcf656f0b089ff7b"
+      }
+    },
+    {
+      "path": "extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151615947733.json",
+      "size": 111,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151615947733.json",
+      "verifiedHashes": {
+        "sha256": "dc37960fbc6a76e5b0344d1ce55fc000b293bdbe4b5922da190250d011f39ba7",
+        "gitBlob": "590176aa11d3eb6fc915088e1b591a04d4619021"
+      }
+    },
+    {
+      "path": "extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151616447606.json",
+      "size": 111,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151616447606.json",
+      "verifiedHashes": {
+        "sha256": "f5568b24ccc0289ec0037760c621d6e30187019d6d83c012a507f89fc2865297",
+        "gitBlob": "7333bf30788888d571d7eb7425f3d8928d16d27b"
+      }
+    },
+    {
+      "path": "extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151616947490.json",
+      "size": 111,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151616947490.json",
+      "verifiedHashes": {
+        "sha256": "f1c9dc2c92db36f7c734df396f01f0136a896f14f39572d2aab1a6fcb83ccff8",
+        "gitBlob": "eed839bc2bf97b92d61c2461cc60618299b94a97"
+      }
+    },
+    {
+      "path": "extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151617397050.json",
+      "size": 111,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151617397050.json",
+      "verifiedHashes": {
+        "sha256": "c0ab3bd2b75b34124746d302767417760cdc81a69c681761b579c9767391e81b",
+        "gitBlob": "93f22fe26225172c4a1263525a147511945d025c"
+      }
+    },
+    {
+      "path": "extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151617947237.json",
+      "size": 111,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151617947237.json",
+      "verifiedHashes": {
+        "sha256": "d6db43a584d2e2f6abcf59921efaf4be41b00ad56c86a54cc79a08c71e054490",
+        "gitBlob": "44ec48ccb8e3309dae1942c6d4159adf6c6d487f"
+      }
+    },
+    {
+      "path": "extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151618447134.json",
+      "size": 111,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151618447134.json",
+      "verifiedHashes": {
+        "sha256": "c91fa08f3a541714bc0e1ac403d5e7d3ed44d94f83b499dcdff79d77862da56b",
+        "gitBlob": "dec048900c273b55002ca5d1a412a9c9e1b784c8"
+      }
+    },
+    {
+      "path": "extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151618946993.json",
+      "size": 111,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151618946993.json",
+      "verifiedHashes": {
+        "sha256": "9118ae281cbfde8e0e7539a4616041c17b3cccf335edf2ec34ac4b2cfb90d047",
+        "gitBlob": "19fa2c192a909352c08814aeb37d1007d943c1d3"
+      }
+    },
+    {
+      "path": "extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151619446866.json",
+      "size": 111,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151619446866.json",
+      "verifiedHashes": {
+        "sha256": "c70d49c4aee22315d8bfd3d865e9684aa1f5790c651b0c249674b48d0790154a",
+        "gitBlob": "29086ac168c03e160098517965d12b578aad5792"
+      }
+    },
+    {
+      "path": "extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151619947313.json",
+      "size": 111,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151619947313.json",
+      "verifiedHashes": {
+        "sha256": "5a8b86e01cc34512a48e91c4431e263e524d3687dc4bf2d871892b6569247062",
+        "gitBlob": "1077fc17843ac887d668131d97e40e65ad92ef8b"
+      }
+    },
+    {
+      "path": "extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151620447745.json",
+      "size": 111,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151620447745.json",
+      "verifiedHashes": {
+        "sha256": "6c3bca7acea6648ac3d2c0b12dddc0926ec962492ddffa30c4f22558ed5a7fe9",
+        "gitBlob": "ebfcdeaf6427bd20bced4db87bcbd175b772ba7f"
+      }
+    },
+    {
+      "path": "extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151621047706.json",
+      "size": 111,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151621047706.json",
+      "verifiedHashes": {
+        "sha256": "1974a1601199c5eae4832beec35bb59f0f8589926085fd0b2391bf3ea87de105",
+        "gitBlob": "87b123ac25d483f04376f516c885e4a83197b5be"
+      }
+    },
+    {
+      "path": "extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151621448049.json",
+      "size": 111,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151621448049.json",
+      "verifiedHashes": {
+        "sha256": "87778e455e9372c88d37e6b65b88096e03457e13c6af552fbc14cf6b1a13adfc",
+        "gitBlob": "9072280a5c23691ad3a94c2e07ddf3c794785eee"
+      }
+    },
+    {
+      "path": "extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151621947928.json",
+      "size": 111,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151621947928.json",
+      "verifiedHashes": {
+        "sha256": "a3ce9453bb744c6cf11c13890094a58ef7c69984a40156f17c12a18be815bbfe",
+        "gitBlob": "657dc0f4f71cdf4de44046532eef21b3e92e13be"
+      }
+    },
+    {
+      "path": "extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151622448916.json",
+      "size": 111,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151622448916.json",
+      "verifiedHashes": {
+        "sha256": "89cabed3ea7912205e362298772a860605b9b099ba05573d8861b004fce456f6",
+        "gitBlob": "2259f3ae0ed714b306d7f88aeff4aeba6195cc18"
+      }
+    },
+    {
+      "path": "extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151622948227.json",
+      "size": 111,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/gt_annotations/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151622948227.json",
+      "verifiedHashes": {
+        "sha256": "78035ad8befd15a473b65a580f137c363e95e6fbc54c898c55e90fca46fa472f",
+        "gitBlob": "8f10f05171616a4eeee6241f113716a365a9d365"
+      }
+    },
+    {
+      "path": "extracted_data/gt_annotations/n008-2018-08-27-11-48-51-0400__LIDAR_TOP__1535385092150099.json",
+      "size": 111,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/gt_annotations/n008-2018-08-27-11-48-51-0400__LIDAR_TOP__1535385092150099.json",
+      "verifiedHashes": {
+        "sha256": "b6f90bdbfe9a7f43caf63cf572ce140c763bda0946b57e74aa6b756a60113db9",
+        "gitBlob": "13b3a40b87bb14bc6cca7aceb4962bcb25ee5fca"
+      }
+    },
+    {
+      "path": "extracted_data/gt_annotations/n008-2018-08-27-11-48-51-0400__LIDAR_TOP__1535385092700299.json",
+      "size": 111,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/gt_annotations/n008-2018-08-27-11-48-51-0400__LIDAR_TOP__1535385092700299.json",
+      "verifiedHashes": {
+        "sha256": "e4b2595b7c28d8eed100f9897f48d7d6460b2c4f908a3b53df255eb3f105f232",
+        "gitBlob": "c23586325d0bb70ee2102db036cae59bc3f02287"
+      }
+    },
+    {
+      "path": "extracted_data/gt_annotations/n008-2018-08-27-11-48-51-0400__LIDAR_TOP__1535385093200183.json",
+      "size": 111,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/gt_annotations/n008-2018-08-27-11-48-51-0400__LIDAR_TOP__1535385093200183.json",
+      "verifiedHashes": {
+        "sha256": "5d5d98943d6a4738d89a0ce691d78ed35ca0df6edb6a90dd331bee71e3480462",
+        "gitBlob": "8789993ace3b49dd7102d510d72c28758e636b31"
+      }
+    },
+    {
+      "path": "extracted_data/gt_annotations/n008-2018-08-27-11-48-51-0400__LIDAR_TOP__1535385093650312.json",
+      "size": 111,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/gt_annotations/n008-2018-08-27-11-48-51-0400__LIDAR_TOP__1535385093650312.json",
+      "verifiedHashes": {
+        "sha256": "7d8237fab448533047030047859c33f176be0fee1913e3dbbbd6856dd7c15d40",
+        "gitBlob": "1ce346621b421d05c6d1fe8402fcef391b20a7c9"
+      }
+    },
+    {
+      "path": "extracted_data/gt_annotations/n008-2018-08-27-11-48-51-0400__LIDAR_TOP__1535385094150195.json",
+      "size": 111,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/gt_annotations/n008-2018-08-27-11-48-51-0400__LIDAR_TOP__1535385094150195.json",
+      "verifiedHashes": {
+        "sha256": "444a764292cf96b76733f2c8dcd3d2b1f55edbc704f5b1da5d730f06eea4245b",
+        "gitBlob": "f27623b57cfac066d895ee78713e7e9c4160c95d"
+      }
+    },
+    {
+      "path": "extracted_data/gt_annotations/n008-2018-08-27-11-48-51-0400__LIDAR_TOP__1535385094550004.json",
+      "size": 111,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/gt_annotations/n008-2018-08-27-11-48-51-0400__LIDAR_TOP__1535385094550004.json",
+      "verifiedHashes": {
+        "sha256": "8c44d4d3e7f1fc48fdd48c4335dbe2a7b6176c2f8d0be2c3db00a2b70dd0300c",
+        "gitBlob": "de23b4d8bf8f79630a8175ea557f03b24157de79"
+      }
+    },
+    {
+      "path": "extracted_data/gt_annotations/n008-2018-08-27-11-48-51-0400__LIDAR_TOP__1535385094949783.json",
+      "size": 111,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/gt_annotations/n008-2018-08-27-11-48-51-0400__LIDAR_TOP__1535385094949783.json",
+      "verifiedHashes": {
+        "sha256": "01ec7b6092469d4107cc089ea43712b944fc5948a35c0eba5d75fe02fefaa1c5",
+        "gitBlob": "a95940a2136275590b6d4b5b4f247ba04552b06d"
+      }
+    },
+    {
+      "path": "extracted_data/gt_annotations/n008-2018-08-27-11-48-51-0400__LIDAR_TOP__1535385095449675.json",
+      "size": 111,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/gt_annotations/n008-2018-08-27-11-48-51-0400__LIDAR_TOP__1535385095449675.json",
+      "verifiedHashes": {
+        "sha256": "3beacac2747466760741fd233d3c186efcbc4de83491da34f86ecfae2a3f8a50",
+        "gitBlob": "32054ab84a904c8860fa8d92348261044417b305"
+      }
+    },
+    {
+      "path": "extracted_data/gt_annotations/n008-2018-08-27-11-48-51-0400__LIDAR_TOP__1535385095949554.json",
+      "size": 111,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/gt_annotations/n008-2018-08-27-11-48-51-0400__LIDAR_TOP__1535385095949554.json",
+      "verifiedHashes": {
+        "sha256": "c4facde185efe1109dc0d19a8a3d2ee4f008eb26facafa66859133c049a2def6",
+        "gitBlob": "e04aff4fb950648b00e19b011092e469e26698de"
+      }
+    },
+    {
+      "path": "extracted_data/gt_annotations/n008-2018-08-27-11-48-51-0400__LIDAR_TOP__1535385096399680.json",
+      "size": 111,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/gt_annotations/n008-2018-08-27-11-48-51-0400__LIDAR_TOP__1535385096399680.json",
+      "verifiedHashes": {
+        "sha256": "7f20b4559dd2f50a397b8a92d04a64b158e2b68b72c576c79dc366e09b5312cf",
+        "gitBlob": "4877dc3955098fcd2e7c3d358524915415db34fb"
+      }
+    },
+    {
+      "path": "extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151603547590.bin",
+      "size": 695040,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151603547590.bin",
+      "verifiedHashes": {
+        "sha256": "f0f1a99c9062003d77e7bcb1ade1a6f5ecbcb6215a746f5ef9bb4fcdf115c4d9",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151604048025.bin",
+      "size": 693760,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151604048025.bin",
+      "verifiedHashes": {
+        "sha256": "e49a1107ebb60940d9da466a55f69d2f61b3f5c066f80b635c710ff30bc30cc3",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151604547893.bin",
+      "size": 695040,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151604547893.bin",
+      "verifiedHashes": {
+        "sha256": "2ea12ba5717bc5992f6af149b0fc94942e06019bb84f7f9bc786ef1587a6b20e",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151605047769.bin",
+      "size": 694400,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151605047769.bin",
+      "verifiedHashes": {
+        "sha256": "f9d23460db5b733709a755ca3991da0a69fcf1120ce87c870a2fbb4e33ca8ddc",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151605548192.bin",
+      "size": 695680,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151605548192.bin",
+      "verifiedHashes": {
+        "sha256": "0c33a84aead83198601e47e827ca7bdb380098fbe55002b641d14afd1a389136",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151606048630.bin",
+      "size": 694400,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151606048630.bin",
+      "verifiedHashes": {
+        "sha256": "0212e4d03201da5794061d02c312d173c00d4dfcf0456efaf16e2bfdeae2485e",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151606549066.bin",
+      "size": 693760,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151606549066.bin",
+      "verifiedHashes": {
+        "sha256": "aafec8ba3b963290426201b1f39b1769c3ebb61a4939156725d5fa8ed8a8c006",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151607048933.bin",
+      "size": 693760,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151607048933.bin",
+      "verifiedHashes": {
+        "sha256": "affb50546b1dab85be1486cfb872113420e403cb458c88129d39a10af6334e37",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151607548824.bin",
+      "size": 694400,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151607548824.bin",
+      "verifiedHashes": {
+        "sha256": "6e87f0a50e55355a4f08a61c08bfd4f117f378447e1a75c47cc972f0c019b516",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151608048151.bin",
+      "size": 694400,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151608048151.bin",
+      "verifiedHashes": {
+        "sha256": "20043a2361a8d9320456c7ff6d65fadb6813edb0d6adda283a5cfa4beab4a6c0",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151608548020.bin",
+      "size": 694400,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151608548020.bin",
+      "verifiedHashes": {
+        "sha256": "f079c67ee764efed7c0d05744c9c2e7ff3d0e649fffdaae990ea0bae7e6829e4",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151609047890.bin",
+      "size": 693760,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151609047890.bin",
+      "verifiedHashes": {
+        "sha256": "7cf3d8b46ef152cdca8e8c04cf8bf334308007553cc8a73b4358164c3b4ca831",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151609547766.bin",
+      "size": 693760,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151609547766.bin",
+      "verifiedHashes": {
+        "sha256": "f3518600b85d6f82379ccfc63c2a17bf5c8db52ef34ecc5ef61891552d2954a2",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151609947025.bin",
+      "size": 693760,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151609947025.bin",
+      "verifiedHashes": {
+        "sha256": "2386940ba9f7e1b85fb34c3b59a432c7815940b359db27ef60e511f76435642e",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151610446899.bin",
+      "size": 694400,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151610446899.bin",
+      "verifiedHashes": {
+        "sha256": "9c59ae797417a0413ef0afde8612971bcf9c0f3660455f76397001bd31833804",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151610946785.bin",
+      "size": 693760,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151610946785.bin",
+      "verifiedHashes": {
+        "sha256": "a84155e0419e3912d2b0896799e99b44b579412f63782e12151e774eb8545e9d",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151611446636.bin",
+      "size": 694400,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151611446636.bin",
+      "verifiedHashes": {
+        "sha256": "c5d057fc5ebda77a09b6beb560c488fc71c0a95c41bcd16360bb9359174f1281",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151611896734.bin",
+      "size": 694400,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151611896734.bin",
+      "verifiedHashes": {
+        "sha256": "784f5b1c5130e013a26c34bcd8a4ee8f8287dfc794ce2093a7eca94cebb1d40d",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151612397179.bin",
+      "size": 695680,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151612397179.bin",
+      "verifiedHashes": {
+        "sha256": "849689fe7d44c40a1a9aecef6f0fe96b49e19d576ab5c5ebe84783d79299454e",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151612897588.bin",
+      "size": 695680,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151612897588.bin",
+      "verifiedHashes": {
+        "sha256": "24e38645c5751dafc5657cc1baf706faa607314b98d91bb6d5cf1ce53713acf1",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151613398020.bin",
+      "size": 695040,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151613398020.bin",
+      "verifiedHashes": {
+        "sha256": "4e55c60421cbd09f255651e59e48edc8d9ad77eb1191f33c5aac1b63d2fecb9d",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151613948222.bin",
+      "size": 695040,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151613948222.bin",
+      "verifiedHashes": {
+        "sha256": "5a26bf6af2ec25be6702e443615e2488dd19c1ac9c67da169e62f9b61dbccfd0",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151614450164.bin",
+      "size": 695040,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151614450164.bin",
+      "verifiedHashes": {
+        "sha256": "bdf85c6023015af80339ff6e77216a2d9f50b1a8b66395d60abde1079ed4c4b6",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151614948536.bin",
+      "size": 694400,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151614948536.bin",
+      "verifiedHashes": {
+        "sha256": "10068637818695cdc9a5572ac91cee8ce1cbf46ecc0aeac13829b56695c0492d",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151615448397.bin",
+      "size": 693760,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151615448397.bin",
+      "verifiedHashes": {
+        "sha256": "baeecce3e8434ab2a644ad3009a8c565e26d7e84c8d5e21cb33d0ab2da075c67",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151615947733.bin",
+      "size": 693760,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151615947733.bin",
+      "verifiedHashes": {
+        "sha256": "a36d7bebfcaed3f1f5ee3d8394ecc390554f71af8940a344784376a78f207882",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151616447606.bin",
+      "size": 693760,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151616447606.bin",
+      "verifiedHashes": {
+        "sha256": "7a758aa0affd2be226f1d855443eeffd64be5941e8b3a5f4a34e23092c3d0b51",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151616947490.bin",
+      "size": 695040,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151616947490.bin",
+      "verifiedHashes": {
+        "sha256": "00a7028da8dea14dc9c7aa0925aae95423b1d4d4f14c4d22b12a33f0107ebf16",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151617397050.bin",
+      "size": 694400,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151617397050.bin",
+      "verifiedHashes": {
+        "sha256": "9ea22c73b7f6e60b7f699f135b04e24362081c1610dc7ef2f7f697c006099a81",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151617947237.bin",
+      "size": 694400,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151617947237.bin",
+      "verifiedHashes": {
+        "sha256": "45de7efb89aefec76fc1b2fe21793274a0bdf96d791888aba5332a0641e47f81",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151618447134.bin",
+      "size": 693760,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151618447134.bin",
+      "verifiedHashes": {
+        "sha256": "43211760236dff9cd489dda42481caaf76ada59998bbabb526c27d08b4c0192a",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151618946993.bin",
+      "size": 693760,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151618946993.bin",
+      "verifiedHashes": {
+        "sha256": "e0511ebe3052357d5b6a2d712b3de227e1fef60c5dc04e6a1da57b1328f55176",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151619446866.bin",
+      "size": 695040,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151619446866.bin",
+      "verifiedHashes": {
+        "sha256": "9a6f65f3c8fdae412d003cfdb446dacac7135900527675ceb68d4a2b445c694e",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151619947313.bin",
+      "size": 695680,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151619947313.bin",
+      "verifiedHashes": {
+        "sha256": "b2a8955de9e176d26954d0e5dde376788d99f0bdcb038becea5d16098a4c6d28",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151620447745.bin",
+      "size": 693760,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151620447745.bin",
+      "verifiedHashes": {
+        "sha256": "6ad7448837c2c6b250021e52016e8132ceb36aecd404522bce7f9081f8e5af16",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151621047706.bin",
+      "size": 694400,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151621047706.bin",
+      "verifiedHashes": {
+        "sha256": "6473b31bea554973641834fced0ba1f6af138e90fff7a30d9b618ffd3060b33f",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151621448049.bin",
+      "size": 695040,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151621448049.bin",
+      "verifiedHashes": {
+        "sha256": "ea60023d2bbf01a0e19ef052bbfcf7cf0ae398fe932e5c1c3e76aaa8687d49be",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151621947928.bin",
+      "size": 694400,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151621947928.bin",
+      "verifiedHashes": {
+        "sha256": "fe903c6eee2805bcb3b24659acca34e8e3f402934516c659eb7cefd2e3b901fe",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151622448916.bin",
+      "size": 695040,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151622448916.bin",
+      "verifiedHashes": {
+        "sha256": "50c1fb831798bf4ea4e2170719cbf9cba1bcdee4779826c67b22741927a01192",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151622948227.bin",
+      "size": 694400,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/points/n008-2018-08-01-15-16-36-0400__LIDAR_TOP__1533151622948227.bin",
+      "verifiedHashes": {
+        "sha256": "f1d1913e51fe89bbabde7bd018a3dc4033ec3496709bc442fb3e5f16ca6e0afa",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "extracted_data/points/n008-2018-08-27-11-48-51-0400__LIDAR_TOP__1535385092150099.bin",
+      "size": 687360,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/points/n008-2018-08-27-11-48-51-0400__LIDAR_TOP__1535385092150099.bin",
+      "verifiedHashes": {
+        "sha256": "3bba5aa8d214d24a7a80c83321bf655c7a2cb57cc74abe2d8890bcca984a5e5a",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "extracted_data/points/n008-2018-08-27-11-48-51-0400__LIDAR_TOP__1535385092700299.bin",
+      "size": 694400,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/points/n008-2018-08-27-11-48-51-0400__LIDAR_TOP__1535385092700299.bin",
+      "verifiedHashes": {
+        "sha256": "2d721de9355a0b7bbe598ad17f816c6584d8e8b2d55710604e5e8cfb70cbbb13",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "extracted_data/points/n008-2018-08-27-11-48-51-0400__LIDAR_TOP__1535385093200183.bin",
+      "size": 695040,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/points/n008-2018-08-27-11-48-51-0400__LIDAR_TOP__1535385093200183.bin",
+      "verifiedHashes": {
+        "sha256": "7fadaabd87ab2bc0616c742cada4dae5c3e9a62a3ed0e7d6bb90a40b3243963c",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "extracted_data/points/n008-2018-08-27-11-48-51-0400__LIDAR_TOP__1535385093650312.bin",
+      "size": 694400,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/points/n008-2018-08-27-11-48-51-0400__LIDAR_TOP__1535385093650312.bin",
+      "verifiedHashes": {
+        "sha256": "8c0fb4d38f2ded9b93fe70bd9193ebc7370652d6f9b85bc7bbb7a4d6d9137c09",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "extracted_data/points/n008-2018-08-27-11-48-51-0400__LIDAR_TOP__1535385094150195.bin",
+      "size": 693760,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/points/n008-2018-08-27-11-48-51-0400__LIDAR_TOP__1535385094150195.bin",
+      "verifiedHashes": {
+        "sha256": "aecbc42333a642eae68a3e3eb748d24466c26683f27f2bbf99b061cd16be3307",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "extracted_data/points/n008-2018-08-27-11-48-51-0400__LIDAR_TOP__1535385094550004.bin",
+      "size": 693760,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/points/n008-2018-08-27-11-48-51-0400__LIDAR_TOP__1535385094550004.bin",
+      "verifiedHashes": {
+        "sha256": "0d5ca2957f19f76b18fa7d8b0cda1b47cd4f7934d67ca3db73b9ccd89f30a3d4",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "extracted_data/points/n008-2018-08-27-11-48-51-0400__LIDAR_TOP__1535385094949783.bin",
+      "size": 694400,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/points/n008-2018-08-27-11-48-51-0400__LIDAR_TOP__1535385094949783.bin",
+      "verifiedHashes": {
+        "sha256": "32512921afc134c10fb723f486f874275666564c2aaccab2895dfc42c88cca62",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "extracted_data/points/n008-2018-08-27-11-48-51-0400__LIDAR_TOP__1535385095449675.bin",
+      "size": 694400,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/points/n008-2018-08-27-11-48-51-0400__LIDAR_TOP__1535385095449675.bin",
+      "verifiedHashes": {
+        "sha256": "7d6acb4c41f095a0c1ef852999bb265b352145a24a75b83e14a8398e95538230",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "extracted_data/points/n008-2018-08-27-11-48-51-0400__LIDAR_TOP__1535385095949554.bin",
+      "size": 694400,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/points/n008-2018-08-27-11-48-51-0400__LIDAR_TOP__1535385095949554.bin",
+      "verifiedHashes": {
+        "sha256": "ddeef538918974b4615b614c899f6a3cc782a031ce8e5e4020a7546aea8decc1",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "extracted_data/points/n008-2018-08-27-11-48-51-0400__LIDAR_TOP__1535385096399680.bin",
+      "size": 694400,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/points/n008-2018-08-27-11-48-51-0400__LIDAR_TOP__1535385096399680.bin",
+      "verifiedHashes": {
+        "sha256": "36decf7bef52f5ce969f5838f0c93ab0ae16a62d1b5ef8c59d4ad06a40784140",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "extracted_data/sample_index.json",
+      "size": 15494,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/extracted_data/sample_index.json",
+      "verifiedHashes": {
+        "sha256": "ee18af9d065e0323be2be708f8d77af43a427e4a5d543125692f540b665bf5d1",
+        "gitBlob": "71db56e214b033434749b4857379c86a034b4507"
+      }
+    },
+    {
+      "path": "inference_axmodel.py",
+      "size": 29284,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/inference_axmodel.py",
+      "verifiedHashes": {
+        "sha256": "9da4d4fe8e1c2f0481b694d7621889e862d74dd939e75263f7f0d377ef3a4571",
+        "gitBlob": "e374e8a24b1c4d4421fedf7020f5026a5db11c87"
+      }
+    },
+    {
+      "path": "inference_onnx.py",
+      "size": 32165,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/inference_onnx.py",
+      "verifiedHashes": {
+        "sha256": "2c5b91562c3d14eabe08ed114e0671c94cea713c00829efec1493ee6a43de05a",
+        "gitBlob": "a36ef89d74f9d2a080f16bfff0320c1baa9a6b51"
+      }
+    },
+    {
+      "path": "pointpillars.onnx",
+      "size": 91082022,
+      "url": "https://huggingface.co/AXERA-TECH/centerpoint/resolve/186e6a83fac0f4e89b6989628d1e214e4746e877/pointpillars.onnx",
+      "verifiedHashes": {
+        "sha256": "9500dce3af265bcfd34eea37a83b8fcbf62ac4c58062a42421a64cba5ff0ba05",
+        "gitBlob": null
+      }
+    }
+  ],
+  "runnerSha256": "142ae97dd44373e753373b553fa64c748a2a800c266d1069607ab8ea48e4ca13"
+}

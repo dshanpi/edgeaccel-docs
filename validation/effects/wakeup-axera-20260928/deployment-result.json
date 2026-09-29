@@ -1,0 +1,5510 @@
+{
+  "modelId": "WakeUp.axera",
+  "revision": "139f25e18b0bce7af805f0f5dc34bd209fcf16b0",
+  "date": "2026-09-28",
+  "variants": [
+    {
+      "label": "正例、近似反例与静音",
+      "observation": "正例及其重复输入均触发；近似发音反例和两秒静音均未触发。触发帧数不是独立唤醒次数，首次触发位置不是系统端到端响应延迟。",
+      "previews": [
+        {
+          "caption": "实测分数曲线：蓝线为单帧分数，橙线为流式滑动和，红线为阈值0.615。横轴为录音时间。",
+          "path": "/validation/effects/wakeup-axera-20260928/score-curves.png"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "输入",
+            "时长",
+            "流式结果",
+            "触发帧数",
+            "首次触发位置",
+            "最大流式和",
+            "最大完整3帧和"
+          ],
+          "rows": [
+            [
+              "正例：你好，爱芯",
+              "1.896 s",
+              "触发",
+              "12",
+              "0.992 s",
+              "9.580362",
+              "9.580362"
+            ],
+            [
+              "近似反例：你好，其他",
+              "1.848 s",
+              "未触发",
+              "0",
+              "—",
+              "-5.703658",
+              "-13.278828"
+            ],
+            [
+              "正例重复",
+              "1.896 s",
+              "触发",
+              "12",
+              "0.992 s",
+              "9.580362",
+              "9.580362"
+            ],
+            [
+              "两秒静音",
+              "2.000 s",
+              "未触发",
+              "0",
+              "—",
+              "-5.703658",
+              "-16.977293"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "modelId": "WakeUp.axera",
+        "provider": "AXCLRTExecutionProvider",
+        "completed": true,
+        "sourceHashes": {
+          "__init__.py": "baab463be544913adbd54416bd8ce7d6ef3a3f7893288652587b0297fdac93db",
+          "detector.py": "f2fada8fbe192ac20f6ffea8d2536046027527aaf292500d825d10257f86f4ef",
+          "inference.py": "bf7ee71dcc0d3cdbac9c43bcb2e67de69938eebde8aacddfd90926f478f081eb",
+          "postprocess.py": "08fc8eefc476b861c37d2626bfc54b4b46f58c0fa36662a42681971abe53dd6a",
+          "preprocess.py": "24c808e93b76fb9e330899a96717baaed8025d79f19a325b49454175c59633ff"
+        },
+        "versions": {
+          "numpy": "1.26.4"
+        },
+        "settings": {
+          "threshold": 0.615,
+          "detWin": 3,
+          "frameSamples": 512,
+          "sampleRate": 16000,
+          "contextFrames": 64,
+          "scoreType": "signed score, not probability",
+          "resetBetweenSamples": true
+        },
+        "samples": [
+          {
+            "kind": "positive",
+            "input": "positive.wav",
+            "inputSha256": "21ceb558c831c2cf1a5a26f62b7529fd8f345b7ee57f4957c4463b7e60a0cc98",
+            "sampleCount": 30336,
+            "audioSeconds": 1.896,
+            "frames": [
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -5.703657627105713,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -11.407315254211426,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.748217582702637,
+                "window_sum": -17.155532836914062,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -4.634222030639648,
+                "window_sum": -16.086097240447998,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -4.901580810546875,
+                "window_sum": -15.28402042388916,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -4.901580810546875,
+                "window_sum": -14.437383651733398,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.258059501647949,
+                "window_sum": -15.0612211227417,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.168939590454102,
+                "window_sum": -15.328579902648926,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.480858325958252,
+                "window_sum": -15.907857418060303,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.525418281555176,
+                "window_sum": -16.17521619796753,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.665374279022217,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.843613624572754,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.5699782371521,
+                "window_sum": -16.888173580169678,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -16.9327335357666,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.614538192749023,
+                "window_sum": -16.888174057006836,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.02185344696045,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.748217582702637,
+                "window_sum": -17.066413402557373,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.614538192749023,
+                "window_sum": -17.066413402557373,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.614538192749023,
+                "window_sum": -16.977293968200684,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -16.93273401260376,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.977293491363525,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.5699782371521,
+                "window_sum": -16.977293491363525,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 1.96063232421875,
+                "window_sum": -9.313003540039062,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.6290297508239746,
+                "window_sum": -0.980316162109375,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 3.0746278762817383,
+                "window_sum": 7.664289951324463,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.2725510597229004,
+                "window_sum": 7.976208686828613,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.539910078048706,
+                "window_sum": 7.887089014053345,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 4.0103840827941895,
+                "window_sum": 8.822845220565796,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.6290297508239746,
+                "window_sum": 9.17932391166687,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.940948486328125,
+                "window_sum": 9.580362319946289,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.940948486328125,
+                "window_sum": 8.510926723480225,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.4953501224517822,
+                "window_sum": 8.377247095108032,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.317111015319824,
+                "window_sum": 7.7534096240997314,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.4953501224517822,
+                "window_sum": 7.307811260223389,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.584469795227051,
+                "window_sum": 7.396930932998657,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.8518288135528564,
+                "window_sum": 7.9316487312316895,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -0.22279906272888184,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -8.510926485061646,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.748217582702637,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.614538192749023,
+                "window_sum": -16.977293491363525,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.9327335357666,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.9327335357666,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.977293014526367,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              }
+            ],
+            "discardedTailSamples": 128,
+            "processSeconds": 0.3762957379803993,
+            "triggeredFrames": 12,
+            "firstTriggerEndSeconds": 0.992,
+            "maxStreamingSum": 9.580362319946289,
+            "maxBatchSum": 9.580362319946289,
+            "streamTriggered": true,
+            "batchTriggered": true
+          },
+          {
+            "kind": "near-negative",
+            "input": "near-negative.wav",
+            "inputSha256": "9ef8d529f44f055acc16d84e232c4a7f658e637f42da11024413034ce141be4c",
+            "sampleCount": 29568,
+            "audioSeconds": 1.848,
+            "frames": [
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -5.703657627105713,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -11.407315254211426,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -4.812460899353027,
+                "window_sum": -16.219776153564453,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -3.6539056301116943,
+                "window_sum": -14.170024156570435,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.124380111694336,
+                "window_sum": -13.590746641159058,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -4.500542163848877,
+                "window_sum": -13.278827905654907,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -4.946140766143799,
+                "window_sum": -14.571063041687012,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.5699782371521,
+                "window_sum": -15.016661167144775,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.5699782371521,
+                "window_sum": -16.086097240447998,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.5699782371521,
+                "window_sum": -16.7099347114563,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -16.843614101409912,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.614538192749023,
+                "window_sum": -16.888174057006836,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.977293491363525,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.9327335357666,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.748217582702637,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.748217582702637,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.748217582702637,
+                "window_sum": -17.200092792510986,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.200092792510986,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.977293014526367,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.5699782371521,
+                "window_sum": -16.888173580169678,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.614538192749023,
+                "window_sum": -16.843614101409912,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.5699782371521,
+                "window_sum": -16.754494667053223,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.843614101409912,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.888173580169678,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.977293014526367,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.977293014526367,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.977293014526367,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.977293014526367,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.977293014526367,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.977293014526367,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.748217582702637,
+                "window_sum": -17.155532836914062,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.155532836914062,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.155532836914062,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.748217582702637,
+                "window_sum": -17.155532836914062,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.748217582702637,
+                "window_sum": -17.200092792510986,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.200092792510986,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.155532836914062,
+                "triggered": false,
+                "threshold": 0.615
+              }
+            ],
+            "discardedTailSamples": 384,
+            "processSeconds": 0.3346179699874483,
+            "triggeredFrames": 0,
+            "firstTriggerEndSeconds": null,
+            "maxStreamingSum": -5.703657627105713,
+            "maxBatchSum": -13.278827905654907,
+            "streamTriggered": false,
+            "batchTriggered": false
+          },
+          {
+            "kind": "positive-repeat",
+            "input": "positive-repeat.wav",
+            "inputSha256": "21ceb558c831c2cf1a5a26f62b7529fd8f345b7ee57f4957c4463b7e60a0cc98",
+            "sampleCount": 30336,
+            "audioSeconds": 1.896,
+            "frames": [
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -5.703657627105713,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -11.407315254211426,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.748217582702637,
+                "window_sum": -17.155532836914062,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -4.634222030639648,
+                "window_sum": -16.086097240447998,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -4.901580810546875,
+                "window_sum": -15.28402042388916,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -4.901580810546875,
+                "window_sum": -14.437383651733398,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.258059501647949,
+                "window_sum": -15.0612211227417,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.168939590454102,
+                "window_sum": -15.328579902648926,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.480858325958252,
+                "window_sum": -15.907857418060303,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.525418281555176,
+                "window_sum": -16.17521619796753,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.665374279022217,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.843613624572754,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.5699782371521,
+                "window_sum": -16.888173580169678,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -16.9327335357666,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.614538192749023,
+                "window_sum": -16.888174057006836,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.02185344696045,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.748217582702637,
+                "window_sum": -17.066413402557373,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.614538192749023,
+                "window_sum": -17.066413402557373,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.614538192749023,
+                "window_sum": -16.977293968200684,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -16.93273401260376,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.977293491363525,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.5699782371521,
+                "window_sum": -16.977293491363525,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 1.96063232421875,
+                "window_sum": -9.313003540039062,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.6290297508239746,
+                "window_sum": -0.980316162109375,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 3.0746278762817383,
+                "window_sum": 7.664289951324463,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.2725510597229004,
+                "window_sum": 7.976208686828613,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.539910078048706,
+                "window_sum": 7.887089014053345,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 4.0103840827941895,
+                "window_sum": 8.822845220565796,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.6290297508239746,
+                "window_sum": 9.17932391166687,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.940948486328125,
+                "window_sum": 9.580362319946289,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.940948486328125,
+                "window_sum": 8.510926723480225,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.4953501224517822,
+                "window_sum": 8.377247095108032,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.317111015319824,
+                "window_sum": 7.7534096240997314,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.4953501224517822,
+                "window_sum": 7.307811260223389,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.584469795227051,
+                "window_sum": 7.396930932998657,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.8518288135528564,
+                "window_sum": 7.9316487312316895,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -0.22279906272888184,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -8.510926485061646,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.748217582702637,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.614538192749023,
+                "window_sum": -16.977293491363525,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.9327335357666,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.9327335357666,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.977293014526367,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              }
+            ],
+            "discardedTailSamples": 128,
+            "processSeconds": 0.21246196498395875,
+            "triggeredFrames": 12,
+            "firstTriggerEndSeconds": 0.992,
+            "maxStreamingSum": 9.580362319946289,
+            "maxBatchSum": 9.580362319946289,
+            "streamTriggered": true,
+            "batchTriggered": true
+          },
+          {
+            "kind": "silence",
+            "input": "silence.wav",
+            "inputSha256": "20eaebffe1816e0ffa6f7f854f5ef4ea80d5349faaf0ce1fec1b713e7fde58fa",
+            "sampleCount": 32000,
+            "audioSeconds": 2.0,
+            "frames": [
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -5.703657627105713,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -11.407315254211426,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.977293014526367,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.977293014526367,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.977293014526367,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.748217582702637,
+                "window_sum": -17.155532836914062,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.155532836914062,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.155532836914062,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.748217582702637,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.748217582702637,
+                "window_sum": -17.200092792510986,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.155532836914062,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.155532836914062,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              }
+            ],
+            "discardedTailSamples": 256,
+            "processSeconds": 0.33565834700129926,
+            "triggeredFrames": 0,
+            "firstTriggerEndSeconds": null,
+            "maxStreamingSum": -5.703657627105713,
+            "maxBatchSum": -16.977293014526367,
+            "streamTriggered": false,
+            "batchTriggered": false
+          }
+        ],
+        "review": {
+          "allActualCallsVerified": true,
+          "actualCalls": 237,
+          "featureMaxAbsError": 0,
+          "repeatAllIoExact": true,
+          "independentScoreAndThresholdReplay": true,
+          "qualityAcceptance": false
+        },
+        "sessions": [
+          {
+            "model": "models/ax650/model.axmodel",
+            "weightSha256": "40102af09dd842219fe6dd2ef569f1d1db77a8590efe8d4ec5b339e016d3441a",
+            "provider": "AXCLRTExecutionProvider",
+            "loadSeconds": 0.5798073150217533,
+            "inputs": [
+              {
+                "name": "fbank",
+                "shape": [
+                  1,
+                  26,
+                  64
+                ],
+                "dtype": "float32"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "logits",
+                "shape": [
+                  1,
+                  2,
+                  64
+                ],
+                "dtype": "float32"
+              }
+            ],
+            "allFinite": true,
+            "runMilliseconds": [
+              6.548509001731873,
+              2.488794969394803,
+              2.090378024149686,
+              2.0034610060974956,
+              2.2446700022555888,
+              2.2414609557017684,
+              2.179337025154382,
+              2.2131699952296913,
+              2.017752965912223,
+              2.131503017153591,
+              2.1883780136704445,
+              2.2041280171833932,
+              2.1787529694847763,
+              1.9360860460437834,
+              2.3187529877759516,
+              1.9801279995590448,
+              2.3905030102469027,
+              2.2338780108839273,
+              2.106419997289777,
+              2.0909610320813954,
+              2.1796280052512884,
+              2.131503017153591,
+              2.1487119956873357,
+              2.0833779708482325,
+              2.2505029919557273,
+              2.170295047108084,
+              1.9745859899558127,
+              2.161544980481267,
+              2.2087949910201132,
+              2.219585992861539,
+              2.4307530256919563,
+              2.61100399075076,
+              2.593795012217015,
+              2.2957110195420682,
+              2.4327950086444616,
+              2.2685870062559843,
+              2.278502972330898,
+              2.319627965334803,
+              2.233879000414163,
+              2.0854200120083988,
+              2.2315449896268547,
+              2.191003004554659,
+              2.278210944496095,
+              2.1965450141578913,
+              2.2128779673948884,
+              2.144628029782325,
+              2.270627999678254,
+              2.1761280368082225,
+              1.7007109709084034,
+              1.787335961125791,
+              1.7990029882639647,
+              1.8485860200598836,
+              2.0690859528258443,
+              2.2770449868403375,
+              2.3067949805408716,
+              2.0970869809389114,
+              2.2636280045844615,
+              2.0792949944734573,
+              2.1084609907120466,
+              2.2758779814466834,
+              2.0749199902638793,
+              2.131794986780733,
+              2.118085976690054,
+              2.275294973514974,
+              2.149295003619045,
+              2.246711985208094,
+              2.2137530031614006,
+              2.206752949859947,
+              2.1831279736943543,
+              2.096793963573873,
+              2.2338779526762664,
+              2.123627986293286,
+              2.287545008584857,
+              1.9559200154617429,
+              2.3059200029820204,
+              2.340627950616181,
+              2.0119199762120843,
+              1.8357529770582914,
+              1.7928769811987877,
+              2.2925030207261443,
+              2.2925029625184834,
+              2.082795021124184,
+              2.2297949763014913,
+              2.1761279786005616,
+              2.243793976958841,
+              2.2303780424408615,
+              2.26742000086233,
+              1.9369609653949738,
+              2.2933779982849956,
+              2.2105449461378157,
+              2.0335030276328325,
+              1.6832110122777522,
+              2.317586971912533,
+              2.1653359872289,
+              2.0545030129142106,
+              2.400419965852052,
+              2.24087800597772,
+              2.2213360061869025,
+              2.237962034996599,
+              2.3024199763312936,
+              2.260129025671631,
+              2.218710957095027,
+              2.406545972917229,
+              2.171461994294077,
+              2.0965030416846275,
+              1.8127109506167471,
+              1.771003007888794,
+              1.897002977784723,
+              1.863753015641123,
+              1.7654609982855618,
+              1.794626994524151,
+              1.8150440300814807,
+              2.1210029954090714,
+              1.7091690097004175,
+              2.2335859830491245,
+              2.2295030066743493,
+              2.3820449714548886,
+              2.695003990083933,
+              2.33654398471117,
+              2.2773370146751404,
+              2.0326279918663204,
+              2.1915860124863684,
+              2.120419987477362,
+              2.0746280206367373,
+              2.0028779981657863,
+              2.111378009431064,
+              1.9591280142776668,
+              1.9952949951402843,
+              2.688877983018756,
+              2.0244609913788736,
+              2.2866700310260057,
+              1.9961689831689,
+              2.535170002374798,
+              1.6977940103970468,
+              1.5332939801737666,
+              1.7249190132133663,
+              1.9384190090931952,
+              1.8237949698232114,
+              1.9740029820241034,
+              2.1245030220597982,
+              1.996460952796042,
+              1.8576279981061816,
+              1.929960970301181,
+              1.8278780044056475,
+              1.7861690139397979,
+              1.7841279623098671,
+              1.7987110186368227,
+              1.7021690146066248,
+              1.4154609525576234,
+              2.012501994613558,
+              1.7126689781434834,
+              1.9500860362313688,
+              1.6881689662113786,
+              1.414586033206433,
+              1.7955029616132379,
+              1.7675019917078316,
+              1.7742110067047179,
+              1.7692529945634305,
+              1.7806270043365657,
+              1.7039190279319882,
+              1.7890859744511545,
+              1.7012940370477736,
+              1.7045029671862721,
+              1.4072939520701766,
+              1.4726270455867052,
+              1.4230440137907863,
+              1.4215860283002257,
+              2.0095869549550116,
+              1.9987939740531147,
+              1.8211690476164222,
+              2.0413780002854764,
+              1.7806279938668013,
+              1.8599610193632543,
+              1.9022530177608132,
+              1.878919021692127,
+              1.698377018328756,
+              1.4037940418347716,
+              1.431211014278233,
+              1.4306270168162882,
+              1.6881690244190395,
+              1.8573359702713788,
+              2.060920000076294,
+              1.8917529960162938,
+              1.9521269714459777,
+              2.016293990891427,
+              1.8468360067345202,
+              2.075793978292495,
+              2.0151279750280082,
+              1.903418975416571,
+              1.8827110179699957,
+              1.759920036420226,
+              1.787335961125791,
+              1.7325029475614429,
+              2.0594620145857334,
+              2.127127954736352,
+              2.0466280402615666,
+              1.9145029946230352,
+              2.098545024637133,
+              1.7972530331462622,
+              2.067919005639851,
+              1.9979189964942634,
+              1.8386690062470734,
+              1.9850860117003322,
+              1.921211020089686,
+              1.693710044492036,
+              1.6056280001066625,
+              1.9801279995590448,
+              1.7666270141489804,
+              1.346044009551406,
+              1.832543988712132,
+              1.3390439562499523,
+              1.7450439627282321,
+              1.6788360080681741,
+              1.5782109694555402,
+              2.208503952715546,
+              1.799585996195674,
+              2.29600298916921,
+              2.548879012465477,
+              2.570754033513367,
+              2.6460029766894877,
+              2.5334199890494347,
+              2.7976699639111757,
+              1.8407110474072397,
+              1.921210961882025,
+              2.042543957941234,
+              2.2216280340217054,
+              1.993253012187779,
+              2.0200859871692955,
+              2.1285859984345734,
+              1.9862519693560898,
+              2.0492529729381204,
+              1.8013360095210373,
+              2.0495440112426877,
+              2.23883701255545,
+              1.8232109723612666,
+              1.8173769931308925,
+              1.6126270056702197
+            ],
+            "actualCalls": 237
+          }
+        ]
+      }
+    },
+    {
+      "label": "本次输入录音",
+      "observation": "以下是实际参与推理的两段官方录音，未裁剪、未变速。模型仅输出检测分数，不生成语音。",
+      "previews": [],
+      "audio": [
+        {
+          "caption": "正例：你好，爱芯：官方输入录音",
+          "path": "/validation/effects/wakeup-axera-20260928/positive.wav"
+        },
+        {
+          "caption": "近似反例：你好，其他：官方输入录音",
+          "path": "/validation/effects/wakeup-axera-20260928/near-negative.wav"
+        }
+      ],
+      "tables": [],
+      "record": {
+        "modelId": "WakeUp.axera",
+        "provider": "AXCLRTExecutionProvider",
+        "completed": true,
+        "sourceHashes": {
+          "__init__.py": "baab463be544913adbd54416bd8ce7d6ef3a3f7893288652587b0297fdac93db",
+          "detector.py": "f2fada8fbe192ac20f6ffea8d2536046027527aaf292500d825d10257f86f4ef",
+          "inference.py": "bf7ee71dcc0d3cdbac9c43bcb2e67de69938eebde8aacddfd90926f478f081eb",
+          "postprocess.py": "08fc8eefc476b861c37d2626bfc54b4b46f58c0fa36662a42681971abe53dd6a",
+          "preprocess.py": "24c808e93b76fb9e330899a96717baaed8025d79f19a325b49454175c59633ff"
+        },
+        "versions": {
+          "numpy": "1.26.4"
+        },
+        "settings": {
+          "threshold": 0.615,
+          "detWin": 3,
+          "frameSamples": 512,
+          "sampleRate": 16000,
+          "contextFrames": 64,
+          "scoreType": "signed score, not probability",
+          "resetBetweenSamples": true
+        },
+        "samples": [
+          {
+            "kind": "positive",
+            "input": "positive.wav",
+            "inputSha256": "21ceb558c831c2cf1a5a26f62b7529fd8f345b7ee57f4957c4463b7e60a0cc98",
+            "sampleCount": 30336,
+            "audioSeconds": 1.896,
+            "frames": [
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -5.703657627105713,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -11.407315254211426,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.748217582702637,
+                "window_sum": -17.155532836914062,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -4.634222030639648,
+                "window_sum": -16.086097240447998,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -4.901580810546875,
+                "window_sum": -15.28402042388916,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -4.901580810546875,
+                "window_sum": -14.437383651733398,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.258059501647949,
+                "window_sum": -15.0612211227417,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.168939590454102,
+                "window_sum": -15.328579902648926,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.480858325958252,
+                "window_sum": -15.907857418060303,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.525418281555176,
+                "window_sum": -16.17521619796753,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.665374279022217,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.843613624572754,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.5699782371521,
+                "window_sum": -16.888173580169678,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -16.9327335357666,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.614538192749023,
+                "window_sum": -16.888174057006836,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.02185344696045,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.748217582702637,
+                "window_sum": -17.066413402557373,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.614538192749023,
+                "window_sum": -17.066413402557373,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.614538192749023,
+                "window_sum": -16.977293968200684,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -16.93273401260376,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.977293491363525,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.5699782371521,
+                "window_sum": -16.977293491363525,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 1.96063232421875,
+                "window_sum": -9.313003540039062,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.6290297508239746,
+                "window_sum": -0.980316162109375,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 3.0746278762817383,
+                "window_sum": 7.664289951324463,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.2725510597229004,
+                "window_sum": 7.976208686828613,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.539910078048706,
+                "window_sum": 7.887089014053345,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 4.0103840827941895,
+                "window_sum": 8.822845220565796,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.6290297508239746,
+                "window_sum": 9.17932391166687,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.940948486328125,
+                "window_sum": 9.580362319946289,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.940948486328125,
+                "window_sum": 8.510926723480225,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.4953501224517822,
+                "window_sum": 8.377247095108032,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.317111015319824,
+                "window_sum": 7.7534096240997314,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.4953501224517822,
+                "window_sum": 7.307811260223389,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.584469795227051,
+                "window_sum": 7.396930932998657,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.8518288135528564,
+                "window_sum": 7.9316487312316895,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -0.22279906272888184,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -8.510926485061646,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.748217582702637,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.614538192749023,
+                "window_sum": -16.977293491363525,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.9327335357666,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.9327335357666,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.977293014526367,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              }
+            ],
+            "discardedTailSamples": 128,
+            "processSeconds": 0.3762957379803993,
+            "triggeredFrames": 12,
+            "firstTriggerEndSeconds": 0.992,
+            "maxStreamingSum": 9.580362319946289,
+            "maxBatchSum": 9.580362319946289,
+            "streamTriggered": true,
+            "batchTriggered": true
+          },
+          {
+            "kind": "near-negative",
+            "input": "near-negative.wav",
+            "inputSha256": "9ef8d529f44f055acc16d84e232c4a7f658e637f42da11024413034ce141be4c",
+            "sampleCount": 29568,
+            "audioSeconds": 1.848,
+            "frames": [
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -5.703657627105713,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -11.407315254211426,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -4.812460899353027,
+                "window_sum": -16.219776153564453,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -3.6539056301116943,
+                "window_sum": -14.170024156570435,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.124380111694336,
+                "window_sum": -13.590746641159058,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -4.500542163848877,
+                "window_sum": -13.278827905654907,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -4.946140766143799,
+                "window_sum": -14.571063041687012,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.5699782371521,
+                "window_sum": -15.016661167144775,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.5699782371521,
+                "window_sum": -16.086097240447998,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.5699782371521,
+                "window_sum": -16.7099347114563,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -16.843614101409912,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.614538192749023,
+                "window_sum": -16.888174057006836,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.977293491363525,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.9327335357666,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.748217582702637,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.748217582702637,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.748217582702637,
+                "window_sum": -17.200092792510986,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.200092792510986,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.977293014526367,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.5699782371521,
+                "window_sum": -16.888173580169678,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.614538192749023,
+                "window_sum": -16.843614101409912,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.5699782371521,
+                "window_sum": -16.754494667053223,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.843614101409912,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.888173580169678,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.977293014526367,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.977293014526367,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.977293014526367,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.977293014526367,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.977293014526367,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.977293014526367,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.748217582702637,
+                "window_sum": -17.155532836914062,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.155532836914062,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.155532836914062,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.748217582702637,
+                "window_sum": -17.155532836914062,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.748217582702637,
+                "window_sum": -17.200092792510986,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.200092792510986,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.155532836914062,
+                "triggered": false,
+                "threshold": 0.615
+              }
+            ],
+            "discardedTailSamples": 384,
+            "processSeconds": 0.3346179699874483,
+            "triggeredFrames": 0,
+            "firstTriggerEndSeconds": null,
+            "maxStreamingSum": -5.703657627105713,
+            "maxBatchSum": -13.278827905654907,
+            "streamTriggered": false,
+            "batchTriggered": false
+          },
+          {
+            "kind": "positive-repeat",
+            "input": "positive-repeat.wav",
+            "inputSha256": "21ceb558c831c2cf1a5a26f62b7529fd8f345b7ee57f4957c4463b7e60a0cc98",
+            "sampleCount": 30336,
+            "audioSeconds": 1.896,
+            "frames": [
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -5.703657627105713,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -11.407315254211426,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.748217582702637,
+                "window_sum": -17.155532836914062,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -4.634222030639648,
+                "window_sum": -16.086097240447998,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -4.901580810546875,
+                "window_sum": -15.28402042388916,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -4.901580810546875,
+                "window_sum": -14.437383651733398,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.258059501647949,
+                "window_sum": -15.0612211227417,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.168939590454102,
+                "window_sum": -15.328579902648926,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.480858325958252,
+                "window_sum": -15.907857418060303,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.525418281555176,
+                "window_sum": -16.17521619796753,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.665374279022217,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.843613624572754,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.5699782371521,
+                "window_sum": -16.888173580169678,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -16.9327335357666,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.614538192749023,
+                "window_sum": -16.888174057006836,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.02185344696045,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.748217582702637,
+                "window_sum": -17.066413402557373,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.614538192749023,
+                "window_sum": -17.066413402557373,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.614538192749023,
+                "window_sum": -16.977293968200684,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -16.93273401260376,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.977293491363525,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.5699782371521,
+                "window_sum": -16.977293491363525,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 1.96063232421875,
+                "window_sum": -9.313003540039062,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.6290297508239746,
+                "window_sum": -0.980316162109375,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 3.0746278762817383,
+                "window_sum": 7.664289951324463,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.2725510597229004,
+                "window_sum": 7.976208686828613,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.539910078048706,
+                "window_sum": 7.887089014053345,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 4.0103840827941895,
+                "window_sum": 8.822845220565796,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.6290297508239746,
+                "window_sum": 9.17932391166687,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.940948486328125,
+                "window_sum": 9.580362319946289,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.940948486328125,
+                "window_sum": 8.510926723480225,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.4953501224517822,
+                "window_sum": 8.377247095108032,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.317111015319824,
+                "window_sum": 7.7534096240997314,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.4953501224517822,
+                "window_sum": 7.307811260223389,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.584469795227051,
+                "window_sum": 7.396930932998657,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.8518288135528564,
+                "window_sum": 7.9316487312316895,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -0.22279906272888184,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -8.510926485061646,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.748217582702637,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.614538192749023,
+                "window_sum": -16.977293491363525,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.9327335357666,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.9327335357666,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.977293014526367,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              }
+            ],
+            "discardedTailSamples": 128,
+            "processSeconds": 0.21246196498395875,
+            "triggeredFrames": 12,
+            "firstTriggerEndSeconds": 0.992,
+            "maxStreamingSum": 9.580362319946289,
+            "maxBatchSum": 9.580362319946289,
+            "streamTriggered": true,
+            "batchTriggered": true
+          },
+          {
+            "kind": "silence",
+            "input": "silence.wav",
+            "inputSha256": "20eaebffe1816e0ffa6f7f854f5ef4ea80d5349faaf0ce1fec1b713e7fde58fa",
+            "sampleCount": 32000,
+            "audioSeconds": 2.0,
+            "frames": [
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -5.703657627105713,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -11.407315254211426,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.977293014526367,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.977293014526367,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.977293014526367,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.748217582702637,
+                "window_sum": -17.155532836914062,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.155532836914062,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.155532836914062,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.748217582702637,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.748217582702637,
+                "window_sum": -17.200092792510986,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.155532836914062,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.155532836914062,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              }
+            ],
+            "discardedTailSamples": 256,
+            "processSeconds": 0.33565834700129926,
+            "triggeredFrames": 0,
+            "firstTriggerEndSeconds": null,
+            "maxStreamingSum": -5.703657627105713,
+            "maxBatchSum": -16.977293014526367,
+            "streamTriggered": false,
+            "batchTriggered": false
+          }
+        ],
+        "review": {
+          "allActualCallsVerified": true,
+          "actualCalls": 237,
+          "featureMaxAbsError": 0,
+          "repeatAllIoExact": true,
+          "independentScoreAndThresholdReplay": true,
+          "qualityAcceptance": false
+        },
+        "sessions": [
+          {
+            "model": "models/ax650/model.axmodel",
+            "weightSha256": "40102af09dd842219fe6dd2ef569f1d1db77a8590efe8d4ec5b339e016d3441a",
+            "provider": "AXCLRTExecutionProvider",
+            "loadSeconds": 0.5798073150217533,
+            "inputs": [
+              {
+                "name": "fbank",
+                "shape": [
+                  1,
+                  26,
+                  64
+                ],
+                "dtype": "float32"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "logits",
+                "shape": [
+                  1,
+                  2,
+                  64
+                ],
+                "dtype": "float32"
+              }
+            ],
+            "allFinite": true,
+            "runMilliseconds": [
+              6.548509001731873,
+              2.488794969394803,
+              2.090378024149686,
+              2.0034610060974956,
+              2.2446700022555888,
+              2.2414609557017684,
+              2.179337025154382,
+              2.2131699952296913,
+              2.017752965912223,
+              2.131503017153591,
+              2.1883780136704445,
+              2.2041280171833932,
+              2.1787529694847763,
+              1.9360860460437834,
+              2.3187529877759516,
+              1.9801279995590448,
+              2.3905030102469027,
+              2.2338780108839273,
+              2.106419997289777,
+              2.0909610320813954,
+              2.1796280052512884,
+              2.131503017153591,
+              2.1487119956873357,
+              2.0833779708482325,
+              2.2505029919557273,
+              2.170295047108084,
+              1.9745859899558127,
+              2.161544980481267,
+              2.2087949910201132,
+              2.219585992861539,
+              2.4307530256919563,
+              2.61100399075076,
+              2.593795012217015,
+              2.2957110195420682,
+              2.4327950086444616,
+              2.2685870062559843,
+              2.278502972330898,
+              2.319627965334803,
+              2.233879000414163,
+              2.0854200120083988,
+              2.2315449896268547,
+              2.191003004554659,
+              2.278210944496095,
+              2.1965450141578913,
+              2.2128779673948884,
+              2.144628029782325,
+              2.270627999678254,
+              2.1761280368082225,
+              1.7007109709084034,
+              1.787335961125791,
+              1.7990029882639647,
+              1.8485860200598836,
+              2.0690859528258443,
+              2.2770449868403375,
+              2.3067949805408716,
+              2.0970869809389114,
+              2.2636280045844615,
+              2.0792949944734573,
+              2.1084609907120466,
+              2.2758779814466834,
+              2.0749199902638793,
+              2.131794986780733,
+              2.118085976690054,
+              2.275294973514974,
+              2.149295003619045,
+              2.246711985208094,
+              2.2137530031614006,
+              2.206752949859947,
+              2.1831279736943543,
+              2.096793963573873,
+              2.2338779526762664,
+              2.123627986293286,
+              2.287545008584857,
+              1.9559200154617429,
+              2.3059200029820204,
+              2.340627950616181,
+              2.0119199762120843,
+              1.8357529770582914,
+              1.7928769811987877,
+              2.2925030207261443,
+              2.2925029625184834,
+              2.082795021124184,
+              2.2297949763014913,
+              2.1761279786005616,
+              2.243793976958841,
+              2.2303780424408615,
+              2.26742000086233,
+              1.9369609653949738,
+              2.2933779982849956,
+              2.2105449461378157,
+              2.0335030276328325,
+              1.6832110122777522,
+              2.317586971912533,
+              2.1653359872289,
+              2.0545030129142106,
+              2.400419965852052,
+              2.24087800597772,
+              2.2213360061869025,
+              2.237962034996599,
+              2.3024199763312936,
+              2.260129025671631,
+              2.218710957095027,
+              2.406545972917229,
+              2.171461994294077,
+              2.0965030416846275,
+              1.8127109506167471,
+              1.771003007888794,
+              1.897002977784723,
+              1.863753015641123,
+              1.7654609982855618,
+              1.794626994524151,
+              1.8150440300814807,
+              2.1210029954090714,
+              1.7091690097004175,
+              2.2335859830491245,
+              2.2295030066743493,
+              2.3820449714548886,
+              2.695003990083933,
+              2.33654398471117,
+              2.2773370146751404,
+              2.0326279918663204,
+              2.1915860124863684,
+              2.120419987477362,
+              2.0746280206367373,
+              2.0028779981657863,
+              2.111378009431064,
+              1.9591280142776668,
+              1.9952949951402843,
+              2.688877983018756,
+              2.0244609913788736,
+              2.2866700310260057,
+              1.9961689831689,
+              2.535170002374798,
+              1.6977940103970468,
+              1.5332939801737666,
+              1.7249190132133663,
+              1.9384190090931952,
+              1.8237949698232114,
+              1.9740029820241034,
+              2.1245030220597982,
+              1.996460952796042,
+              1.8576279981061816,
+              1.929960970301181,
+              1.8278780044056475,
+              1.7861690139397979,
+              1.7841279623098671,
+              1.7987110186368227,
+              1.7021690146066248,
+              1.4154609525576234,
+              2.012501994613558,
+              1.7126689781434834,
+              1.9500860362313688,
+              1.6881689662113786,
+              1.414586033206433,
+              1.7955029616132379,
+              1.7675019917078316,
+              1.7742110067047179,
+              1.7692529945634305,
+              1.7806270043365657,
+              1.7039190279319882,
+              1.7890859744511545,
+              1.7012940370477736,
+              1.7045029671862721,
+              1.4072939520701766,
+              1.4726270455867052,
+              1.4230440137907863,
+              1.4215860283002257,
+              2.0095869549550116,
+              1.9987939740531147,
+              1.8211690476164222,
+              2.0413780002854764,
+              1.7806279938668013,
+              1.8599610193632543,
+              1.9022530177608132,
+              1.878919021692127,
+              1.698377018328756,
+              1.4037940418347716,
+              1.431211014278233,
+              1.4306270168162882,
+              1.6881690244190395,
+              1.8573359702713788,
+              2.060920000076294,
+              1.8917529960162938,
+              1.9521269714459777,
+              2.016293990891427,
+              1.8468360067345202,
+              2.075793978292495,
+              2.0151279750280082,
+              1.903418975416571,
+              1.8827110179699957,
+              1.759920036420226,
+              1.787335961125791,
+              1.7325029475614429,
+              2.0594620145857334,
+              2.127127954736352,
+              2.0466280402615666,
+              1.9145029946230352,
+              2.098545024637133,
+              1.7972530331462622,
+              2.067919005639851,
+              1.9979189964942634,
+              1.8386690062470734,
+              1.9850860117003322,
+              1.921211020089686,
+              1.693710044492036,
+              1.6056280001066625,
+              1.9801279995590448,
+              1.7666270141489804,
+              1.346044009551406,
+              1.832543988712132,
+              1.3390439562499523,
+              1.7450439627282321,
+              1.6788360080681741,
+              1.5782109694555402,
+              2.208503952715546,
+              1.799585996195674,
+              2.29600298916921,
+              2.548879012465477,
+              2.570754033513367,
+              2.6460029766894877,
+              2.5334199890494347,
+              2.7976699639111757,
+              1.8407110474072397,
+              1.921210961882025,
+              2.042543957941234,
+              2.2216280340217054,
+              1.993253012187779,
+              2.0200859871692955,
+              2.1285859984345734,
+              1.9862519693560898,
+              2.0492529729381204,
+              1.8013360095210373,
+              2.0495440112426877,
+              2.23883701255545,
+              1.8232109723612666,
+              1.8173769931308925,
+              1.6126270056702197
+            ],
+            "actualCalls": 237
+          }
+        ]
+      }
+    },
+    {
+      "label": "运行耗时与尾帧处理",
+      "observation": "每帧512个采样点，末尾不足一帧的采样点按官方流程丢弃。文件处理时间包含CPU特征提取及证据压缩，不含加载；重复输入复用相同证据文件，不能据此推算加速比。",
+      "previews": [],
+      "tables": [
+        {
+          "headers": [
+            "输入",
+            "完整帧数",
+            "丢弃尾部采样点",
+            "文件处理 / s"
+          ],
+          "rows": [
+            [
+              "正例：你好，爱芯",
+              "59",
+              "128",
+              "0.376296"
+            ],
+            [
+              "近似反例：你好，其他",
+              "57",
+              "384",
+              "0.334618"
+            ],
+            [
+              "正例重复",
+              "59",
+              "128",
+              "0.212462"
+            ],
+            [
+              "两秒静音",
+              "62",
+              "256",
+              "0.335658"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "modelId": "WakeUp.axera",
+        "provider": "AXCLRTExecutionProvider",
+        "completed": true,
+        "sourceHashes": {
+          "__init__.py": "baab463be544913adbd54416bd8ce7d6ef3a3f7893288652587b0297fdac93db",
+          "detector.py": "f2fada8fbe192ac20f6ffea8d2536046027527aaf292500d825d10257f86f4ef",
+          "inference.py": "bf7ee71dcc0d3cdbac9c43bcb2e67de69938eebde8aacddfd90926f478f081eb",
+          "postprocess.py": "08fc8eefc476b861c37d2626bfc54b4b46f58c0fa36662a42681971abe53dd6a",
+          "preprocess.py": "24c808e93b76fb9e330899a96717baaed8025d79f19a325b49454175c59633ff"
+        },
+        "versions": {
+          "numpy": "1.26.4"
+        },
+        "settings": {
+          "threshold": 0.615,
+          "detWin": 3,
+          "frameSamples": 512,
+          "sampleRate": 16000,
+          "contextFrames": 64,
+          "scoreType": "signed score, not probability",
+          "resetBetweenSamples": true
+        },
+        "samples": [
+          {
+            "kind": "positive",
+            "input": "positive.wav",
+            "inputSha256": "21ceb558c831c2cf1a5a26f62b7529fd8f345b7ee57f4957c4463b7e60a0cc98",
+            "sampleCount": 30336,
+            "audioSeconds": 1.896,
+            "frames": [
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -5.703657627105713,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -11.407315254211426,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.748217582702637,
+                "window_sum": -17.155532836914062,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -4.634222030639648,
+                "window_sum": -16.086097240447998,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -4.901580810546875,
+                "window_sum": -15.28402042388916,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -4.901580810546875,
+                "window_sum": -14.437383651733398,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.258059501647949,
+                "window_sum": -15.0612211227417,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.168939590454102,
+                "window_sum": -15.328579902648926,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.480858325958252,
+                "window_sum": -15.907857418060303,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.525418281555176,
+                "window_sum": -16.17521619796753,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.665374279022217,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.843613624572754,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.5699782371521,
+                "window_sum": -16.888173580169678,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -16.9327335357666,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.614538192749023,
+                "window_sum": -16.888174057006836,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.02185344696045,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.748217582702637,
+                "window_sum": -17.066413402557373,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.614538192749023,
+                "window_sum": -17.066413402557373,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.614538192749023,
+                "window_sum": -16.977293968200684,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -16.93273401260376,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.977293491363525,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.5699782371521,
+                "window_sum": -16.977293491363525,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 1.96063232421875,
+                "window_sum": -9.313003540039062,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.6290297508239746,
+                "window_sum": -0.980316162109375,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 3.0746278762817383,
+                "window_sum": 7.664289951324463,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.2725510597229004,
+                "window_sum": 7.976208686828613,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.539910078048706,
+                "window_sum": 7.887089014053345,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 4.0103840827941895,
+                "window_sum": 8.822845220565796,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.6290297508239746,
+                "window_sum": 9.17932391166687,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.940948486328125,
+                "window_sum": 9.580362319946289,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.940948486328125,
+                "window_sum": 8.510926723480225,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.4953501224517822,
+                "window_sum": 8.377247095108032,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.317111015319824,
+                "window_sum": 7.7534096240997314,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.4953501224517822,
+                "window_sum": 7.307811260223389,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.584469795227051,
+                "window_sum": 7.396930932998657,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.8518288135528564,
+                "window_sum": 7.9316487312316895,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -0.22279906272888184,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -8.510926485061646,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.748217582702637,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.614538192749023,
+                "window_sum": -16.977293491363525,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.9327335357666,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.9327335357666,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.977293014526367,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              }
+            ],
+            "discardedTailSamples": 128,
+            "processSeconds": 0.3762957379803993,
+            "triggeredFrames": 12,
+            "firstTriggerEndSeconds": 0.992,
+            "maxStreamingSum": 9.580362319946289,
+            "maxBatchSum": 9.580362319946289,
+            "streamTriggered": true,
+            "batchTriggered": true
+          },
+          {
+            "kind": "near-negative",
+            "input": "near-negative.wav",
+            "inputSha256": "9ef8d529f44f055acc16d84e232c4a7f658e637f42da11024413034ce141be4c",
+            "sampleCount": 29568,
+            "audioSeconds": 1.848,
+            "frames": [
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -5.703657627105713,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -11.407315254211426,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -4.812460899353027,
+                "window_sum": -16.219776153564453,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -3.6539056301116943,
+                "window_sum": -14.170024156570435,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.124380111694336,
+                "window_sum": -13.590746641159058,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -4.500542163848877,
+                "window_sum": -13.278827905654907,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -4.946140766143799,
+                "window_sum": -14.571063041687012,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.5699782371521,
+                "window_sum": -15.016661167144775,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.5699782371521,
+                "window_sum": -16.086097240447998,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.5699782371521,
+                "window_sum": -16.7099347114563,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -16.843614101409912,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.614538192749023,
+                "window_sum": -16.888174057006836,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.977293491363525,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.9327335357666,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.748217582702637,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.748217582702637,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.748217582702637,
+                "window_sum": -17.200092792510986,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.200092792510986,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.977293014526367,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.5699782371521,
+                "window_sum": -16.888173580169678,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.614538192749023,
+                "window_sum": -16.843614101409912,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.5699782371521,
+                "window_sum": -16.754494667053223,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.843614101409912,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.888173580169678,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.977293014526367,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.977293014526367,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.977293014526367,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.977293014526367,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.977293014526367,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.977293014526367,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.748217582702637,
+                "window_sum": -17.155532836914062,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.155532836914062,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.155532836914062,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.748217582702637,
+                "window_sum": -17.155532836914062,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.748217582702637,
+                "window_sum": -17.200092792510986,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.200092792510986,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.155532836914062,
+                "triggered": false,
+                "threshold": 0.615
+              }
+            ],
+            "discardedTailSamples": 384,
+            "processSeconds": 0.3346179699874483,
+            "triggeredFrames": 0,
+            "firstTriggerEndSeconds": null,
+            "maxStreamingSum": -5.703657627105713,
+            "maxBatchSum": -13.278827905654907,
+            "streamTriggered": false,
+            "batchTriggered": false
+          },
+          {
+            "kind": "positive-repeat",
+            "input": "positive-repeat.wav",
+            "inputSha256": "21ceb558c831c2cf1a5a26f62b7529fd8f345b7ee57f4957c4463b7e60a0cc98",
+            "sampleCount": 30336,
+            "audioSeconds": 1.896,
+            "frames": [
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -5.703657627105713,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -11.407315254211426,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.748217582702637,
+                "window_sum": -17.155532836914062,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -4.634222030639648,
+                "window_sum": -16.086097240447998,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -4.901580810546875,
+                "window_sum": -15.28402042388916,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -4.901580810546875,
+                "window_sum": -14.437383651733398,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.258059501647949,
+                "window_sum": -15.0612211227417,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.168939590454102,
+                "window_sum": -15.328579902648926,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.480858325958252,
+                "window_sum": -15.907857418060303,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.525418281555176,
+                "window_sum": -16.17521619796753,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.665374279022217,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.843613624572754,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.5699782371521,
+                "window_sum": -16.888173580169678,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -16.9327335357666,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.614538192749023,
+                "window_sum": -16.888174057006836,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.02185344696045,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.748217582702637,
+                "window_sum": -17.066413402557373,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.614538192749023,
+                "window_sum": -17.066413402557373,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.614538192749023,
+                "window_sum": -16.977293968200684,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -16.93273401260376,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.977293491363525,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.5699782371521,
+                "window_sum": -16.977293491363525,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 1.96063232421875,
+                "window_sum": -9.313003540039062,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.6290297508239746,
+                "window_sum": -0.980316162109375,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 3.0746278762817383,
+                "window_sum": 7.664289951324463,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.2725510597229004,
+                "window_sum": 7.976208686828613,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.539910078048706,
+                "window_sum": 7.887089014053345,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 4.0103840827941895,
+                "window_sum": 8.822845220565796,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.6290297508239746,
+                "window_sum": 9.17932391166687,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.940948486328125,
+                "window_sum": 9.580362319946289,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.940948486328125,
+                "window_sum": 8.510926723480225,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.4953501224517822,
+                "window_sum": 8.377247095108032,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.317111015319824,
+                "window_sum": 7.7534096240997314,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.4953501224517822,
+                "window_sum": 7.307811260223389,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.584469795227051,
+                "window_sum": 7.396930932998657,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": 2.8518288135528564,
+                "window_sum": 7.9316487312316895,
+                "triggered": true,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -0.22279906272888184,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -8.510926485061646,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.748217582702637,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.614538192749023,
+                "window_sum": -16.977293491363525,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.9327335357666,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.9327335357666,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.977293014526367,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              }
+            ],
+            "discardedTailSamples": 128,
+            "processSeconds": 0.21246196498395875,
+            "triggeredFrames": 12,
+            "firstTriggerEndSeconds": 0.992,
+            "maxStreamingSum": 9.580362319946289,
+            "maxBatchSum": 9.580362319946289,
+            "streamTriggered": true,
+            "batchTriggered": true
+          },
+          {
+            "kind": "silence",
+            "input": "silence.wav",
+            "inputSha256": "20eaebffe1816e0ffa6f7f854f5ef4ea80d5349faaf0ce1fec1b713e7fde58fa",
+            "sampleCount": 32000,
+            "audioSeconds": 2.0,
+            "frames": [
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -5.703657627105713,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -11.407315254211426,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.977293014526367,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.977293014526367,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -16.977293014526367,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.02185297012329,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.748217582702637,
+                "window_sum": -17.155532836914062,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.155532836914062,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.155532836914062,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.748217582702637,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.748217582702637,
+                "window_sum": -17.200092792510986,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.155532836914062,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.155532836914062,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.659097671508789,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.066412925720215,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              },
+              {
+                "wake_score": -5.703657627105713,
+                "window_sum": -17.11097288131714,
+                "triggered": false,
+                "threshold": 0.615
+              }
+            ],
+            "discardedTailSamples": 256,
+            "processSeconds": 0.33565834700129926,
+            "triggeredFrames": 0,
+            "firstTriggerEndSeconds": null,
+            "maxStreamingSum": -5.703657627105713,
+            "maxBatchSum": -16.977293014526367,
+            "streamTriggered": false,
+            "batchTriggered": false
+          }
+        ],
+        "review": {
+          "allActualCallsVerified": true,
+          "actualCalls": 237,
+          "featureMaxAbsError": 0,
+          "repeatAllIoExact": true,
+          "independentScoreAndThresholdReplay": true,
+          "qualityAcceptance": false
+        },
+        "sessions": [
+          {
+            "model": "models/ax650/model.axmodel",
+            "weightSha256": "40102af09dd842219fe6dd2ef569f1d1db77a8590efe8d4ec5b339e016d3441a",
+            "provider": "AXCLRTExecutionProvider",
+            "loadSeconds": 0.5798073150217533,
+            "inputs": [
+              {
+                "name": "fbank",
+                "shape": [
+                  1,
+                  26,
+                  64
+                ],
+                "dtype": "float32"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "logits",
+                "shape": [
+                  1,
+                  2,
+                  64
+                ],
+                "dtype": "float32"
+              }
+            ],
+            "allFinite": true,
+            "runMilliseconds": [
+              6.548509001731873,
+              2.488794969394803,
+              2.090378024149686,
+              2.0034610060974956,
+              2.2446700022555888,
+              2.2414609557017684,
+              2.179337025154382,
+              2.2131699952296913,
+              2.017752965912223,
+              2.131503017153591,
+              2.1883780136704445,
+              2.2041280171833932,
+              2.1787529694847763,
+              1.9360860460437834,
+              2.3187529877759516,
+              1.9801279995590448,
+              2.3905030102469027,
+              2.2338780108839273,
+              2.106419997289777,
+              2.0909610320813954,
+              2.1796280052512884,
+              2.131503017153591,
+              2.1487119956873357,
+              2.0833779708482325,
+              2.2505029919557273,
+              2.170295047108084,
+              1.9745859899558127,
+              2.161544980481267,
+              2.2087949910201132,
+              2.219585992861539,
+              2.4307530256919563,
+              2.61100399075076,
+              2.593795012217015,
+              2.2957110195420682,
+              2.4327950086444616,
+              2.2685870062559843,
+              2.278502972330898,
+              2.319627965334803,
+              2.233879000414163,
+              2.0854200120083988,
+              2.2315449896268547,
+              2.191003004554659,
+              2.278210944496095,
+              2.1965450141578913,
+              2.2128779673948884,
+              2.144628029782325,
+              2.270627999678254,
+              2.1761280368082225,
+              1.7007109709084034,
+              1.787335961125791,
+              1.7990029882639647,
+              1.8485860200598836,
+              2.0690859528258443,
+              2.2770449868403375,
+              2.3067949805408716,
+              2.0970869809389114,
+              2.2636280045844615,
+              2.0792949944734573,
+              2.1084609907120466,
+              2.2758779814466834,
+              2.0749199902638793,
+              2.131794986780733,
+              2.118085976690054,
+              2.275294973514974,
+              2.149295003619045,
+              2.246711985208094,
+              2.2137530031614006,
+              2.206752949859947,
+              2.1831279736943543,
+              2.096793963573873,
+              2.2338779526762664,
+              2.123627986293286,
+              2.287545008584857,
+              1.9559200154617429,
+              2.3059200029820204,
+              2.340627950616181,
+              2.0119199762120843,
+              1.8357529770582914,
+              1.7928769811987877,
+              2.2925030207261443,
+              2.2925029625184834,
+              2.082795021124184,
+              2.2297949763014913,
+              2.1761279786005616,
+              2.243793976958841,
+              2.2303780424408615,
+              2.26742000086233,
+              1.9369609653949738,
+              2.2933779982849956,
+              2.2105449461378157,
+              2.0335030276328325,
+              1.6832110122777522,
+              2.317586971912533,
+              2.1653359872289,
+              2.0545030129142106,
+              2.400419965852052,
+              2.24087800597772,
+              2.2213360061869025,
+              2.237962034996599,
+              2.3024199763312936,
+              2.260129025671631,
+              2.218710957095027,
+              2.406545972917229,
+              2.171461994294077,
+              2.0965030416846275,
+              1.8127109506167471,
+              1.771003007888794,
+              1.897002977784723,
+              1.863753015641123,
+              1.7654609982855618,
+              1.794626994524151,
+              1.8150440300814807,
+              2.1210029954090714,
+              1.7091690097004175,
+              2.2335859830491245,
+              2.2295030066743493,
+              2.3820449714548886,
+              2.695003990083933,
+              2.33654398471117,
+              2.2773370146751404,
+              2.0326279918663204,
+              2.1915860124863684,
+              2.120419987477362,
+              2.0746280206367373,
+              2.0028779981657863,
+              2.111378009431064,
+              1.9591280142776668,
+              1.9952949951402843,
+              2.688877983018756,
+              2.0244609913788736,
+              2.2866700310260057,
+              1.9961689831689,
+              2.535170002374798,
+              1.6977940103970468,
+              1.5332939801737666,
+              1.7249190132133663,
+              1.9384190090931952,
+              1.8237949698232114,
+              1.9740029820241034,
+              2.1245030220597982,
+              1.996460952796042,
+              1.8576279981061816,
+              1.929960970301181,
+              1.8278780044056475,
+              1.7861690139397979,
+              1.7841279623098671,
+              1.7987110186368227,
+              1.7021690146066248,
+              1.4154609525576234,
+              2.012501994613558,
+              1.7126689781434834,
+              1.9500860362313688,
+              1.6881689662113786,
+              1.414586033206433,
+              1.7955029616132379,
+              1.7675019917078316,
+              1.7742110067047179,
+              1.7692529945634305,
+              1.7806270043365657,
+              1.7039190279319882,
+              1.7890859744511545,
+              1.7012940370477736,
+              1.7045029671862721,
+              1.4072939520701766,
+              1.4726270455867052,
+              1.4230440137907863,
+              1.4215860283002257,
+              2.0095869549550116,
+              1.9987939740531147,
+              1.8211690476164222,
+              2.0413780002854764,
+              1.7806279938668013,
+              1.8599610193632543,
+              1.9022530177608132,
+              1.878919021692127,
+              1.698377018328756,
+              1.4037940418347716,
+              1.431211014278233,
+              1.4306270168162882,
+              1.6881690244190395,
+              1.8573359702713788,
+              2.060920000076294,
+              1.8917529960162938,
+              1.9521269714459777,
+              2.016293990891427,
+              1.8468360067345202,
+              2.075793978292495,
+              2.0151279750280082,
+              1.903418975416571,
+              1.8827110179699957,
+              1.759920036420226,
+              1.787335961125791,
+              1.7325029475614429,
+              2.0594620145857334,
+              2.127127954736352,
+              2.0466280402615666,
+              1.9145029946230352,
+              2.098545024637133,
+              1.7972530331462622,
+              2.067919005639851,
+              1.9979189964942634,
+              1.8386690062470734,
+              1.9850860117003322,
+              1.921211020089686,
+              1.693710044492036,
+              1.6056280001066625,
+              1.9801279995590448,
+              1.7666270141489804,
+              1.346044009551406,
+              1.832543988712132,
+              1.3390439562499523,
+              1.7450439627282321,
+              1.6788360080681741,
+              1.5782109694555402,
+              2.208503952715546,
+              1.799585996195674,
+              2.29600298916921,
+              2.548879012465477,
+              2.570754033513367,
+              2.6460029766894877,
+              2.5334199890494347,
+              2.7976699639111757,
+              1.8407110474072397,
+              1.921210961882025,
+              2.042543957941234,
+              2.2216280340217054,
+              1.993253012187779,
+              2.0200859871692955,
+              2.1285859984345734,
+              1.9862519693560898,
+              2.0492529729381204,
+              1.8013360095210373,
+              2.0495440112426877,
+              2.23883701255545,
+              1.8232109723612666,
+              1.8173769931308925,
+              1.6126270056702197
+            ],
+            "actualCalls": 237
+          }
+        ]
+      }
+    }
+  ]
+}

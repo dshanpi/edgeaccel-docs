@@ -1,0 +1,47 @@
+{
+  "repo": "AXERA-TECH/Plate-axera",
+  "revision": "e528f3e145f0ec35e3c2c05a019d8369d6fdef3c",
+  "complete": true,
+  "files": [
+    {
+      "path": "axmodel_infer_plate_end2end.py",
+      "size": 12345,
+      "sha256": null,
+      "gitBlob": "60339fade5d75da0aac3af41f682dd6994d1ae73",
+      "verifiedHashes": {
+        "sha256": "2344a063840969ab1ab51d5fbe58e19d3a977cb97ae976259656bc3dd1faff5e",
+        "gitBlob": "60339fade5d75da0aac3af41f682dd6994d1ae73"
+      }
+    },
+    {
+      "path": "AX650/pld_650_npu3.axmodel",
+      "size": 1198468,
+      "sha256": "a25c77a90f7cafa42105a7abdfa5bccfc086c61e6a52db5790e4323d2a26f170",
+      "gitBlob": "36904644fa813c9219659a11403c797f3ad9f4f2",
+      "verifiedHashes": {
+        "sha256": "a25c77a90f7cafa42105a7abdfa5bccfc086c61e6a52db5790e4323d2a26f170",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "AX650/plr_650_npu3.axmodel",
+      "size": 955647,
+      "sha256": "ef96528b9b350d59ba35c282b61eee29ee9650a9e0e642db4e73ec43f001a69d",
+      "gitBlob": "57db1bec84de8112101d9e93613abd61e2b4431b",
+      "verifiedHashes": {
+        "sha256": "ef96528b9b350d59ba35c282b61eee29ee9650a9e0e642db4e73ec43f001a69d",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "test.jpg",
+      "size": 438938,
+      "sha256": "6d96e9ab8dc69d226e8e4ab9543c9de0590b2b11e351ed41b106c9cec54125d9",
+      "gitBlob": "d533cd108ed280403a6cabbbb2146a5779c2f9b3",
+      "verifiedHashes": {
+        "sha256": "6d96e9ab8dc69d226e8e4ab9543c9de0590b2b11e351ed41b106c9cec54125d9",
+        "gitBlob": null
+      }
+    }
+  ]
+}

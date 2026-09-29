@@ -1,0 +1,37 @@
+{
+  "repo": "AXERA-TECH/RTMPose",
+  "revision": "726c3acf17cff3a13958bc30da0aa6bf125312b1",
+  "complete": true,
+  "files": [
+    {
+      "path": "ax_infer.py",
+      "size": 5575,
+      "sha256": null,
+      "gitBlob": "9256a80957be8fc149d4cbdba26d342a1e8f8012",
+      "verifiedHashes": {
+        "sha256": "cd31445b2135a2e4bc9f53d94059e7aca89581f1b5912e329c560e13712a92d8",
+        "gitBlob": "9256a80957be8fc149d4cbdba26d342a1e8f8012"
+      }
+    },
+    {
+      "path": "AX650/rtmpose_m_npu3.axmodel",
+      "size": 18247844,
+      "sha256": "17313d5d20b0070672bf8617960162ea2ac6f7b8da12b42b5bb4974c45570fa7",
+      "gitBlob": "491f84013e8ab3f1bc5fe8e0883449683e79c030",
+      "verifiedHashes": {
+        "sha256": "17313d5d20b0070672bf8617960162ea2ac6f7b8da12b42b5bb4974c45570fa7",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "test.jpg",
+      "size": 133674,
+      "sha256": "83981537a7baeafbeb9c8cb67b3484dc26433f574b3685d021fa537e277e4726",
+      "gitBlob": "d1d462ab49b9ec885e390c8c84a5c5e4527ef141",
+      "verifiedHashes": {
+        "sha256": "83981537a7baeafbeb9c8cb67b3484dc26433f574b3685d021fa537e277e4726",
+        "gitBlob": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "modelId": "rnnoise",
+  "repo": "AXERA-TECH/rnnoise",
+  "revision": "f2b2f87603576f27b303f0b3b033ad4aac0acc18",
+  "complete": true,
+  "files": [
+    {
+      "path": "LICENSE",
+      "size": 1612,
+      "url": "https://huggingface.co/AXERA-TECH/rnnoise/resolve/f2b2f87603576f27b303f0b3b033ad4aac0acc18/LICENSE",
+      "verifiedHashes": {
+        "sha256": "45d37ca1cdb278c088e1aa85e0e65ca3a534ed86a28dcc96ca16810248a61d35",
+        "gitBlob": "59d7d09c80c17e60a972bf730caf6a3e005b17b1"
+      }
+    },
+    {
+      "path": "README.md",
+      "size": 2208,
+      "url": "https://huggingface.co/AXERA-TECH/rnnoise/resolve/f2b2f87603576f27b303f0b3b033ad4aac0acc18/README.md",
+      "verifiedHashes": {
+        "sha256": "ed6c7a2bb209afea43ce520bf29fb667a561dcb3b8ab46c7fbca0bb20c498f4f",
+        "gitBlob": "21734932a0426fff7ef19360730a50a63265b3b3"
+      }
+    },
+    {
+      "path": "python/demo.py",
+      "size": 2726,
+      "url": "https://huggingface.co/AXERA-TECH/rnnoise/resolve/f2b2f87603576f27b303f0b3b033ad4aac0acc18/python/demo.py",
+      "verifiedHashes": {
+        "sha256": "279d401cd4e28b8bea47dbd52c4076b72ae7eaa151c3e7f47db79523c53504c6",
+        "gitBlob": "d3902404c8d4c926e7fec98f86120838d7e450ce"
+      }
+    },
+    {
+      "path": "python/requirements.txt",
+      "size": 89,
+      "url": "https://huggingface.co/AXERA-TECH/rnnoise/resolve/f2b2f87603576f27b303f0b3b033ad4aac0acc18/python/requirements.txt",
+      "verifiedHashes": {
+        "sha256": "bc4b3926672eccfd4b7edb8c2f989465aff33103397fed5e92afc9a0313bbb32",
+        "gitBlob": "827733f283b44a0c61f2ebc76864dbdfe2f6c3d2"
+      }
+    },
+    {
+      "path": "python/rnnoise_sdk/README.md",
+      "size": 911,
+      "url": "https://huggingface.co/AXERA-TECH/rnnoise/resolve/f2b2f87603576f27b303f0b3b033ad4aac0acc18/python/rnnoise_sdk/README.md",
+      "verifiedHashes": {
+        "sha256": "1b31f031dad96450acc286b559c6c1f27315ab83ba2669060a7367b7bfb2aa5b",
+        "gitBlob": "7adb9ffb0a1c967864775ea1ec120684849691de"
+      }
+    },
+    {
+      "path": "python/rnnoise_sdk/__init__.py",
+      "size": 149,
+      "url": "https://huggingface.co/AXERA-TECH/rnnoise/resolve/f2b2f87603576f27b303f0b3b033ad4aac0acc18/python/rnnoise_sdk/__init__.py",
+      "verifiedHashes": {
+        "sha256": "648f98ed6f794897bee067d95425c8cbdae38a34929252f953b11f846b0a7ecf",
+        "gitBlob": "7c0515877245e68112b001cc6ace3bc6ba238e04"
+      }
+    },
+    {
+      "path": "python/rnnoise_sdk/dsp.py",
+      "size": 19191,
+      "url": "https://huggingface.co/AXERA-TECH/rnnoise/resolve/f2b2f87603576f27b303f0b3b033ad4aac0acc18/python/rnnoise_sdk/dsp.py",
+      "verifiedHashes": {
+        "sha256": "d110592bc9f613a6659cb53230288ab7c6da95612683b904deeb4d0eba262545",
+        "gitBlob": "690b80b87d5a5effc2d158a830d0e87d1c2d33d1"
+      }
+    },
+    {
+      "path": "python/rnnoise_sdk/example.py",
+      "size": 2276,
+      "url": "https://huggingface.co/AXERA-TECH/rnnoise/resolve/f2b2f87603576f27b303f0b3b033ad4aac0acc18/python/rnnoise_sdk/example.py",
+      "verifiedHashes": {
+        "sha256": "d6466a99243e9cecb4bbfe385f2320fa0525ecd3b009f7a8ebe79c6ebeb6e150",
+        "gitBlob": "0318ef1b6ed5fbce59a992a8e77b90f1fc20799b"
+      }
+    },
+    {
+      "path": "python/rnnoise_sdk/inference.py",
+      "size": 3189,
+      "url": "https://huggingface.co/AXERA-TECH/rnnoise/resolve/f2b2f87603576f27b303f0b3b033ad4aac0acc18/python/rnnoise_sdk/inference.py",
+      "verifiedHashes": {
+        "sha256": "e90f7f29392935d4dc13c6d53531484d82531ca33243b6afdae2431a72784e90",
+        "gitBlob": "0b148bad2e51f552547b5d6f890636c7cbcd5d7d"
+      }
+    },
+    {
+      "path": "python/rnnoise_sdk/inference_npu.py",
+      "size": 3189,
+      "url": "https://huggingface.co/AXERA-TECH/rnnoise/resolve/f2b2f87603576f27b303f0b3b033ad4aac0acc18/python/rnnoise_sdk/inference_npu.py",
+      "verifiedHashes": {
+        "sha256": "e90f7f29392935d4dc13c6d53531484d82531ca33243b6afdae2431a72784e90",
+        "gitBlob": "0b148bad2e51f552547b5d6f890636c7cbcd5d7d"
+      }
+    },
+    {
+      "path": "python/rnnoise_sdk/postprocess.py",
+      "size": 439,
+      "url": "https://huggingface.co/AXERA-TECH/rnnoise/resolve/f2b2f87603576f27b303f0b3b033ad4aac0acc18/python/rnnoise_sdk/postprocess.py",
+      "verifiedHashes": {
+        "sha256": "aeb819f2ef230a66102131aa2d6c828dc17baea223d19c2b1d6889319e2325f8",
+        "gitBlob": "cfa5b6b493e3e9badb572b3be5194d307d4369ce"
+      }
+    },
+    {
+      "path": "python/rnnoise_sdk/preprocess.py",
+      "size": 461,
+      "url": "https://huggingface.co/AXERA-TECH/rnnoise/resolve/f2b2f87603576f27b303f0b3b033ad4aac0acc18/python/rnnoise_sdk/preprocess.py",
+      "verifiedHashes": {
+        "sha256": "6704b59bbffc0e277314b5105e0a70dc12665490c3f49624196109f7e22156f7",
+        "gitBlob": "9ce4e916f6e33967fe2c2b829cf53dcf300a9008"
+      }
+    },
+    {
+      "path": "python/rnnoise_sdk/requirements.txt",
+      "size": 89,
+      "url": "https://huggingface.co/AXERA-TECH/rnnoise/resolve/f2b2f87603576f27b303f0b3b033ad4aac0acc18/python/rnnoise_sdk/requirements.txt",
+      "verifiedHashes": {
+        "sha256": "bc4b3926672eccfd4b7edb8c2f989465aff33103397fed5e92afc9a0313bbb32",
+        "gitBlob": "827733f283b44a0c61f2ebc76864dbdfe2f6c3d2"
+      }
+    },
+    {
+      "path": "python/sample_speech.pcm",
+      "size": 192000,
+      "url": "https://huggingface.co/AXERA-TECH/rnnoise/resolve/f2b2f87603576f27b303f0b3b033ad4aac0acc18/python/sample_speech.pcm",
+      "verifiedHashes": {
+        "sha256": "b7f2477120159ed81da6eda259c6ebe57f321aac41c04d4e9d8b21a055887416",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "rnnoise_ax650/model.axmodel",
+      "size": 3393952,
+      "url": "https://huggingface.co/AXERA-TECH/rnnoise/resolve/f2b2f87603576f27b303f0b3b033ad4aac0acc18/rnnoise_ax650/model.axmodel",
+      "verifiedHashes": {
+        "sha256": "e758f3120eff228d8e15d8cf035d336bda94f3920b3ab60e947f74908aa6d16e",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "rnnoise_ax650/model_meta.json",
+      "size": 2501,
+      "url": "https://huggingface.co/AXERA-TECH/rnnoise/resolve/f2b2f87603576f27b303f0b3b033ad4aac0acc18/rnnoise_ax650/model_meta.json",
+      "verifiedHashes": {
+        "sha256": "e53ceb13f4b9bf75d780105402556cc3441c0d5eada5eee9db7102412efd12e2",
+        "gitBlob": "a9407cfdf25dd011bcc85517b23c829b048e2234"
+      }
+    }
+  ]
+}

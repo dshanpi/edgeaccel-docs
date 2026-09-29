@@ -1,0 +1,388 @@
+make: Entering directory '/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver'
+-e [36;1mIn subdir host_dev... [0m
+make[1]: Entering directory '/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/host_dev'
+make[1]: Leaving directory '/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/host_dev'
+-e [36;1mIn subdir msg... [0m
+make[1]: Entering directory '/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/msg'
+make[1]: Leaving directory '/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/msg'
+-e [36;1mIn subdir mmb... [0m
+make[1]: Entering directory '/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/mmb'
+make[1]: Leaving directory '/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/mmb'
+-e [36;1mIn subdir axcl_host... [0m
+make[1]: Entering directory '/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/axcl_host'
+make[1]: Leaving directory '/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/axcl_host'
+-e [36;1mIn subdir net... [0m
+make[1]: Entering directory '/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/net'
+-e [36;1mIn subdir rc-net... [0m
+make[2]: Entering directory '/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/net/rc-net'
+make[2]: Leaving directory '/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/net/rc-net'
+-e [32;1m
+Clean net success!!
+ [0m
+make[1]: Leaving directory '/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/net'
+-e [36;1mIn subdir p2p_rc... [0m
+make[1]: Entering directory '/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/p2p_rc'
+make[1]: Leaving directory '/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/p2p_rc'
+-e [36;1mIn subdir vtty... [0m
+make[1]: Entering directory '/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/vtty'
+make[1]: Leaving directory '/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/vtty'
+-e [32;1m
+Clean driver success!!
+ [0m
+
+-e [36;1mIn subdir host_dev ... [0m
+make[1]: Entering directory '/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/host_dev'
+make ARCH=arm64 CROSS_COMPILE= KCFLAGS="-DIS_THIRD_PARTY_PLATFORM" -C /home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx M=/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/host_dev  modules
+make[2]: Entering directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+warning: the compiler differs from the one used to build the kernel
+  The kernel was built by: aarch64-linux-gnu-gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0
+  You are using:           gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0
+  CC [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/host_dev/ax_pcie_dev_host.o
+  CC [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/host_dev/ax_pcie_opt.o
+  CC [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/host_dev/ax_pcie_proc.o
+  CC [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/host_dev/ax_pcie_msg_transfer.o
+  CC [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/host_dev/version.o
+  LD [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/host_dev/ax_pcie_host_dev.o
+  MODPOST /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/host_dev/Module.symvers
+  CC [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/host_dev/ax_pcie_host_dev.mod.o
+  LD [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/host_dev/ax_pcie_host_dev.ko
+  BTF [M] /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/host_dev/ax_pcie_host_dev.ko
+Skipping BTF generation for /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/host_dev/ax_pcie_host_dev.ko due to unavailability of vmlinux
+make[2]: Leaving directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+make -C /home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx M=/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/host_dev clean
+make[2]: Entering directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+  CLEAN   /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/host_dev/Module.symvers
+make[2]: Leaving directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+make[1]: Leaving directory '/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/host_dev'
+
+-e [36;1mIn subdir msg ... [0m
+make[1]: Entering directory '/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/msg'
+make ARCH=arm64 CROSS_COMPILE= KCFLAGS="-DIS_THIRD_PARTY_PLATFORM" -C /home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx M=/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/msg  modules
+make[2]: Entering directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+warning: the compiler differs from the one used to build the kernel
+  The kernel was built by: aarch64-linux-gnu-gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0
+  You are using:           gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0
+  CC [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/msg/ax_pcie_msg_usrdev.o
+  CC [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/msg/version.o
+  LD [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/msg/ax_pcie_msg.o
+  MODPOST /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/msg/Module.symvers
+  CC [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/msg/ax_pcie_msg.mod.o
+  LD [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/msg/ax_pcie_msg.ko
+  BTF [M] /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/msg/ax_pcie_msg.ko
+Skipping BTF generation for /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/msg/ax_pcie_msg.ko due to unavailability of vmlinux
+make[2]: Leaving directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+make -C /home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx M=/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/msg clean
+make[2]: Entering directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+  CLEAN   /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/msg/Module.symvers
+make[2]: Leaving directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+make[1]: Leaving directory '/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/msg'
+
+-e [36;1mIn subdir mmb ... [0m
+make[1]: Entering directory '/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/mmb'
+make ARCH=arm64 CROSS_COMPILE= KCFLAGS="-DIS_THIRD_PARTY_PLATFORM" -C /home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx M=/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/mmb  modules
+make[2]: Entering directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+warning: the compiler differs from the one used to build the kernel
+  The kernel was built by: aarch64-linux-gnu-gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0
+  You are using:           gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0
+  CC [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/mmb/ax_mmb.o
+  AS [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/mmb/ax_mmb_cache.o
+  CC [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/mmb/version.o
+  LD [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/mmb/ax_pcie_mmb.o
+  MODPOST /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/mmb/Module.symvers
+  CC [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/mmb/ax_pcie_mmb.mod.o
+  LD [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/mmb/ax_pcie_mmb.ko
+  BTF [M] /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/mmb/ax_pcie_mmb.ko
+Skipping BTF generation for /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/mmb/ax_pcie_mmb.ko due to unavailability of vmlinux
+make[2]: Leaving directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+make -C /home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx M=/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/mmb clean
+make[2]: Entering directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+  CLEAN   /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/mmb/Module.symvers
+make[2]: Leaving directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+make[1]: Leaving directory '/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/mmb'
+
+-e [36;1mIn subdir axcl_host ... [0m
+make[1]: Entering directory '/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/axcl_host'
+make ARCH=arm64 CROSS_COMPILE= KCFLAGS="-DIS_THIRD_PARTY_PLATFORM" -C /home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx M=/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/axcl_host  modules
+make[2]: Entering directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+warning: the compiler differs from the one used to build the kernel
+  The kernel was built by: aarch64-linux-gnu-gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0
+  You are using:           gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0
+  CC [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/axcl_host/axcl_pcie_host.o
+  CC [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/axcl_host/version.o
+  LD [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/axcl_host/axcl_host.o
+  MODPOST /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/axcl_host/Module.symvers
+  CC [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/axcl_host/axcl_host.mod.o
+  LD [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/axcl_host/axcl_host.ko
+  BTF [M] /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/axcl_host/axcl_host.ko
+Skipping BTF generation for /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/axcl_host/axcl_host.ko due to unavailability of vmlinux
+make[2]: Leaving directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+make -C /home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx M=/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/axcl_host clean
+make[2]: Entering directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+  CLEAN   /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/axcl_host/Module.symvers
+make[2]: Leaving directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+make[1]: Leaving directory '/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/axcl_host'
+
+-e [36;1mIn subdir net ... [0m
+make[1]: Entering directory '/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/net'
+
+-e [36;1mIn subdir rc-net ... [0m
+make[2]: Entering directory '/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/net/rc-net'
+make ARCH=arm64 CROSS_COMPILE= KCFLAGS="-DDEBUG -DIS_THIRD_PARTY_PLATFORM" -C /home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx M=/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/net/rc-net  modules
+make[3]: Entering directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+warning: the compiler differs from the one used to build the kernel
+  The kernel was built by: aarch64-linux-gnu-gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0
+  You are using:           gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0
+  CC [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/net/rc-net/ax_pcie_net.o
+In file included from /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/net/rc-net/ax_pcie_net.c:7:
+/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/net/rc-net/../../include/ax_pcie_net.h:17:9: note: ‘#pragma message: build for x86 platform’
+   17 | #pragma message("build for x86 platform")
+      |         ^~~~~~~
+  LD [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/net/rc-net/ax_pcie_net_host.o
+  MODPOST /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/net/rc-net/Module.symvers
+  CC [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/net/rc-net/ax_pcie_net_host.mod.o
+  LD [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/net/rc-net/ax_pcie_net_host.ko
+  BTF [M] /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/net/rc-net/ax_pcie_net_host.ko
+Skipping BTF generation for /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/net/rc-net/ax_pcie_net_host.ko due to unavailability of vmlinux
+make[3]: Leaving directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+make -C /home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx M=/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/net/rc-net clean
+make[3]: Entering directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+  CLEAN   /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/net/rc-net/Module.symvers
+make[3]: Leaving directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+make[2]: Leaving directory '/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/net/rc-net'
+-e [32;1m
+Build All net Modules success!!
+ [0m
+make[1]: Leaving directory '/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/net'
+
+-e [36;1mIn subdir p2p_rc ... [0m
+make[1]: Entering directory '/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/p2p_rc'
+make ARCH=arm64 CROSS_COMPILE= KCFLAGS="-DIS_THIRD_PARTY_PLATFORM" -C /home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx M=/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/p2p_rc  modules
+make[2]: Entering directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+warning: the compiler differs from the one used to build the kernel
+  The kernel was built by: aarch64-linux-gnu-gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0
+  You are using:           gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0
+  CC [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/p2p_rc/ax_pcie_p2p.o
+  CC [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/p2p_rc/version.o
+  LD [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/p2p_rc/ax_pcie_p2p_rc.o
+  MODPOST /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/p2p_rc/Module.symvers
+  CC [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/p2p_rc/ax_pcie_p2p_rc.mod.o
+  LD [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/p2p_rc/ax_pcie_p2p_rc.ko
+  BTF [M] /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/p2p_rc/ax_pcie_p2p_rc.ko
+Skipping BTF generation for /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/p2p_rc/ax_pcie_p2p_rc.ko due to unavailability of vmlinux
+make[2]: Leaving directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+make -C /home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx M=/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/p2p_rc clean
+make[2]: Entering directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+  CLEAN   /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/p2p_rc/Module.symvers
+make[2]: Leaving directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+make[1]: Leaving directory '/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/p2p_rc'
+
+-e [36;1mIn subdir vtty ... [0m
+make[1]: Entering directory '/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/vtty'
+make ARCH=arm64 CROSS_COMPILE= KCFLAGS="-DIS_THIRD_PARTY_PLATFORM" -C /home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx M=/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/vtty  modules
+make[2]: Entering directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+warning: the compiler differs from the one used to build the kernel
+  The kernel was built by: aarch64-linux-gnu-gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0
+  You are using:           gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0
+  CC [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/vtty/virt_tty.o
+  CC [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/vtty/version.o
+  LD [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/vtty/vtty.o
+  MODPOST /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/vtty/Module.symvers
+  CC [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/vtty/vtty.mod.o
+  LD [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/vtty/vtty.ko
+  BTF [M] /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/vtty/vtty.ko
+Skipping BTF generation for /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/vtty/vtty.ko due to unavailability of vmlinux
+make[2]: Leaving directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+make -C /home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx M=/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/vtty clean
+make[2]: Entering directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+  CLEAN   /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/vtty/Module.symvers
+make[2]: Leaving directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+make[1]: Leaving directory '/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/vtty'
+-e [32;1m
+Build All driver Modules success!!
+ [0m
+
+-e [36;1mIn subdir host_dev... [0m
+make[1]: Entering directory '/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/host_dev'
+make ARCH=arm64 CROSS_COMPILE= KCFLAGS="-DIS_THIRD_PARTY_PLATFORM" -C /home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx M=/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/host_dev  modules
+make[2]: Entering directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+warning: the compiler differs from the one used to build the kernel
+  The kernel was built by: aarch64-linux-gnu-gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0
+  You are using:           gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0
+  CC [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/host_dev/ax_pcie_dev_host.o
+  CC [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/host_dev/ax_pcie_opt.o
+  CC [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/host_dev/ax_pcie_proc.o
+  CC [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/host_dev/ax_pcie_msg_transfer.o
+  CC [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/host_dev/version.o
+  LD [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/host_dev/ax_pcie_host_dev.o
+  MODPOST /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/host_dev/Module.symvers
+  CC [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/host_dev/ax_pcie_host_dev.mod.o
+  LD [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/host_dev/ax_pcie_host_dev.ko
+  BTF [M] /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/host_dev/ax_pcie_host_dev.ko
+Skipping BTF generation for /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/host_dev/ax_pcie_host_dev.ko due to unavailability of vmlinux
+make[2]: Leaving directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+make -C /home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx M=/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/host_dev clean
+make[2]: Entering directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+  CLEAN   /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/host_dev/Module.symvers
+make[2]: Leaving directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+strip --strip-debug /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/build/out/axcl_linux_arm64/objs/drv/pcie/driver/host_dev/ax_pcie_host_dev.ko
+-e [36;1m INSTALL  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/build/out/axcl_linux_arm64/objs/drv/pcie/driver/host_dev/ax_pcie_host_dev.ko to /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/out/axcl_linux_arm64/ko [0m
+make[1]: Leaving directory '/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/host_dev'
+
+-e [36;1mIn subdir msg... [0m
+make[1]: Entering directory '/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/msg'
+make ARCH=arm64 CROSS_COMPILE= KCFLAGS="-DIS_THIRD_PARTY_PLATFORM" -C /home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx M=/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/msg  modules
+make[2]: Entering directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+warning: the compiler differs from the one used to build the kernel
+  The kernel was built by: aarch64-linux-gnu-gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0
+  You are using:           gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0
+  CC [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/msg/ax_pcie_msg_usrdev.o
+  CC [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/msg/version.o
+  LD [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/msg/ax_pcie_msg.o
+  MODPOST /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/msg/Module.symvers
+  CC [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/msg/ax_pcie_msg.mod.o
+  LD [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/msg/ax_pcie_msg.ko
+  BTF [M] /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/msg/ax_pcie_msg.ko
+Skipping BTF generation for /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/msg/ax_pcie_msg.ko due to unavailability of vmlinux
+make[2]: Leaving directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+make -C /home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx M=/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/msg clean
+make[2]: Entering directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+  CLEAN   /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/msg/Module.symvers
+make[2]: Leaving directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+strip --strip-debug /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/build/out/axcl_linux_arm64/objs/drv/pcie/driver/msg/ax_pcie_msg.ko
+-e [36;1m INSTALL  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/build/out/axcl_linux_arm64/objs/drv/pcie/driver/msg/ax_pcie_msg.ko to /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/out/axcl_linux_arm64/ko [0m
+make[1]: Leaving directory '/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/msg'
+
+-e [36;1mIn subdir mmb... [0m
+make[1]: Entering directory '/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/mmb'
+make ARCH=arm64 CROSS_COMPILE= KCFLAGS="-DIS_THIRD_PARTY_PLATFORM" -C /home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx M=/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/mmb  modules
+make[2]: Entering directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+warning: the compiler differs from the one used to build the kernel
+  The kernel was built by: aarch64-linux-gnu-gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0
+  You are using:           gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0
+  CC [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/mmb/ax_mmb.o
+  AS [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/mmb/ax_mmb_cache.o
+  CC [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/mmb/version.o
+  LD [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/mmb/ax_pcie_mmb.o
+  MODPOST /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/mmb/Module.symvers
+  CC [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/mmb/ax_pcie_mmb.mod.o
+  LD [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/mmb/ax_pcie_mmb.ko
+  BTF [M] /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/mmb/ax_pcie_mmb.ko
+Skipping BTF generation for /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/mmb/ax_pcie_mmb.ko due to unavailability of vmlinux
+make[2]: Leaving directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+make -C /home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx M=/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/mmb clean
+make[2]: Entering directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+  CLEAN   /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/mmb/Module.symvers
+make[2]: Leaving directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+strip --strip-debug /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/build/out/axcl_linux_arm64/objs/drv/pcie/driver/mmb/ax_pcie_mmb.ko
+-e [36;1m INSTALL  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/build/out/axcl_linux_arm64/objs/drv/pcie/driver/mmb/ax_pcie_mmb.ko to /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/out/axcl_linux_arm64/ko [0m
+make[1]: Leaving directory '/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/mmb'
+
+-e [36;1mIn subdir axcl_host... [0m
+make[1]: Entering directory '/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/axcl_host'
+make ARCH=arm64 CROSS_COMPILE= KCFLAGS="-DIS_THIRD_PARTY_PLATFORM" -C /home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx M=/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/axcl_host  modules
+make[2]: Entering directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+warning: the compiler differs from the one used to build the kernel
+  The kernel was built by: aarch64-linux-gnu-gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0
+  You are using:           gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0
+  CC [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/axcl_host/axcl_pcie_host.o
+  CC [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/axcl_host/version.o
+  LD [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/axcl_host/axcl_host.o
+  MODPOST /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/axcl_host/Module.symvers
+  CC [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/axcl_host/axcl_host.mod.o
+  LD [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/axcl_host/axcl_host.ko
+  BTF [M] /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/axcl_host/axcl_host.ko
+Skipping BTF generation for /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/axcl_host/axcl_host.ko due to unavailability of vmlinux
+make[2]: Leaving directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+make -C /home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx M=/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/axcl_host clean
+make[2]: Entering directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+  CLEAN   /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/axcl_host/Module.symvers
+make[2]: Leaving directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+strip --strip-debug /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/build/out/axcl_linux_arm64/objs/drv/pcie/driver/axcl_host/axcl_host.ko
+-e [36;1m INSTALL  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/build/out/axcl_linux_arm64/objs/drv/pcie/driver/axcl_host/axcl_host.ko to /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/out/axcl_linux_arm64/ko [0m
+make[1]: Leaving directory '/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/axcl_host'
+
+-e [36;1mIn subdir net... [0m
+make[1]: Entering directory '/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/net'
+
+-e [36;1mIn subdir rc-net... [0m
+make[2]: Entering directory '/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/net/rc-net'
+make ARCH=arm64 CROSS_COMPILE= KCFLAGS="-DDEBUG -DIS_THIRD_PARTY_PLATFORM" -C /home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx M=/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/net/rc-net  modules
+make[3]: Entering directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+warning: the compiler differs from the one used to build the kernel
+  The kernel was built by: aarch64-linux-gnu-gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0
+  You are using:           gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0
+  CC [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/net/rc-net/ax_pcie_net.o
+In file included from /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/net/rc-net/ax_pcie_net.c:7:
+/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/net/rc-net/../../include/ax_pcie_net.h:17:9: note: ‘#pragma message: build for x86 platform’
+   17 | #pragma message("build for x86 platform")
+      |         ^~~~~~~
+  LD [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/net/rc-net/ax_pcie_net_host.o
+  MODPOST /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/net/rc-net/Module.symvers
+  CC [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/net/rc-net/ax_pcie_net_host.mod.o
+  LD [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/net/rc-net/ax_pcie_net_host.ko
+  BTF [M] /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/net/rc-net/ax_pcie_net_host.ko
+Skipping BTF generation for /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/net/rc-net/ax_pcie_net_host.ko due to unavailability of vmlinux
+make[3]: Leaving directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+make -C /home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx M=/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/net/rc-net clean
+make[3]: Entering directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+  CLEAN   /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/net/rc-net/Module.symvers
+make[3]: Leaving directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+strip --strip-debug /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/build/out/axcl_linux_arm64/objs/drv/pcie/driver/net/rc-net/ax_pcie_net_host.ko
+-e [36;1m INSTALL  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/build/out/axcl_linux_arm64/objs/drv/pcie/driver/net/rc-net/ax_pcie_net_host.ko to /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/out/axcl_linux_arm64/ko [0m
+make[2]: Leaving directory '/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/net/rc-net'
+-e [32;1m
+Install net success!!
+ [0m
+make[1]: Leaving directory '/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/net'
+
+-e [36;1mIn subdir p2p_rc... [0m
+make[1]: Entering directory '/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/p2p_rc'
+make ARCH=arm64 CROSS_COMPILE= KCFLAGS="-DIS_THIRD_PARTY_PLATFORM" -C /home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx M=/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/p2p_rc  modules
+make[2]: Entering directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+warning: the compiler differs from the one used to build the kernel
+  The kernel was built by: aarch64-linux-gnu-gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0
+  You are using:           gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0
+  CC [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/p2p_rc/ax_pcie_p2p.o
+  CC [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/p2p_rc/version.o
+  LD [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/p2p_rc/ax_pcie_p2p_rc.o
+  MODPOST /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/p2p_rc/Module.symvers
+  CC [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/p2p_rc/ax_pcie_p2p_rc.mod.o
+  LD [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/p2p_rc/ax_pcie_p2p_rc.ko
+  BTF [M] /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/p2p_rc/ax_pcie_p2p_rc.ko
+Skipping BTF generation for /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/p2p_rc/ax_pcie_p2p_rc.ko due to unavailability of vmlinux
+make[2]: Leaving directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+make -C /home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx M=/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/p2p_rc clean
+make[2]: Entering directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+  CLEAN   /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/p2p_rc/Module.symvers
+make[2]: Leaving directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+strip --strip-debug /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/build/out/axcl_linux_arm64/objs/drv/pcie/driver/p2p_rc/ax_pcie_p2p_rc.ko
+-e [36;1m INSTALL  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/build/out/axcl_linux_arm64/objs/drv/pcie/driver/p2p_rc/ax_pcie_p2p_rc.ko to /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/out/axcl_linux_arm64/ko [0m
+make[1]: Leaving directory '/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/p2p_rc'
+
+-e [36;1mIn subdir vtty... [0m
+make[1]: Entering directory '/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/vtty'
+make ARCH=arm64 CROSS_COMPILE= KCFLAGS="-DIS_THIRD_PARTY_PLATFORM" -C /home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx M=/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/vtty  modules
+make[2]: Entering directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+warning: the compiler differs from the one used to build the kernel
+  The kernel was built by: aarch64-linux-gnu-gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0
+  You are using:           gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0
+  CC [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/vtty/virt_tty.o
+  CC [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/vtty/version.o
+  LD [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/vtty/vtty.o
+  MODPOST /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/vtty/Module.symvers
+  CC [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/vtty/vtty.mod.o
+  LD [M]  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/vtty/vtty.ko
+  BTF [M] /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/vtty/vtty.ko
+Skipping BTF generation for /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/vtty/vtty.ko due to unavailability of vmlinux
+make[2]: Leaving directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+make -C /home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx M=/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/vtty clean
+make[2]: Entering directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+  CLEAN   /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/vtty/Module.symvers
+make[2]: Leaving directory '/home/baiwen/axcl-headers-build-20260916/verify-unpacked/usr/src/linux-headers-6.1.115-vendor-rk35xx'
+strip --strip-debug /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/build/out/axcl_linux_arm64/objs/drv/pcie/driver/vtty/vtty.ko
+-e [36;1m INSTALL  /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/build/out/axcl_linux_arm64/objs/drv/pcie/driver/vtty/vtty.ko to /home/baiwen/axcl-headers-build-20260916/verify-axcl-source/out/axcl_linux_arm64/ko [0m
+make[1]: Leaving directory '/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver/vtty'
+-e [32;1m
+Install driver success!!
+ [0m
+make: Leaving directory '/home/baiwen/axcl-headers-build-20260916/verify-axcl-source/drv/pcie/driver'

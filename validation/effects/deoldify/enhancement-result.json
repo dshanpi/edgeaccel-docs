@@ -1,0 +1,126 @@
+{
+  "modelId": "DeOldify",
+  "revision": "9f8a5b53053a224ad6da0974b069c72b87a26837",
+  "variants": [
+    {
+      "name": "deoldify-stable",
+      "label": "Stable",
+      "observation": "输入为黑白老照片；下方展示 Stable 权重的实际上色结果。",
+      "input": {
+        "file": "image/1850Geography.jpg",
+        "sha256": "7e6a52eeb7631d400f6f40fc418eea94c72a4b28ced0c629b834de172980a87c"
+      },
+      "weights": [
+        "model/colorize_stable.axmodel"
+      ],
+      "sessions": [
+        {
+          "weight": "model/colorize_stable.axmodel",
+          "sha256": "dac44c3a7a7390bbe9fc379f4b5f020bfa77c4c8de5a71748fd37080a0f3cd45",
+          "loadSeconds": 5.03689292099989,
+          "inputs": [
+            {
+              "name": "input",
+              "shape": [
+                1,
+                3,
+                512,
+                512
+              ],
+              "dtype": "float32"
+            }
+          ],
+          "calls": [
+            {
+              "seconds": 0.41997992799952044,
+              "outputs": [
+                {
+                  "shape": [
+                    1,
+                    3,
+                    512,
+                    512
+                  ],
+                  "dtype": "float32",
+                  "min": -1.8552871942520142,
+                  "max": 2.396775007247925
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "seconds": 5.697679089000303,
+      "previews": [
+        {
+          "caption": "原始输入",
+          "path": "/validation/effects/deoldify/inputs/deoldify-stable.jpg"
+        },
+        {
+          "caption": "本次运行输出",
+          "path": "/validation/effects/deoldify/outputs/deoldify-stable.jpg"
+        }
+      ]
+    },
+    {
+      "name": "deoldify-artistic",
+      "label": "Artistic",
+      "observation": "使用同一输入；下方展示 Artistic 权重的实际上色结果。",
+      "input": {
+        "file": "image/1850Geography.jpg",
+        "sha256": "7e6a52eeb7631d400f6f40fc418eea94c72a4b28ced0c629b834de172980a87c"
+      },
+      "weights": [
+        "model/colorize_artistic.axmodel"
+      ],
+      "sessions": [
+        {
+          "weight": "model/colorize_artistic.axmodel",
+          "sha256": "f276e8e6666c323e1405211926fcd3d8552dbcfb730ede5c7893ea5dd81d7921",
+          "loadSeconds": 2.160351275000721,
+          "inputs": [
+            {
+              "name": "input",
+              "shape": [
+                1,
+                3,
+                512,
+                512
+              ],
+              "dtype": "float32"
+            }
+          ],
+          "calls": [
+            {
+              "seconds": 0.5353285960009089,
+              "outputs": [
+                {
+                  "shape": [
+                    1,
+                    3,
+                    512,
+                    512
+                  ],
+                  "dtype": "float32",
+                  "min": -1.9211254119873047,
+                  "max": 2.637237071990967
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "seconds": 2.9514956140010327,
+      "previews": [
+        {
+          "caption": "原始输入",
+          "path": "/validation/effects/deoldify/inputs/deoldify-artistic.jpg"
+        },
+        {
+          "caption": "本次运行输出",
+          "path": "/validation/effects/deoldify/outputs/deoldify-artistic.jpg"
+        }
+      ]
+    }
+  ]
+}

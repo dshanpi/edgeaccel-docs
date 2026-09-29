@@ -1,0 +1,225 @@
+{
+  "modelId": "RAFT-stereo",
+  "repo": "AXERA-TECH/RAFT-stereo",
+  "revision": "58fd067370fb50d3a3997978886403555ec342b6",
+  "complete": true,
+  "files": [
+    {
+      "path": "README.md",
+      "size": 4615,
+      "url": "https://huggingface.co/AXERA-TECH/RAFT-stereo/resolve/58fd067370fb50d3a3997978886403555ec342b6/README.md",
+      "verifiedHashes": {
+        "sha256": "5eb1040b9275d48260f08bcb664c194f6155b4d60077a9996f85da7f8b744fc6",
+        "gitBlob": "d6b6f291186d0e05a53d39d43a440590829a2f98"
+      }
+    },
+    {
+      "path": "infer.py",
+      "size": 3586,
+      "url": "https://huggingface.co/AXERA-TECH/RAFT-stereo/resolve/58fd067370fb50d3a3997978886403555ec342b6/infer.py",
+      "verifiedHashes": {
+        "sha256": "d7cf9094b0ae6f5943db7803f1b1f9aad8987edeb878eb5d2597eb3b92095e62",
+        "gitBlob": "f75f1e2b23022042b23fe9a7e2aad88a5604a275"
+      }
+    },
+    {
+      "path": "ax650/raft_steoro256x640_r1.axmodel",
+      "size": 26345905,
+      "url": "https://huggingface.co/AXERA-TECH/RAFT-stereo/resolve/58fd067370fb50d3a3997978886403555ec342b6/ax650/raft_steoro256x640_r1.axmodel",
+      "verifiedHashes": {
+        "sha256": "7091e480a707646708e4ae6442cb4bb73b45f0d37da1e4c7a4e94e99b08e0712",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "ax650/raft_steoro384x1280_r4.axmodel",
+      "size": 30606178,
+      "url": "https://huggingface.co/AXERA-TECH/RAFT-stereo/resolve/58fd067370fb50d3a3997978886403555ec342b6/ax650/raft_steoro384x1280_r4.axmodel",
+      "verifiedHashes": {
+        "sha256": "b76ec44342c8f9bd95c0cd25ec08e909a257224a14168741ecad5c64c0a3beb9",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "examples/left/000051_11.png",
+      "size": 678114,
+      "url": "https://huggingface.co/AXERA-TECH/RAFT-stereo/resolve/58fd067370fb50d3a3997978886403555ec342b6/examples/left/000051_11.png",
+      "verifiedHashes": {
+        "sha256": "a3fadbe9eb43916cd9f43b40894206c98d298931fe79561c73212ad5ff6ffd95",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "examples/left/000058_11.png",
+      "size": 718872,
+      "url": "https://huggingface.co/AXERA-TECH/RAFT-stereo/resolve/58fd067370fb50d3a3997978886403555ec342b6/examples/left/000058_11.png",
+      "verifiedHashes": {
+        "sha256": "a90e11e35d305219d7e6a8bad472bbb902cd168cb06207ad2c5971b69417c660",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "examples/left/000059_10.png",
+      "size": 713913,
+      "url": "https://huggingface.co/AXERA-TECH/RAFT-stereo/resolve/58fd067370fb50d3a3997978886403555ec342b6/examples/left/000059_10.png",
+      "verifiedHashes": {
+        "sha256": "d5e645a4542729162ba44d06dbf58f47de0e8929e56d3ee60dbdb345c5f15ea4",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "examples/left/000121_10.png",
+      "size": 811233,
+      "url": "https://huggingface.co/AXERA-TECH/RAFT-stereo/resolve/58fd067370fb50d3a3997978886403555ec342b6/examples/left/000121_10.png",
+      "verifiedHashes": {
+        "sha256": "4623fdf11840631cb747b19d8ede22c57d6a6a2c0c5af96b48ff2c2b4a3b32f4",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "examples/left/000164_10.png",
+      "size": 923092,
+      "url": "https://huggingface.co/AXERA-TECH/RAFT-stereo/resolve/58fd067370fb50d3a3997978886403555ec342b6/examples/left/000164_10.png",
+      "verifiedHashes": {
+        "sha256": "1dd06ba7d9060683dc13e484b66cfdd5ccd43fc110b58e07f5f59620fe40ef74",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "examples/left/000167_11.png",
+      "size": 810357,
+      "url": "https://huggingface.co/AXERA-TECH/RAFT-stereo/resolve/58fd067370fb50d3a3997978886403555ec342b6/examples/left/000167_11.png",
+      "verifiedHashes": {
+        "sha256": "631a73b02f982616f623a4618719f7d457f0393b8a1d64772488ae7174ae6962",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "examples/left/000172_11.png",
+      "size": 804954,
+      "url": "https://huggingface.co/AXERA-TECH/RAFT-stereo/resolve/58fd067370fb50d3a3997978886403555ec342b6/examples/left/000172_11.png",
+      "verifiedHashes": {
+        "sha256": "4f7d0c415c3cb39789b8072a306786cf8a4c6bb0302a69acecf09a4231af579d",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "examples/left/000179_10.png",
+      "size": 780710,
+      "url": "https://huggingface.co/AXERA-TECH/RAFT-stereo/resolve/58fd067370fb50d3a3997978886403555ec342b6/examples/left/000179_10.png",
+      "verifiedHashes": {
+        "sha256": "d8563f85ba88df980e2d0b49c79fe2fb93412f3181e962f009f9d8757b50a2ac",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "examples/left/000193_10.png",
+      "size": 886578,
+      "url": "https://huggingface.co/AXERA-TECH/RAFT-stereo/resolve/58fd067370fb50d3a3997978886403555ec342b6/examples/left/000193_10.png",
+      "verifiedHashes": {
+        "sha256": "abbd3e3d9bc80ec3b270e558997cc13699d6ba9b7160eff407111467452d5f7c",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "examples/left/000195_10.png",
+      "size": 781261,
+      "url": "https://huggingface.co/AXERA-TECH/RAFT-stereo/resolve/58fd067370fb50d3a3997978886403555ec342b6/examples/left/000195_10.png",
+      "verifiedHashes": {
+        "sha256": "6a1d49cfb62d846636e86915ce5303370f23e25fd2c8cc4a00cfad251c532400",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "examples/right/000051_11.png",
+      "size": 639044,
+      "url": "https://huggingface.co/AXERA-TECH/RAFT-stereo/resolve/58fd067370fb50d3a3997978886403555ec342b6/examples/right/000051_11.png",
+      "verifiedHashes": {
+        "sha256": "40db8c6219db3ed3de25493bd3010393618e86a4ca3a2b1e6e730ffd1b4ea958",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "examples/right/000058_11.png",
+      "size": 672272,
+      "url": "https://huggingface.co/AXERA-TECH/RAFT-stereo/resolve/58fd067370fb50d3a3997978886403555ec342b6/examples/right/000058_11.png",
+      "verifiedHashes": {
+        "sha256": "9ce95ca97187787ae175cdafd7b6f23f87efb16e7633dfb7508c45476bed7645",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "examples/right/000059_10.png",
+      "size": 676101,
+      "url": "https://huggingface.co/AXERA-TECH/RAFT-stereo/resolve/58fd067370fb50d3a3997978886403555ec342b6/examples/right/000059_10.png",
+      "verifiedHashes": {
+        "sha256": "84ce8c7d2c0898015605c20429e78c6a2f48fcd4ca095cbba04d720335777cc0",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "examples/right/000121_10.png",
+      "size": 777131,
+      "url": "https://huggingface.co/AXERA-TECH/RAFT-stereo/resolve/58fd067370fb50d3a3997978886403555ec342b6/examples/right/000121_10.png",
+      "verifiedHashes": {
+        "sha256": "53d935a5954600331d14b72407813d121ce6a48d7082248a79c1d2825fdd0937",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "examples/right/000164_10.png",
+      "size": 912120,
+      "url": "https://huggingface.co/AXERA-TECH/RAFT-stereo/resolve/58fd067370fb50d3a3997978886403555ec342b6/examples/right/000164_10.png",
+      "verifiedHashes": {
+        "sha256": "6d7e7b6af427bc92ee51ad877ff0c22f23159556144078a542ad7feaa5fe0611",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "examples/right/000167_11.png",
+      "size": 795247,
+      "url": "https://huggingface.co/AXERA-TECH/RAFT-stereo/resolve/58fd067370fb50d3a3997978886403555ec342b6/examples/right/000167_11.png",
+      "verifiedHashes": {
+        "sha256": "d66001ea49bb59d44eaebb0704963deedd2a1d356fe9a7707c304e1716aacc9c",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "examples/right/000172_11.png",
+      "size": 764282,
+      "url": "https://huggingface.co/AXERA-TECH/RAFT-stereo/resolve/58fd067370fb50d3a3997978886403555ec342b6/examples/right/000172_11.png",
+      "verifiedHashes": {
+        "sha256": "7ebfc5d44f4107f8f65a9abfe03afe834d4bc80ce0bf6caa5b233f02fb9df52a",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "examples/right/000179_10.png",
+      "size": 768957,
+      "url": "https://huggingface.co/AXERA-TECH/RAFT-stereo/resolve/58fd067370fb50d3a3997978886403555ec342b6/examples/right/000179_10.png",
+      "verifiedHashes": {
+        "sha256": "a1fe0da8bb737b6b67ab29db98d1ee55cc3e7029c876c4d61458276b8bd51b7e",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "examples/right/000193_10.png",
+      "size": 844262,
+      "url": "https://huggingface.co/AXERA-TECH/RAFT-stereo/resolve/58fd067370fb50d3a3997978886403555ec342b6/examples/right/000193_10.png",
+      "verifiedHashes": {
+        "sha256": "b2f6d86dfe94a0c36c57fd0a57c593eaa221b7497c88391926375a0a54c3ceb6",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "examples/right/000195_10.png",
+      "size": 750486,
+      "url": "https://huggingface.co/AXERA-TECH/RAFT-stereo/resolve/58fd067370fb50d3a3997978886403555ec342b6/examples/right/000195_10.png",
+      "verifiedHashes": {
+        "sha256": "c31fc19beb7fac051ac71a7dbe73190ac945f8829b975c3bf9f080ff7c57c97f",
+        "gitBlob": null
+      }
+    }
+  ],
+  "runnerSha256": "76f92f9346a89a0652e0fcf8c201561802cf0cc436750c86bca8292f374c49a8"
+}

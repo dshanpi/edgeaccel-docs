@@ -1,0 +1,120 @@
+{
+  "kind": "classification",
+  "modelId": "resnet50",
+  "revision": "e36200659c15f6c22adb5f1d1720c73459c58e20",
+  "inputSha256": "33b198a1d2839bb9ac4c65d61f9e852196793cae9a0781360859425f6022b69c",
+  "labelSource": "https://raw.githubusercontent.com/pytorch/vision/v0.23.0/torchvision/models/_meta.py",
+  "labelSourceSha256": "7eaa5e401b1ff441186e602943c4342cac8cf7f505c238ab7882399b00dbc096",
+  "variants": [
+    {
+      "name": "官方 SDK 前处理",
+      "samples": [
+        {
+          "top5": [
+            {
+              "class_id": 654,
+              "label": "class_654",
+              "confidence": 0.7183761596679688,
+              "imagenetLabel": "minibus"
+            },
+            {
+              "class_id": 734,
+              "label": "class_734",
+              "confidence": 0.037748321890830994,
+              "imagenetLabel": "police van"
+            },
+            {
+              "class_id": 829,
+              "label": "class_829",
+              "confidence": 0.01912665367126465,
+              "imagenetLabel": "streetcar"
+            },
+            {
+              "class_id": 874,
+              "label": "class_874",
+              "confidence": 0.015955237671732903,
+              "imagenetLabel": "trolleybus"
+            },
+            {
+              "class_id": 779,
+              "label": "class_779",
+              "confidence": 0.011617589741945267,
+              "imagenetLabel": "school bus"
+            }
+          ],
+          "seconds": 0.10706256099911116
+        },
+        {
+          "top5": [
+            {
+              "class_id": 654,
+              "label": "class_654",
+              "confidence": 0.7183761596679688,
+              "imagenetLabel": "minibus"
+            },
+            {
+              "class_id": 734,
+              "label": "class_734",
+              "confidence": 0.037748321890830994,
+              "imagenetLabel": "police van"
+            },
+            {
+              "class_id": 829,
+              "label": "class_829",
+              "confidence": 0.01912665367126465,
+              "imagenetLabel": "streetcar"
+            },
+            {
+              "class_id": 874,
+              "label": "class_874",
+              "confidence": 0.015955237671732903,
+              "imagenetLabel": "trolleybus"
+            },
+            {
+              "class_id": 779,
+              "label": "class_779",
+              "confidence": 0.011617589741945267,
+              "imagenetLabel": "school bus"
+            }
+          ],
+          "seconds": 0.06087706399921444
+        },
+        {
+          "top5": [
+            {
+              "class_id": 654,
+              "label": "class_654",
+              "confidence": 0.7183761596679688,
+              "imagenetLabel": "minibus"
+            },
+            {
+              "class_id": 734,
+              "label": "class_734",
+              "confidence": 0.037748321890830994,
+              "imagenetLabel": "police van"
+            },
+            {
+              "class_id": 829,
+              "label": "class_829",
+              "confidence": 0.01912665367126465,
+              "imagenetLabel": "streetcar"
+            },
+            {
+              "class_id": 874,
+              "label": "class_874",
+              "confidence": 0.015955237671732903,
+              "imagenetLabel": "trolleybus"
+            },
+            {
+              "class_id": 779,
+              "label": "class_779",
+              "confidence": 0.011617589741945267,
+              "imagenetLabel": "school bus"
+            }
+          ],
+          "seconds": 0.060231313000258524
+        }
+      ]
+    }
+  ]
+}

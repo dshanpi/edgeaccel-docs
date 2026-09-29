@@ -1,0 +1,29 @@
+{
+  "analysisLocation": "documentation host; WAV metadata extracted from unchanged board outputs",
+  "samples": [
+    {
+      "file": "sample-1.wav",
+      "text": "你好，欢迎使用算力卡。",
+      "sampleRate": 44100,
+      "channels": 1,
+      "seconds": 2.4541496598639454,
+      "sha256": "d477a421245eed58300626e3c8663be1d3c738810179c28d33ccc8200e3914d1"
+    },
+    {
+      "file": "sample-2.wav",
+      "text": "模型已经加载完成，可以开始推理。",
+      "sampleRate": 44100,
+      "channels": 1,
+      "seconds": 3.5570975056689345,
+      "sha256": "68f1e8e34e427616750f768e2a26c8db20e0e76f95ff8e2fc9b9cdba92f0c013"
+    },
+    {
+      "file": "sample-3.wav",
+      "text": "请检查电源连接，然后启动程序。",
+      "sampleRate": 44100,
+      "channels": 1,
+      "seconds": 3.7196371882086168,
+      "sha256": "806be3f23d12f350c9c232ee27029a5af2a37c2ffaf51f4f0c81f8c9f9fa4ec4"
+    }
+  ]
+}

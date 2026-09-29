@@ -1,0 +1,459 @@
+{
+  "modelId": "bevformer",
+  "repo": "AXERA-TECH/bevformer",
+  "revision": "b5f3bf44f7430371c77d7719edd6569fd772ad77",
+  "complete": true,
+  "files": [
+    {
+      "path": "README.md",
+      "size": 5696,
+      "url": "https://huggingface.co/AXERA-TECH/bevformer/resolve/b5f3bf44f7430371c77d7719edd6569fd772ad77/README.md",
+      "verifiedHashes": {
+        "sha256": "98b3f6c11dc30969fac13fc42f00f7f9a9bdc9d5afc3aa401fe473e822fd88dc",
+        "gitBlob": "5a4d9c1d7a3ed73d4efdd464c1e68ad707c004ca"
+      }
+    },
+    {
+      "path": "config.json",
+      "size": 2201,
+      "url": "https://huggingface.co/AXERA-TECH/bevformer/resolve/b5f3bf44f7430371c77d7719edd6569fd772ad77/config.json",
+      "verifiedHashes": {
+        "sha256": "a529c0bb56a5964ebfe912972d82ef07637137f34e6e94c5b3196d1384328f64",
+        "gitBlob": "f2a1354c725a607c4b951af5170ed5400625e589"
+      }
+    },
+    {
+      "path": "inference_config.json",
+      "size": 981,
+      "url": "https://huggingface.co/AXERA-TECH/bevformer/resolve/b5f3bf44f7430371c77d7719edd6569fd772ad77/inference_config.json",
+      "verifiedHashes": {
+        "sha256": "ec9f672a4f7706d0b7920b51921e0a8abfeb5ab3108056c482ab19c9d5194e17",
+        "gitBlob": "6bed9893753ecd33ab82cc2111fa69b965ae6e4d"
+      }
+    },
+    {
+      "path": "inference_axmodel.py",
+      "size": 37846,
+      "url": "https://huggingface.co/AXERA-TECH/bevformer/resolve/b5f3bf44f7430371c77d7719edd6569fd772ad77/inference_axmodel.py",
+      "verifiedHashes": {
+        "sha256": "679739141b7791236650fb82ea500e2355e2f7f056e49fbec7e4bd4f03ec2513",
+        "gitBlob": "295f10faf7b07d7ccca9224fa73087d022d8ed9b"
+      }
+    },
+    {
+      "path": "inference_onnx.py",
+      "size": 38377,
+      "url": "https://huggingface.co/AXERA-TECH/bevformer/resolve/b5f3bf44f7430371c77d7719edd6569fd772ad77/inference_onnx.py",
+      "verifiedHashes": {
+        "sha256": "f49d0ab32917c0c2e60f2327b9ac7abe3912a9afaaaa0a3d12ad41527873c2f5",
+        "gitBlob": "ada00e26bf8c2a21a7e08049b08581fd5ba7912c"
+      }
+    },
+    {
+      "path": "ax650/compiled.axmodel",
+      "size": 46054834,
+      "url": "https://huggingface.co/AXERA-TECH/bevformer/resolve/b5f3bf44f7430371c77d7719edd6569fd772ad77/ax650/compiled.axmodel",
+      "verifiedHashes": {
+        "sha256": "016ad80707774351cd083b0fce0da28f252db45a36e22a82d5515fb2af6d74be",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "bevformer_tiny_fixed.onnx",
+      "size": 142360501,
+      "url": "https://huggingface.co/AXERA-TECH/bevformer/resolve/b5f3bf44f7430371c77d7719edd6569fd772ad77/bevformer_tiny_fixed.onnx",
+      "verifiedHashes": {
+        "sha256": "5ccaba0ec4524622677943a4b787583dfe66469cda245f8b06d4e449220171b8",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "inference_data/scene_index.json",
+      "size": 1197,
+      "url": "https://huggingface.co/AXERA-TECH/bevformer/resolve/b5f3bf44f7430371c77d7719edd6569fd772ad77/inference_data/scene_index.json",
+      "verifiedHashes": {
+        "sha256": "a779bb0c9c22a19f285b7210fb23c83f2921f238aa0b85e2b63d350f629283e5",
+        "gitBlob": "85e1357877d4396be89e8532412c3e7c245db070"
+      }
+    },
+    {
+      "path": "inference_data/fcbccedd61424f1b85dcbf8f897f9754/meta_000000.json",
+      "size": 4140,
+      "url": "https://huggingface.co/AXERA-TECH/bevformer/resolve/b5f3bf44f7430371c77d7719edd6569fd772ad77/inference_data/fcbccedd61424f1b85dcbf8f897f9754/meta_000000.json",
+      "verifiedHashes": {
+        "sha256": "20227e170876959a938782b0a93ea6c62ea198a8e8b7d0c41b162ed907891993",
+        "gitBlob": "3992e56578efc4b11f788a2db4fc5f2906ad2dd0"
+      }
+    },
+    {
+      "path": "inference_data/fcbccedd61424f1b85dcbf8f897f9754/cam_00_000000.png",
+      "size": 1688711,
+      "url": "https://huggingface.co/AXERA-TECH/bevformer/resolve/b5f3bf44f7430371c77d7719edd6569fd772ad77/inference_data/fcbccedd61424f1b85dcbf8f897f9754/cam_00_000000.png",
+      "verifiedHashes": {
+        "sha256": "569b5d09dd3cd8cedec1b10d6acd52579a6764b59e3df6201a18546657ed9513",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "inference_data/fcbccedd61424f1b85dcbf8f897f9754/cam_01_000000.png",
+      "size": 1726015,
+      "url": "https://huggingface.co/AXERA-TECH/bevformer/resolve/b5f3bf44f7430371c77d7719edd6569fd772ad77/inference_data/fcbccedd61424f1b85dcbf8f897f9754/cam_01_000000.png",
+      "verifiedHashes": {
+        "sha256": "e44f522893439b58e0a8992bc0f3f0ec7c5d4e3052830bebd20c0d83ba3ca9c5",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "inference_data/fcbccedd61424f1b85dcbf8f897f9754/cam_02_000000.png",
+      "size": 1628486,
+      "url": "https://huggingface.co/AXERA-TECH/bevformer/resolve/b5f3bf44f7430371c77d7719edd6569fd772ad77/inference_data/fcbccedd61424f1b85dcbf8f897f9754/cam_02_000000.png",
+      "verifiedHashes": {
+        "sha256": "1dfbc6aa3e3cf3156a77523a0045f4761d2302f9f7cd1cc2e035bf27883cb44a",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "inference_data/fcbccedd61424f1b85dcbf8f897f9754/cam_03_000000.png",
+      "size": 1258868,
+      "url": "https://huggingface.co/AXERA-TECH/bevformer/resolve/b5f3bf44f7430371c77d7719edd6569fd772ad77/inference_data/fcbccedd61424f1b85dcbf8f897f9754/cam_03_000000.png",
+      "verifiedHashes": {
+        "sha256": "ca2d1f0ec4a64ec5e055ee77fdf3a4cbd902065ef5572f1ab1aa664ccd666af5",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "inference_data/fcbccedd61424f1b85dcbf8f897f9754/cam_04_000000.png",
+      "size": 1287865,
+      "url": "https://huggingface.co/AXERA-TECH/bevformer/resolve/b5f3bf44f7430371c77d7719edd6569fd772ad77/inference_data/fcbccedd61424f1b85dcbf8f897f9754/cam_04_000000.png",
+      "verifiedHashes": {
+        "sha256": "ca8173120893f1e6cf5fe617c0fcd502be88fa7c32637d32f09aa8443267b86d",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "inference_data/fcbccedd61424f1b85dcbf8f897f9754/cam_05_000000.png",
+      "size": 1401120,
+      "url": "https://huggingface.co/AXERA-TECH/bevformer/resolve/b5f3bf44f7430371c77d7719edd6569fd772ad77/inference_data/fcbccedd61424f1b85dcbf8f897f9754/cam_05_000000.png",
+      "verifiedHashes": {
+        "sha256": "294ad73e748801a3b4453e05c0697a93ac9be96b1438e018864fa4e3a53b62f6",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "inference_data/fcbccedd61424f1b85dcbf8f897f9754/meta_000001.json",
+      "size": 4135,
+      "url": "https://huggingface.co/AXERA-TECH/bevformer/resolve/b5f3bf44f7430371c77d7719edd6569fd772ad77/inference_data/fcbccedd61424f1b85dcbf8f897f9754/meta_000001.json",
+      "verifiedHashes": {
+        "sha256": "71b4fc3a6cc7b1bce2f47d31d8605808b612c4b9071400c112f363c7bc5a25a4",
+        "gitBlob": "b569f9a22eb6daa87175ca936cda85cc73ff8165"
+      }
+    },
+    {
+      "path": "inference_data/fcbccedd61424f1b85dcbf8f897f9754/cam_00_000001.png",
+      "size": 1732950,
+      "url": "https://huggingface.co/AXERA-TECH/bevformer/resolve/b5f3bf44f7430371c77d7719edd6569fd772ad77/inference_data/fcbccedd61424f1b85dcbf8f897f9754/cam_00_000001.png",
+      "verifiedHashes": {
+        "sha256": "fa9ae94d6ca7391197cbf3199ba0dade2282be3b223c3780af66f99dc45538d2",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "inference_data/fcbccedd61424f1b85dcbf8f897f9754/cam_01_000001.png",
+      "size": 1716805,
+      "url": "https://huggingface.co/AXERA-TECH/bevformer/resolve/b5f3bf44f7430371c77d7719edd6569fd772ad77/inference_data/fcbccedd61424f1b85dcbf8f897f9754/cam_01_000001.png",
+      "verifiedHashes": {
+        "sha256": "dfe3c4745cd8517c1fb4e4145772b4b66c44ddb349c0e6ec9d7c6cd2f3724de6",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "inference_data/fcbccedd61424f1b85dcbf8f897f9754/cam_02_000001.png",
+      "size": 1663770,
+      "url": "https://huggingface.co/AXERA-TECH/bevformer/resolve/b5f3bf44f7430371c77d7719edd6569fd772ad77/inference_data/fcbccedd61424f1b85dcbf8f897f9754/cam_02_000001.png",
+      "verifiedHashes": {
+        "sha256": "4cf7a2d11673c925e73b2fbe5f724c2bf8dadf9649616d3153b18d5c9c7e1284",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "inference_data/fcbccedd61424f1b85dcbf8f897f9754/cam_03_000001.png",
+      "size": 1261987,
+      "url": "https://huggingface.co/AXERA-TECH/bevformer/resolve/b5f3bf44f7430371c77d7719edd6569fd772ad77/inference_data/fcbccedd61424f1b85dcbf8f897f9754/cam_03_000001.png",
+      "verifiedHashes": {
+        "sha256": "f394deb9cd8fd261b7f92ff2a505999511ab47eec0f338d198bdea5803a28956",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "inference_data/fcbccedd61424f1b85dcbf8f897f9754/cam_04_000001.png",
+      "size": 1293683,
+      "url": "https://huggingface.co/AXERA-TECH/bevformer/resolve/b5f3bf44f7430371c77d7719edd6569fd772ad77/inference_data/fcbccedd61424f1b85dcbf8f897f9754/cam_04_000001.png",
+      "verifiedHashes": {
+        "sha256": "4df8192e3a3a5f568aec7cffcab957f3866dbf6fdfe99923c6cf69f6981188db",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "inference_data/fcbccedd61424f1b85dcbf8f897f9754/cam_05_000001.png",
+      "size": 1407569,
+      "url": "https://huggingface.co/AXERA-TECH/bevformer/resolve/b5f3bf44f7430371c77d7719edd6569fd772ad77/inference_data/fcbccedd61424f1b85dcbf8f897f9754/cam_05_000001.png",
+      "verifiedHashes": {
+        "sha256": "eaa48412881856c77d060874daa7d9812a10ad19b556cf972578f89253a5853e",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "inference_data/fcbccedd61424f1b85dcbf8f897f9754/meta_000002.json",
+      "size": 4138,
+      "url": "https://huggingface.co/AXERA-TECH/bevformer/resolve/b5f3bf44f7430371c77d7719edd6569fd772ad77/inference_data/fcbccedd61424f1b85dcbf8f897f9754/meta_000002.json",
+      "verifiedHashes": {
+        "sha256": "9c9901d2056606f40725ee75e6fd0d857afe0d8aeab312503167de70d482dd02",
+        "gitBlob": "3cba909a317354feab9623601361227498623a3f"
+      }
+    },
+    {
+      "path": "inference_data/fcbccedd61424f1b85dcbf8f897f9754/cam_00_000002.png",
+      "size": 1720989,
+      "url": "https://huggingface.co/AXERA-TECH/bevformer/resolve/b5f3bf44f7430371c77d7719edd6569fd772ad77/inference_data/fcbccedd61424f1b85dcbf8f897f9754/cam_00_000002.png",
+      "verifiedHashes": {
+        "sha256": "3fbb9fdd397f98973df0dca8fe2797be36a6a6369d6a2c7e4a57c25895ad6479",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "inference_data/fcbccedd61424f1b85dcbf8f897f9754/cam_01_000002.png",
+      "size": 1590305,
+      "url": "https://huggingface.co/AXERA-TECH/bevformer/resolve/b5f3bf44f7430371c77d7719edd6569fd772ad77/inference_data/fcbccedd61424f1b85dcbf8f897f9754/cam_01_000002.png",
+      "verifiedHashes": {
+        "sha256": "30c4d83fe555a1239d451f5cbfc31b1e9e79db8bdbb02466aab99c2f9984a734",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "inference_data/fcbccedd61424f1b85dcbf8f897f9754/cam_02_000002.png",
+      "size": 1668568,
+      "url": "https://huggingface.co/AXERA-TECH/bevformer/resolve/b5f3bf44f7430371c77d7719edd6569fd772ad77/inference_data/fcbccedd61424f1b85dcbf8f897f9754/cam_02_000002.png",
+      "verifiedHashes": {
+        "sha256": "21efd382e78fa75932d1cad944b5b83f2bd7595caf1df6ca43d3bede5725b975",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "inference_data/fcbccedd61424f1b85dcbf8f897f9754/cam_03_000002.png",
+      "size": 1279141,
+      "url": "https://huggingface.co/AXERA-TECH/bevformer/resolve/b5f3bf44f7430371c77d7719edd6569fd772ad77/inference_data/fcbccedd61424f1b85dcbf8f897f9754/cam_03_000002.png",
+      "verifiedHashes": {
+        "sha256": "df1b7bc5af292de37f1280413bdaf23f1f9e3776aa8068d0e47e0efdd5a16213",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "inference_data/fcbccedd61424f1b85dcbf8f897f9754/cam_04_000002.png",
+      "size": 1307653,
+      "url": "https://huggingface.co/AXERA-TECH/bevformer/resolve/b5f3bf44f7430371c77d7719edd6569fd772ad77/inference_data/fcbccedd61424f1b85dcbf8f897f9754/cam_04_000002.png",
+      "verifiedHashes": {
+        "sha256": "a39f3532ba26c8d4093dd5d609054bdc3c3305636fe7ca05713ce3656a444a24",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "inference_data/fcbccedd61424f1b85dcbf8f897f9754/cam_05_000002.png",
+      "size": 1484227,
+      "url": "https://huggingface.co/AXERA-TECH/bevformer/resolve/b5f3bf44f7430371c77d7719edd6569fd772ad77/inference_data/fcbccedd61424f1b85dcbf8f897f9754/cam_05_000002.png",
+      "verifiedHashes": {
+        "sha256": "d18b5fcccd25d877d86e6b6cff2d34894f3b08882852ee9c6eb7b001e666d8b8",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "inference_data/325cef682f064c55a255f2625c533b75/meta_000040.json",
+      "size": 4142,
+      "url": "https://huggingface.co/AXERA-TECH/bevformer/resolve/b5f3bf44f7430371c77d7719edd6569fd772ad77/inference_data/325cef682f064c55a255f2625c533b75/meta_000040.json",
+      "verifiedHashes": {
+        "sha256": "03ff70546ab207c4dd449b550ba8a8f19c93ccd13426e382618cbf4ceaa392ac",
+        "gitBlob": "75476d15fc721cb60bbea8c6bc28a042c31e12d6"
+      }
+    },
+    {
+      "path": "inference_data/325cef682f064c55a255f2625c533b75/cam_00_000040.png",
+      "size": 1337823,
+      "url": "https://huggingface.co/AXERA-TECH/bevformer/resolve/b5f3bf44f7430371c77d7719edd6569fd772ad77/inference_data/325cef682f064c55a255f2625c533b75/cam_00_000040.png",
+      "verifiedHashes": {
+        "sha256": "f7159e5b7aaea419bb0f7388aad92e8cc76956ddf286715b92912a77a2314646",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "inference_data/325cef682f064c55a255f2625c533b75/cam_01_000040.png",
+      "size": 1606770,
+      "url": "https://huggingface.co/AXERA-TECH/bevformer/resolve/b5f3bf44f7430371c77d7719edd6569fd772ad77/inference_data/325cef682f064c55a255f2625c533b75/cam_01_000040.png",
+      "verifiedHashes": {
+        "sha256": "1543ea5edc18f5f9124f55d398683a5da568aa849b6c9c7e3b5a7d5ae75c994b",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "inference_data/325cef682f064c55a255f2625c533b75/cam_02_000040.png",
+      "size": 1216147,
+      "url": "https://huggingface.co/AXERA-TECH/bevformer/resolve/b5f3bf44f7430371c77d7719edd6569fd772ad77/inference_data/325cef682f064c55a255f2625c533b75/cam_02_000040.png",
+      "verifiedHashes": {
+        "sha256": "9715d0eb3f8d58f44d09acc9216787f146177342c8abf5a006983344975c22a9",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "inference_data/325cef682f064c55a255f2625c533b75/cam_03_000040.png",
+      "size": 1589337,
+      "url": "https://huggingface.co/AXERA-TECH/bevformer/resolve/b5f3bf44f7430371c77d7719edd6569fd772ad77/inference_data/325cef682f064c55a255f2625c533b75/cam_03_000040.png",
+      "verifiedHashes": {
+        "sha256": "ef3e40c531d7ff2d725ed823e62ee791db54c6c3c5e5056c9e384d7f297d59c9",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "inference_data/325cef682f064c55a255f2625c533b75/cam_04_000040.png",
+      "size": 1386574,
+      "url": "https://huggingface.co/AXERA-TECH/bevformer/resolve/b5f3bf44f7430371c77d7719edd6569fd772ad77/inference_data/325cef682f064c55a255f2625c533b75/cam_04_000040.png",
+      "verifiedHashes": {
+        "sha256": "4cdce393c0283779fb25a241aa8368800ec7fbd88e79b4aa947fe8cc02e12401",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "inference_data/325cef682f064c55a255f2625c533b75/cam_05_000040.png",
+      "size": 1693249,
+      "url": "https://huggingface.co/AXERA-TECH/bevformer/resolve/b5f3bf44f7430371c77d7719edd6569fd772ad77/inference_data/325cef682f064c55a255f2625c533b75/cam_05_000040.png",
+      "verifiedHashes": {
+        "sha256": "1f4393e2fc7b714df3f4645afcdc7947a96608a251f707b97fc4f89f436dabfb",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "inference_data/325cef682f064c55a255f2625c533b75/meta_000041.json",
+      "size": 4147,
+      "url": "https://huggingface.co/AXERA-TECH/bevformer/resolve/b5f3bf44f7430371c77d7719edd6569fd772ad77/inference_data/325cef682f064c55a255f2625c533b75/meta_000041.json",
+      "verifiedHashes": {
+        "sha256": "a2623c7eeda8b458bb45668929a60bd2dd307be919a6b5f8ecb59429f798e06b",
+        "gitBlob": "d328373dde98d2d75a05497ff49ffc16b143043e"
+      }
+    },
+    {
+      "path": "inference_data/325cef682f064c55a255f2625c533b75/cam_00_000041.png",
+      "size": 1420184,
+      "url": "https://huggingface.co/AXERA-TECH/bevformer/resolve/b5f3bf44f7430371c77d7719edd6569fd772ad77/inference_data/325cef682f064c55a255f2625c533b75/cam_00_000041.png",
+      "verifiedHashes": {
+        "sha256": "796d504d0c36aa6502528b05aa048e38b9bf415d7dac2bc7783e51fcce963974",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "inference_data/325cef682f064c55a255f2625c533b75/cam_01_000041.png",
+      "size": 1588017,
+      "url": "https://huggingface.co/AXERA-TECH/bevformer/resolve/b5f3bf44f7430371c77d7719edd6569fd772ad77/inference_data/325cef682f064c55a255f2625c533b75/cam_01_000041.png",
+      "verifiedHashes": {
+        "sha256": "b309197d6e05f0ea3b34d9060e7d85778f711cbfa59a6c34ecb82fbccd55cc89",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "inference_data/325cef682f064c55a255f2625c533b75/cam_02_000041.png",
+      "size": 1163433,
+      "url": "https://huggingface.co/AXERA-TECH/bevformer/resolve/b5f3bf44f7430371c77d7719edd6569fd772ad77/inference_data/325cef682f064c55a255f2625c533b75/cam_02_000041.png",
+      "verifiedHashes": {
+        "sha256": "cd51e54635451cdb4ed5747fa35525723aec120a8d109fa1964fc3d27de9a886",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "inference_data/325cef682f064c55a255f2625c533b75/cam_03_000041.png",
+      "size": 1573920,
+      "url": "https://huggingface.co/AXERA-TECH/bevformer/resolve/b5f3bf44f7430371c77d7719edd6569fd772ad77/inference_data/325cef682f064c55a255f2625c533b75/cam_03_000041.png",
+      "verifiedHashes": {
+        "sha256": "87bbd2039d32d8955949690746fd653ce7203c21d540d7c699c35c041af7d947",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "inference_data/325cef682f064c55a255f2625c533b75/cam_04_000041.png",
+      "size": 1364275,
+      "url": "https://huggingface.co/AXERA-TECH/bevformer/resolve/b5f3bf44f7430371c77d7719edd6569fd772ad77/inference_data/325cef682f064c55a255f2625c533b75/cam_04_000041.png",
+      "verifiedHashes": {
+        "sha256": "4608f395431b556dd9288ef0dbf4d6a857e8c528dc43932a89ae656677c6f4f8",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "inference_data/325cef682f064c55a255f2625c533b75/cam_05_000041.png",
+      "size": 1665239,
+      "url": "https://huggingface.co/AXERA-TECH/bevformer/resolve/b5f3bf44f7430371c77d7719edd6569fd772ad77/inference_data/325cef682f064c55a255f2625c533b75/cam_05_000041.png",
+      "verifiedHashes": {
+        "sha256": "aa66b1115e0504a035360a59551433ea3478c448a20ac2f3f3c21791b3913abb",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "inference_data/325cef682f064c55a255f2625c533b75/meta_000042.json",
+      "size": 4138,
+      "url": "https://huggingface.co/AXERA-TECH/bevformer/resolve/b5f3bf44f7430371c77d7719edd6569fd772ad77/inference_data/325cef682f064c55a255f2625c533b75/meta_000042.json",
+      "verifiedHashes": {
+        "sha256": "4713ccc0e797f39056ca2aa7587d68b3a192cf89a7073cc42f100a4a736833c4",
+        "gitBlob": "6472f080cb3efb8c435dd688432084a5aa2c9cd5"
+      }
+    },
+    {
+      "path": "inference_data/325cef682f064c55a255f2625c533b75/cam_00_000042.png",
+      "size": 1459370,
+      "url": "https://huggingface.co/AXERA-TECH/bevformer/resolve/b5f3bf44f7430371c77d7719edd6569fd772ad77/inference_data/325cef682f064c55a255f2625c533b75/cam_00_000042.png",
+      "verifiedHashes": {
+        "sha256": "8339982885f5689e3d56e07f92581aba05f065e907c4af8a8ade0f8aacc7538c",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "inference_data/325cef682f064c55a255f2625c533b75/cam_01_000042.png",
+      "size": 1552999,
+      "url": "https://huggingface.co/AXERA-TECH/bevformer/resolve/b5f3bf44f7430371c77d7719edd6569fd772ad77/inference_data/325cef682f064c55a255f2625c533b75/cam_01_000042.png",
+      "verifiedHashes": {
+        "sha256": "f3ad0ea48f42a5ab40f5d8199699506f11c221f7efaab035d37bac0c65a7820f",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "inference_data/325cef682f064c55a255f2625c533b75/cam_02_000042.png",
+      "size": 1184153,
+      "url": "https://huggingface.co/AXERA-TECH/bevformer/resolve/b5f3bf44f7430371c77d7719edd6569fd772ad77/inference_data/325cef682f064c55a255f2625c533b75/cam_02_000042.png",
+      "verifiedHashes": {
+        "sha256": "0097a81c08fb5c7bde2fd2efa962f2e643fe107b03cb779288f71d7ac1edeada",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "inference_data/325cef682f064c55a255f2625c533b75/cam_03_000042.png",
+      "size": 1517524,
+      "url": "https://huggingface.co/AXERA-TECH/bevformer/resolve/b5f3bf44f7430371c77d7719edd6569fd772ad77/inference_data/325cef682f064c55a255f2625c533b75/cam_03_000042.png",
+      "verifiedHashes": {
+        "sha256": "484372d03b5fe60dc4563729e219d1dd607a9fb7474d6bd54873cf8fa7ef3f91",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "inference_data/325cef682f064c55a255f2625c533b75/cam_04_000042.png",
+      "size": 1301227,
+      "url": "https://huggingface.co/AXERA-TECH/bevformer/resolve/b5f3bf44f7430371c77d7719edd6569fd772ad77/inference_data/325cef682f064c55a255f2625c533b75/cam_04_000042.png",
+      "verifiedHashes": {
+        "sha256": "d8e5f461a933beba6aa3da718805514f583391115c01601485be462daa4eac96",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "inference_data/325cef682f064c55a255f2625c533b75/cam_05_000042.png",
+      "size": 1672562,
+      "url": "https://huggingface.co/AXERA-TECH/bevformer/resolve/b5f3bf44f7430371c77d7719edd6569fd772ad77/inference_data/325cef682f064c55a255f2625c533b75/cam_05_000042.png",
+      "verifiedHashes": {
+        "sha256": "8469f7b116da3efbfd40e99eeb87a132c57cc40d8fb2a8b6c07b52ec81b54838",
+        "gitBlob": null
+      }
+    }
+  ],
+  "runnerSha256": "a383e2e32664a5004e0466be5f5effa4a397322cdb75c3a1e4465bd545c7a6e9"
+}
