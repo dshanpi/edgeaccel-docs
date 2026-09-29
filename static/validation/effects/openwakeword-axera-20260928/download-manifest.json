@@ -1,0 +1,153 @@
+{
+  "modelId": "OpenWakeWord.AXERA",
+  "repo": "AXERA-TECH/OpenWakeWord.AXERA",
+  "revision": "3b8f2926204e69a36a9b55edeb60c75749589470",
+  "complete": true,
+  "files": [
+    {
+      "path": "README.md",
+      "size": 4058,
+      "url": "https://huggingface.co/AXERA-TECH/OpenWakeWord.AXERA/resolve/3b8f2926204e69a36a9b55edeb60c75749589470/README.md",
+      "verifiedHashes": {
+        "sha256": "edda340153223fbe9147eec662c16e933bb22e058dc2e1b6d76422612a01f915",
+        "gitBlob": "18a8274ea124ed2422b774ef2a085eac12c5e89b"
+      }
+    },
+    {
+      "path": "audio/openwakeword/alexa_test.wav",
+      "size": 20044,
+      "url": "https://huggingface.co/AXERA-TECH/OpenWakeWord.AXERA/resolve/3b8f2926204e69a36a9b55edeb60c75749589470/audio/openwakeword/alexa_test.wav",
+      "verifiedHashes": {
+        "sha256": "915dba88a2b936f3ba3ee91affcdbe9041ffbe532613d3aca58d8a15447fbd81",
+        "gitBlob": "637b9cd3e7869f7d1af66ddf7753518781534ff7"
+      }
+    },
+    {
+      "path": "audio/openwakeword/hey_jane.wav",
+      "size": 75820,
+      "url": "https://huggingface.co/AXERA-TECH/OpenWakeWord.AXERA/resolve/3b8f2926204e69a36a9b55edeb60c75749589470/audio/openwakeword/hey_jane.wav",
+      "verifiedHashes": {
+        "sha256": "cf1b938bd8ca1a7e9bb042665b9cf92a772a6673c6b98e264b27176ea4d3f443",
+        "gitBlob": "4daf9925085f507ee9a098107d4bcecd291f449d"
+      }
+    },
+    {
+      "path": "audio/openwakeword/hey_mycroft_test.wav",
+      "size": 30508,
+      "url": "https://huggingface.co/AXERA-TECH/OpenWakeWord.AXERA/resolve/3b8f2926204e69a36a9b55edeb60c75749589470/audio/openwakeword/hey_mycroft_test.wav",
+      "verifiedHashes": {
+        "sha256": "8d728ce1dbd54a97c6cddf0c80acec3113285407a967368f4abe476119c1a8c6",
+        "gitBlob": "8ab6f213340aa91a5c5077688eddc5ce0650ffbb"
+      }
+    },
+    {
+      "path": "config.json",
+      "size": 478,
+      "url": "https://huggingface.co/AXERA-TECH/OpenWakeWord.AXERA/resolve/3b8f2926204e69a36a9b55edeb60c75749589470/config.json",
+      "verifiedHashes": {
+        "sha256": "319b8e256ce35ae1875edd109a6d454942a116dc4054a4ab9e70857f344fdeda",
+        "gitBlob": "e5d6a5a826a864070bd39525d012878320af3eb3"
+      }
+    },
+    {
+      "path": "config/openwakeword_mel_weights.npz",
+      "size": 1086554,
+      "url": "https://huggingface.co/AXERA-TECH/OpenWakeWord.AXERA/resolve/3b8f2926204e69a36a9b55edeb60c75749589470/config/openwakeword_mel_weights.npz",
+      "verifiedHashes": {
+        "sha256": "a3de443a7383dc51a4bf8b1d2dc9bbc767f7e33e17af617d993700a5f9947ed6",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/650/openwakeword__alexa_v0.1.axmodel",
+      "size": 240975,
+      "url": "https://huggingface.co/AXERA-TECH/OpenWakeWord.AXERA/resolve/3b8f2926204e69a36a9b55edeb60c75749589470/models/650/openwakeword__alexa_v0.1.axmodel",
+      "verifiedHashes": {
+        "sha256": "97d9f09e645bbb7a2703a2e96506f55354b8a0c51e3614dd1e5de92a994316b0",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/650/openwakeword__embedding_model.axmodel",
+      "size": 451068,
+      "url": "https://huggingface.co/AXERA-TECH/OpenWakeWord.AXERA/resolve/3b8f2926204e69a36a9b55edeb60c75749589470/models/650/openwakeword__embedding_model.axmodel",
+      "verifiedHashes": {
+        "sha256": "a9c579200c4e9c076d86181343cdbe5cf2c786016cd60b333463784b5c2fa9b4",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/650/openwakeword__hey_jarvis_v0.1.axmodel",
+      "size": 366253,
+      "url": "https://huggingface.co/AXERA-TECH/OpenWakeWord.AXERA/resolve/3b8f2926204e69a36a9b55edeb60c75749589470/models/650/openwakeword__hey_jarvis_v0.1.axmodel",
+      "verifiedHashes": {
+        "sha256": "60671c1005ff525206c4417b0cb24a416674815bbc249d2f0bd3ce6a57be3ed3",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/650/openwakeword__hey_mycroft_v0.1.axmodel",
+      "size": 247423,
+      "url": "https://huggingface.co/AXERA-TECH/OpenWakeWord.AXERA/resolve/3b8f2926204e69a36a9b55edeb60c75749589470/models/650/openwakeword__hey_mycroft_v0.1.axmodel",
+      "verifiedHashes": {
+        "sha256": "ec469726f386b07025cfdb16c72ddebb22caf79e239b1cd957a241e36c68a860",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/650/openwakeword__hey_rhasspy_v0.1.axmodel",
+      "size": 63975,
+      "url": "https://huggingface.co/AXERA-TECH/OpenWakeWord.AXERA/resolve/3b8f2926204e69a36a9b55edeb60c75749589470/models/650/openwakeword__hey_rhasspy_v0.1.axmodel",
+      "verifiedHashes": {
+        "sha256": "137405cc2ff7e62ff4ebf1d2c65a73945b645084e33b05c737690e3d81305f73",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/650/openwakeword__timer_v0.1.axmodel",
+      "size": 480719,
+      "url": "https://huggingface.co/AXERA-TECH/OpenWakeWord.AXERA/resolve/3b8f2926204e69a36a9b55edeb60c75749589470/models/650/openwakeword__timer_v0.1.axmodel",
+      "verifiedHashes": {
+        "sha256": "22340e9f3158d28647b25f2cc5622bcad9f9556a1e02263aae8014529ff445a2",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/650/openwakeword__weather_v0.1.axmodel",
+      "size": 320751,
+      "url": "https://huggingface.co/AXERA-TECH/OpenWakeWord.AXERA/resolve/3b8f2926204e69a36a9b55edeb60c75749589470/models/650/openwakeword__weather_v0.1.axmodel",
+      "verifiedHashes": {
+        "sha256": "33944aebdeb747bd7ae0fb9cc49e99dac5bc57fbbdb3e253044de6ffce26362e",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "reference/local_inference_results.json",
+      "size": 15035,
+      "url": "https://huggingface.co/AXERA-TECH/OpenWakeWord.AXERA/resolve/3b8f2926204e69a36a9b55edeb60c75749589470/reference/local_inference_results.json",
+      "verifiedHashes": {
+        "sha256": "3e4319055ee7b4a7fae93203411acdf71d5596427c63beb2ee07b749ca090a1f",
+        "gitBlob": "02e984ce5b19d9e90c064e2cebcb0d2bd982caa1"
+      }
+    },
+    {
+      "path": "scripts/openwakeword_ax.py",
+      "size": 12221,
+      "url": "https://huggingface.co/AXERA-TECH/OpenWakeWord.AXERA/resolve/3b8f2926204e69a36a9b55edeb60c75749589470/scripts/openwakeword_ax.py",
+      "verifiedHashes": {
+        "sha256": "62ec0e91e122d826aeb8c1c99a129ee53f23217dfb7d586be87bc38f5c19c3ac",
+        "gitBlob": "6f4a49e14c2f09559a4cc3074d94d032140f389f"
+      }
+    },
+    {
+      "path": "scripts/runtime.py",
+      "size": 5354,
+      "url": "https://huggingface.co/AXERA-TECH/OpenWakeWord.AXERA/resolve/3b8f2926204e69a36a9b55edeb60c75749589470/scripts/runtime.py",
+      "verifiedHashes": {
+        "sha256": "f8153cc69d82e43557b7c7340d3247c9e086506eb9e5da577e1d343fbe0be8cc",
+        "gitBlob": "7d767cdfd3c983ddaac23ac3a423bc67ab30e5e5"
+      }
+    }
+  ],
+  "runnerSha256": "a1ddad810b5413a446fc7f8a7403ffe093923b90b0eb3b7f1a9878aa0f9174a6"
+}

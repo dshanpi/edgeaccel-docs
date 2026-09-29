@@ -1,0 +1,126 @@
+{
+  "modelId": "jina-clip-v2",
+  "repo": "AXERA-TECH/jina-clip-v2",
+  "revision": "00914adf025ae2b9fa62ead49bd1f1c401a37502",
+  "complete": true,
+  "files": [
+    {
+      "path": "README.md",
+      "size": 1448,
+      "url": "https://huggingface.co/AXERA-TECH/jina-clip-v2/resolve/00914adf025ae2b9fa62ead49bd1f1c401a37502/README.md",
+      "verifiedHashes": {
+        "sha256": "a695818e21f7b4b4eb7be25fbdefe1b902cb18191c64e94359688ddf1d9b4f98",
+        "gitBlob": "beb48bc79fad6f2888a9487d0ddee6d4323879a6"
+      }
+    },
+    {
+      "path": "beach1.jpg",
+      "size": 51696,
+      "url": "https://huggingface.co/AXERA-TECH/jina-clip-v2/resolve/00914adf025ae2b9fa62ead49bd1f1c401a37502/beach1.jpg",
+      "verifiedHashes": {
+        "sha256": "b235c4ce0f6f1a3eb1c57d129571030eac0f10beb2de952afeca129846a37ffc",
+        "gitBlob": "fa0f59e1ba5de6465e962538fb3dcda2b1945933"
+      }
+    },
+    {
+      "path": "image_encoder.axmodel",
+      "size": 367119531,
+      "url": "https://huggingface.co/AXERA-TECH/jina-clip-v2/resolve/00914adf025ae2b9fa62ead49bd1f1c401a37502/image_encoder.axmodel",
+      "verifiedHashes": {
+        "sha256": "dd28d8a67bc4e3edce64b33d3cb119b643df23d7d32a38e203956d3d59256a76",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "image_encoder_224x224.axmodel",
+      "size": 331144033,
+      "url": "https://huggingface.co/AXERA-TECH/jina-clip-v2/resolve/00914adf025ae2b9fa62ead49bd1f1c401a37502/image_encoder_224x224.axmodel",
+      "verifiedHashes": {
+        "sha256": "1caf8a85fae042ef52fd060f38f9d48fe935c1d03e7db2992de6b3314fe7ada0",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "jina-clip-v2/config.json",
+      "size": 2152,
+      "url": "https://huggingface.co/AXERA-TECH/jina-clip-v2/resolve/00914adf025ae2b9fa62ead49bd1f1c401a37502/jina-clip-v2/config.json",
+      "verifiedHashes": {
+        "sha256": "b5466de03392479d778745bbdb1905e297cd07ca76694703bd7d7b84d58aa853",
+        "gitBlob": "61af6cc4db22c2b00a818a0acdb2af25c1fd52b6"
+      }
+    },
+    {
+      "path": "jina-clip-v2/config_sentence_transformers.json",
+      "size": 281,
+      "url": "https://huggingface.co/AXERA-TECH/jina-clip-v2/resolve/00914adf025ae2b9fa62ead49bd1f1c401a37502/jina-clip-v2/config_sentence_transformers.json",
+      "verifiedHashes": {
+        "sha256": "77e07a8d9ca412c537b80009d91c33492e24e3c0627d445dc16334e46a7a329d",
+        "gitBlob": "aeb078c749c948162ca60a54e3264ca129891c23"
+      }
+    },
+    {
+      "path": "jina-clip-v2/modules.json",
+      "size": 273,
+      "url": "https://huggingface.co/AXERA-TECH/jina-clip-v2/resolve/00914adf025ae2b9fa62ead49bd1f1c401a37502/jina-clip-v2/modules.json",
+      "verifiedHashes": {
+        "sha256": "30bf61a9b8910f812794c5ff4b4decb88952c020e56db8105ea62cba33298c2b",
+        "gitBlob": "7cad011b960c5a194557de2406d917d925d0db67"
+      }
+    },
+    {
+      "path": "jina-clip-v2/preprocessor_config.json",
+      "size": 584,
+      "url": "https://huggingface.co/AXERA-TECH/jina-clip-v2/resolve/00914adf025ae2b9fa62ead49bd1f1c401a37502/jina-clip-v2/preprocessor_config.json",
+      "verifiedHashes": {
+        "sha256": "920bc482e3dad0de2bffe4e534181a1f61a4a6baefa1aee53b75849557786301",
+        "gitBlob": "ba837a9d29b76bef7679502679ad808e359d21da"
+      }
+    },
+    {
+      "path": "jina-clip-v2/special_tokens_map.json",
+      "size": 964,
+      "url": "https://huggingface.co/AXERA-TECH/jina-clip-v2/resolve/00914adf025ae2b9fa62ead49bd1f1c401a37502/jina-clip-v2/special_tokens_map.json",
+      "verifiedHashes": {
+        "sha256": "8c785abebea9ae3257b61681b4e6fd8365ceafde980c21970d001e834cf10835",
+        "gitBlob": "b1879d702821e753ffe4245048eee415d54a9385"
+      }
+    },
+    {
+      "path": "jina-clip-v2/tokenizer.json",
+      "size": 17082997,
+      "url": "https://huggingface.co/AXERA-TECH/jina-clip-v2/resolve/00914adf025ae2b9fa62ead49bd1f1c401a37502/jina-clip-v2/tokenizer.json",
+      "verifiedHashes": {
+        "sha256": "6601c4120779a1a3863897ba332fe3481d548e363bec2c91eba10ef8640a5e93",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "jina-clip-v2/tokenizer_config.json",
+      "size": 1148,
+      "url": "https://huggingface.co/AXERA-TECH/jina-clip-v2/resolve/00914adf025ae2b9fa62ead49bd1f1c401a37502/jina-clip-v2/tokenizer_config.json",
+      "verifiedHashes": {
+        "sha256": "e1bc77da5b90ba65b47aa8bd776c6317f47d50dc6717e92b10177686b3b8f161",
+        "gitBlob": "8cc4b5371966caaa004a24ee183bc6dbda9dbd4d"
+      }
+    },
+    {
+      "path": "run_axmodel.py",
+      "size": 3917,
+      "url": "https://huggingface.co/AXERA-TECH/jina-clip-v2/resolve/00914adf025ae2b9fa62ead49bd1f1c401a37502/run_axmodel.py",
+      "verifiedHashes": {
+        "sha256": "4180135298358cc8d0903b7e084e8f98091c69a11420d94c6a050895c34dfaa4",
+        "gitBlob": "d1482b9f0b0e543427ca1ead33f35151883fd4c5"
+      }
+    },
+    {
+      "path": "text_encoder.axmodel",
+      "size": 1351662036,
+      "url": "https://huggingface.co/AXERA-TECH/jina-clip-v2/resolve/00914adf025ae2b9fa62ead49bd1f1c401a37502/text_encoder.axmodel",
+      "verifiedHashes": {
+        "sha256": "ecdfd9d27dd65b6d5f1fb30245b6a568f89937e2566ea72a91c67ffc4be3a693",
+        "gitBlob": null
+      }
+    }
+  ],
+  "runnerSha256": "b24f019b2e9304cda263da054914c29cf68fa1e19b07de84875b5fe0e789dc3b"
+}

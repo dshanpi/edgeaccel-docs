@@ -1,0 +1,16 @@
+NOTE: This is only a simulation!
+      apt-get needs root privileges for real execution.
+      Keep also in mind that locking is deactivated,
+      so don't depend on the relevance to the real current situation!
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  pahole
+The following packages will be upgraded:
+  linux-headers-vendor-rk35xx
+1 upgraded, 1 newly installed, 0 to remove and 382 not upgraded.
+Inst pahole (1.25-0ubuntu3 Ubuntu:24.04/noble, local-deb [arm64])
+Inst linux-headers-vendor-rk35xx [25.11.0-trunk] (25.11.0-trunk+ax8850.1 local-deb [arm64])
+Conf pahole (1.25-0ubuntu3 Ubuntu:24.04/noble, local-deb [arm64])
+Conf linux-headers-vendor-rk35xx (25.11.0-trunk+ax8850.1 local-deb [arm64])

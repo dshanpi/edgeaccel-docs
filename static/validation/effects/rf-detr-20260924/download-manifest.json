@@ -1,0 +1,53 @@
+{
+  "modelId": "RF-DETR",
+  "repo": "AXERA-TECH/RF-DETR",
+  "revision": "b18cd74e6e7c1df8f86e4a56e020faeb412a0b26",
+  "complete": true,
+  "files": [
+    {
+      "path": "README.md",
+      "size": 619,
+      "url": "https://huggingface.co/AXERA-TECH/RF-DETR/resolve/b18cd74e6e7c1df8f86e4a56e020faeb412a0b26/README.md",
+      "verifiedHashes": {
+        "sha256": "5ff9994c0502071b04227b092ccf15040f3789d16e8f0523bdddad98e34b525d",
+        "gitBlob": "1e8a2e1f7c1995ef7d0e97fa9b2b5bac371a3e8f"
+      }
+    },
+    {
+      "path": "onnx/detr.axmodel",
+      "size": 33966166,
+      "url": "https://huggingface.co/AXERA-TECH/RF-DETR/resolve/b18cd74e6e7c1df8f86e4a56e020faeb412a0b26/onnx/detr.axmodel",
+      "verifiedHashes": {
+        "sha256": "a60c1d0711edddc754a7ea250993839e3e101cd4b8daf71535bedc5560c1acc1",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "src/infer.py",
+      "size": 8434,
+      "url": "https://huggingface.co/AXERA-TECH/RF-DETR/resolve/b18cd74e6e7c1df8f86e4a56e020faeb412a0b26/src/infer.py",
+      "verifiedHashes": {
+        "sha256": "3593195630f940a25bf8ba5a25cb46c13a2c748c28ee64b3e66683ab0dea0956",
+        "gitBlob": "f7726d1716b2062d318c3164186ba98911184144"
+      }
+    },
+    {
+      "path": "asserts/test.jpg",
+      "size": 71508,
+      "url": "https://huggingface.co/AXERA-TECH/RF-DETR/resolve/b18cd74e6e7c1df8f86e4a56e020faeb412a0b26/asserts/test.jpg",
+      "verifiedHashes": {
+        "sha256": "4552bcb8eefa4ef0e6d2795bf85be021242e4a94e1ebac474564b7547c760e14",
+        "gitBlob": "75d2f2c30a22b3a37bd756f4d435c5dc275bd612"
+      }
+    },
+    {
+      "path": "onnx/config.json",
+      "size": 1171,
+      "url": "https://huggingface.co/AXERA-TECH/RF-DETR/resolve/b18cd74e6e7c1df8f86e4a56e020faeb412a0b26/onnx/config.json",
+      "verifiedHashes": {
+        "sha256": "5ae0a7fc3056fe47569d571c3deb7d3bdc1f6345b40c0976d79a225f15aa9fe1",
+        "gitBlob": "972cdc648aff02b98c218ed8d1a4aba4cfff14e9"
+      }
+    }
+  ]
+}

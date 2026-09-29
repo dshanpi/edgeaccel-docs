@@ -1,0 +1,678 @@
+{
+  "modelId": "Inflect-Micro-v2-zh",
+  "revision": "f5af82ee9c1cac911584ccd91f759ab54258e0a1",
+  "date": "2026-09-28",
+  "variants": [
+    {
+      "label": "中文女声与男声 · 短句合成",
+      "observation": "四段音频均由 CPU 声学模型和算力卡声码器生成。原始波形只有 32 个幅度取值，女声有平顶段；同输入的官方 CPU 声码器对照也显示明显差异。本页保留实际音频供对照，当前仅确认流程运行，音质尚未通过验收。",
+      "audio": [
+        {
+          "caption": "女声：今天中午我想吃一碗牛肉面。",
+          "path": "/validation/effects/inflect-micro-v2-zh-20260928/01-female.wav"
+        },
+        {
+          "caption": "女声：人工智能技术正在改变我们的生活方式。",
+          "path": "/validation/effects/inflect-micro-v2-zh-20260928/02-female.wav"
+        },
+        {
+          "caption": "男声：请问最近的医院在哪里。",
+          "path": "/validation/effects/inflect-micro-v2-zh-20260928/03-male.wav"
+        },
+        {
+          "caption": "男声：欢迎使用算力卡，接下来开始语音合成。",
+          "path": "/validation/effects/inflect-micro-v2-zh-20260928/04-male.wav"
+        }
+      ],
+      "previews": [
+        {
+          "caption": "四段实际输出，经官方峰值归一化；平顶段与量化差异仍需评估",
+          "path": "/validation/effects/inflect-micro-v2-zh-20260928/waveforms.png"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "输入文本",
+            "音频时长",
+            "生成耗时",
+            "RTF"
+          ],
+          "rows": [
+            [
+              "今天中午我想吃一碗牛肉面。",
+              "3.488 s",
+              "0.565 s",
+              "0.162"
+            ],
+            [
+              "人工智能技术正在改变我们的生活方式。",
+              "4.672 s",
+              "0.568 s",
+              "0.122"
+            ],
+            [
+              "请问最近的医院在哪里。",
+              "2.368 s",
+              "0.562 s",
+              "0.237"
+            ],
+            [
+              "欢迎使用算力卡，接下来开始语音合成。",
+              "3.499 s",
+              "0.569 s",
+              "0.163"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "modelId": "Inflect-Micro-v2-zh",
+        "provider": "AXCLRTExecutionProvider",
+        "revision": "f5af82ee9c1cac911584ccd91f759ab54258e0a1",
+        "sourceSha256": "9e73ed6ea0434c52f1542290302314ef9646fd66ae508f937ae7ed7d5df4c9ff",
+        "startedAt": "2026-09-27T21:53:21.490106+00:00",
+        "noiseScale": 0.0,
+        "seed": 0,
+        "sessions": [
+          {
+            "model": "models/bigvgan_base.axmodel",
+            "provider": "AXCLRTExecutionProvider",
+            "loadSeconds": 1.0723376420210116,
+            "weightSha256": "44d12f6a8ceca75462873603405cd789f4f71261157ef28c31a718718238cb79",
+            "inputs": [
+              {
+                "name": "mel",
+                "shape": [
+                  1,
+                  100,
+                  512
+                ],
+                "dtype": "float32"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "wav",
+                "shape": [
+                  1,
+                  1,
+                  131072
+                ]
+              }
+            ],
+            "runMilliseconds": [
+              284.1694779926911,
+              280.2293309941888,
+              280.21883097244427,
+              280.21649800939485
+            ],
+            "calls": [
+              {
+                "inputs": {
+                  "mel": [
+                    1,
+                    100,
+                    512
+                  ]
+                },
+                "outputs": [
+                  [
+                    1,
+                    1,
+                    131072
+                  ]
+                ],
+                "allFinite": true
+              },
+              {
+                "inputs": {
+                  "mel": [
+                    1,
+                    100,
+                    512
+                  ]
+                },
+                "outputs": [
+                  [
+                    1,
+                    1,
+                    131072
+                  ]
+                ],
+                "allFinite": true
+              },
+              {
+                "inputs": {
+                  "mel": [
+                    1,
+                    100,
+                    512
+                  ]
+                },
+                "outputs": [
+                  [
+                    1,
+                    1,
+                    131072
+                  ]
+                ],
+                "allFinite": true
+              },
+              {
+                "inputs": {
+                  "mel": [
+                    1,
+                    100,
+                    512
+                  ]
+                },
+                "outputs": [
+                  [
+                    1,
+                    1,
+                    131072
+                  ]
+                ],
+                "allFinite": true
+              }
+            ],
+            "allFinite": true
+          }
+        ],
+        "samples": [
+          {
+            "name": "01-female",
+            "voice": "female",
+            "text": "今天中午我想吃一碗牛肉面。",
+            "sentences": [
+              "今天中午我想吃一碗牛肉面。"
+            ],
+            "tokenCountsWithBlanks": [
+              129
+            ],
+            "generationSeconds": 0.5651063970290124,
+            "durationSeconds": 3.488,
+            "sampleRate": 24000,
+            "channels": 1,
+            "melFramesAfterProcessing": 327,
+            "vocoderCalls": 1,
+            "rawPeak": 0.125,
+            "peak": 0.9499998688697815,
+            "allFinite": true,
+            "clippedFraction": 0.0,
+            "rawSha256": "2da7459fa410be423580e214dd86380d3e2002abd7ebe4c2a73523a3b9810b00",
+            "previewSha256": "91dd881947e5c11e6ca086262dbd052d3987809067368f71fe01e5676f748569",
+            "realTimeFactor": 0.16201444868951045,
+            "rawAbsolutePeakFraction": 0.01919676987767584,
+            "rawUniqueValues": 32,
+            "rawRms": 0.049258019775152206,
+            "previewSubtype": "PCM_16"
+          },
+          {
+            "name": "02-female",
+            "voice": "female",
+            "text": "人工智能技术正在改变我们的生活方式。",
+            "sentences": [
+              "人工智能技术正在改变我们的生活方式。"
+            ],
+            "tokenCountsWithBlanks": [
+              183
+            ],
+            "generationSeconds": 0.5684868320240639,
+            "durationSeconds": 4.672,
+            "sampleRate": 24000,
+            "channels": 1,
+            "melFramesAfterProcessing": 438,
+            "vocoderCalls": 1,
+            "rawPeak": 0.125,
+            "peak": 0.9499998688697815,
+            "allFinite": true,
+            "clippedFraction": 0.0,
+            "rawSha256": "f18b94137cd54ff8c5f79299bc5e3aa240a83134557da877010cb8b81a20c159",
+            "previewSha256": "0dc37f3eb03883db42c3a20fdfc079c34c5f71ff1e8f717d52b34312edb3c8e3",
+            "realTimeFactor": 0.12167954452569862,
+            "rawAbsolutePeakFraction": 0.01934396404109589,
+            "rawUniqueValues": 32,
+            "rawRms": 0.04545227065682411,
+            "previewSubtype": "PCM_16"
+          },
+          {
+            "name": "03-male",
+            "voice": "male",
+            "text": "请问最近的医院在哪里。",
+            "sentences": [
+              "请问最近的医院在哪里。"
+            ],
+            "tokenCountsWithBlanks": [
+              99
+            ],
+            "generationSeconds": 0.5615381269599311,
+            "durationSeconds": 2.368,
+            "sampleRate": 24000,
+            "channels": 1,
+            "melFramesAfterProcessing": 222,
+            "vocoderCalls": 1,
+            "rawPeak": 0.125,
+            "peak": 0.9499998688697815,
+            "allFinite": true,
+            "clippedFraction": 0.0,
+            "rawSha256": "dc4d1857b3c9ea3fa2a509aa4d831674bd5caf9ea74bea3874b0fdc062e52d9e",
+            "previewSha256": "16b9d6d5e58a5121fb266f4f8bc8494234d97fbab1c0bf1a7d6144531a94d1a1",
+            "realTimeFactor": 0.2371360333445655,
+            "rawAbsolutePeakFraction": 0.0005982545045045045,
+            "rawUniqueValues": 32,
+            "rawRms": 0.03285177797079086,
+            "previewSubtype": "PCM_16"
+          },
+          {
+            "name": "04-male",
+            "voice": "male",
+            "text": "欢迎使用算力卡，接下来开始语音合成。",
+            "sentences": [
+              "欢迎使用算力卡，接下来开始语音合成。"
+            ],
+            "tokenCountsWithBlanks": [
+              171
+            ],
+            "generationSeconds": 0.5693980039795861,
+            "durationSeconds": 3.498666666666667,
+            "sampleRate": 24000,
+            "channels": 1,
+            "melFramesAfterProcessing": 328,
+            "vocoderCalls": 1,
+            "rawPeak": 0.125,
+            "peak": 0.9499998688697815,
+            "allFinite": true,
+            "clippedFraction": 0.0,
+            "rawSha256": "6d720e058cf8cbd364954b15e12a002db1fc3bfaaff8ddaba9a4ef9fe24cdee0",
+            "previewSha256": "048d3a89da1fa04dbb55a31b2fc16aec93da55926d64ac2e1aebc52b1809b5ab",
+            "realTimeFactor": 0.1627471429057506,
+            "rawAbsolutePeakFraction": 0.002096036585365854,
+            "rawUniqueValues": 32,
+            "rawRms": 0.03136029094457626,
+            "previewSubtype": "PCM_16"
+          }
+        ],
+        "completed": true,
+        "externalDataAliases": [
+          {
+            "voice": "female",
+            "referencedName": "acoustic_melgan_ls10.onnx.data",
+            "source": "models/acoustic_female.onnx.data",
+            "graphSha256": "dd29ee96d0edd2ea5c8a26719587119a244c4ff88ea9c45aa0dcd29ed4346da2",
+            "dataSha256": "31adeb8505258fe29aa47b02f499b68fcea7374e73a9a727bf7c775e99d610de"
+          },
+          {
+            "voice": "male",
+            "referencedName": "acoustic_melgan_male.onnx.data",
+            "source": "models/acoustic_male.onnx.data",
+            "graphSha256": "d8b23d7bd1ee40c0b6b477591d26feace219d81a31bda13bd5af85b4eebcf4bf",
+            "dataSha256": "d44066a764bbe76c48f292a2a220cf12157469b7152b3fac4ab91828e9566e23"
+          }
+        ],
+        "finishedAt": "2026-09-27T21:53:26.434075+00:00",
+        "cpuSessions": [
+          {
+            "model": "models/acoustic_female.onnx",
+            "provider": "CPUExecutionProvider",
+            "loadSeconds": 0.3609779829857871,
+            "weightSha256": "dd29ee96d0edd2ea5c8a26719587119a244c4ff88ea9c45aa0dcd29ed4346da2",
+            "inputs": [
+              {
+                "name": "x",
+                "shape": [
+                  1,
+                  256
+                ],
+                "dtype": "tensor(int64)"
+              },
+              {
+                "name": "x_lengths",
+                "shape": [
+                  1
+                ],
+                "dtype": "tensor(int64)"
+              },
+              {
+                "name": "noise_z",
+                "shape": [
+                  1,
+                  192,
+                  1024
+                ],
+                "dtype": "tensor(float)"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "mel",
+                "shape": [
+                  1,
+                  100,
+                  1024
+                ]
+              },
+              {
+                "name": "y_lengths",
+                "shape": [
+                  1
+                ]
+              }
+            ],
+            "runMilliseconds": [
+              250.80350297503173,
+              255.71286398917437
+            ],
+            "calls": [
+              {
+                "inputs": {
+                  "x": [
+                    1,
+                    256
+                  ],
+                  "x_lengths": [
+                    1
+                  ],
+                  "noise_z": [
+                    1,
+                    192,
+                    1024
+                  ]
+                },
+                "outputs": [
+                  [
+                    1,
+                    100,
+                    1024
+                  ],
+                  [
+                    1
+                  ]
+                ],
+                "allFinite": true
+              },
+              {
+                "inputs": {
+                  "x": [
+                    1,
+                    256
+                  ],
+                  "x_lengths": [
+                    1
+                  ],
+                  "noise_z": [
+                    1,
+                    192,
+                    1024
+                  ]
+                },
+                "outputs": [
+                  [
+                    1,
+                    100,
+                    1024
+                  ],
+                  [
+                    1
+                  ]
+                ],
+                "allFinite": true
+              }
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "models/acoustic_male.onnx",
+            "provider": "CPUExecutionProvider",
+            "loadSeconds": 0.26982289901934564,
+            "weightSha256": "d8b23d7bd1ee40c0b6b477591d26feace219d81a31bda13bd5af85b4eebcf4bf",
+            "inputs": [
+              {
+                "name": "x",
+                "shape": [
+                  1,
+                  256
+                ],
+                "dtype": "tensor(int64)"
+              },
+              {
+                "name": "x_lengths",
+                "shape": [
+                  1
+                ],
+                "dtype": "tensor(int64)"
+              },
+              {
+                "name": "noise_z",
+                "shape": [
+                  1,
+                  192,
+                  1024
+                ],
+                "dtype": "tensor(float)"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "mel",
+                "shape": [
+                  1,
+                  100,
+                  1024
+                ]
+              },
+              {
+                "name": "y_lengths",
+                "shape": [
+                  1
+                ]
+              }
+            ],
+            "runMilliseconds": [
+              256.72816002042964,
+              259.1288819676265
+            ],
+            "calls": [
+              {
+                "inputs": {
+                  "x": [
+                    1,
+                    256
+                  ],
+                  "x_lengths": [
+                    1
+                  ],
+                  "noise_z": [
+                    1,
+                    192,
+                    1024
+                  ]
+                },
+                "outputs": [
+                  [
+                    1,
+                    100,
+                    1024
+                  ],
+                  [
+                    1
+                  ]
+                ],
+                "allFinite": true
+              },
+              {
+                "inputs": {
+                  "x": [
+                    1,
+                    256
+                  ],
+                  "x_lengths": [
+                    1
+                  ],
+                  "noise_z": [
+                    1,
+                    192,
+                    1024
+                  ]
+                },
+                "outputs": [
+                  [
+                    1,
+                    100,
+                    1024
+                  ],
+                  [
+                    1
+                  ]
+                ],
+                "allFinite": true
+              }
+            ],
+            "allFinite": true
+          }
+        ],
+        "coverage": "CPU acoustic ONNX models and AXCL BigVGAN vocoder, four short Chinese sentences; original frontend and postprocessing. Functional pipeline only, audio quality not accepted.",
+        "referenceComparison": {
+          "modelId": "Inflect-Micro-v2-zh",
+          "provider": "AXCLRTExecutionProvider",
+          "completed": true,
+          "startedAt": "2026-09-27T21:57:53.841442+00:00",
+          "referenceModel": "models/bigvgan_base.onnx",
+          "referenceSha256": "7bc1a9afd9643fc56643c5d84c47f5da7ac6ba956f802934bcc76f065b82eeaa",
+          "samples": [
+            {
+              "name": "01-female",
+              "text": "今天中午我想吃一碗牛肉面。",
+              "voice": "female",
+              "sameNpuOutputAsPrevious": true,
+              "referencePeak": 0.6500756144523621,
+              "npuPeak": 0.125,
+              "referenceUniqueValues": 83675,
+              "npuUniqueValues": 32,
+              "mse": 0.002700191300276346,
+              "snrDb": 3.9738791236499753,
+              "cosineSimilarity": 0.7996064557747959,
+              "correlation": 0.7999106736390004,
+              "calls": [
+                {
+                  "inputHashes": {
+                    "mel": "8cbe5e10494c959422793701f2d7b8d7ed7b3c31266411d347832817ac49e776"
+                  },
+                  "inputShapes": {
+                    "mel": [
+                      1,
+                      100,
+                      512
+                    ]
+                  },
+                  "npuSeconds": 0.28399097704095766,
+                  "cpuSeconds": 59.31820252502803
+                }
+              ],
+              "durationSeconds": 3.488,
+              "referenceRawSha256": "e7a8edd745ee3e2028175bbab1cc2d735db6e90fa8ce41e093613c425ea09c9a"
+            },
+            {
+              "name": "02-female",
+              "text": "人工智能技术正在改变我们的生活方式。",
+              "voice": "female",
+              "sameNpuOutputAsPrevious": true,
+              "referencePeak": 0.7448275089263916,
+              "npuPeak": 0.125,
+              "referenceUniqueValues": 112064,
+              "npuUniqueValues": 32,
+              "mse": 0.004058205047142437,
+              "snrDb": 2.6543156245816775,
+              "cosineSimilarity": 0.6978099461411011,
+              "correlation": 0.6979802822168738,
+              "calls": [
+                {
+                  "inputHashes": {
+                    "mel": "b4080d560613ebef0e53e87c5a118689a6effc655f7c04be2dfa4827597d3562"
+                  },
+                  "inputShapes": {
+                    "mel": [
+                      1,
+                      100,
+                      512
+                    ]
+                  },
+                  "npuSeconds": 0.28089666803134605,
+                  "cpuSeconds": 59.60917895601597
+                }
+              ],
+              "durationSeconds": 4.672,
+              "referenceRawSha256": "e9f0f248d01eee9ac79a359f385bc2527da98d00b3893dd5858e29b26a787c60"
+            },
+            {
+              "name": "03-male",
+              "text": "请问最近的医院在哪里。",
+              "voice": "male",
+              "sameNpuOutputAsPrevious": true,
+              "referencePeak": 0.23316355049610138,
+              "npuPeak": 0.125,
+              "referenceUniqueValues": 56816,
+              "npuUniqueValues": 32,
+              "mse": 0.0002578932410178353,
+              "snrDb": 6.9344936331091445,
+              "cosineSimilarity": 0.893412500757643,
+              "correlation": 0.8934135473047804,
+              "calls": [
+                {
+                  "inputHashes": {
+                    "mel": "dd4690345da066a4c9f7195d7e7833a1829d95e2cd86f1e66e04d5f15695a817"
+                  },
+                  "inputShapes": {
+                    "mel": [
+                      1,
+                      100,
+                      512
+                    ]
+                  },
+                  "npuSeconds": 0.2807190419989638,
+                  "cpuSeconds": 59.69134657800896
+                }
+              ],
+              "durationSeconds": 2.368,
+              "referenceRawSha256": "ce33d9c0dbee0a8c1b6dbe57330fb80e58a306f0e794996baa2ac526f59455b7"
+            },
+            {
+              "name": "04-male",
+              "text": "欢迎使用算力卡，接下来开始语音合成。",
+              "voice": "male",
+              "sameNpuOutputAsPrevious": true,
+              "referencePeak": 0.30963215231895447,
+              "npuPeak": 0.125,
+              "referenceUniqueValues": 83935,
+              "npuUniqueValues": 32,
+              "mse": 0.00045158648069361325,
+              "snrDb": 4.37463238472634,
+              "cosineSimilarity": 0.8018093618912967,
+              "correlation": 0.8018084212388208,
+              "calls": [
+                {
+                  "inputHashes": {
+                    "mel": "07b9d2e91280889409112657588f1347cc02458c76c3d53ac1ea312ed9e405c2"
+                  },
+                  "inputShapes": {
+                    "mel": [
+                      1,
+                      100,
+                      512
+                    ]
+                  },
+                  "npuSeconds": 0.280684333993122,
+                  "cpuSeconds": 59.56572683400009
+                }
+              ],
+              "durationSeconds": 3.498666666666667,
+              "referenceRawSha256": "342213d8170261697edfa37b901441879b7828fa194671c7ea26843effae60d1"
+            }
+          ],
+          "finishedAt": "2026-09-27T22:01:57.470636+00:00"
+        }
+      }
+    }
+  ]
+}

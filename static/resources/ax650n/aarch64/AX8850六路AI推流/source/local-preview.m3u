@@ -1,0 +1,22 @@
+#EXTM3U
+#EXTINF:-1,AX8850 - six-stream overview
+#EXTVLCOPT:network-caching=500
+http://127.0.0.1:8850/overview.ts
+#EXTINF:-1,PCD + tracking
+#EXTVLCOPT:network-caching=500
+http://127.0.0.1:8850/pcd.ts
+#EXTINF:-1,YOLOv8s road objects
+#EXTVLCOPT:network-caching=500
+http://127.0.0.1:8850/vehicle.ts
+#EXTINF:-1,YOLO26n instance masks
+#EXTVLCOPT:network-caching=500
+http://127.0.0.1:8850/seg.ts
+#EXTINF:-1,YOLO26n + tracking
+#EXTVLCOPT:network-caching=500
+http://127.0.0.1:8850/driving.ts
+#EXTINF:-1,YOLO26n relative depth
+#EXTVLCOPT:network-caching=500
+http://127.0.0.1:8850/depth.ts
+#EXTINF:-1,Vehicle line counting
+#EXTVLCOPT:network-caching=500
+http://127.0.0.1:8850/count.ts

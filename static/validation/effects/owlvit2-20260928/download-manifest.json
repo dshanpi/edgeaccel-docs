@@ -1,0 +1,135 @@
+{
+  "modelId": "OWLViT2",
+  "repo": "AXERA-TECH/OWLViT2",
+  "revision": "c8eab07c17622318cbd1f6234bb261c4eace2c51",
+  "complete": true,
+  "files": [
+    {
+      "path": "4cls_labels.json",
+      "size": 190,
+      "url": "https://huggingface.co/AXERA-TECH/OWLViT2/resolve/c8eab07c17622318cbd1f6234bb261c4eace2c51/4cls_labels.json",
+      "verifiedHashes": {
+        "sha256": "2871e2e20754f8311aef8d929943a69053dadc15f3ad61d5bcc244b116af7478",
+        "gitBlob": "75df0c3ea8f53e48591c34ff8db36794957f8b5f"
+      }
+    },
+    {
+      "path": "HOW_TO_USE.md",
+      "size": 3933,
+      "url": "https://huggingface.co/AXERA-TECH/OWLViT2/resolve/c8eab07c17622318cbd1f6234bb261c4eace2c51/HOW_TO_USE.md",
+      "verifiedHashes": {
+        "sha256": "d1554f7a721bb8be315f4a9f7261e302fa47206ad89368fc5f03276c0f96dd2d",
+        "gitBlob": "46311b88ab8e7c978a2054b48fcfc7ade9967e0d"
+      }
+    },
+    {
+      "path": "README.md",
+      "size": 4394,
+      "url": "https://huggingface.co/AXERA-TECH/OWLViT2/resolve/c8eab07c17622318cbd1f6234bb261c4eace2c51/README.md",
+      "verifiedHashes": {
+        "sha256": "1bb169a51b0b588d78e1baf7da80d5ffd35ab1793d612ffc0ac7076bb6636f80",
+        "gitBlob": "9fb4092466b312b49d7c495bca55dd3936374867"
+      }
+    },
+    {
+      "path": "axmodel/owlv2_image_4cls_640.axmodel",
+      "size": 125544446,
+      "url": "https://huggingface.co/AXERA-TECH/OWLViT2/resolve/c8eab07c17622318cbd1f6234bb261c4eace2c51/axmodel/owlv2_image_4cls_640.axmodel",
+      "verifiedHashes": {
+        "sha256": "61f2e738b09beedb70ce90ac03e680d716426399b4b66b3a114f8392e727c9c1",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "axmodel/owlv2_post_4cls_640.axmodel",
+      "size": 1613334,
+      "url": "https://huggingface.co/AXERA-TECH/OWLViT2/resolve/c8eab07c17622318cbd1f6234bb261c4eace2c51/axmodel/owlv2_post_4cls_640.axmodel",
+      "verifiedHashes": {
+        "sha256": "c67c1daa53993f162a006c7239e6cfb757ab1932a10a2074740a21894b4d3065",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "axmodel/owlv2_text_4cls_640.axmodel",
+      "size": 142775410,
+      "url": "https://huggingface.co/AXERA-TECH/OWLViT2/resolve/c8eab07c17622318cbd1f6234bb261c4eace2c51/axmodel/owlv2_text_4cls_640.axmodel",
+      "verifiedHashes": {
+        "sha256": "013f66d43bc1a73bcb9f8ff04d1ac46ada7b26be577158b4d6e932f14039e347",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "run_split_owlv2_full_demo.py",
+      "size": 9476,
+      "url": "https://huggingface.co/AXERA-TECH/OWLViT2/resolve/c8eab07c17622318cbd1f6234bb261c4eace2c51/run_split_owlv2_full_demo.py",
+      "verifiedHashes": {
+        "sha256": "32486d887a86fb0b012992df18c62e1563e4ee45c4dde0a30fbef7d3e7f337fc",
+        "gitBlob": "aecdbba7520e8141de07e8fe64f6a4fcf2ccaa98"
+      }
+    },
+    {
+      "path": "run_split_owlv2_full_demo_ax.py",
+      "size": 8761,
+      "url": "https://huggingface.co/AXERA-TECH/OWLViT2/resolve/c8eab07c17622318cbd1f6234bb261c4eace2c51/run_split_owlv2_full_demo_ax.py",
+      "verifiedHashes": {
+        "sha256": "2cdbfb239a9da5bf243b26edd65991cea7bd3c31b6b4ec4bad49bf141ed9127b",
+        "gitBlob": "061cb0076dda2c858b3f8aec789bb4d036805c74"
+      }
+    },
+    {
+      "path": "split_4cls/owlv2_image_4cls.onnx",
+      "size": 357161042,
+      "url": "https://huggingface.co/AXERA-TECH/OWLViT2/resolve/c8eab07c17622318cbd1f6234bb261c4eace2c51/split_4cls/owlv2_image_4cls.onnx",
+      "verifiedHashes": {
+        "sha256": "033e0ab464d99d8f4a8dc5e26143c0a84450df676ce1ac1c5fc22e20efa2370f",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "split_4cls/owlv2_post_4cls.onnx",
+      "size": 1585050,
+      "url": "https://huggingface.co/AXERA-TECH/OWLViT2/resolve/c8eab07c17622318cbd1f6234bb261c4eace2c51/split_4cls/owlv2_post_4cls.onnx",
+      "verifiedHashes": {
+        "sha256": "a04bdbbcf39c8a6b710cb294e9aceecec79c5d52210e029050a6fd4ed12ceee4",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "split_4cls/owlv2_text_4cls.onnx",
+      "size": 253748497,
+      "url": "https://huggingface.co/AXERA-TECH/OWLViT2/resolve/c8eab07c17622318cbd1f6234bb261c4eace2c51/split_4cls/owlv2_text_4cls.onnx",
+      "verifiedHashes": {
+        "sha256": "658ba7dc954dcece6c49cf6fd521d681a085e7ddbfe2d68e9a59a5e452b43c98",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "test_img/000000039769.jpg",
+      "size": 173131,
+      "url": "https://huggingface.co/AXERA-TECH/OWLViT2/resolve/c8eab07c17622318cbd1f6234bb261c4eace2c51/test_img/000000039769.jpg",
+      "verifiedHashes": {
+        "sha256": "dea9e7ef97386345f7cff32f9055da4982da5471c48d575146c796ab4563b04e",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "test_img/ssd_horse.jpg",
+      "size": 123072,
+      "url": "https://huggingface.co/AXERA-TECH/OWLViT2/resolve/c8eab07c17622318cbd1f6234bb261c4eace2c51/test_img/ssd_horse.jpg",
+      "verifiedHashes": {
+        "sha256": "ed22f6b4c8c33e50e391e089ede14e8fa9402c623b09dbcf010e804770698fbb",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "test_img/test.jpg",
+      "size": 324944,
+      "url": "https://huggingface.co/AXERA-TECH/OWLViT2/resolve/c8eab07c17622318cbd1f6234bb261c4eace2c51/test_img/test.jpg",
+      "verifiedHashes": {
+        "sha256": "e7c4b752ef447bfec409888cea8709be15c01d0f6bf91bd16b7762deb90950dc",
+        "gitBlob": null
+      }
+    }
+  ],
+  "runnerSha256": "aa13cad76cbf536bddba0512c1f86cf0c50275a687ca4facbcd03c27b8c812cb"
+}

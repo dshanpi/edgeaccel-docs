@@ -1,0 +1,55 @@
+{
+  "name": "edgeaccel-docs",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "docusaurus": "docusaurus",
+    "start": "docusaurus start",
+    "build": "docusaurus build",
+    "swizzle": "docusaurus swizzle",
+    "deploy": "docusaurus deploy",
+    "clear": "docusaurus clear",
+    "serve": "docusaurus serve",
+    "write-translations": "docusaurus write-translations",
+    "write-heading-ids": "docusaurus write-heading-ids",
+    "import:docs": "node scripts/import-docs.mjs",
+    "docs:catalog": "node scripts/generate-model-catalog.mjs",
+    "docs:models": "node scripts/generate-model-guides.mjs && node scripts/generate-model-catalog.mjs && node scripts/generate-task-guides.mjs",
+    "docs:stats": "node scripts/generate-doc-stats.mjs",
+    "docs:check": "node scripts/check-model-guides.mjs",
+    "prebuild": "npm run docs:models && npm run docs:resources && npm run docs:stats && npm run docs:check",
+    "docs:resources": "node scripts/generate-original-files.mjs"
+  },
+  "dependencies": {
+    "@docusaurus/core": "^3.10.2",
+    "@docusaurus/faster": "^3.10.2",
+    "@docusaurus/preset-classic": "^3.10.2",
+    "@docusaurus/theme-mermaid": "^3.10.2",
+    "@easyops-cn/docusaurus-search-local": "^0.52.2",
+    "@mdx-js/react": "^3.0.0",
+    "clsx": "^2.0.0",
+    "prism-react-renderer": "^2.3.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@docusaurus/module-type-aliases": "^3.10.2",
+    "@docusaurus/types": "^3.10.2",
+    "baseline-browser-mapping": "^2.9.19"
+  },
+  "browserslist": {
+    "production": [
+      ">0.5%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 3 chrome version",
+      "last 3 firefox version",
+      "last 5 safari version"
+    ]
+  },
+  "engines": {
+    "node": ">=20.0"
+  }
+}

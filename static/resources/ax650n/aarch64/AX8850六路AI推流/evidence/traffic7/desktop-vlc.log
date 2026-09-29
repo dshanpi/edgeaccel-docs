@@ -1,0 +1,5 @@
+()
+(<'Playing'>,)
+(<{'mpris:trackid': <objectpath '/org/videolan/vlc/playlist/4'>, 'xesam:url': <'http://127.0.0.1:8850/overview.ts'>, 'vlc:publisher': <'FFmpeg'>, 'vlc:publisher': <5>}>,)
+LISTEN 0      128          0.0.0.0:8554      0.0.0.0:*    users:(("six_app",pid=63471,fd=12))                      
+LISTEN 0      5          127.0.0.1:8850      0.0.0.0:*    users:(("python3",pid=63479,fd=3))                       

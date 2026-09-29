@@ -1,0 +1,109 @@
+{
+  "modelId": "libsr.axera",
+  "repo": "AXERA-TECH/libsr.axera",
+  "revision": "7748f88f9f6dd8e536f2db920ba76822826fd52a",
+  "complete": true,
+  "files": [
+    {
+      "path": "README.md",
+      "size": 567,
+      "url": "https://huggingface.co/AXERA-TECH/libsr.axera/resolve/7748f88f9f6dd8e536f2db920ba76822826fd52a/README.md",
+      "verifiedHashes": {
+        "sha256": "37da4b9ba83712dd7dc64b32c382ca878ec74d6b1358accf102d7c0f3e8edc32",
+        "gitBlob": "2c661711de9b27fd75bd551ee8a18c4901918697"
+      }
+    },
+    {
+      "path": "Images/cat.jpg",
+      "size": 140391,
+      "url": "https://huggingface.co/AXERA-TECH/libsr.axera/resolve/7748f88f9f6dd8e536f2db920ba76822826fd52a/Images/cat.jpg",
+      "verifiedHashes": {
+        "sha256": "59b67bce343d435cb8f79b6abefc6eecc79924abcda6e7c7e39f8173bb932bc1",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "edsr_x2_128.axmodel",
+      "size": 1469507,
+      "url": "https://huggingface.co/AXERA-TECH/libsr.axera/resolve/7748f88f9f6dd8e536f2db920ba76822826fd52a/edsr_x2_128.axmodel",
+      "verifiedHashes": {
+        "sha256": "77997756612342ed8e422be4c47bbe9bf04511bdc5483d3d953d188e5018ddb9",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "lib/aarch64/libsr.so",
+      "size": 3274264,
+      "url": "https://huggingface.co/AXERA-TECH/libsr.axera/resolve/7748f88f9f6dd8e536f2db920ba76822826fd52a/lib/aarch64/libsr.so",
+      "verifiedHashes": {
+        "sha256": "374146847484b9c421e5d85688122c93f5389edccaf195851d3a7d15c3c0fd8c",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "lib/pyaxdev.py",
+      "size": 5038,
+      "url": "https://huggingface.co/AXERA-TECH/libsr.axera/resolve/7748f88f9f6dd8e536f2db920ba76822826fd52a/lib/pyaxdev.py",
+      "verifiedHashes": {
+        "sha256": "d4280c4a1a50ab239011dab1099b928863ab773f6be66c6b1fe8c8749c126848",
+        "gitBlob": "6d46caa202b80622c73f46e4429101492e14e110"
+      }
+    },
+    {
+      "path": "lib/pysr.py",
+      "size": 2115,
+      "url": "https://huggingface.co/AXERA-TECH/libsr.axera/resolve/7748f88f9f6dd8e536f2db920ba76822826fd52a/lib/pysr.py",
+      "verifiedHashes": {
+        "sha256": "7193e50f6528fe5ae7cc3dbd5b7cb93002db7cdb6e936fdc1cb4c6a834f9f37c",
+        "gitBlob": "257e15a8e1a0cb7e626b8a2408f4968e0e108f5c"
+      }
+    },
+    {
+      "path": "lib/example.py",
+      "size": 1329,
+      "url": "https://huggingface.co/AXERA-TECH/libsr.axera/resolve/7748f88f9f6dd8e536f2db920ba76822826fd52a/lib/example.py",
+      "verifiedHashes": {
+        "sha256": "4f35414026118756e1ffe105a4a1e1af42319bfe54a61af98b67fd3b0d8c5fec",
+        "gitBlob": "84b9e9add5b2011dbbee0bb61f78234e8c79886f"
+      }
+    },
+    {
+      "path": "lib/gradio_example.py",
+      "size": 2088,
+      "url": "https://huggingface.co/AXERA-TECH/libsr.axera/resolve/7748f88f9f6dd8e536f2db920ba76822826fd52a/lib/gradio_example.py",
+      "verifiedHashes": {
+        "sha256": "8725c68176becbd2bee9fbc1c043e2dfb4a043e5653117ff7f84588c819a6887",
+        "gitBlob": "556c696fb39698495d68762c78c55c30c6d69e0e"
+      }
+    },
+    {
+      "path": "lib/requirements.txt",
+      "size": 6,
+      "url": "https://huggingface.co/AXERA-TECH/libsr.axera/resolve/7748f88f9f6dd8e536f2db920ba76822826fd52a/lib/requirements.txt",
+      "verifiedHashes": {
+        "sha256": "95c8ff5c934e2250d15af22f9056a1ab6888f5536b6ca9995dd80969a353876e",
+        "gitBlob": "da0ab4e2cbfc1ce8de080f898acca598ac36ad61"
+      }
+    },
+    {
+      "path": "include/ax_sr.h",
+      "size": 723,
+      "url": "https://huggingface.co/AXERA-TECH/libsr.axera/resolve/7748f88f9f6dd8e536f2db920ba76822826fd52a/include/ax_sr.h",
+      "verifiedHashes": {
+        "sha256": "b39263b4dba50c3573f9e462be4664b38acae915a19b118a6c6c01fb71b36170",
+        "gitBlob": "1b41a87263bdfe383718eb60f0a777650ee79143"
+      }
+    },
+    {
+      "path": "include/ax_devices.h",
+      "size": 3696,
+      "url": "https://huggingface.co/AXERA-TECH/libsr.axera/resolve/7748f88f9f6dd8e536f2db920ba76822826fd52a/include/ax_devices.h",
+      "verifiedHashes": {
+        "sha256": "de7caa67f472e6c66808bab61fd714837bf841c617660bfb82f7be73f7b3a58d",
+        "gitBlob": "20e4ddeedf10daa065aebb4d4763d6ad74a238ac"
+      }
+    }
+  ],
+  "runnerSha256": "7680a9c327642869d9573c4c24d210e673bece7db5a9d76314ff0a606641eaf3",
+  "evaluatorSha256": "0918f5718fd06abf912e5c229468e839354ea7ad09be44572d768f9a93763e41"
+}

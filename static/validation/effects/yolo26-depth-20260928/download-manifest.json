@@ -1,0 +1,162 @@
+{
+  "modelId": "Yolo26-Depth",
+  "repo": "AXERA-TECH/Yolo26-Depth",
+  "revision": "4c12e1d456fd05bd8ffa5a8e272916e1d748dcfb",
+  "complete": true,
+  "files": [
+    {
+      "path": "README.md",
+      "size": 4918,
+      "url": "https://huggingface.co/AXERA-TECH/Yolo26-Depth/resolve/4c12e1d456fd05bd8ffa5a8e272916e1d748dcfb/README.md",
+      "verifiedHashes": {
+        "sha256": "443c381f712a2a499e23dabd68c6723cb1ee2bc9ca4ed90d37b04a67e9a8e710",
+        "gitBlob": "0dc21ebc60a04e452c3dffd980433e25cea3552d"
+      }
+    },
+    {
+      "path": "requirements.txt",
+      "size": 149,
+      "url": "https://huggingface.co/AXERA-TECH/Yolo26-Depth/resolve/4c12e1d456fd05bd8ffa5a8e272916e1d748dcfb/requirements.txt",
+      "verifiedHashes": {
+        "sha256": "d7d87463da11e60189ad94503d351ac1deb528965b203507e66e94d419945a73",
+        "gitBlob": "caed2b7170443b1fd1690b3c7bd8a5ddb5d47e6c"
+      }
+    },
+    {
+      "path": "infer_depth.py",
+      "size": 10321,
+      "url": "https://huggingface.co/AXERA-TECH/Yolo26-Depth/resolve/4c12e1d456fd05bd8ffa5a8e272916e1d748dcfb/infer_depth.py",
+      "verifiedHashes": {
+        "sha256": "fc3fecb7093d77ccb49c6036fe8eccd4d0f8f56d3a7832818f3d394077ddda17",
+        "gitBlob": "c64b806b89763360e04995038dff59bf89252f4e"
+      }
+    },
+    {
+      "path": "fold_depth_log.py",
+      "size": 3474,
+      "url": "https://huggingface.co/AXERA-TECH/Yolo26-Depth/resolve/4c12e1d456fd05bd8ffa5a8e272916e1d748dcfb/fold_depth_log.py",
+      "verifiedHashes": {
+        "sha256": "7766b52dd36321a4f6b0f464e5063a930377c665895627a3ed6a05660785f77a",
+        "gitBlob": "37b09949c9016e43c52d703b3c849b6e4c213887"
+      }
+    },
+    {
+      "path": "ax8850n/config.json",
+      "size": 1413,
+      "url": "https://huggingface.co/AXERA-TECH/Yolo26-Depth/resolve/4c12e1d456fd05bd8ffa5a8e272916e1d748dcfb/ax8850n/config.json",
+      "verifiedHashes": {
+        "sha256": "0635ce06b67f2b7e8d2eab1f4fe42d3d1c60bea33955d98cbae3b6ff2cb9abeb",
+        "gitBlob": "5a635df4270073351808a357b85140f3bf881259"
+      }
+    },
+    {
+      "path": "asserts/bus.jpg",
+      "size": 487438,
+      "url": "https://huggingface.co/AXERA-TECH/Yolo26-Depth/resolve/4c12e1d456fd05bd8ffa5a8e272916e1d748dcfb/asserts/bus.jpg",
+      "verifiedHashes": {
+        "sha256": "33b198a1d2839bb9ac4c65d61f9e852196793cae9a0781360859425f6022b69c",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "asserts/ssd_car.jpg",
+      "size": 50535,
+      "url": "https://huggingface.co/AXERA-TECH/Yolo26-Depth/resolve/4c12e1d456fd05bd8ffa5a8e272916e1d748dcfb/asserts/ssd_car.jpg",
+      "verifiedHashes": {
+        "sha256": "92d459a39a9eef03956257cf9fec84114d9e5df8fb9c0662fb257488cdd4f365",
+        "gitBlob": "1bf000c13054c6c701f4d4ec92df4b3a70a16ff2"
+      }
+    },
+    {
+      "path": "ax8850n/yolo26n-depth_w8a8_mix.axmodel",
+      "size": 6003543,
+      "url": "https://huggingface.co/AXERA-TECH/Yolo26-Depth/resolve/4c12e1d456fd05bd8ffa5a8e272916e1d748dcfb/ax8850n/yolo26n-depth_w8a8_mix.axmodel",
+      "verifiedHashes": {
+        "sha256": "4f099b20be60f028a575c14f9bd2acab4595600584d4a08898e672be6368ec85",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "ax8850n/yolo26s-depth_w8a8_mix.axmodel",
+      "size": 13260663,
+      "url": "https://huggingface.co/AXERA-TECH/Yolo26-Depth/resolve/4c12e1d456fd05bd8ffa5a8e272916e1d748dcfb/ax8850n/yolo26s-depth_w8a8_mix.axmodel",
+      "verifiedHashes": {
+        "sha256": "23b5aa9455f67c7611f34d5af047d5406cefa62f52191adfe4ed49d089e6e055",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "ax8850n/yolo26m-depth_w8a8_mix.axmodel",
+      "size": 23973765,
+      "url": "https://huggingface.co/AXERA-TECH/Yolo26-Depth/resolve/4c12e1d456fd05bd8ffa5a8e272916e1d748dcfb/ax8850n/yolo26m-depth_w8a8_mix.axmodel",
+      "verifiedHashes": {
+        "sha256": "adab90782082ee8142575dcf564e979aa561e9390699a1ee95070cc04f542a89",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "ax8850n/yolo26l-depth_w8a8_mix.axmodel",
+      "size": 28967943,
+      "url": "https://huggingface.co/AXERA-TECH/Yolo26-Depth/resolve/4c12e1d456fd05bd8ffa5a8e272916e1d748dcfb/ax8850n/yolo26l-depth_w8a8_mix.axmodel",
+      "verifiedHashes": {
+        "sha256": "c4f68a0cf54f3707f3368cf306dcdbb77815b63bf8a9d9683ded67b298f2665d",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "ax8850n/yolo26x-depth_w8a8_mix.axmodel",
+      "size": 58979911,
+      "url": "https://huggingface.co/AXERA-TECH/Yolo26-Depth/resolve/4c12e1d456fd05bd8ffa5a8e272916e1d748dcfb/ax8850n/yolo26x-depth_w8a8_mix.axmodel",
+      "verifiedHashes": {
+        "sha256": "93f8c1e55f4d2f6e6f8059fa0962fab97b0580dd53a59fa9f5ab53a8883cd263",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "onnx/yolo26n-depth.onnx",
+      "size": 20772760,
+      "url": "https://huggingface.co/AXERA-TECH/Yolo26-Depth/resolve/4c12e1d456fd05bd8ffa5a8e272916e1d748dcfb/onnx/yolo26n-depth.onnx",
+      "verifiedHashes": {
+        "sha256": "6583ec12521a7e75eacb209db63393158c7e0e772cda9fdad8c8c0fe74af2a1e",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "onnx/yolo26s-depth.onnx",
+      "size": 48216222,
+      "url": "https://huggingface.co/AXERA-TECH/Yolo26-Depth/resolve/4c12e1d456fd05bd8ffa5a8e272916e1d748dcfb/onnx/yolo26s-depth.onnx",
+      "verifiedHashes": {
+        "sha256": "8814f4be36d51f0fdafae8c0528378ecf20ba6a1c671fc9c77f4fe1675189765",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "onnx/yolo26m-depth.onnx",
+      "size": 88431991,
+      "url": "https://huggingface.co/AXERA-TECH/Yolo26-Depth/resolve/4c12e1d456fd05bd8ffa5a8e272916e1d748dcfb/onnx/yolo26m-depth.onnx",
+      "verifiedHashes": {
+        "sha256": "000d863c9ce93830b80ad33980a68b2f0f2819ea49cdc353e5887505f593bf97",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "onnx/yolo26l-depth.onnx",
+      "size": 106082163,
+      "url": "https://huggingface.co/AXERA-TECH/Yolo26-Depth/resolve/4c12e1d456fd05bd8ffa5a8e272916e1d748dcfb/onnx/yolo26l-depth.onnx",
+      "verifiedHashes": {
+        "sha256": "85c2687e25a796b0686668de2f49c9cfce09f62075323bca86acc1acaf086963",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "onnx/yolo26x-depth.onnx",
+      "size": 223381647,
+      "url": "https://huggingface.co/AXERA-TECH/Yolo26-Depth/resolve/4c12e1d456fd05bd8ffa5a8e272916e1d748dcfb/onnx/yolo26x-depth.onnx",
+      "verifiedHashes": {
+        "sha256": "1ef9864093111f6ff1b1255e83d0c27cf6cdc0baf805d867e5b249ef23e681b6",
+        "gitBlob": null
+      }
+    }
+  ],
+  "runnerSha256": "621a93ff3887a7a9aa4e4772ea3708ed4ec09a8fc5b30310741ee0581b0f8776"
+}

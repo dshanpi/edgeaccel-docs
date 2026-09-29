@@ -1,0 +1,117 @@
+{
+  "modelId": "LibCLIP",
+  "repo": "AXERA-TECH/LibCLIP",
+  "revision": "ddfe0d68e4197b224358bc658d052f626aec7220",
+  "complete": true,
+  "files": [
+    {
+      "path": "README.md",
+      "size": 8208,
+      "url": "https://huggingface.co/AXERA-TECH/LibCLIP/resolve/ddfe0d68e4197b224358bc658d052f626aec7220/README.md",
+      "verifiedHashes": {
+        "sha256": "dc3e924daff10cc60a7ebab8d823b63b5d08674f8c3d53ee5fb75226faaa81e6",
+        "gitBlob": "615e8fe754bd43aa68acce75fe3062d64e6c0c2a"
+      }
+    },
+    {
+      "path": "cnclip/cn_vocab.txt",
+      "size": 109540,
+      "url": "https://huggingface.co/AXERA-TECH/LibCLIP/resolve/ddfe0d68e4197b224358bc658d052f626aec7220/cnclip/cn_vocab.txt",
+      "verifiedHashes": {
+        "sha256": "45bbac6b341c319adc98a532532882e91a9cefc0329aa57bac9ae761c27b291c",
+        "gitBlob": "ca4f9781030019ab9b253c6dcb8c7878b6dc87a5"
+      }
+    },
+    {
+      "path": "cnclip/cnclip_vit_l14_336px_text_u16.axmodel",
+      "size": 127341129,
+      "url": "https://huggingface.co/AXERA-TECH/LibCLIP/resolve/ddfe0d68e4197b224358bc658d052f626aec7220/cnclip/cnclip_vit_l14_336px_text_u16.axmodel",
+      "verifiedHashes": {
+        "sha256": "6f33786ab988ca22dbc883c9fa6ebfa842a425445e4dac945c30069a6d9d5cf8",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "cnclip/cnclip_vit_l14_336px_vision_u16u8.axmodel",
+      "size": 334708454,
+      "url": "https://huggingface.co/AXERA-TECH/LibCLIP/resolve/ddfe0d68e4197b224358bc658d052f626aec7220/cnclip/cnclip_vit_l14_336px_vision_u16u8.axmodel",
+      "verifiedHashes": {
+        "sha256": "6278e99001c198082b59219b163f7136d3049bca223be9176678ac6031348cde",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "coco_1000.tar",
+      "size": 163112960,
+      "url": "https://huggingface.co/AXERA-TECH/LibCLIP/resolve/ddfe0d68e4197b224358bc658d052f626aec7220/coco_1000.tar",
+      "verifiedHashes": {
+        "sha256": "f3e18a198658270e19ced079de7a404e3478e69c2ef94fb47c87ddf056e6a541",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "install/lib/axcl_aarch64/libclip.so",
+      "size": 4310200,
+      "url": "https://huggingface.co/AXERA-TECH/LibCLIP/resolve/ddfe0d68e4197b224358bc658d052f626aec7220/install/lib/axcl_aarch64/libclip.so",
+      "verifiedHashes": {
+        "sha256": "5e097744bbd20a6c9fb43724b362579000fbc9117ffee212ad54dc66bf377f69",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "install/include/clip.h",
+      "size": 6200,
+      "url": "https://huggingface.co/AXERA-TECH/LibCLIP/resolve/ddfe0d68e4197b224358bc658d052f626aec7220/install/include/clip.h",
+      "verifiedHashes": {
+        "sha256": "259dc75206792259ce09db717f9b928b28c180d4fe33d1abc470dfbde93cfbe8",
+        "gitBlob": "b1fb478c4d36a4429acf7401d90136f92f79da23"
+      }
+    },
+    {
+      "path": "pyclip/pyaxdev.py",
+      "size": 5085,
+      "url": "https://huggingface.co/AXERA-TECH/LibCLIP/resolve/ddfe0d68e4197b224358bc658d052f626aec7220/pyclip/pyaxdev.py",
+      "verifiedHashes": {
+        "sha256": "ca653cd9dd2530a7430282d770d0e8d8816ff0ffec503160c0c27553085ea5b6",
+        "gitBlob": "46774893ecee7061e8bcbfc862de8c2ef0946b4c"
+      }
+    },
+    {
+      "path": "pyclip/pyclip.py",
+      "size": 5824,
+      "url": "https://huggingface.co/AXERA-TECH/LibCLIP/resolve/ddfe0d68e4197b224358bc658d052f626aec7220/pyclip/pyclip.py",
+      "verifiedHashes": {
+        "sha256": "2992fef9791b5d565d67c4e5d04bfbf50eaf17c9a1c9d3417332c89979343845",
+        "gitBlob": "901a8ed13a063073162b8556ae3e5cb81ca7ff49"
+      }
+    },
+    {
+      "path": "pyclip/requirements.txt",
+      "size": 32,
+      "url": "https://huggingface.co/AXERA-TECH/LibCLIP/resolve/ddfe0d68e4197b224358bc658d052f626aec7220/pyclip/requirements.txt",
+      "verifiedHashes": {
+        "sha256": "f4d8b61d6b6848e3c317755005ebbeb025a48d9e26546143a603e0fbf6e062e8",
+        "gitBlob": "5063ade60410d788065d9227fba7fd674e118c48"
+      }
+    },
+    {
+      "path": "pyclip/gradio_example.py",
+      "size": 3435,
+      "url": "https://huggingface.co/AXERA-TECH/LibCLIP/resolve/ddfe0d68e4197b224358bc658d052f626aec7220/pyclip/gradio_example.py",
+      "verifiedHashes": {
+        "sha256": "129be6cba5a19fd075c3d6040ec8b669c1d195246f10fd2080f0c664256f7d85",
+        "gitBlob": "eba9b8adc2888353f6049d56f14801799ff90e36"
+      }
+    },
+    {
+      "path": "install/examples/test_match_by_text.cpp",
+      "size": 4299,
+      "url": "https://huggingface.co/AXERA-TECH/LibCLIP/resolve/ddfe0d68e4197b224358bc658d052f626aec7220/install/examples/test_match_by_text.cpp",
+      "verifiedHashes": {
+        "sha256": "fd1473f2282a0f995280074d63ee97bf9711adaeec95a4f1f9ea1eb53c497379",
+        "gitBlob": "b1e428ea3e8dacbc5ee9fa28192f7e183441939c"
+      }
+    }
+  ],
+  "runnerSha256": "9d1bc85670c027c22e1f1a992f37bba108be3c4cd7b6d062ed2c0ee4c913b527"
+}

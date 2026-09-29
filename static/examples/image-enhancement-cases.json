@@ -1,0 +1,281 @@
+[
+  {
+    "modelId": "ImageDehazing",
+    "name": "aod-net",
+    "entry": "AOD-Net/python/axmodel_infer.py",
+    "weight": "AOD-Net/model_convert/axmodel/aodnet_1x3x480x640_sim.axmodel",
+    "weights": [
+      "AOD-Net/model_convert/axmodel/aodnet_1x3x480x640_sim.axmodel"
+    ],
+    "input": "AOD-Net/pic/canyon2.jpg",
+    "args": [
+      "--axmodel",
+      "{weight}",
+      "--input_image",
+      "{input}",
+      "--output",
+      "{out}/comparison.png"
+    ],
+    "patches": []
+  },
+  {
+    "modelId": "ImageDehazing",
+    "name": "dehazeformer",
+    "entry": "DehazeFormer/python/axmodel_infer.py",
+    "weight": "DehazeFormer/model_convert/axmodel/dehazeformer-t-512-constant.axmodel",
+    "weights": [
+      "DehazeFormer/model_convert/axmodel/dehazeformer-t-512-constant.axmodel"
+    ],
+    "input": "DehazeFormer/pic/00000_0_0.1800.png",
+    "args": [
+      "--axmodel",
+      "{weight}",
+      "--input",
+      "{input}",
+      "--output",
+      "{out}/comparison.png"
+    ],
+    "patches": []
+  },
+  {
+    "modelId": "ImageDehazing",
+    "name": "ffa-net",
+    "entry": "FFA-Net/python/axmodel_infer.py",
+    "weight": "FFA-Net/model_convert/axmodel/FFANet.axmodel",
+    "weights": [
+      "FFA-Net/model_convert/axmodel/FFANet.axmodel"
+    ],
+    "input": "FFA-Net/pic/nh(4).jpg",
+    "args": [
+      "--axmodel",
+      "{weight}",
+      "--input",
+      "{input}",
+      "--output",
+      "{out}/comparison.png"
+    ],
+    "patches": []
+  },
+  {
+    "modelId": "ImageDehazing",
+    "name": "griddehazenet",
+    "entry": "GridDehazeNet/python/axmodel_infer.py",
+    "weight": "GridDehazeNet/model_convert/axmodel/GridDehazeNet.axmodel",
+    "weights": [
+      "GridDehazeNet/model_convert/axmodel/GridDehazeNet.axmodel"
+    ],
+    "input": "GridDehazeNet/pic/0001_0.8_0.2.jpg",
+    "args": [
+      "-axmodel",
+      "{weight}",
+      "-input",
+      "{input}",
+      "-output",
+      "{out}/comparison.png"
+    ],
+    "patches": []
+  },
+  {
+    "modelId": "ImageDehazing",
+    "name": "lightdehazenet",
+    "entry": "LightDehazeNet/python/axmodel_infer.py",
+    "weight": "LightDehazeNet/model_convert/axmodel/LightDehazeNet.axmodel",
+    "weights": [
+      "LightDehazeNet/model_convert/axmodel/LightDehazeNet.axmodel"
+    ],
+    "input": "LightDehazeNet/pic/outdoor_natural/nh(5).png",
+    "args": [
+      "--axmodel",
+      "{weight}",
+      "--image",
+      "{input}",
+      "--output",
+      "{out}/comparison.png"
+    ],
+    "patches": []
+  },
+  {
+    "modelId": "ImageDehazing",
+    "name": "mixdehazenet",
+    "entry": "MixDehazeNet/python/axmodel_infer.py",
+    "weight": "MixDehazeNet/model_convert/axmodel/MixDehazeNet.axmodel",
+    "weights": [
+      "MixDehazeNet/model_convert/axmodel/MixDehazeNet.axmodel"
+    ],
+    "input": "MixDehazeNet/pic/0003_0.8_0.2.jpg",
+    "args": [
+      "--axmodel",
+      "{weight}",
+      "--image",
+      "{input}",
+      "--output",
+      "{out}/comparison.png"
+    ],
+    "patches": []
+  },
+  {
+    "modelId": "ImageDehazing",
+    "name": "gcanet",
+    "entry": "GCANet/python/axmodel_infer.py",
+    "weight": "GCANet/model_convert/axmodel/GCANet_U16.axmodel",
+    "weights": [
+      "GCANet/model_convert/axmodel/GCANet_U16.axmodel"
+    ],
+    "input": "GCANet/pic/0051_0.8_0.2_input.png",
+    "args": [
+      "--axmodel",
+      "{weight}",
+      "--indir",
+      "{inputdir}",
+      "--outdir",
+      "{out}/outputs"
+    ],
+    "patches": []
+  },
+  {
+    "modelId": "LowLightImageEnhancement",
+    "name": "zero-dce",
+    "entry": "Zero-DCE/python/axmodel_infer.py",
+    "weight": "Zero-DCE/model_convert/axmodel/Zero-DCE.axmodel",
+    "weights": [
+      "Zero-DCE/model_convert/axmodel/Zero-DCE.axmodel"
+    ],
+    "input": "Zero-DCE/pic/10.jpg",
+    "args": [
+      "--axmodel",
+      "{weight}",
+      "--image",
+      "{input}",
+      "--output",
+      "{out}/comparison.png"
+    ],
+    "patches": []
+  },
+  {
+    "modelId": "LowLightImageEnhancement",
+    "name": "zero-dcepp",
+    "entry": "Zero-DCE++/python/axmodel_infer.py",
+    "weight": "Zero-DCE++/model_convert/axmodel/zerodcepp_512_sf8.axmodel",
+    "weights": [
+      "Zero-DCE++/model_convert/axmodel/zerodcepp_512_sf8.axmodel"
+    ],
+    "input": "Zero-DCE++/pic/101_3_.png",
+    "args": [
+      "--axmodel",
+      "{weight}",
+      "--input",
+      "{input}",
+      "--output",
+      "{out}/comparison.png"
+    ],
+    "patches": []
+  },
+  {
+    "modelId": "LowLightImageEnhancement",
+    "name": "sci",
+    "entry": "SCI/python/axmodel_infer.py",
+    "weight": "SCI/model_convert/axmodel/SCI_TPAMI_600_400.axmodel",
+    "weights": [
+      "SCI/model_convert/axmodel/SCI_TPAMI_600_400.axmodel"
+    ],
+    "input": "SCI/pic/00001.png",
+    "args": [],
+    "patches": [
+      [
+        "MODEL_PATH = \"./SCI_TPAMI_600_400.axmodel\"",
+        "MODEL_PATH = {weight_literal}"
+      ],
+      [
+        "IMAGE_PATH = \"./pic/00001.png\"",
+        "IMAGE_PATH = {input_literal}"
+      ],
+      [
+        "OUTPUT_PATH = \"./axmodel_res.png\"",
+        "OUTPUT_PATH = {output_literal}"
+      ]
+    ]
+  },
+  {
+    "modelId": "LowLightImageEnhancement",
+    "name": "retinexformer",
+    "entry": "Retinexformer/python/axmodel_infer.py",
+    "weight": "Retinexformer/model_convert/axmodel/Retinexformer_224_224.axmodel",
+    "weights": [
+      "Retinexformer/model_convert/axmodel/Retinexformer_224_224.axmodel"
+    ],
+    "input": "Retinexformer/pic/1.png",
+    "args": [
+      "--input",
+      "{input}"
+    ],
+    "patches": [
+      [
+        "AXMODEL_PATH = 'Retinexformer_224_224.axmodel'",
+        "AXMODEL_PATH = {weight_literal}"
+      ]
+    ]
+  },
+  {
+    "modelId": "DeOldify",
+    "name": "deoldify-stable",
+    "entry": "python/run_axmodel.py",
+    "weight": "model/colorize_stable.axmodel",
+    "weights": [
+      "model/colorize_stable.axmodel"
+    ],
+    "input": "image/1850Geography.jpg",
+    "args": [
+      "--model_path",
+      "{weight}",
+      "--input_path",
+      "{input}",
+      "--output_path",
+      "{out}/output.jpg"
+    ],
+    "patches": []
+  },
+  {
+    "modelId": "DeOldify",
+    "name": "deoldify-artistic",
+    "entry": "python/run_axmodel.py",
+    "weight": "model/colorize_artistic.axmodel",
+    "weights": [
+      "model/colorize_artistic.axmodel"
+    ],
+    "input": "image/1850Geography.jpg",
+    "args": [
+      "--model_path",
+      "{weight}",
+      "--input_path",
+      "{input}",
+      "--output_path",
+      "{out}/output.jpg"
+    ],
+    "patches": []
+  },
+  {
+    "modelId": "CodeFormer",
+    "name": "codeformer-pipeline",
+    "entry": "python/run_whole_image.py",
+    "weight": "model/codeformer.axmodel",
+    "weights": [
+      "model/codeformer.axmodel",
+      "model/realesrgan-x2.axmodel",
+      "model/yolov5l-face.axmodel"
+    ],
+    "input": "images/image/02.png",
+    "args": [
+      "--input_path",
+      "{input}",
+      "--output_path",
+      "{out}/outputs",
+      "--detect_model",
+      "{model}/model/yolov5l-face.axmodel",
+      "--restore_model",
+      "{weight}",
+      "--bg_model",
+      "{model}/model/realesrgan-x2.axmodel"
+    ],
+    "patches": []
+  }
+]

@@ -1,0 +1,96 @@
+{
+  "output_fps": 10,
+  "overview": "rtsp://0.0.0.0:8554/overview",
+  "channels": [
+    {
+      "name": "pcd",
+      "kind": "pcd",
+      "title": "PCD + tracking",
+      "input": "/home/baiwen/ax-pipeline/video/1080p/traffic.mp4",
+      "source_name": "traffic.mp4",
+      "model": "/home/baiwen/ax-pipeline/pcd.axmodel",
+      "output": "rtsp://0.0.0.0:8554/pcd",
+      "plugin": "/home/baiwen/ax-pipeline/ax_pipeline_axcl-aarch64/lib/plugins/libax_plugin_pcd.so",
+      "plugin_options": {
+        "model_path": "/home/baiwen/ax-pipeline/pcd.axmodel",
+        "conf_threshold": 0.3,
+        "enable_tracking": false,
+        "max_det": 50,
+        "num_classes": 3,
+        "strides": [
+          16,
+          32
+        ]
+      }
+    },
+    {
+      "name": "vehicle",
+      "kind": "vehicle",
+      "title": "YOLOv8s road objects",
+      "input": "/home/baiwen/ax-pipeline/video/1080p/traffic4.mp4",
+      "source_name": "traffic4.mp4",
+      "model": "/home/baiwen/ax-pipeline/six/models/vehicle.axmodel",
+      "output": "rtsp://0.0.0.0:8554/vehicle",
+      "plugin": "/home/baiwen/ax-pipeline/ax_pipeline_axcl-aarch64/lib/plugins/libax_plugin_yolov8_split.so",
+      "plugin_options": {
+        "model_path": "/home/baiwen/ax-pipeline/six/models/vehicle.axmodel",
+        "conf_threshold": 0.3,
+        "enable_tracking": false,
+        "max_det": 50
+      }
+    },
+    {
+      "name": "helmet",
+      "kind": "helmet",
+      "title": "Helmet / head / bike",
+      "input": "/home/baiwen/ax-pipeline/video/1080p/traffic3.mp4",
+      "source_name": "traffic3.mp4",
+      "model": "/home/baiwen/ax-pipeline/six/models/helmet.axmodel",
+      "output": "rtsp://0.0.0.0:8554/helmet",
+      "plugin": "/home/baiwen/ax-pipeline/ax_pipeline_axcl-aarch64/lib/plugins/libax_plugin_helmet.so",
+      "plugin_options": {
+        "model_path": "/home/baiwen/ax-pipeline/six/models/helmet.axmodel",
+        "conf_threshold": 0.3,
+        "enable_tracking": false,
+        "max_det": 50
+      }
+    },
+    {
+      "name": "depth",
+      "kind": "depth",
+      "title": "YOLO26n relative depth",
+      "input": "/home/baiwen/ax-pipeline/video/1080p/traffic2.mp4",
+      "source_name": "traffic2.mp4",
+      "model": "/home/baiwen/ax-pipeline/six/models/depth.axmodel",
+      "output": "rtsp://0.0.0.0:8554/depth"
+    },
+    {
+      "name": "seg",
+      "kind": "seg",
+      "title": "YOLO26n instance masks",
+      "input": "/home/baiwen/ax-pipeline/video/1080p/traffic5.mp4",
+      "source_name": "traffic5.mp4",
+      "model": "/home/baiwen/ax-pipeline/six/models/seg.axmodel",
+      "output": "rtsp://0.0.0.0:8554/seg"
+    },
+    {
+      "name": "count",
+      "kind": "count",
+      "title": "Vehicle line counting",
+      "input": "/home/baiwen/ax-pipeline/video/1080p/traffic6.mp4",
+      "source_name": "traffic6.mp4",
+      "model": "/home/baiwen/ax-pipeline/six/models/vehicle.axmodel",
+      "output": "rtsp://0.0.0.0:8554/count",
+      "plugin": "/home/baiwen/ax-pipeline/ax_pipeline_axcl-aarch64/lib/plugins/libax_plugin_yolov8_split.so",
+      "plugin_options": {
+        "model_path": "/home/baiwen/ax-pipeline/six/models/vehicle.axmodel",
+        "conf_threshold": 0.3,
+        "enable_tracking": false,
+        "max_det": 50
+      },
+      "line_x": 0.4,
+      "line_deadband": 0.015,
+      "source_loop_us": 12666464
+    }
+  ]
+}

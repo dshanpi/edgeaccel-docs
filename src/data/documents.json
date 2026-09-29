@@ -1,0 +1,158 @@
+[
+  {
+    "source": "AX650算力卡用户指南.md",
+    "id": "ax650n/user-guide",
+    "title": "AX650 算力卡用户指南",
+    "group": "guide"
+  },
+  {
+    "source": "aarch64/AX8850算力卡快速上手_aarch64.md",
+    "id": "ax650n/quick-start/arm64",
+    "title": "ARM64 快速上手",
+    "group": "platform"
+  },
+  {
+    "source": "Linux_x86/AX8850算力卡快速上手_Linux_x86_64.md",
+    "id": "ax650n/quick-start/linux-x86",
+    "title": "Linux x86_64 快速上手",
+    "group": "platform"
+  },
+  {
+    "source": "windows/AX8850算力卡快速上手_Windows.md",
+    "id": "ax650n/quick-start/windows",
+    "title": "Windows 快速上手",
+    "group": "platform"
+  },
+  {
+    "source": "aarch64/AX8850六路AI推流/使用说明.md",
+    "id": "ax650n/applications/six-streams/usage",
+    "title": "六路 AI 视频推流",
+    "group": "streams"
+  },
+  {
+    "source": "aarch64/AX8850六路AI推流/实施说明.md",
+    "id": "ax650n/applications/six-streams/implementation",
+    "title": "实施说明",
+    "group": "streams"
+  },
+  {
+    "source": "aarch64/AX8850六路AI推流/验证结果.md",
+    "id": "ax650n/applications/six-streams/validation",
+    "title": "验证结果",
+    "group": "streams"
+  },
+  {
+    "source": "aarch64/AX8850六路AI推流/帧率优化说明.md",
+    "id": "ax650n/applications/six-streams/frame-rate",
+    "title": "帧率优化说明",
+    "group": "streams"
+  },
+  {
+    "source": "aarch64/AX8850六路AI推流/推理优化说明.md",
+    "id": "ax650n/applications/six-streams/inference",
+    "title": "推理优化说明",
+    "group": "streams"
+  },
+  {
+    "source": "aarch64/AX8850六路AI推流/第四路替换与本地预览.md",
+    "id": "ax650n/applications/six-streams/local-preview",
+    "title": "第四路替换与本地预览",
+    "group": "streams"
+  },
+  {
+    "source": "aarch64/AX8850六路AI推流/VLC断流排查_20260918.md",
+    "id": "ax650n/applications/six-streams/vlc-troubleshooting",
+    "title": "VLC 断流排查",
+    "group": "streams"
+  },
+  {
+    "source": "Qwen3-VL-8B/部署与使用.md",
+    "id": "ax650n/applications/qwen3-vl/usage",
+    "title": "Qwen3-VL-8B 部署与使用",
+    "group": "qwen"
+  },
+  {
+    "source": "Qwen3-VL-8B/验证记录.md",
+    "id": "ax650n/applications/qwen3-vl/validation",
+    "title": "Qwen3-VL-8B 验证记录",
+    "group": "qwen"
+  },
+  {
+    "source": "aarch64/tmp/AX8850-RK3576-Headers-20260916/安装说明.md",
+    "id": "ax650n/reference/kernel-headers/install",
+    "title": "RK3576 内核头安装说明",
+    "group": "headers"
+  },
+  {
+    "source": "aarch64/tmp/AX8850-RK3576-Headers-20260916/验证记录/修复说明.md",
+    "id": "ax650n/reference/kernel-headers/fixes",
+    "title": "内核头修复与验证",
+    "group": "headers"
+  },
+  {
+    "source": "aarch64/AX8850六路AI推流/历史版本/traffic7替换前_20260916/使用说明.md",
+    "id": "ax650n/archive/3993a9e132ce",
+    "title": "traffic7替换前_20260916 · 使用说明",
+    "group": "archive"
+  },
+  {
+    "source": "aarch64/AX8850六路AI推流/历史版本/帧率优化前_20260916/使用说明.md",
+    "id": "ax650n/archive/a29e83beff47",
+    "title": "帧率优化前_20260916 · 使用说明",
+    "group": "archive"
+  },
+  {
+    "source": "aarch64/AX8850六路AI推流/历史版本/帧率优化前_20260916/实施说明.md",
+    "id": "ax650n/archive/8c1cefbbc4fb",
+    "title": "帧率优化前_20260916 · 实施说明",
+    "group": "archive"
+  },
+  {
+    "source": "aarch64/AX8850六路AI推流/历史版本/帧率优化前_20260916/验证结果.md",
+    "id": "ax650n/archive/cb66e3eecdc7",
+    "title": "帧率优化前_20260916 · 验证结果",
+    "group": "archive"
+  },
+  {
+    "source": "aarch64/AX8850六路AI推流/历史版本/推理优化前_20260916_182855/使用说明.md",
+    "id": "ax650n/archive/57acd81ae3bc",
+    "title": "推理优化前_20260916_182855 · 使用说明",
+    "group": "archive"
+  },
+  {
+    "source": "aarch64/AX8850六路AI推流/历史版本/模型调整前_20260916/使用说明.md",
+    "id": "ax650n/archive/2068102698b2",
+    "title": "模型调整前_20260916 · 使用说明",
+    "group": "archive"
+  },
+  {
+    "source": "aarch64/AX8850六路AI推流/历史版本/模型调整前_20260916/实施说明.md",
+    "id": "ax650n/archive/ec7b1f9c6fd3",
+    "title": "模型调整前_20260916 · 实施说明",
+    "group": "archive"
+  },
+  {
+    "source": "aarch64/AX8850六路AI推流/历史版本/模型调整前_20260916/验证结果.md",
+    "id": "ax650n/archive/330e19fb869c",
+    "title": "模型调整前_20260916 · 验证结果",
+    "group": "archive"
+  },
+  {
+    "source": "aarch64/AX8850六路AI推流/历史版本/第三路半速处理前_20260918_151453/使用说明.md",
+    "id": "ax650n/archive/9842ca56a2d2",
+    "title": "第三路半速处理前_20260918_151453 · 使用说明",
+    "group": "archive"
+  },
+  {
+    "source": "aarch64/AX8850六路AI推流/历史版本/第四路半速处理前_20260916/使用说明.md",
+    "id": "ax650n/archive/341b25ca5baf",
+    "title": "第四路半速处理前_20260916 · 使用说明",
+    "group": "archive"
+  },
+  {
+    "source": "aarch64/AX8850六路AI推流/历史版本/第四路半速处理前_20260916/第四路替换与本地预览.md",
+    "id": "ax650n/archive/fb528ee6876e",
+    "title": "第四路半速处理前_20260916 · 第四路替换与本地预览",
+    "group": "archive"
+  }
+]

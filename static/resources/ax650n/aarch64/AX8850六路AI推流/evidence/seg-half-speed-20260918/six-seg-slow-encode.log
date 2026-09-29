@@ -1,0 +1,173 @@
+ffmpeg stats and -progress period set to 20.
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/home/baiwen/ax-pipeline/video/1080p/traffic3.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Duration: 00:00:40.07, start: 0.000000, bitrate: 18801 kb/s
+  Stream #0:0[0x1](und): Video: h264 (Constrained Baseline) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1920x1080 [SAR 1:1 DAR 16:9], 18800 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : Vimeo Artax Video Handler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc60.31.102 libx264
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> h264 (libx264))
+[libx264 @ 0xaaab1f73e6b0] using SAR=1/1
+[libx264 @ 0xaaab1f73e6b0] using cpu capabilities: ARMv8 NEON
+[libx264 @ 0xaaab1f73e6b0] profile High, level 4.0, 4:2:0, 8-bit
+[libx264 @ 0xaaab1f73e6b0] 264 - core 164 r3108 31e19f9 - H.264/MPEG-4 AVC codec - Copyleft 2003-2023 - http://www.videolan.org/x264.html - options: cabac=1 ref=1 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=2 psy=1 psy_rd=1.00:0.00 mixed_ref=0 me_range=16 chroma_me=1 trellis=0 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=0 threads=2 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=1 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=10 rc=crf mbtree=1 crf=20.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to '/home/baiwen/ax-pipeline/video/1080p/traffic3_slow_0p5x.partial.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1920x1080 [SAR 1:1 DAR 16:9], q=2-31, 30 fps, 15360 tbn (default)
+    Metadata:
+      handler_name    : Vimeo Artax Video Handler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc60.31.102 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+frame=0
+fps=0.00
+stream_0_0_q=0.0
+bitrate=N/A
+total_size=0
+out_time_us=N/A
+out_time_ms=N/A
+out_time=N/A
+dup_frames=0
+drop_frames=0
+speed=N/A
+progress=continue
+frame=297
+fps=14.81
+stream_0_0_q=26.0
+bitrate=5118.5kbits/s
+total_size=6291504
+out_time_us=9833333
+out_time_ms=9833333
+out_time=00:00:09.833333
+dup_frames=0
+drop_frames=0
+speed=0.49x
+progress=continue
+frame=603
+fps=15.04
+stream_0_0_q=26.0
+bitrate=5338.9kbits/s
+total_size=13369392
+out_time_us=20033333
+out_time_ms=20033333
+out_time=00:00:20.033333
+dup_frames=0
+drop_frames=0
+speed= 0.5x
+progress=continue
+frame=895
+fps=14.87
+stream_0_0_q=26.0
+bitrate=5706.7kbits/s
+total_size=21233712
+out_time_us=29766667
+out_time_ms=29766667
+out_time=00:00:29.766667
+dup_frames=0
+drop_frames=0
+speed=0.495x
+progress=continue
+frame=1191
+fps=14.85
+stream_0_0_q=26.0
+bitrate=5873.4kbits/s
+total_size=29098032
+out_time_us=39633333
+out_time_ms=39633333
+out_time=00:00:39.633333
+dup_frames=0
+drop_frames=0
+speed=0.494x
+progress=continue
+frame=1479
+fps=14.76
+stream_0_0_q=26.0
+bitrate=6133.9kbits/s
+total_size=37748784
+out_time_us=49233333
+out_time_ms=49233333
+out_time=00:00:49.233333
+dup_frames=0
+drop_frames=0
+speed=0.491x
+progress=continue
+frame=1756
+fps=14.60
+stream_0_0_q=26.0
+bitrate=6277.1kbits/s
+total_size=45875248
+out_time_us=58466667
+out_time_ms=58466667
+out_time=00:00:58.466667
+dup_frames=0
+drop_frames=0
+speed=0.486x
+progress=continue
+frame=2030
+fps=14.47
+stream_0_0_q=26.0
+bitrate=6359.7kbits/s
+total_size=53739568
+out_time_us=67600000
+out_time_ms=67600000
+out_time=00:01:07.600000
+dup_frames=0
+drop_frames=0
+speed=0.482x
+progress=continue
+frame=2309
+fps=14.40
+stream_0_0_q=26.0
+bitrate=6490.5kbits/s
+total_size=62390320
+out_time_us=76900000
+out_time_ms=76900000
+out_time=00:01:16.900000
+dup_frames=0
+drop_frames=0
+speed=0.479x
+progress=continue
+[mp4 @ 0xaaab1f7b9970] Starting second pass: moving the moov atom to the beginning of the file
+frame=2404
+fps=14.38
+stream_0_0_q=-1.0
+bitrate=6518.1kbits/s
+total_size=65207820
+out_time_us=80033333
+out_time_ms=80033333
+out_time=00:01:20.033333
+dup_frames=0
+drop_frames=0
+speed=0.479x
+progress=end
+[out#0/mp4 @ 0xaaab1f739e90] video:63650kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.046955%
+frame= 2404 fps= 14 q=-1.0 Lsize=   63680kB time=00:01:20.03 bitrate=6518.1kbits/s speed=0.479x    
+[libx264 @ 0xaaab1f73e6b0] frame I:11    Avg QP:15.89  size:254437
+[libx264 @ 0xaaab1f73e6b0] frame P:1010  Avg QP:20.03  size: 57355
+[libx264 @ 0xaaab1f73e6b0] frame B:1383  Avg QP:22.21  size:  3217
+[libx264 @ 0xaaab1f73e6b0] consecutive B-frames:  0.5% 68.1%  1.4% 30.1%
+[libx264 @ 0xaaab1f73e6b0] mb I  I16..4: 14.2% 15.9% 69.9%
+[libx264 @ 0xaaab1f73e6b0] mb P  I16..4:  3.1%  4.3%  3.7%  P16..4: 49.5%  7.5%  7.3%  0.0%  0.0%    skip:24.6%
+[libx264 @ 0xaaab1f73e6b0] mb B  I16..4:  0.1%  0.1%  0.1%  B16..8:  8.3%  1.0%  0.2%  direct: 1.3%  skip:88.8%  L0:28.1% L1:61.8% BI:10.1%
+[libx264 @ 0xaaab1f73e6b0] 8x8 transform intra:36.9% inter:14.8%
+[libx264 @ 0xaaab1f73e6b0] coded y,uvDC,uvAC intra: 72.5% 35.2% 7.7% inter: 13.8% 3.8% 0.0%
+[libx264 @ 0xaaab1f73e6b0] i16 v,h,dc,p: 25% 35% 27% 13%
+[libx264 @ 0xaaab1f73e6b0] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 16% 54% 24%  1%  1%  0%  1%  1%  2%
+[libx264 @ 0xaaab1f73e6b0] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 20% 44% 19%  1%  4%  2%  4%  2%  4%
+[libx264 @ 0xaaab1f73e6b0] i8c dc,h,v,p: 53% 30% 14%  3%
+[libx264 @ 0xaaab1f73e6b0] Weighted P-Frames: Y:0.7% UV:0.0%
+[libx264 @ 0xaaab1f73e6b0] kb/s:6506.81
+VALIDATED {"codec_name": "h264", "width": 1920, "height": 1080, "avg_frame_rate": "30/1", "duration": "80.133333", "nb_frames": "2404"}
+/home/baiwen/ax-pipeline/video/1080p/traffic3.mp4: OK
+SLOW_FILE_READY

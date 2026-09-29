@@ -1,0 +1,786 @@
+{
+  "modelId": "inflect_nano_v2",
+  "revision": "b57a7ddf5bed32338a79153a43479ea9eee3cde2",
+  "date": "2026-09-28",
+  "variants": [
+    {
+      "label": "英文短句、拼接与数字读法",
+      "observation": "四组英文输入生成实际语音，包含一次双句拼接；数字输入的前端文本变为“The price is twelve dollars.”。编码器、解码器和 CPU 时长预测各执行五次，输出有限且非静音。尚未据此认定发音和听感合格。",
+      "previews": [
+        {
+          "caption": "四组实际语音波形，保持官方幅度",
+          "path": "/validation/effects/inflect-nano-v2-20260928/waveforms.png"
+        }
+      ],
+      "audio": [
+        {
+          "caption": "Hello world.",
+          "path": "/validation/effects/inflect-nano-v2-20260928/01-english.wav"
+        },
+        {
+          "caption": "The weather today is sunny with a gentle breeze.",
+          "path": "/validation/effects/inflect-nano-v2-20260928/02-english.wav"
+        },
+        {
+          "caption": "The robot is ready. Please press start.",
+          "path": "/validation/effects/inflect-nano-v2-20260928/03-english.wav"
+        },
+        {
+          "caption": "The price is 12 dollars.",
+          "path": "/validation/effects/inflect-nano-v2-20260928/04-english.wav"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "输入文本",
+            "音频时长",
+            "生成耗时",
+            "RTF"
+          ],
+          "rows": [
+            [
+              "Hello world.",
+              "0.971 s",
+              "0.117 s",
+              "0.121"
+            ],
+            [
+              "The weather today is sunny with a gentle breeze.",
+              "2.432 s",
+              "0.110 s",
+              "0.045"
+            ],
+            [
+              "The robot is ready. Please press start.",
+              "2.533 s",
+              "0.223 s",
+              "0.088"
+            ],
+            [
+              "The price is 12 dollars.",
+              "1.664 s",
+              "0.114 s",
+              "0.068"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "modelId": "inflect_nano_v2",
+        "revision": "b57a7ddf5bed32338a79153a43479ea9eee3cde2",
+        "provider": "AXCLRTExecutionProvider",
+        "sourceSha256": "daac49a85169578f850d4ce63f7c4a42bad840ef604caf4fd93cfed8eca500ea",
+        "completed": true,
+        "sessions": [
+          {
+            "model": "models/inflect_encoder.axmodel",
+            "provider": "AXCLRTExecutionProvider",
+            "weightSha256": "318a522cb0860f5f17a04f014c01a60930fb88d13c367e9bd1d97d121621e048",
+            "loadSeconds": 0.5589708629995584,
+            "inputs": [
+              {
+                "name": "x_emb",
+                "shape": [
+                  1,
+                  72,
+                  200
+                ],
+                "dtype": "float32"
+              },
+              {
+                "name": "lengths",
+                "shape": [
+                  1
+                ],
+                "dtype": "int32"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "m_p",
+                "shape": [
+                  1,
+                  128,
+                  200
+                ]
+              },
+              {
+                "name": "logs_p",
+                "shape": [
+                  1,
+                  128,
+                  200
+                ]
+              },
+              {
+                "name": "x",
+                "shape": [
+                  1,
+                  72,
+                  200
+                ]
+              },
+              {
+                "name": "x_mask",
+                "shape": [
+                  1,
+                  1,
+                  200
+                ]
+              }
+            ],
+            "allFinite": true,
+            "runMilliseconds": [
+              10.304931027349085,
+              6.764369958546013,
+              6.8591629969887435,
+              6.982246006373316,
+              6.827662989962846
+            ],
+            "calls": [
+              {
+                "inputs": {
+                  "x_emb": [
+                    1,
+                    72,
+                    200
+                  ],
+                  "lengths": [
+                    1
+                  ]
+                },
+                "outputs": [
+                  [
+                    1,
+                    128,
+                    200
+                  ],
+                  [
+                    1,
+                    128,
+                    200
+                  ],
+                  [
+                    1,
+                    72,
+                    200
+                  ],
+                  [
+                    1,
+                    1,
+                    200
+                  ]
+                ],
+                "allFinite": true
+              },
+              {
+                "inputs": {
+                  "x_emb": [
+                    1,
+                    72,
+                    200
+                  ],
+                  "lengths": [
+                    1
+                  ]
+                },
+                "outputs": [
+                  [
+                    1,
+                    128,
+                    200
+                  ],
+                  [
+                    1,
+                    128,
+                    200
+                  ],
+                  [
+                    1,
+                    72,
+                    200
+                  ],
+                  [
+                    1,
+                    1,
+                    200
+                  ]
+                ],
+                "allFinite": true
+              },
+              {
+                "inputs": {
+                  "x_emb": [
+                    1,
+                    72,
+                    200
+                  ],
+                  "lengths": [
+                    1
+                  ]
+                },
+                "outputs": [
+                  [
+                    1,
+                    128,
+                    200
+                  ],
+                  [
+                    1,
+                    128,
+                    200
+                  ],
+                  [
+                    1,
+                    72,
+                    200
+                  ],
+                  [
+                    1,
+                    1,
+                    200
+                  ]
+                ],
+                "allFinite": true
+              },
+              {
+                "inputs": {
+                  "x_emb": [
+                    1,
+                    72,
+                    200
+                  ],
+                  "lengths": [
+                    1
+                  ]
+                },
+                "outputs": [
+                  [
+                    1,
+                    128,
+                    200
+                  ],
+                  [
+                    1,
+                    128,
+                    200
+                  ],
+                  [
+                    1,
+                    72,
+                    200
+                  ],
+                  [
+                    1,
+                    1,
+                    200
+                  ]
+                ],
+                "allFinite": true
+              },
+              {
+                "inputs": {
+                  "x_emb": [
+                    1,
+                    72,
+                    200
+                  ],
+                  "lengths": [
+                    1
+                  ]
+                },
+                "outputs": [
+                  [
+                    1,
+                    128,
+                    200
+                  ],
+                  [
+                    1,
+                    128,
+                    200
+                  ],
+                  [
+                    1,
+                    72,
+                    200
+                  ],
+                  [
+                    1,
+                    1,
+                    200
+                  ]
+                ],
+                "allFinite": true
+              }
+            ]
+          },
+          {
+            "model": "models/inflect_decoder.axmodel",
+            "provider": "AXCLRTExecutionProvider",
+            "weightSha256": "a80a07079c6929a6b64fd5c1e7dcdeb6b1572c90210f834f784f3becb6921e48",
+            "loadSeconds": 0.12128383299568668,
+            "inputs": [
+              {
+                "name": "z_p",
+                "shape": [
+                  1,
+                  128,
+                  500
+                ],
+                "dtype": "float32"
+              },
+              {
+                "name": "y_mask",
+                "shape": [
+                  1,
+                  1,
+                  500
+                ],
+                "dtype": "float32"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "waveform",
+                "shape": [
+                  1,
+                  1,
+                  128000
+                ]
+              }
+            ],
+            "allFinite": true,
+            "runMilliseconds": [
+              34.99698400264606,
+              32.550178992096335,
+              32.64438797486946,
+              32.44897001422942,
+              32.62222098419443
+            ],
+            "calls": [
+              {
+                "inputs": {
+                  "z_p": [
+                    1,
+                    128,
+                    500
+                  ],
+                  "y_mask": [
+                    1,
+                    1,
+                    500
+                  ]
+                },
+                "outputs": [
+                  [
+                    1,
+                    1,
+                    128000
+                  ]
+                ],
+                "allFinite": true,
+                "melFrames": 91,
+                "rawPeak": 0.296875,
+                "rawClippedFraction": 0.0
+              },
+              {
+                "inputs": {
+                  "z_p": [
+                    1,
+                    128,
+                    500
+                  ],
+                  "y_mask": [
+                    1,
+                    1,
+                    500
+                  ]
+                },
+                "outputs": [
+                  [
+                    1,
+                    1,
+                    128000
+                  ]
+                ],
+                "allFinite": true,
+                "melFrames": 228,
+                "rawPeak": 0.2578125,
+                "rawClippedFraction": 0.0
+              },
+              {
+                "inputs": {
+                  "z_p": [
+                    1,
+                    128,
+                    500
+                  ],
+                  "y_mask": [
+                    1,
+                    1,
+                    500
+                  ]
+                },
+                "outputs": [
+                  [
+                    1,
+                    1,
+                    128000
+                  ]
+                ],
+                "allFinite": true,
+                "melFrames": 118,
+                "rawPeak": 0.2421875,
+                "rawClippedFraction": 0.0
+              },
+              {
+                "inputs": {
+                  "z_p": [
+                    1,
+                    128,
+                    500
+                  ],
+                  "y_mask": [
+                    1,
+                    1,
+                    500
+                  ]
+                },
+                "outputs": [
+                  [
+                    1,
+                    1,
+                    128000
+                  ]
+                ],
+                "allFinite": true,
+                "melFrames": 112,
+                "rawPeak": 0.25,
+                "rawClippedFraction": 0.0
+              },
+              {
+                "inputs": {
+                  "z_p": [
+                    1,
+                    128,
+                    500
+                  ],
+                  "y_mask": [
+                    1,
+                    1,
+                    500
+                  ]
+                },
+                "outputs": [
+                  [
+                    1,
+                    1,
+                    128000
+                  ]
+                ],
+                "allFinite": true,
+                "melFrames": 156,
+                "rawPeak": 0.34375,
+                "rawClippedFraction": 0.0
+              }
+            ]
+          }
+        ],
+        "cpuSessions": [
+          {
+            "model": "models/dp.onnx",
+            "provider": "CPUExecutionProvider",
+            "weightSha256": "f900bd96d1f318ae2f5175f75bc53dd34f44923344d9bd40b0ab9f38e48aefc5",
+            "loadSeconds": 0.03738837200216949,
+            "inputs": [
+              {
+                "name": "x",
+                "shape": [
+                  1,
+                  72,
+                  200
+                ],
+                "dtype": "tensor(float)"
+              },
+              {
+                "name": "x_mask",
+                "shape": [
+                  1,
+                  1,
+                  200
+                ],
+                "dtype": "tensor(float)"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "logw",
+                "shape": [
+                  1,
+                  1,
+                  200
+                ]
+              }
+            ],
+            "allFinite": true,
+            "runMilliseconds": [
+              12.313066981732845,
+              8.482880017254502,
+              17.016218975186348,
+              8.521671989001334,
+              12.129608017858118
+            ],
+            "calls": [
+              {
+                "inputs": {
+                  "x": [
+                    1,
+                    72,
+                    200
+                  ],
+                  "x_mask": [
+                    1,
+                    1,
+                    200
+                  ]
+                },
+                "outputs": [
+                  [
+                    1,
+                    1,
+                    200
+                  ]
+                ],
+                "allFinite": true
+              },
+              {
+                "inputs": {
+                  "x": [
+                    1,
+                    72,
+                    200
+                  ],
+                  "x_mask": [
+                    1,
+                    1,
+                    200
+                  ]
+                },
+                "outputs": [
+                  [
+                    1,
+                    1,
+                    200
+                  ]
+                ],
+                "allFinite": true
+              },
+              {
+                "inputs": {
+                  "x": [
+                    1,
+                    72,
+                    200
+                  ],
+                  "x_mask": [
+                    1,
+                    1,
+                    200
+                  ]
+                },
+                "outputs": [
+                  [
+                    1,
+                    1,
+                    200
+                  ]
+                ],
+                "allFinite": true
+              },
+              {
+                "inputs": {
+                  "x": [
+                    1,
+                    72,
+                    200
+                  ],
+                  "x_mask": [
+                    1,
+                    1,
+                    200
+                  ]
+                },
+                "outputs": [
+                  [
+                    1,
+                    1,
+                    200
+                  ]
+                ],
+                "allFinite": true
+              },
+              {
+                "inputs": {
+                  "x": [
+                    1,
+                    72,
+                    200
+                  ],
+                  "x_mask": [
+                    1,
+                    1,
+                    200
+                  ]
+                },
+                "outputs": [
+                  [
+                    1,
+                    1,
+                    200
+                  ]
+                ],
+                "allFinite": true
+              }
+            ]
+          }
+        ],
+        "samples": [
+          {
+            "name": "01-english",
+            "text": "Hello world.",
+            "frontend": [
+              {
+                "normalized": "Hello world.",
+                "phonemes": "həlˈoʊ wˈɜːld."
+              }
+            ],
+            "tokenCountsWithBlanks": [
+              29
+            ],
+            "segments": 1,
+            "generationSeconds": 0.11719697702210397,
+            "durationSeconds": 0.9706666666666667,
+            "realTimeFactor": 0.12073864391013457,
+            "sampleRate": 24000,
+            "channels": 1,
+            "allFinite": true,
+            "peak": 0.296875,
+            "rawPeak": 0.296875,
+            "rawUniqueValues": 61,
+            "clippedFraction": 0.0,
+            "rawSha256": "fe376e84f27f8461978a339a05837a1faa5e15ccba8b43c8d31795b663c56e11",
+            "previewSha256": "6010e9b21af6517732b07a92ccaea1aa9d07999325d080cbafc0d311f0a42cb5",
+            "rawAbsolutePeakFraction": 4.292582417582418e-05,
+            "rawRms": 0.042805854231119156
+          },
+          {
+            "name": "02-english",
+            "text": "The weather today is sunny with a gentle breeze.",
+            "frontend": [
+              {
+                "normalized": "The weather today is sunny with a gentle breeze.",
+                "phonemes": "ðə wˈɛðɚ tədˈeɪ ɪz sˈʌni wɪð ɐ dʒˈɛntəl bɹˈiːz."
+              }
+            ],
+            "tokenCountsWithBlanks": [
+              95
+            ],
+            "segments": 1,
+            "generationSeconds": 0.11017535498831421,
+            "durationSeconds": 2.432,
+            "realTimeFactor": 0.04530236636032657,
+            "sampleRate": 24000,
+            "channels": 1,
+            "allFinite": true,
+            "peak": 0.2578125,
+            "rawPeak": 0.2578125,
+            "rawUniqueValues": 50,
+            "clippedFraction": 0.0,
+            "rawSha256": "76d3718b2b45287853b0db97a5263002e2954fd513a529c2ad173c5faedfbd4f",
+            "previewSha256": "8e2cec4711d354432ce10011fdb44208b29fa2e1e7e6f118e71f5e6ff1863709",
+            "rawAbsolutePeakFraction": 1.713267543859649e-05,
+            "rawRms": 0.03347175195813179
+          },
+          {
+            "name": "03-english",
+            "text": "The robot is ready. Please press start.",
+            "frontend": [
+              {
+                "normalized": "The robot is ready.",
+                "phonemes": "ðə ɹˈoʊbɑːt ɪz ɹˈɛdi."
+              },
+              {
+                "normalized": "Please press start.",
+                "phonemes": "plˈiːz pɹˈɛs stˈɑːɹt."
+              }
+            ],
+            "tokenCountsWithBlanks": [
+              43,
+              43
+            ],
+            "segments": 2,
+            "generationSeconds": 0.2234193529584445,
+            "durationSeconds": 2.533333333333333,
+            "realTimeFactor": 0.08819184985201757,
+            "sampleRate": 24000,
+            "channels": 1,
+            "allFinite": true,
+            "peak": 0.25,
+            "rawPeak": 0.25,
+            "rawUniqueValues": 52,
+            "clippedFraction": 0.0,
+            "rawSha256": "057623d7ea02bafa6a3069bc2f2d06c7f505964116f058e23cd32ce3da9f6c7f",
+            "previewSha256": "b905dff4515d7fdff7252defb52644277c70a44d3767da929b9440c3ec023b51",
+            "rawAbsolutePeakFraction": 1.644736842105263e-05,
+            "rawRms": 0.03371647745370865
+          },
+          {
+            "name": "04-english",
+            "text": "The price is 12 dollars.",
+            "frontend": [
+              {
+                "normalized": "The price is twelve dollars.",
+                "phonemes": "ðə pɹˈaɪs ɪz twˈɛlv dˈɑːlɚz."
+              }
+            ],
+            "tokenCountsWithBlanks": [
+              57
+            ],
+            "segments": 1,
+            "generationSeconds": 0.11353158199926838,
+            "durationSeconds": 1.664,
+            "realTimeFactor": 0.06822811418225264,
+            "sampleRate": 24000,
+            "channels": 1,
+            "allFinite": true,
+            "peak": 0.34375,
+            "rawPeak": 0.34375,
+            "rawUniqueValues": 65,
+            "clippedFraction": 0.0,
+            "rawSha256": "360d56f4f86b45c5370fa7bfe366f9c2b48fe12eb4d8e861604a2af32c218508",
+            "previewSha256": "3d1c3177a1347894e8b116daf7a7d8f85fcec5e2b057e016918994b92f639ea9",
+            "rawAbsolutePeakFraction": 2.5040064102564102e-05,
+            "rawRms": 0.03257882595062256
+          }
+        ],
+        "speed": 1.0,
+        "variation": 0.667,
+        "seed": 0,
+        "dependencies": {
+          "numpy": "1.26.4",
+          "onnxruntime": "1.20.1",
+          "soundfile": "0.13.1",
+          "phonemizer": "3.3.0",
+          "num2words": "0.5.14",
+          "Unidecode": "1.4.0",
+          "espeakng-loader": "0.2.4"
+        },
+        "startedAt": "2026-09-27T22:14:01.100852+00:00",
+        "finishedAt": "2026-09-27T22:14:02.903833+00:00",
+        "coverage": "Official AX650 weights: AXCL encoder and decoder, CPU duration predictor, NumPy embedding/alignment, official frontend and sampling. Four inputs/five sentence segments; basic pipeline only."
+      }
+    }
+  ]
+}

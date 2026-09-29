@@ -1,0 +1,11 @@
+ROI [160 x 160 from (0, 0)] max_error=0 differing_mask_pixels=0
+ROI [1 x 1 from (0, 0)] max_error=0 differing_mask_pixels=0
+ROI [1 x 1 from (159, 159)] max_error=0 differing_mask_pixels=0
+ROI [12 x 10 from (20, 30)] max_error=0 differing_mask_pixels=0
+ROI [20 x 14 from (40, 40)] max_error=0 differing_mask_pixels=0
+ROI [37 x 27 from (17, 13)] max_error=0 differing_mask_pixels=0
+ROI [160 x 30 from (0, 40)] max_error=0 differing_mask_pixels=0
+ROI [30 x 160 from (25, 0)] max_error=0 differing_mask_pixels=0
+ROI [50 x 60 from (70, 70)] max_error=0 differing_mask_pixels=0
+optimized=0 ms_per_mask=1.14078
+optimized=1 ms_per_mask=0.0826727

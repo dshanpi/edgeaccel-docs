@@ -1,0 +1,402 @@
+{
+  "modelId": "ImageDehazing",
+  "revision": "6a15e0cc1436740ccef0e6f0fe50324b2cdef49b",
+  "variants": [
+    {
+      "name": "aod-net",
+      "label": "AOD-Net",
+      "observation": "左为原图，右为去雾输出。山体和天空对比度提高，前景较暗。",
+      "input": {
+        "file": "AOD-Net/pic/canyon2.jpg",
+        "sha256": "e3b05599d760033586a4f36ee1d88b7718e964a917269742ccc4ea977067d3e1"
+      },
+      "weights": [
+        "AOD-Net/model_convert/axmodel/aodnet_1x3x480x640_sim.axmodel"
+      ],
+      "sessions": [
+        {
+          "weight": "AOD-Net/model_convert/axmodel/aodnet_1x3x480x640_sim.axmodel",
+          "sha256": "e9804d02f8654a848deb05aaa9679b4913884b7fa1fbd06174d35e3257156bf4",
+          "loadSeconds": 0.5346796320009162,
+          "inputs": [
+            {
+              "name": "input",
+              "shape": [
+                1,
+                3,
+                480,
+                640
+              ],
+              "dtype": "uint8"
+            }
+          ],
+          "calls": [
+            {
+              "seconds": 0.034597637999468134,
+              "outputs": [
+                {
+                  "shape": [
+                    1,
+                    3,
+                    480,
+                    640
+                  ],
+                  "dtype": "float32",
+                  "min": 0.0,
+                  "max": 0.9999847412109375
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "seconds": 1.1388569989994721,
+      "previews": [
+        {
+          "caption": "本次运行输出",
+          "path": "/validation/effects/imagedehazing/outputs/aod-net.png"
+        }
+      ]
+    },
+    {
+      "name": "dehazeformer",
+      "label": "DehazeFormer",
+      "observation": "左为原图，右为去雾输出。灰雾减轻，画面整体偏绿、偏暗。",
+      "input": {
+        "file": "DehazeFormer/pic/00000_0_0.1800.png",
+        "sha256": "1761dc0533f77290c0d2e67d71fa2dae0628b2e18286402b5f13227f2ab13137"
+      },
+      "weights": [
+        "DehazeFormer/model_convert/axmodel/dehazeformer-t-512-constant.axmodel"
+      ],
+      "sessions": [
+        {
+          "weight": "DehazeFormer/model_convert/axmodel/dehazeformer-t-512-constant.axmodel",
+          "sha256": "8f204bfa4061ac07ecaf6efb1e387edb81dd3a352c01d31dd690850f8778cc92",
+          "loadSeconds": 0.7000317829988489,
+          "inputs": [
+            {
+              "name": "input",
+              "shape": [
+                1,
+                3,
+                512,
+                512
+              ],
+              "dtype": "uint8"
+            }
+          ],
+          "calls": [
+            {
+              "seconds": 0.18496299499929592,
+              "outputs": [
+                {
+                  "shape": [
+                    1,
+                    3,
+                    512,
+                    512
+                  ],
+                  "dtype": "float32",
+                  "min": -0.6058896780014038,
+                  "max": 0.29049503803253174
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "seconds": 1.1148719459997665,
+      "previews": [
+        {
+          "caption": "本次运行输出",
+          "path": "/validation/effects/imagedehazing/outputs/dehazeformer.png"
+        }
+      ]
+    },
+    {
+      "name": "ffa-net",
+      "label": "FFA-Net",
+      "observation": "输出按官方脚本缩放为 512×512。道路场景仍偏暗，图像生成不代表去雾质量已经通过。",
+      "input": {
+        "file": "FFA-Net/pic/nh(4).jpg",
+        "sha256": "1aac5f17ecf644ffc0e3939d0c7060776f6761998d23fb8a76648dc99903d9bc"
+      },
+      "weights": [
+        "FFA-Net/model_convert/axmodel/FFANet.axmodel"
+      ],
+      "sessions": [
+        {
+          "weight": "FFA-Net/model_convert/axmodel/FFANet.axmodel",
+          "sha256": "dea9d52119bb4d0ae79b724a24218a79028f572ec654a8fc39dd20dce82b558e",
+          "loadSeconds": 1.0644525499992596,
+          "inputs": [
+            {
+              "name": "input",
+              "shape": [
+                1,
+                3,
+                512,
+                512
+              ],
+              "dtype": "uint8"
+            }
+          ],
+          "calls": [
+            {
+              "seconds": 0.8842962349990557,
+              "outputs": [
+                {
+                  "shape": [
+                    1,
+                    3,
+                    512,
+                    512
+                  ],
+                  "dtype": "float32",
+                  "min": -0.2982489764690399,
+                  "max": 0.957453191280365
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "seconds": 2.413687801999913,
+      "previews": [
+        {
+          "caption": "原始输入",
+          "path": "/validation/effects/imagedehazing/inputs/ffa-net.jpg"
+        },
+        {
+          "caption": "本次运行输出",
+          "path": "/validation/effects/imagedehazing/outputs/ffa-net.png"
+        }
+      ]
+    },
+    {
+      "name": "griddehazenet",
+      "label": "GridDehazeNet",
+      "observation": "左为原图，右为去雾输出。楼体对比度提高。",
+      "input": {
+        "file": "GridDehazeNet/pic/0001_0.8_0.2.jpg",
+        "sha256": "fe92fccd590a6a354d8e526b0bfbb241fd5f26118ba1df96a213c3c9dc28929a"
+      },
+      "weights": [
+        "GridDehazeNet/model_convert/axmodel/GridDehazeNet.axmodel"
+      ],
+      "sessions": [
+        {
+          "weight": "GridDehazeNet/model_convert/axmodel/GridDehazeNet.axmodel",
+          "sha256": "996e7c24541934f003860a9c60af7afddcdb3a4042ae1be31cd8d9f057815b47",
+          "loadSeconds": 0.6394658570006868,
+          "inputs": [
+            {
+              "name": "input",
+              "shape": [
+                1,
+                3,
+                480,
+                640
+              ],
+              "dtype": "uint8"
+            }
+          ],
+          "calls": [
+            {
+              "seconds": 0.14023519900001702,
+              "outputs": [
+                {
+                  "shape": [
+                    1,
+                    3,
+                    480,
+                    640
+                  ],
+                  "dtype": "float32",
+                  "min": 0.0,
+                  "max": 1.0404930114746094
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "seconds": 1.31614528099999,
+      "previews": [
+        {
+          "caption": "本次运行输出",
+          "path": "/validation/effects/imagedehazing/outputs/griddehazenet.png"
+        }
+      ]
+    },
+    {
+      "name": "lightdehazenet",
+      "label": "LightDehazeNet",
+      "observation": "左为原图，右为去雾输出。建筑轮廓更明显，黄色色调仍然存在。",
+      "input": {
+        "file": "LightDehazeNet/pic/outdoor_natural/nh(5).png",
+        "sha256": "9a6be814342c375a064ff7939ea316cd0dee0ec6058fc10fb6616eef0afbc509"
+      },
+      "weights": [
+        "LightDehazeNet/model_convert/axmodel/LightDehazeNet.axmodel"
+      ],
+      "sessions": [
+        {
+          "weight": "LightDehazeNet/model_convert/axmodel/LightDehazeNet.axmodel",
+          "sha256": "eecc48deeca9e464ff9dc84558946064dc86b8da3fc7306fb9628888bb5d4cf1",
+          "loadSeconds": 0.5445152480006072,
+          "inputs": [
+            {
+              "name": "input",
+              "shape": [
+                1,
+                3,
+                640,
+                480
+              ],
+              "dtype": "uint8"
+            }
+          ],
+          "calls": [
+            {
+              "seconds": 0.04206808099843329,
+              "outputs": [
+                {
+                  "shape": [
+                    1,
+                    3,
+                    640,
+                    480
+                  ],
+                  "dtype": "float32",
+                  "min": 0.0,
+                  "max": 0.9699483513832092
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "seconds": 1.294948344999284,
+      "previews": [
+        {
+          "caption": "本次运行输出",
+          "path": "/validation/effects/imagedehazing/outputs/lightdehazenet.png"
+        }
+      ]
+    },
+    {
+      "name": "mixdehazenet",
+      "label": "MixDehazeNet",
+      "observation": "左为原图，右为去雾输出。天空颜色更深，但建筑细节变软。",
+      "input": {
+        "file": "MixDehazeNet/pic/0003_0.8_0.2.jpg",
+        "sha256": "9b093fd7e17d27cd57327dbb9ddfae36c2db1e539320e0266f0eaa6942f086a5"
+      },
+      "weights": [
+        "MixDehazeNet/model_convert/axmodel/MixDehazeNet.axmodel"
+      ],
+      "sessions": [
+        {
+          "weight": "MixDehazeNet/model_convert/axmodel/MixDehazeNet.axmodel",
+          "sha256": "58dd507bceeae2bcd7b09473b38886c0a3e1077dee8e6bc144e32dc94ef6ecae",
+          "loadSeconds": 0.7212027610003133,
+          "inputs": [
+            {
+              "name": "input",
+              "shape": [
+                1,
+                3,
+                256,
+                256
+              ],
+              "dtype": "uint8"
+            }
+          ],
+          "calls": [
+            {
+              "seconds": 0.049535644000570755,
+              "outputs": [
+                {
+                  "shape": [
+                    1,
+                    3,
+                    256,
+                    256
+                  ],
+                  "dtype": "float32",
+                  "min": -0.9849182367324829,
+                  "max": 1.0367560386657715
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "seconds": 0.9203008390013565,
+      "previews": [
+        {
+          "caption": "本次运行输出",
+          "path": "/validation/effects/imagedehazing/outputs/mixdehazenet.png"
+        }
+      ]
+    },
+    {
+      "name": "gcanet",
+      "label": "GCANet",
+      "observation": "左为原图，右为去雾输出。建筑和绿植对比度提高。",
+      "input": {
+        "file": "GCANet/pic/0051_0.8_0.2_input.png",
+        "sha256": "ae2885d3ccc0f5723805dabb6b865226b7da7c2236b5b41f828a0e017b145c4e"
+      },
+      "weights": [
+        "GCANet/model_convert/axmodel/GCANet_U16.axmodel"
+      ],
+      "sessions": [
+        {
+          "weight": "GCANet/model_convert/axmodel/GCANet_U16.axmodel",
+          "sha256": "6e56c416223bd2737dcf7af420e628d5a100ee07b53533fdee3ee09baa66f895",
+          "loadSeconds": 0.6190575900000113,
+          "inputs": [
+            {
+              "name": "input",
+              "shape": [
+                1,
+                4,
+                512,
+                512
+              ],
+              "dtype": "uint8"
+            }
+          ],
+          "calls": [
+            {
+              "seconds": 0.16593343999920762,
+              "outputs": [
+                {
+                  "shape": [
+                    1,
+                    3,
+                    512,
+                    512
+                  ],
+                  "dtype": "float32",
+                  "min": -106.55443572998047,
+                  "max": 41.35786437988281
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "seconds": 1.5915634140001202,
+      "previews": [
+        {
+          "caption": "本次运行输出",
+          "path": "/validation/effects/imagedehazing/outputs/gcanet.png"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,248 @@
+{
+  "modelId": "clip",
+  "revision": "8ff8b75dc7655ca132a6723d0faa1e11d16edbd1",
+  "date": "2026-09-27",
+  "variants": [
+    {
+      "label": "clip_vit_l14_336px_image_encoder_all_u16_fc_u8.axmodel",
+      "observation": "三张输入图片的主体已人工核对为鸟、猫、狗；在给定的三个候选中，最高分均对应画面主体。图像和文字分别得到 768 维向量，每份输入重复两次，向量逐项一致。",
+      "previews": [
+        {
+          "caption": "本次输入 · 鸟",
+          "path": "/validation/effects/clip-20260927/bird-input.webp"
+        },
+        {
+          "caption": "本次输入 · 猫",
+          "path": "/validation/effects/clip-20260927/cat-input.webp"
+        },
+        {
+          "caption": "本次输入 · 狗",
+          "path": "/validation/effects/clip-20260927/dog-chai-input.webp"
+        }
+      ],
+      "audio": [],
+      "tables": [
+        {
+          "headers": [
+            "输入图片",
+            "bird",
+            "cat",
+            "dog",
+            "最高分候选"
+          ],
+          "rows": [
+            [
+              "bird.jpg",
+              "0.991869",
+              "0.005770",
+              "0.002361",
+              "bird"
+            ],
+            [
+              "cat.jpg",
+              "0.004936",
+              "0.961482",
+              "0.033582",
+              "cat"
+            ],
+            [
+              "dog-chai.jpeg",
+              "0.013075",
+              "0.021527",
+              "0.965398",
+              "dog"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "task": "clip",
+        "provider": "AXCLRTExecutionProvider",
+        "completed": true,
+        "language": "en",
+        "labels": [
+          "bird",
+          "cat",
+          "dog"
+        ],
+        "sessions": [
+          {
+            "model": "clip_vit_l14_336px_text_encoder_u16.axmodel",
+            "inputs": [
+              {
+                "name": "texts",
+                "shape": [
+                  1,
+                  77
+                ],
+                "dtype": "int32"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "text_features",
+                "shape": [
+                  1,
+                  768
+                ]
+              }
+            ],
+            "runMilliseconds": [
+              11.81577000534162,
+              8.051207987591624,
+              7.9558329889550805,
+              8.127042034175247,
+              7.952041050884873,
+              8.12033301917836
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "clip_vit_l14_336px_image_encoder_all_u16_fc_u8.axmodel",
+            "inputs": [
+              {
+                "name": "input.1",
+                "shape": [
+                  1,
+                  3,
+                  336,
+                  336
+                ],
+                "dtype": "float32"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "4002",
+                "shape": [
+                  1,
+                  768
+                ]
+              }
+            ],
+            "runMilliseconds": [
+              81.37017296394333,
+              81.12983801402152,
+              81.36929798638448,
+              81.2680899980478,
+              81.13275596406311,
+              81.05108799645677
+            ],
+            "allFinite": true
+          }
+        ],
+        "results": [
+          {
+            "imageModel": "clip_vit_l14_336px_image_encoder_all_u16_fc_u8.axmodel",
+            "textModel": "clip_vit_l14_336px_text_encoder_u16.axmodel",
+            "imageNames": [
+              "bird.jpg",
+              "cat.jpg",
+              "dog-chai.jpeg"
+            ],
+            "cosine": [
+              [
+                0.23328933119773865,
+                0.18182040750980377,
+                0.17288288474082947
+              ],
+              [
+                0.15494802594184875,
+                0.20766767859458923,
+                0.17412292957305908
+              ],
+              [
+                0.16735316812992096,
+                0.17233920097351074,
+                0.2103714644908905
+              ]
+            ],
+            "imageChoiceSoftmax": [
+              [
+                0.9918692111968994,
+                0.00577015383169055,
+                0.0023606703616678715
+              ],
+              [
+                0.004935780074447393,
+                0.9614818692207336,
+                0.033582352101802826
+              ],
+              [
+                0.013075127266347408,
+                0.021527163684368134,
+                0.9653977155685425
+              ]
+            ],
+            "topLabels": [
+              "bird",
+              "cat",
+              "dog"
+            ],
+            "expectedLabels": [
+              "bird",
+              "cat",
+              "dog"
+            ],
+            "allTopLabelsMatch": true,
+            "repeatedEmbeddingsEqual": true,
+            "embeddingDimension": 768
+          }
+        ],
+        "sampleSource": {
+          "repo": "AXERA-TECH/CLIP-ONNX-AX650-CPP",
+          "revision": "8a330cf1c3f7a881ba222f92d6485e5b6894f8d3"
+        },
+        "inputs": [
+          {
+            "path": "images/bird.jpg",
+            "sha256": "e58faba22db2c72e252c877d5e8ff64907219399afb5661f69f342ff2cbc99aa",
+            "height": 768,
+            "width": 1024
+          },
+          {
+            "path": "images/cat.jpg",
+            "sha256": "59b67bce343d435cb8f79b6abefc6eecc79924abcda6e7c7e39f8173bb932bc1",
+            "height": 360,
+            "width": 480
+          },
+          {
+            "path": "images/dog-chai.jpeg",
+            "sha256": "aa058d1c3b46413567e67e82f06e342726cf40faf0b2c5305bd551c8bf4a8c20",
+            "height": 1440,
+            "width": 1080
+          }
+        ],
+        "tokens": [
+          {
+            "text": "bird",
+            "ids": [
+              49406,
+              3329,
+              49407
+            ],
+            "paddedLength": 77
+          },
+          {
+            "text": "cat",
+            "ids": [
+              49406,
+              2368,
+              49407
+            ],
+            "paddedLength": 77
+          },
+          {
+            "text": "dog",
+            "ids": [
+              49406,
+              1929,
+              49407
+            ],
+            "paddedLength": 77
+          }
+        ]
+      }
+    }
+  ]
+}

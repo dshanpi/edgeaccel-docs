@@ -1,0 +1,213 @@
+{
+  "modelId": "ten-vad",
+  "repo": "AXERA-TECH/ten-vad",
+  "revision": "8ec863e2de22f93305f2927d5b7c8d5d31a021ee",
+  "complete": true,
+  "files": [
+    {
+      "path": "README.md",
+      "size": 1297,
+      "url": "https://huggingface.co/AXERA-TECH/ten-vad/resolve/8ec863e2de22f93305f2927d5b7c8d5d31a021ee/README.md",
+      "verifiedHashes": {
+        "sha256": "cfd2b6c993a6939303a7ac16f4023e82b8207f473c9262bb3903b166667934f7",
+        "gitBlob": "cc8cdf7c49369f1cbe59b2373d4de11fe12157f3"
+      }
+    },
+    {
+      "path": "models/axmodel/ten-vad-ax650.axmodel",
+      "size": 156154,
+      "url": "https://huggingface.co/AXERA-TECH/ten-vad/resolve/8ec863e2de22f93305f2927d5b7c8d5d31a021ee/models/axmodel/ten-vad-ax650.axmodel",
+      "verifiedHashes": {
+        "sha256": "0c1d115956545aa549c3a3f4cb778a0364ed593c7ad19e84c177be91469dbc52",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/original/ten-vad.onnx",
+      "size": 315449,
+      "url": "https://huggingface.co/AXERA-TECH/ten-vad/resolve/8ec863e2de22f93305f2927d5b7c8d5d31a021ee/models/original/ten-vad.onnx",
+      "verifiedHashes": {
+        "sha256": "e10b98a0cab1c98e847fbdda14cb3d45a38336d47535a3f63a0fb6c4e0f4cdf4",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "testset/testset-audio-01.scv",
+      "size": 186,
+      "url": "https://huggingface.co/AXERA-TECH/ten-vad/resolve/8ec863e2de22f93305f2927d5b7c8d5d31a021ee/testset/testset-audio-01.scv",
+      "verifiedHashes": {
+        "sha256": "9b15392f91383cfe05e16505bca7b6ab45c42d5a897dcdf56abc3840a66dcaf8",
+        "gitBlob": "5c076fe39d8a6c5a51ce8d14168195c60a70ade8"
+      }
+    },
+    {
+      "path": "testset/testset-audio-01.wav",
+      "size": 368718,
+      "url": "https://huggingface.co/AXERA-TECH/ten-vad/resolve/8ec863e2de22f93305f2927d5b7c8d5d31a021ee/testset/testset-audio-01.wav",
+      "verifiedHashes": {
+        "sha256": "27cfaad6f5eb8c501171ed9c787dc0f26070d5c0d18717b918cccf15428487f5",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "testset/testset-audio-02.scv",
+      "size": 143,
+      "url": "https://huggingface.co/AXERA-TECH/ten-vad/resolve/8ec863e2de22f93305f2927d5b7c8d5d31a021ee/testset/testset-audio-02.scv",
+      "verifiedHashes": {
+        "sha256": "8a3f039273e18da5da3d76c33c1880bd06454a9c32499c9959736c5dea7abca2",
+        "gitBlob": "2a46f3553392e4ef7f9a9151d260de33d631254c"
+      }
+    },
+    {
+      "path": "testset/testset-audio-02.wav",
+      "size": 129518,
+      "url": "https://huggingface.co/AXERA-TECH/ten-vad/resolve/8ec863e2de22f93305f2927d5b7c8d5d31a021ee/testset/testset-audio-02.wav",
+      "verifiedHashes": {
+        "sha256": "c65e4f2093ae81e9e7f5290808ca13e18fce0bedf9b3515bdf149a85c7f45a6f",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "testset/testset-audio-03.scv",
+      "size": 130,
+      "url": "https://huggingface.co/AXERA-TECH/ten-vad/resolve/8ec863e2de22f93305f2927d5b7c8d5d31a021ee/testset/testset-audio-03.scv",
+      "verifiedHashes": {
+        "sha256": "f5bcc35772834eac92d6910154b10d0c0d1e3277a8b2c49d28b6a877f40535f1",
+        "gitBlob": "c76828f42ad682abb1fbd9c9c128366223a358d9"
+      }
+    },
+    {
+      "path": "testset/testset-audio-03.wav",
+      "size": 330744,
+      "url": "https://huggingface.co/AXERA-TECH/ten-vad/resolve/8ec863e2de22f93305f2927d5b7c8d5d31a021ee/testset/testset-audio-03.wav",
+      "verifiedHashes": {
+        "sha256": "00d4f33e6f499f67df4787b389b10f0f3608dad906c89e68ff58a9e9555ea3a1",
+        "gitBlob": null
+      }
+    }
+  ],
+  "source": {
+    "repo": "AXERA-TECH/ten-vad.axera",
+    "revision": "666ae7ce649e5ed8a813ada3666d612292db626d",
+    "files": [
+      {
+        "path": ".gitignore",
+        "sha256": "c3aa03b0883d8e242af2183325b3b63cfe1f4cf001f00911e9b758d2d8727c13"
+      },
+      {
+        "path": "CMakeLists.txt",
+        "sha256": "37c26406f8d4ac33d73c9b3944ed951a19aa09678d0538700225f117d38b2d1e"
+      },
+      {
+        "path": "LICENSE",
+        "sha256": "03d862b922867b8c3406a0c17791e256ed3d76f197d88c1996c4aebfb79f688e"
+      },
+      {
+        "path": "NOTICES",
+        "sha256": "83a1d666450e06c846be76efcdd311294c28d07417bed0cb119d6400ba3cdc3b"
+      },
+      {
+        "path": "README.md",
+        "sha256": "85dcf67f5bd5105a327feaedfca96c0384d9b4e97b3f09056df92b6ed2eac1d4"
+      },
+      {
+        "path": "aarch64-linux.ini",
+        "sha256": "2a6c7349bcad4ffffe3a9de2fe83062fc17ff3ab2fd0d21689fff4e2f160f112"
+      },
+      {
+        "path": "examples/example.c",
+        "sha256": "c0ebdcdd9d2f8909c134afa5e044790bf24867a46d0cfc407700e663370a9de8"
+      },
+      {
+        "path": "include/ten_vad.h",
+        "sha256": "a7699172b848691e8495dacc279b87bb767e79ef640a43306436d20d164f95b8"
+      },
+      {
+        "path": "src/aed.cc",
+        "sha256": "f450bb55720a7f4dc8340d5ef418e36a34468b2f44ce7b02077efc550b1d7c5d"
+      },
+      {
+        "path": "src/aed.h",
+        "sha256": "5875f2bbc645261b95aa696f8cf89e6bec0d604bb37fe41378f6c0ce8f77d775"
+      },
+      {
+        "path": "src/aed_st.h",
+        "sha256": "02d16bfccaf33596881c9355ae60b66a06feb0b48d96cb91488741d9d5b2080f"
+      },
+      {
+        "path": "src/biquad.cc",
+        "sha256": "0e9721c8348d06d9e459215dac0a2bbf9ccb97fabbbd5cf107c05b990f7f03e1"
+      },
+      {
+        "path": "src/biquad.h",
+        "sha256": "5cae3f2b1a3f7c4bd2eb1e0214a779ddedfa1705544ad1c67c0e6418bbf8c470"
+      },
+      {
+        "path": "src/biquad_st.h",
+        "sha256": "a30b2e86729a2e1744c8ac08eff200e10fb0595a2ae2c0ed0fa10c4a04249693"
+      },
+      {
+        "path": "src/coeff.h",
+        "sha256": "0c86dc4a9161e418da6ce03d50dea067dff085749d730e3913b99a8e116397ef"
+      },
+      {
+        "path": "src/fftw.c",
+        "sha256": "bf9b24f00791316548353e92963dcf14a8c4ebe78fc4db632b593232435a05ec"
+      },
+      {
+        "path": "src/fftw.h",
+        "sha256": "6e9a47d5684b8810787ffd712506f4f35674edd34c743dba18a4b3e342ed1419"
+      },
+      {
+        "path": "src/fscvrt.cc",
+        "sha256": "e88f6177a14e561e8df33ea2587319893ec5af6ab30d8ca15b6dec5f8bb4ee79"
+      },
+      {
+        "path": "src/fscvrt.h",
+        "sha256": "e27275cb7f39dc62a69916cf4e76600d46689666b1ffd6e2273615a692dcdeb2"
+      },
+      {
+        "path": "src/fscvrt_st.h",
+        "sha256": "3e5ee79f525a0a5b621e4bac14255bd5e706c70b2e6d7d15bee80a324d12c2b2"
+      },
+      {
+        "path": "src/pitch_est.cc",
+        "sha256": "11eb8cddc34f3343c0fa1ebc406eadc870ee27112655fa32d4a1f21dbb31681e"
+      },
+      {
+        "path": "src/pitch_est.h",
+        "sha256": "7c2f8386109c90b070440f5d51bf9b068beda77e6f896dcbcb9a1e8ed496645f"
+      },
+      {
+        "path": "src/pitch_est_st.h",
+        "sha256": "2ce2671015e5b110d4197a4b82e48c87b1708712875a87f9a7c32de554fd83c1"
+      },
+      {
+        "path": "src/stft.cc",
+        "sha256": "c6176c3e5012270050cee0fe4a35b62ba9ed6aa577bed94792c97110616dc7fb"
+      },
+      {
+        "path": "src/stft.h",
+        "sha256": "74a5c4527277c130d5e903e278cdc7dda267075176d3a7093d94b7ccedbb3010"
+      },
+      {
+        "path": "src/stft_st.h",
+        "sha256": "7a53afd1fc645b44172494b9423f92384e785891ac76d122bddad7f0e154d90b"
+      },
+      {
+        "path": "src/ten_vad.cc",
+        "sha256": "53c14b8328d35eda6c016ceb2254860839ac30d79f0ebdcc4fe61a139a4c6fac"
+      }
+    ]
+  },
+  "integration": [
+    {
+      "path": "ten_vad_axcl_patch.py",
+      "sha256": "5dc51d34a42563e7a417d950ed946fb986b0a13372b0e4dee002e42c58c137aa"
+    },
+    {
+      "path": "ten_vad_card.py",
+      "sha256": "203348dfe774a67afd3d1927b09d5a76c44672c5eb1d355f2c4e0f1f38436f88"
+    }
+  ]
+}

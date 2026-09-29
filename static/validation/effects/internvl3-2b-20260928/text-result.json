@@ -1,0 +1,101 @@
+{
+  "kind": "legacy-vlm",
+  "modelId": "InternVL3-2B",
+  "provider": "AXCL C++",
+  "completed": true,
+  "binarySha256": "f53f1f5fb09eabe9709a267bce179cd6ba3a3a23af947d71aca4b1f99b4658a5",
+  "postConfig": {
+    "enable_temperature": false,
+    "temperature": 0.9,
+    "enable_repetition_penalty": false,
+    "repetition_penalty": 1.2,
+    "penalty_window": 20,
+    "enable_top_p_sampling": false,
+    "top_p": 0.8,
+    "enable_top_k_sampling": true,
+    "top_k": 1
+  },
+  "revision": "48bb181aa11917fea8309a6304c570152f9b5903",
+  "date": "2026-09-28",
+  "samples": [
+    {
+      "input": "What animal is in the image? Answer in one short sentence.",
+      "output": "The animal in the image is a red panda.",
+      "exitCode": 0,
+      "processSeconds": 70.43629590299679,
+      "observation": "red panda 与图中的小熊猫一致，回复为一个简短英文句子。",
+      "imageFile": "image_0.jpg",
+      "imagePath": "/validation/effects/internvl3-2b-20260928/image_0.jpg",
+      "imageSha256": "c587294b3bf637dacbb3c96324c127187a2f242c94f639633a0d8a2775a9a399",
+      "sourceImagePath": "examples/image_0.jpg",
+      "nativeImageEncodeMs": 413.49,
+      "nativeTtftMs": 2101.26,
+      "nativeTtftScope": "Native program TTFT; excludes model loading and is not client end-to-end first-visible-text latency."
+    },
+    {
+      "input": "请用一句中文描述图片中的动物。",
+      "output": "图片中的动物是一只大熊猫。",
+      "exitCode": 0,
+      "processSeconds": 72.06532511801925,
+      "observation": "大熊猫类别与图片一致，回复为一句中文。",
+      "imageFile": "image_1.jpg",
+      "imagePath": "/validation/effects/internvl3-2b-20260928/image_1.jpg",
+      "imageSha256": "08487494b8dc08d44bc36491adf3ab89ff30d13a3122da86f3cd67cad89eeee8",
+      "sourceImagePath": "examples/image_1.jpg",
+      "nativeImageEncodeMs": 414.78,
+      "nativeTtftMs": 2391.96,
+      "nativeTtftScope": "Native program TTFT; excludes model loading and is not client end-to-end first-visible-text latency."
+    },
+    {
+      "input": "How many people are in the image? Reply with only the number.",
+      "output": "There are three people in the image.",
+      "exitCode": 0,
+      "processSeconds": 71.73451682802988,
+      "observation": "three 与画面中的三名人物一致；回复带有完整句子，没有满足只返回数字的要求。",
+      "imageFile": "image_2.png",
+      "imagePath": "/validation/effects/internvl3-2b-20260928/image_2.png",
+      "imageSha256": "622ae2d01ff4467fa69a7888728d776650117a0f4887e96ba0fb9a8a6d77b3c3",
+      "sourceImagePath": "examples/image_2.png",
+      "nativeImageEncodeMs": 409.49,
+      "nativeTtftMs": 2132.72,
+      "nativeTtftScope": "Native program TTFT; excludes model loading and is not client end-to-end first-visible-text latency."
+    },
+    {
+      "input": "Describe the hair color and background in one sentence.",
+      "output": "The character has silver hair adorned with pink flowers and a blue choker, set against a serene beach backdrop.",
+      "exitCode": 0,
+      "processSeconds": 73.54522877698764,
+      "observation": "银色头发、粉色花朵、蓝灰色颈饰及海滩背景与画面相符，回复为一个英文句子。",
+      "imageFile": "image_3.png",
+      "imagePath": "/validation/effects/internvl3-2b-20260928/image_3.png",
+      "imageSha256": "729e80e77d8611778859d2f232cb7f2a8fda04ed67dd8dcc3e7cd7a657367402",
+      "sourceImagePath": "examples/image_3.png",
+      "nativeImageEncodeMs": 417.35,
+      "nativeTtftMs": 2104.79,
+      "nativeTtftScope": "Native program TTFT; excludes model loading and is not client end-to-end first-visible-text latency."
+    }
+  ],
+  "runtimeSource": {
+    "repo": "https://github.com/AXERA-TECH/ax-llm",
+    "revision": "72ada011e58fc0015578e6b9b5fd6b4674e26429",
+    "binarySha256": "f53f1f5fb09eabe9709a267bce179cd6ba3a3a23af947d71aca4b1f99b4658a5",
+    "sourceArchiveSha256": "b32bbaf650cc8b29ba7831feb41a0fce131956d40adc22844b36cddfc47b3d4f",
+    "build": {
+      "type": "Release",
+      "target": "main",
+      "jobs": 1
+    }
+  },
+  "tokenizerAdaptation": {
+    "reason": "Match official llm.py prompt_encode assistant newline",
+    "sourceSha256": "8a997c568067bcde499fdb3de8b06fd74a04e2cb62b102e7778665f70521573e",
+    "usedSha256": "6dba7739e2017356946a9757698c70241deb7b42bef56a1cc021c42e7cbe23bf",
+    "change": {
+      "before": "prompt += \"<|im_end|>\\n<|im_start|>assistant\"",
+      "after": "prompt += \"<|im_end|>\\n<|im_start|>assistant\\n\""
+    }
+  },
+  "inferenceOptions": {
+    "live_print": "0"
+  }
+}

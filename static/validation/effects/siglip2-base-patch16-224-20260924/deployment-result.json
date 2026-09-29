@@ -1,0 +1,122 @@
+{
+  "modelId": "siglip2-base-patch16-224",
+  "revision": "ad55e40ba57d930573b75d294d4b5aa452fa6a00",
+  "date": "2026-09-24",
+  "variants": [
+    {
+      "label": "SigLIP2 base / patch16 / 224",
+      "observation": "以下数值为真实图片与候选描述的匹配分数；不是准确率。 两项分数与同版本模型卡公布的 AX650 样例结果相差小于 1×10⁻⁸。cats 的绝对分数仅约 0.106，需根据业务数据确定阈值。",
+      "previews": [
+        {
+          "caption": "官方图文匹配输入",
+          "path": "/validation/effects/siglip2-base-patch16-224-20260924/siglip2-base224-fixed64/input.jpg"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "候选文本",
+            "余弦相似度",
+            "独立 sigmoid 分数"
+          ],
+          "rows": [
+            [
+              "a photo of 2 cats",
+              "0.129930",
+              "0.105968"
+            ],
+            [
+              "a photo of 2 dogs",
+              "0.052817",
+              "0.000020"
+            ]
+          ]
+        }
+      ],
+      "audio": [],
+      "record": {
+        "task": "siglip2",
+        "variant": "base224-fixed64",
+        "provider": "AXCLRTExecutionProvider",
+        "sessions": [
+          {
+            "model": "ax650/siglip2-base-patch16-224_vision.axmodel",
+            "inputs": [
+              {
+                "name": "image",
+                "shape": [
+                  1,
+                  3,
+                  224,
+                  224
+                ],
+                "dtype": "float32"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "pooler_output",
+                "shape": [
+                  1,
+                  768
+                ]
+              }
+            ],
+            "runMilliseconds": [
+              20.092106999982207
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "ax650/siglip2-base-patch16-224_text.axmodel",
+            "inputs": [
+              {
+                "name": "text",
+                "shape": [
+                  1,
+                  64
+                ],
+                "dtype": "int32"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "pooler_output",
+                "shape": [
+                  1,
+                  768
+                ]
+              }
+            ],
+            "runMilliseconds": [
+              6.887731000460917,
+              6.937897999705456
+            ],
+            "allFinite": true
+          }
+        ],
+        "results": [
+          {
+            "text": "a photo of 2 cats",
+            "cosine": 0.12993040680885315,
+            "sigmoidScore": 0.10596761852502823
+          },
+          {
+            "text": "a photo of 2 dogs",
+            "cosine": 0.052817296236753464,
+            "sigmoidScore": 1.9978018826805055e-05
+          }
+        ],
+        "completed": true,
+        "referenceComparison": {
+          "source": "https://huggingface.co/AXERA-TECH/siglip2-base-patch16-224/blob/ad55e40ba57d930573b75d294d4b5aa452fa6a00/README.md",
+          "sigmoidScores": [
+            0.10596762,
+            1.9978019e-05
+          ],
+          "maxAbsoluteDifference": 1.4749717697215559e-09
+        }
+      }
+    }
+  ]
+}

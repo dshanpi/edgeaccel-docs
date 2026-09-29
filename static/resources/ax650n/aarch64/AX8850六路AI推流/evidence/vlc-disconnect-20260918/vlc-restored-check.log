@@ -1,0 +1,16 @@
+{"time": 1789702362.571088, "playing": true, "decoded": 4110, "displayed": 2023, "lost": 0, "corrupted": 0}
+{"time": 1789702392.5742443, "playing": true, "decoded": 5910, "displayed": 2923, "lost": 0, "corrupted": 0, "display_fps": 29.99684414686508}
+{"time": 1789702422.5758872, "playing": true, "decoded": 7710, "displayed": 3823, "lost": 0, "corrupted": 0, "display_fps": 29.99835714754181}
+MainPID=83794
+Id=ax-six-rtsp.service
+ActiveState=active
+
+MainPID=63479
+Id=ax-six-local-preview.service
+ActiveState=active
+
+MainPID=98556
+Id=ax-six-vlc-preview.service
+ActiveState=active
+LISTEN 0      128          0.0.0.0:8554      0.0.0.0:*    users:(("six_app",pid=83794,fd=12))                      
+LISTEN 0      5          127.0.0.1:8850      0.0.0.0:*    users:(("python3",pid=63479,fd=3))                       

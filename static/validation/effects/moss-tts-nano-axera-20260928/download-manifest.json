@@ -1,0 +1,189 @@
+{
+  "modelId": "MOSS-TTS-Nano.AXERA",
+  "repo": "AXERA-TECH/MOSS-TTS-Nano.AXERA",
+  "revision": "74e28d5b9f1d91634b85fdb77ab245744ee7e3f7",
+  "complete": true,
+  "files": [
+    {
+      "path": "README.md",
+      "size": 2914,
+      "url": "https://huggingface.co/AXERA-TECH/MOSS-TTS-Nano.AXERA/resolve/74e28d5b9f1d91634b85fdb77ab245744ee7e3f7/README.md",
+      "verifiedHashes": {
+        "sha256": "6285133953d55a9d680fa7e2e39026cbce8dfb0a74f4cf82f542332c0e4b121c",
+        "gitBlob": "9a98e6e976ce329a723fe30985a6fa776dafeff3"
+      }
+    },
+    {
+      "path": "config.json",
+      "size": 3,
+      "url": "https://huggingface.co/AXERA-TECH/MOSS-TTS-Nano.AXERA/resolve/74e28d5b9f1d91634b85fdb77ab245744ee7e3f7/config.json",
+      "verifiedHashes": {
+        "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+        "gitBlob": "0967ef424bce6791893e9a57bb952f80fd536e93"
+      }
+    },
+    {
+      "path": "config/browser_poc_manifest.json",
+      "size": 470685,
+      "url": "https://huggingface.co/AXERA-TECH/MOSS-TTS-Nano.AXERA/resolve/74e28d5b9f1d91634b85fdb77ab245744ee7e3f7/config/browser_poc_manifest.json",
+      "verifiedHashes": {
+        "sha256": "c75b724e7a6c9b6ea9bd326efb54d2a228ca2a2deea38d01a0793d7dc49bc9d0",
+        "gitBlob": "5f6af70c52e035d3249a24b41fd5f5c3aa45b094"
+      }
+    },
+    {
+      "path": "config/codec_browser_onnx_meta.json",
+      "size": 16785,
+      "url": "https://huggingface.co/AXERA-TECH/MOSS-TTS-Nano.AXERA/resolve/74e28d5b9f1d91634b85fdb77ab245744ee7e3f7/config/codec_browser_onnx_meta.json",
+      "verifiedHashes": {
+        "sha256": "e382ca4b8900197af23ee025d8d767a6cfd90555039883088f1b76042a5d44fb",
+        "gitBlob": "ab85741004bda64539c776c0369ba1c936f53193"
+      }
+    },
+    {
+      "path": "config/tokenizer.model",
+      "size": 470897,
+      "url": "https://huggingface.co/AXERA-TECH/MOSS-TTS-Nano.AXERA/resolve/74e28d5b9f1d91634b85fdb77ab245744ee7e3f7/config/tokenizer.model",
+      "verifiedHashes": {
+        "sha256": "c353ee1479b536bf414c1b247f5542b6607fb8ae91320e5af1781fee200fddff",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "config/tts_browser_onnx_meta.json",
+      "size": 4744,
+      "url": "https://huggingface.co/AXERA-TECH/MOSS-TTS-Nano.AXERA/resolve/74e28d5b9f1d91634b85fdb77ab245744ee7e3f7/config/tts_browser_onnx_meta.json",
+      "verifiedHashes": {
+        "sha256": "56c95ec829ce02b56e69c7eb4fae0153a83c1d70c7445b7955f01f0a8e6e1008",
+        "gitBlob": "172f50f3518d52443e179eaca6d414bbef4e7a20"
+      }
+    },
+    {
+      "path": "configuration.json",
+      "size": 621,
+      "url": "https://huggingface.co/AXERA-TECH/MOSS-TTS-Nano.AXERA/resolve/74e28d5b9f1d91634b85fdb77ab245744ee7e3f7/configuration.json",
+      "verifiedHashes": {
+        "sha256": "a9963ba01cf704cc2178b9fb4c8a2238924365ec1276d5e6a61bb9caff5df119",
+        "gitBlob": "008cdb1855e9fb306b49b18854223cbb04d60269"
+      }
+    },
+    {
+      "path": "models/axmodels_650/codec_decode.axmodel",
+      "size": 52017863,
+      "url": "https://huggingface.co/AXERA-TECH/MOSS-TTS-Nano.AXERA/resolve/74e28d5b9f1d91634b85fdb77ab245744ee7e3f7/models/axmodels_650/codec_decode.axmodel",
+      "verifiedHashes": {
+        "sha256": "27c474ec1cf819d72ebaa0ed33ae8d308eef508da74bb6860d99e916904fcc30",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/axmodels_650/tts_decode_step.axmodel",
+      "size": 144663502,
+      "url": "https://huggingface.co/AXERA-TECH/MOSS-TTS-Nano.AXERA/resolve/74e28d5b9f1d91634b85fdb77ab245744ee7e3f7/models/axmodels_650/tts_decode_step.axmodel",
+      "verifiedHashes": {
+        "sha256": "f64eda392b2186b61830aece478dd6d415f7d584a71ab12f45f28127f5a43e35",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/axmodels_650/tts_local_fixed_sampled_frame.axmodel",
+      "size": 215139340,
+      "url": "https://huggingface.co/AXERA-TECH/MOSS-TTS-Nano.AXERA/resolve/74e28d5b9f1d91634b85fdb77ab245744ee7e3f7/models/axmodels_650/tts_local_fixed_sampled_frame.axmodel",
+      "verifiedHashes": {
+        "sha256": "4d929e9c05a26ec0b638e84fc8b4fc3476a7f3a578a09b679067a4ffec8d82f7",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/axmodels_650/tts_prefill.axmodel",
+      "size": 147742699,
+      "url": "https://huggingface.co/AXERA-TECH/MOSS-TTS-Nano.AXERA/resolve/74e28d5b9f1d91634b85fdb77ab245744ee7e3f7/models/axmodels_650/tts_prefill.axmodel",
+      "verifiedHashes": {
+        "sha256": "dfe5ae88a2549f708ab9134d1c6dbd8c53e49aff76fedff8a902459a7c4b6597",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/onnxmodels/moss_tts_decode_step.data",
+      "size": 440816136,
+      "url": "https://huggingface.co/AXERA-TECH/MOSS-TTS-Nano.AXERA/resolve/74e28d5b9f1d91634b85fdb77ab245744ee7e3f7/models/onnxmodels/moss_tts_decode_step.data",
+      "verifiedHashes": {
+        "sha256": "710ca7f6123372488a1641c579159908d8e6461569ae0b83fc071de8eb3de34f",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/onnxmodels/moss_tts_decode_step.onnx",
+      "size": 151626,
+      "url": "https://huggingface.co/AXERA-TECH/MOSS-TTS-Nano.AXERA/resolve/74e28d5b9f1d91634b85fdb77ab245744ee7e3f7/models/onnxmodels/moss_tts_decode_step.onnx",
+      "verifiedHashes": {
+        "sha256": "31294cf854687c937f5769baf44b796b055e559bc74bb0450af327c51c8f6969",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "python/infer_moss_tts.py",
+      "size": 7445,
+      "url": "https://huggingface.co/AXERA-TECH/MOSS-TTS-Nano.AXERA/resolve/74e28d5b9f1d91634b85fdb77ab245744ee7e3f7/python/infer_moss_tts.py",
+      "verifiedHashes": {
+        "sha256": "46ab61226291a5f8b45d475d449d04237ac234d11f13e15da7f9a8ca9898af80",
+        "gitBlob": "298ba1accf0a92937b71948288b47ca25fb90e21"
+      }
+    },
+    {
+      "path": "python/prepare_request.py",
+      "size": 5947,
+      "url": "https://huggingface.co/AXERA-TECH/MOSS-TTS-Nano.AXERA/resolve/74e28d5b9f1d91634b85fdb77ab245744ee7e3f7/python/prepare_request.py",
+      "verifiedHashes": {
+        "sha256": "197d0ec5b502e54f00b842f1ecf0869c1d41a4a3c79a0dda369f860e65680e9a",
+        "gitBlob": "0a2f981f42f039336e5ea0a954a480242d8fb5b9"
+      }
+    },
+    {
+      "path": "requirements.txt",
+      "size": 32,
+      "url": "https://huggingface.co/AXERA-TECH/MOSS-TTS-Nano.AXERA/resolve/74e28d5b9f1d91634b85fdb77ab245744ee7e3f7/requirements.txt",
+      "verifiedHashes": {
+        "sha256": "32db2acff5ee6b71d901059b7bf9a1f859d0b607ae143c6026296b41b06fd541",
+        "gitBlob": "5ebe6492c984b6e6c7c02014e4fd3685a1dc937d"
+      }
+    },
+    {
+      "path": "run_ax650.sh",
+      "size": 2733,
+      "url": "https://huggingface.co/AXERA-TECH/MOSS-TTS-Nano.AXERA/resolve/74e28d5b9f1d91634b85fdb77ab245744ee7e3f7/run_ax650.sh",
+      "verifiedHashes": {
+        "sha256": "147c0559218296eb83b9f5f32c14e1fe7c380d55887abbaad114cabb11cf74b7",
+        "gitBlob": "63fe97fa4fc5d4e5c325cdde1de790e15045803d"
+      }
+    },
+    {
+      "path": "scripts/__init__.py",
+      "size": 0,
+      "url": "https://huggingface.co/AXERA-TECH/MOSS-TTS-Nano.AXERA/resolve/74e28d5b9f1d91634b85fdb77ab245744ee7e3f7/scripts/__init__.py",
+      "verifiedHashes": {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "gitBlob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+      }
+    },
+    {
+      "path": "scripts/axe_session.py",
+      "size": 3054,
+      "url": "https://huggingface.co/AXERA-TECH/MOSS-TTS-Nano.AXERA/resolve/74e28d5b9f1d91634b85fdb77ab245744ee7e3f7/scripts/axe_session.py",
+      "verifiedHashes": {
+        "sha256": "fbb28a8575d55b439ac524c2a125fd17c53b39600bf005d6a7aab5949f7dd8a2",
+        "gitBlob": "02d37a6f57fc1211bd8f5aac466295a7b45cba31"
+      }
+    },
+    {
+      "path": "scripts/tts_runtime.py",
+      "size": 66822,
+      "url": "https://huggingface.co/AXERA-TECH/MOSS-TTS-Nano.AXERA/resolve/74e28d5b9f1d91634b85fdb77ab245744ee7e3f7/scripts/tts_runtime.py",
+      "verifiedHashes": {
+        "sha256": "e659c72ba69192c451b1e1fe38c402b5742f833e5da6f55ce1209d39cab3adf0",
+        "gitBlob": "59fb231093412232f27f720e08ceef6b9de280a3"
+      }
+    }
+  ],
+  "runnerSha256": "e34ca43aba75d772340d2f51b1130e8d3e9f6ca9f668a6f314370b56dbc17361"
+}

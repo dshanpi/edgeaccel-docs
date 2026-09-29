@@ -1,0 +1,1823 @@
+{
+  "modelId": "LibCLIP",
+  "revision": "ddfe0d68e4197b224358bc658d052f626aec7220",
+  "date": "2026-09-28",
+  "variants": [
+    {
+      "label": "文字检索：一只狗",
+      "observation": "前五名中，第三张实际上是猫；其余图片可见狗。这里保留完整前五名，不能将排序当作逐图正确判断。",
+      "previews": [
+        {
+          "caption": "一只狗：本次返回的前五名，点击可查看原图",
+          "path": "/validation/effects/libclip-20260928/query-1-top5.png"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "排名",
+            "图片文件",
+            "检索分数"
+          ],
+          "rows": [
+            [
+              "1",
+              "000000082807.jpg",
+              "0.242308"
+            ],
+            [
+              "2",
+              "000000049269.jpg",
+              "0.201912"
+            ],
+            [
+              "3",
+              "000000023272.jpg",
+              "0.134155"
+            ],
+            [
+              "4",
+              "000000029393.jpg",
+              "0.066443"
+            ],
+            [
+              "5",
+              "000000078823.jpg",
+              "0.051711"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "modelId": "LibCLIP",
+        "provider": "AXCL C API",
+        "completed": true,
+        "deviceType": "axcl_device",
+        "deviceId": 0,
+        "sourceHashes": {
+          "pyclip/pyaxdev.py": "ca653cd9dd2530a7430282d770d0e8d8816ff0ffec503160c0c27553085ea5b6",
+          "pyclip/pyclip.py": "2992fef9791b5d565d67c4e5d04bfbf50eaf17c9a1c9d3417332c89979343845",
+          "install/lib/axcl_aarch64/libclip.so": "5e097744bbd20a6c9fb43724b362579000fbc9117ffee212ad54dc66bf377f69",
+          "coco_1000.tar": "f3e18a198658270e19ced079de7a404e3478e69c2ef94fb47c87ddf056e6a541"
+        },
+        "configuredWeightFiles": [
+          {
+            "path": "cnclip/cnclip_vit_l14_336px_text_u16.axmodel",
+            "sha256": "6f33786ab988ca22dbc883c9fa6ebfa842a425445e4dac945c30069a6d9d5cf8"
+          },
+          {
+            "path": "cnclip/cnclip_vit_l14_336px_vision_u16u8.axmodel",
+            "sha256": "6278e99001c198082b59219b163f7136d3049bca223be9176678ac6031348cde"
+          }
+        ],
+        "vocabSha256": "45bbac6b341c319adc98a532532882e91a9cefc0329aa57bac9ae761c27b291c",
+        "versions": {
+          "numpy": "1.26.4",
+          "opencv": "4.11.0"
+        },
+        "sessions": [],
+        "coverageScope": "Official native SDK pipeline, without per-engine tensor tracing. API times exclude process/model initialization.",
+        "nativeOutputFinite": true,
+        "review": {
+          "officialLibraryAndSourcesMatched": true,
+          "explicitAxclWorkerStartExitObserved": true,
+          "nativeApiCalls": {
+            "clip_create": 10,
+            "clip_add": 1001,
+            "clip_destroy": 10,
+            "clip_get_text_feat": 7,
+            "clip_match_text": 19,
+            "clip_match_feat": 7,
+            "clip_match_image": 2,
+            "clip_remove": 1
+          },
+          "indexedImageSha256Verified": 1000,
+          "queries": 7,
+          "completeRankingMatchesFeatureAndRepeat": true,
+          "imageQueryRepeatExact": true,
+          "imageQuerySelfRank": 1,
+          "persistentIndexReopenExact": true,
+          "sameProcessRestoreExact": false,
+          "galleryMaxChannelDifference": 0,
+          "textScoresSumToOne": true,
+          "qualityAcceptance": false,
+          "scope": "SDK pipeline and API consistency; no per-engine tensor tracing, FP32 reference or labeled retrieval benchmark.",
+          "initialIndexMeanMilliseconds": 99.95627240597969,
+          "initialIndexSumSeconds": 99.95627240597969,
+          "sevenFirstQueryMeanMilliseconds": 11.061689284230981,
+          "isolatedQueryProcesses": 7,
+          "queryPhaseMeanSecondsIncludingStartup": 8.603745744854677,
+          "sameProcessRestoreRankingExact": true,
+          "sameProcessRestoreScoreMaxAbsDifference": 1.1920928955078125e-07
+        },
+        "persistence": {
+          "phase": "reopened-in-new-process",
+          "removedKey": "000000082807.jpg",
+          "afterRemoval": [
+            [
+              "000000049269.jpg",
+              0.2664834260940552
+            ],
+            [
+              "000000023272.jpg",
+              0.17705804109573364
+            ],
+            [
+              "000000029393.jpg",
+              0.08769156038761139
+            ],
+            [
+              "000000078823.jpg",
+              0.06824763864278793
+            ],
+            [
+              "000000052891.jpg",
+              0.03532586619257927
+            ]
+          ],
+          "afterRestore": [
+            [
+              "000000082807.jpg",
+              0.24230848252773285
+            ],
+            [
+              "000000049269.jpg",
+              0.20191217958927155
+            ],
+            [
+              "000000023272.jpg",
+              0.13415533304214478
+            ],
+            [
+              "000000029393.jpg",
+              0.06644313782453537
+            ],
+            [
+              "000000078823.jpg",
+              0.051710642874240875
+            ]
+          ],
+          "restoredExact": false,
+          "restoredRankingExact": true,
+          "restoredScoreMaxAbsDifference": 1.1920928955078125e-07,
+          "textUnchangedAfterImage": true,
+          "afterReopen": [
+            [
+              "000000082807.jpg",
+              0.2423083633184433
+            ],
+            [
+              "000000049269.jpg",
+              0.2019120752811432
+            ],
+            [
+              "000000023272.jpg",
+              0.1341552734375
+            ],
+            [
+              "000000029393.jpg",
+              0.06644310057163239
+            ],
+            [
+              "000000078823.jpg",
+              0.051710616797208786
+            ]
+          ],
+          "reopenedExact": true,
+          "all1000KeysPresentAfterReopen": true
+        },
+        "categoryProbes": {
+          "scope": "Four Chinese queries checked against COCO category presence in this 1000-image subset; no image-count, action, caption or OOD relevance labels. Not a comprehensive text-image retrieval benchmark.",
+          "annotationSha256": "e8c7f7908f1d7278341fae127d0da654f102f11bd7b21d8aeefa635b8c810b6f",
+          "annotationSourceUrl": "https://huggingface.co/AXERA-TECH/yoloe-26n-seg/resolve/92b80871e4f4d1223cd4824015931503c4b78879/datasets/annotations_val2017/annotations/instances_val2017.json",
+          "annotationRepositoryRevision": "92b80871e4f4d1223cd4824015931503c4b78879",
+          "imageCount": 1000,
+          "probes": [
+            {
+              "query": "一只狗",
+              "category": "dog",
+              "categoryId": 18,
+              "positiveImagesIn1000": 31,
+              "positiveImageIds": [
+                7386,
+                17029,
+                22192,
+                22892,
+                29393,
+                30494,
+                49269,
+                52891,
+                53529,
+                57760,
+                60835,
+                61108,
+                61471,
+                64868,
+                65485,
+                67213,
+                68078,
+                71226,
+                72813,
+                76417,
+                78565,
+                78823,
+                79229,
+                80153,
+                81766,
+                82807,
+                88951,
+                89880,
+                90003,
+                107226,
+                117525
+              ],
+              "top5ClassPresent": [
+                true,
+                true,
+                false,
+                true,
+                true
+              ],
+              "precisionAt5": 0.8,
+              "recallAt5": 0.12903225806451613
+            },
+            {
+              "query": "一只猫",
+              "category": "cat",
+              "categoryId": 17,
+              "positiveImagesIn1000": 43,
+              "positiveImageIds": [
+                1675,
+                4795,
+                10363,
+                14007,
+                14831,
+                15497,
+                18833,
+                22892,
+                23272,
+                25560,
+                39769,
+                46378,
+                47121,
+                49810,
+                51008,
+                58111,
+                61333,
+                63552,
+                71226,
+                77396,
+                77595,
+                78420,
+                78426,
+                80666,
+                80949,
+                84362,
+                84650,
+                89271,
+                94336,
+                98839,
+                101420,
+                101762,
+                106389,
+                107087,
+                108244,
+                109055,
+                112798,
+                115885,
+                116825,
+                117374,
+                117908,
+                118515,
+                119233
+              ],
+              "top5ClassPresent": [
+                true,
+                true,
+                true,
+                true,
+                true
+              ],
+              "precisionAt5": 1.0,
+              "recallAt5": 0.11627906976744186
+            },
+            {
+              "query": "一辆公共汽车",
+              "category": "bus",
+              "categoryId": 6,
+              "positiveImagesIn1000": 32,
+              "positiveImageIds": [
+                1584,
+                2006,
+                5037,
+                6723,
+                15338,
+                15440,
+                15517,
+                17207,
+                17627,
+                22755,
+                26204,
+                27768,
+                32941,
+                33109,
+                33854,
+                42070,
+                52007,
+                55167,
+                57149,
+                74256,
+                76416,
+                82846,
+                84170,
+                86220,
+                88462,
+                90208,
+                95843,
+                98392,
+                105912,
+                106048,
+                110784,
+                114884
+              ],
+              "top5ClassPresent": [
+                true,
+                true,
+                true,
+                true,
+                true
+              ],
+              "precisionAt5": 1.0,
+              "recallAt5": 0.15625
+            },
+            {
+              "query": "一架飞机",
+              "category": "airplane",
+              "categoryId": 5,
+              "positiveImagesIn1000": 20,
+              "positiveImageIds": [
+                1761,
+                5477,
+                13348,
+                22396,
+                33114,
+                39484,
+                44652,
+                52017,
+                52412,
+                71711,
+                84752,
+                90631,
+                96549,
+                98520,
+                99054,
+                101787,
+                109900,
+                110359,
+                110721,
+                114770
+              ],
+              "top5ClassPresent": [
+                true,
+                true,
+                true,
+                true,
+                true
+              ],
+              "precisionAt5": 1.0,
+              "recallAt5": 0.25
+            }
+          ]
+        },
+        "indexedImageCount": 1000,
+        "samples": [
+          {
+            "kind": "text",
+            "query": "一只狗",
+            "isolatedProcess": true,
+            "top5": [
+              [
+                "000000082807.jpg",
+                0.2423083633184433
+              ],
+              [
+                "000000049269.jpg",
+                0.2019120752811432
+              ],
+              [
+                "000000023272.jpg",
+                0.1341552734375
+              ],
+              [
+                "000000029393.jpg",
+                0.06644310057163239
+              ],
+              [
+                "000000078823.jpg",
+                0.051710616797208786
+              ]
+            ],
+            "scoreSum": 0.999999437865057,
+            "featureNorm": 1.0,
+            "featureSha256": "6cf8c4953f80a40f2cdca65a1fed2effdcaa68c740f9f17a1880f00518b59d29",
+            "matchFeatureExact": true,
+            "repeatExact": true,
+            "gallery": {
+              "file": "query-1-top5.png",
+              "sha256": "b0b888181beb107e773ca41cff0523c98d06f7caf6f1fbcda5dcdc9ae53bcd9c"
+            }
+          },
+          {
+            "kind": "text",
+            "query": "一只猫",
+            "isolatedProcess": true,
+            "top5": [
+              [
+                "000000049810.jpg",
+                0.3133617043495178
+              ],
+              [
+                "000000119233.jpg",
+                0.09467871487140656
+              ],
+              [
+                "000000046378.jpg",
+                0.08983238786458969
+              ],
+              [
+                "000000077595.jpg",
+                0.05380716547369957
+              ],
+              [
+                "000000118515.jpg",
+                0.04484059289097786
+              ]
+            ],
+            "scoreSum": 0.9999998254676294,
+            "featureNorm": 1.0000003576278687,
+            "featureSha256": "80a916be1a7407a2a1a712a654c6b9412ca839f1ad01972eab39fd1fb85712ea",
+            "matchFeatureExact": true,
+            "repeatExact": true,
+            "gallery": {
+              "file": "query-2-top5.png",
+              "sha256": "e0ba2273305c9b9bd875fc19ede6dcf206aacdb24b4f99d90a019ade0edd4c54"
+            }
+          },
+          {
+            "kind": "text",
+            "query": "一辆公共汽车",
+            "isolatedProcess": true,
+            "top5": [
+              [
+                "000000106048.jpg",
+                0.28869789838790894
+              ],
+              [
+                "000000017207.jpg",
+                0.12920928001403809
+              ],
+              [
+                "000000052007.jpg",
+                0.09703610092401505
+              ],
+              [
+                "000000095843.jpg",
+                0.08165058493614197
+              ],
+              [
+                "000000082846.jpg",
+                0.07157450169324875
+              ]
+            ],
+            "scoreSum": 1.0000000910109885,
+            "featureNorm": 1.0000001192092896,
+            "featureSha256": "4c4982aa5e87e1f071fb32cbfc5a30220714a4d9a9b4842e1affa65d8fe7fd59",
+            "matchFeatureExact": true,
+            "repeatExact": true,
+            "gallery": {
+              "file": "query-3-top5.png",
+              "sha256": "83ae5cd4ad5e88d22d094053e3030d64889fa8f41199619c40e00651ef27cd29"
+            }
+          },
+          {
+            "kind": "text",
+            "query": "人们在滑雪",
+            "isolatedProcess": true,
+            "top5": [
+              [
+                "000000099242.jpg",
+                0.34040677547454834
+              ],
+              [
+                "000000036539.jpg",
+                0.2005450576543808
+              ],
+              [
+                "000000053626.jpg",
+                0.08680658042430878
+              ],
+              [
+                "000000118921.jpg",
+                0.05644583702087402
+              ],
+              [
+                "000000085682.jpg",
+                0.05387086048722267
+              ]
+            ],
+            "scoreSum": 1.000001734642177,
+            "featureNorm": 1.0,
+            "featureSha256": "09ff217dcda0d5c4487c4ea9a12774611a34e5d260f1ecc58c7dfff02e84e93b",
+            "matchFeatureExact": true,
+            "repeatExact": true,
+            "gallery": {
+              "file": "query-4-top5.png",
+              "sha256": "4a9cd3efe502ef3dd99b3d1e4d03c955a762b047103525cd800e8bba0e6be4ec"
+            }
+          },
+          {
+            "kind": "text",
+            "query": "桌子上的食物",
+            "isolatedProcess": true,
+            "top5": [
+              [
+                "000000064084.jpg",
+                0.2701188027858734
+              ],
+              [
+                "000000116208.jpg",
+                0.07959120720624924
+              ],
+              [
+                "000000084664.jpg",
+                0.060661930590867996
+              ],
+              [
+                "000000105014.jpg",
+                0.058767080307006836
+              ],
+              [
+                "000000002157.jpg",
+                0.05196157470345497
+              ]
+            ],
+            "scoreSum": 1.0000010017297734,
+            "featureNorm": 1.0,
+            "featureSha256": "c273e01f212c2b3a7267e46f96cd93279573565cf0707bb993d37cab7b29d2af",
+            "matchFeatureExact": true,
+            "repeatExact": true,
+            "gallery": {
+              "file": "query-5-top5.png",
+              "sha256": "755b7d80504d8196d120435c8f87fc6c42a98f6222776747a820fb5477292fc8"
+            }
+          },
+          {
+            "kind": "text",
+            "query": "一架飞机",
+            "isolatedProcess": true,
+            "top5": [
+              [
+                "000000110359.jpg",
+                0.6416475772857666
+              ],
+              [
+                "000000052017.jpg",
+                0.14901511371135712
+              ],
+              [
+                "000000101787.jpg",
+                0.05454466864466667
+              ],
+              [
+                "000000099054.jpg",
+                0.04428195580840111
+              ],
+              [
+                "000000044652.jpg",
+                0.028198374435305595
+              ]
+            ],
+            "scoreSum": 1.0000001190153145,
+            "featureNorm": 0.9999998807907104,
+            "featureSha256": "3c29d4a35f6f46ca09883ed5a17a93cf7effa1d4883c8f72a85bc48c073409bc",
+            "matchFeatureExact": true,
+            "repeatExact": true,
+            "gallery": {
+              "file": "query-6-top5.png",
+              "sha256": "6af8bcd361a504c077d63ed8a1790e951eac7b2ee3fbc7546204063dced20e17"
+            }
+          },
+          {
+            "kind": "text",
+            "query": "火星上的紫色独角兽",
+            "isolatedProcess": true,
+            "top5": [
+              [
+                "000000054592.jpg",
+                0.4061215817928314
+              ],
+              [
+                "000000020553.jpg",
+                0.37169986963272095
+              ],
+              [
+                "000000054931.jpg",
+                0.0226542130112648
+              ],
+              [
+                "000000097230.jpg",
+                0.019211167469620705
+              ],
+              [
+                "000000085665.jpg",
+                0.01779812201857567
+              ]
+            ],
+            "scoreSum": 1.0000008919759704,
+            "featureNorm": 1.0000001192092896,
+            "featureSha256": "2b0570f86fd8bf63c9b641d89ec0c4948d4cb532fabfa5b95a65d47092094d6e",
+            "matchFeatureExact": true,
+            "repeatExact": true,
+            "gallery": {
+              "file": "query-7-top5.png",
+              "sha256": "40eaeae72a406e7d8fb46e4afbb61e6eb22075449c7086b2665a0943b824472a"
+            }
+          }
+        ],
+        "imageQuery": {
+          "key": "000000000139.jpg",
+          "top5": [
+            [
+              "000000000139.jpg",
+              1.0
+            ],
+            [
+              "000000013923.jpg",
+              0.8805083632469177
+            ],
+            [
+              "000000039477.jpg",
+              0.866095244884491
+            ],
+            [
+              "000000068833.jpg",
+              0.8559144735336304
+            ],
+            [
+              "000000007574.jpg",
+              0.8518489599227905
+            ]
+          ],
+          "selfRank": 1,
+          "repeatExact": true,
+          "gallery": {
+            "file": "image-query-top5.png",
+            "sha256": "55c92eebbfdb80ea1daa9e20f98337379b73b7acb92037b201c633e4ddf86e5c"
+          }
+        },
+        "queryIsolation": "One new process per text query; build, image/index checks and reopening also run serially in separate processes.",
+        "phaseWallSeconds": [
+          {
+            "phase": "build",
+            "queryIndex": null,
+            "seconds": 125.59575254801894
+          },
+          {
+            "phase": "query",
+            "queryIndex": 0,
+            "seconds": 8.755984944000375
+          },
+          {
+            "phase": "query",
+            "queryIndex": 1,
+            "seconds": 8.651425270945765
+          },
+          {
+            "phase": "query",
+            "queryIndex": 2,
+            "seconds": 8.30446147697512
+          },
+          {
+            "phase": "query",
+            "queryIndex": 3,
+            "seconds": 8.708405096025672
+          },
+          {
+            "phase": "query",
+            "queryIndex": 4,
+            "seconds": 8.660214454983361
+          },
+          {
+            "phase": "query",
+            "queryIndex": 5,
+            "seconds": 8.50267855002312
+          },
+          {
+            "phase": "query",
+            "queryIndex": 6,
+            "seconds": 8.64305042102933
+          },
+          {
+            "phase": "maintenance",
+            "queryIndex": null,
+            "seconds": 8.77816907200031
+          },
+          {
+            "phase": "reopen",
+            "queryIndex": null,
+            "seconds": 8.38588068500394
+          }
+        ]
+      }
+    },
+    {
+      "label": "文字检索：一只猫",
+      "observation": "前五名均可见猫，场景包括镜子、桌面、地毯和电脑旁。图中分数只反映当前查询与这份图库的相对匹配。",
+      "previews": [
+        {
+          "caption": "一只猫：本次返回的前五名，点击可查看原图",
+          "path": "/validation/effects/libclip-20260928/query-2-top5.png"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "排名",
+            "图片文件",
+            "检索分数"
+          ],
+          "rows": [
+            [
+              "1",
+              "000000049810.jpg",
+              "0.313362"
+            ],
+            [
+              "2",
+              "000000119233.jpg",
+              "0.094679"
+            ],
+            [
+              "3",
+              "000000046378.jpg",
+              "0.089832"
+            ],
+            [
+              "4",
+              "000000077595.jpg",
+              "0.053807"
+            ],
+            [
+              "5",
+              "000000118515.jpg",
+              "0.044841"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "completed": true,
+        "provider": "AXCL C API",
+        "sessions": [],
+        "configuredWeightFiles": [
+          {
+            "path": "cnclip/cnclip_vit_l14_336px_text_u16.axmodel",
+            "sha256": "6f33786ab988ca22dbc883c9fa6ebfa842a425445e4dac945c30069a6d9d5cf8"
+          },
+          {
+            "path": "cnclip/cnclip_vit_l14_336px_vision_u16u8.axmodel",
+            "sha256": "6278e99001c198082b59219b163f7136d3049bca223be9176678ac6031348cde"
+          }
+        ],
+        "samples": [
+          {
+            "kind": "text",
+            "query": "一只猫",
+            "isolatedProcess": true,
+            "top5": [
+              [
+                "000000049810.jpg",
+                0.3133617043495178
+              ],
+              [
+                "000000119233.jpg",
+                0.09467871487140656
+              ],
+              [
+                "000000046378.jpg",
+                0.08983238786458969
+              ],
+              [
+                "000000077595.jpg",
+                0.05380716547369957
+              ],
+              [
+                "000000118515.jpg",
+                0.04484059289097786
+              ]
+            ],
+            "scoreSum": 0.9999998254676294,
+            "featureNorm": 1.0000003576278687,
+            "featureSha256": "80a916be1a7407a2a1a712a654c6b9412ca839f1ad01972eab39fd1fb85712ea",
+            "matchFeatureExact": true,
+            "repeatExact": true,
+            "gallery": {
+              "file": "query-2-top5.png",
+              "sha256": "e0ba2273305c9b9bd875fc19ede6dcf206aacdb24b4f99d90a019ade0edd4c54"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "文字检索：一辆公共汽车",
+      "observation": "返回公交车辆图片，车型和拍摄角度不同。本页不根据排名判断具体车型或车辆数量。",
+      "previews": [
+        {
+          "caption": "一辆公共汽车：本次返回的前五名，点击可查看原图",
+          "path": "/validation/effects/libclip-20260928/query-3-top5.png"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "排名",
+            "图片文件",
+            "检索分数"
+          ],
+          "rows": [
+            [
+              "1",
+              "000000106048.jpg",
+              "0.288698"
+            ],
+            [
+              "2",
+              "000000017207.jpg",
+              "0.129209"
+            ],
+            [
+              "3",
+              "000000052007.jpg",
+              "0.097036"
+            ],
+            [
+              "4",
+              "000000095843.jpg",
+              "0.081651"
+            ],
+            [
+              "5",
+              "000000082846.jpg",
+              "0.071575"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "completed": true,
+        "provider": "AXCL C API",
+        "sessions": [],
+        "configuredWeightFiles": [
+          {
+            "path": "cnclip/cnclip_vit_l14_336px_text_u16.axmodel",
+            "sha256": "6f33786ab988ca22dbc883c9fa6ebfa842a425445e4dac945c30069a6d9d5cf8"
+          },
+          {
+            "path": "cnclip/cnclip_vit_l14_336px_vision_u16u8.axmodel",
+            "sha256": "6278e99001c198082b59219b163f7136d3049bca223be9176678ac6031348cde"
+          }
+        ],
+        "samples": [
+          {
+            "kind": "text",
+            "query": "一辆公共汽车",
+            "isolatedProcess": true,
+            "top5": [
+              [
+                "000000106048.jpg",
+                0.28869789838790894
+              ],
+              [
+                "000000017207.jpg",
+                0.12920928001403809
+              ],
+              [
+                "000000052007.jpg",
+                0.09703610092401505
+              ],
+              [
+                "000000095843.jpg",
+                0.08165058493614197
+              ],
+              [
+                "000000082846.jpg",
+                0.07157450169324875
+              ]
+            ],
+            "scoreSum": 1.0000000910109885,
+            "featureNorm": 1.0000001192092896,
+            "featureSha256": "4c4982aa5e87e1f071fb32cbfc5a30220714a4d9a9b4842e1affa65d8fe7fd59",
+            "matchFeatureExact": true,
+            "repeatExact": true,
+            "gallery": {
+              "file": "query-3-top5.png",
+              "sha256": "83ae5cd4ad5e88d22d094053e3030d64889fa8f41199619c40e00651ef27cd29"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "文字检索：人们在滑雪",
+      "observation": "返回雪地中的人物与滑雪场景；查询中的人数、动作细节没有逐项标注验收。",
+      "previews": [
+        {
+          "caption": "人们在滑雪：本次返回的前五名，点击可查看原图",
+          "path": "/validation/effects/libclip-20260928/query-4-top5.png"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "排名",
+            "图片文件",
+            "检索分数"
+          ],
+          "rows": [
+            [
+              "1",
+              "000000099242.jpg",
+              "0.340407"
+            ],
+            [
+              "2",
+              "000000036539.jpg",
+              "0.200545"
+            ],
+            [
+              "3",
+              "000000053626.jpg",
+              "0.086807"
+            ],
+            [
+              "4",
+              "000000118921.jpg",
+              "0.056446"
+            ],
+            [
+              "5",
+              "000000085682.jpg",
+              "0.053871"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "completed": true,
+        "provider": "AXCL C API",
+        "sessions": [],
+        "configuredWeightFiles": [
+          {
+            "path": "cnclip/cnclip_vit_l14_336px_text_u16.axmodel",
+            "sha256": "6f33786ab988ca22dbc883c9fa6ebfa842a425445e4dac945c30069a6d9d5cf8"
+          },
+          {
+            "path": "cnclip/cnclip_vit_l14_336px_vision_u16u8.axmodel",
+            "sha256": "6278e99001c198082b59219b163f7136d3049bca223be9176678ac6031348cde"
+          }
+        ],
+        "samples": [
+          {
+            "kind": "text",
+            "query": "人们在滑雪",
+            "isolatedProcess": true,
+            "top5": [
+              [
+                "000000099242.jpg",
+                0.34040677547454834
+              ],
+              [
+                "000000036539.jpg",
+                0.2005450576543808
+              ],
+              [
+                "000000053626.jpg",
+                0.08680658042430878
+              ],
+              [
+                "000000118921.jpg",
+                0.05644583702087402
+              ],
+              [
+                "000000085682.jpg",
+                0.05387086048722267
+              ]
+            ],
+            "scoreSum": 1.000001734642177,
+            "featureNorm": 1.0,
+            "featureSha256": "09ff217dcda0d5c4487c4ea9a12774611a34e5d260f1ecc58c7dfff02e84e93b",
+            "matchFeatureExact": true,
+            "repeatExact": true,
+            "gallery": {
+              "file": "query-4-top5.png",
+              "sha256": "4a9cd3efe502ef3dd99b3d1e4d03c955a762b047103525cd800e8bba0e6be4ec"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "文字检索：桌子上的食物",
+      "observation": "返回面包、披萨、餐盘和其他餐食场景。没有将“桌子”关系或食物种类作为正式指标。",
+      "previews": [
+        {
+          "caption": "桌子上的食物：本次返回的前五名，点击可查看原图",
+          "path": "/validation/effects/libclip-20260928/query-5-top5.png"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "排名",
+            "图片文件",
+            "检索分数"
+          ],
+          "rows": [
+            [
+              "1",
+              "000000064084.jpg",
+              "0.270119"
+            ],
+            [
+              "2",
+              "000000116208.jpg",
+              "0.079591"
+            ],
+            [
+              "3",
+              "000000084664.jpg",
+              "0.060662"
+            ],
+            [
+              "4",
+              "000000105014.jpg",
+              "0.058767"
+            ],
+            [
+              "5",
+              "000000002157.jpg",
+              "0.051962"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "completed": true,
+        "provider": "AXCL C API",
+        "sessions": [],
+        "configuredWeightFiles": [
+          {
+            "path": "cnclip/cnclip_vit_l14_336px_text_u16.axmodel",
+            "sha256": "6f33786ab988ca22dbc883c9fa6ebfa842a425445e4dac945c30069a6d9d5cf8"
+          },
+          {
+            "path": "cnclip/cnclip_vit_l14_336px_vision_u16u8.axmodel",
+            "sha256": "6278e99001c198082b59219b163f7136d3049bca223be9176678ac6031348cde"
+          }
+        ],
+        "samples": [
+          {
+            "kind": "text",
+            "query": "桌子上的食物",
+            "isolatedProcess": true,
+            "top5": [
+              [
+                "000000064084.jpg",
+                0.2701188027858734
+              ],
+              [
+                "000000116208.jpg",
+                0.07959120720624924
+              ],
+              [
+                "000000084664.jpg",
+                0.060661930590867996
+              ],
+              [
+                "000000105014.jpg",
+                0.058767080307006836
+              ],
+              [
+                "000000002157.jpg",
+                0.05196157470345497
+              ]
+            ],
+            "scoreSum": 1.0000010017297734,
+            "featureNorm": 1.0,
+            "featureSha256": "c273e01f212c2b3a7267e46f96cd93279573565cf0707bb993d37cab7b29d2af",
+            "matchFeatureExact": true,
+            "repeatExact": true,
+            "gallery": {
+              "file": "query-5-top5.png",
+              "sha256": "755b7d80504d8196d120435c8f87fc6c42a98f6222776747a820fb5477292fc8"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "文字检索：一架飞机",
+      "observation": "返回不同角度和距离的飞机图片，包括远处天空中的小目标。",
+      "previews": [
+        {
+          "caption": "一架飞机：本次返回的前五名，点击可查看原图",
+          "path": "/validation/effects/libclip-20260928/query-6-top5.png"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "排名",
+            "图片文件",
+            "检索分数"
+          ],
+          "rows": [
+            [
+              "1",
+              "000000110359.jpg",
+              "0.641648"
+            ],
+            [
+              "2",
+              "000000052017.jpg",
+              "0.149015"
+            ],
+            [
+              "3",
+              "000000101787.jpg",
+              "0.054545"
+            ],
+            [
+              "4",
+              "000000099054.jpg",
+              "0.044282"
+            ],
+            [
+              "5",
+              "000000044652.jpg",
+              "0.028198"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "completed": true,
+        "provider": "AXCL C API",
+        "sessions": [],
+        "configuredWeightFiles": [
+          {
+            "path": "cnclip/cnclip_vit_l14_336px_text_u16.axmodel",
+            "sha256": "6f33786ab988ca22dbc883c9fa6ebfa842a425445e4dac945c30069a6d9d5cf8"
+          },
+          {
+            "path": "cnclip/cnclip_vit_l14_336px_vision_u16u8.axmodel",
+            "sha256": "6278e99001c198082b59219b163f7136d3049bca223be9176678ac6031348cde"
+          }
+        ],
+        "samples": [
+          {
+            "kind": "text",
+            "query": "一架飞机",
+            "isolatedProcess": true,
+            "top5": [
+              [
+                "000000110359.jpg",
+                0.6416475772857666
+              ],
+              [
+                "000000052017.jpg",
+                0.14901511371135712
+              ],
+              [
+                "000000101787.jpg",
+                0.05454466864466667
+              ],
+              [
+                "000000099054.jpg",
+                0.04428195580840111
+              ],
+              [
+                "000000044652.jpg",
+                0.028198374435305595
+              ]
+            ],
+            "scoreSum": 1.0000001190153145,
+            "featureNorm": 0.9999998807907104,
+            "featureSha256": "3c29d4a35f6f46ca09883ed5a17a93cf7effa1d4883c8f72a85bc48c073409bc",
+            "matchFeatureExact": true,
+            "repeatExact": true,
+            "gallery": {
+              "file": "query-6-top5.png",
+              "sha256": "6af8bcd361a504c077d63ed8a1790e951eac7b2ee3fbc7546204063dced20e17"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "文字检索：火星上的紫色独角兽",
+      "observation": "该查询在当前图库中没有匹配的完整描述，接口仍返回雪地人物、摆设、马、大象和风筝等图片。第一名分数约0.406，不代表图库确实包含所描述的对象。",
+      "previews": [
+        {
+          "caption": "火星上的紫色独角兽：本次返回的前五名，点击可查看原图",
+          "path": "/validation/effects/libclip-20260928/query-7-top5.png"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "排名",
+            "图片文件",
+            "检索分数"
+          ],
+          "rows": [
+            [
+              "1",
+              "000000054592.jpg",
+              "0.406122"
+            ],
+            [
+              "2",
+              "000000020553.jpg",
+              "0.371700"
+            ],
+            [
+              "3",
+              "000000054931.jpg",
+              "0.022654"
+            ],
+            [
+              "4",
+              "000000097230.jpg",
+              "0.019211"
+            ],
+            [
+              "5",
+              "000000085665.jpg",
+              "0.017798"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "completed": true,
+        "provider": "AXCL C API",
+        "sessions": [],
+        "configuredWeightFiles": [
+          {
+            "path": "cnclip/cnclip_vit_l14_336px_text_u16.axmodel",
+            "sha256": "6f33786ab988ca22dbc883c9fa6ebfa842a425445e4dac945c30069a6d9d5cf8"
+          },
+          {
+            "path": "cnclip/cnclip_vit_l14_336px_vision_u16u8.axmodel",
+            "sha256": "6278e99001c198082b59219b163f7136d3049bca223be9176678ac6031348cde"
+          }
+        ],
+        "samples": [
+          {
+            "kind": "text",
+            "query": "火星上的紫色独角兽",
+            "isolatedProcess": true,
+            "top5": [
+              [
+                "000000054592.jpg",
+                0.4061215817928314
+              ],
+              [
+                "000000020553.jpg",
+                0.37169986963272095
+              ],
+              [
+                "000000054931.jpg",
+                0.0226542130112648
+              ],
+              [
+                "000000097230.jpg",
+                0.019211167469620705
+              ],
+              [
+                "000000085665.jpg",
+                0.01779812201857567
+              ]
+            ],
+            "scoreSum": 1.0000008919759704,
+            "featureNorm": 1.0000001192092896,
+            "featureSha256": "2b0570f86fd8bf63c9b641d89ec0c4948d4cb532fabfa5b95a65d47092094d6e",
+            "matchFeatureExact": true,
+            "repeatExact": true,
+            "gallery": {
+              "file": "query-7-top5.png",
+              "sha256": "40eaeae72a406e7d8fb46e4afbb61e6eb22075449c7086b2665a0943b824472a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "以图搜图与索引重新加载",
+      "observation": "查询图片为图库中的000000000139.jpg，本图自身排第一，后续返回其他室内场景。两次以图搜图的1000项排名和分数一致。删除并恢复一个索引条目后，在新进程中重开索引，1000个条目均可读取，第一条文字查询的前五名保持一致。",
+      "previews": [
+        {
+          "caption": "以图搜图前五名：第一张同时是查询图片",
+          "path": "/validation/effects/libclip-20260928/image-query-top5.png"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "排名",
+            "图片文件",
+            "以图搜图分数"
+          ],
+          "rows": [
+            [
+              "1",
+              "000000000139.jpg",
+              "1.000000"
+            ],
+            [
+              "2",
+              "000000013923.jpg",
+              "0.880508"
+            ],
+            [
+              "3",
+              "000000039477.jpg",
+              "0.866095"
+            ],
+            [
+              "4",
+              "000000068833.jpg",
+              "0.855914"
+            ],
+            [
+              "5",
+              "000000007574.jpg",
+              "0.851849"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "completed": true,
+        "provider": "AXCL C API",
+        "sessions": [],
+        "configuredWeightFiles": [
+          {
+            "path": "cnclip/cnclip_vit_l14_336px_text_u16.axmodel",
+            "sha256": "6f33786ab988ca22dbc883c9fa6ebfa842a425445e4dac945c30069a6d9d5cf8"
+          },
+          {
+            "path": "cnclip/cnclip_vit_l14_336px_vision_u16u8.axmodel",
+            "sha256": "6278e99001c198082b59219b163f7136d3049bca223be9176678ac6031348cde"
+          }
+        ],
+        "imageQuery": {
+          "key": "000000000139.jpg",
+          "top5": [
+            [
+              "000000000139.jpg",
+              1.0
+            ],
+            [
+              "000000013923.jpg",
+              0.8805083632469177
+            ],
+            [
+              "000000039477.jpg",
+              0.866095244884491
+            ],
+            [
+              "000000068833.jpg",
+              0.8559144735336304
+            ],
+            [
+              "000000007574.jpg",
+              0.8518489599227905
+            ]
+          ],
+          "selfRank": 1,
+          "repeatExact": true,
+          "gallery": {
+            "file": "image-query-top5.png",
+            "sha256": "55c92eebbfdb80ea1daa9e20f98337379b73b7acb92037b201c633e4ddf86e5c"
+          }
+        },
+        "persistence": {
+          "phase": "reopened-in-new-process",
+          "removedKey": "000000082807.jpg",
+          "afterRemoval": [
+            [
+              "000000049269.jpg",
+              0.2664834260940552
+            ],
+            [
+              "000000023272.jpg",
+              0.17705804109573364
+            ],
+            [
+              "000000029393.jpg",
+              0.08769156038761139
+            ],
+            [
+              "000000078823.jpg",
+              0.06824763864278793
+            ],
+            [
+              "000000052891.jpg",
+              0.03532586619257927
+            ]
+          ],
+          "afterRestore": [
+            [
+              "000000082807.jpg",
+              0.24230848252773285
+            ],
+            [
+              "000000049269.jpg",
+              0.20191217958927155
+            ],
+            [
+              "000000023272.jpg",
+              0.13415533304214478
+            ],
+            [
+              "000000029393.jpg",
+              0.06644313782453537
+            ],
+            [
+              "000000078823.jpg",
+              0.051710642874240875
+            ]
+          ],
+          "restoredExact": false,
+          "restoredRankingExact": true,
+          "restoredScoreMaxAbsDifference": 1.1920928955078125e-07,
+          "textUnchangedAfterImage": true,
+          "afterReopen": [
+            [
+              "000000082807.jpg",
+              0.2423083633184433
+            ],
+            [
+              "000000049269.jpg",
+              0.2019120752811432
+            ],
+            [
+              "000000023272.jpg",
+              0.1341552734375
+            ],
+            [
+              "000000029393.jpg",
+              0.06644310057163239
+            ],
+            [
+              "000000078823.jpg",
+              0.051710616797208786
+            ]
+          ],
+          "reopenedExact": true,
+          "all1000KeysPresentAfterReopen": true
+        }
+      }
+    },
+    {
+      "label": "四条查询的类别标注核对",
+      "observation": "使用COCO实例标注，检查本次1000张图片中是否含dog、cat、bus、airplane类别。P@5为前五名中含该类别的比例，R@5为找回的该类别图片占图库全部同类图片的比例。只核对类别是否出现，不核对数量、动作或完整句意；不能代表全部文本检索精度。",
+      "previews": [],
+      "tables": [
+        {
+          "headers": [
+            "查询",
+            "标注类别",
+            "图库同类图片",
+            "前五名命中",
+            "P@5",
+            "R@5"
+          ],
+          "rows": [
+            [
+              "一只狗",
+              "dog",
+              "31",
+              "4/5",
+              "80.0%",
+              "12.90%"
+            ],
+            [
+              "一只猫",
+              "cat",
+              "43",
+              "5/5",
+              "100.0%",
+              "11.63%"
+            ],
+            [
+              "一辆公共汽车",
+              "bus",
+              "32",
+              "5/5",
+              "100.0%",
+              "15.62%"
+            ],
+            [
+              "一架飞机",
+              "airplane",
+              "20",
+              "5/5",
+              "100.0%",
+              "25.00%"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "completed": true,
+        "provider": "AXCL C API",
+        "sessions": [],
+        "categoryProbes": {
+          "scope": "Four Chinese queries checked against COCO category presence in this 1000-image subset; no image-count, action, caption or OOD relevance labels. Not a comprehensive text-image retrieval benchmark.",
+          "annotationSha256": "e8c7f7908f1d7278341fae127d0da654f102f11bd7b21d8aeefa635b8c810b6f",
+          "annotationSourceUrl": "https://huggingface.co/AXERA-TECH/yoloe-26n-seg/resolve/92b80871e4f4d1223cd4824015931503c4b78879/datasets/annotations_val2017/annotations/instances_val2017.json",
+          "annotationRepositoryRevision": "92b80871e4f4d1223cd4824015931503c4b78879",
+          "imageCount": 1000,
+          "probes": [
+            {
+              "query": "一只狗",
+              "category": "dog",
+              "categoryId": 18,
+              "positiveImagesIn1000": 31,
+              "positiveImageIds": [
+                7386,
+                17029,
+                22192,
+                22892,
+                29393,
+                30494,
+                49269,
+                52891,
+                53529,
+                57760,
+                60835,
+                61108,
+                61471,
+                64868,
+                65485,
+                67213,
+                68078,
+                71226,
+                72813,
+                76417,
+                78565,
+                78823,
+                79229,
+                80153,
+                81766,
+                82807,
+                88951,
+                89880,
+                90003,
+                107226,
+                117525
+              ],
+              "top5ClassPresent": [
+                true,
+                true,
+                false,
+                true,
+                true
+              ],
+              "precisionAt5": 0.8,
+              "recallAt5": 0.12903225806451613
+            },
+            {
+              "query": "一只猫",
+              "category": "cat",
+              "categoryId": 17,
+              "positiveImagesIn1000": 43,
+              "positiveImageIds": [
+                1675,
+                4795,
+                10363,
+                14007,
+                14831,
+                15497,
+                18833,
+                22892,
+                23272,
+                25560,
+                39769,
+                46378,
+                47121,
+                49810,
+                51008,
+                58111,
+                61333,
+                63552,
+                71226,
+                77396,
+                77595,
+                78420,
+                78426,
+                80666,
+                80949,
+                84362,
+                84650,
+                89271,
+                94336,
+                98839,
+                101420,
+                101762,
+                106389,
+                107087,
+                108244,
+                109055,
+                112798,
+                115885,
+                116825,
+                117374,
+                117908,
+                118515,
+                119233
+              ],
+              "top5ClassPresent": [
+                true,
+                true,
+                true,
+                true,
+                true
+              ],
+              "precisionAt5": 1.0,
+              "recallAt5": 0.11627906976744186
+            },
+            {
+              "query": "一辆公共汽车",
+              "category": "bus",
+              "categoryId": 6,
+              "positiveImagesIn1000": 32,
+              "positiveImageIds": [
+                1584,
+                2006,
+                5037,
+                6723,
+                15338,
+                15440,
+                15517,
+                17207,
+                17627,
+                22755,
+                26204,
+                27768,
+                32941,
+                33109,
+                33854,
+                42070,
+                52007,
+                55167,
+                57149,
+                74256,
+                76416,
+                82846,
+                84170,
+                86220,
+                88462,
+                90208,
+                95843,
+                98392,
+                105912,
+                106048,
+                110784,
+                114884
+              ],
+              "top5ClassPresent": [
+                true,
+                true,
+                true,
+                true,
+                true
+              ],
+              "precisionAt5": 1.0,
+              "recallAt5": 0.15625
+            },
+            {
+              "query": "一架飞机",
+              "category": "airplane",
+              "categoryId": 5,
+              "positiveImagesIn1000": 20,
+              "positiveImageIds": [
+                1761,
+                5477,
+                13348,
+                22396,
+                33114,
+                39484,
+                44652,
+                52017,
+                52412,
+                71711,
+                84752,
+                90631,
+                96549,
+                98520,
+                99054,
+                101787,
+                109900,
+                110359,
+                110721,
+                114770
+              ],
+              "top5ClassPresent": [
+                true,
+                true,
+                true,
+                true,
+                true
+              ],
+              "precisionAt5": 1.0,
+              "recallAt5": 0.25
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "SDK调用与独立进程耗时",
+      "observation": "图片入库统计1000次初始clip_add，含SDK图像处理、编码、传输和索引写入。文字检索统计七条查询各第一次clip_match_text。前两项不含加载、读图、绘图和证据保存；第三项包含启动进程、加载模型、当前查询的重复复核和结果保存。没有预热，不能把API调用时间当成独立进程的完整响应时间。",
+      "previews": [],
+      "tables": [
+        {
+          "headers": [
+            "阶段",
+            "调用次数",
+            "平均 / ms"
+          ],
+          "rows": [
+            [
+              "首次图片入库",
+              "1000",
+              "99.956"
+            ],
+            [
+              "首次文字检索",
+              "7",
+              "11.062"
+            ],
+            [
+              "独立查询进程（含启动）",
+              "7",
+              "8603.746"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "completed": true,
+        "provider": "AXCL C API",
+        "sessions": [],
+        "review": {
+          "officialLibraryAndSourcesMatched": true,
+          "explicitAxclWorkerStartExitObserved": true,
+          "nativeApiCalls": {
+            "clip_create": 10,
+            "clip_add": 1001,
+            "clip_destroy": 10,
+            "clip_get_text_feat": 7,
+            "clip_match_text": 19,
+            "clip_match_feat": 7,
+            "clip_match_image": 2,
+            "clip_remove": 1
+          },
+          "indexedImageSha256Verified": 1000,
+          "queries": 7,
+          "completeRankingMatchesFeatureAndRepeat": true,
+          "imageQueryRepeatExact": true,
+          "imageQuerySelfRank": 1,
+          "persistentIndexReopenExact": true,
+          "sameProcessRestoreExact": false,
+          "galleryMaxChannelDifference": 0,
+          "textScoresSumToOne": true,
+          "qualityAcceptance": false,
+          "scope": "SDK pipeline and API consistency; no per-engine tensor tracing, FP32 reference or labeled retrieval benchmark.",
+          "initialIndexMeanMilliseconds": 99.95627240597969,
+          "initialIndexSumSeconds": 99.95627240597969,
+          "sevenFirstQueryMeanMilliseconds": 11.061689284230981,
+          "isolatedQueryProcesses": 7,
+          "queryPhaseMeanSecondsIncludingStartup": 8.603745744854677,
+          "sameProcessRestoreRankingExact": true,
+          "sameProcessRestoreScoreMaxAbsDifference": 1.1920928955078125e-07
+        }
+      }
+    }
+  ]
+}

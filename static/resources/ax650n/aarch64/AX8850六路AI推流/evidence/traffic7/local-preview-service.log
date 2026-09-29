@@ -1,0 +1,32 @@
+2026-09-16 18:11:33,581 "GET /overview.ts HTTP/1.1" 200 -
+2026-09-16 18:11:33,583 Preview opened: overview
+2026-09-16 18:11:41,446 Preview closed: overview
+[mpegts @ 0xaaaaeabfca40] Invalid DTS: 86885 PTS: 84060 in output stream 0:0, replacing by guess
+2026-09-16 18:11:42,822 "GET /driving.ts HTTP/1.1" 200 -
+2026-09-16 18:11:42,823 Preview opened: driving
+[mpegts @ 0xaaaaeabfca40] Invalid DTS: 89988 PTS: 87030 in output stream 0:0, replacing by guess
+[mpegts @ 0xaaaaeabfca40] Invalid DTS: 93091 PTS: 90090 in output stream 0:0, replacing by guess
+[mpegts @ 0xaaaaeabfca40] Invalid DTS: 96194 PTS: 93060 in output stream 0:0, replacing by guess
+[mpegts @ 0xaaaaeabfca40] Invalid DTS: 99297 PTS: 96120 in output stream 0:0, replacing by guess
+2026-09-16 18:11:51,550 Preview closed: driving
+Stopping ax-six-local-preview.service - /usr/bin/python3 /home/baiwen/ax-pipeline/six/local-preview.py...
+ax-six-local-preview.service: Deactivated successfully.
+Stopped ax-six-local-preview.service - /usr/bin/python3 /home/baiwen/ax-pipeline/six/local-preview.py.
+ax-six-local-preview.service: Consumed 2.780s CPU time.
+Started ax-six-local-preview.service - /usr/bin/python3 /home/baiwen/ax-pipeline/six/local-preview.py.
+2026-09-16 18:12:36,964 Local VLC preview: http://127.0.0.1:8850/overview.ts
+[rtsp @ 0xaaab05baea60] Stream #0: not enough frames to estimate rate; consider increasing probesize
+2026-09-16 18:13:12,647 "GET /overview.ts HTTP/1.1" 200 -
+2026-09-16 18:13:12,648 Preview opened: overview
+2026-09-16 18:13:21,386 Preview closed: overview
+[mpegts @ 0xaaaae8495d10] Invalid DTS: 83782 PTS: 81000 in output stream 0:0, replacing by guess
+2026-09-16 18:13:22,679 "GET /driving.ts HTTP/1.1" 200 -
+2026-09-16 18:13:22,679 Preview opened: driving
+[mpegts @ 0xaaaae8495d10] Invalid DTS: 86885 PTS: 84060 in output stream 0:0, replacing by guess
+[mpegts @ 0xaaaae8495d10] Invalid DTS: 89988 PTS: 87030 in output stream 0:0, replacing by guess
+[mpegts @ 0xaaaae8495d10] Invalid DTS: 93091 PTS: 90090 in output stream 0:0, replacing by guess
+[mpegts @ 0xaaaae8495d10] Invalid DTS: 96194 PTS: 93060 in output stream 0:0, replacing by guess
+[mpegts @ 0xaaaae8495d10] Invalid DTS: 99297 PTS: 96030 in output stream 0:0, replacing by guess
+2026-09-16 18:13:31,422 Preview closed: driving
+2026-09-16 18:14:20,563 "GET /overview.ts HTTP/1.1" 200 -
+2026-09-16 18:14:20,563 Preview opened: overview

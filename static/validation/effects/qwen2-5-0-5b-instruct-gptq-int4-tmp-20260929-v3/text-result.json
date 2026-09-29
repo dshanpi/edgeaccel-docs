@@ -1,0 +1,65 @@
+{
+  "kind": "legacy-text",
+  "modelId": "Qwen2.5-0.5B-Instruct-GPTQ-Int4-tmp",
+  "provider": "AXCL C++",
+  "completed": true,
+  "binarySha256": "1f9f1a1ca329b47f70840e8b6d104ce8248a82326aa2402bccb31144590a8fb2",
+  "postConfig": {
+    "enable_temperature": false,
+    "temperature": 0.9,
+    "enable_repetition_penalty": false,
+    "repetition_penalty": 1.2,
+    "penalty_window": 20,
+    "enable_top_p_sampling": false,
+    "top_p": 0.8,
+    "enable_top_k_sampling": true,
+    "top_k": 1
+  },
+  "revision": "af30672a4213bc1bb689781928f3d15760da3efa",
+  "date": "2026-09-29",
+  "variant": "Qwen2.5-0.5B-Instruct-GPTQ-Int4-context-2k-prefill-1k",
+  "samples": [
+    {
+      "input": "What is 2 + 3? Reply with only the number.",
+      "output": "5",
+      "exitCode": 0,
+      "processSeconds": 14.787830213994312,
+      "nativeRateLines": [
+        "avg 10.77 token/s"
+      ],
+      "observation": "数值正确，并按要求只输出数字。",
+      "nativeTtftMs": 377.57
+    },
+    {
+      "input": "请用一句中文说明 PCIe 的用途。",
+      "output": "PCI Express（PCI-E）是一种高速数据传输标准，用于连接计算机的多个设备。它允许设备之间的高速数据传输，使得计算机可以连接到服务器、存储设备和其他设备。PCI Express的用途包括：\n\n1. 数据传输：PCI Express用于连接多个设备，使得数据可以高速传输。例如，可以连接多个存储设备，以实现数据的高速传输。\n\n2. 网络连接：PCI Express可以连接多个网络设备，例如路由器、交换机等，以实现网络的高速连接。\n\n3. 存储设备：PCI Express可以连接多个存储设备，例如硬盘、SSD等，以实现数据的高速传输。\n\n4. 服务器：PCI Express可以连接多个服务器，例如服务器、存储服务器等，以实现服务器的高速连接。\n\n5. 打印机：PCI Express可以连接多个打印机，以实现打印机的高速打印。\n\n6. 打开设备：PCI Express可以连接多个打开设备，例如打印机、扫描仪等，以实现设备的高速扫描。\n\n7. 服务器：PCI Express可以连接多个服务器，例如服务器、存储服务器等，以实现服务器的高速连接。\n\n总之，PCI Express的用途非常广泛，可以用于连接多个设备，实现高速数据传输和连接，使得计算机可以连接到服务器、存储设备和其他设备。",
+      "exitCode": 0,
+      "processSeconds": 44.87845082199783,
+      "nativeRateLines": [
+        "avg 9.16 token/s"
+      ],
+      "observation": "未遵循“一句中文”的要求；关于路由器、打印机、扫描仪及服务器直接连接的说明不准确，不能作为接口用途的技术说明。",
+      "nativeTtftMs": 316.18
+    },
+    {
+      "input": "Return only a JSON object with apple equal to 3 and pear equal to 2.",
+      "output": "```json\n{\n  \"result\": \"false\"\n}\n```",
+      "exitCode": 0,
+      "processSeconds": 15.740823448999436,
+      "nativeRateLines": [
+        "avg 8.75 token/s"
+      ],
+      "observation": "输出未包含要求的 apple 和 pear 字段，内容不正确；额外的 Markdown 代码围栏也不符合“只输出 JSON”的要求。",
+      "nativeTtftMs": 299.0
+    }
+  ],
+  "runtimeSource": {
+    "repo": "AXERA-TECH/Qwen2.5-0.5B-Instruct-GPTQ-Int4",
+    "revision": "10db075dd5e99796adcec79452fcae0ec03ddded"
+  },
+  "inferenceOptions": {
+    "use_mmap_load_embed": 0,
+    "live_print": 0,
+    "devices": 0
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "kind": "legacy-vlm",
+  "modelId": "InternVL2_5-1B",
+  "provider": "AXCL C++",
+  "completed": true,
+  "binarySha256": "4372f9d080ba867c0f423ae14d80bd1556e4cacc9a7fdf447e53352213cd9aed",
+  "postConfig": {
+    "enable_temperature": false,
+    "temperature": 0.9,
+    "enable_repetition_penalty": false,
+    "repetition_penalty": 1.2,
+    "penalty_window": 20,
+    "enable_top_p_sampling": false,
+    "top_p": 0.8,
+    "enable_top_k_sampling": true,
+    "top_k": 1
+  },
+  "revision": "123ee66991d912a70487a6d17343982ec67e7444",
+  "date": "2026-09-28",
+  "samples": [
+    {
+      "input": "Describe the image in one sentence.",
+      "output": "A woman smiles at a red double-decker bus with an advertisement on its side, parked on a city street with buildings in the background.",
+      "exitCode": 0,
+      "processSeconds": 34.5680920460145,
+      "observation": "识别出红色双层公交车、侧面广告、人物与街道建筑；但“朝公交车微笑”与人物朝向不符，“车辆停放”也不能仅凭这张静态图片确认。",
+      "imageFile": "ssd_car.jpg",
+      "imagePath": "/validation/effects/internvl2-5-1b-20260928/ssd_car.jpg",
+      "imageSha256": "92d459a39a9eef03956257cf9fec84114d9e5df8fb9c0662fb257488cdd4f365",
+      "nativeImageEncodeMs": 371.18,
+      "nativeTtftMs": 594.68,
+      "nativeTtftScope": "Native program TTFT; excludes model loading and is not client end-to-end first-visible-text latency."
+    },
+    {
+      "input": "What color is the bus? Answer with only the color.",
+      "output": "Red",
+      "exitCode": 0,
+      "processSeconds": 31.213728191971313,
+      "observation": "仅返回 Red，与输入图中公交车的红色一致，符合只返回颜色的要求。",
+      "imageFile": "ssd_car.jpg",
+      "imagePath": "/validation/effects/internvl2-5-1b-20260928/ssd_car.jpg",
+      "imageSha256": "92d459a39a9eef03956257cf9fec84114d9e5df8fb9c0662fb257488cdd4f365",
+      "nativeImageEncodeMs": 375.76,
+      "nativeTtftMs": 600.26,
+      "nativeTtftScope": "Native program TTFT; excludes model loading and is not client end-to-end first-visible-text latency."
+    },
+    {
+      "input": "What animal is in the image? Answer in one short sentence.",
+      "output": "The animal in the image is a red panda.",
+      "exitCode": 0,
+      "processSeconds": 33.01761295000324,
+      "observation": "识别为 red panda（小熊猫），与画面一致，回答为一个短句。",
+      "imageFile": "panda.jpg",
+      "imagePath": "/validation/effects/internvl2-5-1b-20260928/panda.jpg",
+      "imageSha256": "c587294b3bf637dacbb3c96324c127187a2f242c94f639633a0d8a2775a9a399",
+      "nativeImageEncodeMs": 379.29,
+      "nativeTtftMs": 631.12,
+      "nativeTtftScope": "Native program TTFT; excludes model loading and is not client end-to-end first-visible-text latency."
+    },
+    {
+      "input": "请用一句中文描述图片中的动物。",
+      "output": "这是一只红熊猫，它正趴在一块木头上，背景是绿色的树木。",
+      "exitCode": 0,
+      "processSeconds": 34.34662618098082,
+      "observation": "回答中的红熊猫指小熊猫；趴在木板上、背景有绿色树木的描述与图片主体相符。",
+      "imageFile": "panda.jpg",
+      "imagePath": "/validation/effects/internvl2-5-1b-20260928/panda.jpg",
+      "imageSha256": "c587294b3bf637dacbb3c96324c127187a2f242c94f639633a0d8a2775a9a399",
+      "nativeImageEncodeMs": 371.98,
+      "nativeTtftMs": 606.12,
+      "nativeTtftScope": "Native program TTFT; excludes model loading and is not client end-to-end first-visible-text latency."
+    }
+  ],
+  "inferenceOptions": {
+    "live_print": "0",
+    "continue": "0"
+  }
+}

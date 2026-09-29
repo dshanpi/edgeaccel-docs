@@ -1,0 +1,19 @@
+# AX8850 首页图片生成记录
+
+生成方式：内置 image_gen。日期：2026-09-29。
+产品参考：用户提供的 AX8850 红色 M.2 算力卡实物图。
+用途：产品视觉与应用场景示意，不作为硬件实测证据。
+交付：static/img/home/ 下同名 PNG 原图和 JPEG 网页资源；JPEG 仅做质量 90 的编码压缩，未改变构图或尺寸。
+
+## ax8850-hero
+
+Use case: product-mockup. Asset type: premium EdgeAccel website homepage hero, landscape 16:9, high resolution. Input image 1 is the exact AX8850 M.2 accelerator card product identity reference, not a poster layout. Create one sophisticated photorealistic studio product image using this red PCB card. Preserve the elongated approximately 3.55:1 board proportions, red solder mask, gold edge, right-hand M-key gold connector, corner mounting holes, the black AXERA AX8850 chip slightly left of center, two black memory chips, and dense silver components on the right. Entire card visible, no invented case or heatsink. Place the card floating slightly above a dark graphite plinth, near-horizontal, gentle three-quarter top perspective; card fills 80% image width. Background almost-black forest green and charcoal with restrained emerald grazing light, thin precise luminous PCB traces leading toward the card to suggest PCIe host acceleration. Beautiful realistic red PCB detail, crisp controlled studio highlights, quiet soft shadows, generous breathing room above and below, premium industrial editorial photography. No marketing text, no numbers, no badges, no UI cards, no decorative floating chips, no watermark. Only existing tiny physical board markings may appear. Hardware is the hero, avoid excessive sci-fi and neon.
+
+## ax8850-vision
+
+Use case: ads-marketing. Asset type: landscape 16:9 premium website feature illustration for on-device computer vision. Input image 1 is exact AX8850 red M.2 accelerator product reference. Render same recognizable card, entire long red board with gold right M-key connector and black chips, in the lower foreground at gentle three-quarter angle. Behind it, three elegantly spaced translucent optical glass planes show one cohesive architectural street scene in different computer vision representations: photographic scene with a few thin emerald object detection boxes, restrained teal semantic segmentation silhouettes, and a subtle human pose skeleton. All visual panels are conceptual illustrations, not benchmark evidence; NO numbers, confidence scores, labels, logos or text. Minimal dark charcoal/forest-green studio environment, realistic product materials, emerald-white edge lighting, restrained technical precision. Card remains prominent, panels are secondary and very legible, no busy dashboard, no sci-fi city, no neon rainbow, no arrows. Premium industrial technology campaign, generous negative space, aligned geometric composition.
+
+## ax8850-multimodal
+
+Use case: ads-marketing. Asset type: landscape 16:9 premium website feature image for local LLM/VLM and multimodal edge inference. Input image 1 is exact AX8850 red M.2 accelerator product reference. Preserve this long red PCB hardware identity, black AXERA chip left of center, memory chips and gold M-key contacts right. Show the full physical card elegantly suspended across the lower-middle foreground at subtle three-quarter angle. A small number of thin frosted-glass frames behind the board contain visual representations of image input (a quiet mountain landscape), audio input (a clean waveform), and language tokens (abstract short horizontal light bars, NO readable text). Precise fine emerald light paths converge at the real card to convey processing locally on a single accelerator. Dark forest green and graphite background matching a premium hardware product shoot; realistic textures, soft cinematic studio illumination, white and subdued jade accents, restrained depth, ample breathing room. No cloud icon, no giant brain, no human, no quantitative performance numbers, no brands other than existing board markings, no poster headlines, no watermark. Sophisticated and minimal.
+

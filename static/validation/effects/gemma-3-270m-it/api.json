@@ -1,0 +1,148 @@
+{
+  "kind": "text",
+  "task": "text",
+  "requests": [
+    {
+      "endpoint": "/v1/chat/completions",
+      "request": {
+        "model": "AXERA-TECH/gemma-3-270m-it",
+        "messages": [
+          {
+            "role": "user",
+            "content": "What is 2 + 3? Answer with only the number."
+          }
+        ],
+        "max_tokens": 128,
+        "temperature": 0,
+        "enable_thinking": false,
+        "stream": false
+      },
+      "elapsedSeconds": 0.46866761399905954,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "content": "5\n",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1790141460,
+        "id": "chatcmpl-552fb2de3147eaa222b064d1",
+        "model": "AXERA-TECH/gemma-3-270m-it",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 2,
+          "decode_tps": 5.515689373016357,
+          "prefill_tokens": 23,
+          "prefill_tps": 161.2778778076172,
+          "prompt_tokens": 23,
+          "total_tokens": 25,
+          "ttft_ms": 275.5690002441406
+        }
+      },
+      "checks": {
+        "nonemptyText": true,
+        "containsReplacementCharacter": false,
+        "finishReason": "stop"
+      }
+    },
+    {
+      "endpoint": "/v1/chat/completions",
+      "request": {
+        "model": "AXERA-TECH/gemma-3-270m-it",
+        "messages": [
+          {
+            "role": "user",
+            "content": "请用一句话说明 PCIe 的用途。"
+          }
+        ],
+        "max_tokens": 128,
+        "temperature": 0,
+        "enable_thinking": false,
+        "stream": false
+      },
+      "elapsedSeconds": 2.626602524998816,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "content": "PCIe 是一种高速数据传输协议，用于将数据从单个设备传输到多个设备。\n",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1790141463,
+        "id": "chatcmpl-29e8abd753f35a9579c5a4d5",
+        "model": "AXERA-TECH/gemma-3-270m-it",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 21,
+          "decode_tps": 9.050813674926758,
+          "prefill_tokens": 18,
+          "prefill_tps": 121.98675537109375,
+          "prompt_tokens": 18,
+          "total_tokens": 39,
+          "ttft_ms": 403.8800048828125
+        }
+      },
+      "checks": {
+        "nonemptyText": true,
+        "containsReplacementCharacter": false,
+        "finishReason": "stop"
+      }
+    },
+    {
+      "endpoint": "/v1/chat/completions",
+      "request": {
+        "model": "AXERA-TECH/gemma-3-270m-it",
+        "messages": [
+          {
+            "role": "user",
+            "content": "只输出 JSON：把苹果的数量 3 和梨的数量 2 写成一个对象，键名分别为 apple 和 pear。"
+          }
+        ],
+        "max_tokens": 128,
+        "temperature": 0,
+        "enable_thinking": false,
+        "stream": false
+      },
+      "elapsedSeconds": 2.570479037000041,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "content": "```json\n{\n  \"apple\": 3,\n  \"pear\": 2\n}\n```\n",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1790141466,
+        "id": "chatcmpl-6a5fe4c27c8be148a54f4b0c",
+        "model": "AXERA-TECH/gemma-3-270m-it",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 24,
+          "decode_tps": 10.247193336486816,
+          "prefill_tokens": 35,
+          "prefill_tps": 235.88720703125,
+          "prompt_tokens": 35,
+          "total_tokens": 59,
+          "ttft_ms": 311.9289855957031
+        }
+      },
+      "checks": {
+        "nonemptyText": true,
+        "containsReplacementCharacter": false,
+        "finishReason": "stop"
+      }
+    }
+  ],
+  "model": "AXERA-TECH/gemma-3-270m-it"
+}

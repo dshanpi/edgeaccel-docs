@@ -1,0 +1,79 @@
+{
+  "package": "linux-headers-vendor-rk35xx_25.11.0-trunk+ax8850.1_arm64.deb",
+  "sha256": "0ef448a827313c6f6118c632210da7d6c7ef116221eb92a30f1a9a5c397499a4",
+  "bytes": 16489368,
+  "version": "25.11.0-trunk+ax8850.1",
+  "target": {
+    "release": "6.1.115-vendor-rk35xx",
+    "image_sha256": "68fbb255175f1bd758672b1e8bf88b1e8b7aa9f61d37d891712f2efe5d8d33a5",
+    "config_sha256": "bd6e9db8dc43a68f7ea5f8423f00c66765cdd93d3b23b4842713c64626e26911"
+  },
+  "prepared_files": {
+    ".config": "bd6e9db8dc43a68f7ea5f8423f00c66765cdd93d3b23b4842713c64626e26911",
+    "include/config/auto.conf": "eec9fb8dcd3d0814615ed64bcc68fc2a39d748aae441c882b8a778dc631e29d3",
+    "include/generated/autoconf.h": "d6fa3256a1e8446057bed3814b6cfafac292908c19e41d8700515161b70c5544",
+    "include/generated/utsrelease.h": "28a664bc31fd9a6fcffc6fc5668e1bd737ed08572c2b39d1c618274485cfc89c",
+    "include/generated/compile.h": "64f799888cf1cbfb293c1d0e7fe61499bdd4dd779c63215e574613fc49eae361",
+    "Module.symvers": "c7aeb63c7e0be5ae3828e22744f9664617932ce70423ad2d25c04f32dabe692a",
+    "scripts/basic/fixdep": "bf2b1b3c61e081828bdef2e9b492a72162cea997ae7d77b35adf757624332146",
+    "scripts/mod/modpost": "69ae6220fe9a6c7fb6c2a5550d81e4c69f1690b37797e08ab8ebe2802374bbef",
+    "scripts/kconfig/conf": "5d26a5d1a14d58198e2d5b8d0be56e5fe879d31a2a99357e03de7c4891aa6486"
+  },
+  "driver_build_validation": {
+    "modules": [
+      {
+        "name": "ax_pcie_host_dev.ko",
+        "sha256": "76923857d438614673093a94a36f0d00f5816fbdcccf542a1ea5626a8f67c8ce",
+        "module_size": "0x380",
+        "cleanup_offset": "0x340",
+        "vermagic": "6.1.115-vendor-rk35xx SMP mod_unload modversions aarch64"
+      },
+      {
+        "name": "ax_pcie_mmb.ko",
+        "sha256": "f3a889a2399f80aff4dbc502d45ba16fb0e8c1320b3953a3b18c794845848b23",
+        "module_size": "0x380",
+        "cleanup_offset": "0x340",
+        "vermagic": "6.1.115-vendor-rk35xx SMP mod_unload modversions aarch64"
+      },
+      {
+        "name": "ax_pcie_msg.ko",
+        "sha256": "f3c476175cea0a7c873ea2616b97fa772f94dcf902fdea29f7387adbed095bfe",
+        "module_size": "0x380",
+        "cleanup_offset": "0x340",
+        "vermagic": "6.1.115-vendor-rk35xx SMP mod_unload modversions aarch64"
+      },
+      {
+        "name": "ax_pcie_net_host.ko",
+        "sha256": "e5812860bdb27f5898650b3fe02fad9600595ffe069ca3a4a4bcb82aa5ca69db",
+        "module_size": "0x380",
+        "cleanup_offset": "0x340",
+        "vermagic": "6.1.115-vendor-rk35xx SMP mod_unload modversions aarch64"
+      },
+      {
+        "name": "ax_pcie_p2p_rc.ko",
+        "sha256": "ca6add7f55165d457a3db3e4a20ed8bbeca50404bcc159250ee1f0fcffed78ae",
+        "module_size": "0x380",
+        "cleanup_offset": "0x340",
+        "vermagic": "6.1.115-vendor-rk35xx SMP mod_unload modversions aarch64"
+      },
+      {
+        "name": "axcl_host.ko",
+        "sha256": "29e98f3a14916a68b3344ba6a90bc09c62f2529028866f28bec5b21442b3fad9",
+        "module_size": "0x380",
+        "cleanup_offset": "0x340",
+        "vermagic": "6.1.115-vendor-rk35xx SMP mod_unload modversions aarch64"
+      },
+      {
+        "name": "vtty.ko",
+        "sha256": "5ad34194daba1c724bb1bb4cf43b2ebfb8d29d311c3524816df5f7b689dfc264",
+        "module_size": "0x380",
+        "cleanup_offset": "0x340",
+        "vermagic": "6.1.115-vendor-rk35xx SMP mod_unload modversions aarch64"
+      }
+    ],
+    "config_unchanged_after_build": true,
+    "runtime_loaded": false
+  },
+  "installed_on_active_system": false,
+  "new_modules_loaded": false
+}

@@ -1,0 +1,37 @@
+{
+  "repo": "AXERA-TECH/Cow-axera",
+  "revision": "e1b24eb694c6a4420f2e4278dd7e2f77ede3805d",
+  "complete": true,
+  "files": [
+    {
+      "path": "axmodel_infer_cow_yolov5.py",
+      "size": 10240,
+      "sha256": null,
+      "gitBlob": "8832d1889ea5dbe462d93a8917f068cc67418e46",
+      "verifiedHashes": {
+        "sha256": "adb1dbb3c49b0de37685b147c849ca5e6513aecdd4b6e218beb291140af944e5",
+        "gitBlob": "8832d1889ea5dbe462d93a8917f068cc67418e46"
+      }
+    },
+    {
+      "path": "AX650/cow_ax650_npu3.axmodel",
+      "size": 1271736,
+      "sha256": "3b7ace316e12fab230d52ffb73b02eea87af1df8021f9ec76c8c5508eeaacbc6",
+      "gitBlob": "6d552368aeda14357f927977a20653a0c8f4410a",
+      "verifiedHashes": {
+        "sha256": "3b7ace316e12fab230d52ffb73b02eea87af1df8021f9ec76c8c5508eeaacbc6",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "000000235857.jpg",
+      "size": 283118,
+      "sha256": "7682054b9d4649b1bc46ab6d78fd55c50dc9ddece5341ea69259000a94e3c0de",
+      "gitBlob": "a441e8d077c9721a2e36b21fa1d02874f13cf53a",
+      "verifiedHashes": {
+        "sha256": "7682054b9d4649b1bc46ab6d78fd55c50dc9ddece5341ea69259000a94e3c0de",
+        "gitBlob": null
+      }
+    }
+  ]
+}

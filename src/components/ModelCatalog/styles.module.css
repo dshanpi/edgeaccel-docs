@@ -1,0 +1,31 @@
+.catalog {margin: 1.5rem 0 2rem;}
+.filters {display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .85rem; padding: 1.1rem; border: 1px solid var(--ifm-color-emphasis-300); border-radius: 12px; background: var(--ifm-background-surface-color);}
+.filters label {font-size: .85rem; font-weight: 600;}
+.filters input, .filters select {display: block; width: 100%; margin-top: .4rem; padding: .65rem .7rem; border: 1px solid var(--ifm-color-emphasis-400); border-radius: 6px; background: var(--ifm-background-color); color: var(--ifm-font-color-base); font: inherit; min-height: 42px;}
+.filters input:focus-visible, .filters select:focus-visible, .catalog button:focus-visible {outline: 2px solid var(--ifm-color-primary); outline-offset: 2px;}
+.summary {display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin: 1rem 0; font-size: .85rem; color: var(--ifm-color-emphasis-700);}
+.catalog button {padding: .45rem .8rem; border: 1px solid var(--ifm-color-emphasis-300); border-radius: 6px; background: var(--ifm-background-color); color: var(--ifm-font-color-base); cursor: pointer;}
+.catalog button:disabled {opacity: .45; cursor: default;}
+.tableWrap {overflow-x: auto;}
+.table {display: table; width: 100%; table-layout: fixed; font-size: .86rem; margin: 0;}
+.table th:first-child {width: 37%;}
+.table th:nth-child(2) {width: 17%;}
+.table th:nth-child(3) {width: 23%;}
+.table td {vertical-align: top; padding: .95rem .8rem;}
+.model {display: block; font-weight: 650; overflow-wrap: anywhere; line-height: 1.55;}
+.links {display: flex; flex-wrap: wrap; gap: .3rem 1rem; margin-top: .45rem; font-size: .77rem;}
+.badge {display: inline-block; padding: .2rem .4rem; border-radius: 4px; background: var(--ifm-color-emphasis-200); font-size: .75rem;}
+.badge[data-ready='true'] {background: var(--ifm-color-primary); color: white;}
+.validation {margin-top: .4rem; font-size: .75rem; color: var(--ifm-color-emphasis-600);}
+.validationBadge {display: inline-block; padding: .2rem .4rem; border-radius: 4px; background: var(--ifm-color-emphasis-200); font-size: .75rem;}
+.validationBadge[data-status='passed'] {background: #d7f3df; color: #16552b;}
+.validationBadge[data-status='failed'] {background: #fbe0df; color: #822e29;}
+.validationBadge[data-status='blocked'] {background: #fff0cc; color: #714f00;}
+.evidenceLink {display: inline-block; margin-top: .45rem; font-size: .77rem;}
+.pagination {display: flex; align-items: center; justify-content: center; gap: 1rem; margin: 1.2rem 0; font-size: .85rem;}
+.empty {padding: 2rem 1rem; text-align: center; color: var(--ifm-color-emphasis-700);}
+.fullIndex {margin-top: 1.5rem; font-size: .85rem;}
+.fullIndex summary {cursor: pointer;}
+.fullIndex ul {padding: 1rem 0 0 1.4rem; columns: 2;}
+.fullIndex li {break-inside: avoid; overflow-wrap: anywhere; margin-bottom: .5rem;}
+@media (max-width: 700px) {.filters {grid-template-columns: 1fr;} .table {min-width: 800px;} .fullIndex ul {columns: 1;}}

@@ -1,0 +1,44 @@
+[
+  {
+    "path": "pcd",
+    "status": "RTSP/1.0 200 OK",
+    "sdp": "v=0\r\no=- 1789556727 1789556727 IN IP4 192.168.1.44\r\ns=RTSP Stream\r\nt=0 0\r\nc=IN IP4 192.168.1.44\r\nm=video 0 RTP/AVP 96\r\na=rtpmap:96 H264/90000\r\na=fmtp:96 packetization-mode=1;sprop-parameter-sets=J01gM4mNUDwBE/LNQUBBUAAAAwAQAAADAYDxYmo=,KO4JyA==\r\na=cliprect:0,0,1080,1920\r\na=framesize:96 1920-1080\r\na=control:stream\r\n",
+    "source": "Windows LAN client"
+  },
+  {
+    "path": "vehicle",
+    "status": "RTSP/1.0 200 OK",
+    "sdp": "v=0\r\no=- 1789556727 1789556727 IN IP4 192.168.1.44\r\ns=RTSP Stream\r\nt=0 0\r\nc=IN IP4 192.168.1.44\r\nm=video 0 RTP/AVP 96\r\na=rtpmap:96 H264/90000\r\na=fmtp:96 packetization-mode=1;sprop-parameter-sets=J01gM4mNUDwBE/LNQUBBUAAAAwAQAAADAyDxYmo=,KO4Fcg==\r\na=cliprect:0,0,1080,1920\r\na=framesize:96 1920-1080\r\na=control:stream\r\n",
+    "source": "Windows LAN client"
+  },
+  {
+    "path": "seg",
+    "status": "RTSP/1.0 200 OK",
+    "sdp": "v=0\r\no=- 1789556727 1789556727 IN IP4 192.168.1.44\r\ns=RTSP Stream\r\nt=0 0\r\nc=IN IP4 192.168.1.44\r\nm=video 0 RTP/AVP 96\r\na=rtpmap:96 H264/90000\r\na=fmtp:96 packetization-mode=1;sprop-parameter-sets=J01gM4mNUDwBE/LNQUBBUAAAAwAQAAADA8DxYmo=,KO4Hcg==\r\na=cliprect:0,0,1080,1920\r\na=framesize:96 1920-1080\r\na=control:stream\r\n",
+    "source": "Windows LAN client"
+  },
+  {
+    "path": "driving",
+    "status": "RTSP/1.0 200 OK",
+    "sdp": "v=0\r\no=- 1789556727 1789556727 IN IP4 192.168.1.44\r\ns=RTSP Stream\r\nt=0 0\r\nc=IN IP4 192.168.1.44\r\nm=video 0 RTP/AVP 96\r\na=rtpmap:96 H264/90000\r\na=fmtp:96 packetization-mode=1;sprop-parameter-sets=J01gM4mNUDwBE/LNQUBBUAAAAwAQAAADA6DxYmo=,KO4Hcg==\r\na=cliprect:0,0,1080,1920\r\na=framesize:96 1920-1080\r\na=control:stream\r\n",
+    "source": "Windows LAN client"
+  },
+  {
+    "path": "depth",
+    "status": "RTSP/1.0 200 OK",
+    "sdp": "v=0\r\no=- 1789556727 1789556727 IN IP4 192.168.1.44\r\ns=RTSP Stream\r\nt=0 0\r\nc=IN IP4 192.168.1.44\r\nm=video 0 RTP/AVP 96\r\na=rtpmap:96 H264/90000\r\na=fmtp:96 packetization-mode=1;sprop-parameter-sets=J01gM4mNUDwBE/LNQUBBUAAAAwAQAAADAuDxYmo=,KO4Fcg==\r\na=cliprect:0,0,1080,1920\r\na=framesize:96 1920-1080\r\na=control:stream\r\n",
+    "source": "Windows LAN client"
+  },
+  {
+    "path": "count",
+    "status": "RTSP/1.0 200 OK",
+    "sdp": "v=0\r\no=- 1789556727 1789556727 IN IP4 192.168.1.44\r\ns=RTSP Stream\r\nt=0 0\r\nc=IN IP4 192.168.1.44\r\nm=video 0 RTP/AVP 96\r\na=rtpmap:96 H264/90000\r\na=fmtp:96 packetization-mode=1;sprop-parameter-sets=J01gM4mNUDwBE/LNQUBBUAAAAwAQAAADAwDxYmo=,KO4Fcg==\r\na=cliprect:0,0,1080,1920\r\na=framesize:96 1920-1080\r\na=control:stream\r\n",
+    "source": "Windows LAN client"
+  },
+  {
+    "path": "overview",
+    "status": "RTSP/1.0 200 OK",
+    "sdp": "v=0\r\no=- 1789556727 1789556727 IN IP4 192.168.1.44\r\ns=RTSP Stream\r\nt=0 0\r\nc=IN IP4 192.168.1.44\r\nm=video 0 RTP/AVP 96\r\na=rtpmap:96 H264/90000\r\na=fmtp:96 packetization-mode=1;sprop-parameter-sets=J01gM4mNUDwBE/LNQUBBUAAAAwAQAAADA8DxYmo=,KO4JyA==\r\na=cliprect:0,0,1080,1920\r\na=framesize:96 1920-1080\r\na=control:stream\r\n",
+    "source": "Windows LAN client"
+  }
+]

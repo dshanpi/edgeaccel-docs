@@ -1,0 +1,47 @@
+{
+  "repo": "AXERA-TECH/DeOldify",
+  "revision": "9f8a5b53053a224ad6da0974b069c72b87a26837",
+  "complete": true,
+  "files": [
+    {
+      "path": "python/run_axmodel.py",
+      "size": 2628,
+      "sha256": null,
+      "gitBlob": "03e418cf5abff60c40d542df27936787c0792724",
+      "verifiedHashes": {
+        "sha256": "7a1c3aba1a5d6c57f6cc45a2dde40a4b80a8c42d07f02f45e6338b2aad49f23e",
+        "gitBlob": "03e418cf5abff60c40d542df27936787c0792724"
+      }
+    },
+    {
+      "path": "image/1850Geography.jpg",
+      "size": 64919,
+      "sha256": null,
+      "gitBlob": "19d8467d37344ffb5768c48af1511190ff8a2583",
+      "verifiedHashes": {
+        "sha256": "7e6a52eeb7631d400f6f40fc418eea94c72a4b28ced0c629b834de172980a87c",
+        "gitBlob": "19d8467d37344ffb5768c48af1511190ff8a2583"
+      }
+    },
+    {
+      "path": "model/colorize_stable.axmodel",
+      "size": 236821261,
+      "sha256": "dac44c3a7a7390bbe9fc379f4b5f020bfa77c4c8de5a71748fd37080a0f3cd45",
+      "gitBlob": "103513b6f78404524dfcb8c7dbbe42607b592da0",
+      "verifiedHashes": {
+        "sha256": "dac44c3a7a7390bbe9fc379f4b5f020bfa77c4c8de5a71748fd37080a0f3cd45",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "model/colorize_artistic.axmodel",
+      "size": 82564039,
+      "sha256": "f276e8e6666c323e1405211926fcd3d8552dbcfb730ede5c7893ea5dd81d7921",
+      "gitBlob": "af2b5a1d86e92064973abc7a023f4bbe86f6d7ca",
+      "verifiedHashes": {
+        "sha256": "f276e8e6666c323e1405211926fcd3d8552dbcfb730ede5c7893ea5dd81d7921",
+        "gitBlob": null
+      }
+    }
+  ]
+}

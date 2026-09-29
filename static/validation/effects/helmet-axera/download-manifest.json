@@ -1,0 +1,37 @@
+{
+  "repo": "AXERA-TECH/Helmet-axera",
+  "revision": "c48ec87e8e0c65618560d790d598c1081a857d92",
+  "complete": true,
+  "files": [
+    {
+      "path": "ax_hed_infer.py",
+      "size": 10223,
+      "sha256": null,
+      "gitBlob": "c56f6bd317dfe19b0d0bcd552239976f5087e1cb",
+      "verifiedHashes": {
+        "sha256": "940f4d6c87709e76f3d5dc42e642a54749e9ec1bf25b86b97981f8869712508a",
+        "gitBlob": "c56f6bd317dfe19b0d0bcd552239976f5087e1cb"
+      }
+    },
+    {
+      "path": "AX650/ax_ax650_hel_algo_V1.0.0.axmodel",
+      "size": 606602,
+      "sha256": "ca5007e21a1c6d2810455392d695ab01f15ea5ecdb9f7ed5d2f421aa994953e4",
+      "gitBlob": "a29a7f7cfba6d5401a6eb0ba0f629616ef672459",
+      "verifiedHashes": {
+        "sha256": "ca5007e21a1c6d2810455392d695ab01f15ea5ecdb9f7ed5d2f421aa994953e4",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "test.jpg",
+      "size": 21690,
+      "sha256": null,
+      "gitBlob": "5013204c0b6d1c067b95bf0f755abd94178138ac",
+      "verifiedHashes": {
+        "sha256": "668a12626b54d1bd57d0f71d7a9e4903e595b00db8e42329f6d35569858a8b2f",
+        "gitBlob": "5013204c0b6d1c067b95bf0f755abd94178138ac"
+      }
+    }
+  ]
+}

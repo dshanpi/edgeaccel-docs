@@ -1,0 +1,102 @@
+2026-09-18T11:24:11+08:00
+
+DESKTOP_LOG
+main debug: looking for stream_filter module matching "prefetch,cache_read": 26 candidates
+cache_read debug: starting pre-buffering
+cache_read debug: pre-buffering done 296 bytes in 0s - 5558 KiB/s
+main debug: EOF reached
+main debug: looking for stream_filter module matching "prefetch,cache_block": 26 candidates
+prefetch debug: using 16777216 bytes buffer, 16777216 bytes read
+main debug: using stream_filter module "prefetch"
+ts debug: new PMT program number=1 version=0 pid_pcr=256
+ts debug: enabling pcr pid 256 from program 1
+main debug: Buffering 0%
+main debug: Buffering 6%
+main debug: Buffering 16%
+main debug: Buffering 26%
+main debug: Buffering 36%
+main debug: Buffering 46%
+main debug: Buffering 56%
+main debug: Buffering 66%
+main debug: Buffering 76%
+main debug: Buffering 86%
+main debug: Opening vout display wrapper
+main debug: looking for vout display module matching "any": 14 candidates
+main debug: Buffering 96%
+egl_x11 debug:  extensions: EGL_ANDROID_blob_cache EGL_ANDROID_native_fence_sync EGL_CHROMIUM_sync_control EGL_ANGLE_sync_control_rate EGL_EXT_buffer_age EGL_EXT_config_select_group EGL_EXT_image_dma_buf_import EGL_EXT_image_dma_buf_import_modifiers EGL_EXT_surface_compression EGL_EXT_swap_buffers_with_damage EGL_IMG_context_priority EGL_KHR_cl_event2 EGL_KHR_config_attribs EGL_KHR_context_flush_control EGL_KHR_create_context EGL_KHR_create_context_no_error EGL_KHR_fence_sync EGL_KHR_get_all_proc_addresses EGL_KHR_gl_colorspace EGL_KHR_gl_renderbuffer_image EGL_KHR_gl_texture_2D_image EGL_KHR_gl_texture_3D_image EGL_KHR_gl_texture_cubemap_image EGL_KHR_image EGL_KHR_image_base EGL_KHR_image_pixmap EGL_KHR_no_config_context EGL_KHR_partial_update EGL_KHR_reusable_sync EGL_KHR_surfaceless_context EGL_KHR_swap_buffers_with_damage EGL_EXT_pixel_format_float EGL_KHR_wait_sync EGL_MESA_configless_context EGL_MESA_drm_image EGL_MESA_gl_interop EGL_MESA_image_dma_buf_export EGL_MESA_query_driver EGL_MESA_x11_native_visual_id EGL_NOK_texture_from_pixmap EGL_WL_bind_wayland_display 
+main debug: Stream buffering done (1067 ms in 238 ms)
+glconv_vaapi_x11 error: vaInitialize: unknown libva error
+glconv_vaapi_drm error: vaInitialize: unknown libva error
+glconv_vaapi_drm error: vaInitialize: operation failed
+glconv_vaapi_drm error: vaInitialize: unknown libva error
+glconv_vaapi_drm error: vaInitialize: unknown libva error
+main debug: using vout display module "gl"
+vaapi_filters warning: Using SW chroma filter for 1920x1088 VAOP -> I420
+main debug: Opening vout display wrapper
+main debug: looking for vout display module matching "any": 14 candidates
+main debug: using vout display module "gl"
+main debug: Opening vout display wrapper
+main debug: looking for vout display module matching "any": 14 candidates
+egl_x11 debug:  extensions: EGL_ANDROID_blob_cache EGL_ANDROID_native_fence_sync EGL_CHROMIUM_sync_control EGL_ANGLE_sync_control_rate EGL_EXT_buffer_age EGL_EXT_config_select_group EGL_EXT_image_dma_buf_import EGL_EXT_image_dma_buf_import_modifiers EGL_EXT_surface_compression EGL_EXT_swap_buffers_with_damage EGL_IMG_context_priority EGL_KHR_cl_event2 EGL_KHR_config_attribs EGL_KHR_context_flush_control EGL_KHR_create_context EGL_KHR_create_context_no_error EGL_KHR_fence_sync EGL_KHR_get_all_proc_addresses EGL_KHR_gl_colorspace EGL_KHR_gl_renderbuffer_image EGL_KHR_gl_texture_2D_image EGL_KHR_gl_texture_3D_image EGL_KHR_gl_texture_cubemap_image EGL_KHR_image EGL_KHR_image_base EGL_KHR_image_pixmap EGL_KHR_no_config_context EGL_KHR_partial_update EGL_KHR_reusable_sync EGL_KHR_surfaceless_context EGL_KHR_swap_buffers_with_damage EGL_EXT_pixel_format_float EGL_KHR_wait_sync EGL_MESA_configless_context EGL_MESA_drm_image EGL_MESA_gl_interop EGL_MESA_image_dma_buf_export EGL_MESA_query_driver EGL_MESA_x11_native_visual_id EGL_NOK_texture_from_pixmap EGL_WL_bind_wayland_display 
+main debug: using vout display module "gl"
+main debug: picture might be displayed late (missing 6 ms)
+main debug: picture might be displayed late (missing 10 ms)
+main debug: picture might be displayed late (missing 12 ms)
+main warning: picture is too late to be displayed (missing 16 ms)
+main debug: picture might be displayed late (missing 3 ms)
+main debug: picture might be displayed late (missing 2 ms)
+main debug: picture might be displayed late (missing 6 ms)
+main warning: picture is too late to be displayed (missing 36 ms)
+main debug: picture might be displayed late (missing 2 ms)
+main debug: picture might be displayed late (missing 0 ms)
+main debug: picture might be displayed late (missing 3 ms)
+
+TCP_QUEUES
+ESTAB 0      0          127.0.0.1:8851     127.0.0.1:42956 users:(("python3",pid=92358,fd=4))                     
+ESTAB 0      0          127.0.0.1:52448    127.0.0.1:8850  users:(("vlc",pid=93337,fd=25))                        
+ESTAB 0      0          127.0.0.1:8554     127.0.0.1:33620 users:(("six_app",pid=83794,fd=22))                    
+ESTAB 0      0          127.0.0.1:59316    127.0.0.1:8554  users:(("ffmpeg",pid=92360,fd=4))                      
+ESTAB 0      0          127.0.0.1:41548    127.0.0.1:8850  users:(("ffmpeg",pid=92361,fd=4))                      
+ESTAB 0      0          127.0.0.1:59334    127.0.0.1:8554  users:(("ffmpeg",pid=92375,fd=3))                      
+ESTAB 0      0          127.0.0.1:59324    127.0.0.1:8554  users:(("ffmpeg",pid=92371,fd=3))                      
+ESTAB 0      0          127.0.0.1:8554     127.0.0.1:59324 users:(("six_app",pid=83794,fd=20))                    
+ESTAB 0      0          127.0.0.1:8554     127.0.0.1:59334 users:(("six_app",pid=83794,fd=21))                    
+ESTAB 0      0          127.0.0.1:8554     127.0.0.1:59316 users:(("six_app",pid=83794,fd=19))                    
+ESTAB 0      0          127.0.0.1:8850     127.0.0.1:41548 users:(("python3",pid=63479,fd=4))                     
+ESTAB 0      0          127.0.0.1:33620    127.0.0.1:8554  users:(("ffmpeg",pid=93358,fd=3))                      
+ESTAB 0      0          127.0.0.1:8850     127.0.0.1:52448 users:(("python3",pid=63479,fd=6))                     
+ESTAB 0      0          127.0.0.1:42956    127.0.0.1:8851  users:(("vlc",pid=92362,fd=3))                         
+
+VLC_STATE
+(<'Playing'>,)
+
+PROCESS_CPU
+    PID    PPID S     ELAPSED %CPU   RSS COMMAND
+  93337       1 S       01:52  260 204176 vlc
+  83794       1 S  1-15:55:50  210 1078572 six_app
+  92362   92359 S       03:55 69.2 124376 vlc
+  94322   94321 S       00:00 53.1  5784 sudo
+   1960    1787 S  2-00:00:35 16.3 152332 gnome-shell
+  94021    3150 S       00:02  8.5  8660 sshd
+  94323   94322 S       00:00  7.6  3252 bash
+    414       2 S  2-00:00:51  4.9     0 irq/114-0000:01:00.0
+   2712    1960 S  2-00:00:31  4.6 58656 Xwayland
+  92371   92358 S       03:55  4.4 47840 ffmpeg
+  92360   92357 S       03:55  4.2 49620 ffmpeg
+  93358   63479 S       01:51  3.7 48252 ffmpeg
+  92375   63479 S       03:55  3.6 48100 ffmpeg
+  92361   92357 S       03:55  1.6 54876 ffmpeg
+
+PREVIEW_RECENT
+2026-09-18T10:43:35+08:00 dshanpi-a1 python3[63479]: 2026-09-18 10:43:35,716 Preview opened: overview
+2026-09-18T10:47:12+08:00 dshanpi-a1 python3[63479]: 2026-09-18 10:47:12,294 Preview closed: overview
+2026-09-18T10:55:19+08:00 dshanpi-a1 python3[90957]: [rtsp @ 0xaaaaf6325a60] Stream #0: not enough frames to estimate rate; consider increasing probesize
+2026-09-18T10:55:19+08:00 dshanpi-a1 python3[90957]: [mpegts @ 0xaaaaf6340900] Invalid DTS: 65999 PTS: 65970 in output stream 0:0, replacing by guess
+2026-09-18T10:55:19+08:00 dshanpi-a1 python3[63479]: 2026-09-18 10:55:19,869 "GET /overview.ts HTTP/1.1" 200 -
+2026-09-18T10:55:19+08:00 dshanpi-a1 python3[63479]: 2026-09-18 10:55:19,870 Preview opened: overview
+2026-09-18T10:55:19+08:00 dshanpi-a1 python3[90957]: [mpegts @ 0xaaaaf6340900] Invalid DTS: 74999 PTS: 74970 in output stream 0:0, replacing by guess
+2026-09-18T10:58:13+08:00 dshanpi-a1 python3[63479]: 2026-09-18 10:58:13,062 Preview closed: overview
+2026-09-18T11:20:17+08:00 dshanpi-a1 python3[63479]: 2026-09-18 11:20:17,709 "GET /overview.ts HTTP/1.1" 200 -
+2026-09-18T11:20:17+08:00 dshanpi-a1 python3[63479]: 2026-09-18 11:20:17,710 Preview opened: overview
+2026-09-18T11:22:20+08:00 dshanpi-a1 python3[63479]: 2026-09-18 11:22:20,431 "GET /overview.ts HTTP/1.1" 200 -
+2026-09-18T11:22:20+08:00 dshanpi-a1 python3[63479]: 2026-09-18 11:22:20,432 Preview opened: overview

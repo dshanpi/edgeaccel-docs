@@ -1,0 +1,46 @@
+Started ax-six-vlc-x11.service - /usr/bin/vlc --no-one-instance --avcodec-hw=none --avcodec-threads=2 --vout=xcb_x11 --network-caching=1000 --extraintf=rc --rc-unix=/run/user/1001/ax-six-vlc-check.sock -vv --file-logging --logfile=/home/baiwen/ax-pipeline/six/evidence/vlc-disconnect-20260918/vlc-x11.log http://127.0.0.1:8850/overview.ts.
+VLC media player 3.0.20 Vetinari
+Command Line Interface initialized. Type `help' for help.
+> Shutting down.
+ax-six-vlc-x11.service: Deactivated successfully.
+main debug: nothing to play
+main debug: removing module "pulse"
+qt debug: requesting exit...
+qt debug: waiting for UI thread...
+qt debug: video widget is orphaned
+main debug: exiting
+qt debug: QApp exec() finished
+qt debug: video widget is orphaned
+qt debug: Killing extension dialog provider
+qt debug: ExtensionsDialogProvider is quitting...
+main debug: removing module "lua"
+main debug: removing module "xcb_hotkeys"
+main debug: removing module "hotkeys"
+main debug: removing module "lua"
+main debug: removing module "dbus"
+main debug: destroying
+main debug: saving media library to file /home/baiwen/.local/share/vlc/ml.xspf.tmp95638
+main debug: looking for playlist export module matching "export-xspf": 4 candidates
+main debug: using playlist export module "export"
+main debug: removing module "export"
+main debug: deleting item `Media Library'
+main debug: deleting item `overview.ts'
+main debug: deleting item `Playlist'
+main debug: removing module "memory"
+-- logger module stopped --
+
+ Remote control interface (oldrc)
+      --rc-show-pos, --no-rc-show-pos 
+                                 Show stream position
+                                 (default disabled)
+          Show the current position in seconds within the stream from time to
+          time.
+      --rc-fake-tty, --no-rc-fake-tty 
+                                 Fake TTY
+                                 (default disabled)
+          Force the rc module to use stdin as if it was a TTY.
+      --rc-unix <string>         UNIX socket command input
+          Accept commands over a Unix socket rather than stdin.
+      --rc-host <string>         TCP command input
+          Accept commands over a socket rather than stdin. You can set the
+          address and port the interface will bind to.

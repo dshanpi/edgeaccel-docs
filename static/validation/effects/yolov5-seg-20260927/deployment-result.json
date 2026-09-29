@@ -1,0 +1,64 @@
+{
+  "modelId": "YOLOv5-Seg",
+  "revision": "cd7b96d24bbb899c6ac03bb448ee5974e9054d60",
+  "date": "2026-09-27",
+  "variants": [
+    {
+      "label": "football",
+      "observation": "阈值 0.45，保留 6 个候选框。程序预热 5 次后计时 3 次，图中为最后一轮输出的实例掩码和检测框；未逐轮比较掩码。",
+      "previews": [
+        {
+          "caption": "本次输入 · football",
+          "path": "/validation/effects/yolov5-seg-20260927/input.webp"
+        },
+        {
+          "caption": "本次检测结果 · football",
+          "path": "/validation/effects/yolov5-seg-20260927/output.webp"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "类别",
+            "候选框数"
+          ],
+          "rows": [
+            [
+              "候选实例",
+              "6"
+            ]
+          ]
+        }
+      ],
+      "audio": [],
+      "record": {
+        "task": "yolov5-seg",
+        "variant": "football-confirmed",
+        "provider": "AXCL C++",
+        "sessions": [
+          {
+            "model": "ax650/yolov5s-seg.axmodel",
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 3,
+              "averageMilliseconds": 10.16,
+              "maxMilliseconds": 10.2,
+              "minMilliseconds": 10.12,
+              "warmup": 5
+            }
+          }
+        ],
+        "results": [
+          {
+            "input": "football.jpg",
+            "detections": 6,
+            "threshold": 0.45,
+            "nmsThreshold": 0.45
+          }
+        ],
+        "binarySha256": "4ac55caa1a91e56ff77d0749e23483b86643cc35969bc24f2df710ed795be1ec",
+        "completed": true
+      }
+    }
+  ]
+}

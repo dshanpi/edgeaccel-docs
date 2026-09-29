@@ -1,0 +1,37 @@
+{
+  "repo": "AXERA-TECH/Pet-axera",
+  "revision": "4107b2ed559ecd4f8872e83af733b2f0bab2d2f1",
+  "complete": true,
+  "files": [
+    {
+      "path": "axmodel_infer_pet.py",
+      "size": 10069,
+      "sha256": null,
+      "gitBlob": "f7207d3f386e4ed44b40ee90ea4a88959949e587",
+      "verifiedHashes": {
+        "sha256": "10421217ee2c3c89f680f385b11dd09a3df9c47d76912d58b7c50fc6e2e3773f",
+        "gitBlob": "f7207d3f386e4ed44b40ee90ea4a88959949e587"
+      }
+    },
+    {
+      "path": "AX650/pet_ax650_npu3.axmodel",
+      "size": 1271356,
+      "sha256": "3e80c23fed0dc2bbb6f0f9c031350a52a5cf20a801e0b48b1adfb958f97b7867",
+      "gitBlob": "fd4f6fdb702444b15b788585e2eb064d9ab7b5f8",
+      "verifiedHashes": {
+        "sha256": "3e80c23fed0dc2bbb6f0f9c031350a52a5cf20a801e0b48b1adfb958f97b7867",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "pet.jpg",
+      "size": 144684,
+      "sha256": "05b9bc894553921c8a51304c9f19115fb3aa89c08e3bab4d7ea4c2723500e4cb",
+      "gitBlob": "9bcb2084219dfc14d46133a74b3dd18d070bc2ff",
+      "verifiedHashes": {
+        "sha256": "05b9bc894553921c8a51304c9f19115fb3aa89c08e3bab4d7ea4c2723500e4cb",
+        "gitBlob": null
+      }
+    }
+  ]
+}

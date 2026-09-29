@@ -1,0 +1,37 @@
+{
+  "repo": "AXERA-TECH/YOLOv8-Aquarium",
+  "revision": "335576b78bd0f8af842af8572124c8b00af7528b",
+  "complete": true,
+  "files": [
+    {
+      "path": "infer_yolov8_pyax.py",
+      "size": 10608,
+      "sha256": null,
+      "gitBlob": "a2ad3bc56945e40c49e507ed3b0417cd8dcf6841",
+      "verifiedHashes": {
+        "sha256": "872aac57d7858a4612dfb13396d1eb2bc85c97368fd580491af33249b064b1da",
+        "gitBlob": "a2ad3bc56945e40c49e507ed3b0417cd8dcf6841"
+      }
+    },
+    {
+      "path": "AX650/aquarium_animials.axmodel",
+      "size": 11832954,
+      "sha256": "30f83af29976d26bdba670ea91e7d5769758e4be1e56b2f232493d568f4443ba",
+      "gitBlob": "b74892b249b0e23b0fd77e2f1e01a2f0d61d9216",
+      "verifiedHashes": {
+        "sha256": "30f83af29976d26bdba670ea91e7d5769758e4be1e56b2f232493d568f4443ba",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "test.png",
+      "size": 1495062,
+      "sha256": "fd9201f6f48e57d3fcf8d099d9cfdec52e7333c65f3a9e1992cef4aaa13c29b1",
+      "gitBlob": "8314262d28e2469825e24d9c9f20c7d70702d160",
+      "verifiedHashes": {
+        "sha256": "fd9201f6f48e57d3fcf8d099d9cfdec52e7333c65f3a9e1992cef4aaa13c29b1",
+        "gitBlob": null
+      }
+    }
+  ]
+}

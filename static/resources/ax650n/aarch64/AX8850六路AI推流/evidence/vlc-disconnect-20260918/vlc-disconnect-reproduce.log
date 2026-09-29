@@ -1,0 +1,13 @@
+{"elapsed": 30.2, "vlc_exit": null, "rtsp_exit": null, "http_exit": null, "decoded": 1674, "displayed": 826, "lost": 0}
+{"elapsed": 60.4, "vlc_exit": null, "rtsp_exit": null, "http_exit": null, "decoded": 3502, "displayed": 1740, "lost": 0}
+{"elapsed": 90.6, "vlc_exit": null, "rtsp_exit": null, "http_exit": null, "decoded": 5306, "displayed": 2642, "lost": 0}
+{"elapsed": 120.8, "vlc_exit": null, "rtsp_exit": null, "http_exit": null, "decoded": 7114, "displayed": 3546, "lost": 0}
+{"elapsed": 151.0, "vlc_exit": null, "rtsp_exit": null, "http_exit": null, "decoded": 8932, "displayed": 4455, "lost": 0}
+{"elapsed": 181.2, "vlc_exit": null, "rtsp_exit": null, "http_exit": null, "decoded": 10734, "displayed": 5356, "lost": 0}
+{"elapsed": 211.4, "vlc_exit": null, "rtsp_exit": null, "http_exit": null, "decoded": 12550, "displayed": 6264, "lost": 0}
+{"elapsed": 241.6, "vlc_exit": null, "rtsp_exit": null, "http_exit": null, "decoded": 14372, "displayed": 7175, "lost": 0}
+{"elapsed": 271.8, "vlc_exit": null, "rtsp_exit": null, "http_exit": null, "decoded": 16186, "displayed": 8082, "lost": 0}
+{"elapsed": 302.0, "vlc_exit": null, "rtsp_exit": null, "http_exit": null, "decoded": 17994, "displayed": 8987, "lost": 0}
+{"elapsed": 332.2, "vlc_exit": null, "rtsp_exit": null, "http_exit": null, "decoded": 19794, "displayed": 9887, "lost": 0}
+{"elapsed": 362.4, "vlc_exit": null, "rtsp_exit": null, "http_exit": null, "decoded": 21620, "displayed": 10799, "lost": 0}
+{"elapsed": 392.6, "vlc_exit": null, "rtsp_exit": 0, "http_exit": 0, "decoded": 23422, "displayed": 11701, "lost": 0}

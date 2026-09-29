@@ -1,0 +1,47 @@
+{
+  "repo": "AXERA-TECH/mobilenetv3-small",
+  "revision": "22236ff870c903cdefa0dcb9767db3a09903620e",
+  "complete": true,
+  "files": [
+    {
+      "path": "models/model.axmodel",
+      "size": 3396256,
+      "sha256": "559b44f7840a83e00f523aac7f89824e01b5e8fd21cb87ae0265be4558df0761",
+      "gitBlob": "fe51ef705d3c53e0dc2391808a82aa90c6017cb5",
+      "verifiedHashes": {
+        "sha256": "559b44f7840a83e00f523aac7f89824e01b5e8fd21cb87ae0265be4558df0761",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/model_meta.json",
+      "size": 616,
+      "sha256": null,
+      "gitBlob": "1bbea0ac6c9ee6a196b5961403e36170e6d00794",
+      "verifiedHashes": {
+        "sha256": "73e33eac1b79d6abfc56add7ec81d9914856e83aa5d33583fbe854b5c6ccf416",
+        "gitBlob": "1bbea0ac6c9ee6a196b5961403e36170e6d00794"
+      }
+    },
+    {
+      "path": "python/example.py",
+      "size": 598,
+      "sha256": null,
+      "gitBlob": "91966a24cfc7e733f4595c28b65ad2721ef05c60",
+      "verifiedHashes": {
+        "sha256": "1c7ec45fc827cfa3095b744036736a73211090a674964aca7e7ed443e2fb477e",
+        "gitBlob": "91966a24cfc7e733f4595c28b65ad2721ef05c60"
+      }
+    },
+    {
+      "path": "python/inference.py",
+      "size": 471,
+      "sha256": null,
+      "gitBlob": "b002f278d52eeb09460302bb56381a7c304230a6",
+      "verifiedHashes": {
+        "sha256": "26a9f31f9a4a288cb2cef42aef8d51ec1f808afaa3981f56fbb90a1ae93fbb91",
+        "gitBlob": "b002f278d52eeb09460302bb56381a7c304230a6"
+      }
+    }
+  ]
+}

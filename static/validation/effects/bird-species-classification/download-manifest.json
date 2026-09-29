@@ -1,0 +1,47 @@
+{
+  "repo": "AXERA-TECH/Bird-Species-Classification",
+  "revision": "b81b4cb3be067a85ba730c5b2a67c566d3d9af68",
+  "complete": true,
+  "files": [
+    {
+      "path": "axmodel_infer.py",
+      "size": 11741,
+      "sha256": null,
+      "gitBlob": "8e5bc1c05b23e6b148ceca1ae0cee74653cb19b9",
+      "verifiedHashes": {
+        "sha256": "0ff920923d8edbffa0ea13f2cae98d611e1718ddbf03ebae71049657d7d3ac35",
+        "gitBlob": "8e5bc1c05b23e6b148ceca1ae0cee74653cb19b9"
+      }
+    },
+    {
+      "path": "model/bird-s/AX650/bird_650_npu3.axmodel",
+      "size": 1080666,
+      "sha256": "ccdd3b61702217bca6f632e817bf01ac484b0833b5f4d718ca844fcb94d322d7",
+      "gitBlob": "cf8269e93b2efc351103a684214135aa10b2c13f",
+      "verifiedHashes": {
+        "sha256": "ccdd3b61702217bca6f632e817bf01ac484b0833b5f4d718ca844fcb94d322d7",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "class_name.txt",
+      "size": 109688,
+      "sha256": null,
+      "gitBlob": "d2fff02220312102938cdfb3e342b7f370178de3",
+      "verifiedHashes": {
+        "sha256": "c39ee878a82b8dd45d69725c9d504a046effdeb01f6d05ac5c6a22c70506ddd4",
+        "gitBlob": "d2fff02220312102938cdfb3e342b7f370178de3"
+      }
+    },
+    {
+      "path": "test_images/03111_2c0dfa5a-c4a0-47f8-ac89-6a289208050f.jpg",
+      "size": 105946,
+      "sha256": "1ae2bc22d3f8cd5d59822b0faf99deaadc4bde4cfc9be262524697214f3d6fe5",
+      "gitBlob": "1a9b1cf07b0b44b90bd15791dc8a3d47a0b18e9c",
+      "verifiedHashes": {
+        "sha256": "1ae2bc22d3f8cd5d59822b0faf99deaadc4bde4cfc9be262524697214f3d6fe5",
+        "gitBlob": null
+      }
+    }
+  ]
+}

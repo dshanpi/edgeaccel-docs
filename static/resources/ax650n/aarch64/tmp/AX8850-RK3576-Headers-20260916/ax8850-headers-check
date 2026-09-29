@@ -1,0 +1,38 @@
+#!/usr/bin/python3
+"""Validate this exact prepared DShanPi-A1 kernel build environment."""
+import argparse,gzip,hashlib,json,os,re,shutil,subprocess,sys
+from pathlib import Path
+RELEASE='6.1.115-vendor-rk35xx'
+IMAGE_SHA='68fbb255175f1bd758672b1e8bf88b1e8b7aa9f61d37d891712f2efe5d8d33a5'
+CONFIG_SHA='bd6e9db8dc43a68f7ea5f8423f00c66765cdd93d3b23b4842713c64626e26911'
+FILES={'.config': 'bd6e9db8dc43a68f7ea5f8423f00c66765cdd93d3b23b4842713c64626e26911', 'include/config/auto.conf': 'eec9fb8dcd3d0814615ed64bcc68fc2a39d748aae441c882b8a778dc631e29d3', 'include/generated/autoconf.h': 'd6fa3256a1e8446057bed3814b6cfafac292908c19e41d8700515161b70c5544', 'include/generated/utsrelease.h': '28a664bc31fd9a6fcffc6fc5668e1bd737ed08572c2b39d1c618274485cfc89c', 'include/generated/compile.h': '64f799888cf1cbfb293c1d0e7fe61499bdd4dd779c63215e574613fc49eae361', 'Module.symvers': 'c7aeb63c7e0be5ae3828e22744f9664617932ce70423ad2d25c04f32dabe692a', 'scripts/basic/fixdep': 'bf2b1b3c61e081828bdef2e9b492a72162cea997ae7d77b35adf757624332146', 'scripts/mod/modpost': '69ae6220fe9a6c7fb6c2a5550d81e4c69f1690b37797e08ab8ebe2802374bbef', 'scripts/kconfig/conf': '5d26a5d1a14d58198e2d5b8d0be56e5fe879d31a2a99357e03de7c4891aa6486'}
+def sha(p):
+    with p.open('rb') as f:return hashlib.file_digest(f,'sha256').hexdigest()
+def require(ok,msg):
+    if not ok:raise RuntimeError(msg)
+def main():
+    parser=argparse.ArgumentParser()
+    parser.add_argument('--target-only',action='store_true')
+    parser.add_argument('--headers',type=Path,default=Path('/usr/src/linux-headers-'+RELEASE))
+    a=parser.parse_args()
+    require(os.uname().machine=='aarch64','Requires aarch64 DShanPi-A1 host')
+    require(os.uname().release==RELEASE,'Kernel release mismatch; do not install this package')
+    require(sha(Path('/boot/Image'))==IMAGE_SHA,'Kernel Image differs from the validated build')
+    require(hashlib.sha256(gzip.decompress(Path('/proc/config.gz').read_bytes())).hexdigest()==CONFIG_SHA,'Running kernel configuration differs')
+    print('PASS: target kernel Image and running configuration match')
+    if a.target_only:return
+    tool=shutil.which('pahole')
+    require(tool is not None,'Missing pahole; install package pahole >= 1.25')
+    ver=subprocess.check_output([tool,'--version'],text=True).strip()
+    m=re.fullmatch(r'v?(\d+)\.(\d+)(?:.*)?',ver)
+    require(m is not None and tuple(map(int,m.groups()))>=(1,25),'pahole >= 1.25 required')
+    for name,digest in FILES.items():require(sha(a.headers/name)==digest,'Prepared header file changed: '+name)
+    text=(a.headers/'include/generated/autoconf.h').read_text()
+    for macro in ['CONFIG_DEBUG_INFO_BTF','CONFIG_DEBUG_INFO_BTF_MODULES']:
+        require('#define '+macro+' 1' in text,'Missing '+macro)
+    print('PASS: prepared headers, generated configuration, Module.symvers and ARM64 helpers match')
+    print('PASS: '+ver+' is available; no module was loaded or changed')
+try:main()
+except Exception as e:
+    print('FAIL: '+str(e),file=sys.stderr)
+    sys.exit(1)

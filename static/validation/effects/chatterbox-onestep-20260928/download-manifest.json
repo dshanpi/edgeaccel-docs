@@ -1,0 +1,288 @@
+{
+  "modelId": "chatterbox-onestep",
+  "repo": "AXERA-TECH/chatterbox-onestep",
+  "revision": "2bec38c6ef8b34b721422d41d2030f6a226bfaac",
+  "complete": true,
+  "files": [
+    {
+      "path": "NPU_ONLY_SDK.md",
+      "size": 138,
+      "url": "https://huggingface.co/AXERA-TECH/chatterbox-onestep/resolve/2bec38c6ef8b34b721422d41d2030f6a226bfaac/NPU_ONLY_SDK.md",
+      "verifiedHashes": {
+        "sha256": "5f7251afb488caa61403a2420765f6ef4fee99b43bf21eb2281abb3dff04e76f",
+        "gitBlob": "8bdff937d7e01d3286c59925436b3e4d2300b045"
+      }
+    },
+    {
+      "path": "README.md",
+      "size": 7438,
+      "url": "https://huggingface.co/AXERA-TECH/chatterbox-onestep/resolve/2bec38c6ef8b34b721422d41d2030f6a226bfaac/README.md",
+      "verifiedHashes": {
+        "sha256": "755e074359c530ee89b0c2257aa31f5f7034fa8763eb6562b9b29f81a54ef68d",
+        "gitBlob": "acd1ec2b23c69a504cb0a4939cad277e14060b5d"
+      }
+    },
+    {
+      "path": "clone_reference.wav",
+      "size": 425830,
+      "url": "https://huggingface.co/AXERA-TECH/chatterbox-onestep/resolve/2bec38c6ef8b34b721422d41d2030f6a226bfaac/clone_reference.wav",
+      "verifiedHashes": {
+        "sha256": "4d2bd83ff0f7fe33491b03193abdf623f1b4cc2d8103972b33638d3607d86dc5",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/hifift_decode.axmodel",
+      "size": 27154148,
+      "url": "https://huggingface.co/AXERA-TECH/chatterbox-onestep/resolve/2bec38c6ef8b34b721422d41d2030f6a226bfaac/models/hifift_decode.axmodel",
+      "verifiedHashes": {
+        "sha256": "e7ec81cea6daf16c26245d651e249dc556cd1b955e2858dc8f247a6cac215041",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/hifift_f0.axmodel",
+      "size": 3494651,
+      "url": "https://huggingface.co/AXERA-TECH/chatterbox-onestep/resolve/2bec38c6ef8b34b721422d41d2030f6a226bfaac/models/hifift_f0.axmodel",
+      "verifiedHashes": {
+        "sha256": "35d6e138d8303dbc8b911a9ffb7ca0878a13d7e5c91480c6f8b29e035506d667",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/model.axmodel",
+      "size": 133608774,
+      "url": "https://huggingface.co/AXERA-TECH/chatterbox-onestep/resolve/2bec38c6ef8b34b721422d41d2030f6a226bfaac/models/model.axmodel",
+      "verifiedHashes": {
+        "sha256": "76a0ffc1d2b1c6d9bad7b335db9bc4d28a7244dcc4e2949e8d87496806699899",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/model_clone.axmodel",
+      "size": 132122417,
+      "url": "https://huggingface.co/AXERA-TECH/chatterbox-onestep/resolve/2bec38c6ef8b34b721422d41d2030f6a226bfaac/models/model_clone.axmodel",
+      "verifiedHashes": {
+        "sha256": "9e08f9f90f643d535adfc59418f1318e86b777ac83194038003a5a7eca2b6fec",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/model_clone_meta.json",
+      "size": 1756,
+      "url": "https://huggingface.co/AXERA-TECH/chatterbox-onestep/resolve/2bec38c6ef8b34b721422d41d2030f6a226bfaac/models/model_clone_meta.json",
+      "verifiedHashes": {
+        "sha256": "7ba588e2ab393382b3a7a0c6fb5823164d1c748e014fe8dac330a35a6ce59e92",
+        "gitBlob": "bb95c694da1bf2c31335851bce6fa61a1130a6dc"
+      }
+    },
+    {
+      "path": "models/model_meta.json",
+      "size": 1590,
+      "url": "https://huggingface.co/AXERA-TECH/chatterbox-onestep/resolve/2bec38c6ef8b34b721422d41d2030f6a226bfaac/models/model_meta.json",
+      "verifiedHashes": {
+        "sha256": "0c61479c3d08fb0e30276d360008a3eb14976cd8599769455a8a26e77a251526",
+        "gitBlob": "101e7cd6dfd2f93660f67b48dacc2c099ace9122"
+      }
+    },
+    {
+      "path": "python/chatterbox_s3gen_onestep_sdk/README.md",
+      "size": 902,
+      "url": "https://huggingface.co/AXERA-TECH/chatterbox-onestep/resolve/2bec38c6ef8b34b721422d41d2030f6a226bfaac/python/chatterbox_s3gen_onestep_sdk/README.md",
+      "verifiedHashes": {
+        "sha256": "c9292e919fe9b8c7908e563fb777f935aeac93722108b0ecf765f5a2c5561038",
+        "gitBlob": "44d8a9296cdb7b1ddd4ae668479802b21ee4b2ff"
+      }
+    },
+    {
+      "path": "python/chatterbox_s3gen_onestep_sdk/__init__.py",
+      "size": 74,
+      "url": "https://huggingface.co/AXERA-TECH/chatterbox-onestep/resolve/2bec38c6ef8b34b721422d41d2030f6a226bfaac/python/chatterbox_s3gen_onestep_sdk/__init__.py",
+      "verifiedHashes": {
+        "sha256": "bb9d6eef4365f2bbcb5de69d55cc4111cf231aab84baef433f793c8e78f196fa",
+        "gitBlob": "eee877e7331d549dbc2fc8fc90daf260205f6183"
+      }
+    },
+    {
+      "path": "python/chatterbox_s3gen_onestep_sdk/example.py",
+      "size": 1610,
+      "url": "https://huggingface.co/AXERA-TECH/chatterbox-onestep/resolve/2bec38c6ef8b34b721422d41d2030f6a226bfaac/python/chatterbox_s3gen_onestep_sdk/example.py",
+      "verifiedHashes": {
+        "sha256": "9e448d3ca7e0e8cbb371e434afe7483642dfe4adae644b9172f292c9347034af",
+        "gitBlob": "6f01df45ba63ba9bae866c7c6774e65f88ec311e"
+      }
+    },
+    {
+      "path": "python/chatterbox_s3gen_onestep_sdk/inference.py",
+      "size": 1915,
+      "url": "https://huggingface.co/AXERA-TECH/chatterbox-onestep/resolve/2bec38c6ef8b34b721422d41d2030f6a226bfaac/python/chatterbox_s3gen_onestep_sdk/inference.py",
+      "verifiedHashes": {
+        "sha256": "9807f12163b1e69d034c3699a89cf160929ab3652a0171e446e6f5b83bac2099",
+        "gitBlob": "efd2ca55fda8f335e9f12770e43478bcac54e555"
+      }
+    },
+    {
+      "path": "python/chatterbox_s3gen_onestep_sdk/postprocess.py",
+      "size": 237,
+      "url": "https://huggingface.co/AXERA-TECH/chatterbox-onestep/resolve/2bec38c6ef8b34b721422d41d2030f6a226bfaac/python/chatterbox_s3gen_onestep_sdk/postprocess.py",
+      "verifiedHashes": {
+        "sha256": "76f78b5344269216b536d44d0517faf743c8bfe5c7ad324ecf5ce8af800d1f7b",
+        "gitBlob": "c238e08814c6db60294d709c321e53d42e59a78e"
+      }
+    },
+    {
+      "path": "python/chatterbox_s3gen_onestep_sdk/preprocess.py",
+      "size": 663,
+      "url": "https://huggingface.co/AXERA-TECH/chatterbox-onestep/resolve/2bec38c6ef8b34b721422d41d2030f6a226bfaac/python/chatterbox_s3gen_onestep_sdk/preprocess.py",
+      "verifiedHashes": {
+        "sha256": "a9bbd9ce8f00a5678897c06d4f811ff384eb85233c78e5009faccd4ebc080a68",
+        "gitBlob": "c01f209b1124bcf51ffd364759b1339d198468de"
+      }
+    },
+    {
+      "path": "python/chatterbox_s3gen_onestep_sdk/requirements.txt",
+      "size": 66,
+      "url": "https://huggingface.co/AXERA-TECH/chatterbox-onestep/resolve/2bec38c6ef8b34b721422d41d2030f6a226bfaac/python/chatterbox_s3gen_onestep_sdk/requirements.txt",
+      "verifiedHashes": {
+        "sha256": "8e74e2903d6a00862e4abd19b682b0334a1b588fb44c38366b98aaea5d8e0f2c",
+        "gitBlob": "242da48773f629bcb67a1a7361c6213fc0f1c1cc"
+      }
+    },
+    {
+      "path": "python/default_embedding.npy",
+      "size": 896,
+      "url": "https://huggingface.co/AXERA-TECH/chatterbox-onestep/resolve/2bec38c6ef8b34b721422d41d2030f6a226bfaac/python/default_embedding.npy",
+      "verifiedHashes": {
+        "sha256": "80fff78dc56a017737fe7cd5ff649ce6e535895633d29a3b3b80cc9d3bae672d",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "python/demo.py",
+      "size": 812,
+      "url": "https://huggingface.co/AXERA-TECH/chatterbox-onestep/resolve/2bec38c6ef8b34b721422d41d2030f6a226bfaac/python/demo.py",
+      "verifiedHashes": {
+        "sha256": "69e2ea8185b4ec50e4370fc570cfd189d273b7c27d5f77532c37055a84748cfa",
+        "gitBlob": "a1a59e732460485364564eab0772a1e1b2ae3d6d"
+      }
+    },
+    {
+      "path": "python/extract_voice_embedding.py",
+      "size": 3424,
+      "url": "https://huggingface.co/AXERA-TECH/chatterbox-onestep/resolve/2bec38c6ef8b34b721422d41d2030f6a226bfaac/python/extract_voice_embedding.py",
+      "verifiedHashes": {
+        "sha256": "fcc44d4e15b6c58f053a4b0e334797b98657c75df1b47ee8808eb47732effdb5",
+        "gitBlob": "dad5da6fb62b484c49075c74ac2429283f0c0d84"
+      }
+    },
+    {
+      "path": "python/hift_linear_b.npy",
+      "size": 132,
+      "url": "https://huggingface.co/AXERA-TECH/chatterbox-onestep/resolve/2bec38c6ef8b34b721422d41d2030f6a226bfaac/python/hift_linear_b.npy",
+      "verifiedHashes": {
+        "sha256": "5766846b0128c5d7b0a06d1dd8278d2558631f7fbaf36d80009fc6facdd862dd",
+        "gitBlob": "abb8388bcbd61d0f4355496c7356f89edbe449b6"
+      }
+    },
+    {
+      "path": "python/hift_linear_w.npy",
+      "size": 164,
+      "url": "https://huggingface.co/AXERA-TECH/chatterbox-onestep/resolve/2bec38c6ef8b34b721422d41d2030f6a226bfaac/python/hift_linear_w.npy",
+      "verifiedHashes": {
+        "sha256": "6ef9f0ce962dffeceabc468e76fdbf54a20c1ebfc4a3a497d208989c3872263b",
+        "gitBlob": "29ea8b571f6d7ad681dde8644d72a000b9fe2ed6"
+      }
+    },
+    {
+      "path": "python/hift_vocoder.py",
+      "size": 5764,
+      "url": "https://huggingface.co/AXERA-TECH/chatterbox-onestep/resolve/2bec38c6ef8b34b721422d41d2030f6a226bfaac/python/hift_vocoder.py",
+      "verifiedHashes": {
+        "sha256": "21e6ddc38fd629cb9d87d7320b8d64362cac856a024baa9155c61dd89c7e8f1c",
+        "gitBlob": "0b23cf2993e703412d6e4f70833dac85a50fdccd"
+      }
+    },
+    {
+      "path": "python/mel_basis_24k.npy",
+      "size": 307648,
+      "url": "https://huggingface.co/AXERA-TECH/chatterbox-onestep/resolve/2bec38c6ef8b34b721422d41d2030f6a226bfaac/python/mel_basis_24k.npy",
+      "verifiedHashes": {
+        "sha256": "c1a83054dafb4f36761cf3ed51bbb131dc02eb3895a1531967249f8c522a1a93",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "python/openai_client.py",
+      "size": 1843,
+      "url": "https://huggingface.co/AXERA-TECH/chatterbox-onestep/resolve/2bec38c6ef8b34b721422d41d2030f6a226bfaac/python/openai_client.py",
+      "verifiedHashes": {
+        "sha256": "52629d86683624822952f67a6cffde4e9f2b756878b54ae46dd3cb176b94fdaf",
+        "gitBlob": "3b4e3d4219919313ba6df9427140340499972598"
+      }
+    },
+    {
+      "path": "python/openai_server.py",
+      "size": 12321,
+      "url": "https://huggingface.co/AXERA-TECH/chatterbox-onestep/resolve/2bec38c6ef8b34b721422d41d2030f6a226bfaac/python/openai_server.py",
+      "verifiedHashes": {
+        "sha256": "86060d4918f1870922e1cdd11cb2f8fabc8922765e49e1ce79cd60300b8f7b8a",
+        "gitBlob": "29845c8f942a02b7d90369ea19936841a887dcdb"
+      }
+    },
+    {
+      "path": "run.sh",
+      "size": 139,
+      "url": "https://huggingface.co/AXERA-TECH/chatterbox-onestep/resolve/2bec38c6ef8b34b721422d41d2030f6a226bfaac/run.sh",
+      "verifiedHashes": {
+        "sha256": "7a6b520c63ab935150cc5fced482cb834851049f4cc6dabf21842a160ec385e6",
+        "gitBlob": "e29265bbcaf077c3625673dac02622ae59165495"
+      }
+    },
+    {
+      "path": "sample_input/embedding.npy",
+      "size": 896,
+      "url": "https://huggingface.co/AXERA-TECH/chatterbox-onestep/resolve/2bec38c6ef8b34b721422d41d2030f6a226bfaac/sample_input/embedding.npy",
+      "verifiedHashes": {
+        "sha256": "f5c19929944d2be07c37f44f3e238d1a4b7bc814a27a3517e0c65de0f60f7fc8",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "sample_input/token_len.npy",
+      "size": 132,
+      "url": "https://huggingface.co/AXERA-TECH/chatterbox-onestep/resolve/2bec38c6ef8b34b721422d41d2030f6a226bfaac/sample_input/token_len.npy",
+      "verifiedHashes": {
+        "sha256": "4004663cd2881ea757ca95ff735a44eaf2b821cbf544614bb3809a4e73896279",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "sample_input/tokens.npy",
+      "size": 1152,
+      "url": "https://huggingface.co/AXERA-TECH/chatterbox-onestep/resolve/2bec38c6ef8b34b721422d41d2030f6a226bfaac/sample_input/tokens.npy",
+      "verifiedHashes": {
+        "sha256": "3f1c103a4c205369ce4742cd981cad776c6d71133bd1ca12522bacb68d274136",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "sample_input/z.npy",
+      "size": 163968,
+      "url": "https://huggingface.co/AXERA-TECH/chatterbox-onestep/resolve/2bec38c6ef8b34b721422d41d2030f6a226bfaac/sample_input/z.npy",
+      "verifiedHashes": {
+        "sha256": "3facc56c4b05a5775f3ec2ef44e0a9d1a1d0e0b068ea94d73a83b34680dd03c4",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "setup.sh",
+      "size": 390,
+      "url": "https://huggingface.co/AXERA-TECH/chatterbox-onestep/resolve/2bec38c6ef8b34b721422d41d2030f6a226bfaac/setup.sh",
+      "verifiedHashes": {
+        "sha256": "f2873bbe09df65b0affe3e50312f295a70c4b400d59ba68373b59b2173480067",
+        "gitBlob": "9056b3c7e2d74bccc66e525611c3136992f7a8ca"
+      }
+    }
+  ],
+  "runnerSha256": "a11d496464c991ccc21ec75891c248e94bd15dd1d99676d8323f0835328ea8ab"
+}

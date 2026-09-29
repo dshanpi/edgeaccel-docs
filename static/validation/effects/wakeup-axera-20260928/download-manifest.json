@@ -1,0 +1,144 @@
+{
+  "modelId": "WakeUp.axera",
+  "repo": "AXERA-TECH/WakeUp.axera",
+  "revision": "139f25e18b0bce7af805f0f5dc34bd209fcf16b0",
+  "complete": true,
+  "files": [
+    {
+      "path": "NPU_ONLY_SDK.md",
+      "size": 138,
+      "url": "https://huggingface.co/AXERA-TECH/WakeUp.axera/resolve/139f25e18b0bce7af805f0f5dc34bd209fcf16b0/NPU_ONLY_SDK.md",
+      "verifiedHashes": {
+        "sha256": "5f7251afb488caa61403a2420765f6ef4fee99b43bf21eb2281abb3dff04e76f",
+        "gitBlob": "8bdff937d7e01d3286c59925436b3e4d2300b045"
+      }
+    },
+    {
+      "path": "README.md",
+      "size": 2338,
+      "url": "https://huggingface.co/AXERA-TECH/WakeUp.axera/resolve/139f25e18b0bce7af805f0f5dc34bd209fcf16b0/README.md",
+      "verifiedHashes": {
+        "sha256": "fa76d68fbaee032e7fc161c6d5cf3ff03643c541bada82791994c2b56bb9beae",
+        "gitBlob": "42be13e453c4272323b746baacbf11a80b1f2dae"
+      }
+    },
+    {
+      "path": "models/ax650/model.axmodel",
+      "size": 541239,
+      "url": "https://huggingface.co/AXERA-TECH/WakeUp.axera/resolve/139f25e18b0bce7af805f0f5dc34bd209fcf16b0/models/ax650/model.axmodel",
+      "verifiedHashes": {
+        "sha256": "40102af09dd842219fe6dd2ef569f1d1db77a8590efe8d4ec5b339e016d3441a",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/ax650/model_meta.json",
+      "size": 1000,
+      "url": "https://huggingface.co/AXERA-TECH/WakeUp.axera/resolve/139f25e18b0bce7af805f0f5dc34bd209fcf16b0/models/ax650/model_meta.json",
+      "verifiedHashes": {
+        "sha256": "b62e598f94bf39b94cccfcb9b9362fff604199c4120c3d27bccef2a37bc6deac",
+        "gitBlob": "fdc2be69a1ae17e67130b6ba696ce27287b2a18b"
+      }
+    },
+    {
+      "path": "models/sample_nihao_aixin.wav",
+      "size": 60716,
+      "url": "https://huggingface.co/AXERA-TECH/WakeUp.axera/resolve/139f25e18b0bce7af805f0f5dc34bd209fcf16b0/models/sample_nihao_aixin.wav",
+      "verifiedHashes": {
+        "sha256": "21ceb558c831c2cf1a5a26f62b7529fd8f345b7ee57f4957c4463b7e60a0cc98",
+        "gitBlob": "f90bb8eba695f52ab0baaa1ab3df1fb312d67dbe"
+      }
+    },
+    {
+      "path": "models/sample_nihao_qita.wav",
+      "size": 59180,
+      "url": "https://huggingface.co/AXERA-TECH/WakeUp.axera/resolve/139f25e18b0bce7af805f0f5dc34bd209fcf16b0/models/sample_nihao_qita.wav",
+      "verifiedHashes": {
+        "sha256": "9ef8d529f44f055acc16d84e232c4a7f658e637f42da11024413034ce141be4c",
+        "gitBlob": "ce353256964f0c38c80400067f4020e91f4c97f0"
+      }
+    },
+    {
+      "path": "python/demo.py",
+      "size": 2083,
+      "url": "https://huggingface.co/AXERA-TECH/WakeUp.axera/resolve/139f25e18b0bce7af805f0f5dc34bd209fcf16b0/python/demo.py",
+      "verifiedHashes": {
+        "sha256": "bb7046931202bc9fc42ae3ba51f18d5839a7e95eab5b2ab496a9e56508e80756",
+        "gitBlob": "5348c1744babd60fa8676de6cadec892b0633803"
+      }
+    },
+    {
+      "path": "python/requirements.txt",
+      "size": 16,
+      "url": "https://huggingface.co/AXERA-TECH/WakeUp.axera/resolve/139f25e18b0bce7af805f0f5dc34bd209fcf16b0/python/requirements.txt",
+      "verifiedHashes": {
+        "sha256": "06941fe0bfe6ad3bc0369542d57c6ccb9b6aed6922c85395e4b87d2352a92d0c",
+        "gitBlob": "ef63b3aff90cc20bb403c5421f278c25889f23ea"
+      }
+    },
+    {
+      "path": "python/wakeup_axera_sdk/__init__.py",
+      "size": 128,
+      "url": "https://huggingface.co/AXERA-TECH/WakeUp.axera/resolve/139f25e18b0bce7af805f0f5dc34bd209fcf16b0/python/wakeup_axera_sdk/__init__.py",
+      "verifiedHashes": {
+        "sha256": "baab463be544913adbd54416bd8ce7d6ef3a3f7893288652587b0297fdac93db",
+        "gitBlob": "2d26a6d5a76c3d991f35caa2791ba875b1f4d7c3"
+      }
+    },
+    {
+      "path": "python/wakeup_axera_sdk/detector.py",
+      "size": 2508,
+      "url": "https://huggingface.co/AXERA-TECH/WakeUp.axera/resolve/139f25e18b0bce7af805f0f5dc34bd209fcf16b0/python/wakeup_axera_sdk/detector.py",
+      "verifiedHashes": {
+        "sha256": "f2fada8fbe192ac20f6ffea8d2536046027527aaf292500d825d10257f86f4ef",
+        "gitBlob": "a0df761bce7a164b183cb1c53b0ef595ad8ca436"
+      }
+    },
+    {
+      "path": "python/wakeup_axera_sdk/example.py",
+      "size": 1671,
+      "url": "https://huggingface.co/AXERA-TECH/WakeUp.axera/resolve/139f25e18b0bce7af805f0f5dc34bd209fcf16b0/python/wakeup_axera_sdk/example.py",
+      "verifiedHashes": {
+        "sha256": "c2f938776aceea76290f19b70def80a62451c618dcd601998aaa75ba277c5796",
+        "gitBlob": "97e72ed00df13901d7206902f0b7fb60fe35a27b"
+      }
+    },
+    {
+      "path": "python/wakeup_axera_sdk/inference.py",
+      "size": 1564,
+      "url": "https://huggingface.co/AXERA-TECH/WakeUp.axera/resolve/139f25e18b0bce7af805f0f5dc34bd209fcf16b0/python/wakeup_axera_sdk/inference.py",
+      "verifiedHashes": {
+        "sha256": "bf7ee71dcc0d3cdbac9c43bcb2e67de69938eebde8aacddfd90926f478f081eb",
+        "gitBlob": "628237bdbfe12d2b844313dbb4dbe859bee2cd58"
+      }
+    },
+    {
+      "path": "python/wakeup_axera_sdk/postprocess.py",
+      "size": 1367,
+      "url": "https://huggingface.co/AXERA-TECH/WakeUp.axera/resolve/139f25e18b0bce7af805f0f5dc34bd209fcf16b0/python/wakeup_axera_sdk/postprocess.py",
+      "verifiedHashes": {
+        "sha256": "08fc8eefc476b861c37d2626bfc54b4b46f58c0fa36662a42681971abe53dd6a",
+        "gitBlob": "4a6d98c1b78b9715b4699fc57dfd454e4152bc83"
+      }
+    },
+    {
+      "path": "python/wakeup_axera_sdk/preprocess.py",
+      "size": 3033,
+      "url": "https://huggingface.co/AXERA-TECH/WakeUp.axera/resolve/139f25e18b0bce7af805f0f5dc34bd209fcf16b0/python/wakeup_axera_sdk/preprocess.py",
+      "verifiedHashes": {
+        "sha256": "24c808e93b76fb9e330899a96717baaed8025d79f19a325b49454175c59633ff",
+        "gitBlob": "9be8e5839550fbd48d5f510c2f0ed5e39a59a96a"
+      }
+    },
+    {
+      "path": "python/wakeup_axera_sdk/requirements.txt",
+      "size": 99,
+      "url": "https://huggingface.co/AXERA-TECH/WakeUp.axera/resolve/139f25e18b0bce7af805f0f5dc34bd209fcf16b0/python/wakeup_axera_sdk/requirements.txt",
+      "verifiedHashes": {
+        "sha256": "614bc2fd699700737a8ac62d7b7b5a8d249b15a68c1f730e4247183ae83cf6a7",
+        "gitBlob": "37498a033d69aa057a29426de0722238cd3295a0"
+      }
+    }
+  ],
+  "runnerSha256": "8ce30f0cd2ef8e66aabc48661516c5f0bd7083c06bef90b586951506bee2173d"
+}

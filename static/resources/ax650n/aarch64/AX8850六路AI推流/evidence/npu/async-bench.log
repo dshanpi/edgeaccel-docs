@@ -1,0 +1,9 @@
+18:50:21.140 INF operator():132 | AXCL engine VNPU kind=0
+bytes=30800 async=0 avg_us=742.813
+bytes=30800 async=1 avg_us=4770.01
+bytes=1048576 async=0 avg_us=5224.13
+bytes=1048576 async=1 avg_us=8039.68
+bytes=3145728 async=0 avg_us=11163.5
+bytes=3145728 async=1 avg_us=13514.1
+bytes=7176192 async=0 avg_us=27342
+bytes=7176192 async=1 avg_us=29778.8

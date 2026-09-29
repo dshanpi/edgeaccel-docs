@@ -1,0 +1,148 @@
+{
+  "kind": "text",
+  "task": "text",
+  "requests": [
+    {
+      "endpoint": "/v1/chat/completions",
+      "request": {
+        "model": "AXERA-TECH/Qwen3-0.6B-GPTQ-Int4",
+        "messages": [
+          {
+            "role": "user",
+            "content": "What is 2 + 3? Answer with only the number."
+          }
+        ],
+        "max_tokens": 128,
+        "temperature": 0,
+        "enable_thinking": false,
+        "stream": false
+      },
+      "elapsedSeconds": 3.679033755999626,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "content": "The answer is:\n\n**2** + **3** = **5**.",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1790140998,
+        "id": "chatcmpl-1f91f6e289109a1b848e8850",
+        "model": "AXERA-TECH/Qwen3-0.6B-GPTQ-Int4",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 16,
+          "decode_tps": 5.2280473709106445,
+          "prefill_tokens": 26,
+          "prefill_tps": 93.03689575195312,
+          "prompt_tokens": 26,
+          "total_tokens": 42,
+          "ttft_ms": 806.1599731445312
+        }
+      },
+      "checks": {
+        "nonemptyText": true,
+        "containsReplacementCharacter": false,
+        "finishReason": "stop"
+      }
+    },
+    {
+      "endpoint": "/v1/chat/completions",
+      "request": {
+        "model": "AXERA-TECH/Qwen3-0.6B-GPTQ-Int4",
+        "messages": [
+          {
+            "role": "user",
+            "content": "请用一句话说明 PCIe 的用途。"
+          }
+        ],
+        "max_tokens": 128,
+        "temperature": 0,
+        "enable_thinking": false,
+        "stream": false
+      },
+      "elapsedSeconds": 3.523422120999385,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "content": "Pcie 是一种用于高速数据传输的接口技术，广泛应用于计算机和移动设备中。",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1790141001,
+        "id": "chatcmpl-7eee47c61ad1d5f3844b300d",
+        "model": "AXERA-TECH/Qwen3-0.6B-GPTQ-Int4",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 20,
+          "decode_tps": 6.747257232666016,
+          "prefill_tokens": 20,
+          "prefill_tps": 103.7812728881836,
+          "prompt_tokens": 20,
+          "total_tokens": 40,
+          "ttft_ms": 702.77099609375
+        }
+      },
+      "checks": {
+        "nonemptyText": true,
+        "containsReplacementCharacter": false,
+        "finishReason": "stop"
+      }
+    },
+    {
+      "endpoint": "/v1/chat/completions",
+      "request": {
+        "model": "AXERA-TECH/Qwen3-0.6B-GPTQ-Int4",
+        "messages": [
+          {
+            "role": "user",
+            "content": "只输出 JSON：把苹果的数量 3 和梨的数量 2 写成一个对象，键名分别为 apple 和 pear。"
+          }
+        ],
+        "max_tokens": 128,
+        "temperature": 0,
+        "enable_thinking": false,
+        "stream": false
+      },
+      "elapsedSeconds": 4.387925106999319,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "content": "```json\n{\n  \"apple\": 3,\n  \"pear\": 2\n}\n```",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1790141006,
+        "id": "chatcmpl-588ca475820230c6647d728c",
+        "model": "AXERA-TECH/Qwen3-0.6B-GPTQ-Int4",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 20,
+          "decode_tps": 5.199283123016357,
+          "prefill_tokens": 39,
+          "prefill_tps": 162.9351806640625,
+          "prompt_tokens": 39,
+          "total_tokens": 59,
+          "ttft_ms": 728.8270263671875
+        }
+      },
+      "checks": {
+        "nonemptyText": true,
+        "containsReplacementCharacter": false,
+        "finishReason": "stop"
+      }
+    }
+  ],
+  "model": "AXERA-TECH/Qwen3-0.6B-GPTQ-Int4"
+}

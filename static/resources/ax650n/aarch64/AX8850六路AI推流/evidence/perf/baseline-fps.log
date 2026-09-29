@@ -1,0 +1,112 @@
+{
+  "time": "2026-09-16T17:25:59.925479+08:00",
+  "active": "active",
+  "window_seconds": 60.3,
+  "configured_output_fps": 10,
+  "rows": [
+    {
+      "channel": 1,
+      "name": "pcd",
+      "model": "PCD + tracking",
+      "decode_fps": 12.01,
+      "fresh_result_fps": 6.97,
+      "encode_fps": 10.0,
+      "last_process_ms": 166.9,
+      "result_age_ms": 75.9,
+      "encoded_drops": 0,
+      "mux_errors": 0,
+      "submit_errors": 0
+    },
+    {
+      "channel": 2,
+      "name": "vehicle",
+      "model": "YOLOv8s road objects",
+      "decode_fps": 24.99,
+      "fresh_result_fps": 3.86,
+      "encode_fps": 9.98,
+      "last_process_ms": 231.5,
+      "result_age_ms": 99.4,
+      "encoded_drops": 0,
+      "mux_errors": 0,
+      "submit_errors": 0
+    },
+    {
+      "channel": 3,
+      "name": "seg",
+      "model": "YOLO26n instance masks",
+      "decode_fps": 30.0,
+      "fresh_result_fps": 2.34,
+      "encode_fps": 10.0,
+      "last_process_ms": 475.7,
+      "result_age_ms": 259.4,
+      "encoded_drops": 0,
+      "mux_errors": 0,
+      "submit_errors": 0
+    },
+    {
+      "channel": 4,
+      "name": "driving",
+      "model": "YOLO26n + tracking",
+      "decode_fps": 30.03,
+      "fresh_result_fps": 4.03,
+      "encode_fps": 10.0,
+      "last_process_ms": 249.5,
+      "result_age_ms": 76.9,
+      "encoded_drops": 0,
+      "mux_errors": 0,
+      "submit_errors": 0
+    },
+    {
+      "channel": 5,
+      "name": "depth",
+      "model": "YOLO26n relative depth",
+      "decode_fps": 23.98,
+      "fresh_result_fps": 4.2,
+      "encode_fps": 10.0,
+      "last_process_ms": 256.0,
+      "result_age_ms": 47.5,
+      "encoded_drops": 0,
+      "mux_errors": 0,
+      "submit_errors": 0
+    },
+    {
+      "channel": 6,
+      "name": "count",
+      "model": "Vehicle line counting",
+      "decode_fps": 24.08,
+      "fresh_result_fps": 3.76,
+      "encode_fps": 10.0,
+      "last_process_ms": 230.4,
+      "result_age_ms": 140.1,
+      "encoded_drops": 0,
+      "mux_errors": 0,
+      "submit_errors": 0
+    }
+  ],
+  "overview_fps": 10.0
+}
+{
+  "host_cores": 8,
+  "host_total_cpu_busy_percent": 48.7,
+  "app_cpu_percent_one_core_100": 381.2,
+  "mem_total": "4003216 kB",
+  "mem_available": "2963900 kB"
+}
+current_link_speed 5.0 GT/s PCIe
+current_link_width 1
++------------------------------------------------------------------------------------------------+
+| AXCL-SMI  V3.16.0_20260729180218                                Driver  V3.16.0_20260729180218 |
++-----------------------------------------+--------------+---------------------------------------+
+| Card  Name                     Firmware | Bus-Id       |                          Memory-Usage |
+| Fan   Temp                Pwr:Usage/Cap | CPU      NPU |                             CMM-Usage |
+|=========================================+==============+=======================================|
+|    0  AX8850                    V3.16.0 | 0000:01:00.0 |                217 MiB /      945 MiB |
+|   --   50C                      -- / -- | 7%        6% |                927 MiB /    15232 MiB |
++-----------------------------------------+--------------+---------------------------------------+
+
++------------------------------------------------------------------------------------------------+
+| Processes:                                                                                     |
+| Card      PID  Process Name                                                   NPU Memory Usage |
+|================================================================================================|
+|    0    44445  /home/baiwen/ax-pipeline/six/bin/six_app                              37996 KiB |
++------------------------------------------------------------------------------------------------+

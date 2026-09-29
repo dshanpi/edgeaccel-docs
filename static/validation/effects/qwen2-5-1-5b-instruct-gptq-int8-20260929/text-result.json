@@ -1,0 +1,57 @@
+{
+  "kind": "legacy-text",
+  "modelId": "Qwen2.5-1.5B-Instruct-GPTQ-Int8",
+  "provider": "AXCL C++",
+  "completed": true,
+  "binarySha256": "bb111fc00c54abb6142a8f44df087bf104c8150a1cefa6be55c6b174b932c4ec",
+  "postConfig": {
+    "enable_temperature": false,
+    "temperature": 0.9,
+    "enable_repetition_penalty": false,
+    "repetition_penalty": 1.2,
+    "penalty_window": 20,
+    "enable_top_p_sampling": false,
+    "top_p": 0.8,
+    "enable_top_k_sampling": true,
+    "top_k": 1
+  },
+  "revision": "a882598b8893f0baec13189cac7f62f57109c835",
+  "date": "2026-09-29",
+  "samples": [
+    {
+      "input": "What is 2 + 3? Reply with only the number.",
+      "output": "5",
+      "exitCode": 0,
+      "processSeconds": 46.00182637499529,
+      "nativeRateLines": [
+        "avg 5.74 token/s"
+      ],
+      "observation": "返回 5，与 2 + 3 的计算结果一致。"
+    },
+    {
+      "input": "请用一句中文说明 PCIe 的用途。",
+      "output": "PCIe（Peripheral Component Interconnect Express）是一种高速扩展总线标准，用于连接计算机的硬件组件，如图形卡、网络卡和存储设备，以提高数据传输速度和系统性能。",
+      "exitCode": 0,
+      "processSeconds": 53.14249008600018,
+      "nativeRateLines": [
+        "avg 5.45 token/s"
+      ],
+      "observation": "以一句中文说明 PCIe 用于连接计算机硬件组件，列举了图形卡、网络卡和存储设备。"
+    },
+    {
+      "input": "Return only a JSON object with apple equal to 3 and pear equal to 2.",
+      "output": "```json\n{\n  \"apple\": 3,\n  \"pear\": 2\n}\n```",
+      "exitCode": 0,
+      "processSeconds": 49.36290667900175,
+      "nativeRateLines": [
+        "avg 5.35 token/s"
+      ],
+      "observation": "返回的对象包含 apple=3、pear=2，但带有 Markdown 代码围栏，未满足仅输出 JSON 对象的格式要求。"
+    }
+  ],
+  "inferenceOptions": {
+    "use_mmap_load_embed": 0,
+    "live_print": 0,
+    "continue": 0
+  }
+}

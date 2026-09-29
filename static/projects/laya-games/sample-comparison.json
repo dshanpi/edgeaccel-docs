@@ -1,0 +1,161 @@
+{
+  "request": {
+    "state": {
+      "body": "发票4411重复扣款，请今天退还多扣的金额，否则我们会取消服务。"
+    },
+    "questions": {
+      "department": {
+        "type": "choice",
+        "instructions": "这条请求应由哪个团队处理？",
+        "criteria": {
+          "billing": "扣款、发票、账单与退款",
+          "technical": "故障、接口、登录与系统错误",
+          "sales": "价格、演示、合同与采购",
+          "other": "一般咨询或已解决问题"
+        }
+      },
+      "urgency": {
+        "type": "score",
+        "instructions": "这条请求有多紧急？",
+        "criteria": [
+          "常规事项，没有截止时间",
+          "需要尽快处理",
+          "服务中断或今天必须解决"
+        ]
+      },
+      "refund": {
+        "type": "noul",
+        "instructions": "用户是否明确要求退款？"
+      },
+      "churn": {
+        "type": "noul",
+        "instructions": "用户是否表示要取消或离开？"
+      }
+    }
+  },
+  "expected": {
+    "model": "laya-multilingual",
+    "answers": {
+      "department": {
+        "type": "choice",
+        "choice": "billing",
+        "probabilities": {
+          "billing": 0.9999998000625785,
+          "technical": 1.2528440871696968e-07,
+          "sales": 4.298654394105504e-08,
+          "other": 3.1666468929032305e-08
+        },
+        "confidence": 0.9999974990786216,
+        "action": {
+          "act_probability": 1.0
+        },
+        "npu_latency_ms": 27.818481
+      },
+      "urgency": {
+        "type": "score",
+        "probabilities": {
+          "0": 0.0020775276529841026,
+          "1": 0.05992485051108516,
+          "2": 0.9379976218359306
+        },
+        "legend": {
+          "0": "常规事项，没有截止时间",
+          "1": "需要尽快处理",
+          "2": "服务中断或今天必须解决"
+        },
+        "score": 1.9359200941829464,
+        "confidence": 0.7801412236801784,
+        "action": {
+          "act_probability": 1.0
+        },
+        "npu_latency_ms": 27.705619
+      },
+      "refund": {
+        "type": "noul",
+        "noul": 0.992535135841613,
+        "confidence": 0.992535135841613,
+        "action": {
+          "act_probability": 1.0
+        },
+        "npu_latency_ms": 27.690115
+      },
+      "churn": {
+        "type": "noul",
+        "noul": 0.9399503855216702,
+        "confidence": 0.9399503855216702,
+        "action": {
+          "act_probability": 1.0
+        },
+        "npu_latency_ms": 27.656606
+      }
+    },
+    "total_npu_latency_ms": 110.87082099999999
+  },
+  "response": {
+    "model": "laya-multilingual",
+    "engine": {
+      "provider": "AXCLRTExecutionProvider",
+      "device_id": 0
+    },
+    "answers": {
+      "department": {
+        "type": "choice",
+        "confidence": 1.0,
+        "action": {
+          "act_probability": 1.0
+        },
+        "npu_latency_ms": 41.006,
+        "choice": "billing",
+        "probabilities": {
+          "billing": 1.0,
+          "technical": 0.0,
+          "sales": 0.0,
+          "other": 0.0
+        }
+      },
+      "urgency": {
+        "type": "score",
+        "confidence": 0.7801,
+        "action": {
+          "act_probability": 1.0
+        },
+        "npu_latency_ms": 35.529,
+        "score": 1.9359,
+        "legend": {
+          "0": "常规事项，没有截止时间",
+          "1": "需要尽快处理",
+          "2": "服务中断或今天必须解决"
+        },
+        "probabilities": {
+          "0": 0.0021,
+          "1": 0.0599,
+          "2": 0.938
+        }
+      },
+      "refund": {
+        "type": "noul",
+        "confidence": 0.9925,
+        "action": {
+          "act_probability": 1.0
+        },
+        "npu_latency_ms": 35.275,
+        "noul": 0.9925
+      },
+      "churn": {
+        "type": "noul",
+        "confidence": 0.94,
+        "action": {
+          "act_probability": 1.0
+        },
+        "npu_latency_ms": 35.353,
+        "noul": 0.94
+      }
+    },
+    "usage": {
+      "input_tokens": 287,
+      "output_tokens": 0
+    },
+    "total_npu_latency_ms": 147.164
+  },
+  "maxAbsoluteDifference": 4.961447832974031e-05
+}

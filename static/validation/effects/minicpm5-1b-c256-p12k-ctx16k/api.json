@@ -1,0 +1,147 @@
+{
+  "kind": "text",
+  "task": "text",
+  "model": "AXERA-TECH/MiniCPM5-1B-AX650-C256-P12K-CTX16K",
+  "requests": [
+    {
+      "endpoint": "/v1/chat/completions",
+      "request": {
+        "model": "AXERA-TECH/MiniCPM5-1B-AX650-C256-P12K-CTX16K",
+        "messages": [
+          {
+            "role": "user",
+            "content": "What is 2 + 3? Answer with only the number."
+          }
+        ],
+        "max_tokens": 128,
+        "temperature": 0,
+        "enable_thinking": false,
+        "stream": false
+      },
+      "elapsedSeconds": 4.553945573000419,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "content": "7",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1790159806,
+        "id": "chatcmpl-3d61fe2f377830faecf125b7",
+        "model": "AXERA-TECH/MiniCPM5-1B-AX650-C256-P12K-CTX16K",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 1,
+          "prefill_tokens": 27,
+          "prefill_tps": 58.37269973754883,
+          "prompt_tokens": 27,
+          "total_tokens": 28,
+          "ttft_ms": 4293.5068359375
+        }
+      },
+      "checks": {
+        "nonemptyText": true,
+        "containsReplacementCharacter": false,
+        "finishReason": "stop"
+      }
+    },
+    {
+      "endpoint": "/v1/chat/completions",
+      "request": {
+        "model": "AXERA-TECH/MiniCPM5-1B-AX650-C256-P12K-CTX16K",
+        "messages": [
+          {
+            "role": "user",
+            "content": "请用一句话说明 PCIe 的用途。"
+          }
+        ],
+        "max_tokens": 128,
+        "temperature": 0,
+        "enable_thinking": false,
+        "stream": false
+      },
+      "elapsedSeconds": 11.12369298700014,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "content": "一句话说明 PCIe 的用途是：作为高带宽、低延迟的 PCIe 接口，用于实现高速数据传输与设备连接。",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1790159817,
+        "id": "chatcmpl-6f48b00ccee9caf43ee95599",
+        "model": "AXERA-TECH/MiniCPM5-1B-AX650-C256-P12K-CTX16K",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 27,
+          "decode_tps": 3.845365285873413,
+          "prefill_tokens": 22,
+          "prefill_tps": 46.78621292114258,
+          "prompt_tokens": 22,
+          "total_tokens": 49,
+          "ttft_ms": 4355.72607421875
+        }
+      },
+      "checks": {
+        "nonemptyText": true,
+        "containsReplacementCharacter": false,
+        "finishReason": "stop"
+      }
+    },
+    {
+      "endpoint": "/v1/chat/completions",
+      "request": {
+        "model": "AXERA-TECH/MiniCPM5-1B-AX650-C256-P12K-CTX16K",
+        "messages": [
+          {
+            "role": "user",
+            "content": "只输出 JSON：把苹果的数量 3 和梨的数量 2 写成一个对象，键名分别为 apple 和 pear。"
+          }
+        ],
+        "max_tokens": 128,
+        "temperature": 0,
+        "enable_thinking": false,
+        "stream": false
+      },
+      "elapsedSeconds": 9.371647138000299,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "content": "```json\n{\n  \"apple\": 3,\n  \"pear\": 2\n}\n```",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1790159827,
+        "id": "chatcmpl-8c96a24149c6ff03bd0bf753",
+        "model": "AXERA-TECH/MiniCPM5-1B-AX650-C256-P12K-CTX16K",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 20,
+          "decode_tps": 3.7705109119415283,
+          "prefill_tokens": 39,
+          "prefill_tps": 80.60198974609375,
+          "prompt_tokens": 39,
+          "total_tokens": 59,
+          "ttft_ms": 4324.6591796875
+        }
+      },
+      "checks": {
+        "nonemptyText": true,
+        "containsReplacementCharacter": false,
+        "finishReason": "stop"
+      }
+    }
+  ]
+}

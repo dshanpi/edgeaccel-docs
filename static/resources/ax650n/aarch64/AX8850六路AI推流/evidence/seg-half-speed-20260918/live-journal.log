@@ -1,0 +1,64 @@
+json file
+15:13:56.892 INF operator():132 | AXCL engine VNPU kind=0
+15:13:56.910 INF operator():132 | AXCL engine VNPU kind=0
+[2026-09-18T15:13:56.937] [INFO] [T:281473302507200] Added path: /pcd
+[2026-09-18T15:13:56.938] [INFO] [T:281473302507200] RTSP server started on 0.0.0.0:8554
+15:13:56.988 INF operator():132 | AXCL engine VNPU kind=0
+[2026-09-18T15:13:57.212] [INFO] [T:281473302507200] Added path: /vehicle
+{"event":"model","input":[1,640,640,3],"kind":"seg","outputs":[{"bytes":102400,"name":"output0","shape":[1,80,80,4]},{"bytes":2048000,"name":"output1","shape":[1,80,80,80]},{"bytes":819200,"name":"674","shape":[1,80,80,32]},{"bytes":25600,"name":"696","shape":[1,40,40,4]},{"bytes":512000,"name":"736","shape":[1,40,40,80]},{"bytes":204800,"name":"758","shape":[1,40,40,32]},{"bytes":6400,"name":"780","shape":[1,20,20,4]},{"bytes":128000,"name":"820","shape":[1,20,20,80]},{"bytes":51200,"name":"842","shape":[1,20,20,32]},{"bytes":3276800,"name":"935","shape":[1,32,160,160]}]}
+[2026-09-18T15:13:57.543] [INFO] [T:281473302507200] Added path: /seg
+15:13:57.572 INF operator():132 | AXCL engine VNPU kind=0
+[2026-09-18T15:13:57.662] [INFO] [T:281473302507200] Added path: /driving
+{"event":"model","input":[1,768,768,3],"kind":"depth","outputs":[{"bytes":2359296,"name":"depth","shape":[1,1,768,768]}]}
+[2026-09-18T15:13:57.868] [INFO] [T:281473302507200] Added path: /depth
+[2026-09-18T15:13:58.127] [INFO] [T:281473302507200] Added path: /count
+[2026-09-18T15:13:58.169] [INFO] [T:281473302507200] Added path: /overview
+pipeline demux: pkt=0 bytes=435554 pts=0 dur=83333 key=1
+pipeline demux: pkt=0 bytes=195392 pts=120000 dur=40000 key=1
+pipeline demux: pkt=0 bytes=159036 pts=66666 dur=33333 key=1
+pipeline demux: pkt=0 bytes=271399 pts=66733 dur=33366 key=1
+pipeline demux: pkt=0 bytes=268325 pts=0 dur=41708 key=1
+pipeline demux: pkt=0 bytes=282655 pts=0 dur=41666 key=1
+pipeline demux: pkt=1 bytes=31699 pts=200000 dur=33333 key=0
+pipeline demux: pkt=1 bytes=805 pts=200200 dur=33366 key=0
+pipeline demux: pkt=1 bytes=68400 pts=240000 dur=40000 key=0
+pipeline demux: pkt=1 bytes=6279 pts=41708 dur=41708 key=0
+[2026-09-18T15:13:58.230] [INFO] [T:281470798511808] Auto-updated H264 parameter sets for path: /depth
+[2026-09-18T15:13:58.231] [INFO] [T:281472844246720] Auto-updated H264 parameter sets for path: /pcd
+pipeline demux: pkt=1 bytes=32929 pts=41666 dur=41666 key=0
+[2026-09-18T15:13:58.244] [INFO] [T:281470652968640] Auto-updated H264 parameter sets for path: /count
+pipeline demux: pkt=2 bytes=6239 pts=133333 dur=33333 key=0
+pipeline demux: pkt=2 bytes=240 pts=133466 dur=33366 key=0
+pipeline demux: pkt=2 bytes=22014 pts=160000 dur=40000 key=0
+pipeline demux: pkt=1 bytes=39182 pts=83333 dur=83333 key=0
+pipeline demux: pkt=2 bytes=9049 pts=83416 dur=41708 key=0
+pipeline demux: pkt=2 bytes=55694 pts=83333 dur=41666 key=0
+pipeline demux: pkt=2 bytes=64122 pts=166666 dur=83333 key=0
+[2026-09-18T15:13:58.350] [INFO] [T:281471352827584] Auto-updated H264 parameter sets for path: /seg
+[2026-09-18T15:13:58.378] [INFO] [T:281471316958912] Auto-updated H264 parameter sets for path: /driving
+[2026-09-18T15:13:58.435] [INFO] [T:281471554154176] Auto-updated H264 parameter sets for path: /vehicle
+[2026-09-18T15:13:58.446] [INFO] [T:281470463504064] Auto-updated H264 parameter sets for path: /overview
+{"direction":"right_to_left","event":"crossing","id":26,"lr":0,"rl":1}
+{"channels":[{"decoded":121,"dropped":0,"encoded":120,"infer_fps":11.997443884578503,"inferred":120,"lr":0,"mux_errors":0,"name":"pcd","objects":2,"process_ms":19.108640000922605,"render_ms":5.308819003403187,"render_replaced":0,"rendered":121,"result_age":0.08135487698018551,"rl":0,"submit_errors":0},{"decoded":249,"dropped":0,"encoded":246,"infer_fps":9.597955107662804,"inferred":96,"lr":0,"mux_errors":0,"name":"vehicle","objects":6,"process_ms":89.16120798676275,"render_ms":5.971613980364054,"render_replaced":0,"rendered":248,"result_age":0.005912988999625668,"rl":0,"submit_errors":0},{"decoded":297,"dropped":0,"encoded":297,"infer_fps":5.69878584517479,"inferred":57,"lr":0,"mux_errors":0,"name":"seg","objects":6,"process_ms":191.70690298778936,"render_ms":6.434490991523489,"render_replaced":0,"rendered":297,"result_age":0.1329617680166848,"rl":0,"submit_errors":0},{"decoded":298,"dropped":0,"encoded":297,"infer_fps":9.697933806700958,"inferred":97,"lr":0,"mux_errors":0,"name":"driving","objects":4,"process_ms":95.32269899500534,"render_ms":4.212562984321266,"render_replaced":0,"rendered":298,"result_age":0.07452384202042595,"rl":0,"submit_errors":0},{"decoded":240,"dropped":0,"encoded":240,"infer_fps":10.397784699968037,"inferred":104,"lr":0,"mux_errors":0,"name":"depth","objects":0,"process_ms":82.53596600843593,"render_ms":7.536413992056623,"render_replaced":0,"rendered":240,"result_age":0.09040679899044335,"rl":0,"submit_errors":0},{"decoded":241,"dropped":0,"encoded":240,"infer_fps":9.797912505739111,"inferred":98,"lr":0,"mux_errors":0,"name":"count","objects":7,"process_ms":125.05110198981129,"render_ms":6.225657009053975,"render_replaced":0,"rendered":241,"result_age":0.05777292200946249,"rl":1,"submit_errors":0}],"elapsed":10.002130550012225,"event":"stats","overview_dropped":0,"overview_encoded":294,"overview_mux_errors":0}
+[2026-09-18T15:14:08.804] [INFO] [T:281466804235968] RTSP OPTIONS rtsp://127.0.0.1:8554/seg
+[2026-09-18T15:14:08.804] [INFO] [T:281466795781824] RTSP OPTIONS rtsp://127.0.0.1:8554/overview
+[2026-09-18T15:14:08.804] [INFO] [T:281466804235968] RTSP DESCRIBE rtsp://127.0.0.1:8554/seg
+[2026-09-18T15:14:08.805] [INFO] [T:281466795781824] RTSP DESCRIBE rtsp://127.0.0.1:8554/overview
+[2026-09-18T15:14:08.806] [INFO] [T:281466804235968] RTSP SETUP rtsp://127.0.0.1:8554/seg/stream
+[2026-09-18T15:14:08.807] [INFO] [T:281466795781824] RTSP SETUP rtsp://127.0.0.1:8554/overview/stream
+[2026-09-18T15:14:08.808] [INFO] [T:281466804235968] RTSP PLAY rtsp://127.0.0.1:8554/seg/
+[2026-09-18T15:14:08.809] [INFO] [T:281466795781824] RTSP PLAY rtsp://127.0.0.1:8554/overview/
+{"event":"count_loop_reset","loop":1}
+[2026-09-18T15:14:12.632] [INFO] [T:281466804235968] RTSP TEARDOWN rtsp://127.0.0.1:8554/seg/
+[2026-09-18T15:14:12.633] [WARNING] [T:281466804235968] RTSP response send timeout/failed, closing connection
+[2026-09-18T15:14:12.916] [INFO] [T:281466804235968] RTSP OPTIONS rtsp://127.0.0.1:8554/overview
+[2026-09-18T15:14:12.918] [INFO] [T:281466804235968] RTSP DESCRIBE rtsp://127.0.0.1:8554/overview
+[2026-09-18T15:14:12.919] [INFO] [T:281466804235968] RTSP SETUP rtsp://127.0.0.1:8554/overview/stream
+[2026-09-18T15:14:12.920] [INFO] [T:281466804235968] RTSP PLAY rtsp://127.0.0.1:8554/overview/
+{"direction":"right_to_left","event":"crossing","id":63,"lr":0,"rl":2}
+[2026-09-18T15:14:16.415] [INFO] [T:281466804235968] RTSP TEARDOWN rtsp://127.0.0.1:8554/overview/
+[2026-09-18T15:14:16.418] [WARNING] [T:281466804235968] RTSP response send timeout/failed, closing connection
+{"channels":[{"decoded":241,"dropped":0,"encoded":240,"infer_fps":11.997682689582735,"inferred":240,"lr":0,"mux_errors":0,"name":"pcd","objects":1,"process_ms":49.85063200001605,"render_ms":8.635002974187955,"render_replaced":0,"rendered":241,"result_age":0.04806195601122454,"rl":0,"submit_errors":0},{"decoded":499,"dropped":0,"encoded":495,"infer_fps":9.498165462586332,"inferred":191,"lr":0,"mux_errors":0,"name":"vehicle","objects":3,"process_ms":97.39021002314985,"render_ms":5.057234986452386,"render_replaced":0,"rendered":497,"result_age":0.0398129959939979,"rl":0,"submit_errors":0},{"decoded":597,"dropped":0,"encoded":597,"infer_fps":5.698899277551798,"inferred":114,"lr":0,"mux_errors":0,"name":"seg","objects":6,"process_ms":192.65090799308382,"render_ms":7.0672449946869165,"render_replaced":0,"rendered":597,"result_age":0.1541419599961955,"rl":0,"submit_errors":0},{"decoded":598,"dropped":0,"encoded":596,"infer_fps":9.398184773506475,"inferred":191,"lr":0,"mux_errors":0,"name":"driving","objects":1,"process_ms":90.62129899393767,"render_ms":4.332730983151123,"render_replaced":0,"rendered":596,"result_age":0.021212149993516505,"rl":0,"submit_errors":0},{"decoded":480,"dropped":0,"encoded":480,"infer_fps":9.498165462586332,"inferred":199,"lr":0,"mux_errors":0,"name":"depth","objects":0,"process_ms":114.31846302002668,"render_ms":8.654378005303442,"render_replaced":0,"rendered":480,"result_age":0.07359125398215838,"rl":0,"submit_errors":0},{"decoded":482,"dropped":0,"encoded":481,"infer_fps":9.398184773506475,"inferred":192,"lr":0,"mux_errors":0,"name":"count","objects":7,"process_ms":100.90160198160447,"render_ms":4.379396996228024,"render_replaced":0,"rendered":482,"result_age":0.02630876100738533,"rl":2,"submit_errors":0}],"elapsed":20.004062015010277,"event":"stats","overview_dropped":0,"overview_encoded":594,"overview_mux_errors":0}
+{"event":"count_loop_reset","loop":2}
+{"direction":"right_to_left","event":"crossing","id":89,"lr":0,"rl":3}
+{"channels":[{"decoded":361,"dropped":0,"encoded":361,"infer_fps":12.062092120524387,"inferred":361,"lr":0,"mux_errors":0,"name":"pcd","objects":2,"process_ms":39.67399601242505,"render_ms":8.18391700158827,"render_replaced":0,"rendered":361,"result_age":0.008785045007243752,"rl":0,"submit_errors":0},{"decoded":750,"dropped":0,"encoded":746,"infer_fps":9.968671173987095,"inferred":291,"lr":0,"mux_errors":0,"name":"vehicle","objects":1,"process_ms":103.51174097741023,"render_ms":4.746441001771018,"render_replaced":0,"rendered":747,"result_age":0.04703103401698172,"rl":0,"submit_errors":0},{"decoded":899,"dropped":0,"encoded":896,"infer_fps":6.1805761278719995,"inferred":176,"lr":0,"mux_errors":0,"name":"seg","objects":3,"process_ms":177.65041399979964,"render_ms":6.493284017778933,"render_replaced":0,"rendered":898,"result_age":0.05267597900819965,"rl":0,"submit_errors":0},{"decoded":898,"dropped":0,"encoded":897,"infer_fps":9.868984462247225,"inferred":290,"lr":0,"mux_errors":0,"name":"driving","objects":1,"process_ms":111.9680350238923,"render_ms":6.542992021422833,"render_replaced":0,"rendered":898,"result_age":0.013783653994323686,"rl":0,"submit_errors":0},{"decoded":721,"dropped":0,"encoded":720,"infer_fps":10.566791444426322,"inferred":305,"lr":0,"mux_errors":0,"name":"depth","objects":0,"process_ms":81.40866900794208,"render_ms":12.237104994710535,"render_replaced":0,"rendered":720,"result_age":0.07669472799170762,"rl":0,"submit_errors":0},{"decoded":723,"dropped":0,"encoded":723,"infer_fps":9.669611038767483,"inferred":289,"lr":0,"mux_errors":0,"name":"count","objects":6,"process_ms":90.42296599363908,"render_ms":6.326865986920893,"render_replaced":0,"rendered":723,"result_age":0.017150670988485217,"rl":3,"submit_errors":0}],"elapsed":30.035489299014444,"event":"stats","overview_dropped":0,"overview_encoded":894,"overview_mux_errors":0}

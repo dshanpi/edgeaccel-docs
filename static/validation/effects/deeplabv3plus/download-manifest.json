@@ -1,0 +1,77 @@
+{
+  "repo": "AXERA-TECH/DeepLabv3Plus",
+  "revision": "6d29643d003d7e7d22f7c28a177980f292ec5fca",
+  "complete": true,
+  "files": [
+    {
+      "path": "infer.py",
+      "size": 1212,
+      "sha256": null,
+      "gitBlob": "60d4f56df3be277c20a3fa2fb76abf525c7753a8",
+      "verifiedHashes": {
+        "sha256": "0750d73ae41aacee4859127416c2a8a60241847298a83d939b811cdaca07ba1a",
+        "gitBlob": "60d4f56df3be277c20a3fa2fb76abf525c7753a8"
+      }
+    },
+    {
+      "path": "models-ax650/deeplabv3plus_mobilenet_u16.axmodel",
+      "size": 10083639,
+      "sha256": "5c3e0e24f96ee032f211d3f909c049316678035128dfe16dce5374019a73069a",
+      "gitBlob": "b4894f33693fe973878a31aa771e919df1d373bf",
+      "verifiedHashes": {
+        "sha256": "5c3e0e24f96ee032f211d3f909c049316678035128dfe16dce5374019a73069a",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "samples/1_image.png",
+      "size": 138714,
+      "sha256": "7fd691ea077d004934b52854d6882b5d5620b2bd839a086199cc26a4194d099e",
+      "gitBlob": "605421ac9feadf50ba0d4e323344eff366dc0d55",
+      "verifiedHashes": {
+        "sha256": "7fd691ea077d004934b52854d6882b5d5620b2bd839a086199cc26a4194d099e",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "datasets/__init__.py",
+      "size": 67,
+      "sha256": null,
+      "gitBlob": "a693df696a6b42b33ae0879f4b995fd8ed54427e",
+      "verifiedHashes": {
+        "sha256": "add6d159becfeee8f181971df397dc87f9cf5d8809e28d4addce249b7d332b2c",
+        "gitBlob": "a693df696a6b42b33ae0879f4b995fd8ed54427e"
+      }
+    },
+    {
+      "path": "datasets/cityscapes.py",
+      "size": 8370,
+      "sha256": null,
+      "gitBlob": "f51ee58f0d00ae8471e3885d0d2bb49d98bd2f40",
+      "verifiedHashes": {
+        "sha256": "32351ce3ca5eddc46e634527d1433aa1defebb698f10697662f8821ea5b731a6",
+        "gitBlob": "f51ee58f0d00ae8471e3885d0d2bb49d98bd2f40"
+      }
+    },
+    {
+      "path": "datasets/utils.py",
+      "size": 3804,
+      "sha256": null,
+      "gitBlob": "6d41011ecbe641a5ccbc703a9761352c7c034096",
+      "verifiedHashes": {
+        "sha256": "bbb5b8f1e48c8a909cfd4b7c9cc7ac0a9165d88d5de4de663b2f2320e1c264ad",
+        "gitBlob": "6d41011ecbe641a5ccbc703a9761352c7c034096"
+      }
+    },
+    {
+      "path": "datasets/voc.py",
+      "size": 6061,
+      "sha256": null,
+      "gitBlob": "2a971bd46009b38c6bf20a275b51cc817c1254ca",
+      "verifiedHashes": {
+        "sha256": "bcff94b558068f0d2860611a3b52a0593f619306564c9e767e51f07c6f02e836",
+        "gitBlob": "2a971bd46009b38c6bf20a275b51cc817c1254ca"
+      }
+    }
+  ]
+}

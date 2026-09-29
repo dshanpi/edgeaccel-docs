@@ -1,0 +1,8 @@
+* text=auto
+*.sh text eol=lf
+*.py text eol=lf
+*.yml text eol=lf
+
+# Preserve the exact bytes of original attachments and verified evidence.
+/static/resources/** -text
+/static/validation/** -text

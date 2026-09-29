@@ -1,0 +1,58 @@
+[
+  {
+    "stream": "pcd",
+    "decode_rc": 0,
+    "snapshot_rc": 0,
+    "seconds": 5.234599828720093,
+    "frames_decoded": 30,
+    "decoder_errors": false
+  },
+  {
+    "stream": "vehicle",
+    "decode_rc": 0,
+    "snapshot_rc": 0,
+    "seconds": 3.8711719512939453,
+    "frames_decoded": 30,
+    "decoder_errors": false
+  },
+  {
+    "stream": "seg",
+    "decode_rc": 0,
+    "snapshot_rc": 0,
+    "seconds": 3.874556303024292,
+    "frames_decoded": 30,
+    "decoder_errors": false
+  },
+  {
+    "stream": "driving",
+    "decode_rc": 0,
+    "snapshot_rc": 0,
+    "seconds": 4.322763204574585,
+    "frames_decoded": 30,
+    "decoder_errors": false
+  },
+  {
+    "stream": "depth",
+    "decode_rc": 0,
+    "snapshot_rc": 0,
+    "seconds": 3.986119031906128,
+    "frames_decoded": 30,
+    "decoder_errors": false
+  },
+  {
+    "stream": "count",
+    "decode_rc": 0,
+    "snapshot_rc": 0,
+    "seconds": 4.043366193771362,
+    "frames_decoded": 30,
+    "decoder_errors": false
+  },
+  {
+    "stream": "overview",
+    "decode_rc": 0,
+    "snapshot_rc": 0,
+    "seconds": 4.002263307571411,
+    "frames_decoded": 30,
+    "decoder_errors": false
+  }
+]

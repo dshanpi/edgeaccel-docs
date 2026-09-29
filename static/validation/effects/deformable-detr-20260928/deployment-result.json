@@ -1,0 +1,270 @@
+{
+  "modelId": "Deformable-Detr",
+  "revision": "4c8ecf91689ce36126281c575b1087ba9d04bcc7",
+  "date": "2026-09-28",
+  "variants": [
+    {
+      "label": "官方公交车图片",
+      "observation": "阈值 0.6，保留 1 个公交车框和 3 个行人框。框对应画面中的公交车及三名主要可见行人；左侧仅露出部分身体的人未检出。同一输入三次原始输出逐项一致。",
+      "previews": [
+        {
+          "caption": "官方公交车输入图片",
+          "path": "/validation/effects/deformable-detr-20260928/input.png"
+        },
+        {
+          "caption": "本次 AXCL 检测结果",
+          "path": "/validation/effects/deformable-detr-20260928/output-1.png"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "类别",
+            "候选框数"
+          ],
+          "rows": [
+            [
+              "person",
+              "3"
+            ],
+            [
+              "bus",
+              "1"
+            ]
+          ]
+        }
+      ],
+      "audio": [],
+      "record": {
+        "modelId": "Deformable-Detr",
+        "provider": "AXCLRTExecutionProvider",
+        "loadSeconds": 1.5043151099816896,
+        "threshold": 0.6,
+        "completed": true,
+        "input": {
+          "name": "input",
+          "shape": [
+            1,
+            608,
+            608,
+            3
+          ],
+          "dtype": "float32"
+        },
+        "inputImageSha256": "33b198a1d2839bb9ac4c65d61f9e852196793cae9a0781360859425f6022b69c",
+        "normalizationEnabled": false,
+        "results": [
+          {
+            "inferenceMilliseconds": 139.59591899765655,
+            "allFinite": true,
+            "rawEqualPrevious": null,
+            "detections": [
+              {
+                "label": "person",
+                "classId": 0,
+                "score": 0.8906385898590088,
+                "box": [
+                  47.9560546875,
+                  394.0306701660156,
+                  244.70773315429688,
+                  913.09326171875
+                ]
+              },
+              {
+                "label": "person",
+                "classId": 0,
+                "score": 0.8906385898590088,
+                "box": [
+                  220.72970581054688,
+                  400.391845703125,
+                  344.6903381347656,
+                  866.6532592773438
+                ]
+              },
+              {
+                "label": "person",
+                "classId": 0,
+                "score": 0.8720836043357849,
+                "box": [
+                  670.099365234375,
+                  378.2595520019531,
+                  810.0,
+                  892.1968383789062
+                ]
+              },
+              {
+                "label": "bus",
+                "classId": 5,
+                "score": 0.8164187073707581,
+                "box": [
+                  18.22659683227539,
+                  227.18975830078125,
+                  808.4962768554688,
+                  724.0210571289062
+                ]
+              }
+            ],
+            "outputShapes": [
+              [
+                1,
+                100,
+                5
+              ],
+              [
+                1,
+                100
+              ]
+            ]
+          },
+          {
+            "inferenceMilliseconds": 134.45730798412114,
+            "allFinite": true,
+            "rawEqualPrevious": true,
+            "detections": [
+              {
+                "label": "person",
+                "classId": 0,
+                "score": 0.8906385898590088,
+                "box": [
+                  47.9560546875,
+                  394.0306701660156,
+                  244.70773315429688,
+                  913.09326171875
+                ]
+              },
+              {
+                "label": "person",
+                "classId": 0,
+                "score": 0.8906385898590088,
+                "box": [
+                  220.72970581054688,
+                  400.391845703125,
+                  344.6903381347656,
+                  866.6532592773438
+                ]
+              },
+              {
+                "label": "person",
+                "classId": 0,
+                "score": 0.8720836043357849,
+                "box": [
+                  670.099365234375,
+                  378.2595520019531,
+                  810.0,
+                  892.1968383789062
+                ]
+              },
+              {
+                "label": "bus",
+                "classId": 5,
+                "score": 0.8164187073707581,
+                "box": [
+                  18.22659683227539,
+                  227.18975830078125,
+                  808.4962768554688,
+                  724.0210571289062
+                ]
+              }
+            ],
+            "outputShapes": [
+              [
+                1,
+                100,
+                5
+              ],
+              [
+                1,
+                100
+              ]
+            ]
+          },
+          {
+            "inferenceMilliseconds": 134.61160100996494,
+            "allFinite": true,
+            "rawEqualPrevious": true,
+            "detections": [
+              {
+                "label": "person",
+                "classId": 0,
+                "score": 0.8906385898590088,
+                "box": [
+                  47.9560546875,
+                  394.0306701660156,
+                  244.70773315429688,
+                  913.09326171875
+                ]
+              },
+              {
+                "label": "person",
+                "classId": 0,
+                "score": 0.8906385898590088,
+                "box": [
+                  220.72970581054688,
+                  400.391845703125,
+                  344.6903381347656,
+                  866.6532592773438
+                ]
+              },
+              {
+                "label": "person",
+                "classId": 0,
+                "score": 0.8720836043357849,
+                "box": [
+                  670.099365234375,
+                  378.2595520019531,
+                  810.0,
+                  892.1968383789062
+                ]
+              },
+              {
+                "label": "bus",
+                "classId": 5,
+                "score": 0.8164187073707581,
+                "box": [
+                  18.22659683227539,
+                  227.18975830078125,
+                  808.4962768554688,
+                  724.0210571289062
+                ]
+              }
+            ],
+            "outputShapes": [
+              [
+                1,
+                100,
+                5
+              ],
+              [
+                1,
+                100
+              ]
+            ]
+          }
+        ],
+        "sessions": [
+          {
+            "model": "output/detr.axmodel",
+            "inputs": [
+              {
+                "name": "input",
+                "shape": [
+                  1,
+                  608,
+                  608,
+                  3
+                ],
+                "dtype": "float32"
+              }
+            ],
+            "runMilliseconds": [
+              139.59591899765655,
+              134.45730798412114,
+              134.61160100996494
+            ],
+            "allFinite": true
+          }
+        ]
+      }
+    }
+  ]
+}

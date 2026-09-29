@@ -1,0 +1,184 @@
+{
+  "kind": "vision",
+  "requests": [
+    {
+      "endpoint": "/v1/chat/completions",
+      "request": {
+        "model": "AXERA-TECH/FastVLM-1.5B-GPTQ-Int4",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "Describe the image in one sentence."
+              },
+              {
+                "type": "image_url",
+                "image_url": {
+                  "url": "[base64 image; SHA256 in image field]"
+                }
+              }
+            ]
+          }
+        ],
+        "max_tokens": 128,
+        "temperature": 0,
+        "stream": false
+      },
+      "elapsedSeconds": 5.120344589000069,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "content": "Three astronauts in white spacesuits are standing in a forest.",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1790130531,
+        "id": "chatcmpl-1a37e51101770550d30d2825",
+        "model": "AXERA-TECH/FastVLM-1.5B-GPTQ-Int4",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 12,
+          "decode_tps": 3.3606503009796143,
+          "prefill_tokens": 273,
+          "prefill_tps": 225.3164825439453,
+          "prompt_tokens": 273,
+          "total_tokens": 285,
+          "ttft_ms": 1812.364990234375
+        }
+      },
+      "checks": {
+        "nonemptyText": true,
+        "containsReplacementCharacter": false,
+        "finishReason": "stop",
+        "semanticReviewRequired": true
+      }
+    },
+    {
+      "endpoint": "/v1/chat/completions",
+      "request": {
+        "model": "AXERA-TECH/FastVLM-1.5B-GPTQ-Int4",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "How many people are in the image?"
+              },
+              {
+                "type": "image_url",
+                "image_url": {
+                  "url": "[base64 image; SHA256 in image field]"
+                }
+              }
+            ]
+          }
+        ],
+        "max_tokens": 128,
+        "temperature": 0,
+        "stream": false
+      },
+      "elapsedSeconds": 23.473443077999946,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "content": "The image depicts three astronauts in a forest setting. The image is in black and white, giving it a surreal and otherworldly appearance. The astronauts are wearing full space suits with helmets, and they appear to be floating or standing on the ground, which is unusual for an outdoor setting. The background shows a dense forest with tall trees and some undergrowth. The overall scene creates a striking contrast between the futuristic space suits and the natural environment of the forest.",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1790130555,
+        "id": "chatcmpl-0b14fd21f78c2fc89125ea9d",
+        "model": "AXERA-TECH/FastVLM-1.5B-GPTQ-Int4",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 92,
+          "decode_tps": 4.253044605255127,
+          "prefill_tokens": 274,
+          "prefill_tps": 210.16026306152344,
+          "prompt_tokens": 274,
+          "total_tokens": 366,
+          "ttft_ms": 2017.8360595703125
+        }
+      },
+      "checks": {
+        "nonemptyText": true,
+        "containsReplacementCharacter": false,
+        "finishReason": "stop",
+        "semanticReviewRequired": true
+      }
+    },
+    {
+      "endpoint": "/v1/chat/completions",
+      "request": {
+        "model": "AXERA-TECH/FastVLM-1.5B-GPTQ-Int4",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "Describe the image in one sentence."
+              },
+              {
+                "type": "image_url",
+                "image_url": {
+                  "url": "[base64 image; SHA256 in image field]"
+                }
+              }
+            ]
+          }
+        ],
+        "max_tokens": 128,
+        "temperature": 0,
+        "stream": false
+      },
+      "elapsedSeconds": 4.205944875000114,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "content": "Three astronauts in white spacesuits are standing in a forest.",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1790130559,
+        "id": "chatcmpl-472376c449b630f59e9ab451",
+        "model": "AXERA-TECH/FastVLM-1.5B-GPTQ-Int4",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 12,
+          "decode_tps": 4.745154857635498,
+          "prefill_tokens": 273,
+          "prefill_tps": 259.7602844238281,
+          "prompt_tokens": 273,
+          "total_tokens": 285,
+          "ttft_ms": 1782.9000244140625
+        }
+      },
+      "checks": {
+        "nonemptyText": true,
+        "containsReplacementCharacter": false,
+        "finishReason": "stop",
+        "semanticReviewRequired": true
+      }
+    }
+  ],
+  "model": "AXERA-TECH/FastVLM-1.5B-GPTQ-Int4",
+  "image": {
+    "sha256": "622ae2d01ff4467fa69a7888728d776650117a0f4887e96ba0fb9a8a6d77b3c3",
+    "bytes": 355241
+  }
+}

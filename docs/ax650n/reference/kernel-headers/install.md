@@ -1,0 +1,62 @@
+---
+title: "RK3576 内核头安装说明"
+sidebar_label: "RK3576 内核头安装说明"
+slug: /ax650n/reference/kernel-headers/install
+---
+
+> **指定内核版本资料**：仅适用于正文注明的系统与内核。安装前必须核对 `uname -r`，不能用于替换其他内核的 headers。当前安装入口见[ARM64 快速上手](/docs/ax650n/quick-start/arm64)。
+
+# AX8850 主机 headers 修正版
+
+适用于本次验证的 **DShanPi-A1（RK3576）、Ubuntu 24.04、aarch64、6.1.115-vendor-rk35xx** 系统。安装前会核对内核镜像和运行配置；仅版本号相同的其他系统不一定适用。
+
+## 1 复制文件
+
+将本文件夹整体复制到开发板，例如：
+
+```text
+/home/baiwen/AX8850-RK3576-Headers-20260916
+```
+
+## 2 安装并检查
+
+```sh
+cd ~/AX8850-RK3576-Headers-20260916
+bash install-headers.sh
+```
+
+输入 sudo 密码，确认 apt 安装。脚本会校验文件、检查内核、安装 headers 与 pahole，最后检查配置。若系统缺少其他依赖，apt 需要联网下载。
+
+**成功标志：** 最后出现 `Headers installation and checks passed`，前面的配置检查均为 `PASS`。
+
+以后可单独检查：
+
+```sh
+ax8850-headers-check
+```
+
+出现 `FAIL` 时先保留输出，不要跳过检查或强制安装。
+
+## 3 后续使用
+
+- **当前已能运行 axcl-smi 的开发板：** 安装到这里即可。现有正常驱动继续使用，无需为了修复 headers 再装一次 AXCL。
+- **重新刷机后的同版本系统：** 先安装本包，再按快速上手文档安装 AXCL，部署与卡容量匹配的 PAC，重启后检查：
+
+```sh
+sudo /usr/bin/axcl/axcl-smi
+```
+
+重新安装或升级 AXCL 后，需要核对配套 PAC。本包只修复主机的驱动编译环境，不包含驱动、PAC 或 AXP，也不改变 DDR 配置。
+
+## 包内文件
+
+| 文件 | 用途 |
+|---|---|
+| `linux-headers-vendor-rk35xx_25.11.0-trunk+ax8850.1_arm64.deb` | 本地制作的匹配 headers 修正版 |
+| `pahole_1.25-0ubuntu3_arm64.deb` | Ubuntu 24.04 官方仓库依赖包 |
+| `install-headers.sh` | 安装与检查入口 |
+| `ax8850-headers-check` | 安装前核对目标系统 |
+| `SHA256SUMS` | 安装文件校验值 |
+| `验证记录/` | 修复说明、编译验证结果与日志 |
+
+本修正版已通过隔离编译和模块结构检查，尚未在当前系统实际安装，也未加载新编译的驱动。它不是适用于所有 RK35xx 系统的通用 headers 包；更换系统镜像或内核后需重新匹配。

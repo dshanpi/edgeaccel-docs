@@ -1,0 +1,88 @@
+{
+  "kind": "legacy-vlm",
+  "modelId": "InternVL3-1B",
+  "provider": "AXCL C++",
+  "completed": true,
+  "binarySha256": "f53f1f5fb09eabe9709a267bce179cd6ba3a3a23af947d71aca4b1f99b4658a5",
+  "postConfig": {
+    "enable_temperature": false,
+    "temperature": 0.9,
+    "enable_repetition_penalty": false,
+    "repetition_penalty": 1.2,
+    "penalty_window": 20,
+    "enable_top_p_sampling": false,
+    "top_p": 0.8,
+    "enable_top_k_sampling": true,
+    "top_k": 1
+  },
+  "revision": "797dd3d7676d1900815a53906c72015e172bbad1",
+  "date": "2026-09-28",
+  "samples": [
+    {
+      "input": "Describe the image in one sentence.",
+      "output": ": A woman stands in front of a red double-decker bus on a city street, with a black car nearby.",
+      "exitCode": 0,
+      "processSeconds": 27.504624568973668,
+      "observation": "人物、红色双层公交车、旁边的深色车辆及主要相对位置与画面相符；回复开头额外输出了冒号。",
+      "imageFile": "ssd_car.jpg",
+      "imagePath": "/validation/effects/internvl3-1b-20260928/ssd_car.jpg",
+      "imageSha256": "92d459a39a9eef03956257cf9fec84114d9e5df8fb9c0662fb257488cdd4f365",
+      "nativeImageEncodeMs": 401.96,
+      "nativeTtftMs": 1253.91,
+      "nativeTtftScope": "Native program TTFT; excludes model loading and is not client end-to-end first-visible-text latency."
+    },
+    {
+      "input": "What color is the bus? Answer with only the color.",
+      "output": "The color of the bus is red.",
+      "exitCode": 0,
+      "processSeconds": 25.274000864999834,
+      "observation": "颜色 red 与图片一致，但返回了完整英文句子，没有满足“只返回颜色”的要求。",
+      "imageFile": "ssd_car.jpg",
+      "imagePath": "/validation/effects/internvl3-1b-20260928/ssd_car.jpg",
+      "imageSha256": "92d459a39a9eef03956257cf9fec84114d9e5df8fb9c0662fb257488cdd4f365",
+      "nativeImageEncodeMs": 458.92,
+      "nativeTtftMs": 1109.22,
+      "nativeTtftScope": "Native program TTFT; excludes model loading and is not client end-to-end first-visible-text latency."
+    },
+    {
+      "input": "What words are written in the large white advertisement on the bus? Transcribe only the visible text.",
+      "output": "The words written in the large white advertisement on the bus are: \"THINGS GET MORE EXCITING WHEN YOU SAY YES.\"",
+      "exitCode": 0,
+      "processSeconds": 28.3907786179916,
+      "observation": "读出了广告主要单词 THINGS GET MORE EXCITING WHEN YOU SAY YES；仍附带解释，并没有忠实保留原图的引号等排版，不能视为逐字符 OCR 通过。",
+      "imageFile": "ssd_car.jpg",
+      "imagePath": "/validation/effects/internvl3-1b-20260928/ssd_car.jpg",
+      "imageSha256": "92d459a39a9eef03956257cf9fec84114d9e5df8fb9c0662fb257488cdd4f365",
+      "nativeImageEncodeMs": 396.39,
+      "nativeTtftMs": 1319.19,
+      "nativeTtftScope": "Native program TTFT; excludes model loading and is not client end-to-end first-visible-text latency."
+    },
+    {
+      "input": "请用一句中文描述图片中的车辆。",
+      "output": "图片中的车辆是一辆红色的双层巴士，车身广告上写着“THINGS GET MORE EXCITING WHEN YOU SAY YES”，旁边还有Virgin Money的标志。在巴士前面，有一位女性站在街道上，她穿着黑色外套，面带微笑。背景中可以看到一些商店和建筑物。",
+      "exitCode": 0,
+      "processSeconds": 32.27297422400443,
+      "observation": "红色双层巴士、广告、人物和建筑等主要内容与画面相符；回复扩展成三句话，没有满足“一句中文”的要求。",
+      "imageFile": "ssd_car.jpg",
+      "imagePath": "/validation/effects/internvl3-1b-20260928/ssd_car.jpg",
+      "imageSha256": "92d459a39a9eef03956257cf9fec84114d9e5df8fb9c0662fb257488cdd4f365",
+      "nativeImageEncodeMs": 397.0,
+      "nativeTtftMs": 1194.04,
+      "nativeTtftScope": "Native program TTFT; excludes model loading and is not client end-to-end first-visible-text latency."
+    }
+  ],
+  "runtimeSource": {
+    "repo": "https://github.com/AXERA-TECH/ax-llm",
+    "revision": "72ada011e58fc0015578e6b9b5fd6b4674e26429",
+    "binarySha256": "f53f1f5fb09eabe9709a267bce179cd6ba3a3a23af947d71aca4b1f99b4658a5",
+    "sourceArchiveSha256": "b32bbaf650cc8b29ba7831feb41a0fce131956d40adc22844b36cddfc47b3d4f",
+    "build": {
+      "type": "Release",
+      "target": "main",
+      "jobs": 1
+    }
+  },
+  "inferenceOptions": {
+    "live_print": "0"
+  }
+}

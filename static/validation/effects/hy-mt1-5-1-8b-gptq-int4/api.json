@@ -1,0 +1,148 @@
+{
+  "kind": "text",
+  "task": "translation",
+  "requests": [
+    {
+      "endpoint": "/v1/chat/completions",
+      "request": {
+        "model": "AXERA-TECH/HY-MT1.5-1.8B_GPTQ_INT4",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Translate the following segment into English, without additional explanation.\n\n算力卡通过 PCIe 连接主机。"
+          }
+        ],
+        "max_tokens": 128,
+        "temperature": 0,
+        "enable_thinking": false,
+        "stream": false
+      },
+      "elapsedSeconds": 5.169638717001362,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "content": "The computing power is connected to the host through PCIe interfaces.",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1790142027,
+        "id": "chatcmpl-110122d3096074218fb0d796",
+        "model": "AXERA-TECH/HY-MT1.5-1.8B_GPTQ_INT4",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 13,
+          "decode_tps": 3.3003392219543457,
+          "prefill_tokens": 23,
+          "prefill_tps": 49.93259048461914,
+          "prompt_tokens": 23,
+          "total_tokens": 36,
+          "ttft_ms": 1527.2039794921875
+        }
+      },
+      "checks": {
+        "nonemptyText": true,
+        "containsReplacementCharacter": false,
+        "finishReason": "stop"
+      }
+    },
+    {
+      "endpoint": "/v1/chat/completions",
+      "request": {
+        "model": "AXERA-TECH/HY-MT1.5-1.8B_GPTQ_INT4",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Translate the following segment into Chinese, without additional explanation.\n\nPlease keep the model files in the same directory."
+          }
+        ],
+        "max_tokens": 128,
+        "temperature": 0,
+        "enable_thinking": false,
+        "stream": false
+      },
+      "elapsedSeconds": 4.295810609999535,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "content": "请将这些模型文件保存在一个相同的目录下。",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1790142032,
+        "id": "chatcmpl-508bbaa01e7ca17212b6577e",
+        "model": "AXERA-TECH/HY-MT1.5-1.8B_GPTQ_INT4",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 9,
+          "decode_tps": 2.8103950023651123,
+          "prefill_tokens": 24,
+          "prefill_tps": 53.84413528442383,
+          "prompt_tokens": 24,
+          "total_tokens": 33,
+          "ttft_ms": 1443.26904296875
+        }
+      },
+      "checks": {
+        "nonemptyText": true,
+        "containsReplacementCharacter": false,
+        "finishReason": "stop"
+      }
+    },
+    {
+      "endpoint": "/v1/chat/completions",
+      "request": {
+        "model": "AXERA-TECH/HY-MT1.5-1.8B_GPTQ_INT4",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Translate the following segment into English, without additional explanation.\n\n设备温度为 42 摄氏度，剩余内存为 6 GB。"
+          }
+        ],
+        "max_tokens": 128,
+        "temperature": 0,
+        "enable_thinking": false,
+        "stream": false
+      },
+      "elapsedSeconds": 5.896142956999029,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "content": "The temperature of the device is 42 degrees Celsius. The remaining memory is 6 GB.",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1790142038,
+        "id": "chatcmpl-7a7133c9bb9438283666a5bb",
+        "model": "AXERA-TECH/HY-MT1.5-1.8B_GPTQ_INT4",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 19,
+          "decode_tps": 4.041654109954834,
+          "prefill_tokens": 28,
+          "prefill_tps": 64.72103118896484,
+          "prompt_tokens": 28,
+          "total_tokens": 47,
+          "ttft_ms": 1436.489990234375
+        }
+      },
+      "checks": {
+        "nonemptyText": true,
+        "containsReplacementCharacter": false,
+        "finishReason": "stop"
+      }
+    }
+  ],
+  "model": "AXERA-TECH/HY-MT1.5-1.8B_GPTQ_INT4"
+}

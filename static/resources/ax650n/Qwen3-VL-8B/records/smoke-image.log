@@ -1,0 +1,74 @@
+Mode: image | AX8850 device: 0 | Native tokenizer
+Enter a question, then an image path (blank for text-only) or a JPEG frame directory in video mode.
+Enter q at the question prompt to exit.
+[1;30;32m[I][                            Init][ 162]: LLM init start[0m
+tokenizer_type = 1
+[1;30;33m  2% | █                                 |   1 /  39 [0.41s<15.80s, 2.47 count/s] [1;30;32mtokenizer init ok[0m[1;30;32m[I][                            Init][  45]: LLaMaEmbedSelector use mmap[0m
+[1;30;33m  5% | ██                                |   2 /  39 [0.41s<7.92s, 4.93 count/s] [1;30;32membed_selector init ok[0m
+[1;30;32m[I][                             run][  30]: AXCLWorker start with devid 0[0m
+[1;30;33m  7% | ███                               |   3 /  39 [4.65s<60.40s, 0.65 count/s] [1;30;32minit 0 axmodel ok,devid(0) remain_cmm(15066 MB)[0m[1;30;33m 10% | ████                              |   4 /  39 [8.13s<79.23s, 0.49 count/s] [1;30;32minit 1 axmodel ok,devid(0) remain_cmm(14920 MB)[0m[1;30;33m 12% | █████                             |   5 /  39 [11.57s<90.22s, 0.43 count/s] [1;30;32minit 2 axmodel ok,devid(0) remain_cmm(14773 MB)[0m[1;30;33m 15% | █████                             |   6 /  39 [14.94s<97.12s, 0.40 count/s] [1;30;32minit 3 axmodel ok,devid(0) remain_cmm(14626 MB)[0m[1;30;33m 17% | ██████                            |   7 /  39 [18.35s<102.26s, 0.38 count/s] [1;30;32minit 4 axmodel ok,devid(0) remain_cmm(14479 MB)[0m[1;30;33m 20% | ███████                           |   8 /  39 [21.68s<105.69s, 0.37 count/s] [1;30;32minit 5 axmodel ok,devid(0) remain_cmm(14333 MB)[0m[1;30;33m 23% | ████████                          |   9 /  39 [25.04s<108.52s, 0.36 count/s] [1;30;32minit 6 axmodel ok,devid(0) remain_cmm(14186 MB)[0m[1;30;33m 25% | █████████                         |  10 /  39 [28.37s<110.66s, 0.35 count/s] [1;30;32minit 7 axmodel ok,devid(0) remain_cmm(14039 MB)[0m[1;30;33m 28% | ██████████                        |  11 /  39 [31.80s<112.73s, 0.35 count/s] [1;30;32minit 8 axmodel ok,devid(0) remain_cmm(13892 MB)[0m[1;30;33m 30% | ██████████                        |  12 /  39 [35.17s<114.32s, 0.34 count/s] [1;30;32minit 9 axmodel ok,devid(0) remain_cmm(13746 MB)[0m[1;30;33m 33% | ███████████                       |  13 /  39 [38.55s<115.65s, 0.34 count/s] [1;30;32minit 10 axmodel ok,devid(0) remain_cmm(13599 MB)[0m[1;30;33m 35% | ████████████                      |  14 /  39 [41.97s<116.92s, 0.33 count/s] [1;30;32minit 11 axmodel ok,devid(0) remain_cmm(13452 MB)[0m[1;30;33m 38% | █████████████                     |  15 /  39 [45.25s<117.64s, 0.33 count/s] [1;30;32minit 12 axmodel ok,devid(0) remain_cmm(13305 MB)[0m[1;30;33m 41% | ██████████████                    |  16 /  39 [48.47s<118.14s, 0.33 count/s] [1;30;32minit 13 axmodel ok,devid(0) remain_cmm(13159 MB)[0m[1;30;33m 43% | ██████████████                    |  17 /  39 [51.79s<118.81s, 0.33 count/s] [1;30;32minit 14 axmodel ok,devid(0) remain_cmm(13012 MB)[0m[1;30;33m 46% | ███████████████                   |  18 /  39 [55.11s<119.41s, 0.33 count/s] [1;30;32minit 15 axmodel ok,devid(0) remain_cmm(12865 MB)[0m[1;30;33m 48% | ████████████████                  |  19 /  39 [58.50s<120.08s, 0.32 count/s] [1;30;32minit 16 axmodel ok,devid(0) remain_cmm(12718 MB)[0m[1;30;33m 51% | █████████████████                 |  20 /  39 [61.85s<120.61s, 0.32 count/s] [1;30;32minit 17 axmodel ok,devid(0) remain_cmm(12571 MB)[0m[1;30;33m 53% | ██████████████████                |  21 /  39 [65.22s<121.12s, 0.32 count/s] [1;30;32minit 18 axmodel ok,devid(0) remain_cmm(12425 MB)[0m[1;30;33m 56% | ███████████████████               |  22 /  39 [68.53s<121.49s, 0.32 count/s] [1;30;32minit 19 axmodel ok,devid(0) remain_cmm(12278 MB)[0m[1;30;33m 58% | ███████████████████               |  23 /  39 [71.89s<121.91s, 0.32 count/s] [1;30;32minit 20 axmodel ok,devid(0) remain_cmm(12131 MB)[0m[1;30;33m 61% | ████████████████████              |  24 /  39 [75.23s<122.24s, 0.32 count/s] [1;30;32minit 21 axmodel ok,devid(0) remain_cmm(11984 MB)[0m[1;30;33m 64% | █████████████████████             |  25 /  39 [78.56s<122.56s, 0.32 count/s] [1;30;32minit 22 axmodel ok,devid(0) remain_cmm(11838 MB)[0m[1;30;33m 66% | ██████████████████████            |  26 /  39 [81.94s<122.91s, 0.32 count/s] [1;30;32minit 23 axmodel ok,devid(0) remain_cmm(11691 MB)[0m[1;30;33m 69% | ███████████████████████           |  27 /  39 [85.25s<123.14s, 0.32 count/s] [1;30;32minit 24 axmodel ok,devid(0) remain_cmm(11544 MB)[0m[1;30;33m 71% | ███████████████████████           |  28 /  39 [88.63s<123.45s, 0.32 count/s] [1;30;32minit 25 axmodel ok,devid(0) remain_cmm(11397 MB)[0m[1;30;33m 74% | ████████████████████████          |  29 /  39 [92.05s<123.79s, 0.32 count/s] [1;30;32minit 26 axmodel ok,devid(0) remain_cmm(11251 MB)[0m[1;30;33m 76% | █████████████████████████         |  30 /  39 [95.46s<124.10s, 0.31 count/s] [1;30;32minit 27 axmodel ok,devid(0) remain_cmm(11104 MB)[0m[1;30;33m 79% | ██████████████████████████        |  31 /  39 [98.85s<124.36s, 0.31 count/s] [1;30;32minit 28 axmodel ok,devid(0) remain_cmm(10957 MB)[0m[1;30;33m 82% | ███████████████████████████       |  32 /  39 [102.15s<124.50s, 0.31 count/s] [1;30;32minit 29 axmodel ok,devid(0) remain_cmm(10810 MB)[0m[1;30;33m 84% | ████████████████████████████      |  33 /  39 [105.55s<124.74s, 0.31 count/s] [1;30;32minit 30 axmodel ok,devid(0) remain_cmm(10664 MB)[0m[1;30;33m 87% | ████████████████████████████      |  34 /  39 [108.93s<124.95s, 0.31 count/s] [1;30;32minit 31 axmodel ok,devid(0) remain_cmm(10517 MB)[0m[1;30;33m 89% | █████████████████████████████     |  35 /  39 [112.24s<125.07s, 0.31 count/s] [1;30;32minit 32 axmodel ok,devid(0) remain_cmm(10370 MB)[0m[1;30;33m 92% | ██████████████████████████████    |  36 /  39 [115.47s<125.10s, 0.31 count/s] [1;30;32minit 33 axmodel ok,devid(0) remain_cmm(10223 MB)[0m[1;30;33m 94% | ███████████████████████████████   |  37 /  39 [118.75s<125.16s, 0.31 count/s] [1;30;32minit 34 axmodel ok,devid(0) remain_cmm(10077 MB)[0m[1;30;33m 97% | ████████████████████████████████  |  38 /  39 [122.06s<125.28s, 0.31 count/s] [1;30;32minit 35 axmodel ok,devid(0) remain_cmm(9930 MB)[0m[1;30;33m100% | ████████████████████████████████ |  39 /  39 [135.12s<135.12s, 0.29 count/s] [1;30;32minit post axmodel ok,remain_cmm(9282 MB)[0m[1;30;32m[I][                            Init][ 329]: image encoder output float32[0m
+
+[1;30;32m[I][                            Init][ 341]: max_token_len : 2047[0m
+[1;30;32m[I][                            Init][ 344]: kv_cache_size : 1024, kv_cache_num: 2047[0m
+[1;30;32m[I][                            Init][ 352]: prefill_token_num : 128[0m
+[1;30;32m[I][                            Init][ 356]: grp: 1, prefill_max_token_num : 1[0m
+[1;30;32m[I][                            Init][ 356]: grp: 2, prefill_max_token_num : 128[0m
+[1;30;32m[I][                            Init][ 356]: grp: 3, prefill_max_token_num : 256[0m
+[1;30;32m[I][                            Init][ 356]: grp: 4, prefill_max_token_num : 384[0m
+[1;30;32m[I][                            Init][ 356]: grp: 5, prefill_max_token_num : 512[0m
+[1;30;32m[I][                            Init][ 356]: grp: 6, prefill_max_token_num : 640[0m
+[1;30;32m[I][                            Init][ 356]: grp: 7, prefill_max_token_num : 768[0m
+[1;30;32m[I][                            Init][ 356]: grp: 8, prefill_max_token_num : 896[0m
+[1;30;32m[I][                            Init][ 356]: grp: 9, prefill_max_token_num : 1024[0m
+[1;30;32m[I][                            Init][ 356]: grp: 10, prefill_max_token_num : 1152[0m
+[1;30;32m[I][                            Init][ 360]: prefill_max_token_num : 1152[0m
+[1;30;35m________________________
+|    ID| remain cmm(MB)|
+========================
+|     0|           8646|
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+[0m[1;30;32m[I][                     load_config][ 282]: load config: 
+{
+    "enable_repetition_penalty": false,
+    "enable_temperature": true,
+    "enable_top_k_sampling": true,
+    "enable_top_p_sampling": false,
+    "penalty_window": 30,
+    "repetition_penalty": 1,
+    "temperature": 0.7,
+    "top_k": 20,
+    "top_p": 0.8
+}
+[0m
+[1;30;32m[I][                            Init][ 457]: LLM init ok[0m
+Type "q" to exit, Ctrl+c to stop current running
+prompt >> 只回答数字：1加1等于几？
+image >> 
+[1;30;32m[I][                             Run][ 709]: input token num : 29, prefill_split_num : 1[0m
+[1;30;32m[I][                             Run][ 743]: input_num_token:29[0m
+[1;30;32m[I][                             Run][ 922]: ttft: 853.21 ms[0m
+2
+
+[1;30;35m[N][                             Run][1075]: hit eos,avg 3.11 token/s
+[0m
+prompt >> 请用一句中文描述图片中的主要内容。
+image >> images/ssd_car.jpg
+[1;30;32m[I][                     EncodeImage][ 531]: pixel_values size 1[0m
+[1;30;32m[I][                     EncodeImage][ 532]: grid_h 24 grid_w 24[0m
+[1;30;32m[I][                     EncodeImage][ 580]: image encode time : 401.377991 ms, size : 1[0m
+[1;30;32m[I][                          Encode][ 633]: input_ids size:174[0m
+[1;30;32m[I][                          Encode][ 641]: offset 15[0m
+[1;30;32m[I][                          Encode][ 670]: img_embed.size:1, 589824[0m
+[1;30;32m[I][                          Encode][ 684]: out_embed size:712704[0m
+[1;30;32m[I][                          Encode][ 685]: input_ids size 174[0m
+[1;30;32m[I][                          Encode][ 687]: position_ids size:174[0m
+[1;30;32m[I][                             Run][ 709]: input token num : 174, prefill_split_num : 2[0m
+[1;30;32m[I][                             Run][ 743]: input_num_token:128[0m
+[1;30;32m[I][                             Run][ 743]: input_num_token:46[0m
+[1;30;32m[I][                             Run][ 922]: ttft: 1740.96 ms[0m
+一位女士站在伦敦街头，身后是一辆经典的红色双层巴士。
+
+[1;30;35m[N][                             Run][1075]: hit eos,avg 3.09 token/s
+[0m
+prompt >> q
+[1;30;32m[I][                             run][  80]: AXCLWorker exit with devid 0[0m

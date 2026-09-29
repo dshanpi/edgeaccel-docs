@@ -1,0 +1,31 @@
+[0000aaab1ad4d3b0] dbus interface error: Failed to connect to the D-Bus session daemon: Unable to autolaunch a dbus-daemon without a $DISPLAY for X11
+[0000aaab1ad4d3b0] main interface error: no suitable interface module
+[0000aaab1acb0560] main libvlc error: interface "dbus,none" initialization failed
+[0000aaab1ad7d990] main interface error: no suitable interface module
+[0000aaab1acb0560] main libvlc error: interface "globalhotkeys,none" initialization failed
+[0000aaab1ad7d990] [cli] lua interface: Listening on host "*console".
+VLC media player 3.0.20 Vetinari
+Command Line Interface initialized. Type `help' for help.
+> error: XDG_RUNTIME_DIR is invalid or not set in the environment.
+error: XDG_RUNTIME_DIR is invalid or not set in the environment.
++----[ begin of statistical info
++-[Incoming]
+| input bytes read :     7616 KiB
+| input bitrate    :     7404 kb/s
+| demux bytes read :     7371 KiB
+| demux bitrate    :     7059 kb/s
+| demux corrupted  :        0
+| discontinuities  :        0
+|
++-[Video Decoding]
+| video decoded    :      448
+| frames displayed :      213
+| frames lost      :        0
+|
++-[Audio Decoding]
+| audio decoded    :        0
+| buffers played   :        0
+| buffers lost     :        0
++----[ end of statistical info ]
+> Shutting down.
+[0000aaab1ad7d990] [cli] lua interface: Requested shutdown.

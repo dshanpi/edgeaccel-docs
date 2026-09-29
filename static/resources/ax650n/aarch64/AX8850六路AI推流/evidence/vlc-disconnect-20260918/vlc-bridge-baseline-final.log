@@ -1,0 +1,4 @@
+2026-09-18 11:20:15,154 Local VLC preview: http://127.0.0.1:8851/overview.ts
+2026-09-18 11:20:17,708 "GET /overview.ts HTTP/1.1" 200 -
+2026-09-18 11:20:17,710 Preview opened: overview
+2026-09-18 11:26:48,759 Preview closed: overview reason=BrokenPipeError:[Errno 32] Broken pipe bytes=402573236 duration=392.7 upstream_rc=None

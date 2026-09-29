@@ -1,0 +1,488 @@
+{
+  "modelId": "CosyVoice2",
+  "revision": "047c1933de85c7bef59eaf726c2ad1c17cda0f71",
+  "date": "2026-09-28",
+  "variants": [
+    {
+      "label": "默认 W8A16",
+      "observation": "三段短句均生成 24 kHz 单声道音频，达到 EOS；浮点分块拼接与完整音频逐点一致，无非有限值或削波。发音和听感仍需独立评测。",
+      "previews": [
+        {
+          "caption": "相同三句文本在两组权重下的实际语音波形",
+          "path": "/validation/effects/cosyvoice2-20260928/waveforms.png"
+        }
+      ],
+      "audio": [
+        {
+          "caption": "默认 W8A16 · 你好，欢迎使用算力卡语音合成。",
+          "path": "/validation/effects/cosyvoice2-20260928/int8-sample-1.wav"
+        },
+        {
+          "caption": "默认 W8A16 · 今天的温度是二十六度，请打开窗户。",
+          "path": "/validation/effects/cosyvoice2-20260928/int8-sample-2.wav"
+        },
+        {
+          "caption": "默认 W8A16 · Hello, welcome to our voice demonstration.",
+          "path": "/validation/effects/cosyvoice2-20260928/int8-sample-3.wav"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "输入文本",
+            "音频时长",
+            "生成耗时 / RTF",
+            "含加载总耗时"
+          ],
+          "rows": [
+            [
+              "你好，欢迎使用算力卡语音合成。",
+              "3.56 s",
+              "12.081 s / 3.39",
+              "37.289 s"
+            ],
+            [
+              "今天的温度是二十六度，请打开窗户。",
+              "4.12 s",
+              "13.758 s / 3.34",
+              "38.486 s"
+            ],
+            [
+              "Hello, welcome to our voice demonstration.",
+              "3.56 s",
+              "11.631 s / 3.27",
+              "35.698 s"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "modelId": "CosyVoice2",
+        "provider": "AXCL C++",
+        "variant": "int8",
+        "completed": true,
+        "binarySha256": "56e0785829e3427fe59831a1f9b301eac6be57fc3adb10df42ce7b39f7714b5b",
+        "tokenizerSourceSha256": "94340fc7cdf270c69a3aeb63290c5241044e20714e01fea736f361f9e5a56df2",
+        "promptFilesSha256": {
+          "flow_embedding.txt": "c84dd03552b79ff8988ac9e79b9ebc4b4bd1a0c9f589393d9986ed97e3ea73df",
+          "flow_prompt_speech_token.txt": "31658beb42e96ae91da9b112b6025624dba582558a3b43b2e7dc42668f0c842d",
+          "llm_embedding.txt": "c84dd03552b79ff8988ac9e79b9ebc4b4bd1a0c9f589393d9986ed97e3ea73df",
+          "llm_prompt_speech_token.txt": "31658beb42e96ae91da9b112b6025624dba582558a3b43b2e7dc42668f0c842d",
+          "prompt_speech_feat.txt": "d72169f3b75ddae4fe426617b807fee1a57eb24655d864adbab0caa45e4a9eb5",
+          "prompt_text.txt": "7aa9890965bc6eaaeb765a9fc8ac04cc31aa279d03026dc521df01cb8c10d429"
+        },
+        "configuredWeightFiles": [
+          "CosyVoice-BlankEN-Ax650-prefill_512/llm_decoder.axmodel",
+          "CosyVoice-BlankEN-Ax650-prefill_512/qwen2_p128_l0_together.axmodel",
+          "CosyVoice-BlankEN-Ax650-prefill_512/qwen2_p128_l10_together.axmodel",
+          "CosyVoice-BlankEN-Ax650-prefill_512/qwen2_p128_l11_together.axmodel",
+          "CosyVoice-BlankEN-Ax650-prefill_512/qwen2_p128_l12_together.axmodel",
+          "CosyVoice-BlankEN-Ax650-prefill_512/qwen2_p128_l13_together.axmodel",
+          "CosyVoice-BlankEN-Ax650-prefill_512/qwen2_p128_l14_together.axmodel",
+          "CosyVoice-BlankEN-Ax650-prefill_512/qwen2_p128_l15_together.axmodel",
+          "CosyVoice-BlankEN-Ax650-prefill_512/qwen2_p128_l16_together.axmodel",
+          "CosyVoice-BlankEN-Ax650-prefill_512/qwen2_p128_l17_together.axmodel",
+          "CosyVoice-BlankEN-Ax650-prefill_512/qwen2_p128_l18_together.axmodel",
+          "CosyVoice-BlankEN-Ax650-prefill_512/qwen2_p128_l19_together.axmodel",
+          "CosyVoice-BlankEN-Ax650-prefill_512/qwen2_p128_l1_together.axmodel",
+          "CosyVoice-BlankEN-Ax650-prefill_512/qwen2_p128_l20_together.axmodel",
+          "CosyVoice-BlankEN-Ax650-prefill_512/qwen2_p128_l21_together.axmodel",
+          "CosyVoice-BlankEN-Ax650-prefill_512/qwen2_p128_l22_together.axmodel",
+          "CosyVoice-BlankEN-Ax650-prefill_512/qwen2_p128_l23_together.axmodel",
+          "CosyVoice-BlankEN-Ax650-prefill_512/qwen2_p128_l2_together.axmodel",
+          "CosyVoice-BlankEN-Ax650-prefill_512/qwen2_p128_l3_together.axmodel",
+          "CosyVoice-BlankEN-Ax650-prefill_512/qwen2_p128_l4_together.axmodel",
+          "CosyVoice-BlankEN-Ax650-prefill_512/qwen2_p128_l5_together.axmodel",
+          "CosyVoice-BlankEN-Ax650-prefill_512/qwen2_p128_l6_together.axmodel",
+          "CosyVoice-BlankEN-Ax650-prefill_512/qwen2_p128_l7_together.axmodel",
+          "CosyVoice-BlankEN-Ax650-prefill_512/qwen2_p128_l8_together.axmodel",
+          "CosyVoice-BlankEN-Ax650-prefill_512/qwen2_p128_l9_together.axmodel",
+          "CosyVoice-BlankEN-Ax650-prefill_512/qwen2_post.axmodel",
+          "token2wav-axmodels/flow_encoder_28.axmodel",
+          "token2wav-axmodels/flow_encoder_50_final.axmodel",
+          "token2wav-axmodels/flow_encoder_53.axmodel",
+          "token2wav-axmodels/flow_encoder_78.axmodel",
+          "token2wav-axmodels/flow_estimator_200.axmodel",
+          "token2wav-axmodels/flow_estimator_250.axmodel",
+          "token2wav-axmodels/flow_estimator_300.axmodel",
+          "token2wav-axmodels/hift_p2_50_first.axmodel",
+          "token2wav-axmodels/hift_p2_58.axmodel"
+        ],
+        "sessions": [],
+        "samples": [
+          {
+            "name": "sample-1",
+            "text": "你好，欢迎使用算力卡语音合成。",
+            "exitCode": 0,
+            "processSeconds": 37.28879107499961,
+            "sampleRate": 24000,
+            "samples": 85440,
+            "durationSeconds": 3.56,
+            "allFinite": true,
+            "rms": 0.06607785216988879,
+            "peak": 0.4947258234024048,
+            "clippedFraction": 0.0,
+            "rawSha256": "d67fa717f813f81069538bf6f26b17c2902da2d37ae829358661150d7340df4d",
+            "previewSha256": "1b6d822b534cd11ccef14f7b678c00d1e932712282c6f3770b9e0b5f29d763ec",
+            "generationReachedEos": true,
+            "decodeTokens": [
+              93
+            ],
+            "reportedTtftMs": [
+              243.51
+            ],
+            "chunks": 4,
+            "realTimeFactorIncludingLoad": 10.474379515449328,
+            "ttsSeconds": 12.081,
+            "ttsRealTimeFactor": 3.3935393258426965,
+            "decoderTokensPerSecond": [
+              8.12
+            ],
+            "chunkBatchSizes": [
+              28,
+              53,
+              78
+            ],
+            "chunkConcatenationExact": true,
+            "chunkSamples": [
+              20160,
+              24000,
+              24000,
+              17280
+            ],
+            "outputLogSha256": "1a2708c0b8fe90f25d1dce71dcad7e4a4ae27dcf1a79bade9e64e8452fcf47ee"
+          },
+          {
+            "name": "sample-2",
+            "text": "今天的温度是二十六度，请打开窗户。",
+            "exitCode": 0,
+            "processSeconds": 38.48607655399246,
+            "sampleRate": 24000,
+            "samples": 98880,
+            "durationSeconds": 4.12,
+            "allFinite": true,
+            "rms": 0.06469203378904403,
+            "peak": 0.5078036785125732,
+            "clippedFraction": 0.0,
+            "rawSha256": "32d5f19e8b0e1fd791923b4ec78ba8e208942c806c2fb88db406a46d4d9d16ba",
+            "previewSha256": "6483ac9665c64e0bbf1d1449e2e95819736f2a0da5ddbbdb49a6ce13846f80da",
+            "generationReachedEos": true,
+            "decodeTokens": [
+              107
+            ],
+            "reportedTtftMs": [
+              243.96
+            ],
+            "chunks": 5,
+            "realTimeFactorIncludingLoad": 9.34128071698846,
+            "ttsSeconds": 13.758,
+            "ttsRealTimeFactor": 3.339320388349514,
+            "decoderTokensPerSecond": [
+              8.09
+            ],
+            "chunkBatchSizes": [
+              28,
+              53,
+              78,
+              78
+            ],
+            "chunkConcatenationExact": true,
+            "chunkSamples": [
+              20160,
+              24000,
+              24000,
+              24000,
+              6720
+            ],
+            "outputLogSha256": "713207032b4e46a68f7a4b27cbbc1bc4caf6ca9a2dfb40dd1f2b611fecfa8849"
+          },
+          {
+            "name": "sample-3",
+            "text": "Hello, welcome to our voice demonstration.",
+            "exitCode": 0,
+            "processSeconds": 35.698264189995825,
+            "sampleRate": 24000,
+            "samples": 85440,
+            "durationSeconds": 3.56,
+            "allFinite": true,
+            "rms": 0.07659450557491232,
+            "peak": 0.504003643989563,
+            "clippedFraction": 0.0,
+            "rawSha256": "8ea0b92a601ff47372926c8dfe80ba4f95b81c6ae47885b5d3bab8b1292f5c93",
+            "previewSha256": "2021499efc88bfbea72fbd67d7543bcc4abf003f1b6c6636d947b59d1d80b952",
+            "generationReachedEos": true,
+            "decodeTokens": [
+              93
+            ],
+            "reportedTtftMs": [
+              241.85
+            ],
+            "chunks": 4,
+            "realTimeFactorIncludingLoad": 10.027602300560625,
+            "ttsSeconds": 11.631,
+            "ttsRealTimeFactor": 3.267134831460674,
+            "decoderTokensPerSecond": [
+              8.43
+            ],
+            "chunkBatchSizes": [
+              28,
+              53,
+              78
+            ],
+            "chunkConcatenationExact": true,
+            "chunkSamples": [
+              20160,
+              24000,
+              24000,
+              17280
+            ],
+            "outputLogSha256": "47fab836452e5cd17cd87a291af23960b5580e90d7678103e994c7c63ea24f6a"
+          }
+        ],
+        "timingScope": "Wall time around official executable, including load, text tokenization, AXCL and CPU vocoder, output files, cleanup. Not isolated NPU latency.",
+        "nativeOutputFinite": true,
+        "coverage": "Official native binary end-to-end speech generation with preset prompt. Configured files are recorded; no per-layer or per-shape trace, nor raw NPU tensor checks.",
+        "ttsTimingScope": "Official native tts total use time; excludes model initialization. Not isolated NPU latency or first audible packet latency."
+      }
+    },
+    {
+      "label": "GPTQ Int4",
+      "observation": "三段短句均生成 24 kHz 单声道音频，达到 EOS；浮点分块拼接与完整音频逐点一致，无非有限值或削波。发音和听感仍需独立评测。",
+      "previews": [],
+      "audio": [
+        {
+          "caption": "GPTQ Int4 · 你好，欢迎使用算力卡语音合成。",
+          "path": "/validation/effects/cosyvoice2-20260928/int4-sample-1.wav"
+        },
+        {
+          "caption": "GPTQ Int4 · 今天的温度是二十六度，请打开窗户。",
+          "path": "/validation/effects/cosyvoice2-20260928/int4-sample-2.wav"
+        },
+        {
+          "caption": "GPTQ Int4 · Hello, welcome to our voice demonstration.",
+          "path": "/validation/effects/cosyvoice2-20260928/int4-sample-3.wav"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "输入文本",
+            "音频时长",
+            "生成耗时 / RTF",
+            "含加载总耗时"
+          ],
+          "rows": [
+            [
+              "你好，欢迎使用算力卡语音合成。",
+              "4.76 s",
+              "13.834 s / 2.91",
+              "37.692 s"
+            ],
+            [
+              "今天的温度是二十六度，请打开窗户。",
+              "4.44 s",
+              "13.205 s / 2.97",
+              "37.063 s"
+            ],
+            [
+              "Hello, welcome to our voice demonstration.",
+              "3.44 s",
+              "11.488 s / 3.34",
+              "34.510 s"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "modelId": "CosyVoice2",
+        "provider": "AXCL C++",
+        "variant": "int4",
+        "completed": true,
+        "binarySha256": "56e0785829e3427fe59831a1f9b301eac6be57fc3adb10df42ce7b39f7714b5b",
+        "tokenizerSourceSha256": "94340fc7cdf270c69a3aeb63290c5241044e20714e01fea736f361f9e5a56df2",
+        "promptFilesSha256": {
+          "flow_embedding.txt": "c84dd03552b79ff8988ac9e79b9ebc4b4bd1a0c9f589393d9986ed97e3ea73df",
+          "flow_prompt_speech_token.txt": "31658beb42e96ae91da9b112b6025624dba582558a3b43b2e7dc42668f0c842d",
+          "llm_embedding.txt": "c84dd03552b79ff8988ac9e79b9ebc4b4bd1a0c9f589393d9986ed97e3ea73df",
+          "llm_prompt_speech_token.txt": "31658beb42e96ae91da9b112b6025624dba582558a3b43b2e7dc42668f0c842d",
+          "prompt_speech_feat.txt": "d72169f3b75ddae4fe426617b807fee1a57eb24655d864adbab0caa45e4a9eb5",
+          "prompt_text.txt": "7aa9890965bc6eaaeb765a9fc8ac04cc31aa279d03026dc521df01cb8c10d429"
+        },
+        "configuredWeightFiles": [
+          "CosyVoice-BlankEN-GPTQ-Int4-Ax650-prefill_512-c64/llm_decoder.axmodel",
+          "CosyVoice-BlankEN-GPTQ-Int4-Ax650-prefill_512-c64/qwen2_p64_l0_together.axmodel",
+          "CosyVoice-BlankEN-GPTQ-Int4-Ax650-prefill_512-c64/qwen2_p64_l10_together.axmodel",
+          "CosyVoice-BlankEN-GPTQ-Int4-Ax650-prefill_512-c64/qwen2_p64_l11_together.axmodel",
+          "CosyVoice-BlankEN-GPTQ-Int4-Ax650-prefill_512-c64/qwen2_p64_l12_together.axmodel",
+          "CosyVoice-BlankEN-GPTQ-Int4-Ax650-prefill_512-c64/qwen2_p64_l13_together.axmodel",
+          "CosyVoice-BlankEN-GPTQ-Int4-Ax650-prefill_512-c64/qwen2_p64_l14_together.axmodel",
+          "CosyVoice-BlankEN-GPTQ-Int4-Ax650-prefill_512-c64/qwen2_p64_l15_together.axmodel",
+          "CosyVoice-BlankEN-GPTQ-Int4-Ax650-prefill_512-c64/qwen2_p64_l16_together.axmodel",
+          "CosyVoice-BlankEN-GPTQ-Int4-Ax650-prefill_512-c64/qwen2_p64_l17_together.axmodel",
+          "CosyVoice-BlankEN-GPTQ-Int4-Ax650-prefill_512-c64/qwen2_p64_l18_together.axmodel",
+          "CosyVoice-BlankEN-GPTQ-Int4-Ax650-prefill_512-c64/qwen2_p64_l19_together.axmodel",
+          "CosyVoice-BlankEN-GPTQ-Int4-Ax650-prefill_512-c64/qwen2_p64_l1_together.axmodel",
+          "CosyVoice-BlankEN-GPTQ-Int4-Ax650-prefill_512-c64/qwen2_p64_l20_together.axmodel",
+          "CosyVoice-BlankEN-GPTQ-Int4-Ax650-prefill_512-c64/qwen2_p64_l21_together.axmodel",
+          "CosyVoice-BlankEN-GPTQ-Int4-Ax650-prefill_512-c64/qwen2_p64_l22_together.axmodel",
+          "CosyVoice-BlankEN-GPTQ-Int4-Ax650-prefill_512-c64/qwen2_p64_l23_together.axmodel",
+          "CosyVoice-BlankEN-GPTQ-Int4-Ax650-prefill_512-c64/qwen2_p64_l2_together.axmodel",
+          "CosyVoice-BlankEN-GPTQ-Int4-Ax650-prefill_512-c64/qwen2_p64_l3_together.axmodel",
+          "CosyVoice-BlankEN-GPTQ-Int4-Ax650-prefill_512-c64/qwen2_p64_l4_together.axmodel",
+          "CosyVoice-BlankEN-GPTQ-Int4-Ax650-prefill_512-c64/qwen2_p64_l5_together.axmodel",
+          "CosyVoice-BlankEN-GPTQ-Int4-Ax650-prefill_512-c64/qwen2_p64_l6_together.axmodel",
+          "CosyVoice-BlankEN-GPTQ-Int4-Ax650-prefill_512-c64/qwen2_p64_l7_together.axmodel",
+          "CosyVoice-BlankEN-GPTQ-Int4-Ax650-prefill_512-c64/qwen2_p64_l8_together.axmodel",
+          "CosyVoice-BlankEN-GPTQ-Int4-Ax650-prefill_512-c64/qwen2_p64_l9_together.axmodel",
+          "CosyVoice-BlankEN-GPTQ-Int4-Ax650-prefill_512-c64/qwen2_post.axmodel",
+          "token2wav-axmodels/flow_encoder_28.axmodel",
+          "token2wav-axmodels/flow_encoder_50_final.axmodel",
+          "token2wav-axmodels/flow_encoder_53.axmodel",
+          "token2wav-axmodels/flow_encoder_78.axmodel",
+          "token2wav-axmodels/flow_estimator_200.axmodel",
+          "token2wav-axmodels/flow_estimator_250.axmodel",
+          "token2wav-axmodels/flow_estimator_300.axmodel",
+          "token2wav-axmodels/hift_p2_50_first.axmodel",
+          "token2wav-axmodels/hift_p2_58.axmodel"
+        ],
+        "sessions": [],
+        "samples": [
+          {
+            "name": "sample-1",
+            "text": "你好，欢迎使用算力卡语音合成。",
+            "exitCode": 0,
+            "processSeconds": 37.692458162026014,
+            "sampleRate": 24000,
+            "samples": 114240,
+            "durationSeconds": 4.76,
+            "allFinite": true,
+            "rms": 0.050661491972012015,
+            "peak": 0.5306257605552673,
+            "clippedFraction": 0.0,
+            "rawSha256": "0afd107d57213e817f5575d90bdc933a9aa874c70a05207e4f558561d4074508",
+            "previewSha256": "e51ff2c38d7e2de2f716e3ced6b300799493e4e73fb2cd5653b81181420d36e7",
+            "generationReachedEos": true,
+            "decodeTokens": [
+              123
+            ],
+            "reportedTtftMs": [
+              323.42
+            ],
+            "chunks": 5,
+            "realTimeFactorIncludingLoad": 7.918583647484457,
+            "ttsSeconds": 13.834,
+            "ttsRealTimeFactor": 2.9063025210084033,
+            "decoderTokensPerSecond": [
+              9.37
+            ],
+            "chunkBatchSizes": [
+              28,
+              53,
+              78,
+              78
+            ],
+            "chunkConcatenationExact": true,
+            "chunkSamples": [
+              20160,
+              24000,
+              24000,
+              24000,
+              22080
+            ],
+            "outputLogSha256": "317ff5efa709bd29d0c93792f8c76c1d90b41eaed73a071ea96781b60537ec0e"
+          },
+          {
+            "name": "sample-2",
+            "text": "今天的温度是二十六度，请打开窗户。",
+            "exitCode": 0,
+            "processSeconds": 37.06335132103413,
+            "sampleRate": 24000,
+            "samples": 106560,
+            "durationSeconds": 4.44,
+            "allFinite": true,
+            "rms": 0.05874467594140886,
+            "peak": 0.5429996848106384,
+            "clippedFraction": 0.0,
+            "rawSha256": "36e83a02593057a0b0d170df139310dd850509892a4dd24effd7dc543b36488a",
+            "previewSha256": "a75690e1e305253f321931176cf09549522ca52e701bf10b75f7bb8ab01ae89b",
+            "generationReachedEos": true,
+            "decodeTokens": [
+              115
+            ],
+            "reportedTtftMs": [
+              340.08
+            ],
+            "chunks": 5,
+            "realTimeFactorIncludingLoad": 8.347601648881561,
+            "ttsSeconds": 13.205,
+            "ttsRealTimeFactor": 2.974099099099099,
+            "decoderTokensPerSecond": [
+              9.23
+            ],
+            "chunkBatchSizes": [
+              28,
+              53,
+              78,
+              78
+            ],
+            "chunkConcatenationExact": true,
+            "chunkSamples": [
+              20160,
+              24000,
+              24000,
+              24000,
+              14400
+            ],
+            "outputLogSha256": "50b83029b7704e6d598a69aa62e08499293f5604bab9af60cda09a0312fa0935"
+          },
+          {
+            "name": "sample-3",
+            "text": "Hello, welcome to our voice demonstration.",
+            "exitCode": 0,
+            "processSeconds": 34.51010067597963,
+            "sampleRate": 24000,
+            "samples": 82560,
+            "durationSeconds": 3.44,
+            "allFinite": true,
+            "rms": 0.06461822998690067,
+            "peak": 0.5072389841079712,
+            "clippedFraction": 0.0,
+            "rawSha256": "d4579fada3b8ad65383a15b406f1502e84ca1d7417c2326c7013eaa4a37fa6a8",
+            "previewSha256": "03f4c6fcf8b30fc2729c27722ae53f7929d0229d7647f0265d9250616a46f2d6",
+            "generationReachedEos": true,
+            "decodeTokens": [
+              90
+            ],
+            "reportedTtftMs": [
+              329.13
+            ],
+            "chunks": 4,
+            "realTimeFactorIncludingLoad": 10.032006010459195,
+            "ttsSeconds": 11.488,
+            "ttsRealTimeFactor": 3.33953488372093,
+            "decoderTokensPerSecond": [
+              8.36
+            ],
+            "chunkBatchSizes": [
+              28,
+              53,
+              78
+            ],
+            "chunkConcatenationExact": true,
+            "chunkSamples": [
+              20160,
+              24000,
+              24000,
+              14400
+            ],
+            "outputLogSha256": "99970dddfd3fce989fb6c3121255fc9450b2582a88e2681a933fea14073bbb4c"
+          }
+        ],
+        "timingScope": "Wall time around official executable, including load, text tokenization, AXCL and CPU vocoder, output files, cleanup. Not isolated NPU latency.",
+        "nativeOutputFinite": true,
+        "coverage": "Official native binary end-to-end speech generation with preset prompt. Configured files are recorded; no per-layer or per-shape trace, nor raw NPU tensor checks.",
+        "ttsTimingScope": "Official native tts total use time; excludes model initialization. Not isolated NPU latency or first audible packet latency."
+      }
+    }
+  ]
+}

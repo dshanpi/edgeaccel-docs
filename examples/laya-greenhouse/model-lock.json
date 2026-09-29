@@ -1,0 +1,11 @@
+{
+  "repo": "AXERA-TECH/Laya",
+  "revision": "4f02f411fb9b9b09b4a4842b4486177b9594ba9e",
+  "files": {
+    "python/ax650/infer.py": "3ad2f09c901907ca51214bae615afb993b900e10bd3261240751435585924ea0",
+    "multilingual/config.json": "7acdfaa0e88402826e58c6ff08bf3fb1be898fab1d4ac3bce580f8bedcb97274",
+    "multilingual/model.axmodel": "9a2264fa96a4bee2ba898f5b8465e6c9692f500810292acd1248d53170b37be7",
+    "multilingual/tokenizer/tokenizer.json": "609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f",
+    "multilingual/tokenizer/tokenizer_config.json": "6c6b2d8e3c84ce0e671c129cd6b374b235d6f9863042a5836358d00a89bbb5a1"
+  }
+}

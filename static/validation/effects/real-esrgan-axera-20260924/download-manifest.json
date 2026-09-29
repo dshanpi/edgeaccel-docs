@@ -1,0 +1,53 @@
+{
+  "modelId": "Real-ESRGAN.axera",
+  "repo": "AXERA-TECH/Real-ESRGAN.axera",
+  "revision": "e56bfc5639dca3d6d36899aaa37345c13183d198",
+  "complete": true,
+  "files": [
+    {
+      "path": "README.md",
+      "size": 4263,
+      "url": "https://huggingface.co/AXERA-TECH/Real-ESRGAN.axera/resolve/e56bfc5639dca3d6d36899aaa37345c13183d198/README.md",
+      "verifiedHashes": {
+        "sha256": "05e3d84e21ce29c105cee0ac5f5fe189d6a7003c33e0d302a9fa12b4907ada7c",
+        "gitBlob": "55d433e4962651202d4adfd3fe8d56da59f30da4"
+      }
+    },
+    {
+      "path": "run_axmodel.py",
+      "size": 7482,
+      "url": "https://huggingface.co/AXERA-TECH/Real-ESRGAN.axera/resolve/e56bfc5639dca3d6d36899aaa37345c13183d198/run_axmodel.py",
+      "verifiedHashes": {
+        "sha256": "c296fdc2629ffdcc80686c29f47e4a5c392ba6e9fb73226b7bf15efa02949ad6",
+        "gitBlob": "544afd57f4ffc3f217dbd8f1a1d25f609646eb37"
+      }
+    },
+    {
+      "path": "model/realesrgan-x2.axmodel",
+      "size": 19270519,
+      "url": "https://huggingface.co/AXERA-TECH/Real-ESRGAN.axera/resolve/e56bfc5639dca3d6d36899aaa37345c13183d198/model/realesrgan-x2.axmodel",
+      "verifiedHashes": {
+        "sha256": "348f9e4d81072b4865cb1d96143134f0de44d3f2c750805b188a5c42ba5d633e",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "model/realesrgan-x4.axmodel",
+      "size": 19657802,
+      "url": "https://huggingface.co/AXERA-TECH/Real-ESRGAN.axera/resolve/e56bfc5639dca3d6d36899aaa37345c13183d198/model/realesrgan-x4.axmodel",
+      "verifiedHashes": {
+        "sha256": "301a65723e740bbc7082b84d1622ff2555ba732baf6f19373c5b8c9e1e03fb75",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "pics/0014.jpg",
+      "size": 9605,
+      "url": "https://huggingface.co/AXERA-TECH/Real-ESRGAN.axera/resolve/e56bfc5639dca3d6d36899aaa37345c13183d198/pics/0014.jpg",
+      "verifiedHashes": {
+        "sha256": "444d2cc3bd9304b9a54e676e10081c8cdd2f3f2665e8c742760c97da481523a2",
+        "gitBlob": "f59554fe3143b3ffa27d6fcb04143124b4d0412b"
+      }
+    }
+  ]
+}

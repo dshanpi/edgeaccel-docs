@@ -1,0 +1,60 @@
+{
+  "sample_seconds": 10.033020398997905,
+  "channels": [
+    {
+      "name": "pcd",
+      "decode_fps": 11.960505932190227,
+      "infer_fps": 12.060176814958478,
+      "encode_fps": 12.060176814958478,
+      "dropped": 0,
+      "mux_errors": 0,
+      "submit_errors": 0
+    },
+    {
+      "name": "vehicle",
+      "decode_fps": 25.017391574831223,
+      "infer_fps": 9.668075628520432,
+      "encode_fps": 25.117062457599474,
+      "dropped": 0,
+      "mux_errors": 0,
+      "submit_errors": 0
+    },
+    {
+      "name": "seg",
+      "decode_fps": 30.000935713243816,
+      "infer_fps": 6.179594731631617,
+      "encode_fps": 30.000935713243816,
+      "dropped": 0,
+      "mux_errors": 0,
+      "submit_errors": 0
+    },
+    {
+      "name": "driving",
+      "decode_fps": 29.901264830475565,
+      "infer_fps": 9.867417394056936,
+      "encode_fps": 29.901264830475565,
+      "dropped": 0,
+      "mux_errors": 0,
+      "submit_errors": 0
+    },
+    {
+      "name": "depth",
+      "decode_fps": 24.020682747148705,
+      "infer_fps": 10.166430042361693,
+      "encode_fps": 24.020682747148705,
+      "dropped": 0,
+      "mux_errors": 0,
+      "submit_errors": 0
+    },
+    {
+      "name": "count",
+      "decode_fps": 24.020682747148705,
+      "infer_fps": 9.369062980215677,
+      "encode_fps": 24.220024512685207,
+      "dropped": 0,
+      "mux_errors": 0,
+      "submit_errors": 0
+    }
+  ],
+  "overview_encode_fps": 30.10060659601207
+}

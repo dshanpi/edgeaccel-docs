@@ -1,0 +1,66 @@
+---
+title: "模型调整前_20260916 · 实施说明"
+sidebar_label: "模型调整前_20260916 · 实施说明"
+slug: /ax650n/archive/ec7b1f9c6fd3
+---
+
+> **历史版本**：保留原始操作和验证记录，仅供追溯。缺失的共享图片和文档链接已指向现有资料，可能与该历史版本不同；当前操作请参阅[六路 AI 视频推流](/docs/ax650n/applications/six-streams/usage)。
+
+# 实施记录
+
+## 文件
+
+- 开发板程序与配置：`/home/baiwen/ax-pipeline/six/`
+- 源码：`six/src/six_app.cpp`
+- 运行文件：`six/bin/six_app`
+- 处理后视频：`/home/baiwen/ax-pipeline/video/1080p/`
+- 模型校验值：`six/evidence/models.json`
+- 视频处理记录：`six/evidence/normalized-videos.json`
+- 检查截图、拉流日志：`six/evidence/`
+- 本地源码副本：本文同目录 `source/`
+
+本次没有更换 PAC、AXP、内核或 AXCL 驱动。原 PCD 模型继续使用 `/home/baiwen/ax-pipeline/pcd.axmodel`。
+
+## 实现
+
+新增 `six_app`，复用已安装的 ax-pipeline / ax-video-sdk，不覆盖原 `ax_pipeline_app`。增加 OpenCV 开发依赖以编译结果绘制和拼接代码。
+
+1. SDK Pipeline 建立六个硬件解码通道，按源视频节奏循环读取。
+2. PCD、车辆、头盔与计数调用原插件 ABI；YOLOv8s 的这份模型为六个输出头，使用 `libax_plugin_yolov8_split.so`。
+3. 深度和分割通过 AXCL runner 在 NPU 上执行，前后处理参考原厂脚本，并核对实际张量形状。
+4. 在主机上绘制结果；每路只保留最新结果，避免排队延迟无限增长。
+5. 上传 NV12 图像后，用七个 AXCL VENC 编码器输出六个单路和一个总览。
+6. 未变化的结果复用设备端图像；每个编码提交保留独立时间戳与内存生命周期。
+7. 第六路采用类别过滤、ByteTrack、参考线滞回和单 ID 去重；循环边界清空跟踪，保留总计数。
+8. 编码 PTS 与显示帧序号对应，避免 SDK 的最小步长修正把调度抖动积累为录像速度偏差。
+
+原始 SDK、原单路应用和驱动都保留。新程序接管 8554 端口；不要同时启动旧的 PCD 推流服务。
+
+## 原厂来源
+
+- [ax-pipeline](https://github.com/AXERA-TECH/ax-pipeline)：`ab4c3855c4ce694438c9752c3f56a52061952fef`
+- ax-video-sdk：`172f343a144464bc1ed436259b4b76c882cd5b2e`
+- [PCD](https://huggingface.co/AXERA-TECH/Person_car-axera)
+- [YOLOv8](https://huggingface.co/AXERA-TECH/YOLOv8)
+- [Helmet](https://huggingface.co/AXERA-TECH/Helmet-axera)
+- [YOLO26 Depth](https://huggingface.co/AXERA-TECH/Yolo26-Depth)，参考 `infer_depth.py`
+- [YOLO26 Seg](https://huggingface.co/AXERA-TECH/yolo26-seg)，参考 `ax_infer.py`
+
+模型按下载元数据里的 SHA256 校验。深度/分割参考脚本副本保存在开发板 `six/evidence/`。
+
+## 编译
+
+当前开发板已具备 AXCL、原 ax-pipeline 构建目录和 OpenCV 4.6：
+
+```bash
+cd ~/ax-pipeline/six
+./stop.sh
+bash build.sh
+./start.sh
+```
+
+本地 `source/` 是这块开发板的源码与配置备份，编译脚本引用其现有 SDK 路径；不是可用于任意干净系统的一键安装包。
+
+## 验证范围
+
+已验证六路硬件解码、NPU 调用、结果绘制、七路硬件编码和 TCP RTSP 拉流。保存并检查六宫格 MP4；具体日志和统计见 `evidence/`。这是当前单卡的功能验证，未代替多卡、长时间或模型准确率测试。

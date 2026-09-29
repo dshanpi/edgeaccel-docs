@@ -1,0 +1,11 @@
+		DevCap:	MaxPayload 128 bytes, PhantFunc 0, Latency L0s unlimited, L1 unlimited
+			MaxPayload 128 bytes, MaxReadReq 512 bytes
+		LnkCap:	Port #0, Speed 5GT/s, Width x2, ASPM not supported
+		LnkSta:	Speed 5GT/s, Width x1 (downgraded)
+		LnkCap:	Port #0, Speed 5GT/s, Width x1, ASPM L0s L1, Exit Latency L0s <256ns, L1 <32us
+		LnkSta:	Speed 5GT/s, Width x1
+ondemand
+ondemand
+2016000
+2208000
+(<'Playing'>,)

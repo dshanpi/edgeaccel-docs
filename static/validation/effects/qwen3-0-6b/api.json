@@ -1,0 +1,150 @@
+{
+  "kind": "text",
+  "requests": [
+    {
+      "endpoint": "/v1/chat/completions",
+      "request": {
+        "model": "AXERA-TECH/Qwen3-0.6B",
+        "messages": [
+          {
+            "role": "user",
+            "content": "What is 2 + 3? Answer with only the number."
+          }
+        ],
+        "max_tokens": 128,
+        "temperature": 0,
+        "enable_thinking": false,
+        "stream": false
+      },
+      "elapsedSeconds": 1.9595203640001273,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "content": "2 + 3 = 5",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1790130196,
+        "id": "chatcmpl-0338b8d317c0de3d17506081",
+        "model": "AXERA-TECH/Qwen3-0.6B",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 7,
+          "decode_tps": 5.06303071975708,
+          "prefill_tokens": 26,
+          "prefill_tps": 93.79948425292969,
+          "prompt_tokens": 26,
+          "total_tokens": 33,
+          "ttft_ms": 769.2899780273438
+        }
+      },
+      "checks": {
+        "nonemptyText": true,
+        "containsReplacementCharacter": false,
+        "finishReason": "stop",
+        "arithmeticExact": false
+      }
+    },
+    {
+      "endpoint": "/v1/chat/completions",
+      "request": {
+        "model": "AXERA-TECH/Qwen3-0.6B",
+        "messages": [
+          {
+            "role": "user",
+            "content": "请用一句话说明 PCIe 的用途。"
+          }
+        ],
+        "max_tokens": 128,
+        "temperature": 0,
+        "enable_thinking": false,
+        "stream": false
+      },
+      "elapsedSeconds": 5.326453051000044,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "content": "PCIe 是一种用于高速数据传输的接口标准，广泛应用于计算机、服务器和存储设备等系统中。",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1790130201,
+        "id": "chatcmpl-ce67c140ddc464489ac7d0bd",
+        "model": "AXERA-TECH/Qwen3-0.6B",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 24,
+          "decode_tps": 5.060940265655518,
+          "prefill_tokens": 20,
+          "prefill_tps": 71.54969787597656,
+          "prompt_tokens": 20,
+          "total_tokens": 44,
+          "ttft_ms": 777.52099609375
+        }
+      },
+      "checks": {
+        "nonemptyText": true,
+        "containsReplacementCharacter": false,
+        "finishReason": "stop",
+        "arithmeticExact": null
+      }
+    },
+    {
+      "endpoint": "/v1/chat/completions",
+      "request": {
+        "model": "AXERA-TECH/Qwen3-0.6B",
+        "messages": [
+          {
+            "role": "user",
+            "content": "What is 2 + 3? Answer with only the number."
+          }
+        ],
+        "max_tokens": 128,
+        "temperature": 0,
+        "enable_thinking": false,
+        "stream": false
+      },
+      "elapsedSeconds": 2.2010317379999833,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "content": "2 + 3 = 5",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1790130204,
+        "id": "chatcmpl-0651aa0ed4ebd39c9a03ec13",
+        "model": "AXERA-TECH/Qwen3-0.6B",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 7,
+          "decode_tps": 4.443878173828125,
+          "prefill_tokens": 26,
+          "prefill_tps": 88.6255874633789,
+          "prompt_tokens": 26,
+          "total_tokens": 33,
+          "ttft_ms": 845.7509765625
+        }
+      },
+      "checks": {
+        "nonemptyText": true,
+        "containsReplacementCharacter": false,
+        "finishReason": "stop",
+        "arithmeticExact": false
+      }
+    }
+  ],
+  "model": "AXERA-TECH/Qwen3-0.6B"
+}

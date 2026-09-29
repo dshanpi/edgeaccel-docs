@@ -1,0 +1,186 @@
+{
+  "kind": "vision",
+  "task": "vision",
+  "model": "AXERA-TECH/Qwen3.5-4B-AX650-GPTQ-Int4-C128-P1152-CTX2047",
+  "requests": [
+    {
+      "endpoint": "/v1/chat/completions",
+      "request": {
+        "model": "AXERA-TECH/Qwen3.5-4B-AX650-GPTQ-Int4-C128-P1152-CTX2047",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "Describe the image in one sentence."
+              },
+              {
+                "type": "image_url",
+                "image_url": {
+                  "url": "[base64 image; SHA256 in image field]"
+                }
+              }
+            ]
+          }
+        ],
+        "max_tokens": 128,
+        "temperature": 0,
+        "enable_thinking": false,
+        "stream": false
+      },
+      "elapsedSeconds": 14.912069785999847,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "content": "Three astronauts in white space suits stand amidst a dense, monochromatic forest with tall trees and leafy undergrowth, their helmets reflecting the dim, atmospheric light.",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1790164322,
+        "id": "chatcmpl-dcf1c779593e9ec0b2ef6ce8",
+        "model": "AXERA-TECH/Qwen3.5-4B-AX650-GPTQ-Int4-C128-P1152-CTX2047",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 33,
+          "decode_tps": 3.297089099884033,
+          "prefill_tokens": 165,
+          "prefill_tps": 105.54022216796875,
+          "prompt_tokens": 165,
+          "total_tokens": 198,
+          "ttft_ms": 5170.05712890625
+        }
+      },
+      "checks": {
+        "nonemptyText": true,
+        "containsReplacementCharacter": false,
+        "finishReason": "stop"
+      }
+    },
+    {
+      "endpoint": "/v1/chat/completions",
+      "request": {
+        "model": "AXERA-TECH/Qwen3.5-4B-AX650-GPTQ-Int4-C128-P1152-CTX2047",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "How many people are in the image?"
+              },
+              {
+                "type": "image_url",
+                "image_url": {
+                  "url": "[base64 image; SHA256 in image field]"
+                }
+              }
+            ]
+          }
+        ],
+        "max_tokens": 128,
+        "temperature": 0,
+        "enable_thinking": false,
+        "stream": false
+      },
+      "elapsedSeconds": 27.00602366899875,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "content": "There are **three** people in the image.\n\nThey are all dressed in white astronaut suits and are standing in a forest-like environment with tall trees and foliage. The central figure is raising both arms, while the person on the left is standing upright, and the one on the right is slightly bent forward.\n\n✅ Final Answer: **3**",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1790164349,
+        "id": "chatcmpl-9328cc6673299caeef96ef55",
+        "model": "AXERA-TECH/Qwen3.5-4B-AX650-GPTQ-Int4-C128-P1152-CTX2047",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 70,
+          "decode_tps": 3.655385732650757,
+          "prefill_tokens": 166,
+          "prefill_tps": 111.8162841796875,
+          "prompt_tokens": 166,
+          "total_tokens": 236,
+          "ttft_ms": 8073.22314453125
+        }
+      },
+      "checks": {
+        "nonemptyText": true,
+        "containsReplacementCharacter": false,
+        "finishReason": "stop"
+      }
+    },
+    {
+      "endpoint": "/v1/chat/completions",
+      "request": {
+        "model": "AXERA-TECH/Qwen3.5-4B-AX650-GPTQ-Int4-C128-P1152-CTX2047",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "请用一句简短的中文描述图片，不要推测人物的意图或表情。"
+              },
+              {
+                "type": "image_url",
+                "image_url": {
+                  "url": "[base64 image; SHA256 in image field]"
+                }
+              }
+            ]
+          }
+        ],
+        "max_tokens": 128,
+        "temperature": 0,
+        "enable_thinking": false,
+        "stream": false
+      },
+      "elapsedSeconds": 11.78052058600042,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "content": "三名宇航员在森林中行走，背景是树木和植被。",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1790164360,
+        "id": "chatcmpl-ee15566ce7cc1763f9e2ea9a",
+        "model": "AXERA-TECH/Qwen3.5-4B-AX650-GPTQ-Int4-C128-P1152-CTX2047",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 14,
+          "decode_tps": 3.4219260215759277,
+          "prefill_tokens": 173,
+          "prefill_tps": 110.08800506591797,
+          "prompt_tokens": 173,
+          "total_tokens": 187,
+          "ttft_ms": 7922.94677734375
+        }
+      },
+      "checks": {
+        "nonemptyText": true,
+        "containsReplacementCharacter": false,
+        "finishReason": "stop"
+      }
+    }
+  ],
+  "image": {
+    "path": "input.png",
+    "sha256": "622ae2d01ff4467fa69a7888728d776650117a0f4887e96ba0fb9a8a6d77b3c3",
+    "bytes": 355241
+  }
+}

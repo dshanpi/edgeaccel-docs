@@ -1,0 +1,37 @@
+{
+  "repo": "AXERA-TECH/Person_car-axera",
+  "revision": "20e3e18e65c7874da8e6dbe65e248dfb5a48ddde",
+  "complete": true,
+  "files": [
+    {
+      "path": "ax_pcd_infer.py",
+      "size": 10094,
+      "sha256": null,
+      "gitBlob": "bf4dd25dd0553bea5a1046b09114c5d708fa6fb9",
+      "verifiedHashes": {
+        "sha256": "8bc6e0f916326f00a4e858d4d91d49bf123c3d144fe8e26d3d95b8e96a1443c3",
+        "gitBlob": "bf4dd25dd0553bea5a1046b09114c5d708fa6fb9"
+      }
+    },
+    {
+      "path": "AX650/ax_ax650_pcd_tiny_algo_V2.0.0.axmodel",
+      "size": 763756,
+      "sha256": "2f32d720cde61e54200363ce1c2fe7bd9a0f962bd1924c5a3e47b96423b72e69",
+      "gitBlob": "665850aa06c9d04f280f0bbba288787df1c58bc5",
+      "verifiedHashes": {
+        "sha256": "2f32d720cde61e54200363ce1c2fe7bd9a0f962bd1924c5a3e47b96423b72e69",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "car_away_1920x1080.jpg",
+      "size": 765627,
+      "sha256": "fbf29eb4d94167142cc14c92f735f4964e8f21fcbeb2bf82098687821cd8c966",
+      "gitBlob": "f617eaf07fda659a063c65204afa9418fa20c48d",
+      "verifiedHashes": {
+        "sha256": "fbf29eb4d94167142cc14c92f735f4964e8f21fcbeb2bf82098687821cd8c966",
+        "gitBlob": null
+      }
+    }
+  ]
+}

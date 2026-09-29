@@ -1,0 +1,558 @@
+{
+  "modelId": "jina-clip-v2",
+  "revision": "00914adf025ae2b9fa62ead49bd1f1c401a37502",
+  "date": "2026-09-28",
+  "variants": [
+    {
+      "label": "海边日落：中英文图文匹配",
+      "observation": "实际输入包含落日、海面、浪花与沙滩。两种图像尺寸下，中英文日落描述均排在前两位，完整排序一致。相似度是归一化向量的余弦分数，不是分类概率。",
+      "previews": [
+        {
+          "caption": "实际输入：官方 beach1.jpg",
+          "path": "/validation/effects/jina-clip-v2-20260928/input.png"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "候选描述",
+            "512 × 512 分数",
+            "224 × 224 分数"
+          ],
+          "rows": [
+            [
+              "beautiful sunset over the beach",
+              "0.314032",
+              "0.313744"
+            ],
+            [
+              "蓝蓝的天空和海面，在夕阳的照射下，显得非常美丽",
+              "0.322470",
+              "0.327772"
+            ],
+            [
+              "一群人在沙滩上散步",
+              "0.095253",
+              "0.099843"
+            ],
+            [
+              "A red car parked on a city street.",
+              "-0.057583",
+              "-0.054729"
+            ],
+            [
+              "一只猫坐在书桌上。",
+              "-0.028126",
+              "-0.023218"
+            ],
+            [
+              "Snow-covered mountains under a cloudy sky.",
+              "0.061315",
+              "0.081488"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "modelId": "jina-clip-v2",
+        "provider": "AXCLRTExecutionProvider",
+        "completed": true,
+        "sourceSha256": "4180135298358cc8d0903b7e084e8f98091c69a11420d94c6a050895c34dfaa4",
+        "processorRevision": "39e6a55ae971b59bea6e44675d237c99762e7ee2",
+        "processorHashes": {
+          "processing_clip.py": "4e876fe55882f664bf59e354fb0cf29ac6b542f35cafaa4b681b506730c4ed92",
+          "transform.py": "3dbae796192429c203db6840ade96f4a57397e47719675fd28266f7c301906ca"
+        },
+        "inputImageSha256": "b235c4ce0f6f1a3eb1c57d129571030eac0f10beb2de952afeca129846a37ffc",
+        "savedImageSha256": "4f066738a65346c73ed26832cb53e2ca67be0f7c08a953901ff1f08851077f20",
+        "texts": [
+          "beautiful sunset over the beach",
+          "蓝蓝的天空和海面，在夕阳的照射下，显得非常美丽",
+          "一群人在沙滩上散步",
+          "A red car parked on a city street.",
+          "一只猫坐在书桌上。",
+          "Snow-covered mountains under a cloudy sky."
+        ],
+        "embeddingDimensions": 512,
+        "textContext": 50,
+        "inputTokenIds": [
+          [
+            0,
+            34923,
+            4262,
+            3509,
+            645,
+            70,
+            46520,
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            0,
+            6,
+            46438,
+            46438,
+            43,
+            95490,
+            264,
+            2767,
+            2879,
+            4,
+            213,
+            64901,
+            23270,
+            43,
+            8988,
+            20146,
+            1130,
+            4,
+            118543,
+            4528,
+            112895,
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            0,
+            6,
+            81329,
+            62302,
+            13138,
+            205346,
+            575,
+            188955,
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            0,
+            62,
+            4842,
+            2258,
+            9201,
+            297,
+            98,
+            10,
+            26349,
+            48800,
+            5,
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            0,
+            6,
+            79608,
+            35076,
+            48533,
+            9243,
+            159217,
+            30,
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            0,
+            76935,
+            9,
+            63127,
+            297,
+            101120,
+            7,
+            1379,
+            10,
+            76746,
+            53,
+            20704,
+            5,
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        ],
+        "sessions": [
+          {
+            "model": "text_encoder.axmodel",
+            "weightSha256": "ecdfd9d27dd65b6d5f1fb30245b6a568f89937e2566ea72a91c67ffc4be3a693",
+            "loadSeconds": 25.013223619025666,
+            "allFinite": true,
+            "runMilliseconds": [
+              32.7546379994601,
+              17.089719010982662,
+              17.020010040141642,
+              17.00776000507176,
+              17.753555963281542,
+              17.637179989833385,
+              17.568345996551216
+            ],
+            "inputs": [
+              {
+                "name": "inputs_id",
+                "shape": [
+                  1,
+                  50
+                ],
+                "dtype": "int32"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "norm_text_features",
+                "shape": [
+                  1,
+                  1024
+                ]
+              }
+            ]
+          },
+          {
+            "model": "image_encoder.axmodel",
+            "weightSha256": "dd28d8a67bc4e3edce64b33d3cb119b643df23d7d32a38e203956d3d59256a76",
+            "loadSeconds": 7.9693342440295964,
+            "allFinite": true,
+            "runMilliseconds": [
+              603.9533920120448,
+              605.6567349587567
+            ],
+            "inputs": [
+              {
+                "name": "pixel_values",
+                "shape": [
+                  1,
+                  3,
+                  512,
+                  512
+                ],
+                "dtype": "float32"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "norm_image_features",
+                "shape": [
+                  1,
+                  1024
+                ]
+              }
+            ]
+          },
+          {
+            "model": "image_encoder_224x224.axmodel",
+            "weightSha256": "1caf8a85fae042ef52fd060f38f9d48fe935c1d03e7db2992de6b3314fe7ada0",
+            "loadSeconds": 7.029313676990569,
+            "allFinite": true,
+            "runMilliseconds": [
+              63.16280399914831,
+              62.94959399383515
+            ],
+            "inputs": [
+              {
+                "name": "pixel_values",
+                "shape": [
+                  1,
+                  3,
+                  224,
+                  224
+                ],
+                "dtype": "float32"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "norm_image_features",
+                "shape": [
+                  1,
+                  1024
+                ]
+              }
+            ]
+          }
+        ],
+        "variants": [
+          {
+            "size": 512,
+            "weight": "image_encoder.axmodel",
+            "inputShape": [
+              1,
+              3,
+              512,
+              512
+            ],
+            "repeatExact": true,
+            "scores": [
+              0.31403225660324097,
+              0.3224702477455139,
+              0.09525293856859207,
+              -0.05758264288306236,
+              -0.028125815093517303,
+              0.06131508946418762
+            ],
+            "descendingOrder": [
+              1,
+              0,
+              2,
+              5,
+              4,
+              3
+            ],
+            "pixelSha256": "252e6dd7ef6f6dd3f277f547a265ee73d89dce8596a44b9f6a17d0b5f64ded5e"
+          },
+          {
+            "size": 224,
+            "weight": "image_encoder_224x224.axmodel",
+            "inputShape": [
+              1,
+              3,
+              224,
+              224
+            ],
+            "repeatExact": true,
+            "scores": [
+              0.3137438893318176,
+              0.3277716338634491,
+              0.09984313696622849,
+              -0.054729439318180084,
+              -0.023217516019940376,
+              0.08148811757564545
+            ],
+            "descendingOrder": [
+              1,
+              0,
+              2,
+              5,
+              4,
+              3
+            ],
+            "pixelSha256": "f68157952c24a0f3b8b8fbd4eecc11df30ce2e0e51254365d90bcfd3c8f4bdbc"
+          }
+        ],
+        "textRepeatExact": true,
+        "embeddingFileSha256": "dc83d44fab2071a80fecbd5c752b442c255e7d2bb6814273c30114d3cf8d573e",
+        "review": {
+          "sourceProcessorAndWeightHashesMatched": true,
+          "rawVectorsNormalizedAndScoresRecomputed": true,
+          "scope": "One beach image, six short captions, two image sizes and one repeated caption. No full retrieval dataset or CPU reference."
+        }
+      }
+    }
+  ]
+}

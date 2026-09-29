@@ -1,0 +1,186 @@
+{
+  "kind": "vision",
+  "task": "vision",
+  "model": "AXERA-TECH/Qwen3.5-0.8B",
+  "image": {
+    "path": "input.png",
+    "sha256": "622ae2d01ff4467fa69a7888728d776650117a0f4887e96ba0fb9a8a6d77b3c3",
+    "bytes": 355241
+  },
+  "requests": [
+    {
+      "endpoint": "/v1/chat/completions",
+      "request": {
+        "model": "AXERA-TECH/Qwen3.5-0.8B",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "Describe the image in one sentence."
+              },
+              {
+                "type": "image_url",
+                "image_url": {
+                  "url": "[base64 image; SHA256 in image field]"
+                }
+              }
+            ]
+          }
+        ],
+        "max_tokens": 128,
+        "temperature": 0,
+        "enable_thinking": false,
+        "stream": false
+      },
+      "elapsedSeconds": 3.9863227759999518,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "content": "Three astronauts in white spacesuits are posing in a forest, with one astronaut in the center raising their arms.",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1790157175,
+        "id": "chatcmpl-d2a305d1e7b745e92d714eac",
+        "model": "AXERA-TECH/Qwen3.5-0.8B",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 22,
+          "decode_tps": 8.114913940429688,
+          "prefill_tokens": 165,
+          "prefill_tps": 313.92156982421875,
+          "prompt_tokens": 165,
+          "total_tokens": 187,
+          "ttft_ms": 1342.2080078125
+        }
+      },
+      "checks": {
+        "nonemptyText": true,
+        "containsReplacementCharacter": false,
+        "finishReason": "stop"
+      }
+    },
+    {
+      "endpoint": "/v1/chat/completions",
+      "request": {
+        "model": "AXERA-TECH/Qwen3.5-0.8B",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "How many people are in the image?"
+              },
+              {
+                "type": "image_url",
+                "image_url": {
+                  "url": "[base64 image; SHA256 in image field]"
+                }
+              }
+            ]
+          }
+        ],
+        "max_tokens": 128,
+        "temperature": 0,
+        "enable_thinking": false,
+        "stream": false
+      },
+      "elapsedSeconds": 10.570019371999933,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "content": "There are **3** people in the image.\n\nEach astronaut is shown in a white spacesuit, standing or crouching in a forest-like environment with bamboo-like structures and foliage. The central figure is raising both arms, while the two others are positioned slightly apart, facing different directions. All three are clearly visible and identifiable as astronauts.",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1790157186,
+        "id": "chatcmpl-d874e8a5dab3a9a1824901c9",
+        "model": "AXERA-TECH/Qwen3.5-0.8B",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 69,
+          "decode_tps": 7.883092403411865,
+          "prefill_tokens": 166,
+          "prefill_tps": 316.9324035644531,
+          "prompt_tokens": 166,
+          "total_tokens": 235,
+          "ttft_ms": 1888.8489990234375
+        }
+      },
+      "checks": {
+        "nonemptyText": true,
+        "containsReplacementCharacter": false,
+        "finishReason": "stop"
+      }
+    },
+    {
+      "endpoint": "/v1/chat/completions",
+      "request": {
+        "model": "AXERA-TECH/Qwen3.5-0.8B",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "请用一句简短的中文描述图片，不要推测人物的意图或表情。"
+              },
+              {
+                "type": "image_url",
+                "image_url": {
+                  "url": "[base64 image; SHA256 in image field]"
+                }
+              }
+            ]
+          }
+        ],
+        "max_tokens": 128,
+        "temperature": 0,
+        "enable_thinking": false,
+        "stream": false
+      },
+      "elapsedSeconds": 3.811732066999866,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "content": "宇航员在茂密的植物丛中，背景是幽暗的森林。",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1790157189,
+        "id": "chatcmpl-bad596bc92c3f0d39fcb29aa",
+        "model": "AXERA-TECH/Qwen3.5-0.8B",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 15,
+          "decode_tps": 7.58278226852417,
+          "prefill_tokens": 173,
+          "prefill_tps": 323.4950866699219,
+          "prompt_tokens": 173,
+          "total_tokens": 188,
+          "ttft_ms": 1930.238037109375
+        }
+      },
+      "checks": {
+        "nonemptyText": true,
+        "containsReplacementCharacter": false,
+        "finishReason": "stop"
+      }
+    }
+  ]
+}

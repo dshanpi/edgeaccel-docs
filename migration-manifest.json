@@ -1,0 +1,1633 @@
+{
+  "source": "F:\\AX\\AX650N_card\\doc",
+  "documents": 26,
+  "files": [
+    {
+      "path": "AX650算力卡用户指南.docx",
+      "bytes": 45787,
+      "sha256": "993dfa3f8d029eaff5c7b502714611c25f1f2199e2b5d1c904242e5656659e89"
+    },
+    {
+      "path": "AX650算力卡用户指南.md",
+      "bytes": 14108,
+      "sha256": "b4a263d7d29cc60708f98517abc7480a61dcb1d2c95af547ec08208867fd8e77"
+    },
+    {
+      "path": "AX650算力卡用户指南.pdf",
+      "bytes": 426250,
+      "sha256": "4df241236b08b93c7fb1ac0ba6f121cdf186f7c4752c980d838f3534341f9cc3"
+    },
+    {
+      "path": "Linux_x86/AX8850算力卡快速上手_Linux_x86_64.docx",
+      "bytes": 119740,
+      "sha256": "ae7d7a80f363e452869ba261e735b83fd12a9f02da6c2db91bff8d139a06911b"
+    },
+    {
+      "path": "Linux_x86/AX8850算力卡快速上手_Linux_x86_64.md",
+      "bytes": 4832,
+      "sha256": "64c3a71257b60c26bbbd186a724f5d0ebbd5a9bd29889301cd0bb1e07d75215f"
+    },
+    {
+      "path": "Linux_x86/AX8850算力卡快速上手_Linux_x86_64.pdf",
+      "bytes": 331596,
+      "sha256": "ff0c9340a588ef6acc58ed6563595f98b0dc6a69d3784b780533cfb609831913"
+    },
+    {
+      "path": "Linux_x86/images/pac-flow.png",
+      "bytes": 47353,
+      "sha256": "2fd4c8fe544ce6eb50a18b0838bdfc58a91eceb2dc33721c6cef0cdfe0519b49"
+    },
+    {
+      "path": "Linux_x86/images/smi-check.png",
+      "bytes": 34857,
+      "sha256": "3e13818d18b5f9dd5fa8a13b61bc021d8dca26ea3dcd165285f7193a71005f44"
+    },
+    {
+      "path": "Qwen3-VL-8B/records/final-smi.log",
+      "bytes": 1288,
+      "sha256": "600a11ed0edfed3e890dd803688d7cd878309b2fb1bf6f8164ad5ce82ab96a42"
+    },
+    {
+      "path": "Qwen3-VL-8B/records/manifest.json",
+      "bytes": 1064,
+      "sha256": "51bbd711a91aaf524877c62fe09e00a35900274a136da08eb35a14b21b329343"
+    },
+    {
+      "path": "Qwen3-VL-8B/records/smoke-image.log",
+      "bytes": 11727,
+      "sha256": "774ceb42e6aa28489818968643822f6daaa0648de131a1e515ae06422750059f"
+    },
+    {
+      "path": "Qwen3-VL-8B/records/smoke-video.log",
+      "bytes": 14311,
+      "sha256": "51053526daf71d28ae2831d6e0c87b831d7e2b77f3fcadb43574d9d8f824ac0e"
+    },
+    {
+      "path": "Qwen3-VL-8B/records/validation-results.json",
+      "bytes": 5853,
+      "sha256": "6475ba7db351c8374b027cfe27bfbad2670fa8115ba5bf9f04fefeeca8ae532e"
+    },
+    {
+      "path": "Qwen3-VL-8B/部署与使用.md",
+      "bytes": 4698,
+      "sha256": "98eea7bd0d1a40f5f6ce13078d5f07fee63f11485fb922b989dfc5cd19c4740d"
+    },
+    {
+      "path": "Qwen3-VL-8B/验证记录.md",
+      "bytes": 4545,
+      "sha256": "1a114191b070280bf5617ed4ee378fa5a5c9969defa371cc74716dee3455f3b8"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/VLC断流排查_20260918.md",
+      "bytes": 3241,
+      "sha256": "8fc19d5efc30b0c3d00090aebbd39fa58f39e49de2752c4047202085ddaa8da1"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/bin/SHA256SUMS.txt",
+      "bytes": 388,
+      "sha256": "ad480f0afe7a8d689d9a8977539ebee03b6dd94411a8917157748c7676d4dc70"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/bin/plugins/libax_plugin_pcd.so",
+      "bytes": 703512,
+      "sha256": "74f21bcf65f985fca1063ac8d3861f846d47008b427523e311cdc46980d92d11"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/bin/plugins/libax_plugin_yolo26.so",
+      "bytes": 781248,
+      "sha256": "be717cee94e486f9adfca0ef3f7a36ae39f998109112f288efdda630e31349c5"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/bin/plugins/libax_plugin_yolov8_split.so",
+      "bytes": 781456,
+      "sha256": "929c17faf280d45eea2362fc20743c4c1ff598cd7f608b59f5a1a73f61323a48"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/bin/six_app",
+      "bytes": 733288,
+      "sha256": "099541053bf6b8139e36cd7af753200b8e82b445b3e18a21def3435e3a8ca646"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/axcl-smi-final.txt",
+      "bytes": 1486,
+      "sha256": "122352ddfe74b7f231a2e447b1c52c6fea58560b966fe99b8e502e99851f6214"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/driving-half-speed/config-backup.txt",
+      "bytes": 79,
+      "sha256": "52a2e32f64ddd0155b1eede4fe9c8c94049375029bba91e11de8ab5969749311"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/driving-half-speed/content-timing-check.log",
+      "bytes": 2131,
+      "sha256": "3e76a48ef79a47a60dadd03d10810eba555afbeacca8dfc9a80cdbd7ff5ab75f"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/driving-half-speed/deploy.log",
+      "bytes": 2316,
+      "sha256": "595e1def72ad9eda7eaa60e7a44f1fc8c454d67b757beaacf468e428e6663d32"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/driving-half-speed/encode.log",
+      "bytes": 6915,
+      "sha256": "0eddb956482ac16df8e2ecdcd880d23bc32e312182f3cc86b9e2ddd2b098856a"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/driving-half-speed/encode.sh",
+      "bytes": 1775,
+      "sha256": "929f8e1fa47cf0750f4d14d460a2569bed1daf3dc54d83b486de21dc948dee18"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/driving-half-speed/input-probe.json",
+      "bytes": 2881,
+      "sha256": "e15bbec4b92ff7c4c671973ec1a761f8c713b1d92bfce1dc60d340b3d2d182a0"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/driving-half-speed/live-check.json",
+      "bytes": 1441,
+      "sha256": "7161ec5c0c5e26c27d74ab4ff8a415c45fb0902cf14375dccfba1cf7a28e0cac"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/driving-half-speed/live-journal.log",
+      "bytes": 10824,
+      "sha256": "e7a0bd0d2ce0b7ba2f7e7972a510a55f84a9d7acd238c69d0d613a779b389002"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/driving-half-speed/output-probe.json",
+      "bytes": 2864,
+      "sha256": "248340b187b98f89c02e41560b33afa5dcc56b4d5907133b7a279ab687516fda"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/driving-half-speed/overview.jpg",
+      "bytes": 154148,
+      "sha256": "14facf875bbb7538c381e1a950a18da9cee762d104bcf996bd43972174c1dc33"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/lan-rtsp.json",
+      "bytes": 3269,
+      "sha256": "bcfbd48f2c0af981acc58f653458911f4b7f180da8ca668d760fcf827716b18d"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/models.json",
+      "bytes": 885,
+      "sha256": "2a44265c5c8fedd6252f2cc039ed934ffb8898bb0fccc5d4f63a250c56e544d1"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/normalized-videos.json",
+      "bytes": 23006,
+      "sha256": "ccecb550224720150bf05d5634c13bbbdb9873f8be4d11e48a05c81dcd03a3e1"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/npu/async-bench.log",
+      "bytes": 348,
+      "sha256": "e4edaf3de2fb452e9e7e2b00597bb144c2d2c3f38c1c131abee0a179543db0f0"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/npu/baseline-journal.log",
+      "bytes": 16822,
+      "sha256": "cec1c82e0de7c781c4d422b277b393f9ac4423f7f15a26bc12607af5c0ea615e"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/npu/baseline-smi.log",
+      "bytes": 20817,
+      "sha256": "8b3485b6c1f2384f68c15ca726ebe88d12b4d91f0c827cd8db7d4cd97e52f8c8"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/npu/baseline.json",
+      "bytes": 2837,
+      "sha256": "35beb2140e30e65ea4ce736d1e1ec7c8b1cac0c5a549ef2bfd0f3aa55cc9f6f5"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/npu/chunk-1m-journal.log",
+      "bytes": 80718,
+      "sha256": "609904eaeb881a8d5b07a19e03b847fd25e620035497d46353b0094e957216fb"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/npu/chunk-1m-smi.log",
+      "bytes": 20817,
+      "sha256": "2c0e99cc141d475916cca0fbc11f6830c2fbb543effddb9d9e595174f13d7589"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/npu/chunk-1m.json",
+      "bytes": 2839,
+      "sha256": "890f1a0fa8e1ea7637a03609cff1d860d59241b29c506a7e19fe60f0bf82ffec"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/npu/chunk-3m-journal.log",
+      "bytes": 81169,
+      "sha256": "78321c1f369e81330037c6edc131fe22ae734199c2eda3e41e50d0e256ab3c06"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/npu/chunk-3m-smi.log",
+      "bytes": 20817,
+      "sha256": "db008e58f412bfd25acd4ca4ac5f3fb4168072fc32c49ed1478ca93cf2989f32"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/npu/chunk-3m.json",
+      "bytes": 2847,
+      "sha256": "fe22fe2528304e73db4eab32f8188fcaef3de433af444470980386bb72d814dd"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/npu/count-decode.log",
+      "bytes": 1027,
+      "sha256": "94a78dae086f8bf53d9b0085e08f888e4de5b5d8d44d47096f5cccc700525902"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/npu/count-live.jpg",
+      "bytes": 130139,
+      "sha256": "683ecb786570d4873ff3a9df3bff58e4ff72d5736a152ec39e794152dd9d5577"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/npu/deployed-journal.log",
+      "bytes": 28424,
+      "sha256": "a1c167528b4435b7e9b35c296fe092864cd46403012f5de4c00ecfa0cbeff016"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/npu/deployed-smi.log",
+      "bytes": 35687,
+      "sha256": "88673b7f69ae6e6b6d25a4272e737fac0eabf9a8bb2d8418a5a972c24c2011bf"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/npu/deployed.json",
+      "bytes": 3664,
+      "sha256": "927ef07ccbdc70f8d288df6f960f8620ad87e581accc19d79bb9a89b26ed89a5"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/npu/depth-decode.log",
+      "bytes": 1145,
+      "sha256": "3174761b251d747d1ba0a4e229dead806493999bfd1adf62696da6e97b07c528"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/npu/depth-live.jpg",
+      "bytes": 81216,
+      "sha256": "251f4981055bafed69341dba0adc0db22ee9e9ca8e5463df92ae6495be33bc62"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/npu/driving-decode.log",
+      "bytes": 1043,
+      "sha256": "84ef7ea2f908d0f17c94dfb1676b34d197c949f42afc5220389d7b9e9dca59b7"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/npu/driving-live.jpg",
+      "bytes": 84340,
+      "sha256": "19f00dc32a6fe1e6af2773b346ccff7d626f850eda75a89d1a78eff456d21598"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/npu/equivalence.log",
+      "bytes": 5494,
+      "sha256": "c6ac3e47412fee7513feba8bfe69ab28d51b273915a4763ee5e67d38bb4067c7"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/npu/final-status.log",
+      "bytes": 553,
+      "sha256": "1e7b77a2c11852320e592af6467fd6959ad68ef756f0a1b80d028b5dd882d3e7"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/npu/gate-2-journal.log",
+      "bytes": 80275,
+      "sha256": "b8b2e81164ce6c20a2da3c2a758cb2ec8a7c64acc465c045962bdc71b3b6ae12"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/npu/gate-2-smi.log",
+      "bytes": 20817,
+      "sha256": "109d0d6ed38caaf6e830c5f048fcc439bb25c81a2646b4747aa4be8aa5f34171"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/npu/gate-2.json",
+      "bytes": 2830,
+      "sha256": "6b734dc2120215378bb53e05e68f4619d292cccaa7d0d077875556ccbc2ed0e9"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/npu/hardware.log",
+      "bytes": 403,
+      "sha256": "58da7e059335302fde96cc1bc62cf0cd9acaee7d49d60cb7eda31e7d1e39424f"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/npu/lan-rtsp.json",
+      "bytes": 3207,
+      "sha256": "f87b043f17d0cc2a55400aed24b728eb38920320ec96ce8fffc9ba4113d3ca98"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/npu/mask-equivalence.log",
+      "bytes": 638,
+      "sha256": "5ae7cef362c0d30c0b17e843795c0830a8b31af845e9b6d0b41047748f918f03"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/npu/overview-decode.log",
+      "bytes": 1131,
+      "sha256": "12580c92a41b12ce9827917b661e0a0286eed7b41ffe495f8e3fee7f05882145"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/npu/overview-live.jpg",
+      "bytes": 150504,
+      "sha256": "81ad685029f083e38df597d2fe2c788097fa7c56f218c99af43e85c7f6bf06f5"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/npu/packed-release-journal.log",
+      "bytes": 81788,
+      "sha256": "260cf7858e16991ad97c1b77772dd28ace1b54dacb001b0bc5be3d83bd991df0"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/npu/packed-release-smi.log",
+      "bytes": 20817,
+      "sha256": "fe06f0fb06edc395f611bc4c360b80ae8bf5b32de67161fa68517b814c892845"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/npu/packed-release.json",
+      "bytes": 2849,
+      "sha256": "9ef025a6bc813456e2d00e778ef45c071976e7837e5f7b1ba4ea009b622bafae"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/npu/pcd-decode.log",
+      "bytes": 1187,
+      "sha256": "d038f6e52625a7dcf6f15c099ae2c4f1379f0abb89a0ac404c410f258c0fd2b6"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/npu/pcd-live.jpg",
+      "bytes": 172989,
+      "sha256": "ae2cb71c47f9a0e23a05f5878e39e30a22d2a9b16304541580053ee022ee6abe"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/npu/release-only-journal.log",
+      "bytes": 81254,
+      "sha256": "2e3092e8a67e95cb68eeba5ed758bd731e8aaf96991438b9655ee513c12d62c8"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/npu/release-only-smi.log",
+      "bytes": 20817,
+      "sha256": "7fcb747be8d1b26a6845c5d464b5e3156aa626025836313e9a727d88f0df1bda"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/npu/release-only.json",
+      "bytes": 2838,
+      "sha256": "ba3a3f77737ea9149138a3bc1b22c987806a2a27c59ef72ecc2f04445e2528c3"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/npu/rtsp-validation.json",
+      "bytes": 1142,
+      "sha256": "6ad59b16a7b6d56bb816972f56d426b624d7a76681396a37c8fa46ac6695d089"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/npu/seg-decode.log",
+      "bytes": 1025,
+      "sha256": "c31da50f831929010aab523107301fba4c82313cbfadcadf64c92081be665333"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/npu/seg-live.jpg",
+      "bytes": 101476,
+      "sha256": "15298e7593d5fdf5ee8ee890cdf7398a3e7cd788a0f9428bbc5679da27893ac7"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/npu/vehicle-decode.log",
+      "bytes": 1036,
+      "sha256": "ff2946374674572038feadf7c1dd036baca6b50f2917c6bd3f962399ec272378"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/npu/vehicle-live.jpg",
+      "bytes": 115010,
+      "sha256": "83f9e78bca4d689c81f6c402a35280a931f79440ddd78b9bb0acd811906d32f4"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/perf/app-sha256.txt",
+      "bytes": 386,
+      "sha256": "7666fb4503e81bdb99950feb12d0ca5609e7f40605ae4f2b66b17ac0f55d3292"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/perf/axcl-smi-final.txt",
+      "bytes": 1486,
+      "sha256": "abf8c7d7c8aa443809e90104f28a2a5bb8e7be6f1b395be51da1663c2dce791f"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/perf/baseline-fps.log",
+      "bytes": 3759,
+      "sha256": "859c2eb9d81a79c42c4c717459bab6746f60561cb1cc915b2331ea4a669b37d2"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/perf/count-decode.log",
+      "bytes": 1044,
+      "sha256": "850530e2660e4abd9b5db3b9aaf25adec322af456724787698288710888361f4"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/perf/count-live.jpg",
+      "bytes": 117149,
+      "sha256": "02e504152b2ffd0481e85738409a36ff289adaa4a0095a0bef3afdfb5c21e71d"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/perf/depth-decode.log",
+      "bytes": 1162,
+      "sha256": "61858393654823a790b74c2710e478aabec65cdff540689f7a1a1dd963aedf7a"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/perf/depth-live.jpg",
+      "bytes": 79667,
+      "sha256": "be147d05c583a9121f45d8b67dc7c58530d2ffe040b221f6f1f44e7ac60a5cf2"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/perf/driving-decode.log",
+      "bytes": 1147,
+      "sha256": "56d620d748ed7eab5e6681931ff2453d87705dd30b3ee8ef6e0ca83dd1e020c1"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/perf/driving-live.jpg",
+      "bytes": 114473,
+      "sha256": "7b36d18a61e165813db5c7f38f9e7295641f424953113545a954182d947c3fa8"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/perf/lan-rtsp.json",
+      "bytes": 3207,
+      "sha256": "93349d6eb572c2af54e49556a647ec862bcb93d062ecd44654909dac38dfd88c"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/perf/overview-decode.log",
+      "bytes": 1131,
+      "sha256": "36345dd5198b725c3f1fb49c6c9ca5e370969e5fe10e22a9c0a0ccb597dadf93"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/perf/overview-live.jpg",
+      "bytes": 141577,
+      "sha256": "b5a9f1ed655faff01c6ca55994174d51d17edf25205150d910132385e5f4223e"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/perf/pcd-decode.log",
+      "bytes": 1123,
+      "sha256": "2aea890c8b7314172df1635293a9b96ac4fc1c81dae542f0f413cbc827761fb7"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/perf/pcd-live.jpg",
+      "bytes": 167839,
+      "sha256": "70ff15fd1cdb1ac679fbf08e1859e407e4dc59e723f5b9e2cda39049d0467a1c"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/perf/record-overview.log",
+      "bytes": 9133,
+      "sha256": "d42876dfae117313750c80e7acc4e9635828b3ee29c30c771e289c43ce994183"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/perf/recording-final.json",
+      "bytes": 2660,
+      "sha256": "654f725d522a2950ebcf8f6b93d4340e252e970933731217daab28675ccd5e75"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/perf/rtsp-validation.json",
+      "bytes": 1141,
+      "sha256": "0194dea63c222aab0ed9a1f03a0c5ce3d94d53abc66801a5984b84043ff84cfb"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/perf/runtime-final.log",
+      "bytes": 37672,
+      "sha256": "5489fdf5e8a7cf96c428dccd6b3a4d60b9b17a02f3abf5ed339b7c94dfc7cfef"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/perf/seg-decode.log",
+      "bytes": 961,
+      "sha256": "1b568223b2570845b017ed9a978943f66548f2c14d9884c4d13fc8aa2d93ac55"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/perf/seg-live.jpg",
+      "bytes": 67973,
+      "sha256": "c7658999a808ab7d075294b58210eaa2412651be9adcb0af850e981642771cfc"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/perf/validation-summary.json",
+      "bytes": 5384,
+      "sha256": "b8d32112835e9067ac4e406093607b7a7a95a4cffef17a0a8b6823d52be8f863"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/perf/vehicle-decode.log",
+      "bytes": 1046,
+      "sha256": "23de621cbb724735d55a194f375f5de8eb3cef0d6abbc8becec1f0f70df72ff7"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/perf/vehicle-live.jpg",
+      "bytes": 117980,
+      "sha256": "191c1d8fa8c8952bda8e30165b50433a592d0e4060c511f392ede6361906d0a8"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/recording-final.json",
+      "bytes": 2623,
+      "sha256": "30e0e17c548aeb3596fe4eb4cee9e73bef2cc27c0504db48fdd78247fcf49d7f"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/rtsp-validation.json",
+      "bytes": 1480,
+      "sha256": "99cee93f8ab1b9b21f57638ca2e245bdb161fe98b8aadb163dc7dc55c993e18a"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/runtime-final.log",
+      "bytes": 28763,
+      "sha256": "d7d9ad7047baee61cc7f52d4d5f58a34551c39ddfc5bca7fecab2d4bafde2820"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/seg-half-speed-20260918/config-backup.txt",
+      "bytes": 84,
+      "sha256": "cf0bc603b1aa0027b3d4f0d55bc99df39b082ee6fcf63ea6b6662a9c2d157fb5"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/seg-half-speed-20260918/content-timing-check.log",
+      "bytes": 2148,
+      "sha256": "ee1be58aa487c612e5f3d96a608b94b5e182500a28082033c430fdc78765aa03"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/seg-half-speed-20260918/input-probe.json",
+      "bytes": 2888,
+      "sha256": "3164fc0b7eaff4ed9ebe5659fa4439178f564af2fc6426f495470648db66f0bc"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/seg-half-speed-20260918/live-check.json",
+      "bytes": 1434,
+      "sha256": "d009b270260ebdc14643525ee9e3204e775dc81de7e58fe42f051078e82e4244"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/seg-half-speed-20260918/live-journal.log",
+      "bytes": 10813,
+      "sha256": "f431901fdb2610c278fb6723b38357091dcd0474364c0f68bdd20cda63832936"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/seg-half-speed-20260918/output-probe.json",
+      "bytes": 2856,
+      "sha256": "7f975470075166d8934bd2f9bb211a10b3135672c30ae1fb3136ad8abe90e24c"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/seg-half-speed-20260918/overview.jpg",
+      "bytes": 153603,
+      "sha256": "f28e7a86650d9dbbaa545ad833f71119ed4daabf81ddb71eb2f0f65fd4dac08a"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/seg-half-speed-20260918/six-seg-slow-content-check.log",
+      "bytes": 43,
+      "sha256": "62fbfa398deab8359be212014b8dabebde6d30b6e4a6bce3e26a1cdf39242da1"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/seg-half-speed-20260918/six-seg-slow-deploy.log",
+      "bytes": 1893,
+      "sha256": "2c4d189f4a68a365670285b57e129ac1b3f17be297789bc1d4f4a4f85392b400"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/seg-half-speed-20260918/six-seg-slow-encode.log",
+      "bytes": 5898,
+      "sha256": "fc8347c9b9f6aacb456c72abf590a9d4809a94fc7af341965e7fdca59b736495"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/seg-half-speed-20260918/six-seg-slow-encode.sh",
+      "bytes": 1803,
+      "sha256": "d496e9307fc5dbc86cd0c1ee20753f12f1fe67569ed6f829fc91a254ac55bd3c"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/traffic7/desktop-vlc.log",
+      "bytes": 421,
+      "sha256": "37d649815b6af3737f37b7070b3e48a4c1a5d5bb023196275ceab5b776e5b7ed"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/traffic7/driving-live.jpg",
+      "bytes": 119613,
+      "sha256": "7c4e6fd3b0ad31e1e328ed4bae56646aaa9fabf4a745b03853b8dbe432502188"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/traffic7/fps-final.txt",
+      "bytes": 640,
+      "sha256": "e07496b5f4a1d21f4798d74dd84a3919446626e889be93c68d1448628ff7b448"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/traffic7/local-preview-service.log",
+      "bytes": 2394,
+      "sha256": "2e68c36335d986b503527fbb6b69671f641a62b21fe5658df5f94cb7256f257a"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/traffic7/normalized-probe.json",
+      "bytes": 2889,
+      "sha256": "c5441cfbe3170cd28db0c282ca95d05f90e6b498c5be6ffd120505e3ec56e83b"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/traffic7/overview-live.jpg",
+      "bytes": 155833,
+      "sha256": "b2c2ce50c134c95edd938f3e1a9fb51e64fd7c4db730b410cf6431692b533ed4"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/traffic7/service-status.txt",
+      "bytes": 101,
+      "sha256": "41b553029678424f1f9b3b55d0bcad5b6b279448048b52f83a59d81100b98623"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/traffic7/sha256.txt",
+      "bytes": 487,
+      "sha256": "2fbb69c0cd4127aaea55530cefcc8c7de7dbc0b031a2120935967ee433ad6a31"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/traffic7/source-probe.json",
+      "bytes": 4590,
+      "sha256": "6a018364a3cfca60acc12f7e9a66ea41ba994c67987560a015f72b0720fa590a"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/traffic7/vlc-driving-http.log",
+      "bytes": 1332,
+      "sha256": "c4c377a9abbf6690e73395c10571fe23d8b0ee1d94ed272a3993f6ccbd770839"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/traffic7/vlc-http-validation.json",
+      "bytes": 195,
+      "sha256": "d3316818f776c33aa7266b78a7af4163fc9d4f1117c204a806337b1f058309ac"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/traffic7/vlc-overview-http.log",
+      "bytes": 1332,
+      "sha256": "d8bf4f44b791980e18869b82535770a64dd2446676a539a69757f1aea132e2ba"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/traffic7/vlc-rtsp-probe.log",
+      "bytes": 12536,
+      "sha256": "7f3398212d290542426f05bc3f59ac37f77cc634446e8879159ec3908a979565"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/v2/axcl-smi-final.txt",
+      "bytes": 1486,
+      "sha256": "0408de06f3f66e8d35de601a4ed5736e395a2859f06def0cad8b90ff1914f2db"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/v2/count-decode.log",
+      "bytes": 1189,
+      "sha256": "6b79e8739963b6a75a8b00ffdbc8fdde4831907da8ed4359a13f6de94c32c1d6"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/v2/count-live.jpg",
+      "bytes": 144915,
+      "sha256": "049cf1745c27896cafccc72aa1c69a8502bcaf205243a0ac2e98b98d891488eb"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/v2/depth-decode.log",
+      "bytes": 1189,
+      "sha256": "c8c99a2662998fdb8016802cc4b71fb77692b2e6f69d77e5d6cb4b217ad73644"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/v2/depth-live.jpg",
+      "bytes": 86623,
+      "sha256": "75b1df68bfe6ce4a3e25375b4bb442c214f73295a65b01e9e292153388e2c2e1"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/v2/driving-decode.log",
+      "bytes": 1208,
+      "sha256": "489d278f73ecf86e7c0cc96ba501ecd3a0ea8f8c171d5121794bddecfb4becf8"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/v2/driving-live.jpg",
+      "bytes": 129656,
+      "sha256": "1ae190ef610c5ff432f922f1872430a890e135c0a095280e2ac09da41e7ee1e0"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/v2/lan-rtsp.json",
+      "bytes": 3207,
+      "sha256": "a122eb7ec5ae7c77ea0ff960db96520b8078a9e093c118974dc888ff8cda010d"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/v2/overview-decode.log",
+      "bytes": 1374,
+      "sha256": "7270dc27f33aa267ca319b213ad0315461cb0d6a3a88f3a6a196202bf1054ef9"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/v2/overview-live.jpg",
+      "bytes": 176263,
+      "sha256": "e344a50a4913f926f8b6f50af8fec96efdd5c52636a608daae80750bde95651d"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/v2/pcd-decode.log",
+      "bytes": 1204,
+      "sha256": "cb7af3e36a37f32459347fbb5d9b1b4dea2e1015251d4a67166654321249f51c"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/v2/pcd-live.jpg",
+      "bytes": 172256,
+      "sha256": "de87ab7c405584a708a8782883ac8ea05e83d90b105903f415692a47cd1a973c"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/v2/recording-final.json",
+      "bytes": 2646,
+      "sha256": "086928731768031fc563cc04c43f51c57940a7db053071ad9d2f69588e3af809"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/v2/rtsp-validation.json",
+      "bytes": 1139,
+      "sha256": "35c5ebb13015c0a6b40bd30f119fdfbb14fd33dd7063359e1b3123ff1d425b2a"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/v2/runtime-final.log",
+      "bytes": 46784,
+      "sha256": "85a9703a59762d7f28f257ff47f3acb11b5fb5df86c5dadfdf7579ecb2ba0b29"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/v2/seg-decode.log",
+      "bytes": 1187,
+      "sha256": "b1f530056476f2ac581412b8e7fa09f838b36ac925aa420b0288770e35380988"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/v2/seg-live.jpg",
+      "bytes": 98598,
+      "sha256": "aae1bca6b3e995f747e013671faca697ba3350ab0d2b97dabaed09bffa6d8d13"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/v2/validation-summary.json",
+      "bytes": 3355,
+      "sha256": "3282e7cae5549e377fef8910c9effc9c3bfb37599cc8a95db4b0241c641c4b17"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/v2/vehicle-decode.log",
+      "bytes": 1208,
+      "sha256": "3bce5eb0957ec1468d55eaf4125c06bd328fd67fad593089a70645ef4fb2a6ef"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/v2/vehicle-live.jpg",
+      "bytes": 134629,
+      "sha256": "cd17bd95adbb0df84c2fa87d9a1ad88d111fed4c835938d84ed6a7fe547697e1"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/validation-summary.json",
+      "bytes": 3077,
+      "sha256": "7e1069ce90378f120896015d43f2e6b8930f8dd3c8833d5a48eb28755987d4a6"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/vlc-disconnect-20260918/vlc-bridge-baseline-final.log",
+      "bytes": 327,
+      "sha256": "a0d1a72cd2995ca6de8d40421fdbd5eabcafcbddcb3ad971d9d7dc6036188862"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/vlc-disconnect-20260918/vlc-desktop-baseline-final.log",
+      "bytes": 29012,
+      "sha256": "b58ca22a9c75e60e16a8103b3eb27164a425028b604afea5cf57c90523825bc0"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/vlc-disconnect-20260918/vlc-desktop-early.log",
+      "bytes": 26692,
+      "sha256": "558bd6e9b82985a27774d813a0ae1398c5cc9a093deedf71151a98322405b55b"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/vlc-disconnect-20260918/vlc-desktop-reproduce.log",
+      "bytes": 106,
+      "sha256": "2441e4d8ed73b0921fa3a5e51968a608690079ae86cfce679a8955ceee11fab2"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/vlc-disconnect-20260918/vlc-desktop-snapshot.log",
+      "bytes": 8278,
+      "sha256": "b603430a3867a8c1424cee0bc785dd4a8fb83d9254b1ef7306fc0e7ae53fe890"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/vlc-disconnect-20260918/vlc-desktop-snapshot2.log",
+      "bytes": 8400,
+      "sha256": "ee92d54e060e4b4b1c2db51eead13ffddaffc6a70a4b1e6167cec569d51bdfff"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/vlc-disconnect-20260918/vlc-desktop-snapshot3.log",
+      "bytes": 8396,
+      "sha256": "cd3e4330ed6be72533856c00320d2148d20da5da495d1432d41dd83aab679f07"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/vlc-disconnect-20260918/vlc-desktop-snapshot4.log",
+      "bytes": 8396,
+      "sha256": "6fd4b0af1af59959c5d6be1a43cf271dfbb6260ecf4c8bb2872f4f8be4ac2e4e"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/vlc-disconnect-20260918/vlc-direct-http-final.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/vlc-disconnect-20260918/vlc-direct-http-final.progress",
+      "bytes": 109906,
+      "sha256": "810fc49a4b905ada664064d72ed38d5b34b98e44842104022d00df13aac7028b"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/vlc-disconnect-20260918/vlc-direct-rtsp-final.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/vlc-disconnect-20260918/vlc-direct-rtsp-final.progress",
+      "bytes": 110796,
+      "sha256": "86873449259a5ef4066b529582d4bdc8f3d22948afeb3f372e3f6a7736e62c5d"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/vlc-disconnect-20260918/vlc-disconnect-detail.log",
+      "bytes": 12502,
+      "sha256": "b45df8021a20c7558520c64a547df8d765bec5493c2593a1c2f681d3bdeb1d15"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/vlc-disconnect-20260918/vlc-disconnect-finish.log",
+      "bytes": 36,
+      "sha256": "15aa25fdd90bd803f251111dd07949d2feb5f3c96af2641ed3b037042d6c8052"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/vlc-disconnect-20260918/vlc-disconnect-inspect.log",
+      "bytes": 15807,
+      "sha256": "77b59c97b1181ba6f61f0d17b8dcdda98c1818e8d27eaec7b839a96526b30ac9"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/vlc-disconnect-20260918/vlc-disconnect-reproduce.log",
+      "bytes": 1586,
+      "sha256": "c8796ee538d8f19fe2255e7aab629909660236193ba879bf6432fbe60edba565"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/vlc-disconnect-20260918/vlc-disconnect-snapshot.log",
+      "bytes": 7846,
+      "sha256": "e6af5b8e7d0251158f3c5eb251e206d9ec10072364727ce3714179057f71354e"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/vlc-disconnect-20260918/vlc-headless-baseline-final.log",
+      "bytes": 38265,
+      "sha256": "821d9c7c9c040e335c8d0c8e29d897a42c97c5a4cf5ce27dbfef93a1bc5782b6"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/vlc-disconnect-20260918/vlc-restored-check.json",
+      "bytes": 497,
+      "sha256": "836f95d06a1722df7bdd98518b2a8a862e392e51e0c54e478a9f604a4aed307c"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/vlc-disconnect-20260918/vlc-restored-check.log",
+      "bytes": 812,
+      "sha256": "9a154c44b9cd95e192354a1c4f5d6c2eee3b4f4d23fd0d9d9110dbffced06696"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/vlc-disconnect-20260918/vlc-restored-check.py",
+      "bytes": 1189,
+      "sha256": "283ca1e1d112deb0003ba939e9ce608f64a4cee794ae2d26df2fc70d69db69dc"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/vlc-disconnect-20260918/vlc-restored-check.sh",
+      "bytes": 186,
+      "sha256": "71691b17b7030003a89cb88f102a92ae8561fb3a4f487523d7a938a5bccf1a65"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/vlc-disconnect-20260918/vlc-restored-final.log",
+      "bytes": 26426,
+      "sha256": "a8b07cf25442292857492ef7d627b25db73d6dd742e437610cf9e13d4403e749"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/vlc-disconnect-20260918/vlc-x11-early.log",
+      "bytes": 68812,
+      "sha256": "d3ccda407ff916cfe40cf0754fa7f49045151cb0daf2c433055028e87fc82ace"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/vlc-disconnect-20260918/vlc-x11-launch-final.log",
+      "bytes": 1086,
+      "sha256": "1f446a1eccd094de60f92def8b4b04eda89e523ccf9cba45d3bf37612bd7a6f7"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/vlc-disconnect-20260918/vlc-x11-launch.log",
+      "bytes": 1179,
+      "sha256": "c092187c9b3a1ac6d366075483155c3e132b4e1a5a69c16691fb2dab8aa6b442"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/vlc-disconnect-20260918/vlc-x11-monitor.log",
+      "bytes": 448,
+      "sha256": "b474b95c9c5f7d893f740462c06d91b3dc655735dca5f03ea6337e04ac8ae117"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/vlc-disconnect-20260918/vlc-x11-start-error.log",
+      "bytes": 2264,
+      "sha256": "cd9a154ef3140d2aef8b385e11301ac7e475a6b00eaf82e463b4972309ff7f92"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/evidence/vlc-disconnect-20260918/vlc-x11-state.log",
+      "bytes": 8784,
+      "sha256": "a23afae3d2407f6dc8f5e07e3b6676debfe1f11121724824654e7951521a7a75"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/images/count-final.jpg",
+      "bytes": 134974,
+      "sha256": "c50f8e759fd8514c272dadb7cc9f268afa2d23a12ba792baebe33144f8d3e11d"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/images/count-perf.jpg",
+      "bytes": 117149,
+      "sha256": "02e504152b2ffd0481e85738409a36ff289adaa4a0095a0bef3afdfb5c21e71d"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/images/depth-perf.jpg",
+      "bytes": 79667,
+      "sha256": "be147d05c583a9121f45d8b67dc7c58530d2ffe040b221f6f1f44e7ac60a5cf2"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/images/depth-v2.jpg",
+      "bytes": 86623,
+      "sha256": "75b1df68bfe6ce4a3e25375b4bb442c214f73295a65b01e9e292153388e2c2e1"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/images/driving-perf.jpg",
+      "bytes": 114473,
+      "sha256": "7b36d18a61e165813db5c7f38f9e7295641f424953113545a954182d947c3fa8"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/images/driving-traffic7.jpg",
+      "bytes": 119613,
+      "sha256": "7c4e6fd3b0ad31e1e328ed4bae56646aaa9fabf4a745b03853b8dbe432502188"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/images/driving-v2.jpg",
+      "bytes": 129656,
+      "sha256": "1ae190ef610c5ff432f922f1872430a890e135c0a095280e2ac09da41e7ee1e0"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/images/overview-final.jpg",
+      "bytes": 181419,
+      "sha256": "0b10b5ecc19715c2137455de43e6295eaa53fdf315052ce0b741f7bc76042f4a"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/images/overview-no-filenames.jpg",
+      "bytes": 151852,
+      "sha256": "b2576fd18b69ff67fd61aa9abff7ae223f50faa09fef732a4dda25db3e013437"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/images/overview-perf.jpg",
+      "bytes": 141577,
+      "sha256": "b5a9f1ed655faff01c6ca55994174d51d17edf25205150d910132385e5f4223e"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/images/overview-traffic7.jpg",
+      "bytes": 155833,
+      "sha256": "b2c2ce50c134c95edd938f3e1a9fb51e64fd7c4db730b410cf6431692b533ed4"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/images/overview-v2.jpg",
+      "bytes": 176263,
+      "sha256": "e344a50a4913f926f8b6f50af8fec96efdd5c52636a608daae80750bde95651d"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/images/pcd-perf.jpg",
+      "bytes": 167839,
+      "sha256": "70ff15fd1cdb1ac679fbf08e1859e407e4dc59e723f5b9e2cda39049d0467a1c"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/images/seg-final.jpg",
+      "bytes": 121893,
+      "sha256": "74c776a8db77c4c7376309bb44cdf3c2c00940edbbc29547b67f703b17e5c455"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/images/seg-perf.jpg",
+      "bytes": 67973,
+      "sha256": "c7658999a808ab7d075294b58210eaa2412651be9adcb0af850e981642771cfc"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/images/seg-v2.jpg",
+      "bytes": 98598,
+      "sha256": "aae1bca6b3e995f747e013671faca697ba3350ab0d2b97dabaed09bffa6d8d13"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/images/vehicle-perf.jpg",
+      "bytes": 117980,
+      "sha256": "191c1d8fa8c8952bda8e30165b50433a592d0e4060c511f392ede6361906d0a8"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/source/build.sh",
+      "bytes": 948,
+      "sha256": "52c318c3725ac0b99c0142a5d966f1c3e2cbf6e5db258f78b915012d8b7b84f2"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/source/config.json",
+      "bytes": 3705,
+      "sha256": "cf725c3fce80faafcfb6f69605782cd51aca766d7cccb06e98bdddb2a2891ea2"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/source/fps.py",
+      "bytes": 1748,
+      "sha256": "00faf830d0095e5eb20f1a8ea7e602dc31a19c264a73cb150f1458f532eb4fe3"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/source/local-preview.m3u",
+      "bytes": 674,
+      "sha256": "0df7fd28e2b4ca5f45fbc47fa211b2c8d15a00af4e77cdd11de7ea2dcd513a20"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/source/local-preview.py",
+      "bytes": 3567,
+      "sha256": "f1ef63012f058026a05355f9cbf196392760a27a5f384ad1c1e5f12f55a92d10"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/source/npu-perf-src/ax_model_runner_axcl.cpp",
+      "bytes": 22139,
+      "sha256": "5bb5504c21e41b40b124c5bb27f3b2c15c1204811d15de88d4098ef440e1a82d"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/source/npu-perf-src/ax_model_runner_axcl.hpp",
+      "bytes": 1727,
+      "sha256": "a0b5e61745b81e1c267bc1dc2130ecec50b3ebec7efd8d23ff8a43b6f89de40d"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/source/npu-perf-src/build-release.py",
+      "bytes": 2751,
+      "sha256": "718d794e77f90b9d76c74de57474ebbd1c0c16fa5308370ab1a9c854f09b925b"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/source/preview-debug.sh",
+      "bytes": 596,
+      "sha256": "368c96db670ffb8cc3f968baded6b88f396e6235d3c109d3171c6e3d4d418aca"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/source/preview-local.sh",
+      "bytes": 391,
+      "sha256": "c18c7f53d941af1872d0b1da4639f8082173b58d41e0ef757dada0028e32e835"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/source/record-overview.sh",
+      "bytes": 524,
+      "sha256": "3506e52311e3e5b0b6d551d76f34bac6f7b549e8a3c5a5088d3554a638ce4ef5"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/source/rollback-npu.sh",
+      "bytes": 633,
+      "sha256": "0ab13262e1e8ff67e81a49b84e1ab9672f46c90feb1efd751900413d4a0281f0"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/source/run.sh",
+      "bytes": 273,
+      "sha256": "d98ece70f8a7004c5b776c87cdbcb1c6ae4c23ed8c731cc40a1bd053428e836f"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/source/six_app.cpp",
+      "bytes": 29731,
+      "sha256": "2af33992cd11bb96cb3b798fd84cc1cecd76e629ac3e2ca6bb801387b024f2e8"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/source/start.sh",
+      "bytes": 733,
+      "sha256": "b9a4476328c257e512c845e273a4fdd36448fedd09bc748f1f668793e9169101"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/source/stop.sh",
+      "bytes": 166,
+      "sha256": "3cb044965a08a1d6194433a7a79638d0373f0acc0ef01b21e4704b5cd53621c7"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/source/tests/mask-comparison.cpp",
+      "bytes": 1680,
+      "sha256": "77d2c2b8d2339635bb246022dda688de138007678f16a549a02860d1023f1617"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/source/tests/tensor-comparison.cpp",
+      "bytes": 2920,
+      "sha256": "2db1437a4b71a7a9eeca542443999d637789b278301c258c88864458bc7911c5"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/使用说明.md",
+      "bytes": 4725,
+      "sha256": "067138d576f46c3b71567a3abce1ae206af6eabdbfdf439f158868cc07d41e14"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/六路AI总览_1080p_60秒.mp4",
+      "bytes": 44741687,
+      "sha256": "c3a756c60933b2ad74d1126b9285924a38dbe0e02165b9440eea5127601400a1"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/六路AI总览_YOLO26更新版_1080p_60秒.mp4",
+      "bytes": 44731991,
+      "sha256": "7521912417d254fa9cc231714bd68c9eba4c3703c78e9412271ee250c0e9df5c"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/六路AI总览_帧率优化版_1080p30.mp4",
+      "bytes": 59511980,
+      "sha256": "17f428eb35173126e27907dd53d30b36cc5181e3db7fcaaf00570794ec3529b6"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/历史版本/traffic7替换前_20260916/source/config.json",
+      "bytes": 3823,
+      "sha256": "3b2292f8c1558d535f072bc23c51b47c92be39fe3e07a97284364e9e541ce541"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/历史版本/traffic7替换前_20260916/source/start.sh",
+      "bytes": 419,
+      "sha256": "3c41e06c8b18b41ce0a12c79793785ec59ed67f708df0db21232f45f8534c4bb"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/历史版本/traffic7替换前_20260916/source/stop.sh",
+      "bytes": 62,
+      "sha256": "e15b5720cdaf26d029b5348e0fe93f8888fce290e15862d7e87d9ef6170ea205"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/历史版本/traffic7替换前_20260916/使用说明.md",
+      "bytes": 3867,
+      "sha256": "e0a2c3947c06cb2f37cb46c2b512f0a2f92afe2cac93baa12f4f6caca76368a5"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/历史版本/帧率优化前_20260916/source/build.sh",
+      "bytes": 820,
+      "sha256": "294bd6ed6b33ee96d09de4fcddcb270a90c25be774b9a258fa5185a2564345fd"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/历史版本/帧率优化前_20260916/source/config.json",
+      "bytes": 3644,
+      "sha256": "bd002bd2a63686c151811dfdab12a3971099db84cce915fe51d3a7aa0c424e7a"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/历史版本/帧率优化前_20260916/source/record-overview.sh",
+      "bytes": 524,
+      "sha256": "3506e52311e3e5b0b6d551d76f34bac6f7b549e8a3c5a5088d3554a638ce4ef5"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/历史版本/帧率优化前_20260916/source/run.sh",
+      "bytes": 273,
+      "sha256": "d98ece70f8a7004c5b776c87cdbcb1c6ae4c23ed8c731cc40a1bd053428e836f"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/历史版本/帧率优化前_20260916/source/six_app.cpp",
+      "bytes": 26493,
+      "sha256": "16177e84d302cbd23569f600ee8effcab3ce9e5b20b35373c4956677d3629b63"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/历史版本/帧率优化前_20260916/source/start.sh",
+      "bytes": 419,
+      "sha256": "3c41e06c8b18b41ce0a12c79793785ec59ed67f708df0db21232f45f8534c4bb"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/历史版本/帧率优化前_20260916/source/stop.sh",
+      "bytes": 62,
+      "sha256": "e15b5720cdaf26d029b5348e0fe93f8888fce290e15862d7e87d9ef6170ea205"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/历史版本/帧率优化前_20260916/使用说明.md",
+      "bytes": 3440,
+      "sha256": "46d858001b7fc342ec44817f89e6d5e711f83ad7c0c49a77d97ac815c183894f"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/历史版本/帧率优化前_20260916/实施说明.md",
+      "bytes": 2160,
+      "sha256": "515daf753596fe2c93977d8e5ae16500c1e0e9de4ea1830efeca27c5892ea15a"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/历史版本/帧率优化前_20260916/验证结果.md",
+      "bytes": 1452,
+      "sha256": "f191124bb78d0d667a3d8cfc5230e4671d1ae8fc526776b412629f09a53acf16"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/历史版本/推理优化前_20260916_182855/bin/six_app",
+      "bytes": 3671832,
+      "sha256": "7f68c37c3bd512c84b17425775cb5b7b634d68e238ac08aefc98bfc4c41eddb7"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/历史版本/推理优化前_20260916_182855/source/build.sh",
+      "bytes": 832,
+      "sha256": "b02abb0eec3e088617099c84cea908ac4a428fe6cb7a5de3f78dfa90c22a979c"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/历史版本/推理优化前_20260916_182855/source/config.json",
+      "bytes": 3717,
+      "sha256": "0af4dec099a046b303207058e110030748381dd4b901d7a46f3bc078b2749b3d"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/历史版本/推理优化前_20260916_182855/source/six_app.cpp",
+      "bytes": 28924,
+      "sha256": "b1e6c6f7b8537c0f34818989c9cfffd80b84f3834dc55ff8f4fe2bd53e7d2ed1"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/历史版本/推理优化前_20260916_182855/使用说明.md",
+      "bytes": 4224,
+      "sha256": "f683f31f401ff6c843b1e422a9f26cbf2b13c229d2ed67386b0090ce8e3d96cf"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/历史版本/模型调整前_20260916/evidence/axcl-smi-final.txt",
+      "bytes": 1486,
+      "sha256": "122352ddfe74b7f231a2e447b1c52c6fea58560b966fe99b8e502e99851f6214"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/历史版本/模型调整前_20260916/evidence/lan-rtsp.json",
+      "bytes": 3269,
+      "sha256": "bcfbd48f2c0af981acc58f653458911f4b7f180da8ca668d760fcf827716b18d"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/历史版本/模型调整前_20260916/evidence/models.json",
+      "bytes": 915,
+      "sha256": "ea19246b2ea9f4995b0cddcac568039559b1a78b897459363fb25c7e075c37e5"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/历史版本/模型调整前_20260916/evidence/normalized-videos.json",
+      "bytes": 23006,
+      "sha256": "ccecb550224720150bf05d5634c13bbbdb9873f8be4d11e48a05c81dcd03a3e1"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/历史版本/模型调整前_20260916/evidence/recording-final.json",
+      "bytes": 2623,
+      "sha256": "30e0e17c548aeb3596fe4eb4cee9e73bef2cc27c0504db48fdd78247fcf49d7f"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/历史版本/模型调整前_20260916/evidence/rtsp-validation.json",
+      "bytes": 1480,
+      "sha256": "99cee93f8ab1b9b21f57638ca2e245bdb161fe98b8aadb163dc7dc55c993e18a"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/历史版本/模型调整前_20260916/evidence/runtime-final.log",
+      "bytes": 28763,
+      "sha256": "d7d9ad7047baee61cc7f52d4d5f58a34551c39ddfc5bca7fecab2d4bafde2820"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/历史版本/模型调整前_20260916/evidence/validation-summary.json",
+      "bytes": 3077,
+      "sha256": "7e1069ce90378f120896015d43f2e6b8930f8dd3c8833d5a48eb28755987d4a6"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/历史版本/模型调整前_20260916/images/count-final.jpg",
+      "bytes": 134974,
+      "sha256": "c50f8e759fd8514c272dadb7cc9f268afa2d23a12ba792baebe33144f8d3e11d"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/历史版本/模型调整前_20260916/images/overview-final.jpg",
+      "bytes": 181419,
+      "sha256": "0b10b5ecc19715c2137455de43e6295eaa53fdf315052ce0b741f7bc76042f4a"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/历史版本/模型调整前_20260916/images/seg-final.jpg",
+      "bytes": 121893,
+      "sha256": "74c776a8db77c4c7376309bb44cdf3c2c00940edbbc29547b67f703b17e5c455"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/历史版本/模型调整前_20260916/source/build.sh",
+      "bytes": 820,
+      "sha256": "294bd6ed6b33ee96d09de4fcddcb270a90c25be774b9a258fa5185a2564345fd"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/历史版本/模型调整前_20260916/source/config.json",
+      "bytes": 3338,
+      "sha256": "d3df12258fb77c3ac63fa00c2716b2f0d5b0c9d299611b7373cbec7c25166367"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/历史版本/模型调整前_20260916/source/record-overview.sh",
+      "bytes": 524,
+      "sha256": "3506e52311e3e5b0b6d551d76f34bac6f7b549e8a3c5a5088d3554a638ce4ef5"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/历史版本/模型调整前_20260916/source/run.sh",
+      "bytes": 273,
+      "sha256": "d98ece70f8a7004c5b776c87cdbcb1c6ae4c23ed8c731cc40a1bd053428e836f"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/历史版本/模型调整前_20260916/source/six_app.cpp",
+      "bytes": 25507,
+      "sha256": "23e7ff0c830c6d2037d84d20ec127045b321ed64d15eb69eaafc3e58e797a1f7"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/历史版本/模型调整前_20260916/source/start.sh",
+      "bytes": 419,
+      "sha256": "3c41e06c8b18b41ce0a12c79793785ec59ed67f708df0db21232f45f8534c4bb"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/历史版本/模型调整前_20260916/source/stop.sh",
+      "bytes": 62,
+      "sha256": "e15b5720cdaf26d029b5348e0fe93f8888fce290e15862d7e87d9ef6170ea205"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/历史版本/模型调整前_20260916/使用说明.md",
+      "bytes": 3740,
+      "sha256": "7f726adf83525b74ff1f4090a48be62236c9d971323675260013be2f69dca937"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/历史版本/模型调整前_20260916/实施说明.md",
+      "bytes": 3033,
+      "sha256": "956d7c3dbb8f211ae3a8237f02f2c11f0ddae437c995c27cf52dbefba7ec5d4c"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/历史版本/模型调整前_20260916/验证结果.md",
+      "bytes": 1374,
+      "sha256": "68e906177a42f1c51fad422437d2d8b82ac4f870850026d65af0318c09cb1f0b"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/历史版本/第三路半速处理前_20260918_151453/config.json",
+      "bytes": 3685,
+      "sha256": "730afc27040f79866bdf3c319b3569f79351919fa7034ac54b619b6007a84047"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/历史版本/第三路半速处理前_20260918_151453/使用说明.md",
+      "bytes": 4501,
+      "sha256": "8a3918529788be171cecf91415a6c8cf9b8381737c09b505adbf8e63f68ecb39"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/历史版本/第四路半速处理前_20260916/config.json",
+      "bytes": 3665,
+      "sha256": "0ba46b41d0afebc3de97116f8e74d335a2ffbfe8e0172506c4c67a57e2a12816"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/历史版本/第四路半速处理前_20260916/使用说明.md",
+      "bytes": 4189,
+      "sha256": "2bca16f248ad92e14abff6ae2de94a5ae639b3e200286cdbce95e39c9f147bc1"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/历史版本/第四路半速处理前_20260916/第四路替换与本地预览.md",
+      "bytes": 2387,
+      "sha256": "b8128413db05fd4624176749abd0b32f4508fc3fd046cc7cd2bf1d4c6bb93eaf"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/历史版本/隐藏文件名前_20260916/bin/six_app",
+      "bytes": 799000,
+      "sha256": "3898ed19bef0c95b99de74957f62ac0f65d06c4ee51211cf09407f95aa8d7465"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/历史版本/隐藏文件名前_20260916/source/six_app.cpp",
+      "bytes": 29783,
+      "sha256": "b9f6e3ecf2702a6fe55cb331a0275a04b7aa02a58b60b89b98c112f0f5f01f4f"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/实施说明.md",
+      "bytes": 2386,
+      "sha256": "5c13d398df2e282dd59f7d84e86606566f75244367e5bfd9a4c6e7d8492c1ec2"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/帧率优化说明.md",
+      "bytes": 2359,
+      "sha256": "7ba93b935e1ccde56119b58ebb2d91fc2b5606b697d3fce31246e508dddef12d"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/推理优化说明.md",
+      "bytes": 4217,
+      "sha256": "da02906dc12653aa5a48931e561a4e063eeb99fdeba5323a7bc3c162b291b204"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/第四路替换与本地预览.md",
+      "bytes": 2634,
+      "sha256": "a0b6067b69db9ebc54ec0ced72adc6eac472c7bfea82a28a471037f3aaca88b5"
+    },
+    {
+      "path": "aarch64/AX8850六路AI推流/验证结果.md",
+      "bytes": 2535,
+      "sha256": "65fd06685e985d0b216d2ef6e4bc08aaf1a2057f490856e53bbd2a3bd6f5d4da"
+    },
+    {
+      "path": "aarch64/AX8850算力卡快速上手_aarch64.docx",
+      "bytes": 114157,
+      "sha256": "edd05465081685b2e982bfcc24f1b4cd7ad228b8ea1113e80fe03b973a37e0ec"
+    },
+    {
+      "path": "aarch64/AX8850算力卡快速上手_aarch64.md",
+      "bytes": 4521,
+      "sha256": "63a5e32fe83781ca077fba5280eec91436b67eb65886056c4bbbdbb8accd8462"
+    },
+    {
+      "path": "aarch64/AX8850算力卡快速上手_aarch64.pdf",
+      "bytes": 306463,
+      "sha256": "ec4bec0f5bd4453b230ebf65531156252cc94305f2026bdb27359a1429319d08"
+    },
+    {
+      "path": "aarch64/images/pac-flow.png",
+      "bytes": 46856,
+      "sha256": "a022441de124852a3650591e86d6c4967593d66f221c1aa7e9ad007916948d2b"
+    },
+    {
+      "path": "aarch64/images/smi-check.png",
+      "bytes": 30051,
+      "sha256": "bceb75606ebada0625c7d46ab08f3d683d8561c248877b9e899470c410a3a819"
+    },
+    {
+      "path": "aarch64/tmp/AX8850-RK3576-Headers-20260916.zip",
+      "bytes": 16785530,
+      "sha256": "854d725fd6fe63e1155029434c5f6595f24580c1ca5bf51428d594beffd11071"
+    },
+    {
+      "path": "aarch64/tmp/AX8850-RK3576-Headers-20260916/SHA256SUMS",
+      "bytes": 1287,
+      "sha256": "69a0a1d0ad43552f71fba59d893fc17bb10122a5ee8144f2978ae237309d6d4f"
+    },
+    {
+      "path": "aarch64/tmp/AX8850-RK3576-Headers-20260916/ax8850-headers-check",
+      "bytes": 3010,
+      "sha256": "e7515847c13df3127fb3736b28a3825ffbff7bb7c15c01bd7505144eec4445bc"
+    },
+    {
+      "path": "aarch64/tmp/AX8850-RK3576-Headers-20260916/install-headers.sh",
+      "bytes": 501,
+      "sha256": "455c8b9bf0847257c059ae4d34863f91d308f18134f2648ce050aabd73d72621"
+    },
+    {
+      "path": "aarch64/tmp/AX8850-RK3576-Headers-20260916/linux-headers-vendor-rk35xx_25.11.0-trunk+ax8850.1_arm64.deb",
+      "bytes": 16489368,
+      "sha256": "0ef448a827313c6f6118c632210da7d6c7ef116221eb92a30f1a9a5c397499a4"
+    },
+    {
+      "path": "aarch64/tmp/AX8850-RK3576-Headers-20260916/pahole_1.25-0ubuntu3_arm64.deb",
+      "bytes": 275336,
+      "sha256": "22c679f24d391c4c68d0535c683b30421923a8925e5019d4873ed7af13b14722"
+    },
+    {
+      "path": "aarch64/tmp/AX8850-RK3576-Headers-20260916/安装说明.md",
+      "bytes": 2109,
+      "sha256": "24ad41f27c37d41d23775d3761a4e942a177563226011b09a8a810282f95312b"
+    },
+    {
+      "path": "aarch64/tmp/AX8850-RK3576-Headers-20260916/验证记录/apt-install-simulation.txt",
+      "bytes": 785,
+      "sha256": "ffdb1b12953a677b3866f4d66049671b71275d9a63a7abad467e85095e58249a"
+    },
+    {
+      "path": "aarch64/tmp/AX8850-RK3576-Headers-20260916/验证记录/axcl-rebuild.log",
+      "bytes": 39863,
+      "sha256": "c93803aa7b44ff55467bd66a599c7f6e571793b0a6d3e3c4b3b41e6e1ccafec0"
+    },
+    {
+      "path": "aarch64/tmp/AX8850-RK3576-Headers-20260916/验证记录/final-deb-info.txt",
+      "bytes": 1254,
+      "sha256": "a9c7992b0d04be82825e490f4c4400aa174ac4ba464128ad7e82d307c96a4ebf"
+    },
+    {
+      "path": "aarch64/tmp/AX8850-RK3576-Headers-20260916/验证记录/final-package-validation.json",
+      "bytes": 1983,
+      "sha256": "9a6bdf01761119897590e172f2cd8d3a8f9a023d8a0c9876b9458017ebfea91a"
+    },
+    {
+      "path": "aarch64/tmp/AX8850-RK3576-Headers-20260916/验证记录/package-manifest.json",
+      "bytes": 3538,
+      "sha256": "33d4d9264e5c59c47546acb26587c848bf529bcd800688e5284b77fca1540e9b"
+    },
+    {
+      "path": "aarch64/tmp/AX8850-RK3576-Headers-20260916/验证记录/prepare-headers.log",
+      "bytes": 2940,
+      "sha256": "6541201c4c8cf08928ae4af4ea68ac43528df9508ff4db05a96e3a3156dd6c28"
+    },
+    {
+      "path": "aarch64/tmp/AX8850-RK3576-Headers-20260916/验证记录/unpacked-axcl-rebuild.log",
+      "bytes": 42180,
+      "sha256": "0abdd04a61f73c36b6ea80549be1eb6763d13487a8e92e66988ca0c213344748"
+    },
+    {
+      "path": "aarch64/tmp/AX8850-RK3576-Headers-20260916/验证记录/修复说明.md",
+      "bytes": 3462,
+      "sha256": "bf7cbd7bd7f99bbb880c013feacbe51e5ec61888ee981362e571b20371f47b3f"
+    },
+    {
+      "path": "windows/AX8850算力卡快速上手_Windows.docx",
+      "bytes": 122280,
+      "sha256": "8c8c028f1dfd6ba027813cd1d1d93edcf39f5c6dc57357d5e944d8ef72348346"
+    },
+    {
+      "path": "windows/AX8850算力卡快速上手_Windows.md",
+      "bytes": 5364,
+      "sha256": "652e1ffc1843a3e5442f1dbf9205594231d67636ca6cc903fd83fdcc3c0edcce"
+    },
+    {
+      "path": "windows/AX8850算力卡快速上手_Windows.pdf",
+      "bytes": 367746,
+      "sha256": "04a4b432c1fad78dafcec67630f73cfdc71746a78e24a7c6e193c4ccbb3e6f7b"
+    },
+    {
+      "path": "windows/images/pac-flow.png",
+      "bytes": 49600,
+      "sha256": "a4ad4f5c9ac5304bfca55c1f734de8db7887e0374fff022f03cb92aa9cc66feb"
+    },
+    {
+      "path": "windows/images/smi-check.png",
+      "bytes": 34857,
+      "sha256": "3e13818d18b5f9dd5fa8a13b61bc021d8dca26ea3dcd165285f7193a71005f44"
+    }
+  ],
+  "repairedLinks": [
+    {
+      "document": "aarch64/AX8850六路AI推流/历史版本/traffic7替换前_20260916/使用说明.md",
+      "original": "images/overview-perf.jpg",
+      "resolved": "aarch64/AX8850六路AI推流/images/overview-perf.jpg"
+    },
+    {
+      "document": "aarch64/AX8850六路AI推流/历史版本/traffic7替换前_20260916/使用说明.md",
+      "original": "images/driving-perf.jpg",
+      "resolved": "aarch64/AX8850六路AI推流/images/driving-perf.jpg"
+    },
+    {
+      "document": "aarch64/AX8850六路AI推流/历史版本/traffic7替换前_20260916/使用说明.md",
+      "original": "六路AI总览_帧率优化版_1080p30.mp4",
+      "resolved": "aarch64/AX8850六路AI推流/六路AI总览_帧率优化版_1080p30.mp4"
+    },
+    {
+      "document": "aarch64/AX8850六路AI推流/历史版本/traffic7替换前_20260916/使用说明.md",
+      "original": "验证结果.md",
+      "resolved": "aarch64/AX8850六路AI推流/验证结果.md"
+    },
+    {
+      "document": "aarch64/AX8850六路AI推流/历史版本/traffic7替换前_20260916/使用说明.md",
+      "original": "帧率优化说明.md",
+      "resolved": "aarch64/AX8850六路AI推流/帧率优化说明.md"
+    },
+    {
+      "document": "aarch64/AX8850六路AI推流/历史版本/traffic7替换前_20260916/使用说明.md",
+      "original": "验证结果.md",
+      "resolved": "aarch64/AX8850六路AI推流/验证结果.md"
+    },
+    {
+      "document": "aarch64/AX8850六路AI推流/历史版本/帧率优化前_20260916/使用说明.md",
+      "original": "images/overview-v2.jpg",
+      "resolved": "aarch64/AX8850六路AI推流/images/overview-v2.jpg"
+    },
+    {
+      "document": "aarch64/AX8850六路AI推流/历史版本/帧率优化前_20260916/使用说明.md",
+      "original": "images/driving-v2.jpg",
+      "resolved": "aarch64/AX8850六路AI推流/images/driving-v2.jpg"
+    },
+    {
+      "document": "aarch64/AX8850六路AI推流/历史版本/帧率优化前_20260916/使用说明.md",
+      "original": "六路AI总览_YOLO26更新版_1080p_60秒.mp4",
+      "resolved": "aarch64/AX8850六路AI推流/六路AI总览_YOLO26更新版_1080p_60秒.mp4"
+    },
+    {
+      "document": "aarch64/AX8850六路AI推流/历史版本/推理优化前_20260916_182855/使用说明.md",
+      "original": "images/overview-traffic7.jpg",
+      "resolved": "aarch64/AX8850六路AI推流/images/overview-traffic7.jpg"
+    },
+    {
+      "document": "aarch64/AX8850六路AI推流/历史版本/推理优化前_20260916_182855/使用说明.md",
+      "original": "第四路替换与本地预览.md",
+      "resolved": "aarch64/AX8850六路AI推流/第四路替换与本地预览.md"
+    },
+    {
+      "document": "aarch64/AX8850六路AI推流/历史版本/推理优化前_20260916_182855/使用说明.md",
+      "original": "images/driving-traffic7.jpg",
+      "resolved": "aarch64/AX8850六路AI推流/images/driving-traffic7.jpg"
+    },
+    {
+      "document": "aarch64/AX8850六路AI推流/历史版本/推理优化前_20260916_182855/使用说明.md",
+      "original": "六路AI总览_帧率优化版_1080p30.mp4",
+      "resolved": "aarch64/AX8850六路AI推流/六路AI总览_帧率优化版_1080p30.mp4"
+    },
+    {
+      "document": "aarch64/AX8850六路AI推流/历史版本/推理优化前_20260916_182855/使用说明.md",
+      "original": "验证结果.md",
+      "resolved": "aarch64/AX8850六路AI推流/验证结果.md"
+    },
+    {
+      "document": "aarch64/AX8850六路AI推流/历史版本/推理优化前_20260916_182855/使用说明.md",
+      "original": "帧率优化说明.md",
+      "resolved": "aarch64/AX8850六路AI推流/帧率优化说明.md"
+    },
+    {
+      "document": "aarch64/AX8850六路AI推流/历史版本/推理优化前_20260916_182855/使用说明.md",
+      "original": "验证结果.md",
+      "resolved": "aarch64/AX8850六路AI推流/验证结果.md"
+    },
+    {
+      "document": "aarch64/AX8850六路AI推流/历史版本/模型调整前_20260916/使用说明.md",
+      "original": "六路AI总览_1080p_60秒.mp4",
+      "resolved": "aarch64/AX8850六路AI推流/六路AI总览_1080p_60秒.mp4"
+    },
+    {
+      "document": "aarch64/AX8850六路AI推流/历史版本/第三路半速处理前_20260918_151453/使用说明.md",
+      "original": "images/overview-no-filenames.jpg",
+      "resolved": "aarch64/AX8850六路AI推流/images/overview-no-filenames.jpg"
+    },
+    {
+      "document": "aarch64/AX8850六路AI推流/历史版本/第三路半速处理前_20260918_151453/使用说明.md",
+      "original": "第四路替换与本地预览.md",
+      "resolved": "aarch64/AX8850六路AI推流/第四路替换与本地预览.md"
+    },
+    {
+      "document": "aarch64/AX8850六路AI推流/历史版本/第三路半速处理前_20260918_151453/使用说明.md",
+      "original": "images/driving-traffic7.jpg",
+      "resolved": "aarch64/AX8850六路AI推流/images/driving-traffic7.jpg"
+    },
+    {
+      "document": "aarch64/AX8850六路AI推流/历史版本/第三路半速处理前_20260918_151453/使用说明.md",
+      "original": "六路AI总览_帧率优化版_1080p30.mp4",
+      "resolved": "aarch64/AX8850六路AI推流/六路AI总览_帧率优化版_1080p30.mp4"
+    },
+    {
+      "document": "aarch64/AX8850六路AI推流/历史版本/第三路半速处理前_20260918_151453/使用说明.md",
+      "original": "验证结果.md",
+      "resolved": "aarch64/AX8850六路AI推流/验证结果.md"
+    },
+    {
+      "document": "aarch64/AX8850六路AI推流/历史版本/第三路半速处理前_20260918_151453/使用说明.md",
+      "original": "推理优化说明.md",
+      "resolved": "aarch64/AX8850六路AI推流/推理优化说明.md"
+    },
+    {
+      "document": "aarch64/AX8850六路AI推流/历史版本/第三路半速处理前_20260918_151453/使用说明.md",
+      "original": "帧率优化说明.md",
+      "resolved": "aarch64/AX8850六路AI推流/帧率优化说明.md"
+    },
+    {
+      "document": "aarch64/AX8850六路AI推流/历史版本/第三路半速处理前_20260918_151453/使用说明.md",
+      "original": "验证结果.md",
+      "resolved": "aarch64/AX8850六路AI推流/验证结果.md"
+    },
+    {
+      "document": "aarch64/AX8850六路AI推流/历史版本/第四路半速处理前_20260916/使用说明.md",
+      "original": "images/overview-no-filenames.jpg",
+      "resolved": "aarch64/AX8850六路AI推流/images/overview-no-filenames.jpg"
+    },
+    {
+      "document": "aarch64/AX8850六路AI推流/历史版本/第四路半速处理前_20260916/使用说明.md",
+      "original": "images/driving-traffic7.jpg",
+      "resolved": "aarch64/AX8850六路AI推流/images/driving-traffic7.jpg"
+    },
+    {
+      "document": "aarch64/AX8850六路AI推流/历史版本/第四路半速处理前_20260916/使用说明.md",
+      "original": "六路AI总览_帧率优化版_1080p30.mp4",
+      "resolved": "aarch64/AX8850六路AI推流/六路AI总览_帧率优化版_1080p30.mp4"
+    },
+    {
+      "document": "aarch64/AX8850六路AI推流/历史版本/第四路半速处理前_20260916/使用说明.md",
+      "original": "验证结果.md",
+      "resolved": "aarch64/AX8850六路AI推流/验证结果.md"
+    },
+    {
+      "document": "aarch64/AX8850六路AI推流/历史版本/第四路半速处理前_20260916/使用说明.md",
+      "original": "推理优化说明.md",
+      "resolved": "aarch64/AX8850六路AI推流/推理优化说明.md"
+    },
+    {
+      "document": "aarch64/AX8850六路AI推流/历史版本/第四路半速处理前_20260916/使用说明.md",
+      "original": "帧率优化说明.md",
+      "resolved": "aarch64/AX8850六路AI推流/帧率优化说明.md"
+    },
+    {
+      "document": "aarch64/AX8850六路AI推流/历史版本/第四路半速处理前_20260916/使用说明.md",
+      "original": "验证结果.md",
+      "resolved": "aarch64/AX8850六路AI推流/验证结果.md"
+    }
+  ]
+}

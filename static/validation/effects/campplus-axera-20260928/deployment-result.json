@@ -1,0 +1,1023 @@
+{
+  "modelId": "campplus.AXERA",
+  "revision": "906ada2445acad77cddd465a312ee8569d818ba6",
+  "date": "2026-09-28",
+  "variants": [
+    {
+      "label": "三段官方音频的相似度",
+      "observation": "以下标签来自官方样例文件名。speaker1_a 与 speaker1_b 的分数高于两组跨标签比较；这不是概率或身份判定阈值。",
+      "audio": [
+        {
+          "caption": "官方样例：speaker1_a_cn_16k.wav",
+          "path": "/validation/effects/campplus-axera-20260928/input-1.wav"
+        },
+        {
+          "caption": "官方样例：speaker1_b_cn_16k.wav",
+          "path": "/validation/effects/campplus-axera-20260928/input-2.wav"
+        },
+        {
+          "caption": "官方样例：speaker2_a_cn_16k.wav",
+          "path": "/validation/effects/campplus-axera-20260928/input-3.wav"
+        }
+      ],
+      "previews": [],
+      "tables": [
+        {
+          "headers": [
+            "音频 A",
+            "音频 B",
+            "实际余弦相似度"
+          ],
+          "rows": [
+            [
+              "speaker1_a_cn_16k.wav",
+              "speaker1_b_cn_16k.wav",
+              "0.666755"
+            ],
+            [
+              "speaker1_a_cn_16k.wav",
+              "speaker2_a_cn_16k.wav",
+              "0.067015"
+            ],
+            [
+              "speaker1_b_cn_16k.wav",
+              "speaker2_a_cn_16k.wav",
+              "0.039977"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "modelId": "campplus.AXERA",
+        "provider": "AXCLRTExecutionProvider",
+        "completed": true,
+        "sourceSha256": "489a464c2d70143f0d4503ac010aa7a9a38eda2a86f3632f9d8e670c220aa5b0",
+        "torchVersion": "2.5.1",
+        "torchaudioVersion": "2.5.1",
+        "sessions": [
+          {
+            "model": "models/campplus.axmodel",
+            "weightSha256": "bc6f9ba0379e9bba047260b8582afe1d71a1b01a0eb7308356ca3403ed41341f",
+            "loadSeconds": 0.8186813379870728,
+            "allFinite": true,
+            "runMilliseconds": [
+              9.27560799755156,
+              5.381555005442351,
+              5.2508890512399375,
+              5.343348020687699,
+              5.417431006208062,
+              4.54622000688687,
+              4.4161370024085045,
+              4.208178026601672,
+              4.37646999489516,
+              5.007055005989969,
+              5.0303880125284195,
+              4.456387017853558,
+              4.173468973021954,
+              4.100844031199813,
+              4.9627210246399045,
+              5.305722006596625,
+              5.262847000267357,
+              5.045846977736801,
+              4.2627190123312175,
+              4.148970008827746,
+              4.4972210307605565,
+              3.8896769983693957,
+              5.345680983737111,
+              5.144138995092362,
+              5.142097012139857
+            ],
+            "calls": [
+              {
+                "sampleIndex": 1,
+                "inputSha256": "85b503bbd8693cc76202b0ce6051270b058de38911bf609be07ceaf88dceba09",
+                "outputSha256": "1db60f86f6fd5c9fba26a361fbd6cac749ac1719d8abfd1e7009c6ea67b7ec54"
+              },
+              {
+                "sampleIndex": 2,
+                "inputSha256": "d4781e291f102d0b43ce255e6a91f6a5c87a548373099e2c86445c8f4790ceda",
+                "outputSha256": "b317b5ca364f802b76622af048b878beb0141006bbe60e6af505fbaf26d1f847"
+              },
+              {
+                "sampleIndex": 3,
+                "inputSha256": "7d0522635d913de3c07998c417437b392f0eb9bdf4275acb61544854fc802599",
+                "outputSha256": "63db8be728d624fbc740c0ae0c3babc7cf5c14c28cbcc0ae5c7b2f185cc86895"
+              },
+              {
+                "sampleIndex": 4,
+                "inputSha256": "85b503bbd8693cc76202b0ce6051270b058de38911bf609be07ceaf88dceba09",
+                "outputSha256": "1db60f86f6fd5c9fba26a361fbd6cac749ac1719d8abfd1e7009c6ea67b7ec54"
+              },
+              {
+                "sampleIndex": 5,
+                "inputSha256": "0b01e9daded14e7c48802f81eb498347ac90d11c0dfacdb3fc973fbca24e8306",
+                "outputSha256": "b2d907a45981fb0a3f2f24cd136d3a07c7c225ba98ed8841e5236bd31d3826bd"
+              },
+              {
+                "sampleIndex": 5,
+                "inputSha256": "88185d6217af1ce4af9fb5ee688e9e7603f309d24a14a4bd8cc537853b190c27",
+                "outputSha256": "6b0964396c7564906bb2ca2fa28f8ebce022ebac5ba45587423cf46c00bde925"
+              },
+              {
+                "sampleIndex": 5,
+                "inputSha256": "ff1aa679e0d9561dc0d802bd4571bd3d92667a3e9b779ac5ed82b35e4ed68ed0",
+                "outputSha256": "870cc05a66e5d8c59cb9b4fe7bf4c154a2c958165a920bfa889ffa3051ca8f9f"
+              },
+              {
+                "sampleIndex": 5,
+                "inputSha256": "f6e6f9d305bf0267b50a505b61528602d8bb8e5f07a03017b231138b179aad31",
+                "outputSha256": "e22c9fc65bd710d7da477669c9b4f90256b51708a140486d8e96eb8426f85d3e"
+              },
+              {
+                "sampleIndex": 6,
+                "inputSha256": "f1e92f2acaf6143028eaa914b112313f140831f29a6def3e1d624bab72849e1b",
+                "outputSha256": "cc1e10e34a4db85ff768d1f6f2b42ec5cc1fae296ac2a03a61c364a5fef0aa8a"
+              },
+              {
+                "sampleIndex": 6,
+                "inputSha256": "9edcf256ddd3565b771fcc0eb0c097b5d4811a8729a29e585b6f81232ca172d4",
+                "outputSha256": "5d9672a2ecfc87e0290ad95ff15825f8bcfeda182d78efc10eab4773b247f434"
+              },
+              {
+                "sampleIndex": 6,
+                "inputSha256": "81be12db1eeebc596ab38d476b5f6b8ab94ceaaf505223f4b7a87ec338f3d4b1",
+                "outputSha256": "bea7038e16cab43f4f1da3fd9d4558a4f1322ab0bdfc51ad52f1709fa79fed86"
+              },
+              {
+                "sampleIndex": 6,
+                "inputSha256": "a2688e57472e7a723a47e9fc4bafd499d7ea15b3045b43daccd25b2414f2e36b",
+                "outputSha256": "80e938578f6a833965754fc78574987dfd361d3baee7cc429a0d9331978057f8"
+              },
+              {
+                "sampleIndex": 6,
+                "inputSha256": "78a3c8ff45837e89a0f719b0a0068489d3027a72061d796c459b3d3efb43c037",
+                "outputSha256": "ee9b018e8df7374ca5aa9316d1f9ee809c9b9c3911724ef8097043122d15eb6f"
+              },
+              {
+                "sampleIndex": 6,
+                "inputSha256": "3ad2252be9717344e564868100ab4c57957e116ddd6f6ac4e5ba3bcac2948c8f",
+                "outputSha256": "e9fda10f1b93e34e110e213fd6778dfd0e6d88df794108b956960ce28a457c1a"
+              },
+              {
+                "sampleIndex": 7,
+                "inputSha256": "435ef250d6d7de61dc6c12616383234422d1bddda5bb7fa21974821b0b7ad290",
+                "outputSha256": "ea5da95e2b99b6f806e4c9c5864c6ab2bf55bf7fffe3321eaa20a5fd0b8b992d"
+              },
+              {
+                "sampleIndex": 7,
+                "inputSha256": "139e9ec7c614b81441e46d31c386376d317c90f5c63306f70ee30efc395de42b",
+                "outputSha256": "5b4e11f7f5ad22dd9018b78d333b769f14eb33f9dfd4dbace2950a7d2b3d29eb"
+              },
+              {
+                "sampleIndex": 7,
+                "inputSha256": "1dfd2b1189ad6e42aff7633f4370afc0ee93537d34dcabefea19af3b3e6250e3",
+                "outputSha256": "7500a95538c59e440140e8ec09a32d13df61c72fdddc821e92b582bab52864b6"
+              },
+              {
+                "sampleIndex": 7,
+                "inputSha256": "b0cfe8ee3bd8b3028d6dd7c5fa7b50922ccb7ac9b9a39fa9b6be45357e92cee9",
+                "outputSha256": "4571b106b20b663684b3508c8f5f8349fa3828f382e1e12b36c8e8d4c23c8c62"
+              },
+              {
+                "sampleIndex": 7,
+                "inputSha256": "e7bea768d12edba87809f64ab26b95fc4115f4b780d0eeec2a8063714983e4f5",
+                "outputSha256": "f2e718e2cefa300299df60f7c7a836027b2a47268aea7486e5477d77e046302b"
+              },
+              {
+                "sampleIndex": 7,
+                "inputSha256": "a310a66dec8e2041ee4ff8decff7b9c556b44c93e330381fa5e545e53b053446",
+                "outputSha256": "ef7c5ddff7cdd339b877ee3a9326ffad3555ced4f5169c46fee5a7265f2e59e6"
+              },
+              {
+                "sampleIndex": 7,
+                "inputSha256": "4e9d6ef3a11f7bd30a2725226388dd562d124b9301b20eb3907947f821482106",
+                "outputSha256": "b7cf356f919bc364b55dec05d6c2d97dd743fa73226c3b910e76c2166016e989"
+              },
+              {
+                "sampleIndex": 8,
+                "inputSha256": "0b01e9daded14e7c48802f81eb498347ac90d11c0dfacdb3fc973fbca24e8306",
+                "outputSha256": "b2d907a45981fb0a3f2f24cd136d3a07c7c225ba98ed8841e5236bd31d3826bd"
+              },
+              {
+                "sampleIndex": 8,
+                "inputSha256": "88185d6217af1ce4af9fb5ee688e9e7603f309d24a14a4bd8cc537853b190c27",
+                "outputSha256": "6b0964396c7564906bb2ca2fa28f8ebce022ebac5ba45587423cf46c00bde925"
+              },
+              {
+                "sampleIndex": 8,
+                "inputSha256": "ff1aa679e0d9561dc0d802bd4571bd3d92667a3e9b779ac5ed82b35e4ed68ed0",
+                "outputSha256": "870cc05a66e5d8c59cb9b4fe7bf4c154a2c958165a920bfa889ffa3051ca8f9f"
+              },
+              {
+                "sampleIndex": 8,
+                "inputSha256": "f6e6f9d305bf0267b50a505b61528602d8bb8e5f07a03017b231138b179aad31",
+                "outputSha256": "e22c9fc65bd710d7da477669c9b4f90256b51708a140486d8e96eb8426f85d3e"
+              }
+            ],
+            "inputs": [
+              {
+                "name": "feature",
+                "shape": [
+                  1,
+                  360,
+                  80
+                ],
+                "dtype": "float32"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "embedding",
+                "shape": [
+                  1,
+                  192
+                ],
+                "dtype": "float32"
+              }
+            ]
+          }
+        ],
+        "samples": [
+          {
+            "input": "speaker1_a_cn_16k.wav",
+            "mode": "extract",
+            "repeat": false,
+            "audioFile": "input-1.wav",
+            "audioSha256": "5f20ce0ddc378ca3239d3ce864b1142726a46a1221ae553912e4e142045df58b",
+            "audioSeconds": 3.71525,
+            "chunks": null,
+            "embeddingShape": [
+              1,
+              192
+            ],
+            "processSeconds": 2.901679488015361,
+            "rtf": 0.7810186361659003,
+            "calls": 1,
+            "rawFile": "raw-1.npz",
+            "rawSha256": "43c7d24ef8d7c16d9aa8876e4205b9c2743c0f6c76ae76477de88060e5702dba"
+          },
+          {
+            "input": "speaker1_b_cn_16k.wav",
+            "mode": "extract",
+            "repeat": false,
+            "audioFile": "input-2.wav",
+            "audioSha256": "20745dc08a4281894d146140b99b9ef7417ac681119b7f7202f553cdf1a85f65",
+            "audioSeconds": 4.9066875,
+            "chunks": null,
+            "embeddingShape": [
+              1,
+              192
+            ],
+            "processSeconds": 0.036354013020172715,
+            "rtf": 0.007409074456070967,
+            "calls": 1,
+            "rawFile": "raw-2.npz",
+            "rawSha256": "fdcbef5dbfaa45b375a1c6445daaed79dd489c5239ba2db18a65337bdc6ce42a"
+          },
+          {
+            "input": "speaker2_a_cn_16k.wav",
+            "mode": "extract",
+            "repeat": false,
+            "audioFile": "input-3.wav",
+            "audioSha256": "8a6cffa452df32ef10503f7992f22ffcdd7f16c4e0273d13311bc5cdcb13abf4",
+            "audioSeconds": 5.312,
+            "chunks": null,
+            "embeddingShape": [
+              1,
+              192
+            ],
+            "processSeconds": 0.035154383978806436,
+            "rtf": 0.0066179186707090425,
+            "calls": 1,
+            "rawFile": "raw-3.npz",
+            "rawSha256": "48f2292d692426e51d7a37d1407f632e53b571d589602b65b71d8ccc03085192"
+          },
+          {
+            "input": "speaker1_a_cn_16k.wav",
+            "mode": "extract",
+            "repeat": true,
+            "audioFile": "input-4.wav",
+            "audioSha256": "5f20ce0ddc378ca3239d3ce864b1142726a46a1221ae553912e4e142045df58b",
+            "audioSeconds": 3.71525,
+            "chunks": null,
+            "embeddingShape": [
+              1,
+              192
+            ],
+            "processSeconds": 0.029302951996214688,
+            "rtf": 0.007887208665961829,
+            "calls": 1,
+            "rawFile": "raw-4.npz",
+            "rawSha256": "43c7d24ef8d7c16d9aa8876e4205b9c2743c0f6c76ae76477de88060e5702dba"
+          },
+          {
+            "input": "speaker1_a_cn_16k.wav",
+            "mode": "chunked",
+            "repeat": false,
+            "audioFile": "input-5.wav",
+            "audioSha256": "5f20ce0ddc378ca3239d3ce864b1142726a46a1221ae553912e4e142045df58b",
+            "audioSeconds": 3.71525,
+            "chunks": [
+              [
+                0,
+                1.5
+              ],
+              [
+                0.75,
+                2.25
+              ],
+              [
+                1.5,
+                3.0
+              ],
+              [
+                2.25,
+                3.71525
+              ]
+            ],
+            "embeddingShape": [
+              4,
+              192
+            ],
+            "processSeconds": 0.10351539903786033,
+            "rtf": 0.02786229702923365,
+            "calls": 4,
+            "rawFile": "raw-5.npz",
+            "rawSha256": "c0593ec56aec66284583ac3704d3833e9fd520a7b4aa9bc6c7576f00ce958aa9"
+          },
+          {
+            "input": "speaker1_b_cn_16k.wav",
+            "mode": "chunked",
+            "repeat": false,
+            "audioFile": "input-6.wav",
+            "audioSha256": "20745dc08a4281894d146140b99b9ef7417ac681119b7f7202f553cdf1a85f65",
+            "audioSeconds": 4.9066875,
+            "chunks": [
+              [
+                0,
+                1.5
+              ],
+              [
+                0.75,
+                2.25
+              ],
+              [
+                1.5,
+                3.0
+              ],
+              [
+                2.25,
+                3.75
+              ],
+              [
+                3.0,
+                4.5
+              ],
+              [
+                3.75,
+                4.9066875
+              ]
+            ],
+            "embeddingShape": [
+              6,
+              192
+            ],
+            "processSeconds": 0.14343708800151944,
+            "rtf": 0.029232978053222145,
+            "calls": 6,
+            "rawFile": "raw-6.npz",
+            "rawSha256": "69ac8ac8be5377b54c58c00aa25591a12fc2c6118c140d72c2ee5e3562869b47"
+          },
+          {
+            "input": "speaker2_a_cn_16k.wav",
+            "mode": "chunked",
+            "repeat": false,
+            "audioFile": "input-7.wav",
+            "audioSha256": "8a6cffa452df32ef10503f7992f22ffcdd7f16c4e0273d13311bc5cdcb13abf4",
+            "audioSeconds": 5.312,
+            "chunks": [
+              [
+                0,
+                1.5
+              ],
+              [
+                0.75,
+                2.25
+              ],
+              [
+                1.5,
+                3.0
+              ],
+              [
+                2.25,
+                3.75
+              ],
+              [
+                3.0,
+                4.5
+              ],
+              [
+                3.75,
+                5.25
+              ],
+              [
+                4.5,
+                5.312
+              ]
+            ],
+            "embeddingShape": [
+              7,
+              192
+            ],
+            "processSeconds": 0.17411117005394772,
+            "rtf": 0.032776952193890756,
+            "calls": 7,
+            "rawFile": "raw-7.npz",
+            "rawSha256": "65a8dde3edfb9d9e7e19f36a93d45432784dd0b1773d8f26dc969f5e37e436be"
+          },
+          {
+            "input": "speaker1_a_cn_16k.wav",
+            "mode": "chunked",
+            "repeat": true,
+            "audioFile": "input-8.wav",
+            "audioSha256": "5f20ce0ddc378ca3239d3ce864b1142726a46a1221ae553912e4e142045df58b",
+            "audioSeconds": 3.71525,
+            "chunks": [
+              [
+                0,
+                1.5
+              ],
+              [
+                0.75,
+                2.25
+              ],
+              [
+                1.5,
+                3.0
+              ],
+              [
+                2.25,
+                3.71525
+              ]
+            ],
+            "embeddingShape": [
+              4,
+              192
+            ],
+            "processSeconds": 0.10087493399623781,
+            "rtf": 0.02715158710618069,
+            "calls": 4,
+            "rawFile": "raw-8.npz",
+            "rawSha256": "c0593ec56aec66284583ac3704d3833e9fd520a7b4aa9bc6c7576f00ce958aa9"
+          }
+        ],
+        "pairs": [
+          {
+            "left": "speaker1_a_cn_16k.wav",
+            "right": "speaker1_b_cn_16k.wav",
+            "cosine": 0.6667552069129935
+          },
+          {
+            "left": "speaker1_a_cn_16k.wav",
+            "right": "speaker2_a_cn_16k.wav",
+            "cosine": 0.06701472790133615
+          },
+          {
+            "left": "speaker1_b_cn_16k.wav",
+            "right": "speaker2_a_cn_16k.wav",
+            "cosine": 0.03997713424423155
+          }
+        ],
+        "featureScope": "Official extract uses the first 360 frames after circle-padding to at least 57900 samples; chunk mode uses official 1.5s/0.75s windows.",
+        "review": {
+          "hashesAndOfficialSourceMatched": true,
+          "allRawFeaturesAndEmbeddingsChecked": true,
+          "pairwiseCosineIndependentlyRecomputed": true,
+          "bothModesRepeatRawExact": true,
+          "meanModelMilliseconds": 4.9596648081205785,
+          "actualCalls": 25,
+          "clusteringTested": false,
+          "scope": "Anonymous official file labels; no calibrated decision threshold, identity claim or EER evaluation."
+        }
+      }
+    },
+    {
+      "label": "单次与滑窗提取",
+      "observation": "单次提取使用前360帧；滑窗模式保留各窗口的192维结果。首次调用耗时明显较长，原值保留；两种模式重复第一段音频，原始特征与输出向量均完全一致。",
+      "previews": [],
+      "tables": [
+        {
+          "headers": [
+            "输入",
+            "模式",
+            "输出维度",
+            "处理耗时"
+          ],
+          "rows": [
+            [
+              "speaker1_a_cn_16k.wav",
+              "单次",
+              "1 × 192",
+              "2.901679 s"
+            ],
+            [
+              "speaker1_b_cn_16k.wav",
+              "单次",
+              "1 × 192",
+              "0.036354 s"
+            ],
+            [
+              "speaker2_a_cn_16k.wav",
+              "单次",
+              "1 × 192",
+              "0.035154 s"
+            ],
+            [
+              "speaker1_a_cn_16k.wav（重复）",
+              "单次",
+              "1 × 192",
+              "0.029303 s"
+            ],
+            [
+              "speaker1_a_cn_16k.wav",
+              "滑窗",
+              "4 × 192",
+              "0.103515 s"
+            ],
+            [
+              "speaker1_b_cn_16k.wav",
+              "滑窗",
+              "6 × 192",
+              "0.143437 s"
+            ],
+            [
+              "speaker2_a_cn_16k.wav",
+              "滑窗",
+              "7 × 192",
+              "0.174111 s"
+            ],
+            [
+              "speaker1_a_cn_16k.wav（重复）",
+              "滑窗",
+              "4 × 192",
+              "0.100875 s"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "modelId": "campplus.AXERA",
+        "provider": "AXCLRTExecutionProvider",
+        "completed": true,
+        "sourceSha256": "489a464c2d70143f0d4503ac010aa7a9a38eda2a86f3632f9d8e670c220aa5b0",
+        "torchVersion": "2.5.1",
+        "torchaudioVersion": "2.5.1",
+        "sessions": [
+          {
+            "model": "models/campplus.axmodel",
+            "weightSha256": "bc6f9ba0379e9bba047260b8582afe1d71a1b01a0eb7308356ca3403ed41341f",
+            "loadSeconds": 0.8186813379870728,
+            "allFinite": true,
+            "runMilliseconds": [
+              9.27560799755156,
+              5.381555005442351,
+              5.2508890512399375,
+              5.343348020687699,
+              5.417431006208062,
+              4.54622000688687,
+              4.4161370024085045,
+              4.208178026601672,
+              4.37646999489516,
+              5.007055005989969,
+              5.0303880125284195,
+              4.456387017853558,
+              4.173468973021954,
+              4.100844031199813,
+              4.9627210246399045,
+              5.305722006596625,
+              5.262847000267357,
+              5.045846977736801,
+              4.2627190123312175,
+              4.148970008827746,
+              4.4972210307605565,
+              3.8896769983693957,
+              5.345680983737111,
+              5.144138995092362,
+              5.142097012139857
+            ],
+            "calls": [
+              {
+                "sampleIndex": 1,
+                "inputSha256": "85b503bbd8693cc76202b0ce6051270b058de38911bf609be07ceaf88dceba09",
+                "outputSha256": "1db60f86f6fd5c9fba26a361fbd6cac749ac1719d8abfd1e7009c6ea67b7ec54"
+              },
+              {
+                "sampleIndex": 2,
+                "inputSha256": "d4781e291f102d0b43ce255e6a91f6a5c87a548373099e2c86445c8f4790ceda",
+                "outputSha256": "b317b5ca364f802b76622af048b878beb0141006bbe60e6af505fbaf26d1f847"
+              },
+              {
+                "sampleIndex": 3,
+                "inputSha256": "7d0522635d913de3c07998c417437b392f0eb9bdf4275acb61544854fc802599",
+                "outputSha256": "63db8be728d624fbc740c0ae0c3babc7cf5c14c28cbcc0ae5c7b2f185cc86895"
+              },
+              {
+                "sampleIndex": 4,
+                "inputSha256": "85b503bbd8693cc76202b0ce6051270b058de38911bf609be07ceaf88dceba09",
+                "outputSha256": "1db60f86f6fd5c9fba26a361fbd6cac749ac1719d8abfd1e7009c6ea67b7ec54"
+              },
+              {
+                "sampleIndex": 5,
+                "inputSha256": "0b01e9daded14e7c48802f81eb498347ac90d11c0dfacdb3fc973fbca24e8306",
+                "outputSha256": "b2d907a45981fb0a3f2f24cd136d3a07c7c225ba98ed8841e5236bd31d3826bd"
+              },
+              {
+                "sampleIndex": 5,
+                "inputSha256": "88185d6217af1ce4af9fb5ee688e9e7603f309d24a14a4bd8cc537853b190c27",
+                "outputSha256": "6b0964396c7564906bb2ca2fa28f8ebce022ebac5ba45587423cf46c00bde925"
+              },
+              {
+                "sampleIndex": 5,
+                "inputSha256": "ff1aa679e0d9561dc0d802bd4571bd3d92667a3e9b779ac5ed82b35e4ed68ed0",
+                "outputSha256": "870cc05a66e5d8c59cb9b4fe7bf4c154a2c958165a920bfa889ffa3051ca8f9f"
+              },
+              {
+                "sampleIndex": 5,
+                "inputSha256": "f6e6f9d305bf0267b50a505b61528602d8bb8e5f07a03017b231138b179aad31",
+                "outputSha256": "e22c9fc65bd710d7da477669c9b4f90256b51708a140486d8e96eb8426f85d3e"
+              },
+              {
+                "sampleIndex": 6,
+                "inputSha256": "f1e92f2acaf6143028eaa914b112313f140831f29a6def3e1d624bab72849e1b",
+                "outputSha256": "cc1e10e34a4db85ff768d1f6f2b42ec5cc1fae296ac2a03a61c364a5fef0aa8a"
+              },
+              {
+                "sampleIndex": 6,
+                "inputSha256": "9edcf256ddd3565b771fcc0eb0c097b5d4811a8729a29e585b6f81232ca172d4",
+                "outputSha256": "5d9672a2ecfc87e0290ad95ff15825f8bcfeda182d78efc10eab4773b247f434"
+              },
+              {
+                "sampleIndex": 6,
+                "inputSha256": "81be12db1eeebc596ab38d476b5f6b8ab94ceaaf505223f4b7a87ec338f3d4b1",
+                "outputSha256": "bea7038e16cab43f4f1da3fd9d4558a4f1322ab0bdfc51ad52f1709fa79fed86"
+              },
+              {
+                "sampleIndex": 6,
+                "inputSha256": "a2688e57472e7a723a47e9fc4bafd499d7ea15b3045b43daccd25b2414f2e36b",
+                "outputSha256": "80e938578f6a833965754fc78574987dfd361d3baee7cc429a0d9331978057f8"
+              },
+              {
+                "sampleIndex": 6,
+                "inputSha256": "78a3c8ff45837e89a0f719b0a0068489d3027a72061d796c459b3d3efb43c037",
+                "outputSha256": "ee9b018e8df7374ca5aa9316d1f9ee809c9b9c3911724ef8097043122d15eb6f"
+              },
+              {
+                "sampleIndex": 6,
+                "inputSha256": "3ad2252be9717344e564868100ab4c57957e116ddd6f6ac4e5ba3bcac2948c8f",
+                "outputSha256": "e9fda10f1b93e34e110e213fd6778dfd0e6d88df794108b956960ce28a457c1a"
+              },
+              {
+                "sampleIndex": 7,
+                "inputSha256": "435ef250d6d7de61dc6c12616383234422d1bddda5bb7fa21974821b0b7ad290",
+                "outputSha256": "ea5da95e2b99b6f806e4c9c5864c6ab2bf55bf7fffe3321eaa20a5fd0b8b992d"
+              },
+              {
+                "sampleIndex": 7,
+                "inputSha256": "139e9ec7c614b81441e46d31c386376d317c90f5c63306f70ee30efc395de42b",
+                "outputSha256": "5b4e11f7f5ad22dd9018b78d333b769f14eb33f9dfd4dbace2950a7d2b3d29eb"
+              },
+              {
+                "sampleIndex": 7,
+                "inputSha256": "1dfd2b1189ad6e42aff7633f4370afc0ee93537d34dcabefea19af3b3e6250e3",
+                "outputSha256": "7500a95538c59e440140e8ec09a32d13df61c72fdddc821e92b582bab52864b6"
+              },
+              {
+                "sampleIndex": 7,
+                "inputSha256": "b0cfe8ee3bd8b3028d6dd7c5fa7b50922ccb7ac9b9a39fa9b6be45357e92cee9",
+                "outputSha256": "4571b106b20b663684b3508c8f5f8349fa3828f382e1e12b36c8e8d4c23c8c62"
+              },
+              {
+                "sampleIndex": 7,
+                "inputSha256": "e7bea768d12edba87809f64ab26b95fc4115f4b780d0eeec2a8063714983e4f5",
+                "outputSha256": "f2e718e2cefa300299df60f7c7a836027b2a47268aea7486e5477d77e046302b"
+              },
+              {
+                "sampleIndex": 7,
+                "inputSha256": "a310a66dec8e2041ee4ff8decff7b9c556b44c93e330381fa5e545e53b053446",
+                "outputSha256": "ef7c5ddff7cdd339b877ee3a9326ffad3555ced4f5169c46fee5a7265f2e59e6"
+              },
+              {
+                "sampleIndex": 7,
+                "inputSha256": "4e9d6ef3a11f7bd30a2725226388dd562d124b9301b20eb3907947f821482106",
+                "outputSha256": "b7cf356f919bc364b55dec05d6c2d97dd743fa73226c3b910e76c2166016e989"
+              },
+              {
+                "sampleIndex": 8,
+                "inputSha256": "0b01e9daded14e7c48802f81eb498347ac90d11c0dfacdb3fc973fbca24e8306",
+                "outputSha256": "b2d907a45981fb0a3f2f24cd136d3a07c7c225ba98ed8841e5236bd31d3826bd"
+              },
+              {
+                "sampleIndex": 8,
+                "inputSha256": "88185d6217af1ce4af9fb5ee688e9e7603f309d24a14a4bd8cc537853b190c27",
+                "outputSha256": "6b0964396c7564906bb2ca2fa28f8ebce022ebac5ba45587423cf46c00bde925"
+              },
+              {
+                "sampleIndex": 8,
+                "inputSha256": "ff1aa679e0d9561dc0d802bd4571bd3d92667a3e9b779ac5ed82b35e4ed68ed0",
+                "outputSha256": "870cc05a66e5d8c59cb9b4fe7bf4c154a2c958165a920bfa889ffa3051ca8f9f"
+              },
+              {
+                "sampleIndex": 8,
+                "inputSha256": "f6e6f9d305bf0267b50a505b61528602d8bb8e5f07a03017b231138b179aad31",
+                "outputSha256": "e22c9fc65bd710d7da477669c9b4f90256b51708a140486d8e96eb8426f85d3e"
+              }
+            ],
+            "inputs": [
+              {
+                "name": "feature",
+                "shape": [
+                  1,
+                  360,
+                  80
+                ],
+                "dtype": "float32"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "embedding",
+                "shape": [
+                  1,
+                  192
+                ],
+                "dtype": "float32"
+              }
+            ]
+          }
+        ],
+        "samples": [
+          {
+            "input": "speaker1_a_cn_16k.wav",
+            "mode": "extract",
+            "repeat": false,
+            "audioFile": "input-1.wav",
+            "audioSha256": "5f20ce0ddc378ca3239d3ce864b1142726a46a1221ae553912e4e142045df58b",
+            "audioSeconds": 3.71525,
+            "chunks": null,
+            "embeddingShape": [
+              1,
+              192
+            ],
+            "processSeconds": 2.901679488015361,
+            "rtf": 0.7810186361659003,
+            "calls": 1,
+            "rawFile": "raw-1.npz",
+            "rawSha256": "43c7d24ef8d7c16d9aa8876e4205b9c2743c0f6c76ae76477de88060e5702dba"
+          },
+          {
+            "input": "speaker1_b_cn_16k.wav",
+            "mode": "extract",
+            "repeat": false,
+            "audioFile": "input-2.wav",
+            "audioSha256": "20745dc08a4281894d146140b99b9ef7417ac681119b7f7202f553cdf1a85f65",
+            "audioSeconds": 4.9066875,
+            "chunks": null,
+            "embeddingShape": [
+              1,
+              192
+            ],
+            "processSeconds": 0.036354013020172715,
+            "rtf": 0.007409074456070967,
+            "calls": 1,
+            "rawFile": "raw-2.npz",
+            "rawSha256": "fdcbef5dbfaa45b375a1c6445daaed79dd489c5239ba2db18a65337bdc6ce42a"
+          },
+          {
+            "input": "speaker2_a_cn_16k.wav",
+            "mode": "extract",
+            "repeat": false,
+            "audioFile": "input-3.wav",
+            "audioSha256": "8a6cffa452df32ef10503f7992f22ffcdd7f16c4e0273d13311bc5cdcb13abf4",
+            "audioSeconds": 5.312,
+            "chunks": null,
+            "embeddingShape": [
+              1,
+              192
+            ],
+            "processSeconds": 0.035154383978806436,
+            "rtf": 0.0066179186707090425,
+            "calls": 1,
+            "rawFile": "raw-3.npz",
+            "rawSha256": "48f2292d692426e51d7a37d1407f632e53b571d589602b65b71d8ccc03085192"
+          },
+          {
+            "input": "speaker1_a_cn_16k.wav",
+            "mode": "extract",
+            "repeat": true,
+            "audioFile": "input-4.wav",
+            "audioSha256": "5f20ce0ddc378ca3239d3ce864b1142726a46a1221ae553912e4e142045df58b",
+            "audioSeconds": 3.71525,
+            "chunks": null,
+            "embeddingShape": [
+              1,
+              192
+            ],
+            "processSeconds": 0.029302951996214688,
+            "rtf": 0.007887208665961829,
+            "calls": 1,
+            "rawFile": "raw-4.npz",
+            "rawSha256": "43c7d24ef8d7c16d9aa8876e4205b9c2743c0f6c76ae76477de88060e5702dba"
+          },
+          {
+            "input": "speaker1_a_cn_16k.wav",
+            "mode": "chunked",
+            "repeat": false,
+            "audioFile": "input-5.wav",
+            "audioSha256": "5f20ce0ddc378ca3239d3ce864b1142726a46a1221ae553912e4e142045df58b",
+            "audioSeconds": 3.71525,
+            "chunks": [
+              [
+                0,
+                1.5
+              ],
+              [
+                0.75,
+                2.25
+              ],
+              [
+                1.5,
+                3.0
+              ],
+              [
+                2.25,
+                3.71525
+              ]
+            ],
+            "embeddingShape": [
+              4,
+              192
+            ],
+            "processSeconds": 0.10351539903786033,
+            "rtf": 0.02786229702923365,
+            "calls": 4,
+            "rawFile": "raw-5.npz",
+            "rawSha256": "c0593ec56aec66284583ac3704d3833e9fd520a7b4aa9bc6c7576f00ce958aa9"
+          },
+          {
+            "input": "speaker1_b_cn_16k.wav",
+            "mode": "chunked",
+            "repeat": false,
+            "audioFile": "input-6.wav",
+            "audioSha256": "20745dc08a4281894d146140b99b9ef7417ac681119b7f7202f553cdf1a85f65",
+            "audioSeconds": 4.9066875,
+            "chunks": [
+              [
+                0,
+                1.5
+              ],
+              [
+                0.75,
+                2.25
+              ],
+              [
+                1.5,
+                3.0
+              ],
+              [
+                2.25,
+                3.75
+              ],
+              [
+                3.0,
+                4.5
+              ],
+              [
+                3.75,
+                4.9066875
+              ]
+            ],
+            "embeddingShape": [
+              6,
+              192
+            ],
+            "processSeconds": 0.14343708800151944,
+            "rtf": 0.029232978053222145,
+            "calls": 6,
+            "rawFile": "raw-6.npz",
+            "rawSha256": "69ac8ac8be5377b54c58c00aa25591a12fc2c6118c140d72c2ee5e3562869b47"
+          },
+          {
+            "input": "speaker2_a_cn_16k.wav",
+            "mode": "chunked",
+            "repeat": false,
+            "audioFile": "input-7.wav",
+            "audioSha256": "8a6cffa452df32ef10503f7992f22ffcdd7f16c4e0273d13311bc5cdcb13abf4",
+            "audioSeconds": 5.312,
+            "chunks": [
+              [
+                0,
+                1.5
+              ],
+              [
+                0.75,
+                2.25
+              ],
+              [
+                1.5,
+                3.0
+              ],
+              [
+                2.25,
+                3.75
+              ],
+              [
+                3.0,
+                4.5
+              ],
+              [
+                3.75,
+                5.25
+              ],
+              [
+                4.5,
+                5.312
+              ]
+            ],
+            "embeddingShape": [
+              7,
+              192
+            ],
+            "processSeconds": 0.17411117005394772,
+            "rtf": 0.032776952193890756,
+            "calls": 7,
+            "rawFile": "raw-7.npz",
+            "rawSha256": "65a8dde3edfb9d9e7e19f36a93d45432784dd0b1773d8f26dc969f5e37e436be"
+          },
+          {
+            "input": "speaker1_a_cn_16k.wav",
+            "mode": "chunked",
+            "repeat": true,
+            "audioFile": "input-8.wav",
+            "audioSha256": "5f20ce0ddc378ca3239d3ce864b1142726a46a1221ae553912e4e142045df58b",
+            "audioSeconds": 3.71525,
+            "chunks": [
+              [
+                0,
+                1.5
+              ],
+              [
+                0.75,
+                2.25
+              ],
+              [
+                1.5,
+                3.0
+              ],
+              [
+                2.25,
+                3.71525
+              ]
+            ],
+            "embeddingShape": [
+              4,
+              192
+            ],
+            "processSeconds": 0.10087493399623781,
+            "rtf": 0.02715158710618069,
+            "calls": 4,
+            "rawFile": "raw-8.npz",
+            "rawSha256": "c0593ec56aec66284583ac3704d3833e9fd520a7b4aa9bc6c7576f00ce958aa9"
+          }
+        ],
+        "pairs": [
+          {
+            "left": "speaker1_a_cn_16k.wav",
+            "right": "speaker1_b_cn_16k.wav",
+            "cosine": 0.6667552069129935
+          },
+          {
+            "left": "speaker1_a_cn_16k.wav",
+            "right": "speaker2_a_cn_16k.wav",
+            "cosine": 0.06701472790133615
+          },
+          {
+            "left": "speaker1_b_cn_16k.wav",
+            "right": "speaker2_a_cn_16k.wav",
+            "cosine": 0.03997713424423155
+          }
+        ],
+        "featureScope": "Official extract uses the first 360 frames after circle-padding to at least 57900 samples; chunk mode uses official 1.5s/0.75s windows.",
+        "review": {
+          "hashesAndOfficialSourceMatched": true,
+          "allRawFeaturesAndEmbeddingsChecked": true,
+          "pairwiseCosineIndependentlyRecomputed": true,
+          "bothModesRepeatRawExact": true,
+          "meanModelMilliseconds": 4.9596648081205785,
+          "actualCalls": 25,
+          "clusteringTested": false,
+          "scope": "Anonymous official file labels; no calibrated decision threshold, identity claim or EER evaluation."
+        }
+      }
+    }
+  ]
+}

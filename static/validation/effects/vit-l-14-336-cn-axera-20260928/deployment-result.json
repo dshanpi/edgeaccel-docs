@@ -1,0 +1,668 @@
+{
+  "modelId": "ViT-L-14-336-CN__axera",
+  "revision": "c99ea50e6f0e3ae9146239035a8217998bb0eda7",
+  "date": "2026-09-28",
+  "variants": [
+    {
+      "label": "随包配置：短边缩放与中心裁剪",
+      "observation": "三个候选固定为 小鸟、猫咪、狗子。三张图片的最高分依次为 小鸟、猫咪、狗子。每个图文输入运行两次，原始向量逐项一致；下表为候选内相对分数。",
+      "previews": [
+        {
+          "caption": "实际输入：bird.jpg",
+          "path": "/validation/effects/vit-l-14-336-cn-axera-20260928/bird-input.png"
+        },
+        {
+          "caption": "实际输入：cat.jpg",
+          "path": "/validation/effects/vit-l-14-336-cn-axera-20260928/cat-input.png"
+        },
+        {
+          "caption": "实际输入：dog-chai.jpeg",
+          "path": "/validation/effects/vit-l-14-336-cn-axera-20260928/dog-chai-input.png"
+        },
+        {
+          "caption": "实际送入编码器的裁剪图：bird.jpg",
+          "path": "/validation/effects/vit-l-14-336-cn-axera-20260928/bird-crop.png"
+        },
+        {
+          "caption": "实际送入编码器的裁剪图：cat.jpg",
+          "path": "/validation/effects/vit-l-14-336-cn-axera-20260928/cat-crop.png"
+        },
+        {
+          "caption": "实际送入编码器的裁剪图：dog-chai.jpeg",
+          "path": "/validation/effects/vit-l-14-336-cn-axera-20260928/dog-chai-crop.png"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "输入图片",
+            "小鸟",
+            "猫咪",
+            "狗子",
+            "最高分候选"
+          ],
+          "rows": [
+            [
+              "bird.jpg",
+              "0.984630",
+              "0.002988",
+              "0.012382",
+              "小鸟"
+            ],
+            [
+              "cat.jpg",
+              "0.000450",
+              "0.996837",
+              "0.002713",
+              "猫咪"
+            ],
+            [
+              "dog-chai.jpeg",
+              "0.000035",
+              "0.000208",
+              "0.999757",
+              "狗子"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "modelId": "ViT-L-14-336-CN__axera",
+        "provider": "AXCLRTExecutionProvider",
+        "completed": true,
+        "labels": [
+          "小鸟",
+          "猫咪",
+          "狗子"
+        ],
+        "language": "zh",
+        "sessions": [
+          {
+            "model": "textual/model.axmodel",
+            "weightSha256": "6f33786ab988ca22dbc883c9fa6ebfa842a425445e4dac945c30069a6d9d5cf8",
+            "runMilliseconds": [
+              10.988875990733504,
+              6.984276988077909,
+              6.9880689843557775,
+              7.08256900543347,
+              6.805484008509666,
+              7.15898594353348
+            ],
+            "allFinite": true,
+            "inputs": [
+              {
+                "name": "text",
+                "shape": [
+                  1,
+                  52
+                ],
+                "dtype": "int32"
+              }
+            ]
+          },
+          {
+            "model": "visual/model.axmodel",
+            "weightSha256": "6278e99001c198082b59219b163f7136d3049bca223be9176678ac6031348cde",
+            "runMilliseconds": [
+              99.93413597112522,
+              99.6859259903431,
+              99.55438401084393,
+              99.61096697952598,
+              99.54038402065635,
+              99.49167596641928,
+              99.70780200092122,
+              99.73492595599964,
+              99.74105202127248,
+              99.4129249593243,
+              99.52054999303073,
+              99.71596801187843
+            ],
+            "allFinite": true,
+            "inputs": [
+              {
+                "name": "image",
+                "shape": [
+                  1,
+                  3,
+                  336,
+                  336
+                ],
+                "dtype": "float32"
+              }
+            ]
+          }
+        ],
+        "tokens": [
+          {
+            "text": "小鸟",
+            "ids": [
+              101,
+              2207,
+              7881,
+              102
+            ],
+            "paddedLength": 52
+          },
+          {
+            "text": "猫咪",
+            "ids": [
+              101,
+              4344,
+              1488,
+              102
+            ],
+            "paddedLength": 52
+          },
+          {
+            "text": "狗子",
+            "ids": [
+              101,
+              4318,
+              2094,
+              102
+            ],
+            "paddedLength": 52
+          }
+        ],
+        "results": [
+          {
+            "method": "bundle-bicubic-center-crop",
+            "cosine": [
+              [
+                0.2754160761833191,
+                0.21743957698345184,
+                0.23165617883205414
+              ],
+              [
+                0.2452109158039093,
+                0.3222329318523407,
+                0.26316630840301514
+              ],
+              [
+                0.22678574919700623,
+                0.24458318948745728,
+                0.3293417990207672
+              ]
+            ],
+            "candidateSoftmax": [
+              [
+                0.9846295118331909,
+                0.0029880350921303034,
+                0.012382391840219498
+              ],
+              [
+                0.0004504020616877824,
+                0.9968369007110596,
+                0.002712647896260023
+              ],
+              [
+                3.515128992148675e-05,
+                0.00020838857744820416,
+                0.9997565150260925
+              ]
+            ],
+            "topLabels": [
+              "小鸟",
+              "猫咪",
+              "狗子"
+            ],
+            "repeatedEmbeddingsEqual": true,
+            "imageNames": [
+              "bird.jpg",
+              "cat.jpg",
+              "dog-chai.jpeg"
+            ],
+            "allTopLabelsMatch": true
+          },
+          {
+            "method": "official-cpp-direct-resize",
+            "cosine": [
+              [
+                0.2870270013809204,
+                0.21858370304107666,
+                0.23471586406230927
+              ],
+              [
+                0.25894078612327576,
+                0.33369457721710205,
+                0.2796979546546936
+              ],
+              [
+                0.2195224016904831,
+                0.23612035810947418,
+                0.32192084193229675
+              ]
+            ],
+            "candidateSoftmax": [
+              [
+                0.9936277866363525,
+                0.0010586905991658568,
+                0.005313491448760033
+              ],
+              [
+                0.0005640034796670079,
+                0.9949407577514648,
+                0.004495249129831791
+              ],
+              [
+                3.571039269445464e-05,
+                0.00018777370860334486,
+                0.9997765421867371
+              ]
+            ],
+            "topLabels": [
+              "小鸟",
+              "猫咪",
+              "狗子"
+            ],
+            "repeatedEmbeddingsEqual": true,
+            "imageNames": [
+              "bird.jpg",
+              "cat.jpg",
+              "dog-chai.jpeg"
+            ],
+            "allTopLabelsMatch": true
+          }
+        ],
+        "inputs": [
+          {
+            "path": "images/bird.jpg",
+            "sha256": "e58faba22db2c72e252c877d5e8ff64907219399afb5661f69f342ff2cbc99aa",
+            "height": 768,
+            "width": 1024
+          },
+          {
+            "path": "images/cat.jpg",
+            "sha256": "59b67bce343d435cb8f79b6abefc6eecc79924abcda6e7c7e39f8173bb932bc1",
+            "height": 360,
+            "width": 480
+          },
+          {
+            "path": "images/dog-chai.jpeg",
+            "sha256": "aa058d1c3b46413567e67e82f06e342726cf40faf0b2c5305bd551c8bf4a8c20",
+            "height": 1440,
+            "width": 1080
+          }
+        ],
+        "sampleSource": {
+          "repo": "AXERA-TECH/CLIP-ONNX-AX650-CPP",
+          "revision": "8a330cf1c3f7a881ba222f92d6485e5b6894f8d3"
+        },
+        "vocabulary": {
+          "file": "cn_vocab.txt",
+          "sha256": "45bbac6b341c319adc98a532532882e91a9cefc0329aa57bac9ae761c27b291c",
+          "lines": 21128,
+          "scope": "Official C++ fixed-label rules; no arbitrary-text BPE/WordPiece claim"
+        },
+        "config": {
+          "embed_dim": 768,
+          "vision_cfg": {
+            "image_size": 336,
+            "layers": 24,
+            "width": 1024,
+            "patch_size": 14
+          },
+          "text_cfg": {
+            "context_length": 52,
+            "vocab_size": 21128,
+            "width": 768,
+            "heads": 12,
+            "layers": 12
+          }
+        },
+        "preprocessConfig": {
+          "size": [
+            336,
+            336
+          ],
+          "mode": "RGB",
+          "mean": [
+            0.48145466,
+            0.4578275,
+            0.40821073
+          ],
+          "std": [
+            0.26862954,
+            0.26130258,
+            0.27577711
+          ],
+          "interpolation": "bicubic",
+          "resize_mode": "shortest",
+          "fill_color": 0
+        },
+        "bundleConfigurationHashes": {
+          "config.json": "b206a5ea2acded3ab3576b5e59b031a5cb0d615da60d94cf43e5aef6e7661d49",
+          "visual/preprocess_cfg.json": "8c70a565dc08e84c4e33105d649e6e87aecd6be1a5e2c9bd92a4f25e6eaf1b9c",
+          "textual/tokenizer_config.json": "3942470d727f10d7b4882c09c732e8fb91755b2326692c6f2f2e3d512fe3d9ee"
+        },
+        "bundledTokenizerUsed": false,
+        "tokenizerNote": "Chinese bundle CLIP tokenizer IDs exceed declared vocab; use official matched CN vocabulary.",
+        "rawSha256": "3cac49c9193621f024458099aa9933bcc6ae41c281c8059e0ee995e51e3c270d",
+        "review": {
+          "archiveAndFileHashesMatched": true,
+          "rawRepeatAndScoresRecomputed": true,
+          "pixelsAndNormalizationChecked": true,
+          "scope": "Three fixed candidate labels and three images, two preprocessing methods; not arbitrary text or full retrieval accuracy."
+        }
+      }
+    },
+    {
+      "label": "官方 C++ 示例：直接缩放对照",
+      "observation": "三个候选固定为 小鸟、猫咪、狗子。三张图片的最高分依次为 小鸟、猫咪、狗子。每个图文输入运行两次，原始向量逐项一致；下表为候选内相对分数。",
+      "previews": [],
+      "tables": [
+        {
+          "headers": [
+            "输入图片",
+            "小鸟",
+            "猫咪",
+            "狗子",
+            "最高分候选"
+          ],
+          "rows": [
+            [
+              "bird.jpg",
+              "0.993628",
+              "0.001059",
+              "0.005313",
+              "小鸟"
+            ],
+            [
+              "cat.jpg",
+              "0.000564",
+              "0.994941",
+              "0.004495",
+              "猫咪"
+            ],
+            [
+              "dog-chai.jpeg",
+              "0.000036",
+              "0.000188",
+              "0.999777",
+              "狗子"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "modelId": "ViT-L-14-336-CN__axera",
+        "provider": "AXCLRTExecutionProvider",
+        "completed": true,
+        "labels": [
+          "小鸟",
+          "猫咪",
+          "狗子"
+        ],
+        "language": "zh",
+        "sessions": [
+          {
+            "model": "textual/model.axmodel",
+            "weightSha256": "6f33786ab988ca22dbc883c9fa6ebfa842a425445e4dac945c30069a6d9d5cf8",
+            "runMilliseconds": [
+              10.988875990733504,
+              6.984276988077909,
+              6.9880689843557775,
+              7.08256900543347,
+              6.805484008509666,
+              7.15898594353348
+            ],
+            "allFinite": true,
+            "inputs": [
+              {
+                "name": "text",
+                "shape": [
+                  1,
+                  52
+                ],
+                "dtype": "int32"
+              }
+            ]
+          },
+          {
+            "model": "visual/model.axmodel",
+            "weightSha256": "6278e99001c198082b59219b163f7136d3049bca223be9176678ac6031348cde",
+            "runMilliseconds": [
+              99.93413597112522,
+              99.6859259903431,
+              99.55438401084393,
+              99.61096697952598,
+              99.54038402065635,
+              99.49167596641928,
+              99.70780200092122,
+              99.73492595599964,
+              99.74105202127248,
+              99.4129249593243,
+              99.52054999303073,
+              99.71596801187843
+            ],
+            "allFinite": true,
+            "inputs": [
+              {
+                "name": "image",
+                "shape": [
+                  1,
+                  3,
+                  336,
+                  336
+                ],
+                "dtype": "float32"
+              }
+            ]
+          }
+        ],
+        "tokens": [
+          {
+            "text": "小鸟",
+            "ids": [
+              101,
+              2207,
+              7881,
+              102
+            ],
+            "paddedLength": 52
+          },
+          {
+            "text": "猫咪",
+            "ids": [
+              101,
+              4344,
+              1488,
+              102
+            ],
+            "paddedLength": 52
+          },
+          {
+            "text": "狗子",
+            "ids": [
+              101,
+              4318,
+              2094,
+              102
+            ],
+            "paddedLength": 52
+          }
+        ],
+        "results": [
+          {
+            "method": "bundle-bicubic-center-crop",
+            "cosine": [
+              [
+                0.2754160761833191,
+                0.21743957698345184,
+                0.23165617883205414
+              ],
+              [
+                0.2452109158039093,
+                0.3222329318523407,
+                0.26316630840301514
+              ],
+              [
+                0.22678574919700623,
+                0.24458318948745728,
+                0.3293417990207672
+              ]
+            ],
+            "candidateSoftmax": [
+              [
+                0.9846295118331909,
+                0.0029880350921303034,
+                0.012382391840219498
+              ],
+              [
+                0.0004504020616877824,
+                0.9968369007110596,
+                0.002712647896260023
+              ],
+              [
+                3.515128992148675e-05,
+                0.00020838857744820416,
+                0.9997565150260925
+              ]
+            ],
+            "topLabels": [
+              "小鸟",
+              "猫咪",
+              "狗子"
+            ],
+            "repeatedEmbeddingsEqual": true,
+            "imageNames": [
+              "bird.jpg",
+              "cat.jpg",
+              "dog-chai.jpeg"
+            ],
+            "allTopLabelsMatch": true
+          },
+          {
+            "method": "official-cpp-direct-resize",
+            "cosine": [
+              [
+                0.2870270013809204,
+                0.21858370304107666,
+                0.23471586406230927
+              ],
+              [
+                0.25894078612327576,
+                0.33369457721710205,
+                0.2796979546546936
+              ],
+              [
+                0.2195224016904831,
+                0.23612035810947418,
+                0.32192084193229675
+              ]
+            ],
+            "candidateSoftmax": [
+              [
+                0.9936277866363525,
+                0.0010586905991658568,
+                0.005313491448760033
+              ],
+              [
+                0.0005640034796670079,
+                0.9949407577514648,
+                0.004495249129831791
+              ],
+              [
+                3.571039269445464e-05,
+                0.00018777370860334486,
+                0.9997765421867371
+              ]
+            ],
+            "topLabels": [
+              "小鸟",
+              "猫咪",
+              "狗子"
+            ],
+            "repeatedEmbeddingsEqual": true,
+            "imageNames": [
+              "bird.jpg",
+              "cat.jpg",
+              "dog-chai.jpeg"
+            ],
+            "allTopLabelsMatch": true
+          }
+        ],
+        "inputs": [
+          {
+            "path": "images/bird.jpg",
+            "sha256": "e58faba22db2c72e252c877d5e8ff64907219399afb5661f69f342ff2cbc99aa",
+            "height": 768,
+            "width": 1024
+          },
+          {
+            "path": "images/cat.jpg",
+            "sha256": "59b67bce343d435cb8f79b6abefc6eecc79924abcda6e7c7e39f8173bb932bc1",
+            "height": 360,
+            "width": 480
+          },
+          {
+            "path": "images/dog-chai.jpeg",
+            "sha256": "aa058d1c3b46413567e67e82f06e342726cf40faf0b2c5305bd551c8bf4a8c20",
+            "height": 1440,
+            "width": 1080
+          }
+        ],
+        "sampleSource": {
+          "repo": "AXERA-TECH/CLIP-ONNX-AX650-CPP",
+          "revision": "8a330cf1c3f7a881ba222f92d6485e5b6894f8d3"
+        },
+        "vocabulary": {
+          "file": "cn_vocab.txt",
+          "sha256": "45bbac6b341c319adc98a532532882e91a9cefc0329aa57bac9ae761c27b291c",
+          "lines": 21128,
+          "scope": "Official C++ fixed-label rules; no arbitrary-text BPE/WordPiece claim"
+        },
+        "config": {
+          "embed_dim": 768,
+          "vision_cfg": {
+            "image_size": 336,
+            "layers": 24,
+            "width": 1024,
+            "patch_size": 14
+          },
+          "text_cfg": {
+            "context_length": 52,
+            "vocab_size": 21128,
+            "width": 768,
+            "heads": 12,
+            "layers": 12
+          }
+        },
+        "preprocessConfig": {
+          "size": [
+            336,
+            336
+          ],
+          "mode": "RGB",
+          "mean": [
+            0.48145466,
+            0.4578275,
+            0.40821073
+          ],
+          "std": [
+            0.26862954,
+            0.26130258,
+            0.27577711
+          ],
+          "interpolation": "bicubic",
+          "resize_mode": "shortest",
+          "fill_color": 0
+        },
+        "bundleConfigurationHashes": {
+          "config.json": "b206a5ea2acded3ab3576b5e59b031a5cb0d615da60d94cf43e5aef6e7661d49",
+          "visual/preprocess_cfg.json": "8c70a565dc08e84c4e33105d649e6e87aecd6be1a5e2c9bd92a4f25e6eaf1b9c",
+          "textual/tokenizer_config.json": "3942470d727f10d7b4882c09c732e8fb91755b2326692c6f2f2e3d512fe3d9ee"
+        },
+        "bundledTokenizerUsed": false,
+        "tokenizerNote": "Chinese bundle CLIP tokenizer IDs exceed declared vocab; use official matched CN vocabulary.",
+        "rawSha256": "3cac49c9193621f024458099aa9933bcc6ae41c281c8059e0ee995e51e3c270d",
+        "review": {
+          "archiveAndFileHashesMatched": true,
+          "rawRepeatAndScoresRecomputed": true,
+          "pixelsAndNormalizationChecked": true,
+          "scope": "Three fixed candidate labels and three images, two preprocessing methods; not arbitrary text or full retrieval accuracy."
+        }
+      }
+    }
+  ]
+}
