@@ -20,11 +20,23 @@ npm run serve -- --port 3000
 
 中文搜索索引在生产构建时生成，请用 `npm run serve` 验证搜索功能。
 
-## GitHub Actions 自动构建
+## GitHub Actions 自动构建与发布
 
 工作流为 `.github/workflows/build-docs.yml`。推送到 `main`、向 `main` 提交 PR 或在 Actions 页面手动运行时，会安装锁定依赖、执行首次推理脚本的本地模拟测试，并运行 `npm run build`，自动生成文档和检查链接、模型记录及附件。
 
-构建环境为 Ubuntu、Node.js 22。构建成功后，可在对应运行页面下载 `edgeaccel-docs-site` 产物，保留 7 天。构建采用 `https://dshanpi.github.io/edgeaccel-docs/` 路径；此工作流只编译和上传产物，不自动发布 GitHub Pages。
+构建环境为 Ubuntu、Node.js 22。构建成功后，可在对应运行页面下载 `edgeaccel-docs-site` 产物，保留 7 天。`main` 的构建会自动将网页发布到 `gh-pages` 分支；PR 只执行检查和构建，不发布。
+
+默认网址为 https://dshanpi.github.io/edgeaccel-docs/ 。仓库 **Settings → Pages** 中选择 **Deploy from a branch → gh-pages → / (root)**。源码始终在 `main` 维护，不要直接编辑 `gh-pages` 中的生成文件。
+
+`scripts/prepare-pages.py` 在发布前合并重复打包的媒体文件并同步更新网页引用，保留原始附件和验证数据，检查站点未超过 GitHub Pages 的 1 GB 限制。
+
+后续绑定自定义域名时：
+
+1. 在仓库 **Settings → Secrets and variables → Actions → Variables** 新建 `PAGES_CUSTOM_DOMAIN`，值填写域名，不带 `https://` 或路径。
+2. 在 **Settings → Pages → Custom domain** 填写同一域名，并按 GitHub 提示完成 DNS 配置。
+3. 在 Actions 中手动运行工作流。构建会使用域名根路径，并在 `gh-pages` 写入对应的 `CNAME`。
+
+未配置域名变量时，自动使用默认的 GitHub Pages 项目路径。
 
 ## 内容结构
 
@@ -94,7 +106,7 @@ $env:BASE_URL = '/edgeaccel-docs/'
 npm run build
 ```
 
-构建产物位于 `build/`，可以交给静态服务器。GitHub Actions 已配置自动编译；网站发布与域名配置需另行设置。
+构建产物位于 `build/`，可以交给静态服务器。GitHub Actions 自动编译并发布到 `gh-pages`，域名配置见上文。
 
 ## 基础源码来源
 

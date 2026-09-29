@@ -1,4 +1,4 @@
-name: Build documentation
+name: Build and publish documentation
 
 on:
   push:
@@ -20,8 +20,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     env:
-      SITE_URL: https://dshanpi.github.io
-      BASE_URL: /edgeaccel-docs/
+      SITE_URL: ${{ vars.PAGES_CUSTOM_DOMAIN && format('https://{0}', vars.PAGES_CUSTOM_DOMAIN) || 'https://dshanpi.github.io' }}
+      BASE_URL: ${{ vars.PAGES_CUSTOM_DOMAIN && '/' || '/edgeaccel-docs/' }}
       NODE_OPTIONS: --max-old-space-size=4096
     steps:
       - name: Check out repository
@@ -41,9 +41,15 @@ jobs:
       - name: Test first-inference script
         run: python3 scripts/test-first-inference.py
 
+      - name: Test Pages asset preparation
+        run: python3 scripts/test-prepare-pages.py
+
       # prebuild regenerates the guides and validates model records and links.
       - name: Build documentation
         run: npm run build
+
+      - name: Prepare website for GitHub Pages
+        run: python3 scripts/prepare-pages.py build
 
       - name: Upload website artifact
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
@@ -53,3 +59,26 @@ jobs:
           if-no-files-found: error
           retention-days: 7
           compression-level: 1
+
+  publish:
+    name: Publish gh-pages branch
+    needs: build
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - name: Download website artifact
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8
+        with:
+          name: edgeaccel-docs-site
+          path: build
+
+      - name: Publish compiled website
+        uses: peaceiris/actions-gh-pages@329bcc8f12caed2cefe5a5b80781499a6f3b361b # v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./build
+          cname: ${{ vars.PAGES_CUSTOM_DOMAIN }}
