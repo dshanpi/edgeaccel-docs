@@ -12,7 +12,7 @@ Person_car-axera 用于目标检测。本页说明 M.2 算力卡的接入条件�
 
 ## 准备运行环境
 
-本页效果展示使用 **RK3576 DshanPi A1 + AX8850 8GB M.2**；其他容量或平台需重新确认模型能否加载并正确运行。
+本页包含 **RK3576 DshanPi A1 + AX8850 16GB M.2** 与 **RK3576 DshanPi A1 + AX8850 8GB M.2** 的样例。按效果展示中的权重和容量对应使用，不同环境的结果不能互相替代。
 
 在连接算力卡的 Linux 主机终端执行，RK3576 使用 ARM64 环境。首次部署先完成[驱动与设备检查](../../usage/device-check.md)、[安装 PyAXEngine](../../usage/python.md)和[下载工具安装](../../usage/download-models.md#使用-hugging-face-下载)。已完成这些步骤可直接下载模型。
 
@@ -95,9 +95,107 @@ python ax_pcd_infer.py --model AX650/ax_ax650_pcd_tiny_algo_V2.0.0.axmodel --img
 
 参数依据：[`ax_pcd_infer.py` 源码](https://huggingface.co/AXERA-TECH/Person_car-axera/blob/20e3e18e65c7874da8e6dbe65e248dfb5a48ddde/ax_pcd_infer.py)。
 
+## 运行 NHWC 变体（可选）
+
+默认步骤使用NCHW权重。下列NHWC变体需要配套的输入布局处理，不能只替换模型文件名。
+
+### 准备例程
+
+在RK3576主机激活前文安装的PyAXEngine环境。下载[NHWC视觉运行包](../../../static/examples/vision-nhwc-deployment-20261005.zip)，保存到 `~/edgeaccel`，然后解压：
+
+```bash
+source ~/edgeaccel/python-env/bin/activate
+python -m zipfile -e ~/edgeaccel/vision-nhwc-deployment-20261005.zip ~/edgeaccel
+```
+
+### 下载对应权重和样例
+
+```bash
+NHWC_MODELS=~/edgeaccel/models-nhwc
+~/edgeaccel/hf-env/bin/hf download AXERA-TECH/Person_car-axera \
+  --revision 20e3e18e65c7874da8e6dbe65e248dfb5a48ddde \
+  --include "ax_pcd_infer.py" "car_away_1920x1080.jpg" "AX650/ax_ax650_pcd_max_800_480_rgb_nhwc_V2.0.0.axmodel" "AX650/ax_ax650_pcd_tiny_algo_rgb_nhwc_V2.0.0.axmodel" \
+  --local-dir "$NHWC_MODELS/Person_car-axera"
+```
+
+### 运行并查看输出
+
+```bash
+python ~/edgeaccel/vision-nhwc/vision_nhwc.py \
+  --models-root "$NHWC_MODELS" --case person-car-max \
+  --output ~/edgeaccel/results/person-car-max-nhwc
+python ~/edgeaccel/vision-nhwc/vision_nhwc.py \
+  --models-root "$NHWC_MODELS" --case person-car-tiny \
+  --output ~/edgeaccel/results/person-car-tiny-nhwc
+```
+
+每次使用尚不存在的结果目录。程序应显示 `AXCLRTExecutionProvider`；输出图或终端识别文字应与下方NHWC效果一致。运行包保留固定版本原始前后处理，实际使用的输入布局为NHWC。
+
+max变体沿用原脚本BGR输入，tiny变体沿用RGB输入；运行包分别处理，不需要手动交换颜色通道。
+
+
 ## 查看部署效果
 
-**固定样例已核对** · 2026-09-23 · RK3576 DshanPi A1 + AX8850 8GB M.2。以下输入与输出来自本页固定版本的实际运行。
+### NHWC：配套运行包
+
+**固定样例已核对** · RK3576 DshanPi A1 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
+
+2 个 NHWC 权重完成固定样例测试，每个权重独立运行三次，原始输出与效果图一致。下方展示本次输入、输出及样例范围。
+
+**person-car-max · ax_ax650_pcd_max_800_480_rgb_nhwc_V2.0.0.axmodel**
+
+道路图输出13个car框和2个person框；两个人体框位于右侧人行道，车辆框与道路可见车辆对应。
+
+<div className="model-effect-gallery">
+
+<figure>
+
+[![输入：car_away_1920x1080.jpg](../../../static/validation/effects/person-car-axera-nhwc-20261005/inputs/person-car-max.jpg)](../../../static/validation/effects/person-car-axera-nhwc-20261005/inputs/person-car-max.jpg)
+
+<figcaption>输入：car_away_1920x1080.jpg</figcaption>
+</figure>
+
+<figure>
+
+[![NHWC实际输出：person-car-max](../../../static/validation/effects/person-car-axera-nhwc-20261005/outputs/person-car-max.jpg)](../../../static/validation/effects/person-car-axera-nhwc-20261005/outputs/person-car-max.jpg)
+
+<figcaption>NHWC实际输出：person-car-max</figcaption>
+</figure>
+
+</div>
+
+**person-car-tiny · ax_ax650_pcd_tiny_algo_rgb_nhwc_V2.0.0.axmodel**
+
+tiny模型在同一道路图输出13个car框和2个person框，位置与车辆和右侧行人对应；置信度多为0.889、0.644、0.250，按实际输出保留。
+
+<div className="model-effect-gallery">
+
+<figure>
+
+[![输入：car_away_1920x1080.jpg](../../../static/validation/effects/person-car-axera-nhwc-20261005/inputs/person-car-tiny.jpg)](../../../static/validation/effects/person-car-axera-nhwc-20261005/inputs/person-car-tiny.jpg)
+
+<figcaption>输入：car_away_1920x1080.jpg</figcaption>
+</figure>
+
+<figure>
+
+[![NHWC实际输出：person-car-tiny](../../../static/validation/effects/person-car-axera-nhwc-20261005/outputs/person-car-tiny.jpg)](../../../static/validation/effects/person-car-axera-nhwc-20261005/outputs/person-car-tiny.jpg)
+
+<figcaption>NHWC实际输出：person-car-tiny</figcaption>
+</figure>
+
+</div>
+
+**使用时注意：**
+
+- 固定官方样例，未覆盖独立数据集精度、视频连续运行或长期稳定性。
+- 本次使用16GB算力卡；不替代该NHWC权重在8GB卡上的实测。
+
+这些结果用于对照部署后的输出，未覆盖完整数据集精度或长期连续运行。
+
+### NCHW：原部署入口
+
+**固定样例已核对** · RK3576 DshanPi A1 + AX8850 8GB M.2。以下输入与输出来自本页固定版本的实际运行。
 
 AXCL 后端完成道路图片推理，输出 15 个目标：13 个 car 和 2 个 person。对照原图，车辆框覆盖道路上的可见汽车，2 个人员框对应右侧人行道上的两名行人；框的位置和类别未见明显错位。
 
@@ -128,10 +226,41 @@ AXCL 后端完成道路图片推理，输出 15 个目标：13 个 car 和 2 个
 
 这些结果用于对照部署后的输出，未覆盖完整数据集精度或长期连续运行。
 
+**NHWC：配套运行包**
+
 <details>
 <summary>查看样例环境与运行耗时</summary>
 
-环境：RK3576 DshanPi A1 + AX8850 8GB M.2。日期：2026-09-23。模型版本：`20e3e18e65c7874da8e6dbe65e248dfb5a48ddde`。
+环境：RK3576 DshanPi A1 + AX8850 16GB M.2。模型版本：`20e3e18e65c7874da8e6dbe65e248dfb5a48ddde`。
+
+| 组件 | 版本或配置 |
+| --- | --- |
+| 主机系统 / 内核 | Ubuntu 24.04 / Armbian；aarch64；6.1.115-vendor-rk35xx |
+| AXCL / 驱动 | V3.16.0_20260729180218 |
+| 固件 / CMM | V3.16.0；总量 15232 MiB，空闲占用 18 MiB |
+| Python 后端 | AXCLRTExecutionProvider；NumPy 1.26.4；OpenCV 4.11.0 |
+| 输入与后处理 | 固定仓库原始样例；保留原始色序和后处理，按模型元数据转换 NHWC 布局 |
+
+| 指标 | 实测值 | 计时或统计范围 |
+| --- | --- | --- |
+| ax_ax650_pcd_max_800_480_rgb_nhwc_V2.0.0.axmodel | 14.951 / 14.691 / 14.888 ms | 三次独立进程各一次session.run墙钟，含传输，不含加载和后处理；非预热平均性能。 |
+| ax_ax650_pcd_tiny_algo_rgb_nhwc_V2.0.0.axmodel | 9.766 / 9.938 / 10.207 ms | 三次独立进程各一次session.run墙钟，含传输，不含加载和后处理；非预热平均性能。 |
+
+适用范围：
+
+- 按原始NHWC脚本保留BGR输入，不能套用其他变体的RGB顺序。
+- 只有单张道路样例，非全场景检出率。
+- 仅单张道路样例；不得将这些分数解释为检出准确率。
+- tiny保留原始RGB输入，与max变体的原始BGR流程不同。
+
+</details>
+
+**NCHW：原部署入口**
+
+<details>
+<summary>查看样例环境与运行耗时</summary>
+
+环境：RK3576 DshanPi A1 + AX8850 8GB M.2。模型版本：`20e3e18e65c7874da8e6dbe65e248dfb5a48ddde`。
 
 | 组件 | 版本或配置 |
 | --- | --- |
@@ -150,8 +279,6 @@ AXCL 后端完成道路图片推理，输出 15 个目标：13 个 car 和 2 个
 
 适用范围：
 
-- 只核对这张白天道路图片，未建立逐目标标注集，不能把输出数量当作召回率或保证全部远处目标均被检出。
-- 画面底部截断车辆的置信度为 0.250；未测试夜间、拥堵遮挡、其他车型、骑行者类别或连续跟踪。
 - 运行源码包含显式 AXCL 后端或本页说明的适配修改；result.json 保存逐项替换及修改后 SHA256。
 
 </details>

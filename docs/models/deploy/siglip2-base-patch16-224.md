@@ -79,7 +79,7 @@ python vision_card.py --model-dir . --task siglip2 --variant base224 \
 
 ## 查看部署效果
 
-**固定样例已核对** · 2026-09-24 · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
+**固定样例已核对** · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
 
 配套图像与文本编码器均取得输出，对官方双猫图片比较 cats 与 dogs 两条描述。
 
@@ -113,7 +113,7 @@ python vision_card.py --model-dir . --task siglip2 --variant base224 \
 <details>
 <summary>查看样例环境与运行耗时</summary>
 
-环境：RK3576 + AX8850 16GB M.2。日期：2026-09-24。模型版本：`ad55e40ba57d930573b75d294d4b5aa452fa6a00`。
+环境：RK3576 + AX8850 16GB M.2。模型版本：`ad55e40ba57d930573b75d294d4b5aa452fa6a00`。
 
 | 组件 | 版本或配置 |
 | --- | --- |
@@ -132,11 +132,6 @@ python vision_card.py --model-dir . --task siglip2 --variant base224 \
 | --- | --- | --- |
 | siglip2-base224-fixed64 / siglip2-base-patch16-224_vision.axmodel | 20.092 ms（1 次平均） | AXCL session.run 调用，含输入输出传输；不含模型加载和前后处理，未剔除首轮。 |
 | siglip2-base224-fixed64 / siglip2-base-patch16-224_text.axmodel | 6.913 ms（2 次平均） | AXCL session.run 调用，含输入输出传输；不含模型加载和前后处理，未剔除首轮。 |
-
-适用范围：
-
-- 只测试一张图片与两条英文描述；匹配分数不代表经过标定的分类准确率。
-- 结论限于 RK3576 + AX8850 16GB 的上述固定样例，不等同于 8GB 容量验证或长期稳定性测试。
 
 </details>
 

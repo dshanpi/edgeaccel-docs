@@ -24,7 +24,7 @@ description: "PyAXEngine 的 M.2 算力卡部署步骤、配套文件与效果�
 | --- | --- |
 | [`config.json`](https://huggingface.co/AXERA-TECH/PyAXEngine/blob/eff1dabe485eec51ae8e38e9a0eb9eedb4050489/config.json) | 运行配置 |
 
-仓库提交：`eff1dabe485eec51ae8e38e9a0eb9eedb4050489`。仓库中的 0 个 `.axmodel` 文件可能包括多个芯片、规格和分片。运行时使用本页指定的配套文件，完整列表见[固定版本目录](https://huggingface.co/AXERA-TECH/PyAXEngine/tree/eff1dabe485eec51ae8e38e9a0eb9eedb4050489)。
+仓库提交：`eff1dabe485eec51ae8e38e9a0eb9eedb4050489`。该提交没有预编译 `.axmodel` 文件。运行时使用本页指定的配套文件，完整列表见[固定版本目录](https://huggingface.co/AXERA-TECH/PyAXEngine/tree/eff1dabe485eec51ae8e38e9a0eb9eedb4050489)。
 
 </details>
 

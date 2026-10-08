@@ -62,7 +62,7 @@ cd "$MODEL_DIR"
 | [`quantize_config.json`](https://huggingface.co/AXERA-TECH/Qwen3.5-4B-GPTQ-Int4/blob/a2552f55c40e293c75db3b996bd133806fcdc5e3/quantize_config.json) | 运行配置 |
 | [`tokenizer_config.json`](https://huggingface.co/AXERA-TECH/Qwen3.5-4B-GPTQ-Int4/blob/a2552f55c40e293c75db3b996bd133806fcdc5e3/tokenizer_config.json) | 运行配置 |
 
-仓库提交：`a2552f55c40e293c75db3b996bd133806fcdc5e3`。仓库中的 0 个 `.axmodel` 文件可能包括多个芯片、规格和分片。运行时使用本页指定的配套文件，完整列表见[固定版本目录](https://huggingface.co/AXERA-TECH/Qwen3.5-4B-GPTQ-Int4/tree/a2552f55c40e293c75db3b996bd133806fcdc5e3)。
+仓库提交：`a2552f55c40e293c75db3b996bd133806fcdc5e3`。该提交没有预编译 `.axmodel` 文件。运行时使用本页指定的配套文件，完整列表见[固定版本目录](https://huggingface.co/AXERA-TECH/Qwen3.5-4B-GPTQ-Int4/tree/a2552f55c40e293c75db3b996bd133806fcdc5e3)。
 
 </details>
 

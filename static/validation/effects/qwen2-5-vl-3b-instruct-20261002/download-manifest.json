@@ -1,0 +1,729 @@
+{
+  "modelId": "Qwen2.5-VL-3B-Instruct",
+  "repo": "AXERA-TECH/Qwen2.5-VL-3B-Instruct",
+  "revision": "d967363ac68ee8c46a46110b8ee92f0f0cb332cb",
+  "complete": true,
+  "files": [
+    {
+      "path": ".gitattributes",
+      "size": 1813,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/.gitattributes",
+      "verifiedHashes": {
+        "sha256": "b8d5608fe1191cafb7ac503e4d81ff42046072cc7a044e1871ee910f3e859c1e",
+        "gitBlob": "76fb050472b95257d6f98e090845e6823a9b7a84"
+      }
+    },
+    {
+      "path": "Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/Qwen2.5-VL-3B-Instruct_vision_nchw448.axmodel",
+      "size": 921254437,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/Qwen2.5-VL-3B-Instruct_vision_nchw448.axmodel",
+      "verifiedHashes": {
+        "sha256": "47c6a5c75e3941c49123018f352785dbcbd028dd7d1e741a16c6453f9c9209cf",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/Qwen2.5-VL-3B-Instruct_vision_nhwc.axmodel",
+      "size": 777801587,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/Qwen2.5-VL-3B-Instruct_vision_nhwc.axmodel",
+      "verifiedHashes": {
+        "sha256": "035e9118aa3f106f35f6cf4caa6829a8c97695693b42aea009e43ae39e9b1a59",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/model.embed_tokens.weight.bfloat16.bin",
+      "size": 622329856,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/model.embed_tokens.weight.bfloat16.bin",
+      "verifiedHashes": {
+        "sha256": "b84907567aa829c6f24cadbdeb68c3c44d25fc0a8be8e917fd603cb64f72810d",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l0_together.axmodel",
+      "size": 90748908,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l0_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "51a79521d270e312062df608512706eaa3e259d97ac79514cba3461150a92496",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l10_together.axmodel",
+      "size": 90755116,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l10_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "cae58a2b7923870f93540409bd4a8f1c63398ebdaeb0d51905d1f59f2b5aa51f",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l11_together.axmodel",
+      "size": 90756172,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l11_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "60cd4540069957200d622642c91015ff93744b2bc17a9e2494f8e1a3fb78a34d",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l12_together.axmodel",
+      "size": 90756268,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l12_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "8c4302238aeeb83ab4ef8f4317e2a4d39917532ba07c46d844a1540b0abac2fb",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l13_together.axmodel",
+      "size": 90756844,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l13_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "34f1efba5e7bc27ddb8902e3c4347b881fdd3616e6ad7709f6234cdd81d0a931",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l14_together.axmodel",
+      "size": 90755628,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l14_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "6041968d265ecbe039719c0bb31b068d3c124fbda5501a231c0bc73b04806355",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l15_together.axmodel",
+      "size": 90754924,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l15_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "cc59dd081c621b5f78a80665e5bb50708f665ce8df834b81bb959eaf68203aa6",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l16_together.axmodel",
+      "size": 90756204,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l16_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "3403d19c196f2a5a0f86c862b42e79034986edae8dce8cda526a9c58791bd0d0",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l17_together.axmodel",
+      "size": 90753068,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l17_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "42638c3a6d26560aa078110bdd7b34221eaaf874d380d4afffcc5bf064137d9d",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l18_together.axmodel",
+      "size": 90755308,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l18_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "b3c87b2b8b35fa4a1c744a96f574c7ccd6672edbbcf28640bab8b015721b7c8c",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l19_together.axmodel",
+      "size": 90752876,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l19_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "9505a70f508794afc7b5c1a6524d227e8424b04cbaaec08d5676a637990da1f3",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l1_together.axmodel",
+      "size": 90736556,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l1_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "c2741d3af4b13c85f35e596b4c4af194aa489803007a1c4a92f93499a5fdec63",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l20_together.axmodel",
+      "size": 90751788,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l20_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "847399a80afded39d556b153f53483b74b4e17308cb420df1b37b5e64a3c891a",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l21_together.axmodel",
+      "size": 90754380,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l21_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "c5d3e45a63ba393186a06184006aafcdea62129b414f5df8e86da40aa764cdf9",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l22_together.axmodel",
+      "size": 90756364,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l22_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "8a8b09fc38f16380a3565fa430ae1b97a09c74e663cda85c40b1a49b737f4d1f",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l23_together.axmodel",
+      "size": 90752428,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l23_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "f736729cd081a16ccbd81d87fc420adf7612baa0a6b35e2f50557b8ccc44f966",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l24_together.axmodel",
+      "size": 90756204,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l24_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "4d4c4571d43628a914526fcee5af0aa9ba37f8fb6bd1813b3257c49eb1243a2d",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l25_together.axmodel",
+      "size": 90754572,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l25_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "6eb156c97aab89cae01fe4e1e605c5fef025f9aa5e0f8cfd7c6e04c2ed06bbd3",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l26_together.axmodel",
+      "size": 90755116,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l26_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "a5755b87ecd176c77436079c32a19c8623ed015db200e7061c83327ce47db3d0",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l27_together.axmodel",
+      "size": 90752364,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l27_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "35cc4ee732852c91b2fe9d63d158adbed81e780522459bc70ef3075a5b898de2",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l28_together.axmodel",
+      "size": 90754476,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l28_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "e7a337e42d0b12ee92bbeecbe9b3e5d7e4580a6e5e9d56ee05147606e2dd4840",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l29_together.axmodel",
+      "size": 90756588,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l29_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "0357c4ab39ee73fc410ee703df3fb14f53a75dae04555c4747879af343be7d16",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l2_together.axmodel",
+      "size": 90740012,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l2_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "637456ba1f3a34cfecb227b2c6f1497fcf2e06819ef17d21968fb90972862486",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l30_together.axmodel",
+      "size": 90755180,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l30_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "4a9126537341353c715539cab61dc5104cae6fccf3c2e1f63879e1f5b534b3e7",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l31_together.axmodel",
+      "size": 90753260,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l31_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "edbb9a2f10db51dc636ba1690455e7cd36c38cfee0acdea6906705db675a21d9",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l32_together.axmodel",
+      "size": 90754508,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l32_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "823d29dfe1d3ab990d00cd34979faa5b7b02232576f679785bfe9e63e5db3d8c",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l33_together.axmodel",
+      "size": 90756492,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l33_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "dc35da5cf2958dfab6ceab4f9125055a8f2f3f4bc06f4eb19f4c682f3a1ead49",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l34_together.axmodel",
+      "size": 90757612,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l34_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "29a39b7f7595a0ab9366a8ea7c7f02fd23689cca03906e86ade07de7a71648a3",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l35_together.axmodel",
+      "size": 90756812,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l35_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "f578c09e0e5570af1807c95076f2f4da430ce094c01a90409a1801c43e4c6c97",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l3_together.axmodel",
+      "size": 90748940,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l3_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "c19d25d84398b51fcb06b6450e36b8272bd71a02e7cf98368fcec9386608c3cd",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l4_together.axmodel",
+      "size": 90747148,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l4_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "cc453a3db86348b7ff30029dadb00f7b050aa19b7c705b836d616521806375d9",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l5_together.axmodel",
+      "size": 90753676,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l5_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "3fed937c6a11c7a561a5b53f357d2e21c8693b04b5799f10e78d7ce65ab036db",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l6_together.axmodel",
+      "size": 90754828,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l6_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "901709229028a2537434fb6b9649466b0a667118e8536b72bd9751496ef1d486",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l7_together.axmodel",
+      "size": 90756524,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l7_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "d01a13ede4f8af89726c63087c598f9e225139a2ddba5e016347385ddf1ce2ee",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l8_together.axmodel",
+      "size": 90757132,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l8_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "90d9eb43359555d0fe4813e29aa8a17380b1cbba99f686ce5b7c5fbdc6635933",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l9_together.axmodel",
+      "size": 90756908,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_p128_l9_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "67f8801cef3bd233b806acdb373598efc493cdf5f1e364944dce9b35fcd46a13",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_post.axmodel",
+      "size": 339965928,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/Qwen2.5-VL-3B-Instruct-AX650-chunk_prefill_512/qwen2_5_vl_post.axmodel",
+      "verifiedHashes": {
+        "sha256": "87c2abcce5f1701f751c57848fa50cdce35e06a84d6df12816291e1216fcd1af",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "README.md",
+      "size": 17005,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/README.md",
+      "verifiedHashes": {
+        "sha256": "35ad63bc6298031eb9f658876e913757462cf8e959bd6c06358f14af26f9392e",
+        "gitBlob": "4c3492440908bad6bece8403f48b5b796ce201f0"
+      }
+    },
+    {
+      "path": "config.json",
+      "size": 0,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/config.json",
+      "verifiedHashes": {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "gitBlob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+      }
+    },
+    {
+      "path": "image/ssd_car.jpg",
+      "size": 50535,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/image/ssd_car.jpg",
+      "verifiedHashes": {
+        "sha256": "92d459a39a9eef03956257cf9fec84114d9e5df8fb9c0662fb257488cdd4f365",
+        "gitBlob": "1bf000c13054c6c701f4d4ec92df4b3a70a16ff2"
+      }
+    },
+    {
+      "path": "image/ssd_horse.jpg",
+      "size": 123072,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/image/ssd_horse.jpg",
+      "verifiedHashes": {
+        "sha256": "ed22f6b4c8c33e50e391e089ede14e8fa9402c623b09dbcf010e804770698fbb",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "main_ax650",
+      "size": 6808392,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/main_ax650",
+      "verifiedHashes": {
+        "sha256": "9f6cfcf0021a15a3baea0513e0eb6b17bdfbe08928de0e74619e6684a13a1493",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "main_axcl_aarch64",
+      "size": 1856144,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/main_axcl_aarch64",
+      "verifiedHashes": {
+        "sha256": "14a18915cc18ed06c58265a3ca78a04430ae5538bced459531cd58866eb1cfa3",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "main_axcl_x86",
+      "size": 1885400,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/main_axcl_x86",
+      "verifiedHashes": {
+        "sha256": "e97f652a3b7616e320780734d43cac95429f5f68d77047d395789736b8ca5948",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "python/cv_resize.py",
+      "size": 285,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/python/cv_resize.py",
+      "verifiedHashes": {
+        "sha256": "9bb63fea57fc3a879599092814b5cd0bd8e85a5d8f613bdc8cf73cd9d79dad4d",
+        "gitBlob": "c363dcce14f4d6d5cbe87abdbce29fdaafcfedc1"
+      }
+    },
+    {
+      "path": "python/infer_image.py",
+      "size": 8958,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/python/infer_image.py",
+      "verifiedHashes": {
+        "sha256": "f7c0aaf176b8518cd4e4c210af9340af86fd099a53287adb53bc750a8f5bfccf",
+        "gitBlob": "010249dae3d95c64fb60e2499c440c1f58461b2e"
+      }
+    },
+    {
+      "path": "python/infer_text.py",
+      "size": 8034,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/python/infer_text.py",
+      "verifiedHashes": {
+        "sha256": "9e85d365b60a8b2200643c146ddcb439bd29b801178c7bbe3d517172abad80f0",
+        "gitBlob": "d1b8f2063c17b7af3dfbec1e9fb769de8d7fc396"
+      }
+    },
+    {
+      "path": "python/infer_video.py",
+      "size": 8911,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/python/infer_video.py",
+      "verifiedHashes": {
+        "sha256": "600f66fd7c052b9e679bc69136a76d4bebfeb9151f3a5e9aec0f82bc70f19d0c",
+        "gitBlob": "7802b984fd757994400471e0c5b8098554d9dd30"
+      }
+    },
+    {
+      "path": "python/preprocess.py",
+      "size": 7681,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/python/preprocess.py",
+      "verifiedHashes": {
+        "sha256": "e02e207e4ab881fd6cd7e1095c61d0ff396b373b6eec1bbb7189c6f02974d173",
+        "gitBlob": "577d4c08194c753e6fd5674bb9490cda26d614d2"
+      }
+    },
+    {
+      "path": "python/utils.py",
+      "size": 15034,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/python/utils.py",
+      "verifiedHashes": {
+        "sha256": "3b4d5c467da2835fe86655032e118a1127c064f450e0064f896f68b92eb8a0e8",
+        "gitBlob": "966873bfaae1c87adcc35503693d34db9d8db0a7"
+      }
+    },
+    {
+      "path": "qwen2.5_tokenizer.txt",
+      "size": 1611455,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/qwen2.5_tokenizer.txt",
+      "verifiedHashes": {
+        "sha256": "8c053b79370c0365de7d7eac1bcaeda85c81a1c91f0183f853d0ee112d7740cc",
+        "gitBlob": "249ad80ce796b4668203eda6452e96480137b800"
+      }
+    },
+    {
+      "path": "qwen2_5-vl-tokenizer/chat_template.json",
+      "size": 1052,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/qwen2_5-vl-tokenizer/chat_template.json",
+      "verifiedHashes": {
+        "sha256": "85ef6bafc7e746a1bafd281cc4e5deff2beec21ffad3d7aff55d03e72f440863",
+        "gitBlob": "084e1a8ee9a66f17a8ec374d74f0077a39d6641e"
+      }
+    },
+    {
+      "path": "qwen2_5-vl-tokenizer/config.json",
+      "size": 1465,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/qwen2_5-vl-tokenizer/config.json",
+      "verifiedHashes": {
+        "sha256": "7bed5211820a7c17ff5dc23c27e265105f089ba6ba55df207564f5e0245b941f",
+        "gitBlob": "e287b34f373a189157503fb3c87ada9c03e00886"
+      }
+    },
+    {
+      "path": "qwen2_5-vl-tokenizer/generation_config.json",
+      "size": 256,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/qwen2_5-vl-tokenizer/generation_config.json",
+      "verifiedHashes": {
+        "sha256": "df8d7886db4cb9cd88893f8c076430612b2b819aac50e6f987265d61b42fb545",
+        "gitBlob": "d74119b407268b73fc0b848c9601a9b734543554"
+      }
+    },
+    {
+      "path": "qwen2_5-vl-tokenizer/merges.txt",
+      "size": 1823226,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/qwen2_5-vl-tokenizer/merges.txt",
+      "verifiedHashes": {
+        "sha256": "0de0bc38a29ea38eef099b677fa1ff52edd181e573529af26c4cd2136e233777",
+        "gitBlob": "7b29c9e2410f874922d943718fdf6fcb6a93057b"
+      }
+    },
+    {
+      "path": "qwen2_5-vl-tokenizer/model.safetensors.index.json",
+      "size": 66279,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/qwen2_5-vl-tokenizer/model.safetensors.index.json",
+      "verifiedHashes": {
+        "sha256": "606cc0248e840701f03557a8ed2059514c4dc505127696cb4b78b9c860a54890",
+        "gitBlob": "730a42aa542ddd949e413890cb2a653b2ff035d8"
+      }
+    },
+    {
+      "path": "qwen2_5-vl-tokenizer/preprocessor_config.json",
+      "size": 368,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/qwen2_5-vl-tokenizer/preprocessor_config.json",
+      "verifiedHashes": {
+        "sha256": "1357590fedd1bc1a686194ebf7c3b6123dac2975f46ded99c77a78f95faaf44e",
+        "gitBlob": "ebc1d39e29e134bd3e9c6535eba84e6e69be9ecb"
+      }
+    },
+    {
+      "path": "qwen2_5-vl-tokenizer/tokenizer.json",
+      "size": 7334926,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/qwen2_5-vl-tokenizer/tokenizer.json",
+      "verifiedHashes": {
+        "sha256": "47ec9be242d3ef39b9c97ac0a3f06c1752f061b234e295bc0a2842067a3fe4f9",
+        "gitBlob": "87c439d98d203bdbe88c36a32b488815b8f116dd"
+      }
+    },
+    {
+      "path": "qwen2_5-vl-tokenizer/tokenizer_config.json",
+      "size": 7433,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/qwen2_5-vl-tokenizer/tokenizer_config.json",
+      "verifiedHashes": {
+        "sha256": "13f9e7f7a5257e67717bfa528b5b57c1f69d3c54eef99cfe0647d3b984bafa84",
+        "gitBlob": "62dca4d30c8f5ae4031446d8afd33f367bd6f92c"
+      }
+    },
+    {
+      "path": "qwen2_5-vl-tokenizer/vocab.json",
+      "size": 2776833,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/qwen2_5-vl-tokenizer/vocab.json",
+      "verifiedHashes": {
+        "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+        "gitBlob": "4783fe10ac3adce15ac8f358ef5462739852c569"
+      }
+    },
+    {
+      "path": "qwen2_tokenizer_images.py",
+      "size": 9204,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/qwen2_tokenizer_images.py",
+      "verifiedHashes": {
+        "sha256": "e81ac449b9422aaae7f46132ba4aefa3a9e25d0c965872056f29ce77eeca1c75",
+        "gitBlob": "923c88052685f8f49f85947487666d69eb9452e4"
+      }
+    },
+    {
+      "path": "qwen2_tokenizer_video_308.py",
+      "size": 15462,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/qwen2_tokenizer_video_308.py",
+      "verifiedHashes": {
+        "sha256": "ee461680b3be64c79cc53e01741b3291459e329f4cabd79e9cc9bfaafb042529",
+        "gitBlob": "67b7e342d7e9d82e536dce5e73e1c41dda318ecc"
+      }
+    },
+    {
+      "path": "run_qwen2_5_vl_image.sh",
+      "size": 779,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/run_qwen2_5_vl_image.sh",
+      "verifiedHashes": {
+        "sha256": "d3b22a52a72526937b4858d14c2f1dbfe846a16fe8fcc71617cacf6580ed854d",
+        "gitBlob": "af232f24f9403417423e7ba18d9b55d69bef4e51"
+      }
+    },
+    {
+      "path": "run_qwen2_5_vl_image_axcl_aarch64.sh",
+      "size": 708,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/run_qwen2_5_vl_image_axcl_aarch64.sh",
+      "verifiedHashes": {
+        "sha256": "07236d6ce1a89abd48e028b0aa4e6b003051f1e99b634d1a30ba4d7e478cc89c",
+        "gitBlob": "63ab1cded74af793c534e6dd300c9f096f7d498a"
+      }
+    },
+    {
+      "path": "run_qwen2_5_vl_image_axcl_x86.sh",
+      "size": 704,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/run_qwen2_5_vl_image_axcl_x86.sh",
+      "verifiedHashes": {
+        "sha256": "51931b40e8c5a21be1c04e1ab9c1acb0a468bfda69f30b5f01fa221b59c47b70",
+        "gitBlob": "011914cd2c0c656b93395539b33a5ab2d194101a"
+      }
+    },
+    {
+      "path": "run_qwen2_5_vl_video.sh",
+      "size": 776,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/run_qwen2_5_vl_video.sh",
+      "verifiedHashes": {
+        "sha256": "dfebfa3425a3b2ff47619bdd226f190e3d5d418da43f1f9d2551fe07b76b9f31",
+        "gitBlob": "9a503d336f6b263af2e885338bb5735572b38ba8"
+      }
+    },
+    {
+      "path": "run_qwen2_5_vl_video_axcl_aarch64.sh",
+      "size": 717,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/run_qwen2_5_vl_video_axcl_aarch64.sh",
+      "verifiedHashes": {
+        "sha256": "436bd551643688d19f6f95f9ac81124a3229f6774b58c2ba3ef3db266a5ac1a9",
+        "gitBlob": "272ec08d9746eefbc5d26ad5018f2984c177d680"
+      }
+    },
+    {
+      "path": "run_qwen2_5_vl_video_axcl_x86.sh",
+      "size": 713,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/run_qwen2_5_vl_video_axcl_x86.sh",
+      "verifiedHashes": {
+        "sha256": "dde086b7211afde3ff92d488ce19c1e928fc85b23668b138aa99484383144c88",
+        "gitBlob": "0741b5ba6ec1dec45e12562f8eed9b2177bee586"
+      }
+    },
+    {
+      "path": "video/frame_0000.jpg",
+      "size": 54099,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/video/frame_0000.jpg",
+      "verifiedHashes": {
+        "sha256": "d0cea2769fd052ce3b24c3982a17135dbffd600cd612014c3cffe014c0224ffa",
+        "gitBlob": "4dd3a714aabecc766a6e55ac89b6c79bdba791a1"
+      }
+    },
+    {
+      "path": "video/frame_0008.jpg",
+      "size": 52705,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/video/frame_0008.jpg",
+      "verifiedHashes": {
+        "sha256": "c812aed3407b41d474d859fedd4d9eaab971482e1dd0e22c5da16a627a740394",
+        "gitBlob": "ead99238bbe68ffb0a93ebceef32c802b8b95f56"
+      }
+    },
+    {
+      "path": "video/frame_0016.jpg",
+      "size": 48877,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/video/frame_0016.jpg",
+      "verifiedHashes": {
+        "sha256": "3cc72377820bd9c47a41ebcae744acd8b3952b54e02854a9cf0b4a70e49def60",
+        "gitBlob": "117b8e3d345bcfd08a399e29c5d06aa9d75189f2"
+      }
+    },
+    {
+      "path": "video/frame_0024.jpg",
+      "size": 49217,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/video/frame_0024.jpg",
+      "verifiedHashes": {
+        "sha256": "afee75df68ffda9f5ae59b0ba3badf29e56a60acce64554ecc9e49f20854c47c",
+        "gitBlob": "cb7f584c264704e317556715a0afa3a674ecbd25"
+      }
+    },
+    {
+      "path": "video/frame_0032.jpg",
+      "size": 49057,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/video/frame_0032.jpg",
+      "verifiedHashes": {
+        "sha256": "1cea98a54747fb32c1bf7375aae020b3703ee70da6eb967d1a7d590d9f997038",
+        "gitBlob": "c7de9efa010d896f2326cc74c06b75649c105f3a"
+      }
+    },
+    {
+      "path": "video/frame_0040.jpg",
+      "size": 45534,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/video/frame_0040.jpg",
+      "verifiedHashes": {
+        "sha256": "dc03d027d92549acc1164f01b8450623093b76e3945b9c2eaaa7f0073b827cf5",
+        "gitBlob": "7cfffefbe47a3d3ef1420dbf612ede6180c88026"
+      }
+    },
+    {
+      "path": "video/frame_0048.jpg",
+      "size": 44930,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/video/frame_0048.jpg",
+      "verifiedHashes": {
+        "sha256": "f1832ad904c7d25423b1389c769a2287815d1b62acee9474403caa18069d7c52",
+        "gitBlob": "399331f2b69558a3ee1d9281cd2619c3d9653249"
+      }
+    },
+    {
+      "path": "video/frame_0056.jpg",
+      "size": 42752,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen2.5-VL-3B-Instruct/resolve/d967363ac68ee8c46a46110b8ee92f0f0cb332cb/video/frame_0056.jpg",
+      "verifiedHashes": {
+        "sha256": "2a000328952b1f092c438f687a55dfaeb822d763b68eb3685ee403c9859d5ebd",
+        "gitBlob": "8de77d8b41460a357ae79dc67b5ce69c5431d152"
+      }
+    }
+  ],
+  "runnerSha256": "c83b82aefbb8d1f4fc6bc36c3ff2eb33ed572251702639488edd2d601c41db3c"
+}

@@ -8,11 +8,11 @@ description: "Drone-axera 的 M.2 算力卡部署步骤、配套文件与效果�
 
 Drone-axera 用于目标检测。本页说明 M.2 算力卡的接入条件、部署步骤与结果检查方法。本页选择 `AX650/yolo11s_drone_650.axmodel`。
 
-> 已实测，固定样例已核对。[查看部署效果](#查看部署效果)。
+> 已实测，效果仍需评估。[查看部署效果](#查看部署效果)。
 
 ## 准备运行环境
 
-本页效果展示使用 **RK3576 DshanPi A1 + AX8850 8GB M.2**；其他容量或平台需重新确认模型能否加载并正确运行。
+本页包含 **RK3576 DshanPi A1 + AX8850 16GB M.2** 与 **RK3576 DshanPi A1 + AX8850 8GB M.2** 的样例。按效果展示中的权重和容量对应使用，不同环境的结果不能互相替代。
 
 在连接算力卡的 Linux 主机终端执行，RK3576 使用 ARM64 环境。首次部署先完成[驱动与设备检查](../../usage/device-check.md)、[安装 PyAXEngine](../../usage/python.md)和[下载工具安装](../../usage/download-models.md#使用-hugging-face-下载)。已完成这些步骤可直接下载模型。
 
@@ -95,9 +95,78 @@ python axmodel_infer_yolo11.py --model AX650/yolo11s_drone_650.axmodel --img_pat
 
 参数依据：[`axmodel_infer_yolo11.py` 源码](https://huggingface.co/AXERA-TECH/Drone-axera/blob/bca09e938a5ef7cdf81862e4acd4b706718558a3/axmodel_infer_yolo11.py)。
 
+## 运行 drone-yolo26 变体
+
+### 准备运行包
+
+在 RK3576 主机激活前文安装的 PyAXEngine 环境，下载[视觉变体运行包](../../../static/examples/vision-variant-deployment-20261005.zip)，保存到`~/edgeaccel`并解压到 `~/edgeaccel`。
+
+```bash
+source ~/edgeaccel/python-env/bin/activate
+python -m zipfile -e ~/edgeaccel/vision-variant-deployment-20261005.zip ~/edgeaccel
+```
+
+### 下载权重和样例
+
+```bash
+VARIANT_MODELS=~/edgeaccel/models-variants
+~/edgeaccel/hf-env/bin/hf download AXERA-TECH/Drone-axera \
+  --revision bca09e938a5ef7cdf81862e4acd4b706718558a3 \
+  --include "README.md" "axmodel_infer_yolo11.py" "axmodel_infer_yolo26.py" "config.json" "test/23.jpg" "AX650/yolo26s_drone_650.axmodel" \
+  --local-dir "$VARIANT_MODELS/Drone-axera"
+```
+
+### 运行模型
+
+```bash
+python ~/edgeaccel/vision-variant/vision_variant.py \
+  --models-root "$VARIANT_MODELS" --case drone-yolo26 \
+  --output ~/edgeaccel/results/drone-yolo26
+```
+
+使用尚不存在的结果目录。终端应显示 `AXCLRTExecutionProvider`，结果目录中应生成输出图。
+
+
 ## 查看部署效果
 
-**固定样例已核对** · 2026-09-23 · RK3576 DshanPi A1 + AX8850 8GB M.2。以下输入与输出来自本页固定版本的实际运行。
+### YOLO26无人机检测：16GB卡样例
+
+**已运行，效果仍需评估** · RK3576 DshanPi A1 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
+
+同一固定样例完成三次独立运行，其中一次使用下方配套运行包入口，原始输出与效果图一致。
+
+**YOLO26无人机检测**
+
+原始雪景样例中一个无人机被框出，框295,228到332,265，置信度约0.34；未覆盖独立数据集或复杂背景。
+
+<div className="model-effect-gallery">
+
+<figure>
+
+[![实际输入：test/23.jpg](../../../static/validation/effects/drone-axera-variant-20261005/inputs/23.jpg)](../../../static/validation/effects/drone-axera-variant-20261005/inputs/23.jpg)
+
+<figcaption>实际输入：test/23.jpg</figcaption>
+</figure>
+
+<figure>
+
+[![实际输出：YOLO26无人机检测](../../../static/validation/effects/drone-axera-variant-20261005/outputs/23.jpg)](../../../static/validation/effects/drone-axera-variant-20261005/outputs/23.jpg)
+
+<figcaption>实际输出：YOLO26无人机检测</figcaption>
+</figure>
+
+</div>
+
+**使用时注意：**
+
+- 仅验证固定官方样例，未完成独立数据集精度、多场景和长期连续运行测试。
+- 本组使用16GB卡；8GB卡样例使用不同权重，不能据此推断该变体已通过8GB容量回归。
+
+这些结果用于对照部署后的输出，未覆盖完整数据集精度或长期连续运行。
+
+### 原默认权重：8GB卡样例
+
+**固定样例已核对** · RK3576 DshanPi A1 + AX8850 8GB M.2。以下输入与输出来自本页固定版本的实际运行。
 
 test/23.jpg 输出 1 个 Drone 框，约 0.97 的分数与天空中可见无人机的位置对应，完成 YOLO11 无人机权重的单样本核对。
 
@@ -128,10 +197,33 @@ test/23.jpg 输出 1 个 Drone 框，约 0.97 的分数与天空中可见无人�
 
 这些结果用于对照部署后的输出，未覆盖完整数据集精度或长期连续运行。
 
+**YOLO26无人机检测：16GB卡样例**
+
 <details>
 <summary>查看样例环境与运行耗时</summary>
 
-环境：RK3576 DshanPi A1 + AX8850 8GB M.2。日期：2026-09-23。模型版本：`bca09e938a5ef7cdf81862e4acd4b706718558a3`。
+环境：RK3576 DshanPi A1 + AX8850 16GB M.2。模型版本：`bca09e938a5ef7cdf81862e4acd4b706718558a3`。
+
+| 组件 | 版本或配置 |
+| --- | --- |
+| 主机系统 / 内核 | Ubuntu 24.04 / Armbian；aarch64；6.1.115-vendor-rk35xx |
+| AXCL / 驱动 | V3.16.0_20260729180218 |
+| 固件 / CMM | V3.16.0；总量15232 MiB，空闲占用18 MiB |
+| Python后端 | AXCLRTExecutionProvider；NumPy 1.26.4；OpenCV 4.11.0 |
+| 前后处理 | 固定仓库原始脚本；运行包显式选择AXCL，保留原始色序、尺寸处理和后处理 |
+
+| 指标 | 实测值 | 计时或统计范围 |
+| --- | --- | --- |
+| 单次推理墙钟 | 21.937 / 21.864 / 21.958 ms | 三个独立进程各一次session.run，含传输、不含加载和后处理，无预热。 |
+
+</details>
+
+**原默认权重：8GB卡样例**
+
+<details>
+<summary>查看样例环境与运行耗时</summary>
+
+环境：RK3576 DshanPi A1 + AX8850 8GB M.2。模型版本：`bca09e938a5ef7cdf81862e4acd4b706718558a3`。
 
 | 组件 | 版本或配置 |
 | --- | --- |
@@ -149,8 +241,6 @@ test/23.jpg 输出 1 个 Drone 框，约 0.97 的分数与天空中可见无人�
 
 适用范围：
 
-- 本次只测试 yolo11s_drone_650.axmodel；同仓 yolo26s_drone_650.axmodel 尚未验证。
-- 只有单张相对简单天空背景图，不能推断远距离、复杂背景或视频跟踪能力。
 - 仅一个样例、一次程序启动；没有独立数据集精度评测或长时间稳定性测试。
 - 只采集到 1 次 session.run 调用，不能视为预热后的平均性能。
 - 运行源码包含显式 AXCL 后端或本页说明的适配修改；result.json 保存逐项替换及修改后 SHA256。

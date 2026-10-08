@@ -1,0 +1,5094 @@
+{
+  "modelId": "Qwen2.5-Omni-3B",
+  "revision": "38c42b43ece9cca5acf024aeddd8d0a188eca44d",
+  "date": "2026-10-04",
+  "variants": [
+    {
+      "label": "中文图片描述",
+      "observation": "输入真实照片，保留完整模型回答。",
+      "previews": [
+        {
+          "caption": "输入照片：海边的一名女子与一只狗",
+          "path": "/validation/effects/qwen2-5-omni-3b-20261004/input.jpg"
+        }
+      ],
+      "videos": [],
+      "textSamples": [
+        {
+          "input": "请用中文简短描述这张图片。",
+          "output": "嗯，这张图片里有个人和一只狗。人坐在沙滩上，背对着镜头，狗在她旁边，好像在看海呢。海特别美，太阳也落山了。你要是还有啥想法，咱们可以再聊聊。",
+          "observation": "识别出人、狗和沙滩；“背对镜头”“看海”与画面不符。实际是女子和狗面对面，手与前爪相接；不能据此确认日落时间。"
+        }
+      ],
+      "audio": [
+        {
+          "caption": "中文图片描述生成的完整语音",
+          "path": "/validation/effects/qwen2-5-omni-3b-20261004/image-description.wav"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "输出",
+            "本次结果"
+          ],
+          "rows": [
+            [
+              "语音格式",
+              "24 kHz / 单声道 WAV"
+            ],
+            [
+              "语音时长",
+              "14.32 秒"
+            ],
+            [
+              "完整语音段数",
+              "4"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "modelId": "Qwen2.5-Omni-3B",
+        "revision": "38c42b43ece9cca5acf024aeddd8d0a188eca44d",
+        "completed": true,
+        "provider": "AXCLRTExecutionProvider",
+        "inferenceEvidence": "omni-media-text-and-complete-speech",
+        "mode": "image",
+        "case": "image-description",
+        "sessions": [
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l0_together.axmodel",
+            "sha256": "aac796610cddec5adbb62fc012f9bc4a6175fbf05ee4f3d1ed96d208d250b35e",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 724,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 724,
+              "mean": 1.5721490428168483,
+              "minimum": 1.1955469999520574,
+              "maximum": 10.770130999844696
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l10_together.axmodel",
+            "sha256": "f81cfe5aabf3b0b4938d578117302bb3f43768adf12a3b76f76f84daabd1c685",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 724,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 724,
+              "mean": 1.3741372168412067,
+              "minimum": 1.180380999812769,
+              "maximum": 5.967235000298388
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l11_together.axmodel",
+            "sha256": "26611957963208a3540975d0204d59516a8b1a71ff277202639c95231628e40c",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 724,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 724,
+              "mean": 1.3722002914406926,
+              "minimum": 1.1803799998233444,
+              "maximum": 6.092359999911423
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l12_together.axmodel",
+            "sha256": "31ef5e2055a820a552f4dbd49a2247d976f30b04a93fb6d2f02883b4b95cd8fc",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 724,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 724,
+              "mean": 1.3773858936304837,
+              "minimum": 1.1891300000570482,
+              "maximum": 6.031692999840743
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l13_together.axmodel",
+            "sha256": "7fa5b14df1ba9c87c7e125b56952891be6e1afc0ae7d494695e2421d175d0f40",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 724,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 724,
+              "mean": 1.373759364634343,
+              "minimum": 1.1812549996648158,
+              "maximum": 6.037234999894281
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l14_together.axmodel",
+            "sha256": "ac8d27ea9d62a4437078109e027078e6f9094cf409680d0a4f48ee96468fe07c",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 724,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 724,
+              "mean": 1.3730366104951093,
+              "minimum": 1.1695879998114833,
+              "maximum": 5.979192999802763
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l15_together.axmodel",
+            "sha256": "0688ec1b5c96521c3d7e68a36c9a1397c9057e700957b0774928307227402d3b",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 724,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 724,
+              "mean": 1.3738113066254611,
+              "minimum": 1.1643380003079074,
+              "maximum": 5.978027000310249
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l16_together.axmodel",
+            "sha256": "9765ee70978f97fe07d038316a220e66c52fb00e0dba5f8274faffdfbfba5342",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 724,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 724,
+              "mean": 1.379089156078468,
+              "minimum": 1.1512139999467763,
+              "maximum": 6.0165260001667775
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l17_together.axmodel",
+            "sha256": "3a93cdc55b8772bd43e53d51a5152518c3772e86ebe736ef6d9505af40037ad7",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 724,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 724,
+              "mean": 1.3846579364647906,
+              "minimum": 1.17571400005545,
+              "maximum": 5.908026000270183
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l18_together.axmodel",
+            "sha256": "f752cc04dcbccbc5e39e0624282bd230dd77e494b04b432456f6837f6e0ff3cc",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 724,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 724,
+              "mean": 1.3882875566248922,
+              "minimum": 1.1725049998858594,
+              "maximum": 5.976858999929391
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l19_together.axmodel",
+            "sha256": "bad6a374238ece0457fa3a3eb618382d410a1f6ceef9ef2dc39d722d431ea686",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 724,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 724,
+              "mean": 1.3908895980622213,
+              "minimum": 1.1882560002050013,
+              "maximum": 5.922901000303682
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l1_together.axmodel",
+            "sha256": "32e85d0ccf0552097fc1bae265697933bb3241f7a2b5b8824896a3f98030ab00",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 724,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 724,
+              "mean": 1.5423966091178984,
+              "minimum": 1.1967140003434906,
+              "maximum": 5.915900999752921
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l20_together.axmodel",
+            "sha256": "a35d11b5a04e0c6904ff242ea3c3afa1ba95d3b0db4fec2f7dee38600b0d2b39",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 724,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 724,
+              "mean": 1.3899654281747704,
+              "minimum": 1.1704640000971267,
+              "maximum": 5.99640200016438
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l21_together.axmodel",
+            "sha256": "1d40051e612fcbdde1918ad7d9fc9030095d27bdecb27e9b9320cf226de025fe",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 724,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 724,
+              "mean": 1.3873243011121856,
+              "minimum": 1.1707549997481692,
+              "maximum": 5.989401000078942
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l22_together.axmodel",
+            "sha256": "3cac8f41c965e4b2eae017e44e5931ea5e4a7c00e3bd37ab06c7b405cfa1f5fa",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 724,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 724,
+              "mean": 1.3877146823264894,
+              "minimum": 1.1832970003524679,
+              "maximum": 6.079819000206044
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l23_together.axmodel",
+            "sha256": "86ff9137f43313500915299cc7a63b1aae09ec7f3839b7c28c3fdce4dd5a875b",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 724,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 724,
+              "mean": 1.3909037099365278,
+              "minimum": 1.179213999876083,
+              "maximum": 6.076318999930663
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l2_together.axmodel",
+            "sha256": "b6ad5ccf374dac3965265f941d047281c4b6e5b1c72e9533826effe232ecf7ed",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 724,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 724,
+              "mean": 1.5639012679461433,
+              "minimum": 1.1853390001306252,
+              "maximum": 5.931067999881634
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l3_together.axmodel",
+            "sha256": "7deb0e914f735e2b8191dc56f2d818e8e0fed2b083e9d20877102d4f6b611006",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 724,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 724,
+              "mean": 1.5444741795529189,
+              "minimum": 1.1850470000354107,
+              "maximum": 6.003985000006651
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l4_together.axmodel",
+            "sha256": "7392540c310db72f7969b7673477a89043c7f10b2b8ddfcf6e1795efc1a08865",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 724,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 724,
+              "mean": 1.5484321698870733,
+              "minimum": 1.202255999942281,
+              "maximum": 5.988235000131681
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l5_together.axmodel",
+            "sha256": "c2b41b8aa94552017c73b862baadcf58def79f171fe9d2a80fc727666b29726a",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 724,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 724,
+              "mean": 1.4900063632600367,
+              "minimum": 1.183004999802506,
+              "maximum": 6.339693999962037
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l6_together.axmodel",
+            "sha256": "ad773ba11034da4fe45441aa3a0e7b7174dc85eb1b8c8854903d2a4d033bdd6c",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 724,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 724,
+              "mean": 1.3978618535952465,
+              "minimum": 1.1964219997935288,
+              "maximum": 6.003692999911436
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l7_together.axmodel",
+            "sha256": "19364714cbe3bfc78d4b6a58f9b1fc5804d4de1e4d8c2e10267b7038dc353b45",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 724,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 724,
+              "mean": 1.3898289185134325,
+              "minimum": 1.179504999981873,
+              "maximum": 5.991734999952314
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l8_together.axmodel",
+            "sha256": "b17ee68e3d087669e4fd0b8450c93fb27458a0e00bd062142f3ddf58e14d040a",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 724,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 724,
+              "mean": 1.37692540332932,
+              "minimum": 1.1722130002453923,
+              "maximum": 6.016817999807245
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l9_together.axmodel",
+            "sha256": "851d85e0ed7a2584126480b65f0752913f25f064967c4640f44b35e42f856a94",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 724,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 724,
+              "mean": 1.3711041491590232,
+              "minimum": 1.1687129999700119,
+              "maximum": 6.05706900023506
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_post.axmodel",
+            "sha256": "91f0e9867cb13ab20ccdcd68dadb30303984cc37877f517231ae3103b2552ac1",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 720,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 720,
+              "mean": 0.8589058444436483,
+              "minimum": 0.6822109999120585,
+              "maximum": 1.3813400000799447
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/token2wav_bigvgan.axmodel",
+            "sha256": "5569a73cae06d2a6aee6873d751828e9df6c11b7ea9ac86edc85293642e707c8",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 4,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 4,
+              "mean": 2197.1942645000127,
+              "minimum": 2196.9091390001267,
+              "maximum": 2197.527474999788
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/token2wav_dit.axmodel",
+            "sha256": "229998799349bd7a956f34cb12783a62a2f50ad099f87b7680b7d1be4b2933db",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 144,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 144,
+              "mean": 836.0166510833203,
+              "minimum": 835.4227629997695,
+              "maximum": 836.8727259999105
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/Qwen2.5-Omni-3B_vision.axmodel",
+            "sha256": "a6ef1c13ff4098578fec9cc787a58a238abfcd9f4640e5e7a4389bf81f1bdc05",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 1,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 1,
+              "mean": 223.7761279998267,
+              "minimum": 223.7761279998267,
+              "maximum": 223.7761279998267
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l0_together.axmodel",
+            "sha256": "48529cdd6a2a3b05ea3727194c26efa55be7acb31f6a608f8ecfbfe14210e75a",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 54,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 54,
+              "mean": 5.904093907382183,
+              "minimum": 4.450560999885056,
+              "maximum": 15.397150999888254
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l10_together.axmodel",
+            "sha256": "7b4625c182e58f62fb8437709e418aa79fa81b4ab47deba6df6ff95409b50879",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 54,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 54,
+              "mean": 5.008527500001071,
+              "minimum": 4.441810999651352,
+              "maximum": 15.343192999807798
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l11_together.axmodel",
+            "sha256": "302c0510d1e4eb42a54bd3a844d3f9ced375b26af971db1fd4f3453c19b5e9db",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 54,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 54,
+              "mean": 4.989482703700156,
+              "minimum": 4.419062000124541,
+              "maximum": 15.369735000149376
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l12_together.axmodel",
+            "sha256": "f909532b4b645227cf346ee1acfccde1375f95b6c27fd2aa5e7769a58997c302",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 54,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 54,
+              "mean": 5.005470407426132,
+              "minimum": 4.412351999690145,
+              "maximum": 15.369443000054162
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l13_together.axmodel",
+            "sha256": "2401aa1f6fd05215c09777369a2efd1502ab1f1a0d75087443e6d1762d0c87a2",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 54,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 54,
+              "mean": 5.0055134814489,
+              "minimum": 4.430145000242192,
+              "maximum": 15.283691999684379
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l14_together.axmodel",
+            "sha256": "45052e84bb4e58af3096ab457747a399d88a75d003198edebe42084d5a275d99",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 54,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 54,
+              "mean": 5.021847000021067,
+              "minimum": 4.4318949999251345,
+              "maximum": 15.288358999896445
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l15_together.axmodel",
+            "sha256": "bae644ab65b46985609376838d3ed7d9d039991b936bef351b81aa9603c721fe",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 54,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 54,
+              "mean": 5.037305370386228,
+              "minimum": 4.370353000012983,
+              "maximum": 15.300316999855568
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l16_together.axmodel",
+            "sha256": "a2e69c6b947ffc7bd8d73b546dce6b9646dfeddb96336df31576cb5fa29da9ef",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 54,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 54,
+              "mean": 5.053244444432629,
+              "minimum": 4.537769999842567,
+              "maximum": 15.28223400009665
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l17_together.axmodel",
+            "sha256": "e66ac086291082c50370515193e954efb9c76297af80aa46d01b40907923feef",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 54,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 54,
+              "mean": 5.044073222212251,
+              "minimum": 4.490227999667695,
+              "maximum": 15.3653590000431
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l18_together.axmodel",
+            "sha256": "6e4828a797789328395f3df0919ffe24c4e51d42c59f362ded7dbe62d2dc635d",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 54,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 54,
+              "mean": 5.05871055550718,
+              "minimum": 4.518520000146964,
+              "maximum": 15.591401999699883
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l19_together.axmodel",
+            "sha256": "cec834fff43b9a9ba896431d27f8faf2428be49a8107f112fe4f418fa6d960a0",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 54,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 54,
+              "mean": 5.045666481473071,
+              "minimum": 4.441519000010885,
+              "maximum": 15.269692999936524
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l1_together.axmodel",
+            "sha256": "7cae768a72a67a3a7659242913872edb5a9120237eb3ac02144a7b3de6f2099c",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 54,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 54,
+              "mean": 5.534021259269071,
+              "minimum": 4.566352999972878,
+              "maximum": 15.386650999971607
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l20_together.axmodel",
+            "sha256": "a306331198ebd7b750f1d14fb4b43453b58b05147a7fbecc4c3946466d5eafdb",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 54,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 54,
+              "mean": 5.053665777773454,
+              "minimum": 4.486727999847062,
+              "maximum": 15.364193000095838
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l21_together.axmodel",
+            "sha256": "53a22ca2a78bacbd237999b2d0be81561b5636264a0253dc00a7d12313a4ed70",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 54,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 54,
+              "mean": 5.052050814844767,
+              "minimum": 4.484394999963115,
+              "maximum": 15.354859000126453
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l22_together.axmodel",
+            "sha256": "f9dceb42b6a2b75d3ae992939d954cb84c8f939530e21ad340d8099bf19814fd",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 54,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 54,
+              "mean": 5.051516111086164,
+              "minimum": 4.493727999943076,
+              "maximum": 15.28398400023434
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l23_together.axmodel",
+            "sha256": "704725aea506db4d9ce9cc9d600f90014d429f7db003f6197ec42fc5c991526a",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 54,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 54,
+              "mean": 5.068195259220239,
+              "minimum": 4.494894999879762,
+              "maximum": 15.285151000171027
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l24_together.axmodel",
+            "sha256": "6484615733f803104d295421be0f35ebcba32fa79d788ed0bfdf63ef54bcee7f",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 54,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 54,
+              "mean": 5.065175851869855,
+              "minimum": 4.499561000102403,
+              "maximum": 15.35106800020003
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l25_together.axmodel",
+            "sha256": "ebb0dccf466d1ce4a2abb9271e9674d7e637ae6e39d0e906adb834177916b692",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 54,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 54,
+              "mean": 5.076486037018589,
+              "minimum": 4.5293110001694,
+              "maximum": 15.356608999809396
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l26_together.axmodel",
+            "sha256": "c2529faf529f2fddcb591c3db5001b05dafe6cd383a2ed60ec5fb12e0c2a102b",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 54,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 54,
+              "mean": 5.1081050740456835,
+              "minimum": 4.499853000197618,
+              "maximum": 15.300025999749778
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l27_together.axmodel",
+            "sha256": "9ff2f764538f17d260fa69feb2e0753cb59881516b3c08c0b4b085adf324cae6",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 54,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 54,
+              "mean": 5.0888766110583,
+              "minimum": 4.52581099989402,
+              "maximum": 15.294192000055773
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l28_together.axmodel",
+            "sha256": "db1933a1a4932599972cbddc0eda609f6346eb7a90b7d226a39f02697a7a7875",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 54,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 54,
+              "mean": 5.084479981422663,
+              "minimum": 4.49051999976291,
+              "maximum": 15.345234000051278
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l29_together.axmodel",
+            "sha256": "bf3473a234400e239c2e91ffbcaba28d462593db7b19fda77d2406af4b44682f",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 54,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 54,
+              "mean": 5.086602611114627,
+              "minimum": 4.539519999980257,
+              "maximum": 15.37469200002306
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l2_together.axmodel",
+            "sha256": "319643613aa45f5dac22a960a4bf8f7509d18acc77c60ed3ccb1d4bd33fd94e4",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 54,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 54,
+              "mean": 5.345512018544064,
+              "minimum": 4.634021000128996,
+              "maximum": 15.358942999682768
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l30_together.axmodel",
+            "sha256": "61f0b9e8663d92db51eec58097d3082b15e8c56d22d78ea158418242a8b0565e",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 54,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 54,
+              "mean": 5.097648296289965,
+              "minimum": 4.523770000105287,
+              "maximum": 15.345816999797535
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l31_together.axmodel",
+            "sha256": "f1a4d503df3d2fd0eaaa197547a42df36074fc9c389335b516ac0a5a13b432b7",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 54,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 54,
+              "mean": 5.09391042593658,
+              "minimum": 4.456977999780065,
+              "maximum": 15.37090099964189
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l32_together.axmodel",
+            "sha256": "f7b696563a1e3e939e62c657d5952ef607717e2b73a3ac5c96999658d24d0b4a",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 54,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 54,
+              "mean": 5.098193796323324,
+              "minimum": 4.49402000003829,
+              "maximum": 15.365651000138314
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l33_together.axmodel",
+            "sha256": "e6c6e5f6805c29877a8829267fd81f89983545c942a96af13d04935b2f6192be",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 54,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 54,
+              "mean": 5.106349759300968,
+              "minimum": 4.4922699999006,
+              "maximum": 15.3601100000742
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l34_together.axmodel",
+            "sha256": "7275c84ae5c681ffa70dfcb8a62d59b2be36958ace7d33295269fa48fd01eb72",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 54,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 54,
+              "mean": 5.12573468517985,
+              "minimum": 4.5923110001240275,
+              "maximum": 15.360691999831033
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l35_together.axmodel",
+            "sha256": "be5c90d2f71a09700555d3363385ed54afe10b719a3028587316d9818a8c97ab",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 54,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 54,
+              "mean": 5.104183796304453,
+              "minimum": 4.523185999914858,
+              "maximum": 15.29973400010931
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l3_together.axmodel",
+            "sha256": "6b657c30d31463863542292c0a72e502a5acedca8892e81d14d52e9e6e244c88",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 54,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 54,
+              "mean": 5.301275537021866,
+              "minimum": 4.536603999895306,
+              "maximum": 15.29944300000352
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l4_together.axmodel",
+            "sha256": "ff7eac9b1edcb231070883d68524fec5f2b460aab93f2fa12d9a67dce5c76308",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 54,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 54,
+              "mean": 5.040346296297044,
+              "minimum": 4.542144999959419,
+              "maximum": 15.36040100017999
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l5_together.axmodel",
+            "sha256": "29fab7b427bc98ce4bb64978f469c39e464967e463899eafc7bedba778c3f3b9",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 54,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 54,
+              "mean": 5.0259573518242515,
+              "minimum": 4.520561999925121,
+              "maximum": 15.36360899990541
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l6_together.axmodel",
+            "sha256": "a29750c599456e8f52240d7fed2fe6f358476f112d8cb4d7e2bcb3bbd6652466",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 54,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 54,
+              "mean": 5.02586014816323,
+              "minimum": 4.498978000356146,
+              "maximum": 15.358942999682768
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l7_together.axmodel",
+            "sha256": "630e75a2b5e0c1d6b9e99f155f3e8aec44c512135182c17b435071ca51ff84c9",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 54,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 54,
+              "mean": 5.012297648152997,
+              "minimum": 4.465436999907979,
+              "maximum": 15.364776000296843
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l8_together.axmodel",
+            "sha256": "507e1a4589bfebd5ca0753cdc1bce93184189ea9a5a3d99a7a8e38cf249f4f98",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 54,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 54,
+              "mean": 4.978836740764126,
+              "minimum": 4.389018999972905,
+              "maximum": 15.324233999763237
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l9_together.axmodel",
+            "sha256": "914bc275f5ab0d55406ef576f5af37df10763d8f9fb6afeec8d4aa77d619a01d",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 54,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 54,
+              "mean": 5.013928759261169,
+              "minimum": 4.435977999946772,
+              "maximum": 15.373526000075799
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_post.axmodel",
+            "sha256": "ceffa98a2169861df8fad837fd4f5953783bd36253592c18f2721a61f6de931a",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 233,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 233,
+              "mean": 16.94361666522451,
+              "minimum": 16.631199000130437,
+              "maximum": 17.43211800021527
+            }
+          }
+        ],
+        "totalCalls": 20422,
+        "cpuOnnxModels": 2,
+        "cleanShutdown": true,
+        "allModelsVerifiedBeforeAndAfter": true,
+        "verifiedModelFiles": 105,
+        "completeReplyTokensPreserved": true,
+        "thinkerTokenIds": [
+          106287,
+          3837,
+          108893,
+          45930,
+          69249,
+          18830,
+          99605,
+          33108,
+          102292,
+          100737,
+          1773,
+          17340,
+          104427,
+          110944,
+          17447,
+          3837,
+          99583,
+          106592,
+          105995,
+          3837,
+          100737,
+          18493,
+          99517,
+          102708,
+          3837,
+          104292,
+          18493,
+          50930,
+          55135,
+          101036,
+          1773,
+          55135,
+          100654,
+          57566,
+          3837,
+          101281,
+          74763,
+          99297,
+          57811,
+          34187,
+          1773,
+          56568,
+          104806,
+          100626,
+          101417,
+          102622,
+          3837,
+          104335,
+          73670,
+          87256,
+          115604,
+          1773,
+          151645
+        ],
+        "thinkerEosToken": 151645,
+        "fullText": "嗯，这张图片里有个人和一只狗。人坐在沙滩上，背对着镜头，狗在她旁边，好像在看海呢。海特别美，太阳也落山了。你要是还有啥想法，咱们可以再聊聊。",
+        "speechSegments": [
+          {
+            "text": "嗯，这张图片里有个人和一只狗。",
+            "tokenIds": [
+              106287,
+              3837,
+              108893,
+              45930,
+              69249,
+              18830,
+              99605,
+              33108,
+              102292,
+              100737,
+              1773
+            ],
+            "codecTokens": 173,
+            "eosToken": 8294,
+            "terminalEos": true,
+            "samples": 83040
+          },
+          {
+            "text": "人坐在沙滩上，背对着镜头，狗在她旁边，好像在看海呢。",
+            "tokenIds": [
+              17340,
+              104427,
+              110944,
+              17447,
+              3837,
+              99583,
+              106592,
+              105995,
+              3837,
+              100737,
+              18493,
+              99517,
+              102708,
+              3837,
+              104292,
+              18493,
+              50930,
+              55135,
+              101036,
+              1773
+            ],
+            "codecTokens": 276,
+            "eosToken": 8294,
+            "terminalEos": true,
+            "samples": 132480
+          },
+          {
+            "text": "海特别美，太阳也落山了。",
+            "tokenIds": [
+              55135,
+              100654,
+              57566,
+              3837,
+              101281,
+              74763,
+              99297,
+              57811,
+              34187,
+              1773
+            ],
+            "codecTokens": 128,
+            "eosToken": 8294,
+            "terminalEos": true,
+            "samples": 61440
+          },
+          {
+            "text": "你要是还有啥想法，咱们可以再聊聊。",
+            "tokenIds": [
+              56568,
+              104806,
+              100626,
+              101417,
+              102622,
+              3837,
+              104335,
+              73670,
+              87256,
+              115604,
+              1773
+            ],
+            "codecTokens": 139,
+            "eosToken": 8294,
+            "terminalEos": true,
+            "samples": 66720
+          }
+        ],
+        "waveform": {
+          "shape": [
+            343680
+          ],
+          "dtype": "float32",
+          "sha256": "4700734a0857d12e79658f4c6969c631ecf391ef05ef900b334695038b5c863e",
+          "allFinite": true,
+          "sampleRate": 24000,
+          "samples": 343680,
+          "seconds": 14.32,
+          "rms": 0.06969700400841798,
+          "peak": 0.5425474047660828,
+          "wavSha256": "6eeddb18bab7831cf64ea76d8e8d4a423883fbbc1380f882c70f421d07fe819c"
+        },
+        "inputPath": "/validation/effects/qwen2-5-omni-3b-20261004/input.jpg",
+        "inputSha256": "344d5f0e43bfd6a4a6ed655dc9c3dc76a2a6ecb1de3afeee998e61722378e8b3",
+        "audioPath": "/validation/effects/qwen2-5-omni-3b-20261004/image-description.wav",
+        "samples": [
+          {
+            "input": "请用中文简短描述这张图片。",
+            "output": "嗯，这张图片里有个人和一只狗。人坐在沙滩上，背对着镜头，狗在她旁边，好像在看海呢。海特别美，太阳也落山了。你要是还有啥想法，咱们可以再聊聊。",
+            "hitEos": true,
+            "stopReason": "eos"
+          }
+        ],
+        "customerPackageSha256": "f1c293593c0d09be602d2aa04cb3f644b5e445bc8c224b475d9ee65619bac62e",
+        "sourceArchiveSha256": "693750efa1ea21eaacff6ee56ec9c6d7a18f5ab82464a1d7481368a7d290d11d",
+        "fullQualityAccepted": false,
+        "observation": "识别出人、狗和沙滩；“背对镜头”“看海”与画面不符。实际是女子和狗面对面，手与前爪相接；不能据此确认日落时间。"
+      }
+    },
+    {
+      "label": "图片数量与动作问答",
+      "observation": "同一照片，改问人数、狗的数量和动作；通过配套命令实际运行。",
+      "previews": [
+        {
+          "caption": "输入照片：海边的一名女子与一只狗",
+          "path": "/validation/effects/qwen2-5-omni-3b-20261004/input.jpg"
+        }
+      ],
+      "videos": [],
+      "textSamples": [
+        {
+          "input": "图片中有几个人、几只狗？他们在做什么？",
+          "output": "图片里有一个人，一只狗。人坐在沙滩上，狗在旁边，人好像在给狗喂东西呢。你要是还有啥想法，也可以和我说说呀。",
+          "observation": "“一个人、一只狗”数量正确。“喂东西”的动作判断不符；照片中女子抬手与狗的前爪相接。合成语音自动回转写出现“娘是”等差异，仍需人工复听。"
+        }
+      ],
+      "audio": [
+        {
+          "caption": "图片数量与动作问答生成的完整语音",
+          "path": "/validation/effects/qwen2-5-omni-3b-20261004/image-count.wav"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "输出",
+            "本次结果"
+          ],
+          "rows": [
+            [
+              "语音格式",
+              "24 kHz / 单声道 WAV"
+            ],
+            [
+              "语音时长",
+              "10.76 秒"
+            ],
+            [
+              "完整语音段数",
+              "3"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "modelId": "Qwen2.5-Omni-3B",
+        "revision": "38c42b43ece9cca5acf024aeddd8d0a188eca44d",
+        "completed": true,
+        "provider": "AXCLRTExecutionProvider",
+        "inferenceEvidence": "omni-media-text-and-complete-speech",
+        "mode": "image",
+        "case": "image-count",
+        "sessions": [
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l0_together.axmodel",
+            "sha256": "aac796610cddec5adbb62fc012f9bc4a6175fbf05ee4f3d1ed96d208d250b35e",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 544,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 544,
+              "mean": 1.6143109613897664,
+              "minimum": 1.1984640000264335,
+              "maximum": 12.789347999841993
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l10_together.axmodel",
+            "sha256": "f81cfe5aabf3b0b4938d578117302bb3f43768adf12a3b76f76f84daabd1c685",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 544,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 544,
+              "mean": 1.3787138897139157,
+              "minimum": 1.1929219999728957,
+              "maximum": 5.845317999956023
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l11_together.axmodel",
+            "sha256": "26611957963208a3540975d0204d59516a8b1a71ff277202639c95231628e40c",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 544,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 544,
+              "mean": 1.3771740606542568,
+              "minimum": 1.1771720000979258,
+              "maximum": 5.898110000089218
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l12_together.axmodel",
+            "sha256": "31ef5e2055a820a552f4dbd49a2247d976f30b04a93fb6d2f02883b4b95cd8fc",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 544,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 544,
+              "mean": 1.3748969852944062,
+              "minimum": 1.180089000172302,
+              "maximum": 5.827818999932788
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l13_together.axmodel",
+            "sha256": "7fa5b14df1ba9c87c7e125b56952891be6e1afc0ae7d494695e2421d175d0f40",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 544,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 544,
+              "mean": 1.3760105900811435,
+              "minimum": 1.17571400005545,
+              "maximum": 5.819067000174982
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l14_together.axmodel",
+            "sha256": "ac8d27ea9d62a4437078109e027078e6f9094cf409680d0a4f48ee96468fe07c",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 544,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 544,
+              "mean": 1.3772293033114504,
+              "minimum": 1.1614219997682085,
+              "maximum": 5.863108999619726
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l15_together.axmodel",
+            "sha256": "0688ec1b5c96521c3d7e68a36c9a1397c9057e700957b0774928307227402d3b",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 544,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 544,
+              "mean": 1.3794790349379582,
+              "minimum": 1.172212999790645,
+              "maximum": 5.91502599991145
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l16_together.axmodel",
+            "sha256": "9765ee70978f97fe07d038316a220e66c52fb00e0dba5f8274faffdfbfba5342",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 544,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 544,
+              "mean": 1.3827463051457551,
+              "minimum": 1.171047000298131,
+              "maximum": 5.930774999796995
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l17_together.axmodel",
+            "sha256": "3a93cdc55b8772bd43e53d51a5152518c3772e86ebe736ef6d9505af40037ad7",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 544,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 544,
+              "mean": 1.3837660588222889,
+              "minimum": 1.1762970002564543,
+              "maximum": 5.937192999681429
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l18_together.axmodel",
+            "sha256": "f752cc04dcbccbc5e39e0624282bd230dd77e494b04b432456f6837f6e0ff3cc",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 544,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 544,
+              "mean": 1.386292419116377,
+              "minimum": 1.1684220003189694,
+              "maximum": 5.85610899997846
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l19_together.axmodel",
+            "sha256": "bad6a374238ece0457fa3a3eb618382d410a1f6ceef9ef2dc39d722d431ea686",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 544,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 544,
+              "mean": 1.3898224595654,
+              "minimum": 1.1733810001715028,
+              "maximum": 5.870402000255126
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l1_together.axmodel",
+            "sha256": "32e85d0ccf0552097fc1bae265697933bb3241f7a2b5b8824896a3f98030ab00",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 544,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 544,
+              "mean": 1.5353954411657067,
+              "minimum": 1.19146399993042,
+              "maximum": 5.8409429998391715
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l20_together.axmodel",
+            "sha256": "a35d11b5a04e0c6904ff242ea3c3afa1ba95d3b0db4fec2f7dee38600b0d2b39",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 544,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 544,
+              "mean": 1.3877427499977557,
+              "minimum": 1.1614209997787839,
+              "maximum": 5.873027000234288
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l21_together.axmodel",
+            "sha256": "1d40051e612fcbdde1918ad7d9fc9030095d27bdecb27e9b9320cf226de025fe",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 544,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 544,
+              "mean": 1.3928308051564433,
+              "minimum": 1.1856299997816677,
+              "maximum": 5.772983000042586
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l22_together.axmodel",
+            "sha256": "3cac8f41c965e4b2eae017e44e5931ea5e4a7c00e3bd37ab06c7b405cfa1f5fa",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 544,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 544,
+              "mean": 1.3901677481589345,
+              "minimum": 1.1786299996856542,
+              "maximum": 5.852900999798294
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l23_together.axmodel",
+            "sha256": "86ff9137f43313500915299cc7a63b1aae09ec7f3839b7c28c3fdce4dd5a875b",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 544,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 544,
+              "mean": 1.3955443014920963,
+              "minimum": 1.1722139997800696,
+              "maximum": 5.943610000031185
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l2_together.axmodel",
+            "sha256": "b6ad5ccf374dac3965265f941d047281c4b6e5b1c72e9533826effe232ecf7ed",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 544,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 544,
+              "mean": 1.5720028750031227,
+              "minimum": 1.188255999750254,
+              "maximum": 5.830152000271482
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l3_together.axmodel",
+            "sha256": "7deb0e914f735e2b8191dc56f2d818e8e0fed2b083e9d20877102d4f6b611006",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 544,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 544,
+              "mean": 1.5607854705768218,
+              "minimum": 1.2112969998270273,
+              "maximum": 5.824319000112155
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l4_together.axmodel",
+            "sha256": "7392540c310db72f7969b7673477a89043c7f10b2b8ddfcf6e1795efc1a08865",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 544,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 544,
+              "mean": 1.5720391930124284,
+              "minimum": 1.195254999856843,
+              "maximum": 5.797194000024319
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l5_together.axmodel",
+            "sha256": "c2b41b8aa94552017c73b862baadcf58def79f171fe9d2a80fc727666b29726a",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 544,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 544,
+              "mean": 1.5098599099345353,
+              "minimum": 1.2037140004395042,
+              "maximum": 5.9651940000549075
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l6_together.axmodel",
+            "sha256": "ad773ba11034da4fe45441aa3a0e7b7174dc85eb1b8c8854903d2a4d033bdd6c",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 544,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 544,
+              "mean": 1.4146646268207685,
+              "minimum": 1.1701720000019122,
+              "maximum": 5.994068999825686
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l7_together.axmodel",
+            "sha256": "19364714cbe3bfc78d4b6a58f9b1fc5804d4de1e4d8c2e10267b7038dc353b45",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 544,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 544,
+              "mean": 1.3995885294127006,
+              "minimum": 1.186212999982672,
+              "maximum": 5.820234000111668
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l8_together.axmodel",
+            "sha256": "b17ee68e3d087669e4fd0b8450c93fb27458a0e00bd062142f3ddf58e14d040a",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 544,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 544,
+              "mean": 1.384223926476459,
+              "minimum": 1.1786300001404015,
+              "maximum": 5.819942000016454
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l9_together.axmodel",
+            "sha256": "851d85e0ed7a2584126480b65f0752913f25f064967c4640f44b35e42f856a94",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 544,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 544,
+              "mean": 1.3745023933960083,
+              "minimum": 1.176296999801707,
+              "maximum": 5.872734000149649
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_post.axmodel",
+            "sha256": "91f0e9867cb13ab20ccdcd68dadb30303984cc37877f517231ae3103b2552ac1",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 541,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 541,
+              "mean": 0.8602274491684431,
+              "minimum": 0.685420000081649,
+              "maximum": 1.1462549996394955
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/token2wav_bigvgan.axmodel",
+            "sha256": "5569a73cae06d2a6aee6873d751828e9df6c11b7ea9ac86edc85293642e707c8",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 3,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 3,
+              "mean": 2197.0548993334282,
+              "minimum": 2196.928704000129,
+              "maximum": 2197.2857060000024
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/token2wav_dit.axmodel",
+            "sha256": "229998799349bd7a956f34cb12783a62a2f50ad099f87b7680b7d1be4b2933db",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 108,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 108,
+              "mean": 835.9114115370235,
+              "minimum": 835.4854510002951,
+              "maximum": 836.8907069998386
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/Qwen2.5-Omni-3B_vision.axmodel",
+            "sha256": "a6ef1c13ff4098578fec9cc787a58a238abfcd9f4640e5e7a4389bf81f1bdc05",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 1,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 1,
+              "mean": 223.4556110001904,
+              "minimum": 223.4556110001904,
+              "maximum": 223.4556110001904
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l0_together.axmodel",
+            "sha256": "48529cdd6a2a3b05ea3727194c26efa55be7acb31f6a608f8ecfbfe14210e75a",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 40,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 40,
+              "mean": 6.115379175025737,
+              "minimum": 4.485561999899801,
+              "maximum": 15.333861999806686
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l10_together.axmodel",
+            "sha256": "7b4625c182e58f62fb8437709e418aa79fa81b4ab47deba6df6ff95409b50879",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 40,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 40,
+              "mean": 5.085260875000586,
+              "minimum": 4.448228999990533,
+              "maximum": 15.310236999994231
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l11_together.axmodel",
+            "sha256": "302c0510d1e4eb42a54bd3a844d3f9ced375b26af971db1fd4f3453c19b5e9db",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 40,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 40,
+              "mean": 5.092982775022392,
+              "minimum": 4.463687000225036,
+              "maximum": 15.367695999884745
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l12_together.axmodel",
+            "sha256": "f909532b4b645227cf346ee1acfccde1375f95b6c27fd2aa5e7769a58997c302",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 40,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 40,
+              "mean": 5.107033900014812,
+              "minimum": 4.491396000048553,
+              "maximum": 15.407071000026917
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l13_together.axmodel",
+            "sha256": "2401aa1f6fd05215c09777369a2efd1502ab1f1a0d75087443e6d1762d0c87a2",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 40,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 40,
+              "mean": 5.098969300013323,
+              "minimum": 4.42722900015724,
+              "maximum": 15.352528999756032
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l14_together.axmodel",
+            "sha256": "45052e84bb4e58af3096ab457747a399d88a75d003198edebe42084d5a275d99",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 40,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 40,
+              "mean": 5.160361174978334,
+              "minimum": 4.466020000108983,
+              "maximum": 15.522070999850257
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l15_together.axmodel",
+            "sha256": "bae644ab65b46985609376838d3ed7d9d039991b936bef351b81aa9603c721fe",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 40,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 40,
+              "mean": 5.153963349960122,
+              "minimum": 4.498980000334996,
+              "maximum": 15.482029999930091
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l16_together.axmodel",
+            "sha256": "a2e69c6b947ffc7bd8d73b546dce6b9646dfeddb96336df31576cb5fa29da9ef",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 40,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 40,
+              "mean": 5.172389424990342,
+              "minimum": 4.495771000165405,
+              "maximum": 15.505945999848336
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l17_together.axmodel",
+            "sha256": "e66ac086291082c50370515193e954efb9c76297af80aa46d01b40907923feef",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 40,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 40,
+              "mean": 5.172006099974169,
+              "minimum": 4.494603999773972,
+              "maximum": 15.314612000111083
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l18_together.axmodel",
+            "sha256": "6e4828a797789328395f3df0919ffe24c4e51d42c59f362ded7dbe62d2dc635d",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 40,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 40,
+              "mean": 5.166395675007607,
+              "minimum": 4.498104000049352,
+              "maximum": 15.312861999973393
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l19_together.axmodel",
+            "sha256": "cec834fff43b9a9ba896431d27f8faf2428be49a8107f112fe4f418fa6d960a0",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 40,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 40,
+              "mean": 5.179199800011247,
+              "minimum": 4.514728999765794,
+              "maximum": 15.367695999884745
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l1_together.axmodel",
+            "sha256": "7cae768a72a67a3a7659242913872edb5a9120237eb3ac02144a7b3de6f2099c",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 40,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 40,
+              "mean": 5.748950375050299,
+              "minimum": 4.551187000288337,
+              "maximum": 15.350486999977875
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l20_together.axmodel",
+            "sha256": "a306331198ebd7b750f1d14fb4b43453b58b05147a7fbecc4c3946466d5eafdb",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 40,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 40,
+              "mean": 5.164361250012917,
+              "minimum": 4.498687999785034,
+              "maximum": 15.282819999811181
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l21_together.axmodel",
+            "sha256": "53a22ca2a78bacbd237999b2d0be81561b5636264a0253dc00a7d12313a4ed70",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 40,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 40,
+              "mean": 5.178288399963549,
+              "minimum": 4.4736039999406785,
+              "maximum": 15.306737000173598
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l22_together.axmodel",
+            "sha256": "f9dceb42b6a2b75d3ae992939d954cb84c8f939530e21ad340d8099bf19814fd",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 40,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 40,
+              "mean": 5.165783100005683,
+              "minimum": 4.490520999752334,
+              "maximum": 15.321029000006092
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l23_together.axmodel",
+            "sha256": "704725aea506db4d9ce9cc9d600f90014d429f7db003f6197ec42fc5c991526a",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 40,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 40,
+              "mean": 5.1777779750068476,
+              "minimum": 4.480312000396225,
+              "maximum": 15.332112000123743
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l24_together.axmodel",
+            "sha256": "6484615733f803104d295421be0f35ebcba32fa79d788ed0bfdf63ef54bcee7f",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 40,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 40,
+              "mean": 5.167276800057152,
+              "minimum": 4.505978999986837,
+              "maximum": 15.37586199992802
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l25_together.axmodel",
+            "sha256": "ebb0dccf466d1ce4a2abb9271e9674d7e637ae6e39d0e906adb834177916b692",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 40,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 40,
+              "mean": 5.183976025011816,
+              "minimum": 4.5018959999652,
+              "maximum": 15.335321000293334
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l26_together.axmodel",
+            "sha256": "c2529faf529f2fddcb591c3db5001b05dafe6cd383a2ed60ec5fb12e0c2a102b",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 40,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 40,
+              "mean": 5.186644599996271,
+              "minimum": 4.478271000152745,
+              "maximum": 15.349028999935399
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l27_together.axmodel",
+            "sha256": "9ff2f764538f17d260fa69feb2e0753cb59881516b3c08c0b4b085adf324cae6",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 40,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 40,
+              "mean": 5.168306024972935,
+              "minimum": 4.489062999709859,
+              "maximum": 15.342029000294133
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l28_together.axmodel",
+            "sha256": "db1933a1a4932599972cbddc0eda609f6346eb7a90b7d226a39f02697a7a7875",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 40,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 40,
+              "mean": 5.166162249975059,
+              "minimum": 4.417895000187855,
+              "maximum": 15.358945999651041
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l29_together.axmodel",
+            "sha256": "bf3473a234400e239c2e91ffbcaba28d462593db7b19fda77d2406af4b44682f",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 40,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 40,
+              "mean": 5.188190500007295,
+              "minimum": 4.517062000104488,
+              "maximum": 15.330070999880263
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l2_together.axmodel",
+            "sha256": "319643613aa45f5dac22a960a4bf8f7509d18acc77c60ed3ccb1d4bd33fd94e4",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 40,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 40,
+              "mean": 5.407946599962088,
+              "minimum": 4.52697899982013,
+              "maximum": 15.35865300002115
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l30_together.axmodel",
+            "sha256": "61f0b9e8663d92db51eec58097d3082b15e8c56d22d78ea158418242a8b0565e",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 40,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 40,
+              "mean": 5.19072085002108,
+              "minimum": 4.482063000068592,
+              "maximum": 15.356321000126627
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l31_together.axmodel",
+            "sha256": "f1a4d503df3d2fd0eaaa197547a42df36074fc9c389335b516ac0a5a13b432b7",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 40,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 40,
+              "mean": 5.195883325040995,
+              "minimum": 4.482062000079168,
+              "maximum": 15.392487000099209
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l32_together.axmodel",
+            "sha256": "f7b696563a1e3e939e62c657d5952ef607717e2b73a3ac5c96999658d24d0b4a",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 40,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 40,
+              "mean": 5.183618650016797,
+              "minimum": 4.443270000138,
+              "maximum": 15.362153999831207
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l33_together.axmodel",
+            "sha256": "e6c6e5f6805c29877a8829267fd81f89983545c942a96af13d04935b2f6192be",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 40,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 40,
+              "mean": 5.184107324998877,
+              "minimum": 4.467478999686136,
+              "maximum": 15.36915399992722
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l34_together.axmodel",
+            "sha256": "7275c84ae5c681ffa70dfcb8a62d59b2be36958ace7d33295269fa48fd01eb72",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 40,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 40,
+              "mean": 5.180155100003958,
+              "minimum": 4.516188000252441,
+              "maximum": 15.298279000035109
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l35_together.axmodel",
+            "sha256": "be5c90d2f71a09700555d3363385ed54afe10b719a3028587316d9818a8c97ab",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 40,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 40,
+              "mean": 5.179564624995692,
+              "minimum": 4.4948960003239335,
+              "maximum": 15.292153999780567
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l3_together.axmodel",
+            "sha256": "6b657c30d31463863542292c0a72e502a5acedca8892e81d14d52e9e6e244c88",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 40,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 40,
+              "mean": 5.358181975009302,
+              "minimum": 4.349936999915371,
+              "maximum": 15.366529999937484
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l4_together.axmodel",
+            "sha256": "ff7eac9b1edcb231070883d68524fec5f2b460aab93f2fa12d9a67dce5c76308",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 40,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 40,
+              "mean": 5.1246360999925855,
+              "minimum": 4.487019999942277,
+              "maximum": 15.297112000098423
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l5_together.axmodel",
+            "sha256": "29fab7b427bc98ce4bb64978f469c39e464967e463899eafc7bedba778c3f3b9",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 40,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 40,
+              "mean": 5.091356800016911,
+              "minimum": 4.408269999657932,
+              "maximum": 15.372362000107387
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l6_together.axmodel",
+            "sha256": "a29750c599456e8f52240d7fed2fe6f358476f112d8cb4d7e2bcb3bbd6652466",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 40,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 40,
+              "mean": 5.097715124975366,
+              "minimum": 4.421395999997912,
+              "maximum": 15.36011200005305
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l7_together.axmodel",
+            "sha256": "630e75a2b5e0c1d6b9e99f155f3e8aec44c512135182c17b435071ca51ff84c9",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 40,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 40,
+              "mean": 5.109885074989506,
+              "minimum": 4.505978999986837,
+              "maximum": 15.351946000009775
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l8_together.axmodel",
+            "sha256": "507e1a4589bfebd5ca0753cdc1bce93184189ea9a5a3d99a7a8e38cf249f4f98",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 40,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 40,
+              "mean": 5.091859799983922,
+              "minimum": 4.47476999988794,
+              "maximum": 15.363028999672679
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l9_together.axmodel",
+            "sha256": "914bc275f5ab0d55406ef576f5af37df10763d8f9fb6afeec8d4aa77d619a01d",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 40,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 40,
+              "mean": 5.072631674977401,
+              "minimum": 4.425186999924335,
+              "maximum": 15.381696000076772
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_post.axmodel",
+            "sha256": "ceffa98a2169861df8fad837fd4f5953783bd36253592c18f2721a61f6de931a",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 221,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 221,
+              "mean": 17.052058660637286,
+              "minimum": 16.47836800020741,
+              "maximum": 17.388663000019733
+            }
+          }
+        ],
+        "totalCalls": 15370,
+        "cpuOnnxModels": 2,
+        "cleanShutdown": true,
+        "allModelsVerifiedBeforeAndAfter": true,
+        "verifiedModelFiles": 105,
+        "completeReplyTokensPreserved": true,
+        "thinkerTokenIds": [
+          45930,
+          69249,
+          18830,
+          101977,
+          3837,
+          102292,
+          100737,
+          1773,
+          17340,
+          104427,
+          110944,
+          17447,
+          3837,
+          100737,
+          18493,
+          102708,
+          3837,
+          17340,
+          104292,
+          18493,
+          89012,
+          100737,
+          105711,
+          100413,
+          101036,
+          1773,
+          56568,
+          104806,
+          100626,
+          101417,
+          102622,
+          3837,
+          104047,
+          33108,
+          101435,
+          36587,
+          104256,
+          1773,
+          151645
+        ],
+        "thinkerEosToken": 151645,
+        "fullText": "图片里有一个人，一只狗。人坐在沙滩上，狗在旁边，人好像在给狗喂东西呢。你要是还有啥想法，也可以和我说说呀。",
+        "speechSegments": [
+          {
+            "text": "图片里有一个人，一只狗。",
+            "tokenIds": [
+              45930,
+              69249,
+              18830,
+              101977,
+              3837,
+              102292,
+              100737,
+              1773
+            ],
+            "codecTokens": 128,
+            "eosToken": 8294,
+            "terminalEos": true,
+            "samples": 61440
+          },
+          {
+            "text": "人坐在沙滩上，狗在旁边，人好像在给狗喂东西呢。",
+            "tokenIds": [
+              17340,
+              104427,
+              110944,
+              17447,
+              3837,
+              100737,
+              18493,
+              102708,
+              3837,
+              17340,
+              104292,
+              18493,
+              89012,
+              100737,
+              105711,
+              100413,
+              101036,
+              1773
+            ],
+            "codecTokens": 258,
+            "eosToken": 8294,
+            "terminalEos": true,
+            "samples": 123840
+          },
+          {
+            "text": "你要是还有啥想法，也可以和我说说呀。",
+            "tokenIds": [
+              56568,
+              104806,
+              100626,
+              101417,
+              102622,
+              3837,
+              104047,
+              33108,
+              101435,
+              36587,
+              104256,
+              1773
+            ],
+            "codecTokens": 152,
+            "eosToken": 8294,
+            "terminalEos": true,
+            "samples": 72960
+          }
+        ],
+        "waveform": {
+          "shape": [
+            258240
+          ],
+          "dtype": "float32",
+          "sha256": "4bd40a8f3dfcd63924a4837419b01abbb611c9825be5ac5335427599d14fa1b6",
+          "allFinite": true,
+          "sampleRate": 24000,
+          "samples": 258240,
+          "seconds": 10.76,
+          "rms": 0.07589355508686961,
+          "peak": 0.521019458770752,
+          "wavSha256": "c2078284b55518a89e2a6bec167ae9745a155bf9bf3c3f993d3ea42fb51e866b"
+        },
+        "inputPath": "/validation/effects/qwen2-5-omni-3b-20261004/input.jpg",
+        "inputSha256": "344d5f0e43bfd6a4a6ed655dc9c3dc76a2a6ecb1de3afeee998e61722378e8b3",
+        "audioPath": "/validation/effects/qwen2-5-omni-3b-20261004/image-count.wav",
+        "samples": [
+          {
+            "input": "图片中有几个人、几只狗？他们在做什么？",
+            "output": "图片里有一个人，一只狗。人坐在沙滩上，狗在旁边，人好像在给狗喂东西呢。你要是还有啥想法，也可以和我说说呀。",
+            "hitEos": true,
+            "stopReason": "eos"
+          }
+        ],
+        "customerPackageSha256": "f1c293593c0d09be602d2aa04cb3f644b5e445bc8c224b475d9ee65619bac62e",
+        "sourceArchiveSha256": "a5ec56f3eb0252be47485c351414209554b5774c261be242154190433b135316",
+        "fullQualityAccepted": false,
+        "observation": "“一个人、一只狗”数量正确。“喂东西”的动作判断不符；照片中女子抬手与狗的前爪相接。合成语音自动回转写出现“娘是”等差异，仍需人工复听。"
+      }
+    },
+    {
+      "label": "中文视频与声音理解",
+      "observation": "官方短视频带音轨，使用中文问题生成文字与语音。",
+      "previews": [],
+      "videos": [
+        {
+          "caption": "输入视频：演奏红色键盘乐器",
+          "path": "/validation/effects/qwen2-5-omni-3b-20261004/input.mp4"
+        }
+      ],
+      "textSamples": [
+        {
+          "input": "请简短描述视频中的乐器和声音。",
+          "output": "嗯…视频里有钢琴，还有音乐声。钢琴是红色的，放在木制的桌子上。音乐声是那种轻快的，像是在弹奏钢琴曲呢。你要是还有啥想法，也可以和我说说呀。",
+          "observation": "识别出红色键盘乐器并提到音乐。画面中乐器位于木质桌面下方，“放在木制桌子上”的位置表述不够准确。"
+        }
+      ],
+      "audio": [
+        {
+          "caption": "中文视频与声音理解生成的完整语音",
+          "path": "/validation/effects/qwen2-5-omni-3b-20261004/chinese.wav"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "输出",
+            "本次结果"
+          ],
+          "rows": [
+            [
+              "语音格式",
+              "24 kHz / 单声道 WAV"
+            ],
+            [
+              "语音时长",
+              "14.36 秒"
+            ],
+            [
+              "完整语音段数",
+              "4"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "modelId": "Qwen2.5-Omni-3B",
+        "revision": "38c42b43ece9cca5acf024aeddd8d0a188eca44d",
+        "completed": true,
+        "provider": "AXCLRTExecutionProvider",
+        "inferenceEvidence": "omni-media-text-and-complete-speech",
+        "mode": "video",
+        "case": "chinese-video",
+        "sessions": [
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l0_together.axmodel",
+            "sha256": "aac796610cddec5adbb62fc012f9bc4a6175fbf05ee4f3d1ed96d208d250b35e",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 730,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 730,
+              "mean": 1.6002116342493438,
+              "minimum": 1.1870900000303664,
+              "maximum": 17.190893999895707
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l10_together.axmodel",
+            "sha256": "f81cfe5aabf3b0b4938d578117302bb3f43768adf12a3b76f76f84daabd1c685",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 730,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 730,
+              "mean": 1.4155423493149686,
+              "minimum": 1.1719200001607533,
+              "maximum": 7.58890700012671
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l11_together.axmodel",
+            "sha256": "26611957963208a3540975d0204d59516a8b1a71ff277202639c95231628e40c",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 730,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 730,
+              "mean": 1.4165699808226648,
+              "minimum": 1.1757130000660254,
+              "maximum": 7.61020599998119
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l12_together.axmodel",
+            "sha256": "31ef5e2055a820a552f4dbd49a2247d976f30b04a93fb6d2f02883b4b95cd8fc",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 730,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 730,
+              "mean": 1.41414476163889,
+              "minimum": 1.1640479999641684,
+              "maximum": 7.620121999934781
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l13_together.axmodel",
+            "sha256": "7fa5b14df1ba9c87c7e125b56952891be6e1afc0ae7d494695e2421d175d0f40",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 730,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 730,
+              "mean": 1.4104417534255147,
+              "minimum": 1.1733809999441291,
+              "maximum": 7.634985000095185
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l14_together.axmodel",
+            "sha256": "ac8d27ea9d62a4437078109e027078e6f9094cf409680d0a4f48ee96468fe07c",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 730,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 730,
+              "mean": 1.412286436990667,
+              "minimum": 1.161420000016733,
+              "maximum": 7.559448000165503
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l15_together.axmodel",
+            "sha256": "0688ec1b5c96521c3d7e68a36c9a1397c9057e700957b0774928307227402d3b",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 730,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 730,
+              "mean": 1.415229902737923,
+              "minimum": 1.1672539999381115,
+              "maximum": 7.62624699996195
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l16_together.axmodel",
+            "sha256": "9765ee70978f97fe07d038316a220e66c52fb00e0dba5f8274faffdfbfba5342",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 730,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 730,
+              "mean": 1.4145506835628312,
+              "minimum": 1.1739620001662843,
+              "maximum": 7.596197999873766
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l17_together.axmodel",
+            "sha256": "3a93cdc55b8772bd43e53d51a5152518c3772e86ebe736ef6d9505af40037ad7",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 730,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 730,
+              "mean": 1.417559254793734,
+              "minimum": 1.1707539999861183,
+              "maximum": 7.552155999974275
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l18_together.axmodel",
+            "sha256": "f752cc04dcbccbc5e39e0624282bd230dd77e494b04b432456f6837f6e0ff3cc",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 730,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 730,
+              "mean": 1.426079539723952,
+              "minimum": 1.172505000113233,
+              "maximum": 7.590943999957744
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l19_together.axmodel",
+            "sha256": "bad6a374238ece0457fa3a3eb618382d410a1f6ceef9ef2dc39d722d431ea686",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 730,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 730,
+              "mean": 1.4258186958909702,
+              "minimum": 1.1754219999602356,
+              "maximum": 7.60903899981713
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l1_together.axmodel",
+            "sha256": "32e85d0ccf0552097fc1bae265697933bb3241f7a2b5b8824896a3f98030ab00",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 730,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 730,
+              "mean": 1.5316105575281767,
+              "minimum": 1.1935050001739,
+              "maximum": 7.553901999926893
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l20_together.axmodel",
+            "sha256": "a35d11b5a04e0c6904ff242ea3c3afa1ba95d3b0db4fec2f7dee38600b0d2b39",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 730,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 730,
+              "mean": 1.4230941602731135,
+              "minimum": 1.1704629998803284,
+              "maximum": 7.576947999950789
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l21_together.axmodel",
+            "sha256": "1d40051e612fcbdde1918ad7d9fc9030095d27bdecb27e9b9320cf226de025fe",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 730,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 730,
+              "mean": 1.4234957328706714,
+              "minimum": 1.1701710000124876,
+              "maximum": 7.728907000000618
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l22_together.axmodel",
+            "sha256": "3cac8f41c965e4b2eae017e44e5931ea5e4a7c00e3bd37ab06c7b405cfa1f5fa",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 730,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 730,
+              "mean": 1.4270984123264148,
+              "minimum": 1.1789210000188177,
+              "maximum": 7.642282000006162
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l23_together.axmodel",
+            "sha256": "86ff9137f43313500915299cc7a63b1aae09ec7f3839b7c28c3fdce4dd5a875b",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 730,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 730,
+              "mean": 1.425652441093605,
+              "minimum": 1.1812559998816141,
+              "maximum": 7.650449000038861
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l2_together.axmodel",
+            "sha256": "b6ad5ccf374dac3965265f941d047281c4b6e5b1c72e9533826effe232ecf7ed",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 730,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 730,
+              "mean": 1.5653853013757988,
+              "minimum": 1.182422000056249,
+              "maximum": 7.564985000044544
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l3_together.axmodel",
+            "sha256": "7deb0e914f735e2b8191dc56f2d818e8e0fed2b083e9d20877102d4f6b611006",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 730,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 730,
+              "mean": 1.557491113694658,
+              "minimum": 1.1859219998768822,
+              "maximum": 7.5953300001856405
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l4_together.axmodel",
+            "sha256": "7392540c310db72f7969b7673477a89043c7f10b2b8ddfcf6e1795efc1a08865",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 730,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 730,
+              "mean": 1.569800309595836,
+              "minimum": 1.1879630001203623,
+              "maximum": 7.644323000022268
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l5_together.axmodel",
+            "sha256": "c2b41b8aa94552017c73b862baadcf58def79f171fe9d2a80fc727666b29726a",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 730,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 730,
+              "mean": 1.5252126794521619,
+              "minimum": 1.1917540000467852,
+              "maximum": 7.563818999869909
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l6_together.axmodel",
+            "sha256": "ad773ba11034da4fe45441aa3a0e7b7174dc85eb1b8c8854903d2a4d033bdd6c",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 730,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 730,
+              "mean": 1.443095771234567,
+              "minimum": 1.1876720000145724,
+              "maximum": 7.602622000149495
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l7_together.axmodel",
+            "sha256": "19364714cbe3bfc78d4b6a58f9b1fc5804d4de1e4d8c2e10267b7038dc353b45",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 730,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 730,
+              "mean": 1.433628846573761,
+              "minimum": 1.168714999948861,
+              "maximum": 7.58540699985133
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l8_together.axmodel",
+            "sha256": "b17ee68e3d087669e4fd0b8450c93fb27458a0e00bd062142f3ddf58e14d040a",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 730,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 730,
+              "mean": 1.424229631508552,
+              "minimum": 1.185630999998466,
+              "maximum": 7.604068000091502
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l9_together.axmodel",
+            "sha256": "851d85e0ed7a2584126480b65f0752913f25f064967c4640f44b35e42f856a94",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 730,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 730,
+              "mean": 1.4149921945258876,
+              "minimum": 1.1897119998138805,
+              "maximum": 7.611664000023666
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_post.axmodel",
+            "sha256": "91f0e9867cb13ab20ccdcd68dadb30303984cc37877f517231ae3103b2552ac1",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 722,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 722,
+              "mean": 0.8397701038758463,
+              "minimum": 0.6895030001032865,
+              "maximum": 1.0768380000172328
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/token2wav_bigvgan.axmodel",
+            "sha256": "5569a73cae06d2a6aee6873d751828e9df6c11b7ea9ac86edc85293642e707c8",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 4,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 4,
+              "mean": 2196.9442392500014,
+              "minimum": 2196.288738000021,
+              "maximum": 2197.2975010000937
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/token2wav_dit.axmodel",
+            "sha256": "229998799349bd7a956f34cb12783a62a2f50ad099f87b7680b7d1be4b2933db",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 144,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 144,
+              "mean": 836.2500027777758,
+              "minimum": 835.4937359999894,
+              "maximum": 836.9607209999685
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/Qwen2.5-Omni-3B_vision.axmodel",
+            "sha256": "a6ef1c13ff4098578fec9cc787a58a238abfcd9f4640e5e7a4389bf81f1bdc05",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 2,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 2,
+              "mean": 223.32432699988658,
+              "minimum": 223.310180999988,
+              "maximum": 223.33847299978515
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/audio_tower.axmodel",
+            "sha256": "1fe9759ef2b4363ba6f6d59b74212c8f0e1c122ca6f50ee221bdaf4b51316582",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 1,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 1,
+              "mean": 42.78665600008935,
+              "minimum": 42.78665600008935,
+              "maximum": 42.78665600008935
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l0_together.axmodel",
+            "sha256": "48529cdd6a2a3b05ea3727194c26efa55be7acb31f6a608f8ecfbfe14210e75a",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 53,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 53,
+              "mean": 6.0652021509642235,
+              "minimum": 4.606016000025193,
+              "maximum": 18.734646999973847
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l10_together.axmodel",
+            "sha256": "7b4625c182e58f62fb8437709e418aa79fa81b4ab47deba6df6ff95409b50879",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 53,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 53,
+              "mean": 5.293714113225367,
+              "minimum": 4.475348999903872,
+              "maximum": 18.794731000070897
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l11_together.axmodel",
+            "sha256": "302c0510d1e4eb42a54bd3a844d3f9ced375b26af971db1fd4f3453c19b5e9db",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 53,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 53,
+              "mean": 5.29480933962403,
+              "minimum": 4.37996400000884,
+              "maximum": 18.769939000094382
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l12_together.axmodel",
+            "sha256": "f909532b4b645227cf346ee1acfccde1375f95b6c27fd2aa5e7769a58997c302",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 53,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 53,
+              "mean": 5.304566320761158,
+              "minimum": 4.468630000019402,
+              "maximum": 18.74660499993297
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l13_together.axmodel",
+            "sha256": "2401aa1f6fd05215c09777369a2efd1502ab1f1a0d75087443e6d1762d0c87a2",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 53,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 53,
+              "mean": 5.294534113180868,
+              "minimum": 4.5033490000605525,
+              "maximum": 18.752730999949563
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l14_together.axmodel",
+            "sha256": "45052e84bb4e58af3096ab457747a399d88a75d003198edebe42084d5a275d99",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 53,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 53,
+              "mean": 5.297968132069554,
+              "minimum": 4.485265999846888,
+              "maximum": 18.715106000172455
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l15_together.axmodel",
+            "sha256": "bae644ab65b46985609376838d3ed7d9d039991b936bef351b81aa9603c721fe",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 53,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 53,
+              "mean": 5.302012886813656,
+              "minimum": 4.486141000143107,
+              "maximum": 18.906439000147657
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l16_together.axmodel",
+            "sha256": "a2e69c6b947ffc7bd8d73b546dce6b9646dfeddb96336df31576cb5fa29da9ef",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 53,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 53,
+              "mean": 5.304632377361348,
+              "minimum": 4.470974000014394,
+              "maximum": 18.77227199997833
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l17_together.axmodel",
+            "sha256": "e66ac086291082c50370515193e954efb9c76297af80aa46d01b40907923feef",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 53,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 53,
+              "mean": 5.32963318867261,
+              "minimum": 4.493723999985377,
+              "maximum": 18.755064000060884
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l18_together.axmodel",
+            "sha256": "6e4828a797789328395f3df0919ffe24c4e51d42c59f362ded7dbe62d2dc635d",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 53,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 53,
+              "mean": 5.3301780943405355,
+              "minimum": 4.502473999991707,
+              "maximum": 18.928605999917636
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l19_together.axmodel",
+            "sha256": "cec834fff43b9a9ba896431d27f8faf2428be49a8107f112fe4f418fa6d960a0",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 53,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 53,
+              "mean": 5.32550024528956,
+              "minimum": 4.460182000002533,
+              "maximum": 18.93618899998728
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l1_together.axmodel",
+            "sha256": "7cae768a72a67a3a7659242913872edb5a9120237eb3ac02144a7b3de6f2099c",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 53,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 53,
+              "mean": 5.822936377347466,
+              "minimum": 4.6427659999608295,
+              "maximum": 18.806979999908435
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l20_together.axmodel",
+            "sha256": "a306331198ebd7b750f1d14fb4b43453b58b05147a7fbecc4c3946466d5eafdb",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 53,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 53,
+              "mean": 5.314877056606456,
+              "minimum": 4.414681999833192,
+              "maximum": 18.746022999948764
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l21_together.axmodel",
+            "sha256": "53a22ca2a78bacbd237999b2d0be81561b5636264a0253dc00a7d12313a4ed70",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 53,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 53,
+              "mean": 5.327421056597574,
+              "minimum": 4.447933000164994,
+              "maximum": 18.75418899999204
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l22_together.axmodel",
+            "sha256": "f9dceb42b6a2b75d3ae992939d954cb84c8f939530e21ad340d8099bf19814fd",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 53,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 53,
+              "mean": 5.327718150927055,
+              "minimum": 4.4041819999165455,
+              "maximum": 18.753314000150567
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l23_together.axmodel",
+            "sha256": "704725aea506db4d9ce9cc9d600f90014d429f7db003f6197ec42fc5c991526a",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 53,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 53,
+              "mean": 5.338746566042762,
+              "minimum": 4.449963000070056,
+              "maximum": 18.752730999949563
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l24_together.axmodel",
+            "sha256": "6484615733f803104d295421be0f35ebcba32fa79d788ed0bfdf63ef54bcee7f",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 53,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 53,
+              "mean": 5.357594849071558,
+              "minimum": 4.430723000041326,
+              "maximum": 18.756521999875986
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l25_together.axmodel",
+            "sha256": "ebb0dccf466d1ce4a2abb9271e9674d7e637ae6e39d0e906adb834177916b692",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 53,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 53,
+              "mean": 5.354061867927089,
+              "minimum": 4.52463000010539,
+              "maximum": 18.75418899999204
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l26_together.axmodel",
+            "sha256": "c2529faf529f2fddcb591c3db5001b05dafe6cd383a2ed60ec5fb12e0c2a102b",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 53,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 53,
+              "mean": 5.3531427924365245,
+              "minimum": 4.490516000032585,
+              "maximum": 18.749522000007346
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l27_together.axmodel",
+            "sha256": "9ff2f764538f17d260fa69feb2e0753cb59881516b3c08c0b4b085adf324cae6",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 53,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 53,
+              "mean": 5.35401220754294,
+              "minimum": 4.375589000119362,
+              "maximum": 18.764688999908685
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l28_together.axmodel",
+            "sha256": "db1933a1a4932599972cbddc0eda609f6346eb7a90b7d226a39f02697a7a7875",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 53,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 53,
+              "mean": 5.378473943390521,
+              "minimum": 4.581515999916519,
+              "maximum": 18.68856299984145
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l29_together.axmodel",
+            "sha256": "bf3473a234400e239c2e91ffbcaba28d462593db7b19fda77d2406af4b44682f",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 53,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 53,
+              "mean": 5.354612320749062,
+              "minimum": 4.526390999899377,
+              "maximum": 18.67981400005192
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l2_together.axmodel",
+            "sha256": "319643613aa45f5dac22a960a4bf8f7509d18acc77c60ed3ccb1d4bd33fd94e4",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 53,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 53,
+              "mean": 5.56944990565188,
+              "minimum": 4.549724000071365,
+              "maximum": 18.707521999886012
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l30_together.axmodel",
+            "sha256": "61f0b9e8663d92db51eec58097d3082b15e8c56d22d78ea158418242a8b0565e",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 53,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 53,
+              "mean": 5.3749795094329285,
+              "minimum": 4.550015999939205,
+              "maximum": 18.7471879999066
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l31_together.axmodel",
+            "sha256": "f1a4d503df3d2fd0eaaa197547a42df36074fc9c389335b516ac0a5a13b432b7",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 53,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 53,
+              "mean": 5.366246037721004,
+              "minimum": 4.48964099996374,
+              "maximum": 18.752146999986508
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l32_together.axmodel",
+            "sha256": "f7b696563a1e3e939e62c657d5952ef607717e2b73a3ac5c96999658d24d0b4a",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 53,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 53,
+              "mean": 5.3597357735631,
+              "minimum": 4.507723999950031,
+              "maximum": 18.747480000001815
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l33_together.axmodel",
+            "sha256": "e6c6e5f6805c29877a8829267fd81f89983545c942a96af13d04935b2f6192be",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 53,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 53,
+              "mean": 5.375353830184498,
+              "minimum": 4.500723999854017,
+              "maximum": 18.743980999943233
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l34_together.axmodel",
+            "sha256": "7275c84ae5c681ffa70dfcb8a62d59b2be36958ace7d33295269fa48fd01eb72",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 53,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 53,
+              "mean": 5.362294698091508,
+              "minimum": 4.54914099987036,
+              "maximum": 18.828271999836943
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l35_together.axmodel",
+            "sha256": "be5c90d2f71a09700555d3363385ed54afe10b719a3028587316d9818a8c97ab",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 53,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 53,
+              "mean": 5.3822326981175275,
+              "minimum": 4.544183000007251,
+              "maximum": 18.535438000071736
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l3_together.axmodel",
+            "sha256": "6b657c30d31463863542292c0a72e502a5acedca8892e81d14d52e9e6e244c88",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 53,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 53,
+              "mean": 5.652085264127548,
+              "minimum": 4.458723999960057,
+              "maximum": 18.758854999987307
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l4_together.axmodel",
+            "sha256": "ff7eac9b1edcb231070883d68524fec5f2b460aab93f2fa12d9a67dce5c76308",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 53,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 53,
+              "mean": 5.326210226399471,
+              "minimum": 4.468056999940018,
+              "maximum": 18.72443899992504
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l5_together.axmodel",
+            "sha256": "29fab7b427bc98ce4bb64978f469c39e464967e463899eafc7bedba778c3f3b9",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 53,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 53,
+              "mean": 5.294864301886093,
+              "minimum": 4.4735989999935555,
+              "maximum": 18.78160499995829
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l6_together.axmodel",
+            "sha256": "a29750c599456e8f52240d7fed2fe6f358476f112d8cb4d7e2bcb3bbd6652466",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 53,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 53,
+              "mean": 5.287688094334576,
+              "minimum": 4.42225500000859,
+              "maximum": 18.785687999979928
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l7_together.axmodel",
+            "sha256": "630e75a2b5e0c1d6b9e99f155f3e8aec44c512135182c17b435071ca51ff84c9",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 53,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 53,
+              "mean": 5.294710207545853,
+              "minimum": 4.487307000090368,
+              "maximum": 18.720356000130778
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l8_together.axmodel",
+            "sha256": "507e1a4589bfebd5ca0753cdc1bce93184189ea9a5a3d99a7a8e38cf249f4f98",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 53,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 53,
+              "mean": 5.2810347924562695,
+              "minimum": 4.401848000043174,
+              "maximum": 18.73843900011707
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l9_together.axmodel",
+            "sha256": "914bc275f5ab0d55406ef576f5af37df10763d8f9fb6afeec8d4aa77d619a01d",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 53,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 53,
+              "mean": 5.2640960566135755,
+              "minimum": 4.438296999978775,
+              "maximum": 18.740772000001016
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_post.axmodel",
+            "sha256": "ceffa98a2169861df8fad837fd4f5953783bd36253592c18f2721a61f6de931a",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 395,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 395,
+              "mean": 16.99504635443352,
+              "minimum": 16.45877000009932,
+              "maximum": 17.53968699995312
+            }
+          }
+        ],
+        "totalCalls": 20696,
+        "cpuOnnxModels": 2,
+        "cleanShutdown": true,
+        "allModelsVerifiedBeforeAndAfter": true,
+        "verifiedModelFiles": 105,
+        "completeReplyTokensPreserved": true,
+        "thinkerTokenIds": [
+          106287,
+          1940,
+          87140,
+          69249,
+          18830,
+          108191,
+          3837,
+          100626,
+          101941,
+          70074,
+          1773,
+          108191,
+          20412,
+          104165,
+          9370,
+          3837,
+          104132,
+          75405,
+          43316,
+          9370,
+          117816,
+          1773,
+          101941,
+          70074,
+          20412,
+          102245,
+          99578,
+          99234,
+          9370,
+          3837,
+          100902,
+          18493,
+          100080,
+          101477,
+          108191,
+          100036,
+          101036,
+          1773,
+          56568,
+          104806,
+          100626,
+          101417,
+          102622,
+          3837,
+          104047,
+          33108,
+          101435,
+          36587,
+          104256,
+          1773,
+          151645
+        ],
+        "thinkerEosToken": 151645,
+        "fullText": "嗯…视频里有钢琴，还有音乐声。钢琴是红色的，放在木制的桌子上。音乐声是那种轻快的，像是在弹奏钢琴曲呢。你要是还有啥想法，也可以和我说说呀。",
+        "speechSegments": [
+          {
+            "text": "嗯…视频里有钢琴，还有音乐声。",
+            "tokenIds": [
+              106287,
+              1940,
+              87140,
+              69249,
+              18830,
+              108191,
+              3837,
+              100626,
+              101941,
+              70074,
+              1773
+            ],
+            "codecTokens": 167,
+            "eosToken": 8294,
+            "terminalEos": true,
+            "samples": 80160
+          },
+          {
+            "text": "钢琴是红色的，放在木制的桌子上。",
+            "tokenIds": [
+              108191,
+              20412,
+              104165,
+              9370,
+              3837,
+              104132,
+              75405,
+              43316,
+              9370,
+              117816,
+              1773
+            ],
+            "codecTokens": 177,
+            "eosToken": 8294,
+            "terminalEos": true,
+            "samples": 84960
+          },
+          {
+            "text": "音乐声是那种轻快的，像是在弹奏钢琴曲呢。",
+            "tokenIds": [
+              101941,
+              70074,
+              20412,
+              102245,
+              99578,
+              99234,
+              9370,
+              3837,
+              100902,
+              18493,
+              100080,
+              101477,
+              108191,
+              100036,
+              101036,
+              1773
+            ],
+            "codecTokens": 217,
+            "eosToken": 8294,
+            "terminalEos": true,
+            "samples": 104160
+          },
+          {
+            "text": "你要是还有啥想法，也可以和我说说呀。",
+            "tokenIds": [
+              56568,
+              104806,
+              100626,
+              101417,
+              102622,
+              3837,
+              104047,
+              33108,
+              101435,
+              36587,
+              104256,
+              1773
+            ],
+            "codecTokens": 157,
+            "eosToken": 8294,
+            "terminalEos": true,
+            "samples": 75360
+          }
+        ],
+        "waveform": {
+          "shape": [
+            344640
+          ],
+          "dtype": "float32",
+          "sha256": "df414d11c5d8ec55d9b32db25e4e0e41f19762d5455cf43c5c0b84271c5fbc1d",
+          "allFinite": true,
+          "sampleRate": 24000,
+          "samples": 344640,
+          "seconds": 14.36,
+          "rms": 0.08126571603831577,
+          "peak": 0.6226428747177124,
+          "wavSha256": "20d3365e12e8e7620e0d202b00d161a3818286529df38cef3070cfece8074f45"
+        },
+        "inputPath": "/validation/effects/qwen2-5-omni-3b-20261004/input.mp4",
+        "inputSha256": "f168c65c6497a29bf38d53b330631cbfbd5f21600ebe8e7c0728f2fa4b8cc08c",
+        "audioPath": "/validation/effects/qwen2-5-omni-3b-20261004/chinese.wav",
+        "samples": [
+          {
+            "input": "请简短描述视频中的乐器和声音。",
+            "output": "嗯…视频里有钢琴，还有音乐声。钢琴是红色的，放在木制的桌子上。音乐声是那种轻快的，像是在弹奏钢琴曲呢。你要是还有啥想法，也可以和我说说呀。",
+            "hitEos": true,
+            "stopReason": "eos"
+          }
+        ],
+        "customerPackageSha256": "f1c293593c0d09be602d2aa04cb3f644b5e445bc8c224b475d9ee65619bac62e",
+        "sourceArchiveSha256": "e1a96b5d37b704186d071d717d287959d6f35daa3ee9c9eda8f6da56f7bd536d",
+        "fullQualityAccepted": false,
+        "observation": "识别出红色键盘乐器并提到音乐。画面中乐器位于木质桌面下方，“放在木制桌子上”的位置表述不够准确。"
+      }
+    },
+    {
+      "label": "官方英文视频示例",
+      "observation": "保留官方仅输入视频的示例，输出英文文字与语音。",
+      "previews": [],
+      "videos": [
+        {
+          "caption": "输入视频：演奏红色键盘乐器",
+          "path": "/validation/effects/qwen2-5-omni-3b-20261004/input.mp4"
+        }
+      ],
+      "textSamples": [
+        {
+          "input": "输入官方短视频（包含音轨，不追加文字问题）。",
+          "output": "It looks like you're playing the piano. That's really cool! Are you practicing a new song? If you want to talk about your playing or share some tips, feel free to keep the conversation going.",
+          "observation": "回答提到正在演奏键盘乐器，与画面主要内容一致。自动回转写与完整英文回答一致；本次未进行人工音质评分。"
+        }
+      ],
+      "audio": [
+        {
+          "caption": "官方英文视频示例生成的完整语音",
+          "path": "/validation/effects/qwen2-5-omni-3b-20261004/english.wav"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "输出",
+            "本次结果"
+          ],
+          "rows": [
+            [
+              "语音格式",
+              "24 kHz / 单声道 WAV"
+            ],
+            [
+              "语音时长",
+              "11.06 秒"
+            ],
+            [
+              "完整语音段数",
+              "4"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "modelId": "Qwen2.5-Omni-3B",
+        "revision": "38c42b43ece9cca5acf024aeddd8d0a188eca44d",
+        "completed": true,
+        "provider": "AXCLRTExecutionProvider",
+        "inferenceEvidence": "omni-media-text-and-complete-speech",
+        "mode": "video",
+        "case": "official-video",
+        "sessions": [
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l0_together.axmodel",
+            "sha256": "aac796610cddec5adbb62fc012f9bc4a6175fbf05ee4f3d1ed96d208d250b35e",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 565,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 565,
+              "mean": 1.7833838141746732,
+              "minimum": 1.2002140001641237,
+              "maximum": 14.104478000263043
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l10_together.axmodel",
+            "sha256": "f81cfe5aabf3b0b4938d578117302bb3f43768adf12a3b76f76f84daabd1c685",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 565,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 565,
+              "mean": 1.449844667279979,
+              "minimum": 1.1867970006278483,
+              "maximum": 7.757200999549241
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l11_together.axmodel",
+            "sha256": "26611957963208a3540975d0204d59516a8b1a71ff277202639c95231628e40c",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 565,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 565,
+              "mean": 1.4419593008929081,
+              "minimum": 1.182713000162039,
+              "maximum": 7.695075999436085
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l12_together.axmodel",
+            "sha256": "31ef5e2055a820a552f4dbd49a2247d976f30b04a93fb6d2f02883b4b95cd8fc",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 565,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 565,
+              "mean": 1.4533756424739737,
+              "minimum": 1.1815469997600303,
+              "maximum": 7.7644920002057916
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l13_together.axmodel",
+            "sha256": "7fa5b14df1ba9c87c7e125b56952891be6e1afc0ae7d494695e2421d175d0f40",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 565,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 565,
+              "mean": 1.4508802106344363,
+              "minimum": 1.1727970004358212,
+              "maximum": 7.745824999801698
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l14_together.axmodel",
+            "sha256": "ac8d27ea9d62a4437078109e027078e6f9094cf409680d0a4f48ee96468fe07c",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 565,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 565,
+              "mean": 1.446826254904352,
+              "minimum": 1.1777549998441827,
+              "maximum": 7.758951000141678
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l15_together.axmodel",
+            "sha256": "0688ec1b5c96521c3d7e68a36c9a1397c9057e700957b0774928307227402d3b",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 565,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 565,
+              "mean": 1.4504197238826253,
+              "minimum": 1.168421999864222,
+              "maximum": 7.707034000304702
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l16_together.axmodel",
+            "sha256": "9765ee70978f97fe07d038316a220e66c52fb00e0dba5f8274faffdfbfba5342",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 565,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 565,
+              "mean": 1.4503944761261953,
+              "minimum": 1.174255000478297,
+              "maximum": 7.723658999566396
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l17_together.axmodel",
+            "sha256": "3a93cdc55b8772bd43e53d51a5152518c3772e86ebe736ef6d9505af40037ad7",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 565,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 565,
+              "mean": 1.457115741609454,
+              "minimum": 1.174255000478297,
+              "maximum": 8.310786999572883
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l18_together.axmodel",
+            "sha256": "f752cc04dcbccbc5e39e0624282bd230dd77e494b04b432456f6837f6e0ff3cc",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 565,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 565,
+              "mean": 1.4595165982516252,
+              "minimum": 1.1649219995888416,
+              "maximum": 7.720450999840978
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l19_together.axmodel",
+            "sha256": "bad6a374238ece0457fa3a3eb618382d410a1f6ceef9ef2dc39d722d431ea686",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 565,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 565,
+              "mean": 1.4610199574927776,
+              "minimum": 1.1905889996342012,
+              "maximum": 7.726284000455053
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l1_together.axmodel",
+            "sha256": "32e85d0ccf0552097fc1bae265697933bb3241f7a2b5b8824896a3f98030ab00",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 565,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 565,
+              "mean": 1.612121658401311,
+              "minimum": 1.1917550000362098,
+              "maximum": 7.678741999370686
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l20_together.axmodel",
+            "sha256": "a35d11b5a04e0c6904ff242ea3c3afa1ba95d3b0db4fec2f7dee38600b0d2b39",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 565,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 565,
+              "mean": 1.4705231486906223,
+              "minimum": 1.1792140003308305,
+              "maximum": 7.985868000105256
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l21_together.axmodel",
+            "sha256": "1d40051e612fcbdde1918ad7d9fc9030095d27bdecb27e9b9320cf226de025fe",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 565,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 565,
+              "mean": 1.470793157526698,
+              "minimum": 1.1780459999499726,
+              "maximum": 8.0217429995173
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l22_together.axmodel",
+            "sha256": "3cac8f41c965e4b2eae017e44e5931ea5e4a7c00e3bd37ab06c7b405cfa1f5fa",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 565,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 565,
+              "mean": 1.4642324070876311,
+              "minimum": 1.1812560005637351,
+              "maximum": 7.982952000020305
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l23_together.axmodel",
+            "sha256": "86ff9137f43313500915299cc7a63b1aae09ec7f3839b7c28c3fdce4dd5a875b",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 565,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 565,
+              "mean": 1.4668806566569241,
+              "minimum": 1.1564629994609277,
+              "maximum": 8.009785000467673
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l2_together.axmodel",
+            "sha256": "b6ad5ccf374dac3965265f941d047281c4b6e5b1c72e9533826effe232ecf7ed",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 565,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 565,
+              "mean": 1.6581065734627911,
+              "minimum": 1.1932140005228575,
+              "maximum": 7.680491999963124
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l3_together.axmodel",
+            "sha256": "7deb0e914f735e2b8191dc56f2d818e8e0fed2b083e9d20877102d4f6b611006",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 565,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 565,
+              "mean": 1.623517761072435,
+              "minimum": 1.196713000354066,
+              "maximum": 7.6673670000673155
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l4_together.axmodel",
+            "sha256": "7392540c310db72f7969b7673477a89043c7f10b2b8ddfcf6e1795efc1a08865",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 565,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 565,
+              "mean": 1.6311693663576996,
+              "minimum": 1.187384999866481,
+              "maximum": 7.6976999998805695
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l5_together.axmodel",
+            "sha256": "c2b41b8aa94552017c73b862baadcf58def79f171fe9d2a80fc727666b29726a",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 565,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 565,
+              "mean": 1.5708543221217444,
+              "minimum": 1.2002129997199518,
+              "maximum": 7.738825000160432
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l6_together.axmodel",
+            "sha256": "ad773ba11034da4fe45441aa3a0e7b7174dc85eb1b8c8854903d2a4d033bdd6c",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 565,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 565,
+              "mean": 1.4879668513410163,
+              "minimum": 1.2019639998470666,
+              "maximum": 7.716076000178873
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l7_together.axmodel",
+            "sha256": "19364714cbe3bfc78d4b6a58f9b1fc5804d4de1e4d8c2e10267b7038dc353b45",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 565,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 565,
+              "mean": 1.4714125415827437,
+              "minimum": 1.1815469997600303,
+              "maximum": 7.751076000204193
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l8_together.axmodel",
+            "sha256": "b17ee68e3d087669e4fd0b8450c93fb27458a0e00bd062142f3ddf58e14d040a",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 565,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 565,
+              "mean": 1.4496242123818492,
+              "minimum": 1.181551999252406,
+              "maximum": 7.711993000157236
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_p128_l9_together.axmodel",
+            "sha256": "851d85e0ed7a2584126480b65f0752913f25f064967c4640f44b35e42f856a94",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 565,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 565,
+              "mean": 1.4479542389509872,
+              "minimum": 1.1879630001203623,
+              "maximum": 7.721325000602519
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/qwen2_5_omni_talker_post.axmodel",
+            "sha256": "91f0e9867cb13ab20ccdcd68dadb30303984cc37877f517231ae3103b2552ac1",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 557,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 557,
+              "mean": 0.8735688097119728,
+              "minimum": 0.6973780000407714,
+              "maximum": 2.1078839999972843
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/token2wav_bigvgan.axmodel",
+            "sha256": "5569a73cae06d2a6aee6873d751828e9df6c11b7ea9ac86edc85293642e707c8",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 4,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 4,
+              "mean": 2196.945490250073,
+              "minimum": 2196.66727799995,
+              "maximum": 2197.333369000262
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-talker-chunk_prefill_512/token2wav_dit.axmodel",
+            "sha256": "229998799349bd7a956f34cb12783a62a2f50ad099f87b7680b7d1be4b2933db",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 144,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 144,
+              "mean": 835.9848192361028,
+              "minimum": 835.4166320004879,
+              "maximum": 836.9661800006725
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/Qwen2.5-Omni-3B_vision.axmodel",
+            "sha256": "a6ef1c13ff4098578fec9cc787a58a238abfcd9f4640e5e7a4389bf81f1bdc05",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 2,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 2,
+              "mean": 223.71471249971364,
+              "minimum": 223.41998199954105,
+              "maximum": 224.00944299988623
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/audio_tower.axmodel",
+            "sha256": "1fe9759ef2b4363ba6f6d59b74212c8f0e1c122ca6f50ee221bdaf4b51316582",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 1,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 1,
+              "mean": 42.143976999795996,
+              "minimum": 42.143976999795996,
+              "maximum": 42.143976999795996
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l0_together.axmodel",
+            "sha256": "48529cdd6a2a3b05ea3727194c26efa55be7acb31f6a608f8ecfbfe14210e75a",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 45,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 45,
+              "mean": 6.233845044476362,
+              "minimum": 4.68010399981722,
+              "maximum": 18.93829199980246
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l10_together.axmodel",
+            "sha256": "7b4625c182e58f62fb8437709e418aa79fa81b4ab47deba6df6ff95409b50879",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 45,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 45,
+              "mean": 5.41009037776045,
+              "minimum": 4.435685999851557,
+              "maximum": 18.813749000401003
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l11_together.axmodel",
+            "sha256": "302c0510d1e4eb42a54bd3a844d3f9ced375b26af971db1fd4f3453c19b5e9db",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 45,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 45,
+              "mean": 5.40421168886193,
+              "minimum": 4.523185999460111,
+              "maximum": 18.77029000024777
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l12_together.axmodel",
+            "sha256": "f909532b4b645227cf346ee1acfccde1375f95b6c27fd2aa5e7769a58997c302",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 45,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 45,
+              "mean": 5.407834844461629,
+              "minimum": 4.33389400041051,
+              "maximum": 18.811707999702776
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l13_together.axmodel",
+            "sha256": "2401aa1f6fd05215c09777369a2efd1502ab1f1a0d75087443e6d1762d0c87a2",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 45,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 45,
+              "mean": 5.405248777788074,
+              "minimum": 4.430435999893234,
+              "maximum": 18.76329100014118
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l14_together.axmodel",
+            "sha256": "45052e84bb4e58af3096ab457747a399d88a75d003198edebe42084d5a275d99",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 45,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 45,
+              "mean": 5.4274414444282435,
+              "minimum": 4.495478000535513,
+              "maximum": 18.834167000022717
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l15_together.axmodel",
+            "sha256": "bae644ab65b46985609376838d3ed7d9d039991b936bef351b81aa9603c721fe",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 45,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 45,
+              "mean": 5.443664666705041,
+              "minimum": 4.515311000432121,
+              "maximum": 18.71254100024089
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l16_together.axmodel",
+            "sha256": "a2e69c6b947ffc7bd8d73b546dce6b9646dfeddb96336df31576cb5fa29da9ef",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 45,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 45,
+              "mean": 5.430837733365479,
+              "minimum": 4.475061999983154,
+              "maximum": 18.720998999924632
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l17_together.axmodel",
+            "sha256": "e66ac086291082c50370515193e954efb9c76297af80aa46d01b40907923feef",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 45,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 45,
+              "mean": 5.43680717772885,
+              "minimum": 4.469227999834402,
+              "maximum": 18.71749899964925
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l18_together.axmodel",
+            "sha256": "6e4828a797789328395f3df0919ffe24c4e51d42c59f362ded7dbe62d2dc635d",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 45,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 45,
+              "mean": 5.441597133297667,
+              "minimum": 4.442102999746567,
+              "maximum": 18.799749000208976
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l19_together.axmodel",
+            "sha256": "cec834fff43b9a9ba896431d27f8faf2428be49a8107f112fe4f418fa6d960a0",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 45,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 45,
+              "mean": 5.4442027333304095,
+              "minimum": 4.559936999612546,
+              "maximum": 18.743458000244573
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l1_together.axmodel",
+            "sha256": "7cae768a72a67a3a7659242913872edb5a9120237eb3ac02144a7b3de6f2099c",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 45,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 45,
+              "mean": 5.850956222275272,
+              "minimum": 4.604269999617827,
+              "maximum": 18.774666000354046
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l20_together.axmodel",
+            "sha256": "a306331198ebd7b750f1d14fb4b43453b58b05147a7fbecc4c3946466d5eafdb",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 45,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 45,
+              "mean": 5.435374888919695,
+              "minimum": 4.444727000191051,
+              "maximum": 18.8049990001673
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l21_together.axmodel",
+            "sha256": "53a22ca2a78bacbd237999b2d0be81561b5636264a0253dc00a7d12313a4ed70",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 45,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 45,
+              "mean": 5.46309633334911,
+              "minimum": 4.536311999800091,
+              "maximum": 18.752791000224533
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l22_together.axmodel",
+            "sha256": "f9dceb42b6a2b75d3ae992939d954cb84c8f939530e21ad340d8099bf19814fd",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 45,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 45,
+              "mean": 5.438633199911338,
+              "minimum": 4.4575609999810695,
+              "maximum": 18.779332999656617
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l23_together.axmodel",
+            "sha256": "704725aea506db4d9ce9cc9d600f90014d429f7db003f6197ec42fc5c991526a",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 45,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 45,
+              "mean": 5.441772199992556,
+              "minimum": 4.530770000201301,
+              "maximum": 18.689208000068902
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l24_together.axmodel",
+            "sha256": "6484615733f803104d295421be0f35ebcba32fa79d788ed0bfdf63ef54bcee7f",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 45,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 45,
+              "mean": 5.4463869999583245,
+              "minimum": 4.500727999584342,
+              "maximum": 18.70904099996551
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l25_together.axmodel",
+            "sha256": "ebb0dccf466d1ce4a2abb9271e9674d7e637ae6e39d0e906adb834177916b692",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 45,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 45,
+              "mean": 5.454929511021571,
+              "minimum": 4.459894999854441,
+              "maximum": 18.750165999335877
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l26_together.axmodel",
+            "sha256": "c2529faf529f2fddcb591c3db5001b05dafe6cd383a2ed60ec5fb12e0c2a102b",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 45,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 45,
+              "mean": 5.459511911188504,
+              "minimum": 4.448519000106899,
+              "maximum": 18.74870700066822
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l27_together.axmodel",
+            "sha256": "9ff2f764538f17d260fa69feb2e0753cb59881516b3c08c0b4b085adf324cae6",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 45,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 45,
+              "mean": 5.478930644514751,
+              "minimum": 4.557604000183346,
+              "maximum": 18.738791000032506
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l28_together.axmodel",
+            "sha256": "db1933a1a4932599972cbddc0eda609f6346eb7a90b7d226a39f02697a7a7875",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 45,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 45,
+              "mean": 5.471217555512137,
+              "minimum": 4.494894000345084,
+              "maximum": 18.736166000053345
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l29_together.axmodel",
+            "sha256": "bf3473a234400e239c2e91ffbcaba28d462593db7b19fda77d2406af4b44682f",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 45,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 45,
+              "mean": 5.4959704666543985,
+              "minimum": 4.552061999675061,
+              "maximum": 18.765331999929913
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l2_together.axmodel",
+            "sha256": "319643613aa45f5dac22a960a4bf8f7509d18acc77c60ed3ccb1d4bd33fd94e4",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 45,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 45,
+              "mean": 5.752787311252582,
+              "minimum": 4.557895000289136,
+              "maximum": 18.777874000079464
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l30_together.axmodel",
+            "sha256": "61f0b9e8663d92db51eec58097d3082b15e8c56d22d78ea158418242a8b0565e",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 45,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 45,
+              "mean": 5.481924955488972,
+              "minimum": 4.521727999417635,
+              "maximum": 18.741123999461706
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l31_together.axmodel",
+            "sha256": "f1a4d503df3d2fd0eaaa197547a42df36074fc9c389335b516ac0a5a13b432b7",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 45,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 45,
+              "mean": 5.471612844424574,
+              "minimum": 4.511228000410483,
+              "maximum": 18.75074899999163
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l32_together.axmodel",
+            "sha256": "f7b696563a1e3e939e62c657d5952ef607717e2b73a3ac5c96999658d24d0b4a",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 45,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 45,
+              "mean": 5.480512155554607,
+              "minimum": 4.488770000534714,
+              "maximum": 18.751331999737886
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l33_together.axmodel",
+            "sha256": "e6c6e5f6805c29877a8829267fd81f89983545c942a96af13d04935b2f6192be",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 45,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 45,
+              "mean": 5.472034311221957,
+              "minimum": 4.517645000305492,
+              "maximum": 18.753082000330323
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l34_together.axmodel",
+            "sha256": "7275c84ae5c681ffa70dfcb8a62d59b2be36958ace7d33295269fa48fd01eb72",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 45,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 45,
+              "mean": 5.484375088841868,
+              "minimum": 4.500729000028514,
+              "maximum": 18.75804000064818
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l35_together.axmodel",
+            "sha256": "be5c90d2f71a09700555d3363385ed54afe10b719a3028587316d9818a8c97ab",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 45,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 45,
+              "mean": 5.482443622268976,
+              "minimum": 4.462810999939393,
+              "maximum": 18.74724899971625
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l3_together.axmodel",
+            "sha256": "6b657c30d31463863542292c0a72e502a5acedca8892e81d14d52e9e6e244c88",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 45,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 45,
+              "mean": 5.640352488949753,
+              "minimum": 4.530478000560834,
+              "maximum": 18.775541000650264
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l4_together.axmodel",
+            "sha256": "ff7eac9b1edcb231070883d68524fec5f2b460aab93f2fa12d9a67dce5c76308",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 45,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 45,
+              "mean": 5.420927600001353,
+              "minimum": 4.460768999706488,
+              "maximum": 18.74987399969541
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l5_together.axmodel",
+            "sha256": "29fab7b427bc98ce4bb64978f469c39e464967e463899eafc7bedba778c3f3b9",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 45,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 45,
+              "mean": 5.391845066636354,
+              "minimum": 4.407393999827036,
+              "maximum": 18.715456999416347
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l6_together.axmodel",
+            "sha256": "a29750c599456e8f52240d7fed2fe6f358476f112d8cb4d7e2bcb3bbd6652466",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 45,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 45,
+              "mean": 5.403894044401467,
+              "minimum": 4.536894999546348,
+              "maximum": 18.771748999824922
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l7_together.axmodel",
+            "sha256": "630e75a2b5e0c1d6b9e99f155f3e8aec44c512135182c17b435071ca51ff84c9",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 45,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 45,
+              "mean": 5.388565222266253,
+              "minimum": 4.486436000661342,
+              "maximum": 18.710207000367518
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l8_together.axmodel",
+            "sha256": "507e1a4589bfebd5ca0753cdc1bce93184189ea9a5a3d99a7a8e38cf249f4f98",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 45,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 45,
+              "mean": 5.389375577801224,
+              "minimum": 4.435978000401519,
+              "maximum": 18.76999900014198
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_p128_l9_together.axmodel",
+            "sha256": "914bc275f5ab0d55406ef576f5af37df10763d8f9fb6afeec8d4aa77d619a01d",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 45,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 45,
+              "mean": 5.390308866683174,
+              "minimum": 4.462519999833603,
+              "maximum": 18.792457000017748
+            }
+          },
+          {
+            "model": "Qwen2.5-Omni-3B-AX650-thinker-chunk_prefill_512/qwen2_5_omni_text_post.axmodel",
+            "sha256": "ceffa98a2169861df8fad837fd4f5953783bd36253592c18f2721a61f6de931a",
+            "provider": "AXCLRTExecutionProvider",
+            "calls": 377,
+            "allFinite": true,
+            "allReturnCodesZero": true,
+            "released": true,
+            "runMilliseconds": [],
+            "nativeTiming": {
+              "repeat": 377,
+              "mean": 16.969289580875337,
+              "minimum": 16.575488999478694,
+              "maximum": 17.93932800046605
+            }
+          }
+        ],
+        "totalCalls": 16265,
+        "cpuOnnxModels": 2,
+        "cleanShutdown": true,
+        "allModelsVerifiedBeforeAndAfter": true,
+        "verifiedModelFiles": 105,
+        "completeReplyTokensPreserved": true,
+        "thinkerTokenIds": [
+          2132,
+          5868,
+          1075,
+          498,
+          2299,
+          5619,
+          279,
+          26278,
+          13,
+          2938,
+          594,
+          2167,
+          7010,
+          0,
+          8713,
+          498,
+          35566,
+          264,
+          501,
+          5492,
+          30,
+          1416,
+          498,
+          1366,
+          311,
+          3061,
+          911,
+          697,
+          5619,
+          476,
+          4332,
+          1045,
+          10414,
+          11,
+          2666,
+          1910,
+          311,
+          2506,
+          279,
+          10435,
+          2087,
+          13,
+          151645
+        ],
+        "thinkerEosToken": 151645,
+        "fullText": "It looks like you're playing the piano. That's really cool! Are you practicing a new song? If you want to talk about your playing or share some tips, feel free to keep the conversation going.",
+        "speechSegments": [
+          {
+            "text": "It looks like you're playing the piano. That's really cool!",
+            "tokenIds": [
+              2132,
+              5868,
+              1075,
+              498,
+              2299,
+              5619,
+              279,
+              26278,
+              13,
+              2938,
+              594,
+              2167,
+              7010,
+              0
+            ],
+            "codecTokens": 174,
+            "eosToken": 8294,
+            "terminalEos": true,
+            "samples": 83520
+          },
+          {
+            "text": " Are you practicing a new song?",
+            "tokenIds": [
+              8713,
+              498,
+              35566,
+              264,
+              501,
+              5492,
+              30
+            ],
+            "codecTokens": 102,
+            "eosToken": 8294,
+            "terminalEos": true,
+            "samples": 48960
+          },
+          {
+            "text": " If you want to talk about your playing or share some tips,",
+            "tokenIds": [
+              1416,
+              498,
+              1366,
+              311,
+              3061,
+              911,
+              697,
+              5619,
+              476,
+              4332,
+              1045,
+              10414,
+              11
+            ],
+            "codecTokens": 164,
+            "eosToken": 8294,
+            "terminalEos": true,
+            "samples": 78720
+          },
+          {
+            "text": " feel free to keep the conversation going.",
+            "tokenIds": [
+              2666,
+              1910,
+              311,
+              2506,
+              279,
+              10435,
+              2087,
+              13
+            ],
+            "codecTokens": 113,
+            "eosToken": 8294,
+            "terminalEos": true,
+            "samples": 54240
+          }
+        ],
+        "waveform": {
+          "shape": [
+            265440
+          ],
+          "dtype": "float32",
+          "sha256": "fb0777725a332a45294605dca9ab57cb95c40bf3dd3e88fab9e01810888c34f1",
+          "allFinite": true,
+          "sampleRate": 24000,
+          "samples": 265440,
+          "seconds": 11.06,
+          "rms": 0.07230616729850771,
+          "peak": 0.5259725451469421,
+          "wavSha256": "55439103c688c24dc1308576e543892b7852ef92593e3b55280b4fbee1708af3"
+        },
+        "inputPath": "/validation/effects/qwen2-5-omni-3b-20261004/input.mp4",
+        "inputSha256": "f168c65c6497a29bf38d53b330631cbfbd5f21600ebe8e7c0728f2fa4b8cc08c",
+        "audioPath": "/validation/effects/qwen2-5-omni-3b-20261004/english.wav",
+        "samples": [
+          {
+            "input": "输入官方短视频（包含音轨，不追加文字问题）。",
+            "output": "It looks like you're playing the piano. That's really cool! Are you practicing a new song? If you want to talk about your playing or share some tips, feel free to keep the conversation going.",
+            "hitEos": true,
+            "stopReason": "eos"
+          }
+        ],
+        "customerPackageSha256": "f1c293593c0d09be602d2aa04cb3f644b5e445bc8c224b475d9ee65619bac62e",
+        "sourceArchiveSha256": "0963881395553ce683b631422d97e1c802f0d234429c30057f9f187937ee7267",
+        "fullQualityAccepted": false,
+        "observation": "回答提到正在演奏键盘乐器，与画面主要内容一致。自动回转写与完整英文回答一致；本次未进行人工音质评分。"
+      }
+    }
+  ]
+}

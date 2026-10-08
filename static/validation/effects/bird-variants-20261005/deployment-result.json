@@ -1,0 +1,1991 @@
+{
+  "modelId": "Bird-Species-Classification",
+  "revision": "b81b4cb3be067a85ba730c5b2a67c566d3d9af68",
+  "date": "2026-10-05",
+  "variants": [
+    {
+      "label": "bird-m",
+      "observation": "输入224×224，整图分类。七张官方样图，两次独立启动的输入张量、输出张量及结果图一致。7个分类结果中，Top-1与样图文件名类别编号一致2个，Top-5包含该编号4个。文件名编号仅用于样例对照，不作为独立标注精度评测。",
+      "previews": [
+        {
+          "caption": "m实际输出：样图03111",
+          "path": "/validation/effects/bird-variants-20261005/m/03111_2c0dfa5a-c4a0-47f8-ac89-6a289208050f-top5.png"
+        },
+        {
+          "caption": "m实际输出：样图04251",
+          "path": "/validation/effects/bird-variants-20261005/m/04251_3a52191e-be71-4539-98ea-14a8f2347330-top5.png"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "样图类别编号",
+            "Top-1鸟种",
+            "Softmax分数",
+            "与样图编号比较"
+          ],
+          "rows": [
+            [
+              "03111",
+              "Jynx_torquilla",
+              "0.4839",
+              "不一致"
+            ],
+            [
+              "03332",
+              "Penelope_purpurascens",
+              "0.1321",
+              "不一致"
+            ],
+            [
+              "03412",
+              "Chroicocephalus_philadelphia",
+              "0.2973",
+              "不一致"
+            ],
+            [
+              "03615",
+              "Tigrisoma_mexicanum",
+              "0.1297",
+              "不一致"
+            ],
+            [
+              "04251",
+              "Tityra_semifasciata",
+              "0.9999",
+              "一致"
+            ],
+            [
+              "04405",
+              "Platalea_flavipes",
+              "0.5151",
+              "不一致"
+            ],
+            [
+              "04593",
+              "Trogon_elegans",
+              "0.9574",
+              "一致"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "completed": true,
+        "provider": "AXCLRTExecutionProvider",
+        "inferenceEvidence": "original-bird-classification-and-detection",
+        "modelId": "Bird-Species-Classification",
+        "revision": "b81b4cb3be067a85ba730c5b2a67c566d3d9af68",
+        "actualCapacity": "16GB",
+        "sessions": [
+          {
+            "model": "model/bird-m/AX650/bird_650_npu3.axmodel",
+            "sha256": "e544a71cb3ca619c8f064f8952193453c33e816467e03d2b5e7bed75aec99038",
+            "allFinite": true,
+            "runMilliseconds": [
+              7.269526999152731,
+              9.377410000524833,
+              3.4431380008754786,
+              3.465013000095496,
+              3.5379299988562707,
+              3.7674730010621715,
+              3.7135139991733013,
+              3.6055969994777115,
+              3.513138999551302,
+              3.7563890000456013,
+              3.269886999987648,
+              4.0148069983843016,
+              3.530346000843565,
+              4.134974000407965
+            ]
+          }
+        ],
+        "metadata": [
+          {
+            "weight": "model/bird-m/AX650/bird_650_npu3.axmodel",
+            "inputs": [
+              {
+                "name": "image",
+                "shape": [
+                  1,
+                  3,
+                  224,
+                  224
+                ],
+                "dtype": "uint8"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "class",
+                "shape": [
+                  1,
+                  1486
+                ],
+                "dtype": "float32"
+              }
+            ]
+          }
+        ],
+        "calls": [
+          {
+            "weight": "model/bird-m/AX650/bird_650_npu3.axmodel",
+            "rawOutputsExact": true,
+            "inputsExact": true,
+            "rawSha256": "f7be7c5287debeb4087578f0ddfe86e25872b71f8c9059aecb744ebe93baa80c",
+            "runMilliseconds": [
+              7.269526999152731,
+              9.377410000524833
+            ]
+          },
+          {
+            "weight": "model/bird-m/AX650/bird_650_npu3.axmodel",
+            "rawOutputsExact": true,
+            "inputsExact": true,
+            "rawSha256": "a8a7d474b65663f2374a8c0163ba0ee1c4f55bce789302cca5f28e2476104930",
+            "runMilliseconds": [
+              3.4431380008754786,
+              3.465013000095496
+            ]
+          },
+          {
+            "weight": "model/bird-m/AX650/bird_650_npu3.axmodel",
+            "rawOutputsExact": true,
+            "inputsExact": true,
+            "rawSha256": "3d93912fda50694ad0aadd3fd2d8d9de7868cee556d88745109ef2eece2cbb52",
+            "runMilliseconds": [
+              3.5379299988562707,
+              3.7674730010621715
+            ]
+          },
+          {
+            "weight": "model/bird-m/AX650/bird_650_npu3.axmodel",
+            "rawOutputsExact": true,
+            "inputsExact": true,
+            "rawSha256": "45df5a9d2a3c84ea9769176095f9f46c3e74c8d06bf0e82b16b62ca4062a812f",
+            "runMilliseconds": [
+              3.7135139991733013,
+              3.6055969994777115
+            ]
+          },
+          {
+            "weight": "model/bird-m/AX650/bird_650_npu3.axmodel",
+            "rawOutputsExact": true,
+            "inputsExact": true,
+            "rawSha256": "85bad4e1229b9fd8e5b4f11fa8b8ae7f57691d0d4394787bb84e26952a1bf08c",
+            "runMilliseconds": [
+              3.513138999551302,
+              3.7563890000456013
+            ]
+          },
+          {
+            "weight": "model/bird-m/AX650/bird_650_npu3.axmodel",
+            "rawOutputsExact": true,
+            "inputsExact": true,
+            "rawSha256": "6b9927d8b7901b035a51dc8e944837970a2481881357f538c4124efe825e3dc8",
+            "runMilliseconds": [
+              3.269886999987648,
+              4.0148069983843016
+            ]
+          },
+          {
+            "weight": "model/bird-m/AX650/bird_650_npu3.axmodel",
+            "rawOutputsExact": true,
+            "inputsExact": true,
+            "rawSha256": "a7eac71af1a14758989cb1005a674a2084dc0a54bac0b6ecc52c179934b66ea5",
+            "runMilliseconds": [
+              3.530346000843565,
+              4.134974000407965
+            ]
+          }
+        ],
+        "sampleResults": [
+          {
+            "input": "03111_2c0dfa5a-c4a0-47f8-ac89-6a289208050f.jpg",
+            "top5": [
+              [
+                "04448_Animalia_Chordata_Aves_Piciformes_Picidae_Jynx_torquilla",
+                0.4838649034500122
+              ],
+              [
+                "04165_Animalia_Chordata_Aves_Passeriformes_Ptilonorhynchidae_Ptilonorhynchus_violaceus",
+                0.05652644485235214
+              ],
+              [
+                "03293_Animalia_Chordata_Aves_Caprimulgiformes_Caprimulgidae_Nyctidromus_albicollis",
+                0.05652644485235214
+              ],
+              [
+                "03114_Animalia_Chordata_Aves_Accipitriformes_Accipitridae_Accipiter_nisus",
+                0.02625584602355957
+              ],
+              [
+                "03517_Animalia_Chordata_Aves_Columbiformes_Columbidae_Columbina_inca",
+                0.02252271957695484
+              ]
+            ],
+            "independentSoftmaxMaxError": 3.16565965663429e-08,
+            "filenameClassId": "03111",
+            "top1MatchesFilename": false,
+            "top5ContainsFilename": false
+          },
+          {
+            "input": "03332_01b365c3-a741-4f45-bac2-4345bc901ec6.jpg",
+            "top5": [
+              [
+                "03618_Animalia_Chordata_Aves_Galliformes_Cracidae_Penelope_purpurascens",
+                0.13209696114063263
+              ],
+              [
+                "04470_Animalia_Chordata_Aves_Piciformes_Ramphastidae_Ramphastos_ambiguus",
+                0.11331500113010406
+              ],
+              [
+                "04472_Animalia_Chordata_Aves_Piciformes_Ramphastidae_Ramphastos_toco",
+                0.061357367783784866
+              ],
+              [
+                "04471_Animalia_Chordata_Aves_Piciformes_Ramphastidae_Ramphastos_sulfuratus",
+                0.052633434534072876
+              ],
+              [
+                "03588_Animalia_Chordata_Aves_Cuculiformes_Cuculidae_Eudynamys_scolopaceus",
+                0.028499750420451164
+              ]
+            ],
+            "independentSoftmaxMaxError": 4.0893787384144176e-09,
+            "filenameClassId": "03332",
+            "top1MatchesFilename": false,
+            "top5ContainsFilename": false
+          },
+          {
+            "input": "03412_0ffc115b-43b4-4474-a373-24233f391de3.jpg",
+            "top5": [
+              [
+                "03401_Animalia_Chordata_Aves_Charadriiformes_Laridae_Chroicocephalus_philadelphia",
+                0.2972693145275116
+              ],
+              [
+                "03427_Animalia_Chordata_Aves_Charadriiformes_Laridae_Leucophaeus_pipixcan",
+                0.2972693145275116
+              ],
+              [
+                "03405_Animalia_Chordata_Aves_Charadriiformes_Laridae_Hydrocoloeus_minutus",
+                0.16096417605876923
+              ],
+              [
+                "03484_Animalia_Chordata_Aves_Charadriiformes_Scolopacidae_Phalaropus_lobatus",
+                0.03472784906625748
+              ],
+              [
+                "03338_Animalia_Chordata_Aves_Charadriiformes_Alcidae_Brachyramphus_marmoratus",
+                0.02979014813899994
+              ]
+            ],
+            "independentSoftmaxMaxError": 2.639171536866769e-08,
+            "filenameClassId": "03412",
+            "top1MatchesFilename": false,
+            "top5ContainsFilename": false
+          },
+          {
+            "input": "03615_0dfbf6ae-434d-4648-b5d2-08412546ea64.jpg",
+            "top5": [
+              [
+                "04389_Animalia_Chordata_Aves_Pelecaniformes_Ardeidae_Tigrisoma_mexicanum",
+                0.12973074615001678
+              ],
+              [
+                "04470_Animalia_Chordata_Aves_Piciformes_Ramphastidae_Ramphastos_ambiguus",
+                0.09546242654323578
+              ],
+              [
+                "03939_Animalia_Chordata_Aves_Passeriformes_Menuridae_Menura_novaehollandiae",
+                0.07024610042572021
+              ],
+              [
+                "03615_Animalia_Chordata_Aves_Galliformes_Cracidae_Ortalis_vetula",
+                0.05169065296649933
+              ],
+              [
+                "03706_Animalia_Chordata_Aves_Passeriformes_Callaeidae_Philesturnus_rufusater",
+                0.038036592304706573
+              ]
+            ],
+            "independentSoftmaxMaxError": 6.3828961283096675e-09,
+            "filenameClassId": "03615",
+            "top1MatchesFilename": false,
+            "top5ContainsFilename": true
+          },
+          {
+            "input": "04251_3a52191e-be71-4539-98ea-14a8f2347330.jpg",
+            "top5": [
+              [
+                "04251_Animalia_Chordata_Aves_Passeriformes_Tityridae_Tityra_semifasciata",
+                0.999876856803894
+              ],
+              [
+                "04019_Animalia_Chordata_Aves_Passeriformes_Oriolidae_Sphecotheres_vieilloti",
+                6.365338776959106e-05
+              ],
+              [
+                "04195_Animalia_Chordata_Aves_Passeriformes_Sturnidae_Cinnyricinclus_leucogaster",
+                8.66870232130168e-06
+              ],
+              [
+                "04250_Animalia_Chordata_Aves_Passeriformes_Tityridae_Pachyramphus_aglaiae",
+                7.436170108121587e-06
+              ],
+              [
+                "03917_Animalia_Chordata_Aves_Passeriformes_Malaconotidae_Dryoscopus_cubla",
+                5.471908934850944e-06
+              ]
+            ],
+            "independentSoftmaxMaxError": 3.107300527993573e-08,
+            "filenameClassId": "04251",
+            "top1MatchesFilename": true,
+            "top5ContainsFilename": true
+          },
+          {
+            "input": "04405_0c5a6785-0bc2-49d9-9702-b9e94ba9b686.jpg",
+            "top5": [
+              [
+                "04404_Animalia_Chordata_Aves_Pelecaniformes_Threskiornithidae_Platalea_flavipes",
+                0.5150603652000427
+              ],
+              [
+                "04403_Animalia_Chordata_Aves_Pelecaniformes_Threskiornithidae_Platalea_alba",
+                0.07014409452676773
+              ],
+              [
+                "04405_Animalia_Chordata_Aves_Pelecaniformes_Threskiornithidae_Platalea_leucorodia",
+                0.07014409452676773
+              ],
+              [
+                "04376_Animalia_Chordata_Aves_Pelecaniformes_Ardeidae_Egretta_rufescens",
+                0.07014409452676773
+              ],
+              [
+                "04360_Animalia_Chordata_Aves_Pelecaniformes_Ardeidae_Ardea_intermedia",
+                0.05161556601524353
+              ]
+            ],
+            "independentSoftmaxMaxError": 1.0268443950689488e-07,
+            "filenameClassId": "04405",
+            "top1MatchesFilename": false,
+            "top5ContainsFilename": true
+          },
+          {
+            "input": "04593_3d74d5a7-15b1-4bb9-af6f-1bcd78485787.jpg",
+            "top5": [
+              [
+                "04593_Animalia_Chordata_Aves_Trogoniformes_Trogonidae_Trogon_elegans",
+                0.9574031233787537
+              ],
+              [
+                "04592_Animalia_Chordata_Aves_Trogoniformes_Trogonidae_Trogon_collaris",
+                0.024130774661898613
+              ],
+              [
+                "04590_Animalia_Chordata_Aves_Trogoniformes_Trogonidae_Trogon_caligatus",
+                0.01120844017714262
+              ],
+              [
+                "04591_Animalia_Chordata_Aves_Trogoniformes_Trogonidae_Trogon_citreolus",
+                0.0032862776424735785
+              ],
+              [
+                "04594_Animalia_Chordata_Aves_Trogoniformes_Trogonidae_Trogon_massena",
+                0.0009635249152779579
+              ]
+            ],
+            "independentSoftmaxMaxError": 5.3828477564188404e-08,
+            "filenameClassId": "04593",
+            "top1MatchesFilename": true,
+            "top5ContainsFilename": true
+          }
+        ],
+        "originalSourceUnchanged": true,
+        "independentProcesses": 2,
+        "repeatImagesExact": true,
+        "labelCount": 1486,
+        "labelSha256": "c39ee878a82b8dd45d69725c9d504a046effdeb01f6d05ac5c6a22c70506ddd4",
+        "qualityAccepted": false
+      }
+    },
+    {
+      "label": "bird-l",
+      "observation": "输入384×384，整图分类。七张官方样图，两次独立启动的输入张量、输出张量及结果图一致。7个分类结果中，Top-1与样图文件名类别编号一致4个，Top-5包含该编号6个。文件名编号仅用于样例对照，不作为独立标注精度评测。",
+      "previews": [
+        {
+          "caption": "l实际输出：样图03111",
+          "path": "/validation/effects/bird-variants-20261005/l/03111_2c0dfa5a-c4a0-47f8-ac89-6a289208050f-top5.png"
+        },
+        {
+          "caption": "l实际输出：样图04251",
+          "path": "/validation/effects/bird-variants-20261005/l/04251_3a52191e-be71-4539-98ea-14a8f2347330-top5.png"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "样图类别编号",
+            "Top-1鸟种",
+            "Softmax分数",
+            "与样图编号比较"
+          ],
+          "rows": [
+            [
+              "03111",
+              "Accipiter_striatus",
+              "0.4748",
+              "不一致"
+            ],
+            [
+              "03332",
+              "Anthracoceros_albirostris",
+              "0.2181",
+              "不一致"
+            ],
+            [
+              "03412",
+              "Larus_californicus",
+              "0.6984",
+              "不一致"
+            ],
+            [
+              "03615",
+              "Ortalis_vetula",
+              "0.6992",
+              "一致"
+            ],
+            [
+              "04251",
+              "Tityra_semifasciata",
+              "0.9137",
+              "一致"
+            ],
+            [
+              "04405",
+              "Platalea_leucorodia",
+              "0.7024",
+              "一致"
+            ],
+            [
+              "04593",
+              "Trogon_elegans",
+              "0.9026",
+              "一致"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "completed": true,
+        "provider": "AXCLRTExecutionProvider",
+        "inferenceEvidence": "original-bird-classification-and-detection",
+        "modelId": "Bird-Species-Classification",
+        "revision": "b81b4cb3be067a85ba730c5b2a67c566d3d9af68",
+        "actualCapacity": "16GB",
+        "sessions": [
+          {
+            "model": "model/bird-l/AX650/bird_650_npu3.axmodel",
+            "sha256": "bfdb20082d3972977699a6fdf1c97100016cdcccbd9591462cc2095e63ad1c04",
+            "allFinite": true,
+            "runMilliseconds": [
+              14.642305000961642,
+              14.616638000006787,
+              11.281124998276937,
+              11.111375000837143,
+              11.037874999601627,
+              11.016582999218372,
+              11.273251000602613,
+              11.108165999758057,
+              11.335667000821559,
+              10.662790000424138,
+              11.002874998666812,
+              11.041958001442254,
+              11.100874999101507,
+              11.13325000005716
+            ]
+          }
+        ],
+        "metadata": [
+          {
+            "weight": "model/bird-l/AX650/bird_650_npu3.axmodel",
+            "inputs": [
+              {
+                "name": "images",
+                "shape": [
+                  1,
+                  3,
+                  384,
+                  384
+                ],
+                "dtype": "uint8"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "classes",
+                "shape": [
+                  1,
+                  1486
+                ],
+                "dtype": "float32"
+              }
+            ]
+          }
+        ],
+        "calls": [
+          {
+            "weight": "model/bird-l/AX650/bird_650_npu3.axmodel",
+            "rawOutputsExact": true,
+            "inputsExact": true,
+            "rawSha256": "1327d08ee5c124291a5e6a6b73bb9100b64fe1f2e590c967d625bd98e0773631",
+            "runMilliseconds": [
+              14.642305000961642,
+              14.616638000006787
+            ]
+          },
+          {
+            "weight": "model/bird-l/AX650/bird_650_npu3.axmodel",
+            "rawOutputsExact": true,
+            "inputsExact": true,
+            "rawSha256": "a66548db067642373afa029d95e1227f37ba0fb7b9aee5dfedf059a33e8baad6",
+            "runMilliseconds": [
+              11.281124998276937,
+              11.111375000837143
+            ]
+          },
+          {
+            "weight": "model/bird-l/AX650/bird_650_npu3.axmodel",
+            "rawOutputsExact": true,
+            "inputsExact": true,
+            "rawSha256": "e9b74feff3eac064f601f748eb9b519727c5273b7ce14bb15e21ca14490338b7",
+            "runMilliseconds": [
+              11.037874999601627,
+              11.016582999218372
+            ]
+          },
+          {
+            "weight": "model/bird-l/AX650/bird_650_npu3.axmodel",
+            "rawOutputsExact": true,
+            "inputsExact": true,
+            "rawSha256": "1643e3f6c15082ea7f67e97c25eadbb1e768af953d8cd3bd86848c1f50ac5294",
+            "runMilliseconds": [
+              11.273251000602613,
+              11.108165999758057
+            ]
+          },
+          {
+            "weight": "model/bird-l/AX650/bird_650_npu3.axmodel",
+            "rawOutputsExact": true,
+            "inputsExact": true,
+            "rawSha256": "d65a62d697f888824116676c8f8e34956557455223b6fadc7f9b9ab94fbab1cc",
+            "runMilliseconds": [
+              11.335667000821559,
+              10.662790000424138
+            ]
+          },
+          {
+            "weight": "model/bird-l/AX650/bird_650_npu3.axmodel",
+            "rawOutputsExact": true,
+            "inputsExact": true,
+            "rawSha256": "7599005bcd1b1b3b40671aaa9cbd2a4b8007932c6865f6f2cf887c95034ded2b",
+            "runMilliseconds": [
+              11.002874998666812,
+              11.041958001442254
+            ]
+          },
+          {
+            "weight": "model/bird-l/AX650/bird_650_npu3.axmodel",
+            "rawOutputsExact": true,
+            "inputsExact": true,
+            "rawSha256": "87546bcafa29ddd4d7b6921508d63fdaa1b2919465cdede1d758cb72accbbc5a",
+            "runMilliseconds": [
+              11.100874999101507,
+              11.13325000005716
+            ]
+          }
+        ],
+        "sampleResults": [
+          {
+            "input": "03111_2c0dfa5a-c4a0-47f8-ac89-6a289208050f.jpg",
+            "top5": [
+              [
+                "03115_Animalia_Chordata_Aves_Accipitriformes_Accipitridae_Accipiter_striatus",
+                0.47478780150413513
+              ],
+              [
+                "03112_Animalia_Chordata_Aves_Accipitriformes_Accipitridae_Accipiter_cooperii",
+                0.15273742377758026
+              ],
+              [
+                "03114_Animalia_Chordata_Aves_Accipitriformes_Accipitridae_Accipiter_nisus",
+                0.06909699738025665
+              ],
+              [
+                "04165_Animalia_Chordata_Aves_Passeriformes_Ptilonorhynchidae_Ptilonorhynchus_violaceus",
+                0.03055826760828495
+              ],
+              [
+                "03600_Animalia_Chordata_Aves_Falconiformes_Falconidae_Falco_novaeseelandiae",
+                0.020644837990403175
+              ]
+            ],
+            "independentSoftmaxMaxError": 1.3188045433487616e-08,
+            "filenameClassId": "03111",
+            "top1MatchesFilename": false,
+            "top5ContainsFilename": false
+          },
+          {
+            "input": "03332_01b365c3-a741-4f45-bac2-4345bc901ec6.jpg",
+            "top5": [
+              [
+                "03279_Animalia_Chordata_Aves_Bucerotiformes_Bucerotidae_Anthracoceros_albirostris",
+                0.21810947358608246
+              ],
+              [
+                "03332_Animalia_Chordata_Aves_Cathartiformes_Cathartidae_Cathartes_burrovianus",
+                0.15433655679225922
+              ],
+              [
+                "04401_Animalia_Chordata_Aves_Pelecaniformes_Threskiornithidae_Phimosus_infuscatus",
+                0.054683227092027664
+              ],
+              [
+                "04472_Animalia_Chordata_Aves_Piciformes_Ramphastidae_Ramphastos_toco",
+                0.019355840981006622
+              ],
+              [
+                "04565_Animalia_Chordata_Aves_Suliformes_Anhingidae_Anhinga_melanogaster",
+                0.018644463270902634
+              ]
+            ],
+            "independentSoftmaxMaxError": 5.120144974668506e-09,
+            "filenameClassId": "03332",
+            "top1MatchesFilename": false,
+            "top5ContainsFilename": true
+          },
+          {
+            "input": "03412_0ffc115b-43b4-4474-a373-24233f391de3.jpg",
+            "top5": [
+              [
+                "03411_Animalia_Chordata_Aves_Charadriiformes_Laridae_Larus_californicus",
+                0.6983667612075806
+              ],
+              [
+                "03412_Animalia_Chordata_Aves_Charadriiformes_Laridae_Larus_canus",
+                0.15834854543209076
+              ],
+              [
+                "03409_Animalia_Chordata_Aves_Charadriiformes_Laridae_Larus_argentatus",
+                0.03253508731722832
+              ],
+              [
+                "03414_Animalia_Chordata_Aves_Charadriiformes_Laridae_Larus_delawarensis",
+                0.018444260582327843
+              ],
+              [
+                "03413_Animalia_Chordata_Aves_Charadriiformes_Laridae_Larus_crassirostris",
+                0.012399481609463692
+              ]
+            ],
+            "independentSoftmaxMaxError": 7.731369922048259e-08,
+            "filenameClassId": "03412",
+            "top1MatchesFilename": false,
+            "top5ContainsFilename": true
+          },
+          {
+            "input": "03615_0dfbf6ae-434d-4648-b5d2-08412546ea64.jpg",
+            "top5": [
+              [
+                "03615_Animalia_Chordata_Aves_Galliformes_Cracidae_Ortalis_vetula",
+                0.6992102265357971
+              ],
+              [
+                "03613_Animalia_Chordata_Aves_Galliformes_Cracidae_Ortalis_cinereiceps",
+                0.058661457151174545
+              ],
+              [
+                "03614_Animalia_Chordata_Aves_Galliformes_Cracidae_Ortalis_poliocephala",
+                0.018759988248348236
+              ],
+              [
+                "03939_Animalia_Chordata_Aves_Passeriformes_Menuridae_Menura_novaehollandiae",
+                0.01575753092765808
+              ],
+              [
+                "03926_Animalia_Chordata_Aves_Passeriformes_Meliphagidae_Anthornis_melanura",
+                0.005425792187452316
+              ]
+            ],
+            "independentSoftmaxMaxError": 7.768611531844272e-09,
+            "filenameClassId": "03615",
+            "top1MatchesFilename": true,
+            "top5ContainsFilename": true
+          },
+          {
+            "input": "04251_3a52191e-be71-4539-98ea-14a8f2347330.jpg",
+            "top5": [
+              [
+                "04251_Animalia_Chordata_Aves_Passeriformes_Tityridae_Tityra_semifasciata",
+                0.9136532545089722
+              ],
+              [
+                "04019_Animalia_Chordata_Aves_Passeriformes_Oriolidae_Sphecotheres_vieilloti",
+                0.0022451081313192844
+              ],
+              [
+                "03233_Animalia_Chordata_Aves_Anseriformes_Anatidae_Cairina_moschata",
+                0.0006467786151915789
+              ],
+              [
+                "03912_Animalia_Chordata_Aves_Passeriformes_Laniidae_Lanius_minor",
+                0.0004522887757048011
+              ],
+              [
+                "04219_Animalia_Chordata_Aves_Passeriformes_Thraupidae_Paroaria_capitata",
+                0.0004412834532558918
+              ]
+            ],
+            "independentSoftmaxMaxError": 2.443720096279023e-07,
+            "filenameClassId": "04251",
+            "top1MatchesFilename": true,
+            "top5ContainsFilename": true
+          },
+          {
+            "input": "04405_0c5a6785-0bc2-49d9-9702-b9e94ba9b686.jpg",
+            "top5": [
+              [
+                "04405_Animalia_Chordata_Aves_Pelecaniformes_Threskiornithidae_Platalea_leucorodia",
+                0.7024034261703491
+              ],
+              [
+                "04404_Animalia_Chordata_Aves_Pelecaniformes_Threskiornithidae_Platalea_flavipes",
+                0.05875539779663086
+              ],
+              [
+                "04403_Animalia_Chordata_Aves_Pelecaniformes_Threskiornithidae_Platalea_alba",
+                0.04354678466916084
+              ],
+              [
+                "04408_Animalia_Chordata_Aves_Pelecaniformes_Threskiornithidae_Plegadis_chihi",
+                0.007253423798829317
+              ],
+              [
+                "04409_Animalia_Chordata_Aves_Pelecaniformes_Threskiornithidae_Plegadis_falcinellus",
+                0.005323181394487619
+              ]
+            ],
+            "independentSoftmaxMaxError": 1.656918358072801e-08,
+            "filenameClassId": "04405",
+            "top1MatchesFilename": true,
+            "top5ContainsFilename": true
+          },
+          {
+            "input": "04593_3d74d5a7-15b1-4bb9-af6f-1bcd78485787.jpg",
+            "top5": [
+              [
+                "04593_Animalia_Chordata_Aves_Trogoniformes_Trogonidae_Trogon_elegans",
+                0.9026405811309814
+              ],
+              [
+                "04592_Animalia_Chordata_Aves_Trogoniformes_Trogonidae_Trogon_collaris",
+                0.03392291069030762
+              ],
+              [
+                "04591_Animalia_Chordata_Aves_Trogoniformes_Trogonidae_Trogon_citreolus",
+                0.00137132010422647
+              ],
+              [
+                "04590_Animalia_Chordata_Aves_Trogoniformes_Trogonidae_Trogon_caligatus",
+                0.0010814506094902754
+              ],
+              [
+                "04594_Animalia_Chordata_Aves_Trogoniformes_Trogonidae_Trogon_massena",
+                0.0010750750079751015
+              ]
+            ],
+            "independentSoftmaxMaxError": 8.913741522675878e-09,
+            "filenameClassId": "04593",
+            "top1MatchesFilename": true,
+            "top5ContainsFilename": true
+          }
+        ],
+        "originalSourceUnchanged": true,
+        "independentProcesses": 2,
+        "repeatImagesExact": true,
+        "labelCount": 1486,
+        "labelSha256": "c39ee878a82b8dd45d69725c9d504a046effdeb01f6d05ac5c6a22c70506ddd4",
+        "qualityAccepted": false
+      }
+    },
+    {
+      "label": "检测与识别完整链路",
+      "observation": "七张官方样图各检测一次，再将检测框外扩30%并裁剪后识别，共产生20个分类结果。两次独立启动的输入、输出张量及结果图一致。04405群鸟图检测到14只鸟，包含不同鸟种；文件名编号不能作为每个裁剪的真实类别，尚需逐框标注验证。03111遮挡样图的检测分数约0.30，不能仅凭框出现判定定位和识别质量。",
+      "previews": [
+        {
+          "caption": "end2end实际输出：样图03111",
+          "path": "/validation/effects/bird-variants-20261005/end2end/03111_2c0dfa5a-c4a0-47f8-ac89-6a289208050f.jpg"
+        },
+        {
+          "caption": "end2end实际输出：样图04251",
+          "path": "/validation/effects/bird-variants-20261005/end2end/04251_3a52191e-be71-4539-98ea-14a8f2347330.jpg"
+        },
+        {
+          "caption": "end2end实际输出：样图04405",
+          "path": "/validation/effects/bird-variants-20261005/end2end/04405_0c5a6785-0bc2-49d9-9702-b9e94ba9b686.jpg"
+        },
+        {
+          "caption": "04251检测框外扩30%后的实际识别输入",
+          "path": "/validation/effects/bird-variants-20261005/end2end/crop-04251.jpg"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "样图类别编号",
+            "Top-1鸟种",
+            "Softmax分数",
+            "与样图编号比较"
+          ],
+          "rows": [
+            [
+              "03111",
+              "Accipiter_badius",
+              "0.3658",
+              "需逐框标注"
+            ],
+            [
+              "03332",
+              "Ramphastos_toco",
+              "0.2592",
+              "需逐框标注"
+            ],
+            [
+              "03412",
+              "Larus_glaucoides",
+              "0.6481",
+              "需逐框标注"
+            ],
+            [
+              "03615",
+              "Ortalis_vetula",
+              "0.7692",
+              "需逐框标注"
+            ],
+            [
+              "04251",
+              "Tityra_semifasciata",
+              "0.9083",
+              "需逐框标注"
+            ],
+            [
+              "04405",
+              "Recurvirostra_americana",
+              "0.2611",
+              "需逐框标注"
+            ],
+            [
+              "04405",
+              "Mareca_penelope",
+              "0.3419",
+              "需逐框标注"
+            ],
+            [
+              "04405",
+              "Calidris_pugnax",
+              "0.2006",
+              "需逐框标注"
+            ],
+            [
+              "04405",
+              "Calidris_melanotos",
+              "0.1053",
+              "需逐框标注"
+            ],
+            [
+              "04405",
+              "Columba_livia",
+              "0.3250",
+              "需逐框标注"
+            ],
+            [
+              "04405",
+              "Columba_livia",
+              "0.6173",
+              "需逐框标注"
+            ],
+            [
+              "04405",
+              "Threskiornis_molucca",
+              "0.1427",
+              "需逐框标注"
+            ],
+            [
+              "04405",
+              "Limosa_haemastica",
+              "0.1052",
+              "需逐框标注"
+            ],
+            [
+              "04405",
+              "Fulica_ardesiaca",
+              "0.1381",
+              "需逐框标注"
+            ],
+            [
+              "04405",
+              "Fulica_cristata",
+              "0.3322",
+              "需逐框标注"
+            ],
+            [
+              "04405",
+              "Eudocimus_albus",
+              "0.3739",
+              "需逐框标注"
+            ],
+            [
+              "04405",
+              "Platalea_ajaja",
+              "0.1665",
+              "需逐框标注"
+            ],
+            [
+              "04405",
+              "Platalea_leucorodia",
+              "0.5067",
+              "需逐框标注"
+            ],
+            [
+              "04405",
+              "Platalea_flavipes",
+              "0.3971",
+              "需逐框标注"
+            ],
+            [
+              "04593",
+              "Trogon_elegans",
+              "0.9438",
+              "需逐框标注"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "completed": true,
+        "provider": "AXCLRTExecutionProvider",
+        "inferenceEvidence": "original-bird-classification-and-detection",
+        "modelId": "Bird-Species-Classification",
+        "revision": "b81b4cb3be067a85ba730c5b2a67c566d3d9af68",
+        "actualCapacity": "16GB",
+        "sessions": [
+          {
+            "model": "model/bird-end2end/AX650/bird_det_650_npu1.axmodel",
+            "sha256": "33dba33991e259e974e97d24689bfc5fc6469ffcc3d3eb97890e2d50b5a8de8a",
+            "allFinite": true,
+            "runMilliseconds": [
+              12.66742200095905,
+              13.009840999075095,
+              8.834325000862009,
+              9.034118000272429,
+              9.028575999764143,
+              9.134158999586361,
+              9.235659999831114,
+              8.877492000465281,
+              9.247910000340198,
+              9.158075999948778,
+              9.353494000606588,
+              8.506198999384651,
+              8.889740998711204,
+              9.215243000653572
+            ]
+          },
+          {
+            "model": "model/bird-end2end/AX650/bird_rec_650_npu1.axmodel",
+            "sha256": "5a32ad4d86f141602734d8ea19e81c8ae3b8d5bd636cf1382c2320ac2fa54bed",
+            "allFinite": true,
+            "runMilliseconds": [
+              8.803116001217859,
+              9.139993000644608,
+              9.328702000857447,
+              9.178784999676282,
+              9.307409998655203,
+              9.07495100000233,
+              9.27357600085088,
+              9.0839929998765,
+              9.241493000445189,
+              8.964409000327578,
+              9.292826998716919,
+              9.202701001413516,
+              9.350284999527503,
+              9.141742999418057,
+              9.362535000036587,
+              8.96061700041173,
+              9.2753270000685,
+              9.107616999244783,
+              9.38557700101228,
+              9.161576999758836,
+              9.281450998969376,
+              9.076117999939015,
+              9.161866999420454,
+              9.087493001061375,
+              9.195992999593727,
+              9.19395200071449,
+              9.271827000702615,
+              9.078159999262425,
+              9.104409999054042,
+              9.125992999543087,
+              9.320242999820039,
+              9.155159999863827,
+              9.093033999306499,
+              9.053658999619074,
+              9.134451000136323,
+              9.182867999697919,
+              9.184618000290357,
+              9.18520200139028,
+              9.26424299905193,
+              9.13853400015796
+            ]
+          }
+        ],
+        "metadata": [
+          {
+            "weight": "model/bird-end2end/AX650/bird_det_650_npu1.axmodel",
+            "inputs": [
+              {
+                "name": "images",
+                "shape": [
+                  1,
+                  3,
+                  480,
+                  480
+                ],
+                "dtype": "uint8"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "output0",
+                "shape": [
+                  1,
+                  18,
+                  60,
+                  60
+                ],
+                "dtype": "float32"
+              },
+              {
+                "name": "273",
+                "shape": [
+                  1,
+                  18,
+                  30,
+                  30
+                ],
+                "dtype": "float32"
+              },
+              {
+                "name": "274",
+                "shape": [
+                  1,
+                  18,
+                  15,
+                  15
+                ],
+                "dtype": "float32"
+              }
+            ]
+          },
+          {
+            "weight": "model/bird-end2end/AX650/bird_rec_650_npu1.axmodel",
+            "inputs": [
+              {
+                "name": "images",
+                "shape": [
+                  1,
+                  3,
+                  224,
+                  224
+                ],
+                "dtype": "uint8"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "classes",
+                "shape": [
+                  1,
+                  1486
+                ],
+                "dtype": "float32"
+              }
+            ]
+          }
+        ],
+        "calls": [
+          {
+            "weight": "model/bird-end2end/AX650/bird_det_650_npu1.axmodel",
+            "rawOutputsExact": true,
+            "inputsExact": true,
+            "rawSha256": "32f295bcbf695a84268d1f021bc3171e12d1a1e1c36fabe43e757ced65502cc3",
+            "runMilliseconds": [
+              12.66742200095905,
+              13.009840999075095
+            ]
+          },
+          {
+            "weight": "model/bird-end2end/AX650/bird_rec_650_npu1.axmodel",
+            "rawOutputsExact": true,
+            "inputsExact": true,
+            "rawSha256": "d5b9f9d9e3ed74890dad8aa6273e3126280b8bf40521d43a03155a39580d17c1",
+            "runMilliseconds": [
+              8.803116001217859,
+              9.139993000644608
+            ]
+          },
+          {
+            "weight": "model/bird-end2end/AX650/bird_det_650_npu1.axmodel",
+            "rawOutputsExact": true,
+            "inputsExact": true,
+            "rawSha256": "ca9ed186f1644fb40b4e351c1595b3eeb75d548bbd887e34cb8f59e970dabe69",
+            "runMilliseconds": [
+              8.834325000862009,
+              9.034118000272429
+            ]
+          },
+          {
+            "weight": "model/bird-end2end/AX650/bird_rec_650_npu1.axmodel",
+            "rawOutputsExact": true,
+            "inputsExact": true,
+            "rawSha256": "8fad9f8dc13d2ea540ae580868e07c81809ced41d72ec468d18ef52c95d0ab54",
+            "runMilliseconds": [
+              9.328702000857447,
+              9.178784999676282
+            ]
+          },
+          {
+            "weight": "model/bird-end2end/AX650/bird_det_650_npu1.axmodel",
+            "rawOutputsExact": true,
+            "inputsExact": true,
+            "rawSha256": "fbb99ab1a8393610d3aad6c0b6f9afd9c0e65b51d58072e5347bc00dc8a5f0e4",
+            "runMilliseconds": [
+              9.028575999764143,
+              9.134158999586361
+            ]
+          },
+          {
+            "weight": "model/bird-end2end/AX650/bird_rec_650_npu1.axmodel",
+            "rawOutputsExact": true,
+            "inputsExact": true,
+            "rawSha256": "d31b9da8e94aad5aec8c886dc4a590bb85a9aa47de45e078e9be8e4e295942f3",
+            "runMilliseconds": [
+              9.307409998655203,
+              9.07495100000233
+            ]
+          },
+          {
+            "weight": "model/bird-end2end/AX650/bird_det_650_npu1.axmodel",
+            "rawOutputsExact": true,
+            "inputsExact": true,
+            "rawSha256": "63cd763519737d614ddfdad86bac84e16f617825fdae218dcf4ff011b85715fb",
+            "runMilliseconds": [
+              9.235659999831114,
+              8.877492000465281
+            ]
+          },
+          {
+            "weight": "model/bird-end2end/AX650/bird_rec_650_npu1.axmodel",
+            "rawOutputsExact": true,
+            "inputsExact": true,
+            "rawSha256": "63e2bd89a3b62778a096f7b0ac85f19ef86948632b579d82716310fbe9ba7f1b",
+            "runMilliseconds": [
+              9.27357600085088,
+              9.0839929998765
+            ]
+          },
+          {
+            "weight": "model/bird-end2end/AX650/bird_det_650_npu1.axmodel",
+            "rawOutputsExact": true,
+            "inputsExact": true,
+            "rawSha256": "369048aee434ffcb97cdfdc366b5db016ebe07d86630414ae6dda2622860a6f4",
+            "runMilliseconds": [
+              9.247910000340198,
+              9.158075999948778
+            ]
+          },
+          {
+            "weight": "model/bird-end2end/AX650/bird_rec_650_npu1.axmodel",
+            "rawOutputsExact": true,
+            "inputsExact": true,
+            "rawSha256": "e4677791897d022c8c94b6a9aa086d65d625bab5f2bf0760882042a50569740e",
+            "runMilliseconds": [
+              9.241493000445189,
+              8.964409000327578
+            ]
+          },
+          {
+            "weight": "model/bird-end2end/AX650/bird_det_650_npu1.axmodel",
+            "rawOutputsExact": true,
+            "inputsExact": true,
+            "rawSha256": "666a53898da23a9c6bf9c78c4eb5c37fcf5764369222130ca785d2445de0fada",
+            "runMilliseconds": [
+              9.353494000606588,
+              8.506198999384651
+            ]
+          },
+          {
+            "weight": "model/bird-end2end/AX650/bird_rec_650_npu1.axmodel",
+            "rawOutputsExact": true,
+            "inputsExact": true,
+            "rawSha256": "6301229b8b13ae0f15f24708a96ad02a384e2a1f646ed8478a5cddfea0c4d1b9",
+            "runMilliseconds": [
+              9.292826998716919,
+              9.202701001413516
+            ]
+          },
+          {
+            "weight": "model/bird-end2end/AX650/bird_rec_650_npu1.axmodel",
+            "rawOutputsExact": true,
+            "inputsExact": true,
+            "rawSha256": "4426257c4e3e82081076fb2ce975d0cbcf01820b81a297f4cf0cc30b523c5d81",
+            "runMilliseconds": [
+              9.350284999527503,
+              9.141742999418057
+            ]
+          },
+          {
+            "weight": "model/bird-end2end/AX650/bird_rec_650_npu1.axmodel",
+            "rawOutputsExact": true,
+            "inputsExact": true,
+            "rawSha256": "832cf06e467158ab72289ce23d8858c899fa63d3491914e6772264952a2d6a37",
+            "runMilliseconds": [
+              9.362535000036587,
+              8.96061700041173
+            ]
+          },
+          {
+            "weight": "model/bird-end2end/AX650/bird_rec_650_npu1.axmodel",
+            "rawOutputsExact": true,
+            "inputsExact": true,
+            "rawSha256": "8345082a9975683cd3546f6d0e79ad54523e28ac8b86011394d938bc21606ef6",
+            "runMilliseconds": [
+              9.2753270000685,
+              9.107616999244783
+            ]
+          },
+          {
+            "weight": "model/bird-end2end/AX650/bird_rec_650_npu1.axmodel",
+            "rawOutputsExact": true,
+            "inputsExact": true,
+            "rawSha256": "dab391571f85e429d73f28ef98df9915a4e9b79982cf9eaee218fc0c1cf5a7fe",
+            "runMilliseconds": [
+              9.38557700101228,
+              9.161576999758836
+            ]
+          },
+          {
+            "weight": "model/bird-end2end/AX650/bird_rec_650_npu1.axmodel",
+            "rawOutputsExact": true,
+            "inputsExact": true,
+            "rawSha256": "affc805456376982f17c6be26895a03362d976a3b7aaa9c445622c13830a15a0",
+            "runMilliseconds": [
+              9.281450998969376,
+              9.076117999939015
+            ]
+          },
+          {
+            "weight": "model/bird-end2end/AX650/bird_rec_650_npu1.axmodel",
+            "rawOutputsExact": true,
+            "inputsExact": true,
+            "rawSha256": "e57071aec37b05b69986e1c6cf18ccc4994a9dd9e01119f8e4f5d245e9c634b4",
+            "runMilliseconds": [
+              9.161866999420454,
+              9.087493001061375
+            ]
+          },
+          {
+            "weight": "model/bird-end2end/AX650/bird_rec_650_npu1.axmodel",
+            "rawOutputsExact": true,
+            "inputsExact": true,
+            "rawSha256": "361f3b3efe6fb2ca2c9ff2741ea1a1f4875bc6da62a3fb8ec68b40d2c049fb1d",
+            "runMilliseconds": [
+              9.195992999593727,
+              9.19395200071449
+            ]
+          },
+          {
+            "weight": "model/bird-end2end/AX650/bird_rec_650_npu1.axmodel",
+            "rawOutputsExact": true,
+            "inputsExact": true,
+            "rawSha256": "21eaa450897952217d25f31b1098d02b399665342e3d518c8a8b2f65c407f5d0",
+            "runMilliseconds": [
+              9.271827000702615,
+              9.078159999262425
+            ]
+          },
+          {
+            "weight": "model/bird-end2end/AX650/bird_rec_650_npu1.axmodel",
+            "rawOutputsExact": true,
+            "inputsExact": true,
+            "rawSha256": "4be21642e30d0dde305a658d86a615193c5a161f345f0e2376eaf9b3453951ae",
+            "runMilliseconds": [
+              9.104409999054042,
+              9.125992999543087
+            ]
+          },
+          {
+            "weight": "model/bird-end2end/AX650/bird_rec_650_npu1.axmodel",
+            "rawOutputsExact": true,
+            "inputsExact": true,
+            "rawSha256": "6703ce26965d121ac319f6204cfe612f26b4beea8df0d80b3fda25fa0d3227a0",
+            "runMilliseconds": [
+              9.320242999820039,
+              9.155159999863827
+            ]
+          },
+          {
+            "weight": "model/bird-end2end/AX650/bird_rec_650_npu1.axmodel",
+            "rawOutputsExact": true,
+            "inputsExact": true,
+            "rawSha256": "46a255de90d922fc762cf33cd90786ed37f6db7c9ff69711ce8913e44487f573",
+            "runMilliseconds": [
+              9.093033999306499,
+              9.053658999619074
+            ]
+          },
+          {
+            "weight": "model/bird-end2end/AX650/bird_rec_650_npu1.axmodel",
+            "rawOutputsExact": true,
+            "inputsExact": true,
+            "rawSha256": "39bdb2f1624815b0b8e84a95edf7542c2c2590596fef9c2d4d5d918d7c4d1ea9",
+            "runMilliseconds": [
+              9.134451000136323,
+              9.182867999697919
+            ]
+          },
+          {
+            "weight": "model/bird-end2end/AX650/bird_rec_650_npu1.axmodel",
+            "rawOutputsExact": true,
+            "inputsExact": true,
+            "rawSha256": "58d47f7e0f5c86a11bd14516637ebdd1d6a4a8dfb12ebe05051ea273132a7fb0",
+            "runMilliseconds": [
+              9.184618000290357,
+              9.18520200139028
+            ]
+          },
+          {
+            "weight": "model/bird-end2end/AX650/bird_det_650_npu1.axmodel",
+            "rawOutputsExact": true,
+            "inputsExact": true,
+            "rawSha256": "3c9ad5bda0f2296df1852298806dbdef85edabd9716cb7792763c62e9dac412d",
+            "runMilliseconds": [
+              8.889740998711204,
+              9.215243000653572
+            ]
+          },
+          {
+            "weight": "model/bird-end2end/AX650/bird_rec_650_npu1.axmodel",
+            "rawOutputsExact": true,
+            "inputsExact": true,
+            "rawSha256": "06f3e394a4ee56844c4529db08982a14880fac7899cd1286ab02dd3cad0e690f",
+            "runMilliseconds": [
+              9.26424299905193,
+              9.13853400015796
+            ]
+          }
+        ],
+        "sampleResults": [
+          {
+            "input": "03111_2c0dfa5a-c4a0-47f8-ac89-6a289208050f.jpg",
+            "top5": [
+              [
+                "03111_Animalia_Chordata_Aves_Accipitriformes_Accipitridae_Accipiter_badius",
+                0.3657992482185364
+              ],
+              [
+                "03114_Animalia_Chordata_Aves_Accipitriformes_Accipitridae_Accipiter_nisus",
+                0.1362997144460678
+              ],
+              [
+                "03182_Animalia_Chordata_Aves_Accipitriformes_Accipitridae_Rupornis_magnirostris",
+                0.06448088586330414
+              ],
+              [
+                "03115_Animalia_Chordata_Aves_Accipitriformes_Accipitridae_Accipiter_striatus",
+                0.0514933317899704
+              ],
+              [
+                "03112_Animalia_Chordata_Aves_Accipitriformes_Accipitridae_Accipiter_cooperii",
+                0.03688361495733261
+              ]
+            ],
+            "independentSoftmaxMaxError": 3.8163244675537555e-08,
+            "filenameClassId": "03111",
+            "top1MatchesFilename": true,
+            "top5ContainsFilename": true
+          },
+          {
+            "input": "03332_01b365c3-a741-4f45-bac2-4345bc901ec6.jpg",
+            "top5": [
+              [
+                "04472_Animalia_Chordata_Aves_Piciformes_Ramphastidae_Ramphastos_toco",
+                0.2591824531555176
+              ],
+              [
+                "03332_Animalia_Chordata_Aves_Cathartiformes_Cathartidae_Cathartes_burrovianus",
+                0.1896248310804367
+              ],
+              [
+                "03279_Animalia_Chordata_Aves_Bucerotiformes_Bucerotidae_Anthracoceros_albirostris",
+                0.1446104794740677
+              ],
+              [
+                "03592_Animalia_Chordata_Aves_Falconiformes_Falconidae_Caracara_cheriway",
+                0.034142252057790756
+              ],
+              [
+                "03765_Animalia_Chordata_Aves_Passeriformes_Corvidae_Cyanocorax_yucatanicus",
+                0.027952544391155243
+              ]
+            ],
+            "independentSoftmaxMaxError": 5.326456803400603e-09,
+            "filenameClassId": "03332",
+            "top1MatchesFilename": false,
+            "top5ContainsFilename": true
+          },
+          {
+            "input": "03412_0ffc115b-43b4-4474-a373-24233f391de3.jpg",
+            "top5": [
+              [
+                "03418_Animalia_Chordata_Aves_Charadriiformes_Laridae_Larus_glaucoides",
+                0.648081362247467
+              ],
+              [
+                "03412_Animalia_Chordata_Aves_Charadriiformes_Laridae_Larus_canus",
+                0.1257336288690567
+              ],
+              [
+                "03411_Animalia_Chordata_Aves_Charadriiformes_Laridae_Larus_californicus",
+                0.02911628969013691
+              ],
+              [
+                "03420_Animalia_Chordata_Aves_Charadriiformes_Laridae_Larus_hyperboreus",
+                0.009413201361894608
+              ],
+              [
+                "03409_Animalia_Chordata_Aves_Charadriiformes_Laridae_Larus_argentatus",
+                0.005194310564547777
+              ]
+            ],
+            "independentSoftmaxMaxError": 3.166364936912913e-08,
+            "filenameClassId": "03412",
+            "top1MatchesFilename": false,
+            "top5ContainsFilename": true
+          },
+          {
+            "input": "03615_0dfbf6ae-434d-4648-b5d2-08412546ea64.jpg",
+            "top5": [
+              [
+                "03615_Animalia_Chordata_Aves_Galliformes_Cracidae_Ortalis_vetula",
+                0.7692326903343201
+              ],
+              [
+                "03613_Animalia_Chordata_Aves_Galliformes_Cracidae_Ortalis_cinereiceps",
+                0.13497203588485718
+              ],
+              [
+                "03939_Animalia_Chordata_Aves_Passeriformes_Menuridae_Menura_novaehollandiae",
+                0.024324258789420128
+              ],
+              [
+                "03617_Animalia_Chordata_Aves_Galliformes_Cracidae_Penelope_obscura",
+                0.0035429121926426888
+              ],
+              [
+                "03614_Animalia_Chordata_Aves_Galliformes_Cracidae_Ortalis_poliocephala",
+                0.0021437963005155325
+              ]
+            ],
+            "independentSoftmaxMaxError": 2.9816397129067695e-08,
+            "filenameClassId": "03615",
+            "top1MatchesFilename": true,
+            "top5ContainsFilename": true
+          },
+          {
+            "input": "04251_3a52191e-be71-4539-98ea-14a8f2347330.jpg",
+            "top5": [
+              [
+                "04251_Animalia_Chordata_Aves_Passeriformes_Tityridae_Tityra_semifasciata",
+                0.9082944393157959
+              ],
+              [
+                "03696_Animalia_Chordata_Aves_Passeriformes_Artamidae_Artamus_leucorynchus",
+                0.0018014913657680154
+              ],
+              [
+                "04019_Animalia_Chordata_Aves_Passeriformes_Oriolidae_Sphecotheres_vieilloti",
+                0.001382735325023532
+              ],
+              [
+                "04219_Animalia_Chordata_Aves_Passeriformes_Thraupidae_Paroaria_capitata",
+                0.000831304001621902
+              ],
+              [
+                "04422_Animalia_Chordata_Aves_Piciformes_Megalaimidae_Psilopogon_haemacephalus",
+                0.000809376360848546
+              ]
+            ],
+            "independentSoftmaxMaxError": 1.0985049470058073e-07,
+            "filenameClassId": "04251",
+            "top1MatchesFilename": true,
+            "top5ContainsFilename": true
+          },
+          {
+            "input": "04405_0c5a6785-0bc2-49d9-9702-b9e94ba9b686.jpg",
+            "top5": [
+              [
+                "03444_Animalia_Chordata_Aves_Charadriiformes_Recurvirostridae_Recurvirostra_americana",
+                0.2610819637775421
+              ],
+              [
+                "03484_Animalia_Chordata_Aves_Charadriiformes_Scolopacidae_Phalaropus_lobatus",
+                0.17451587319374084
+              ],
+              [
+                "03465_Animalia_Chordata_Aves_Charadriiformes_Scolopacidae_Calidris_pugnax",
+                0.1358146220445633
+              ],
+              [
+                "03462_Animalia_Chordata_Aves_Charadriiformes_Scolopacidae_Calidris_melanotos",
+                0.10328803211450577
+              ],
+              [
+                "03452_Animalia_Chordata_Aves_Charadriiformes_Scolopacidae_Calidris_acuminata",
+                0.020906733348965645
+              ]
+            ],
+            "independentSoftmaxMaxError": 7.293207426872783e-09,
+            "filenameClassId": "04405",
+            "top1MatchesFilename": false,
+            "top5ContainsFilename": false
+          },
+          {
+            "input": "04405_0c5a6785-0bc2-49d9-9702-b9e94ba9b686.jpg",
+            "top5": [
+              [
+                "03254_Animalia_Chordata_Aves_Anseriformes_Anatidae_Mareca_penelope",
+                0.34189242124557495
+              ],
+              [
+                "04399_Animalia_Chordata_Aves_Pelecaniformes_Threskiornithidae_Eudocimus_albus",
+                0.08176826685667038
+              ],
+              [
+                "03213_Animalia_Chordata_Aves_Anseriformes_Anatidae_Anser_indicus",
+                0.0799793004989624
+              ],
+              [
+                "03465_Animalia_Chordata_Aves_Charadriiformes_Scolopacidae_Calidris_pugnax",
+                0.026241250336170197
+              ],
+              [
+                "03202_Animalia_Chordata_Aves_Anseriformes_Anatidae_Anas_poecilorhyncha",
+                0.020917240530252457
+              ]
+            ],
+            "independentSoftmaxMaxError": 2.851965558159364e-08,
+            "filenameClassId": "04405",
+            "top1MatchesFilename": false,
+            "top5ContainsFilename": false
+          },
+          {
+            "input": "04405_0c5a6785-0bc2-49d9-9702-b9e94ba9b686.jpg",
+            "top5": [
+              [
+                "03465_Animalia_Chordata_Aves_Charadriiformes_Scolopacidae_Calidris_pugnax",
+                0.20064353942871094
+              ],
+              [
+                "03459_Animalia_Chordata_Aves_Charadriiformes_Scolopacidae_Calidris_himantopus",
+                0.07857673615217209
+              ],
+              [
+                "03473_Animalia_Chordata_Aves_Charadriiformes_Scolopacidae_Limnodromus_griseus",
+                0.05690888315439224
+              ],
+              [
+                "04483_Animalia_Chordata_Aves_Podicipediformes_Podicipedidae_Tachybaptus_dominicus",
+                0.05680412799119949
+              ],
+              [
+                "03488_Animalia_Chordata_Aves_Charadriiformes_Scolopacidae_Tringa_erythropus",
+                0.03615927696228027
+              ]
+            ],
+            "independentSoftmaxMaxError": 1.6536110564180362e-08,
+            "filenameClassId": "04405",
+            "top1MatchesFilename": false,
+            "top5ContainsFilename": false
+          },
+          {
+            "input": "04405_0c5a6785-0bc2-49d9-9702-b9e94ba9b686.jpg",
+            "top5": [
+              [
+                "03462_Animalia_Chordata_Aves_Charadriiformes_Scolopacidae_Calidris_melanotos",
+                0.10533823817968369
+              ],
+              [
+                "03367_Animalia_Chordata_Aves_Charadriiformes_Charadriidae_Pluvialis_dominica",
+                0.0746215209364891
+              ],
+              [
+                "04408_Animalia_Chordata_Aves_Pelecaniformes_Threskiornithidae_Plegadis_chihi",
+                0.060198888182640076
+              ],
+              [
+                "03476_Animalia_Chordata_Aves_Charadriiformes_Scolopacidae_Limosa_haemastica",
+                0.05310608074069023
+              ],
+              [
+                "03465_Animalia_Chordata_Aves_Charadriiformes_Scolopacidae_Calidris_pugnax",
+                0.04552916809916496
+              ]
+            ],
+            "independentSoftmaxMaxError": 5.331563870947242e-09,
+            "filenameClassId": "04405",
+            "top1MatchesFilename": false,
+            "top5ContainsFilename": false
+          },
+          {
+            "input": "04405_0c5a6785-0bc2-49d9-9702-b9e94ba9b686.jpg",
+            "top5": [
+              [
+                "03514_Animalia_Chordata_Aves_Columbiformes_Columbidae_Columba_livia",
+                0.32501599192619324
+              ],
+              [
+                "03225_Animalia_Chordata_Aves_Anseriformes_Anatidae_Branta_bernicla",
+                0.06920847296714783
+              ],
+              [
+                "03434_Animalia_Chordata_Aves_Charadriiformes_Laridae_Sterna_striata",
+                0.04830949753522873
+              ],
+              [
+                "04515_Animalia_Chordata_Aves_Psittaciformes_Psittacidae_Myiopsitta_monachus",
+                0.0425390861928463
+              ],
+              [
+                "03438_Animalia_Chordata_Aves_Charadriiformes_Laridae_Thalasseus_elegans",
+                0.037700336426496506
+              ]
+            ],
+            "independentSoftmaxMaxError": 7.729232753828086e-09,
+            "filenameClassId": "04405",
+            "top1MatchesFilename": false,
+            "top5ContainsFilename": false
+          },
+          {
+            "input": "04405_0c5a6785-0bc2-49d9-9702-b9e94ba9b686.jpg",
+            "top5": [
+              [
+                "03514_Animalia_Chordata_Aves_Columbiformes_Columbidae_Columba_livia",
+                0.6172908544540405
+              ],
+              [
+                "03225_Animalia_Chordata_Aves_Anseriformes_Anatidae_Branta_bernicla",
+                0.047160979360342026
+              ],
+              [
+                "03759_Animalia_Chordata_Aves_Passeriformes_Corvidae_Corvus_ossifragus",
+                0.045411914587020874
+              ],
+              [
+                "03239_Animalia_Chordata_Aves_Anseriformes_Anatidae_Cygnus_atratus",
+                0.03794076293706894
+              ],
+              [
+                "03758_Animalia_Chordata_Aves_Passeriformes_Corvidae_Corvus_monedula",
+                0.01959175243973732
+              ]
+            ],
+            "independentSoftmaxMaxError": 3.1615376649973825e-08,
+            "filenameClassId": "04405",
+            "top1MatchesFilename": false,
+            "top5ContainsFilename": false
+          },
+          {
+            "input": "04405_0c5a6785-0bc2-49d9-9702-b9e94ba9b686.jpg",
+            "top5": [
+              [
+                "04414_Animalia_Chordata_Aves_Pelecaniformes_Threskiornithidae_Threskiornis_molucca",
+                0.14271795749664307
+              ],
+              [
+                "03759_Animalia_Chordata_Aves_Passeriformes_Corvidae_Corvus_ossifragus",
+                0.06973104923963547
+              ],
+              [
+                "03225_Animalia_Chordata_Aves_Anseriformes_Anatidae_Branta_bernicla",
+                0.04917040467262268
+              ],
+              [
+                "03417_Animalia_Chordata_Aves_Charadriiformes_Laridae_Larus_glaucescens",
+                0.0320592001080513
+              ],
+              [
+                "03514_Animalia_Chordata_Aves_Columbiformes_Columbidae_Columba_livia",
+                0.026417093351483345
+              ]
+            ],
+            "independentSoftmaxMaxError": 1.8840853349688658e-08,
+            "filenameClassId": "04405",
+            "top1MatchesFilename": false,
+            "top5ContainsFilename": false
+          },
+          {
+            "input": "04405_0c5a6785-0bc2-49d9-9702-b9e94ba9b686.jpg",
+            "top5": [
+              [
+                "03476_Animalia_Chordata_Aves_Charadriiformes_Scolopacidae_Limosa_haemastica",
+                0.10516392439603806
+              ],
+              [
+                "03443_Animalia_Chordata_Aves_Charadriiformes_Recurvirostridae_Himantopus_mexicanus",
+                0.08802458643913269
+              ],
+              [
+                "03442_Animalia_Chordata_Aves_Charadriiformes_Recurvirostridae_Himantopus_leucocephalus",
+                0.07367857545614243
+              ],
+              [
+                "03367_Animalia_Chordata_Aves_Charadriiformes_Charadriidae_Pluvialis_dominica",
+                0.034920256584882736
+              ],
+              [
+                "03488_Animalia_Chordata_Aves_Charadriiformes_Scolopacidae_Tringa_erythropus",
+                0.025012660771608353
+              ]
+            ],
+            "independentSoftmaxMaxError": 6.425497744988462e-09,
+            "filenameClassId": "04405",
+            "top1MatchesFilename": false,
+            "top5ContainsFilename": false
+          },
+          {
+            "input": "04405_0c5a6785-0bc2-49d9-9702-b9e94ba9b686.jpg",
+            "top5": [
+              [
+                "03656_Animalia_Chordata_Aves_Gruiformes_Rallidae_Fulica_ardesiaca",
+                0.13814213871955872
+              ],
+              [
+                "03661_Animalia_Chordata_Aves_Gruiformes_Rallidae_Gallinula_galeata",
+                0.12356250733137131
+              ],
+              [
+                "03659_Animalia_Chordata_Aves_Gruiformes_Rallidae_Fulica_cristata",
+                0.025195682421326637
+              ],
+              [
+                "03660_Animalia_Chordata_Aves_Gruiformes_Rallidae_Gallinula_chloropus",
+                0.024373307824134827
+              ],
+              [
+                "03246_Animalia_Chordata_Aves_Anseriformes_Anatidae_Dendrocygna_bicolor",
+                0.014201158657670021
+              ]
+            ],
+            "independentSoftmaxMaxError": 6.5782308628081765e-09,
+            "filenameClassId": "04405",
+            "top1MatchesFilename": false,
+            "top5ContainsFilename": false
+          },
+          {
+            "input": "04405_0c5a6785-0bc2-49d9-9702-b9e94ba9b686.jpg",
+            "top5": [
+              [
+                "03659_Animalia_Chordata_Aves_Gruiformes_Rallidae_Fulica_cristata",
+                0.33216702938079834
+              ],
+              [
+                "03656_Animalia_Chordata_Aves_Gruiformes_Rallidae_Fulica_ardesiaca",
+                0.09456130117177963
+              ],
+              [
+                "03655_Animalia_Chordata_Aves_Gruiformes_Rallidae_Fulica_americana",
+                0.034878842532634735
+              ],
+              [
+                "03274_Animalia_Chordata_Aves_Anseriformes_Anatidae_Tadorna_tadorna",
+                0.019388984888792038
+              ],
+              [
+                "03275_Animalia_Chordata_Aves_Anseriformes_Anatidae_Tadorna_tadornoides",
+                0.017994031310081482
+              ]
+            ],
+            "independentSoftmaxMaxError": 9.953362356540651e-09,
+            "filenameClassId": "04405",
+            "top1MatchesFilename": false,
+            "top5ContainsFilename": false
+          },
+          {
+            "input": "04405_0c5a6785-0bc2-49d9-9702-b9e94ba9b686.jpg",
+            "top5": [
+              [
+                "04399_Animalia_Chordata_Aves_Pelecaniformes_Threskiornithidae_Eudocimus_albus",
+                0.3739011585712433
+              ],
+              [
+                "04408_Animalia_Chordata_Aves_Pelecaniformes_Threskiornithidae_Plegadis_chihi",
+                0.10842258483171463
+              ],
+              [
+                "04404_Animalia_Chordata_Aves_Pelecaniformes_Threskiornithidae_Platalea_flavipes",
+                0.06328926980495453
+              ],
+              [
+                "03275_Animalia_Chordata_Aves_Anseriformes_Anatidae_Tadorna_tadornoides",
+                0.015011461451649666
+              ],
+              [
+                "04407_Animalia_Chordata_Aves_Pelecaniformes_Threskiornithidae_Platalea_regia",
+                0.014295704662799835
+              ]
+            ],
+            "independentSoftmaxMaxError": 3.1698134117519317e-08,
+            "filenameClassId": "04405",
+            "top1MatchesFilename": false,
+            "top5ContainsFilename": false
+          },
+          {
+            "input": "04405_0c5a6785-0bc2-49d9-9702-b9e94ba9b686.jpg",
+            "top5": [
+              [
+                "04402_Animalia_Chordata_Aves_Pelecaniformes_Threskiornithidae_Platalea_ajaja",
+                0.1664561629295349
+              ],
+              [
+                "04404_Animalia_Chordata_Aves_Pelecaniformes_Threskiornithidae_Platalea_flavipes",
+                0.10963598638772964
+              ],
+              [
+                "04407_Animalia_Chordata_Aves_Pelecaniformes_Threskiornithidae_Platalea_regia",
+                0.038724496960639954
+              ],
+              [
+                "04399_Animalia_Chordata_Aves_Pelecaniformes_Threskiornithidae_Eudocimus_albus",
+                0.03391088917851448
+              ],
+              [
+                "04408_Animalia_Chordata_Aves_Pelecaniformes_Threskiornithidae_Plegadis_chihi",
+                0.029450269415974617
+              ]
+            ],
+            "independentSoftmaxMaxError": 3.7051119394782006e-09,
+            "filenameClassId": "04405",
+            "top1MatchesFilename": false,
+            "top5ContainsFilename": false
+          },
+          {
+            "input": "04405_0c5a6785-0bc2-49d9-9702-b9e94ba9b686.jpg",
+            "top5": [
+              [
+                "04405_Animalia_Chordata_Aves_Pelecaniformes_Threskiornithidae_Platalea_leucorodia",
+                0.5067289471626282
+              ],
+              [
+                "04403_Animalia_Chordata_Aves_Pelecaniformes_Threskiornithidae_Platalea_alba",
+                0.06263807415962219
+              ],
+              [
+                "04399_Animalia_Chordata_Aves_Pelecaniformes_Threskiornithidae_Eudocimus_albus",
+                0.03579658642411232
+              ],
+              [
+                "04404_Animalia_Chordata_Aves_Pelecaniformes_Threskiornithidae_Platalea_flavipes",
+                0.02030680701136589
+              ],
+              [
+                "04408_Animalia_Chordata_Aves_Pelecaniformes_Threskiornithidae_Plegadis_chihi",
+                0.004951581358909607
+              ]
+            ],
+            "independentSoftmaxMaxError": 6.9322011464478805e-09,
+            "filenameClassId": "04405",
+            "top1MatchesFilename": true,
+            "top5ContainsFilename": true
+          },
+          {
+            "input": "04405_0c5a6785-0bc2-49d9-9702-b9e94ba9b686.jpg",
+            "top5": [
+              [
+                "04404_Animalia_Chordata_Aves_Pelecaniformes_Threskiornithidae_Platalea_flavipes",
+                0.3971251845359802
+              ],
+              [
+                "04405_Animalia_Chordata_Aves_Pelecaniformes_Threskiornithidae_Platalea_leucorodia",
+                0.1575436294078827
+              ],
+              [
+                "04403_Animalia_Chordata_Aves_Pelecaniformes_Threskiornithidae_Platalea_alba",
+                0.02589193545281887
+              ],
+              [
+                "04399_Animalia_Chordata_Aves_Pelecaniformes_Threskiornithidae_Eudocimus_albus",
+                0.011305050924420357
+              ],
+              [
+                "03505_Animalia_Chordata_Aves_Ciconiiformes_Ciconiidae_Ciconia_nigra",
+                0.0049542938359081745
+              ]
+            ],
+            "independentSoftmaxMaxError": 2.0913584197757018e-08,
+            "filenameClassId": "04405",
+            "top1MatchesFilename": false,
+            "top5ContainsFilename": true
+          },
+          {
+            "input": "04593_3d74d5a7-15b1-4bb9-af6f-1bcd78485787.jpg",
+            "top5": [
+              [
+                "04593_Animalia_Chordata_Aves_Trogoniformes_Trogonidae_Trogon_elegans",
+                0.9437823295593262
+              ],
+              [
+                "04592_Animalia_Chordata_Aves_Trogoniformes_Trogonidae_Trogon_collaris",
+                0.022077389061450958
+              ],
+              [
+                "04594_Animalia_Chordata_Aves_Trogoniformes_Trogonidae_Trogon_massena",
+                0.0008904623682610691
+              ],
+              [
+                "04591_Animalia_Chordata_Aves_Trogoniformes_Trogonidae_Trogon_citreolus",
+                0.0008839204674586654
+              ],
+              [
+                "04590_Animalia_Chordata_Aves_Trogoniformes_Trogonidae_Trogon_caligatus",
+                0.0004900105413980782
+              ]
+            ],
+            "independentSoftmaxMaxError": 2.4931900544089558e-08,
+            "filenameClassId": "04593",
+            "top1MatchesFilename": true,
+            "top5ContainsFilename": true
+          }
+        ],
+        "originalSourceUnchanged": true,
+        "independentProcesses": 2,
+        "repeatImagesExact": true,
+        "labelCount": 1486,
+        "labelSha256": "c39ee878a82b8dd45d69725c9d504a046effdeb01f6d05ac5c6a22c70506ddd4",
+        "qualityAccepted": false
+      }
+    }
+  ]
+}

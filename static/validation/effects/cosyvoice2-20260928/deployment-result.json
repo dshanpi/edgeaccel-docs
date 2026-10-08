@@ -5,7 +5,7 @@
   "variants": [
     {
       "label": "默认 W8A16",
-      "observation": "三段短句均生成 24 kHz 单声道音频，达到 EOS；浮点分块拼接与完整音频逐点一致，无非有限值或削波。发音和听感仍需独立评测。",
+      "observation": "三段短句均生成 24 kHz 单声道音频，达到 EOS；浮点分块拼接与完整音频逐点一致，无非有限值或削波。发音和听感仍需独立评测。 使用独立的 Whisper-base 在主机 CPU 上识别本页实际 WAV，未向识别器提供目标文字提示。识别结果可能包含同音字、繁简体差异、漏词或识别器自身错误；下表用于辅助定位需要复听的位置，不是人工听审，也不是语音合成准确率。",
       "previews": [
         {
           "caption": "相同三句文本在两组权重下的实际语音波形",
@@ -52,6 +52,30 @@
               "3.56 s",
               "11.631 s / 3.27",
               "35.698 s"
+            ]
+          ]
+        },
+        {
+          "headers": [
+            "合成输入文字",
+            "实际音频的 ASR 辅助转写",
+            "核对说明"
+          ],
+          "rows": [
+            [
+              "你好，欢迎使用算力卡语音合成。",
+              "您好 歡迎使用Sally卡與音程",
+              "“算力卡语音合成”等词出现识别偏差，需结合原音频复听。"
+            ],
+            [
+              "今天的温度是二十六度，请打开窗户。",
+              "今天的温度是26度,请打开窗户。",
+              "数字采用阿拉伯数字书写，句意与输入对应。"
+            ],
+            [
+              "Hello, welcome to our voice demonstration.",
+              "Hello, welcome to our voice demonstration.",
+              "英文词语对应，未据此评价音色或自然度。"
             ]
           ]
         }
@@ -247,7 +271,7 @@
     },
     {
       "label": "GPTQ Int4",
-      "observation": "三段短句均生成 24 kHz 单声道音频，达到 EOS；浮点分块拼接与完整音频逐点一致，无非有限值或削波。发音和听感仍需独立评测。",
+      "observation": "三段短句均生成 24 kHz 单声道音频，达到 EOS；浮点分块拼接与完整音频逐点一致，无非有限值或削波。发音和听感仍需独立评测。 使用独立的 Whisper-base 在主机 CPU 上识别本页实际 WAV，未向识别器提供目标文字提示。识别结果可能包含同音字、繁简体差异、漏词或识别器自身错误；下表用于辅助定位需要复听的位置，不是人工听审，也不是语音合成准确率。",
       "previews": [],
       "audio": [
         {
@@ -289,6 +313,30 @@
               "3.44 s",
               "11.488 s / 3.34",
               "34.510 s"
+            ]
+          ]
+        },
+        {
+          "headers": [
+            "合成输入文字",
+            "实际音频的 ASR 辅助转写",
+            "核对说明"
+          ],
+          "rows": [
+            [
+              "你好，欢迎使用算力卡语音合成。",
+              "你好 欢迎使用算栗卡与音合成",
+              "“算力卡”“语音”等词出现同音或近音识别偏差。"
+            ],
+            [
+              "今天的温度是二十六度，请打开窗户。",
+              "今天的温度是26度 请打开招",
+              "句尾“打开窗户”未完整对应，需复听。"
+            ],
+            [
+              "Hello, welcome to our voice demonstration.",
+              "Hello, welcome to our Voice Demonstration.",
+              "英文词语对应，大小写差异不作为发音错误。"
             ]
           ]
         }
@@ -484,5 +532,64 @@
         "ttsTimingScope": "Official native tts total use time; excludes model initialization. Not isolated NPU latency or first audible packet latency."
       }
     }
-  ]
+  ],
+  "auxiliarySpeechReview": {
+    "reviewedAt": "2026-10-01T18:03:58.419898+00:00",
+    "asrRepo": "openai/whisper-base",
+    "asrRevision": "e37978b90ca9030d5170a5c07aadb050351a65bb",
+    "device": "host CPU",
+    "initialPrompt": null,
+    "newNpuRuns": 0,
+    "scope": "使用独立的 Whisper-base 在主机 CPU 上识别本页实际 WAV，未向识别器提供目标文字提示。识别结果可能包含同音字、繁简体差异、漏词或识别器自身错误；下表用于辅助定位需要复听的位置，不是人工听审，也不是语音合成准确率。",
+    "results": [
+      {
+        "audioPath": "/validation/effects/cosyvoice2-20260928/int8-sample-1.wav",
+        "sha256": "1b6d822b534cd11ccef14f7b678c00d1e932712282c6f3770b9e0b5f29d763ec",
+        "targetText": "你好，欢迎使用算力卡语音合成。",
+        "asrTranscript": "您好 歡迎使用Sally卡與音程",
+        "language": "zh",
+        "observation": "“算力卡语音合成”等词出现识别偏差，需结合原音频复听。"
+      },
+      {
+        "audioPath": "/validation/effects/cosyvoice2-20260928/int8-sample-2.wav",
+        "sha256": "6483ac9665c64e0bbf1d1449e2e95819736f2a0da5ddbbdb49a6ce13846f80da",
+        "targetText": "今天的温度是二十六度，请打开窗户。",
+        "asrTranscript": "今天的温度是26度,请打开窗户。",
+        "language": "zh",
+        "observation": "数字采用阿拉伯数字书写，句意与输入对应。"
+      },
+      {
+        "audioPath": "/validation/effects/cosyvoice2-20260928/int8-sample-3.wav",
+        "sha256": "2021499efc88bfbea72fbd67d7543bcc4abf003f1b6c6636d947b59d1d80b952",
+        "targetText": "Hello, welcome to our voice demonstration.",
+        "asrTranscript": " Hello, welcome to our voice demonstration.",
+        "language": "en",
+        "observation": "英文词语对应，未据此评价音色或自然度。"
+      },
+      {
+        "audioPath": "/validation/effects/cosyvoice2-20260928/int4-sample-1.wav",
+        "sha256": "e51ff2c38d7e2de2f716e3ced6b300799493e4e73fb2cd5653b81181420d36e7",
+        "targetText": "你好，欢迎使用算力卡语音合成。",
+        "asrTranscript": "你好 欢迎使用算栗卡与音合成",
+        "language": "zh",
+        "observation": "“算力卡”“语音”等词出现同音或近音识别偏差。"
+      },
+      {
+        "audioPath": "/validation/effects/cosyvoice2-20260928/int4-sample-2.wav",
+        "sha256": "a75690e1e305253f321931176cf09549522ca52e701bf10b75f7bb8ab01ae89b",
+        "targetText": "今天的温度是二十六度，请打开窗户。",
+        "asrTranscript": "今天的温度是26度 请打开招",
+        "language": "zh",
+        "observation": "句尾“打开窗户”未完整对应，需复听。"
+      },
+      {
+        "audioPath": "/validation/effects/cosyvoice2-20260928/int4-sample-3.wav",
+        "sha256": "03f4c6fcf8b30fc2729c27722ae53f7929d0229d7647f0265d9250616a46f2d6",
+        "targetText": "Hello, welcome to our voice demonstration.",
+        "asrTranscript": " Hello, welcome to our Voice Demonstration.",
+        "language": "en",
+        "observation": "英文词语对应，大小写差异不作为发音错误。"
+      }
+    ]
+  }
 }

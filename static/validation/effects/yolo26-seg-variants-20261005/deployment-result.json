@@ -1,0 +1,2425 @@
+{
+  "modelId": "yolo26-seg",
+  "revision": "266383e32988080759a92764eb1afd9c8cbea192",
+  "date": "2026-10-05",
+  "variants": [
+    {
+      "label": "yolo26l · NPU1 / NPU3",
+      "observation": "公交车和前景人物均有彩色掩码；左侧截断人物出现两个重叠实例，其中一个框延伸到下方路面，程序的5个人物实例不能解释为5个真实人物。 NPU1与NPU3输出图的文件内容相同，因此合并展示。",
+      "previews": [
+        {
+          "caption": "固定输入：bus.jpg",
+          "path": "/validation/effects/yolo26-seg-variants-20261005/inputs/bus.jpg"
+        },
+        {
+          "caption": "实际实例分割输出：yolo26l",
+          "path": "/validation/effects/yolo26-seg-variants-20261005/outputs/yolo26l.jpg"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "权重",
+            "程序输出人物实例数",
+            "程序输出公交车实例数"
+          ],
+          "rows": [
+            [
+              "yolo26l-seg_npu1.axmodel",
+              5,
+              1
+            ],
+            [
+              "yolo26l-seg_npu3.axmodel",
+              5,
+              1
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "completed": true,
+        "provider": "AXCLRTExecutionProvider",
+        "inferenceEvidence": "original-cv-variant-samples",
+        "modelId": "yolo26-seg",
+        "revision": "266383e32988080759a92764eb1afd9c8cbea192",
+        "actualCapacity": "16GB",
+        "sessions": [
+          {
+            "model": "ax650/yolo26l-seg_npu1.axmodel",
+            "sha256": "6d344df1cb24e4df491073edc8f60a43461fbae493565b89103c03465322e283",
+            "allFinite": true,
+            "runMilliseconds": [
+              100.37656700023945,
+              100.54806800053484
+            ]
+          },
+          {
+            "model": "ax650/yolo26l-seg_npu3.axmodel",
+            "sha256": "6050d83cd4115b3ea584d02e69f9674a1105cb3f7b014eb3435ccd66b3346e2f",
+            "allFinite": true,
+            "runMilliseconds": [
+              66.80648800011113,
+              67.16844799939281
+            ]
+          }
+        ],
+        "weightResults": [
+          {
+            "weight": "ax650/yolo26l-seg_npu1.axmodel",
+            "independentProcesses": 2,
+            "rawOutputsExact": true,
+            "imageSha256": "9508faa3090deaa21e28529e54fb061d03dd552a3b39154a2a699d2c106710c9",
+            "metadata": [
+              {
+                "inputs": [
+                  {
+                    "name": "images",
+                    "shape": [
+                      1,
+                      640,
+                      640,
+                      3
+                    ],
+                    "dtype": "uint8"
+                  }
+                ],
+                "outputs": [
+                  {
+                    "name": "output0",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      4
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "output1",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      80
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1047",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      32
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1069",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      4
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1109",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      80
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1131",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      32
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1153",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      4
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1193",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      80
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1215",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      32
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1308",
+                    "shape": [
+                      1,
+                      32,
+                      160,
+                      160
+                    ],
+                    "dtype": "float32"
+                  }
+                ]
+              }
+            ],
+            "segmentationObjects": [
+              {
+                "box": [
+                  10.865984916687012,
+                  229.82933235168457,
+                  803.115177154541,
+                  735.4355506896973
+                ],
+                "confidence": 0.9421495795249939,
+                "classId": 5,
+                "maskPixels": 258349,
+                "maskBounds": [
+                  5,
+                  228,
+                  799,
+                  728
+                ]
+              },
+              {
+                "box": [
+                  55.3769645690918,
+                  396.3193759918213,
+                  246.47222900390625,
+                  905.9067306518555
+                ],
+                "confidence": 0.9421495795249939,
+                "classId": 0,
+                "maskPixels": 48579,
+                "maskBounds": [
+                  52,
+                  391,
+                  245,
+                  902
+                ]
+              },
+              {
+                "box": [
+                  221.35812664031982,
+                  406.01781463623047,
+                  348.75497817993164,
+                  855.8879699707031
+                ],
+                "confidence": 0.9302798509597778,
+                "classId": 0,
+                "maskPixels": 34162,
+                "maskBounds": [
+                  220,
+                  403,
+                  346,
+                  854
+                ]
+              },
+              {
+                "box": [
+                  669.2827491760254,
+                  392.3382396697998,
+                  808.6230354309082,
+                  878.0387763977051
+                ],
+                "confidence": 0.9302798509597778,
+                "classId": 0,
+                "maskPixels": 21051,
+                "maskBounds": [
+                  666,
+                  398,
+                  806,
+                  880
+                ]
+              },
+              {
+                "box": [
+                  0.8542492389678955,
+                  549.2006549835205,
+                  78.53528594970703,
+                  874.3771362304688
+                ],
+                "confidence": 0.5,
+                "classId": 0,
+                "maskPixels": 11741,
+                "maskBounds": [
+                  0,
+                  546,
+                  76,
+                  872
+                ]
+              },
+              {
+                "box": [
+                  3.1130903363227844,
+                  532.6963920593262,
+                  78.75497174263,
+                  1058.2083435058594
+                ],
+                "confidence": 0.45033740997314453,
+                "classId": 0,
+                "maskPixels": 11706,
+                "maskBounds": [
+                  0,
+                  547,
+                  77,
+                  871
+                ]
+              }
+            ],
+            "maskSha256": "ab967b20dd7212b93fababd085e0892f2d853b1f95ec79c7b4e8eb5dda882ea1",
+            "maskShape": [
+              6,
+              1080,
+              810
+            ],
+            "postprocessReplayInputExact": true,
+            "postprocessReplayImageExact": true
+          },
+          {
+            "weight": "ax650/yolo26l-seg_npu3.axmodel",
+            "independentProcesses": 2,
+            "rawOutputsExact": true,
+            "imageSha256": "9508faa3090deaa21e28529e54fb061d03dd552a3b39154a2a699d2c106710c9",
+            "metadata": [
+              {
+                "inputs": [
+                  {
+                    "name": "images",
+                    "shape": [
+                      1,
+                      640,
+                      640,
+                      3
+                    ],
+                    "dtype": "uint8"
+                  }
+                ],
+                "outputs": [
+                  {
+                    "name": "output0",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      4
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "output1",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      80
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1047",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      32
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1069",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      4
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1109",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      80
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1131",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      32
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1153",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      4
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1193",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      80
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1215",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      32
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1308",
+                    "shape": [
+                      1,
+                      32,
+                      160,
+                      160
+                    ],
+                    "dtype": "float32"
+                  }
+                ]
+              }
+            ],
+            "segmentationObjects": [
+              {
+                "box": [
+                  10.865984916687012,
+                  229.82933235168457,
+                  803.115177154541,
+                  735.4355506896973
+                ],
+                "confidence": 0.9421495795249939,
+                "classId": 5,
+                "maskPixels": 258349,
+                "maskBounds": [
+                  5,
+                  228,
+                  799,
+                  728
+                ]
+              },
+              {
+                "box": [
+                  55.3769645690918,
+                  396.3193759918213,
+                  246.47222900390625,
+                  905.9067306518555
+                ],
+                "confidence": 0.9421495795249939,
+                "classId": 0,
+                "maskPixels": 48579,
+                "maskBounds": [
+                  52,
+                  391,
+                  245,
+                  902
+                ]
+              },
+              {
+                "box": [
+                  221.35812664031982,
+                  406.01781463623047,
+                  348.75497817993164,
+                  855.8879699707031
+                ],
+                "confidence": 0.9302798509597778,
+                "classId": 0,
+                "maskPixels": 34162,
+                "maskBounds": [
+                  220,
+                  403,
+                  346,
+                  854
+                ]
+              },
+              {
+                "box": [
+                  669.2827491760254,
+                  392.3382396697998,
+                  808.6230354309082,
+                  878.0387763977051
+                ],
+                "confidence": 0.9302798509597778,
+                "classId": 0,
+                "maskPixels": 21051,
+                "maskBounds": [
+                  666,
+                  398,
+                  806,
+                  880
+                ]
+              },
+              {
+                "box": [
+                  0.8542492389678955,
+                  549.2006549835205,
+                  78.53528594970703,
+                  874.3771362304688
+                ],
+                "confidence": 0.5,
+                "classId": 0,
+                "maskPixels": 11741,
+                "maskBounds": [
+                  0,
+                  546,
+                  76,
+                  872
+                ]
+              },
+              {
+                "box": [
+                  3.1130903363227844,
+                  532.6963920593262,
+                  78.75497174263,
+                  1058.2083435058594
+                ],
+                "confidence": 0.45033740997314453,
+                "classId": 0,
+                "maskPixels": 11706,
+                "maskBounds": [
+                  0,
+                  547,
+                  77,
+                  871
+                ]
+              }
+            ],
+            "maskSha256": "ab967b20dd7212b93fababd085e0892f2d853b1f95ec79c7b4e8eb5dda882ea1",
+            "maskShape": [
+              6,
+              1080,
+              810
+            ],
+            "postprocessReplayInputExact": true,
+            "postprocessReplayImageExact": true
+          }
+        ],
+        "originalFilesUnchanged": true,
+        "sourceScript": "ax_infer.py",
+        "sourceScriptSha256": "ca710dfc5866d12fd4079ac0325c5bcde1e242d89025373d4b9989fa13535354",
+        "inputFile": "bus.jpg",
+        "inputSha256": "33b198a1d2839bb9ac4c65d61f9e852196793cae9a0781360859425f6022b69c",
+        "inputPath": "/validation/effects/yolo26-seg-variants-20261005/inputs/bus.jpg",
+        "outputPath": "/validation/effects/yolo26-seg-variants-20261005/outputs/yolo26l.jpg",
+        "outputSha256": "9508faa3090deaa21e28529e54fb061d03dd552a3b39154a2a699d2c106710c9",
+        "runsPerWeight": 2,
+        "qualityAccepted": false
+      }
+    },
+    {
+      "label": "yolo26m · NPU1 / NPU3",
+      "observation": "公交车和人物的主要区域可见掩码；左侧截断人物有两个重叠框，其中一个框延伸到路面，掩码边界尚未按像素标注核对。 NPU1与NPU3输出图的文件内容相同，因此合并展示。",
+      "previews": [
+        {
+          "caption": "实际实例分割输出：yolo26m",
+          "path": "/validation/effects/yolo26-seg-variants-20261005/outputs/yolo26m.jpg"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "权重",
+            "程序输出人物实例数",
+            "程序输出公交车实例数"
+          ],
+          "rows": [
+            [
+              "yolo26m-seg_npu1.axmodel",
+              5,
+              1
+            ],
+            [
+              "yolo26m-seg_npu3.axmodel",
+              5,
+              1
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "completed": true,
+        "provider": "AXCLRTExecutionProvider",
+        "inferenceEvidence": "original-cv-variant-samples",
+        "modelId": "yolo26-seg",
+        "revision": "266383e32988080759a92764eb1afd9c8cbea192",
+        "actualCapacity": "16GB",
+        "sessions": [
+          {
+            "model": "ax650/yolo26m-seg_npu1.axmodel",
+            "sha256": "02eaa1a5e0a7110ad9e6901dbdcfc4823053687e10df2595f601eb24c39b182c",
+            "allFinite": true,
+            "runMilliseconds": [
+              92.87370699985331,
+              88.58385900020949
+            ]
+          },
+          {
+            "model": "ax650/yolo26m-seg_npu3.axmodel",
+            "sha256": "2c513847408d58c815621d1e280f1aff1e8fd8057cc7c30046e00a116af7d70e",
+            "allFinite": true,
+            "runMilliseconds": [
+              60.98625999948126,
+              64.39439699988725
+            ]
+          }
+        ],
+        "weightResults": [
+          {
+            "weight": "ax650/yolo26m-seg_npu1.axmodel",
+            "independentProcesses": 2,
+            "rawOutputsExact": true,
+            "imageSha256": "17e6b51ea009693dc5dc63b03cb517b83c39cfec3fbeaf46d04e22c45291cd69",
+            "metadata": [
+              {
+                "inputs": [
+                  {
+                    "name": "images",
+                    "shape": [
+                      1,
+                      640,
+                      640,
+                      3
+                    ],
+                    "dtype": "uint8"
+                  }
+                ],
+                "outputs": [
+                  {
+                    "name": "output0",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      4
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "output1",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      80
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "728",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      32
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "750",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      4
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "790",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      80
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "812",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      32
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "834",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      4
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "874",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      80
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "896",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      32
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "989",
+                    "shape": [
+                      1,
+                      32,
+                      160,
+                      160
+                    ],
+                    "dtype": "float32"
+                  }
+                ]
+              }
+            ],
+            "segmentationObjects": [
+              {
+                "box": [
+                  224.42271995544434,
+                  411.4298343658447,
+                  342.8382740020752,
+                  858.3531475067139
+                ],
+                "confidence": 0.9516052007675171,
+                "classId": 0,
+                "maskPixels": 33956,
+                "maskBounds": [
+                  221,
+                  403,
+                  340,
+                  860
+                ]
+              },
+              {
+                "box": [
+                  47.143282413482666,
+                  400.49226665496826,
+                  249.59571075439453,
+                  904.7134094238281
+                ],
+                "confidence": 0.9516052007675171,
+                "classId": 0,
+                "maskPixels": 46828,
+                "maskBounds": [
+                  53,
+                  396,
+                  244,
+                  900
+                ]
+              },
+              {
+                "box": [
+                  27.356111526489258,
+                  233.62842178344727,
+                  802.7871322631836,
+                  737.8495903015137
+                ],
+                "confidence": 0.9228914380073547,
+                "classId": 5,
+                "maskPixels": 256841,
+                "maskBounds": [
+                  24,
+                  228,
+                  799,
+                  734
+                ]
+              },
+              {
+                "box": [
+                  672.2241325378418,
+                  389.0326852798462,
+                  810.0,
+                  877.9744033813477
+                ],
+                "confidence": 0.8793022036552429,
+                "classId": 0,
+                "maskPixels": 21950,
+                "maskBounds": [
+                  666,
+                  389,
+                  810,
+                  880
+                ]
+              },
+              {
+                "box": [
+                  0.26099878549575806,
+                  549.4666957855225,
+                  80.47799921035767,
+                  874.1545600891113
+                ],
+                "confidence": 0.6216269731521606,
+                "classId": 0,
+                "maskPixels": 11725,
+                "maskBounds": [
+                  0,
+                  548,
+                  77,
+                  873
+                ]
+              },
+              {
+                "box": [
+                  0.0,
+                  543.392972946167,
+                  76.65814304351807,
+                  1062.8935661315918
+                ],
+                "confidence": 0.3219795525074005,
+                "classId": 0,
+                "maskPixels": 11971,
+                "maskBounds": [
+                  0,
+                  544,
+                  77,
+                  1060
+                ]
+              }
+            ],
+            "maskSha256": "de06561892790920010f8ba1d4b91e64c2d8bc3dcc870a5ba181a656119a8015",
+            "maskShape": [
+              6,
+              1080,
+              810
+            ],
+            "postprocessReplayInputExact": true,
+            "postprocessReplayImageExact": true
+          },
+          {
+            "weight": "ax650/yolo26m-seg_npu3.axmodel",
+            "independentProcesses": 2,
+            "rawOutputsExact": true,
+            "imageSha256": "17e6b51ea009693dc5dc63b03cb517b83c39cfec3fbeaf46d04e22c45291cd69",
+            "metadata": [
+              {
+                "inputs": [
+                  {
+                    "name": "images",
+                    "shape": [
+                      1,
+                      640,
+                      640,
+                      3
+                    ],
+                    "dtype": "uint8"
+                  }
+                ],
+                "outputs": [
+                  {
+                    "name": "output0",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      4
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "output1",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      80
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "728",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      32
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "750",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      4
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "790",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      80
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "812",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      32
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "834",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      4
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "874",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      80
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "896",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      32
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "989",
+                    "shape": [
+                      1,
+                      32,
+                      160,
+                      160
+                    ],
+                    "dtype": "float32"
+                  }
+                ]
+              }
+            ],
+            "segmentationObjects": [
+              {
+                "box": [
+                  224.42271995544434,
+                  411.4298343658447,
+                  342.8382740020752,
+                  858.3531475067139
+                ],
+                "confidence": 0.9516052007675171,
+                "classId": 0,
+                "maskPixels": 33956,
+                "maskBounds": [
+                  221,
+                  403,
+                  340,
+                  860
+                ]
+              },
+              {
+                "box": [
+                  47.143282413482666,
+                  400.49226665496826,
+                  249.59571075439453,
+                  904.7134094238281
+                ],
+                "confidence": 0.9516052007675171,
+                "classId": 0,
+                "maskPixels": 46828,
+                "maskBounds": [
+                  53,
+                  396,
+                  244,
+                  900
+                ]
+              },
+              {
+                "box": [
+                  27.356111526489258,
+                  233.62842178344727,
+                  802.7871322631836,
+                  737.8495903015137
+                ],
+                "confidence": 0.9228914380073547,
+                "classId": 5,
+                "maskPixels": 256841,
+                "maskBounds": [
+                  24,
+                  228,
+                  799,
+                  734
+                ]
+              },
+              {
+                "box": [
+                  672.2241325378418,
+                  389.0326852798462,
+                  810.0,
+                  877.9744033813477
+                ],
+                "confidence": 0.8793022036552429,
+                "classId": 0,
+                "maskPixels": 21950,
+                "maskBounds": [
+                  666,
+                  389,
+                  810,
+                  880
+                ]
+              },
+              {
+                "box": [
+                  0.26099878549575806,
+                  549.4666957855225,
+                  80.47799921035767,
+                  874.1545600891113
+                ],
+                "confidence": 0.6216269731521606,
+                "classId": 0,
+                "maskPixels": 11725,
+                "maskBounds": [
+                  0,
+                  548,
+                  77,
+                  873
+                ]
+              },
+              {
+                "box": [
+                  0.0,
+                  543.392972946167,
+                  76.65814304351807,
+                  1062.8935661315918
+                ],
+                "confidence": 0.3219795525074005,
+                "classId": 0,
+                "maskPixels": 11971,
+                "maskBounds": [
+                  0,
+                  544,
+                  77,
+                  1060
+                ]
+              }
+            ],
+            "maskSha256": "de06561892790920010f8ba1d4b91e64c2d8bc3dcc870a5ba181a656119a8015",
+            "maskShape": [
+              6,
+              1080,
+              810
+            ],
+            "postprocessReplayInputExact": true,
+            "postprocessReplayImageExact": true
+          }
+        ],
+        "originalFilesUnchanged": true,
+        "sourceScript": "ax_infer.py",
+        "sourceScriptSha256": "ca710dfc5866d12fd4079ac0325c5bcde1e242d89025373d4b9989fa13535354",
+        "inputFile": "bus.jpg",
+        "inputSha256": "33b198a1d2839bb9ac4c65d61f9e852196793cae9a0781360859425f6022b69c",
+        "inputPath": "/validation/effects/yolo26-seg-variants-20261005/inputs/bus.jpg",
+        "outputPath": "/validation/effects/yolo26-seg-variants-20261005/outputs/yolo26m.jpg",
+        "outputSha256": "17e6b51ea009693dc5dc63b03cb517b83c39cfec3fbeaf46d04e22c45291cd69",
+        "runsPerWeight": 2,
+        "qualityAccepted": false
+      }
+    },
+    {
+      "label": "yolo26n · NPU1",
+      "observation": "输出1个公交车和4个人物实例；主要区域有掩码，但人物附近可见背景碎片和边界偏差，不能据这一张图推断分割精度。",
+      "previews": [
+        {
+          "caption": "实际实例分割输出：yolo26n",
+          "path": "/validation/effects/yolo26-seg-variants-20261005/outputs/yolo26n.jpg"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "权重",
+            "程序输出人物实例数",
+            "程序输出公交车实例数"
+          ],
+          "rows": [
+            [
+              "yolo26n-seg_npu1.axmodel",
+              4,
+              1
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "completed": true,
+        "provider": "AXCLRTExecutionProvider",
+        "inferenceEvidence": "original-cv-variant-samples",
+        "modelId": "yolo26-seg",
+        "revision": "266383e32988080759a92764eb1afd9c8cbea192",
+        "actualCapacity": "16GB",
+        "sessions": [
+          {
+            "model": "ax650/yolo26n-seg_npu1.axmodel",
+            "sha256": "ea9ba4a84a4fa57e578ef8408897e275bab91821ace7a751be3ae569129197b8",
+            "allFinite": true,
+            "runMilliseconds": [
+              51.442016999317275,
+              54.98286300007749
+            ]
+          }
+        ],
+        "weightResults": [
+          {
+            "weight": "ax650/yolo26n-seg_npu1.axmodel",
+            "independentProcesses": 2,
+            "rawOutputsExact": true,
+            "imageSha256": "af5b612967fac54cb94371af290342f1ae8ca98318ee4ac20dc516e0a6d7bfd1",
+            "metadata": [
+              {
+                "inputs": [
+                  {
+                    "name": "images",
+                    "shape": [
+                      1,
+                      640,
+                      640,
+                      3
+                    ],
+                    "dtype": "uint8"
+                  }
+                ],
+                "outputs": [
+                  {
+                    "name": "output0",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      4
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "output1",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      80
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "674",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      32
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "696",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      4
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "736",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      80
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "758",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      32
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "780",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      4
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "820",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      80
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "842",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      32
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "935",
+                    "shape": [
+                      1,
+                      32,
+                      160,
+                      160
+                    ],
+                    "dtype": "float32"
+                  }
+                ]
+              }
+            ],
+            "segmentationObjects": [
+              {
+                "box": [
+                  220.05967140197754,
+                  409.555832862854,
+                  343.1642074584961,
+                  859.6568298339844
+                ],
+                "confidence": 0.9334596395492554,
+                "classId": 0,
+                "maskPixels": 32696,
+                "maskBounds": [
+                  223,
+                  403,
+                  340,
+                  859
+                ]
+              },
+              {
+                "box": [
+                  50.365628242492676,
+                  405.85059928894043,
+                  246.56348419189453,
+                  905.962760925293
+                ],
+                "confidence": 0.9334596395492554,
+                "classId": 0,
+                "maskPixels": 47338,
+                "maskBounds": [
+                  54,
+                  402,
+                  244,
+                  900
+                ]
+              },
+              {
+                "box": [
+                  663.7424983978271,
+                  402.0035648345947,
+                  810.0,
+                  886.7276916503906
+                ],
+                "confidence": 0.9334596395492554,
+                "classId": 0,
+                "maskPixels": 19971,
+                "maskBounds": [
+                  669,
+                  398,
+                  810,
+                  882
+                ]
+              },
+              {
+                "box": [
+                  28.13412380218506,
+                  228.03723907470703,
+                  805.2315044403076,
+                  735.8434181213379
+                ],
+                "confidence": 0.8683551549911499,
+                "classId": 5,
+                "maskPixels": 249113,
+                "maskBounds": [
+                  25,
+                  229,
+                  804,
+                  732
+                ]
+              },
+              {
+                "box": [
+                  0.07088273763656616,
+                  548.1902046203613,
+                  69.31718587875366,
+                  871.339656829834
+                ],
+                "confidence": 0.31982043385505676,
+                "classId": 0,
+                "maskPixels": 10234,
+                "maskBounds": [
+                  0,
+                  546,
+                  67,
+                  870
+                ]
+              }
+            ],
+            "maskSha256": "79d1da9194981b0dd25beca751a14ca88af71911818155f902b028b79a3d1b52",
+            "maskShape": [
+              5,
+              1080,
+              810
+            ],
+            "postprocessReplayInputExact": true,
+            "postprocessReplayImageExact": true
+          }
+        ],
+        "originalFilesUnchanged": true,
+        "sourceScript": "ax_infer.py",
+        "sourceScriptSha256": "ca710dfc5866d12fd4079ac0325c5bcde1e242d89025373d4b9989fa13535354",
+        "inputFile": "bus.jpg",
+        "inputSha256": "33b198a1d2839bb9ac4c65d61f9e852196793cae9a0781360859425f6022b69c",
+        "inputPath": "/validation/effects/yolo26-seg-variants-20261005/inputs/bus.jpg",
+        "outputPath": "/validation/effects/yolo26-seg-variants-20261005/outputs/yolo26n.jpg",
+        "outputSha256": "af5b612967fac54cb94371af290342f1ae8ca98318ee4ac20dc516e0a6d7bfd1",
+        "runsPerWeight": 2,
+        "qualityAccepted": false
+      }
+    },
+    {
+      "label": "yolo26s · NPU1 / NPU3",
+      "observation": "输出1个公交车和4个人物实例，主要车辆与人物区域有掩码；人物附近仍有背景碎片，左右截断目标的边界不完整。 NPU1与NPU3输出图的文件内容相同，因此合并展示。",
+      "previews": [
+        {
+          "caption": "实际实例分割输出：yolo26s",
+          "path": "/validation/effects/yolo26-seg-variants-20261005/outputs/yolo26s.jpg"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "权重",
+            "程序输出人物实例数",
+            "程序输出公交车实例数"
+          ],
+          "rows": [
+            [
+              "yolo26s-seg_npu1.axmodel",
+              4,
+              1
+            ],
+            [
+              "yolo26s-seg_npu3.axmodel",
+              4,
+              1
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "completed": true,
+        "provider": "AXCLRTExecutionProvider",
+        "inferenceEvidence": "original-cv-variant-samples",
+        "modelId": "yolo26-seg",
+        "revision": "266383e32988080759a92764eb1afd9c8cbea192",
+        "actualCapacity": "16GB",
+        "sessions": [
+          {
+            "model": "ax650/yolo26s-seg_npu1.axmodel",
+            "sha256": "a06edd8794e7b8799b61131dc22d168793f591a252d69466d83840629cbba5d8",
+            "allFinite": true,
+            "runMilliseconds": [
+              63.79618600021786,
+              63.67543599935743
+            ]
+          },
+          {
+            "model": "ax650/yolo26s-seg_npu3.axmodel",
+            "sha256": "dbf7ad530afafb24a3190c51321ac9651e58f3e02fdfe787d51fb65beedf05dd",
+            "allFinite": true,
+            "runMilliseconds": [
+              55.655742000453756,
+              50.55534899929626
+            ]
+          }
+        ],
+        "weightResults": [
+          {
+            "weight": "ax650/yolo26s-seg_npu1.axmodel",
+            "independentProcesses": 2,
+            "rawOutputsExact": true,
+            "imageSha256": "502e6f48b6d3d0f7e15cf68f757580b0fddb76eb5c0ccb13b829f32c4e7bb07e",
+            "metadata": [
+              {
+                "inputs": [
+                  {
+                    "name": "images",
+                    "shape": [
+                      1,
+                      640,
+                      640,
+                      3
+                    ],
+                    "dtype": "uint8"
+                  }
+                ],
+                "outputs": [
+                  {
+                    "name": "output0",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      4
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "output1",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      80
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "674",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      32
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "696",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      4
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "736",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      80
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "758",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      32
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "780",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      4
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "820",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      80
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "842",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      32
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "935",
+                    "shape": [
+                      1,
+                      32,
+                      160,
+                      160
+                    ],
+                    "dtype": "float32"
+                  }
+                ]
+              }
+            ],
+            "segmentationObjects": [
+              {
+                "box": [
+                  9.870752334594727,
+                  230.76881790161133,
+                  803.5905590057373,
+                  734.1033382415771
+                ],
+                "confidence": 0.9310857653617859,
+                "classId": 5,
+                "maskPixels": 253266,
+                "maskBounds": [
+                  5,
+                  228,
+                  805,
+                  729
+                ]
+              },
+              {
+                "box": [
+                  223.4357271194458,
+                  404.17898654937744,
+                  343.46166229248047,
+                  861.0518188476562
+                ],
+                "confidence": 0.9310857653617859,
+                "classId": 0,
+                "maskPixels": 33824,
+                "maskBounds": [
+                  221,
+                  404,
+                  340,
+                  859
+                ]
+              },
+              {
+                "box": [
+                  45.948506355285645,
+                  407.64027214050293,
+                  247.28229904174805,
+                  907.1029357910156
+                ],
+                "confidence": 0.9310857653617859,
+                "classId": 0,
+                "maskPixels": 47413,
+                "maskBounds": [
+                  52,
+                  402,
+                  245,
+                  901
+                ]
+              },
+              {
+                "box": [
+                  666.8458957672119,
+                  392.1530513763428,
+                  806.2308311462402,
+                  883.8722076416016
+                ],
+                "confidence": 0.883390486240387,
+                "classId": 0,
+                "maskPixels": 20173,
+                "maskBounds": [
+                  669,
+                  399,
+                  806,
+                  879
+                ]
+              },
+              {
+                "box": [
+                  0.0,
+                  550.8970127105713,
+                  77.33345460891724,
+                  876.1284942626953
+                ],
+                "confidence": 0.571819007396698,
+                "classId": 0,
+                "maskPixels": 11665,
+                "maskBounds": [
+                  0,
+                  550,
+                  76,
+                  873
+                ]
+              }
+            ],
+            "maskSha256": "71247b7a14b466a2460ff8c0d1e4fba3d1a061d95d34fae91dcade8f30b55c51",
+            "maskShape": [
+              5,
+              1080,
+              810
+            ],
+            "postprocessReplayInputExact": true,
+            "postprocessReplayImageExact": true
+          },
+          {
+            "weight": "ax650/yolo26s-seg_npu3.axmodel",
+            "independentProcesses": 2,
+            "rawOutputsExact": true,
+            "imageSha256": "502e6f48b6d3d0f7e15cf68f757580b0fddb76eb5c0ccb13b829f32c4e7bb07e",
+            "metadata": [
+              {
+                "inputs": [
+                  {
+                    "name": "images",
+                    "shape": [
+                      1,
+                      640,
+                      640,
+                      3
+                    ],
+                    "dtype": "uint8"
+                  }
+                ],
+                "outputs": [
+                  {
+                    "name": "output0",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      4
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "output1",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      80
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "674",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      32
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "696",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      4
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "736",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      80
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "758",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      32
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "780",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      4
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "820",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      80
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "842",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      32
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "935",
+                    "shape": [
+                      1,
+                      32,
+                      160,
+                      160
+                    ],
+                    "dtype": "float32"
+                  }
+                ]
+              }
+            ],
+            "segmentationObjects": [
+              {
+                "box": [
+                  9.870752334594727,
+                  230.76881790161133,
+                  803.5905590057373,
+                  734.1033382415771
+                ],
+                "confidence": 0.9310857653617859,
+                "classId": 5,
+                "maskPixels": 253266,
+                "maskBounds": [
+                  5,
+                  228,
+                  805,
+                  729
+                ]
+              },
+              {
+                "box": [
+                  223.4357271194458,
+                  404.17898654937744,
+                  343.46166229248047,
+                  861.0518188476562
+                ],
+                "confidence": 0.9310857653617859,
+                "classId": 0,
+                "maskPixels": 33824,
+                "maskBounds": [
+                  221,
+                  404,
+                  340,
+                  859
+                ]
+              },
+              {
+                "box": [
+                  45.948506355285645,
+                  407.64027214050293,
+                  247.28229904174805,
+                  907.1029357910156
+                ],
+                "confidence": 0.9310857653617859,
+                "classId": 0,
+                "maskPixels": 47413,
+                "maskBounds": [
+                  52,
+                  402,
+                  245,
+                  901
+                ]
+              },
+              {
+                "box": [
+                  666.8458957672119,
+                  392.1530513763428,
+                  806.2308311462402,
+                  883.8722076416016
+                ],
+                "confidence": 0.883390486240387,
+                "classId": 0,
+                "maskPixels": 20173,
+                "maskBounds": [
+                  669,
+                  399,
+                  806,
+                  879
+                ]
+              },
+              {
+                "box": [
+                  0.0,
+                  550.8970127105713,
+                  77.33345460891724,
+                  876.1284942626953
+                ],
+                "confidence": 0.571819007396698,
+                "classId": 0,
+                "maskPixels": 11665,
+                "maskBounds": [
+                  0,
+                  550,
+                  76,
+                  873
+                ]
+              }
+            ],
+            "maskSha256": "71247b7a14b466a2460ff8c0d1e4fba3d1a061d95d34fae91dcade8f30b55c51",
+            "maskShape": [
+              5,
+              1080,
+              810
+            ],
+            "postprocessReplayInputExact": true,
+            "postprocessReplayImageExact": true
+          }
+        ],
+        "originalFilesUnchanged": true,
+        "sourceScript": "ax_infer.py",
+        "sourceScriptSha256": "ca710dfc5866d12fd4079ac0325c5bcde1e242d89025373d4b9989fa13535354",
+        "inputFile": "bus.jpg",
+        "inputSha256": "33b198a1d2839bb9ac4c65d61f9e852196793cae9a0781360859425f6022b69c",
+        "inputPath": "/validation/effects/yolo26-seg-variants-20261005/inputs/bus.jpg",
+        "outputPath": "/validation/effects/yolo26-seg-variants-20261005/outputs/yolo26s.jpg",
+        "outputSha256": "502e6f48b6d3d0f7e15cf68f757580b0fddb76eb5c0ccb13b829f32c4e7bb07e",
+        "runsPerWeight": 2,
+        "qualityAccepted": false
+      }
+    },
+    {
+      "label": "yolo26x · NPU1 / NPU3",
+      "observation": "公交车和人物均有掩码；最左侧截断人物出现两个重叠实例且一个框明显延伸到路面，人物附近仍有少量背景碎片。 NPU1与NPU3输出图的文件内容相同，因此合并展示。",
+      "previews": [
+        {
+          "caption": "实际实例分割输出：yolo26x",
+          "path": "/validation/effects/yolo26-seg-variants-20261005/outputs/yolo26x.jpg"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "权重",
+            "程序输出人物实例数",
+            "程序输出公交车实例数"
+          ],
+          "rows": [
+            [
+              "yolo26x-seg_npu1.axmodel",
+              5,
+              1
+            ],
+            [
+              "yolo26x-seg_npu3.axmodel",
+              5,
+              1
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "completed": true,
+        "provider": "AXCLRTExecutionProvider",
+        "inferenceEvidence": "original-cv-variant-samples",
+        "modelId": "yolo26-seg",
+        "revision": "266383e32988080759a92764eb1afd9c8cbea192",
+        "actualCapacity": "16GB",
+        "sessions": [
+          {
+            "model": "ax650/yolo26x-seg_npu1.axmodel",
+            "sha256": "b012b7498b3cd24b3f063d630cb7685dc3c4237248184aa0ff1d37fbfa279599",
+            "allFinite": true,
+            "runMilliseconds": [
+              160.1541610007189,
+              163.75800700006948
+            ]
+          },
+          {
+            "model": "ax650/yolo26x-seg_npu3.axmodel",
+            "sha256": "5838e7ff80a30f6e326d3d43bba368067ce994c9d3d5e686b692a2253f34e8dd",
+            "allFinite": true,
+            "runMilliseconds": [
+              87.05406399985804,
+              83.45488499981002
+            ]
+          }
+        ],
+        "weightResults": [
+          {
+            "weight": "ax650/yolo26x-seg_npu1.axmodel",
+            "independentProcesses": 2,
+            "rawOutputsExact": true,
+            "imageSha256": "9ed6e2a933b5ebbecc398b1948aab356d5d5ded0ac7a50f82e39d74827ad4167",
+            "metadata": [
+              {
+                "inputs": [
+                  {
+                    "name": "images",
+                    "shape": [
+                      1,
+                      640,
+                      640,
+                      3
+                    ],
+                    "dtype": "uint8"
+                  }
+                ],
+                "outputs": [
+                  {
+                    "name": "output0",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      4
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "output1",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      80
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1047",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      32
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1069",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      4
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1109",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      80
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1131",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      32
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1153",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      4
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1193",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      80
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1215",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      32
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1308",
+                    "shape": [
+                      1,
+                      32,
+                      160,
+                      160
+                    ],
+                    "dtype": "float32"
+                  }
+                ]
+              }
+            ],
+            "segmentationObjects": [
+              {
+                "box": [
+                  0.0,
+                  226.36511135101318,
+                  798.0727615356445,
+                  735.7553043365479
+                ],
+                "confidence": 0.9764397144317627,
+                "classId": 5,
+                "maskPixels": 258273,
+                "maskBounds": [
+                  0,
+                  229,
+                  799,
+                  722
+                ]
+              },
+              {
+                "box": [
+                  46.7591814994812,
+                  396.0914697647095,
+                  247.30650329589844,
+                  905.4816627502441
+                ],
+                "confidence": 0.9498018622398376,
+                "classId": 0,
+                "maskPixels": 48738,
+                "maskBounds": [
+                  50,
+                  390,
+                  245,
+                  904
+                ]
+              },
+              {
+                "box": [
+                  670.6934967041016,
+                  396.0914697647095,
+                  810.0,
+                  877.4050369262695
+                ],
+                "confidence": 0.9274550080299377,
+                "classId": 0,
+                "maskPixels": 21976,
+                "maskBounds": [
+                  667,
+                  390,
+                  810,
+                  873
+                ]
+              },
+              {
+                "box": [
+                  220.79203033447266,
+                  408.12430572509766,
+                  341.12041568756104,
+                  861.3612213134766
+                ],
+                "confidence": 0.9131104946136475,
+                "classId": 0,
+                "maskPixels": 34230,
+                "maskBounds": [
+                  220,
+                  403,
+                  340,
+                  860
+                ]
+              },
+              {
+                "box": [
+                  0.0,
+                  542.047679901123,
+                  83.15324521064758,
+                  1059.4597549438477
+                ],
+                "confidence": 0.6865572929382324,
+                "classId": 0,
+                "maskPixels": 11814,
+                "maskBounds": [
+                  0,
+                  547,
+                  82,
+                  869
+                ]
+              },
+              {
+                "box": [
+                  0.0,
+                  549.191333770752,
+                  78.76035332679749,
+                  875.493106842041
+                ],
+                "confidence": 0.6313133835792542,
+                "classId": 0,
+                "maskPixels": 11886,
+                "maskBounds": [
+                  0,
+                  547,
+                  77,
+                  871
+                ]
+              }
+            ],
+            "maskSha256": "7e2b7208d6f97cf137856e18db4b7efe49c56daba4efcc073634109e3401ed4b",
+            "maskShape": [
+              6,
+              1080,
+              810
+            ],
+            "postprocessReplayInputExact": true,
+            "postprocessReplayImageExact": true
+          },
+          {
+            "weight": "ax650/yolo26x-seg_npu3.axmodel",
+            "independentProcesses": 2,
+            "rawOutputsExact": true,
+            "imageSha256": "9ed6e2a933b5ebbecc398b1948aab356d5d5ded0ac7a50f82e39d74827ad4167",
+            "metadata": [
+              {
+                "inputs": [
+                  {
+                    "name": "images",
+                    "shape": [
+                      1,
+                      640,
+                      640,
+                      3
+                    ],
+                    "dtype": "uint8"
+                  }
+                ],
+                "outputs": [
+                  {
+                    "name": "output0",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      4
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "output1",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      80
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1047",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      32
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1069",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      4
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1109",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      80
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1131",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      32
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1153",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      4
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1193",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      80
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1215",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      32
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1308",
+                    "shape": [
+                      1,
+                      32,
+                      160,
+                      160
+                    ],
+                    "dtype": "float32"
+                  }
+                ]
+              }
+            ],
+            "segmentationObjects": [
+              {
+                "box": [
+                  0.0,
+                  226.36511135101318,
+                  798.0727615356445,
+                  735.7553043365479
+                ],
+                "confidence": 0.9764397144317627,
+                "classId": 5,
+                "maskPixels": 258273,
+                "maskBounds": [
+                  0,
+                  229,
+                  799,
+                  722
+                ]
+              },
+              {
+                "box": [
+                  46.7591814994812,
+                  396.0914697647095,
+                  247.30650329589844,
+                  905.4816627502441
+                ],
+                "confidence": 0.9498018622398376,
+                "classId": 0,
+                "maskPixels": 48738,
+                "maskBounds": [
+                  50,
+                  390,
+                  245,
+                  904
+                ]
+              },
+              {
+                "box": [
+                  670.6934967041016,
+                  396.0914697647095,
+                  810.0,
+                  877.4050369262695
+                ],
+                "confidence": 0.9274550080299377,
+                "classId": 0,
+                "maskPixels": 21976,
+                "maskBounds": [
+                  667,
+                  390,
+                  810,
+                  873
+                ]
+              },
+              {
+                "box": [
+                  220.79203033447266,
+                  408.12430572509766,
+                  341.12041568756104,
+                  861.3612213134766
+                ],
+                "confidence": 0.9131104946136475,
+                "classId": 0,
+                "maskPixels": 34230,
+                "maskBounds": [
+                  220,
+                  403,
+                  340,
+                  860
+                ]
+              },
+              {
+                "box": [
+                  0.0,
+                  542.047679901123,
+                  83.15324521064758,
+                  1059.4597549438477
+                ],
+                "confidence": 0.6865572929382324,
+                "classId": 0,
+                "maskPixels": 11814,
+                "maskBounds": [
+                  0,
+                  547,
+                  82,
+                  869
+                ]
+              },
+              {
+                "box": [
+                  0.0,
+                  549.191333770752,
+                  78.76035332679749,
+                  875.493106842041
+                ],
+                "confidence": 0.6313133835792542,
+                "classId": 0,
+                "maskPixels": 11886,
+                "maskBounds": [
+                  0,
+                  547,
+                  77,
+                  871
+                ]
+              }
+            ],
+            "maskSha256": "7e2b7208d6f97cf137856e18db4b7efe49c56daba4efcc073634109e3401ed4b",
+            "maskShape": [
+              6,
+              1080,
+              810
+            ],
+            "postprocessReplayInputExact": true,
+            "postprocessReplayImageExact": true
+          }
+        ],
+        "originalFilesUnchanged": true,
+        "sourceScript": "ax_infer.py",
+        "sourceScriptSha256": "ca710dfc5866d12fd4079ac0325c5bcde1e242d89025373d4b9989fa13535354",
+        "inputFile": "bus.jpg",
+        "inputSha256": "33b198a1d2839bb9ac4c65d61f9e852196793cae9a0781360859425f6022b69c",
+        "inputPath": "/validation/effects/yolo26-seg-variants-20261005/inputs/bus.jpg",
+        "outputPath": "/validation/effects/yolo26-seg-variants-20261005/outputs/yolo26x.jpg",
+        "outputSha256": "9ed6e2a933b5ebbecc398b1948aab356d5d5ded0ac7a50f82e39d74827ad4167",
+        "runsPerWeight": 2,
+        "qualityAccepted": false
+      }
+    }
+  ]
+}

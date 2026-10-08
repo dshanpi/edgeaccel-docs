@@ -1,0 +1,49 @@
+{
+  "modelId": "Drone-axera",
+  "repo": "AXERA-TECH/Drone-axera",
+  "revision": "bca09e938a5ef7cdf81862e4acd4b706718558a3",
+  "files": [
+    {
+      "path": "README.md",
+      "size": 2862,
+      "verifiedHashes": {
+        "sha256": "522fa35edf9310b9b5efcbd595904e55c8b046680755b7b624c4e32b06ba1998"
+      }
+    },
+    {
+      "path": "axmodel_infer_yolo11.py",
+      "size": 8703,
+      "verifiedHashes": {
+        "sha256": "c59db6f724bc3018ee168ff61ffe1e6e53db5d7975ab927630c6061d0173d933"
+      }
+    },
+    {
+      "path": "axmodel_infer_yolo26.py",
+      "size": 21049,
+      "verifiedHashes": {
+        "sha256": "21c5fb80b4c22b30672a5e870a5a579515e9ffc52228043bb10001526dc117f8"
+      }
+    },
+    {
+      "path": "config.json",
+      "size": 0,
+      "verifiedHashes": {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "path": "test/23.jpg",
+      "size": 21074,
+      "verifiedHashes": {
+        "sha256": "e0909d98ca629d9d97a2687240351fa7d95a5d97056c7dff6065b06f5aa76bab"
+      }
+    },
+    {
+      "path": "AX650/yolo26s_drone_650.axmodel",
+      "size": 10320993,
+      "verifiedHashes": {
+        "sha256": "82c1afbf5f20e0bc2a44a01c9726df1cc679d5e0adfd87d509d9a932b98468ee"
+      }
+    }
+  ]
+}

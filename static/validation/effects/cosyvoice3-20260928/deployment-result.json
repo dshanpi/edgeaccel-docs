@@ -5,7 +5,7 @@
   "variants": [
     {
       "label": "W8A16 · 十步 Flow",
-      "observation": "四段短句均达到 EOS，输出 24 kHz 单声道语音，数值有限且无削波。拼音标注样例也保留实际音频，未据此判定发音准确率。",
+      "observation": "四段短句均达到 EOS，输出 24 kHz 单声道语音，数值有限且无削波。拼音标注样例也保留实际音频，未据此判定发音准确率。 使用独立的 Whisper-base 在主机 CPU 上识别本页实际 WAV，未向识别器提供目标文字提示。识别结果可能包含同音字、繁简体差异、漏词或识别器自身错误；下表用于辅助定位需要复听的位置，不是人工听审，也不是语音合成准确率。",
       "previews": [
         {
           "caption": "四段实际生成语音的浮点波形",
@@ -62,6 +62,35 @@
               "6.64 s",
               "63.748 s",
               "29.359 s / 4.42"
+            ]
+          ]
+        },
+        {
+          "headers": [
+            "合成输入文字",
+            "实际音频的 ASR 辅助转写",
+            "核对说明"
+          ],
+          "rows": [
+            [
+              "你好，欢迎使用算力卡语音合成。",
+              "也好 欢迎使用三立卡与一合成",
+              "问候及“算力卡语音合成”出现识别偏差。"
+            ],
+            [
+              "今天的温度是二十六度，请打开窗户。",
+              "今天的温度是26度,请带穿户",
+              "句尾“请打开窗户”出现识别偏差。"
+            ],
+            [
+              "Hello, welcome to our voice demonstration.",
+              "Hello, welcome to our voice demonstration.",
+              "英文词语对应，未据此评价音色或自然度。"
+            ],
+            [
+              "高管也通过电话、短信、微信等方式对报道[j][ǐ]予好评。",
+              "高管也通过电话短信微信等方式对报道急遇亭",
+              "拼音标注后的句尾未完整对应，需复听读音。"
             ]
           ]
         }
@@ -289,5 +318,48 @@
         "coverage": "Official ARM64 native AXCL pipeline, W8A16 and n_timesteps=10 with fixed preset prompt. Configured files are recorded, without per-model/per-shape execution trace or NPU tensor checks."
       }
     }
-  ]
+  ],
+  "auxiliarySpeechReview": {
+    "reviewedAt": "2026-10-01T18:03:58.419898+00:00",
+    "asrRepo": "openai/whisper-base",
+    "asrRevision": "e37978b90ca9030d5170a5c07aadb050351a65bb",
+    "device": "host CPU",
+    "initialPrompt": null,
+    "newNpuRuns": 0,
+    "scope": "使用独立的 Whisper-base 在主机 CPU 上识别本页实际 WAV，未向识别器提供目标文字提示。识别结果可能包含同音字、繁简体差异、漏词或识别器自身错误；下表用于辅助定位需要复听的位置，不是人工听审，也不是语音合成准确率。",
+    "results": [
+      {
+        "audioPath": "/validation/effects/cosyvoice3-20260928/sample-1.wav",
+        "sha256": "07ed35efa9e9ea24ef9e938125f4c496cfb51935a66cb85376e1962590bb138a",
+        "targetText": "你好，欢迎使用算力卡语音合成。",
+        "asrTranscript": "也好 欢迎使用三立卡与一合成",
+        "language": "zh",
+        "observation": "问候及“算力卡语音合成”出现识别偏差。"
+      },
+      {
+        "audioPath": "/validation/effects/cosyvoice3-20260928/sample-2.wav",
+        "sha256": "df9a9673aa7c7959a079bf2c7b474def2bc7ac8f316c56a9db9b6c49c8c11ad4",
+        "targetText": "今天的温度是二十六度，请打开窗户。",
+        "asrTranscript": "今天的温度是26度,请带穿户",
+        "language": "zh",
+        "observation": "句尾“请打开窗户”出现识别偏差。"
+      },
+      {
+        "audioPath": "/validation/effects/cosyvoice3-20260928/sample-3.wav",
+        "sha256": "20720d14c01c80a50e966614400a7fb0fd659dd5bd96771783626def05162484",
+        "targetText": "Hello, welcome to our voice demonstration.",
+        "asrTranscript": " Hello, welcome to our voice demonstration.",
+        "language": "en",
+        "observation": "英文词语对应，未据此评价音色或自然度。"
+      },
+      {
+        "audioPath": "/validation/effects/cosyvoice3-20260928/sample-4.wav",
+        "sha256": "5aa7cefafca6de7335bda19cb221783e43d9afebca600d3e079e36054b85dafc",
+        "targetText": "高管也通过电话、短信、微信等方式对报道[j][ǐ]予好评。",
+        "asrTranscript": "高管也通过电话短信微信等方式对报道急遇亭",
+        "language": "zh",
+        "observation": "拼音标注后的句尾未完整对应，需复听读音。"
+      }
+    ]
+  }
 }

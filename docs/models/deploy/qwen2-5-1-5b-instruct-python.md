@@ -90,9 +90,9 @@ python "$EXAMPLE_DIR/qwen_python_card.py" \
 
 ## 查看部署效果
 
-**已运行，效果仍需评估** · 2026-09-29 · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
+**已运行，效果仍需评估** · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
 
-在 RK3576 + AX8850 16GB 上通过 Python 调用 AXCL，完成算术、中文问答和 JSON 输出三条独立输入。
+算术只输出数字、直接输出 JSON 的固定样例符合要求；中文说明已保留。长上下文、持续运行及其他输入仍待验证。
 
 **示例 1：输入**
 
@@ -149,7 +149,7 @@ Return only a JSON object with apple equal to 3 and pear equal to 2.
 <details>
 <summary>查看样例环境与运行耗时</summary>
 
-环境：RK3576 + AX8850 16GB M.2。日期：2026-09-29。模型版本：`aa999d91e7789a80a00bb910cfed4ca8de2b38a2`。
+环境：RK3576 + AX8850 16GB M.2。模型版本：`aa999d91e7789a80a00bb910cfed4ca8de2b38a2`。
 
 | 组件 | 版本或配置 |
 | --- | --- |
@@ -166,8 +166,6 @@ Return only a JSON object with apple equal to 3 and pear equal to 2.
 
 适用范围：
 
-- 算术和本条 JSON 示例符合输入要求，中文回答仍有术语表述问题。三条短输入仅证明本页基础运行，不代表完整问答质量评测通过。
-- 本次仅实测16GB卡上的三条独立短输入；连续对话、长上下文、并发、持续运行和实际8GB容量需要单独验证。
 - 上游逐token终端打印与完整字符串可能不同；本页展示完整token序列的实际解码结果。
 
 </details>

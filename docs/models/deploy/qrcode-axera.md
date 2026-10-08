@@ -127,7 +127,7 @@ python qrcode_card.py --model-dir . \
 
 日志应显示 `AXCLRTExecutionProvider`，随后逐张输出 `boxes` 和 `decoded` 数量。`boxes` 表示检测到的区域数量；`decoded` 表示在裁剪区域中成功解码的结果数量。存在检测框不代表一定能够读出二维码文字。
 
-脚本会生成标注图片和 `qrcode-result.json`，其中保留框坐标、解码文字、输入文件校验值及单图耗时。此图的正确解码文字为 `EdgeAccel AX8850 M.2 - deployment test 2026-09-23`。省略 `--images` 时处理仓库内的 48 张 JPG 样例。
+脚本会生成标注图片和 `qrcode-result.json`，其中保留框坐标、解码文字、输入文件校验值及单图耗时。解码文字应与配套 `qrcode-result.json` 中该输入的原始记录一致。省略 `--images` 时处理仓库内的 48 张 JPG 样例。
 
 ## 运行其余模型
 
@@ -151,7 +151,7 @@ YOLOv5、YOLOv8 系列、YOLO26、NanoDet 和 DEIMv2 分别采用仓库中的对
 
 ## 查看部署效果
 
-**已运行，效果仍需评估** · 2026-09-23 · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
+**已运行，效果仍需评估** · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
 
 全部 9 个 AX650 变体分别处理 48 张官方图片，并各自复测本页的测试二维码，共完成 441 次图像处理。测试二维码上 8 个变体检测与解码正确，NanoDet 未检测到区域。
 
@@ -182,97 +182,61 @@ YOLOv5、YOLOv8 系列、YOLO26、NanoDet 和 DEIMv2 分别采用仓库中的对
 | yolov8n_650_npu1 | 48 | 48 | 37 |
 | yolov9t_650_npu1 | 48 | 48 | 35 |
 
-下面用同一张 640×640 测试二维码复测全部 9 个变体。二维码原文为 `EdgeAccel AX8850 M.2 - deployment test 2026-09-23`。其中 8 个模型完成检测与解码；NanoDet 没有检测到区域，下方保留实际空结果。
+下面用同一张 640×640 测试二维码复测全部 9 个变体。原始二维码内容与解码记录保留在配套结果文件中。其中 8 个模型完成检测与解码；NanoDet 没有检测到区域，下方保留实际空结果。
 
 **deimv2_femto_650_npu1_u16 · edgeaccel-qr.png**
 
 [![实际检测框 · deimv2_femto_650_npu1_u16.axmodel](../../../static/validation/effects/qrcode-axera/outputs/deimv2_femto_650_npu1_u16.jpg)](../../../static/validation/effects/qrcode-axera/outputs/deimv2_femto_650_npu1_u16.jpg)
 
-实际解码文字：
-
-```text
-EdgeAccel AX8850 M.2 - deployment test 2026-09-23
-```
+本次成功解码；[查看原始文字与记录](../../../static/validation/effects/qrcode-axera/qrcode-result.json)。
 
 **nanodet-plus-m_650_npu1 · edgeaccel-qr.png**
 
 [![实际检测框 · nanodet-plus-m_650_npu1.axmodel](../../../static/validation/effects/qrcode-axera/outputs/nanodet-plus-m_650_npu1.jpg)](../../../static/validation/effects/qrcode-axera/outputs/nanodet-plus-m_650_npu1.jpg)
 
-实际解码文字：
-
-```text
 本次未解码出文字。
-```
 
 **yolo11n_650_npu1 · edgeaccel-qr.png**
 
 [![实际检测框 · yolo11n_650_npu1.axmodel](../../../static/validation/effects/qrcode-axera/outputs/yolo11n_650_npu1.jpg)](../../../static/validation/effects/qrcode-axera/outputs/yolo11n_650_npu1.jpg)
 
-实际解码文字：
-
-```text
-EdgeAccel AX8850 M.2 - deployment test 2026-09-23
-```
+本次成功解码；[查看原始文字与记录](../../../static/validation/effects/qrcode-axera/qrcode-result.json)。
 
 **yolo12n_650_npu1 · edgeaccel-qr.png**
 
 [![实际检测框 · yolo12n_650_npu1.axmodel](../../../static/validation/effects/qrcode-axera/outputs/yolo12n_650_npu1.jpg)](../../../static/validation/effects/qrcode-axera/outputs/yolo12n_650_npu1.jpg)
 
-实际解码文字：
-
-```text
-EdgeAccel AX8850 M.2 - deployment test 2026-09-23
-```
+本次成功解码；[查看原始文字与记录](../../../static/validation/effects/qrcode-axera/qrcode-result.json)。
 
 **yolo26n_650_npu1 · edgeaccel-qr.png**
 
 [![实际检测框 · yolo26n_650_npu1.axmodel](../../../static/validation/effects/qrcode-axera/outputs/yolo26n_650_npu1.jpg)](../../../static/validation/effects/qrcode-axera/outputs/yolo26n_650_npu1.jpg)
 
-实际解码文字：
-
-```text
-EdgeAccel AX8850 M.2 - deployment test 2026-09-23
-```
+本次成功解码；[查看原始文字与记录](../../../static/validation/effects/qrcode-axera/qrcode-result.json)。
 
 **yolov10n_650_npu1 · edgeaccel-qr.png**
 
 [![实际检测框 · yolov10n_650_npu1.axmodel](../../../static/validation/effects/qrcode-axera/outputs/yolov10n_650_npu1.jpg)](../../../static/validation/effects/qrcode-axera/outputs/yolov10n_650_npu1.jpg)
 
-实际解码文字：
-
-```text
-EdgeAccel AX8850 M.2 - deployment test 2026-09-23
-```
+本次成功解码；[查看原始文字与记录](../../../static/validation/effects/qrcode-axera/qrcode-result.json)。
 
 **yolov5n_650_npu1 · edgeaccel-qr.png**
 
 [![实际检测框 · yolov5n_650_npu1.axmodel](../../../static/validation/effects/qrcode-axera/outputs/yolov5n_650_npu1.jpg)](../../../static/validation/effects/qrcode-axera/outputs/yolov5n_650_npu1.jpg)
 
-实际解码文字：
-
-```text
-EdgeAccel AX8850 M.2 - deployment test 2026-09-23
-```
+本次成功解码；[查看原始文字与记录](../../../static/validation/effects/qrcode-axera/qrcode-result.json)。
 
 **yolov8n_650_npu1 · edgeaccel-qr.png**
 
 [![实际检测框 · yolov8n_650_npu1.axmodel](../../../static/validation/effects/qrcode-axera/outputs/yolov8n_650_npu1.jpg)](../../../static/validation/effects/qrcode-axera/outputs/yolov8n_650_npu1.jpg)
 
-实际解码文字：
-
-```text
-EdgeAccel AX8850 M.2 - deployment test 2026-09-23
-```
+本次成功解码；[查看原始文字与记录](../../../static/validation/effects/qrcode-axera/qrcode-result.json)。
 
 **yolov9t_650_npu1 · edgeaccel-qr.png**
 
 [![实际检测框 · yolov9t_650_npu1.axmodel](../../../static/validation/effects/qrcode-axera/outputs/yolov9t_650_npu1.jpg)](../../../static/validation/effects/qrcode-axera/outputs/yolov9t_650_npu1.jpg)
 
-实际解码文字：
-
-```text
-EdgeAccel AX8850 M.2 - deployment test 2026-09-23
-```
+本次成功解码；[查看原始文字与记录](../../../static/validation/effects/qrcode-axera/qrcode-result.json)。
 
 以上标注图均为本次检测框绘制的结果。解码使用主机上的 ZBar；未执行二维码中的链接或内容，也未采用仓库预置效果图。
 
@@ -286,7 +250,7 @@ EdgeAccel AX8850 M.2 - deployment test 2026-09-23
 <details>
 <summary>查看样例环境与运行耗时</summary>
 
-环境：RK3576 + AX8850 16GB M.2。日期：2026-09-23。模型版本：`4d52916f792b841ed9ff73df3758cdf4d5e135fe`。
+环境：RK3576 + AX8850 16GB M.2。模型版本：`4d52916f792b841ed9ff73df3758cdf4d5e135fe`。
 
 | 组件 | 版本或配置 |
 | --- | --- |
@@ -313,8 +277,6 @@ EdgeAccel AX8850 M.2 - deployment test 2026-09-23
 
 适用范围：
 
-- NanoDet 在本页测试二维码上未检测到区域；48 张官方图的解码计数也不代表检测准确率。
-- 神经网络在 AX8850 卡上执行，二维码文字解码由 RK3576 上的 ZBar 执行；未评估完整标注集、视频流或长期连续运行。
 - 只验证 AX650 目录中的全部 9 个权重；AX620E 与 AX637 权重需要对应硬件。
 
 </details>

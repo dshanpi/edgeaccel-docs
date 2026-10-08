@@ -8,71 +8,40 @@ description: "MiniCPM5-2B-GPTQ-Int4 的 M.2 算力卡部署步骤、配套文件
 
 MiniCPM5-2B-GPTQ-Int4 用于文本生成。本页说明 M.2 算力卡的接入条件、部署步骤与结果检查方法。
 
-> 本机尚未实测。需确认 AXCL 适配。
+> 本机尚未实测。量化源权重，选择编译版本。
 
 ## 准备运行环境
 
-在连接算力卡的 Linux 主机终端执行，RK3576 使用 ARM64 环境。首次部署先完成[驱动与设备检查](../../usage/device-check.md)、[准备主机环境](../../getting-started/prepare.md)和[下载工具安装](../../usage/download-models.md#使用-hugging-face-下载)。已完成这些步骤可直接下载模型。
+本仓库提供 GPTQ 量化源权重，固定版本不含 `.axmodel`。在 M.2 算力卡上运行时，选择下表中的官方编译版本，并完成[驱动与设备检查](../../usage/device-check.md)和[AXCL 大模型运行时安装](../llm-runtime.md)。
 
-后文使用设备 0，运行前用 `axcl-smi` 确认设备可用。
+## 选择并下载编译版本
 
-## 确认算力卡接入条件
+进入所选版本的独立部署页，按其中的固定提交下载模型、分词器和配置。不同规格使用各自的完整文件，不混用目录。
 
-该提交的模型文件或示例已收录，尚未核对到可直接用于此 M.2 卡的完整 AXCL 组合。下面给出此模型的接入文件与待完成项目，当前不作为已可运行教程。
+| 编译版本 / 部署入口 | 固定提交 | 该版本实测范围 |
+| --- | --- | --- |
+| [MiniCPM5-2B-GPTQ-Int4-AX650-C128-P1K-CTX2K](./minicpm5-2b-gptq-int4-ax650-c128-p1k-ctx2k.md) | `2c7c6ffc0a1ed07d7ffec83368cbc752606dc407` | RK3576 DshanPi A1 + AX8850 8GB M.2；通过（结果正确性） |
+| [MiniCPM5-2B-GPTQ-Int4-AX650-C128-P4K-CTX6K](./minicpm5-2b-gptq-int4-ax650-c128-p4k-ctx6k.md) | `df71361ffdcad3fca0c9e1cf461faffd322df6f4` | RK3576 + AX8850 16GB M.2；通过（结果正确性） |
 
-### 完成接入后再运行
+## 运行文本生成
 
-1. 确认实际权重编译目标为本卡，检查输入输出的 shape、dtype、布局与批次。
-2. Python 路径使用 `AXCLRTExecutionProvider`；C++ 路径使用 AXCL 设备初始化和内存接口。依赖 `/soc/lib` 或芯片板端 runtime 的程序需移植或另行编译。
-3. 先用固定输入打通模型加载、执行与输出解码，再检查下节所列效果。
+在所选部署页完成下载后，沿用该页的模型目录、运行时版本和配置启动服务，再执行页面给出的文本请求。收到完整回复后，核对回答内容及结束状态。
 
-共用步骤见[Python 接口](../../usage/python.md)与[自定义模型接入](../custom-model.md)。配套入口确认后，再使用对应程序的参数运行。
-## 下载模型与样例
-
-本页使用 `AXERA-TECH/MiniCPM5-2B-GPTQ-Int4` 的固定版本。仓库可能包含多个芯片或模型规格，下载前检查磁盘空间。
-
-```bash
-MODEL_DIR=~/edgeaccel/models/minicpm5-2b-gptq-int4/eb062da85bfa
-mkdir -p "$MODEL_DIR"
-~/edgeaccel/hf-env/bin/hf download AXERA-TECH/MiniCPM5-2B-GPTQ-Int4 \
-  --revision eb062da85bfa5c839905da40911967263988dd6d \
-  --local-dir "$MODEL_DIR"
-cd "$MODEL_DIR"
-```
-
-保留当前终端中的 `MODEL_DIR` 变量，后续命令沿用此目录。下载受阻或需要离线复制时，见[下载方式与文件校验](../../usage/download-models.md)。
+量化源权重不能直接交给 `axcl_run_model`。需要自行转换模型时，另按[自定义模型接入](../custom-model.md)准备工具链，转换产物需单独验证。
 
 ## 查看部署效果
 
-**本机尚未实测。** 部署后请按以下项目检查输出。
+以下入口展示对应编译版本的实际请求、完整回复和耗时。源权重仓库本身尚无独立的算力卡运行记录，编译版本的结果仅适用于各页列出的硬件、模型提交和测试输入。
 
-- 先测短问答，再测两轮上下文；翻译模型使用有参考译文的短句。
-- 记录首 token 延迟、生成速率和实际上下文长度，确认没有乱码、持续重复或异常提前结束。
+- [MiniCPM5-2B-GPTQ-Int4-AX650-C128-P1K-CTX2K 的部署效果](./minicpm5-2b-gptq-int4-ax650-c128-p1k-ctx2k.md#查看部署效果)：三组文本样例已核对：算术题返回 5；中文简述 PCIe；按要求输出含 apple=3、pear=2 的裸 JSON。
+- [MiniCPM5-2B-GPTQ-Int4-AX650-C128-P4K-CTX6K 的部署效果](./minicpm5-2b-gptq-int4-ax650-c128-p4k-ctx6k.md#查看部署效果)：在 16GB 卡上完成三次文本生成：算术仅返回 5，中文说明符合 PCIe 的用途，JSON 的键名、数值和输出格式均符合要求。
 
-遇到加载、内存或后端错误时，按[常见问题](../../usage/troubleshooting.md)处理。需要更换输入或接入业务时，按[检查输出与记录结果](../../reference/validation.md)保留自己的结果。
+## 核对版本来源
 
-<details>
-<summary>查看文件用途与版本信息</summary>
+量化源权重固定提交为 `eb062da85bfa5c839905da40911967263988dd6d`。两个编译仓库的模型卡均将本仓库列为转换来源；编译版本的提交与源权重提交独立管理。
 
-| 文件 / 目录内路径 | 用途 |
-| --- | --- |
-| [`config.json`](https://huggingface.co/AXERA-TECH/MiniCPM5-2B-GPTQ-Int4/blob/eb062da85bfa5c839905da40911967263988dd6d/config.json) | 运行配置 |
-| [`generation_config.json`](https://huggingface.co/AXERA-TECH/MiniCPM5-2B-GPTQ-Int4/blob/eb062da85bfa5c839905da40911967263988dd6d/generation_config.json) | 运行配置 |
-| [`quantize_config.json`](https://huggingface.co/AXERA-TECH/MiniCPM5-2B-GPTQ-Int4/blob/eb062da85bfa5c839905da40911967263988dd6d/quantize_config.json) | 运行配置 |
-| [`tokenizer_config.json`](https://huggingface.co/AXERA-TECH/MiniCPM5-2B-GPTQ-Int4/blob/eb062da85bfa5c839905da40911967263988dd6d/tokenizer_config.json) | 运行配置 |
-
-仓库提交：`eb062da85bfa5c839905da40911967263988dd6d`。仓库中的 0 个 `.axmodel` 文件可能包括多个芯片、规格和分片。运行时使用本页指定的配套文件，完整列表见[固定版本目录](https://huggingface.co/AXERA-TECH/MiniCPM5-2B-GPTQ-Int4/tree/eb062da85bfa5c839905da40911967263988dd6d)。
-
-</details>
-
-<details>
-<summary>补充说明与版本差异</summary>
-
-- 这是模型变体集合入口。优先选择明确标注 AX650 与上下文规格的子版本部署，避免将汇总配置当成运行配置。
-- 保留该 GPTQ 量化版本的分片、embedding 和配置，不能与同系列非量化模型混放。
-- 该提交未直接列出 .axmodel 文件；先核对模型卡指向的实际权重或程序仓库，不能将该目录直接交给 axcl_run_model。
-
-</details>
+- [MiniCPM5-2B-GPTQ-Int4-AX650-C128-P1K-CTX2K 的固定版本模型卡](https://huggingface.co/AXERA-TECH/MiniCPM5-2B-GPTQ-Int4-AX650-C128-P1K-CTX2K/blob/2c7c6ffc0a1ed07d7ffec83368cbc752606dc407/README.md)。
+- [MiniCPM5-2B-GPTQ-Int4-AX650-C128-P4K-CTX6K 的固定版本模型卡](https://huggingface.co/AXERA-TECH/MiniCPM5-2B-GPTQ-Int4-AX650-C128-P4K-CTX6K/blob/df71361ffdcad3fca0c9e1cf461faffd322df6f4/README.md)。
 
 ## 参考资料
 

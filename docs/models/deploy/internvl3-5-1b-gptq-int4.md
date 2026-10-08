@@ -166,7 +166,7 @@ PY
 
 ## 查看部署效果
 
-**已运行，效果仍需评估** · 2026-09-23 · RK3576 DshanPi A1 + AX8850 8GB M.2。以下输入与输出来自本页固定版本的实际运行。
+**已运行，效果仍需评估** · RK3576 DshanPi A1 + AX8850 8GB M.2。以下输入与输出来自本页固定版本的实际运行。
 
 完成英文描述、人数问答和中文描述三组单图请求。人数回答为三人，中英文能描述宇航服、植被与右侧人物弯腰的姿态；三段回复均在 128 token 内结束。“户外探险”“热带地区”等属于模型推测，当前只确认此图片的基本运行。
 
@@ -229,7 +229,7 @@ The image shows three people in space suits. Therefore, there are 3 people in th
 <details>
 <summary>查看样例环境与运行耗时</summary>
 
-环境：RK3576 DshanPi A1 + AX8850 8GB M.2。日期：2026-09-23。模型版本：`b76fb688c82805a82040f972ae1473be7154c8e6`。
+环境：RK3576 DshanPi A1 + AX8850 8GB M.2。模型版本：`b76fb688c82805a82040f972ae1473be7154c8e6`。
 
 | 组件 | 版本或配置 |
 | --- | --- |
@@ -250,8 +250,6 @@ The image shows three people in space suits. Therefore, there are 3 people in th
 
 适用范围：
 
-- 人数、服装与大体场景可以对照输入；人物任务和具体地理环境无法仅由图片确认。
-- 只测试一张图片，未测试 OCR、多图、视频或更高分辨率输入。
 - 仅执行本页列出的短请求，未测试长期稳定性、并发或最大上下文；上游板端性能不作为本机结果。
 
 </details>

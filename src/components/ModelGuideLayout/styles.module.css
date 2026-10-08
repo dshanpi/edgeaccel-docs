@@ -1,0 +1,14 @@
+.hero {margin: 1.4rem 0 2rem; padding: 1.6rem; border: 1px solid var(--course-border); border-radius: 16px; background: linear-gradient(130deg, rgba(7,136,61,.08), transparent 75%), var(--ifm-background-surface-color);}
+.label {display: block; color: var(--ifm-color-primary); font-size: .76rem; font-weight: 700; letter-spacing: .04em;}
+.hero .title {font-size: clamp(1.3rem, 2.5vw, 1.75rem); line-height: 1.55; font-weight: 750; color: var(--ifm-heading-color); margin: .55rem 0;}
+.hero .description {font-size: .92rem; color: var(--ifm-color-emphasis-700); margin: 0;}
+.facts {display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1rem; margin: 1.2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--course-border);}
+.facts dt {font-size: .75rem; font-weight: 600; color: var(--ifm-color-primary); margin-bottom: .35rem;}
+.facts dd {margin: 0; font-size: .86rem; overflow-wrap: anywhere;}
+.next {display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .8rem; margin: 1.4rem 0 2rem;}
+.next a {padding: 1rem 1.2rem; border: 1px solid var(--course-border); border-radius: 10px; background: var(--ifm-background-surface-color); text-decoration: none;}
+.next a:hover {border-color: var(--ifm-color-primary); text-decoration: none;}
+.next a:focus-visible {outline: 2px solid var(--ifm-color-primary); outline-offset: 3px;}
+.next strong {font-size: .94rem; display: block; margin-bottom: .3rem;}
+.next a > span {display: block; color: var(--ifm-color-emphasis-700); font-size: .83rem; line-height: 1.7;}
+@media (max-width: 600px) {.hero {padding: 1.2rem;} .facts, .next {grid-template-columns: 1fr;} .facts {gap: .7rem;} .facts > div {display: grid; grid-template-columns: 4.5rem minmax(0,1fr); gap: .5rem;} .facts dt {margin: 0;}}

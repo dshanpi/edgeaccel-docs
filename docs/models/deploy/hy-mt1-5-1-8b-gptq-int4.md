@@ -151,9 +151,9 @@ PY
 
 ## 查看部署效果
 
-**已运行，效果仍需评估** · 2026-09-23 · RK3576 DshanPi A1 + AX8850 8GB M.2。以下输入与输出来自本页固定版本的实际运行。
+**已运行，效果仍需评估** · RK3576 DshanPi A1 + AX8850 8GB M.2。以下输入与输出来自本页固定版本的实际运行。
 
-完成两次中译英和一次英译中。目录指令和温度、内存数值翻译可读；首句把“算力卡”译成 computing power，丢失了卡这一实体含义。当前确认翻译服务可用，专业术语仍需审校。
+三次翻译均返回文本，目录指令及 42 摄氏度、6 GB 的数值保留；首句把“算力卡”译成 computing power，丢失卡这一实体含义。本次专业术语翻译未通过。
 
 **示例 1：输入**
 
@@ -207,7 +207,7 @@ The temperature of the device is 42 degrees Celsius. The remaining memory is 6 G
 <details>
 <summary>查看样例环境与运行耗时</summary>
 
-环境：RK3576 DshanPi A1 + AX8850 8GB M.2。日期：2026-09-23。模型版本：`5c0ecd91cd2dab6ad03892d510bb6f27e7170083`。
+环境：RK3576 DshanPi A1 + AX8850 8GB M.2。模型版本：`5c0ecd91cd2dab6ad03892d510bb6f27e7170083`。
 
 | 组件 | 版本或配置 |
 | --- | --- |
@@ -228,8 +228,6 @@ The temperature of the device is 42 degrees Celsius. The remaining memory is 6 G
 
 适用范围：
 
-- “算力卡”未准确译为 accelerator card，不能把三句接口成功视为专业翻译质量通过。
-- 只测试三条短句，没有验证段落、术语表或其他语言对。
 - 仅执行本页列出的短请求，未测试长期稳定性、并发或最大上下文；上游板端性能不作为本机结果。
 
 </details>

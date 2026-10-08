@@ -1,0 +1,1107 @@
+{
+  "modelId": "Spoken-Communication.axera",
+  "repo": "AXERA-TECH/Spoken-Communication.axera",
+  "revision": "ecd09194a4ed417f6466dedebcd85192118a7bc8",
+  "complete": true,
+  "files": [
+    {
+      "path": ".gitattributes",
+      "size": 7376,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/.gitattributes",
+      "verifiedHashes": {
+        "sha256": "187307c9ed88c603045ebeb4c051a4c2dc7bf3c7acf727c3e81c4d667d971709",
+        "gitBlob": "fe3a8260402978afc2cc151ca24f1b53a0f8e625"
+      }
+    },
+    {
+      "path": "README.md",
+      "size": 5432,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/README.md",
+      "verifiedHashes": {
+        "sha256": "ace489f26ccd642b83efdb47bdb426c5cf9a4e96b0e0d1fb0bb806d2c3adc267",
+        "gitBlob": "4700639ddddf75983186d8f17502607a272cee0e"
+      }
+    },
+    {
+      "path": "ax_model/.gitattributes",
+      "size": 88,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/ax_model/.gitattributes",
+      "verifiedHashes": {
+        "sha256": "289437f5a44e3a1fbc07e7214092c15dbae4385d93b5da044b0d16aa202d1036",
+        "gitBlob": "36b2f00858a8c6a57f8e985375e40a27a8133528"
+      }
+    },
+    {
+      "path": "ax_model/auto.npy",
+      "size": 2368,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/ax_model/auto.npy",
+      "verifiedHashes": {
+        "sha256": "8d0997706b30274f7ff3b157ca90df50b7ed8ced35091a0231700355d5ee1374",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "ax_model/chn_jpn_yue_eng_ko_spectok.bpe.model",
+      "size": 377341,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/ax_model/chn_jpn_yue_eng_ko_spectok.bpe.model",
+      "verifiedHashes": {
+        "sha256": "aa87f86064c3730d799ddf7af3c04659151102cba548bce325cf06ba4da4e6a8",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "ax_model/event_emo.npy",
+      "size": 4608,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/ax_model/event_emo.npy",
+      "verifiedHashes": {
+        "sha256": "1d22e3df5d192fdc3e73e368a2cb576975a5a43a114a8432a91c036adf8e2263",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "ax_model/sensevoice.axmodel",
+      "size": 262170623,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/ax_model/sensevoice.axmodel",
+      "verifiedHashes": {
+        "sha256": "7b64a36fa15e75ab5e3b75f18ae87a058970cff76219407e503b54fb53dd8e38",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "ax_model/sensevoice/am.mvn",
+      "size": 11203,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/ax_model/sensevoice/am.mvn",
+      "verifiedHashes": {
+        "sha256": "29b3c740a2c0cfc6b308126d31d7f265fa2be74f3bb095cd2f143ea970896ae5",
+        "gitBlob": "681910cd1ab6458b61474cdbf0d1ac5e810f7b0d"
+      }
+    },
+    {
+      "path": "ax_model/sensevoice/config.yaml",
+      "size": 1855,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/ax_model/sensevoice/config.yaml",
+      "verifiedHashes": {
+        "sha256": "f71e239ba36705564b5bf2d2ffd07eece07b8e3f2bbf6d2c99d8df856339ac19",
+        "gitBlob": "26bb9d3d20a09ff389c1ddb24865771d2312fc0f"
+      }
+    },
+    {
+      "path": "ax_model/vad.axmodel",
+      "size": 1150874,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/ax_model/vad.axmodel",
+      "verifiedHashes": {
+        "sha256": "7d89d1087f14597bc93ae5cf89e1c60d8ee76d7bdffbe679ef6dc002635e6f6b",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "ax_model/vad/am.mvn",
+      "size": 8040,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/ax_model/vad/am.mvn",
+      "verifiedHashes": {
+        "sha256": "6820fef9687708c4fc3fab2530179c8fcea6262daa25514380056cd8f6eb1754",
+        "gitBlob": "59f64ee6d485714bb5f9eb91842b9fa8fdb2d6f2"
+      }
+    },
+    {
+      "path": "ax_model/vad/config.yaml",
+      "size": 1215,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/ax_model/vad/config.yaml",
+      "verifiedHashes": {
+        "sha256": "486861ca26ddb79081663b6179cb204c6bfae71c52f04aafc48a9e9d8dde1e93",
+        "gitBlob": "4664aef9579e7aeea8a6081045a84dcbd354ce3e"
+      }
+    },
+    {
+      "path": "ax_model/withitn.npy",
+      "size": 2368,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/ax_model/withitn.npy",
+      "verifiedHashes": {
+        "sha256": "39bf02586f59237894fc2918ab2db4f12ec3c084c41465718832fbd7646ea729",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "ax_spoken_communication_demo.py",
+      "size": 27205,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/ax_spoken_communication_demo.py",
+      "verifiedHashes": {
+        "sha256": "79c124e16ca5795ae16f3b363812f625e4ad7f9a892ac7aa90c079d79244be8d",
+        "gitBlob": "edafca675186d01340ad5b6021e27b02310048e1"
+      }
+    },
+    {
+      "path": "config.json",
+      "size": 0,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/config.json",
+      "verifiedHashes": {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "gitBlob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+      }
+    },
+    {
+      "path": "input_question/Q1.wav",
+      "size": 177644,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/input_question/Q1.wav",
+      "verifiedHashes": {
+        "sha256": "8991bc8a91bc377ad8ba3e9962edebdceadb7d1d468eb28881fef83738f4c4d1",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "input_question/Q2.wav",
+      "size": 235244,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/input_question/Q2.wav",
+      "verifiedHashes": {
+        "sha256": "d9d817c1110392680cf4873e97f373229d29449c62fd551dc7fde2a360960c61",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "input_question/Q3.wav",
+      "size": 132044,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/input_question/Q3.wav",
+      "verifiedHashes": {
+        "sha256": "121fefb370b53aab86072cafc55ab54ed3ff487d3c9955063e0cda9fae7bf5b8",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "libaxllm/main_api_ax650",
+      "size": 1064760,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libaxllm/main_api_ax650",
+      "verifiedHashes": {
+        "sha256": "e800cd6e00dd2ad7303cb6fb6b867a33704665bded213fe4bd3be3df025c0821",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "libaxllm/main_api_axcl_aarch64",
+      "size": 1816560,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libaxllm/main_api_axcl_aarch64",
+      "verifiedHashes": {
+        "sha256": "3558444d93ce7459db247421128aca6ba3fdbde5932eff6aea66653fa7370cdf",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "libaxllm/main_api_axcl_x86",
+      "size": 8811440,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libaxllm/main_api_axcl_x86",
+      "verifiedHashes": {
+        "sha256": "f8cbbde225235ace328ae230320d7f9b2d6a9321a8dca3179f4d770edc65a2e0",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "libaxllm/post_config.json",
+      "size": 277,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libaxllm/post_config.json",
+      "verifiedHashes": {
+        "sha256": "078ea2f2c88ae6fe23e00b493329fa85bd24a5144b122349627f9334660f51b5",
+        "gitBlob": "cde891c656cf7491f3a2259024f005dac77eef8c"
+      }
+    },
+    {
+      "path": "libaxllm/qwen2.5_tokenizer/merges.txt",
+      "size": 1671839,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libaxllm/qwen2.5_tokenizer/merges.txt",
+      "verifiedHashes": {
+        "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+        "gitBlob": "20024bfe7c83998e9aeaf98a0cd6a2ce6306c2f0"
+      }
+    },
+    {
+      "path": "libaxllm/qwen2.5_tokenizer/tokenizer.json",
+      "size": 7031645,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libaxllm/qwen2.5_tokenizer/tokenizer.json",
+      "verifiedHashes": {
+        "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+        "gitBlob": "443909a61d429dff23010e5bddd28ff530edda00"
+      }
+    },
+    {
+      "path": "libaxllm/qwen2.5_tokenizer/tokenizer_config.json",
+      "size": 7308,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libaxllm/qwen2.5_tokenizer/tokenizer_config.json",
+      "verifiedHashes": {
+        "sha256": "5214600ee45ca2f887ce2eede8910378a0111ea99d657428bcbce94778e65a92",
+        "gitBlob": "2e174d67d63d86ccc35baecd4f3014549e325387"
+      }
+    },
+    {
+      "path": "libaxllm/qwen2.5_tokenizer/vocab.json",
+      "size": 2776833,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libaxllm/qwen2.5_tokenizer/vocab.json",
+      "verifiedHashes": {
+        "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+        "gitBlob": "4783fe10ac3adce15ac8f358ef5462739852c569"
+      }
+    },
+    {
+      "path": "libaxllm/qwen2.5_tokenizer_uid.py",
+      "size": 6927,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libaxllm/qwen2.5_tokenizer_uid.py",
+      "verifiedHashes": {
+        "sha256": "d1bf250891ab065e0b4335ad3553b84a2e3ae823d09806df676caed2d9f8326c",
+        "gitBlob": "4d570417db943ac6a6aab1f7c57605bd634961df"
+      }
+    },
+    {
+      "path": "libaxllm/run_qwen2.5_1.5b_ctx_ax650_api.sh",
+      "size": 649,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libaxllm/run_qwen2.5_1.5b_ctx_ax650_api.sh",
+      "verifiedHashes": {
+        "sha256": "4e254cbac283bcab3a8edaf91082fd9b015d595cb61cde75ae5b2ea26d04f466",
+        "gitBlob": "31420311e53fe5208bd565bf20f9531e0d93aa0d"
+      }
+    },
+    {
+      "path": "libaxllm/run_qwen2.5_1.5b_ctx_axcl_aarch64_api.sh",
+      "size": 648,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libaxllm/run_qwen2.5_1.5b_ctx_axcl_aarch64_api.sh",
+      "verifiedHashes": {
+        "sha256": "bcb8efe680a03f904f8c0a88304678197d6c9965a834863a6c3b0d46649855da",
+        "gitBlob": "fd56cabbc91a48eef6279fddce049c93e3b2b939"
+      }
+    },
+    {
+      "path": "libaxllm/run_qwen2.5_1.5b_ctx_axcl_x86_api.sh",
+      "size": 644,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libaxllm/run_qwen2.5_1.5b_ctx_axcl_x86_api.sh",
+      "verifiedHashes": {
+        "sha256": "73a36791ba5bbd28c6ebfd4a39b2a5ab97f71cc09691676448222ee898fd4d86",
+        "gitBlob": "011a5997505edbede011249288699a90db1a0dfd"
+      }
+    },
+    {
+      "path": "libmelotts/models/decoder-en.axmodel",
+      "size": 44093802,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/models/decoder-en.axmodel",
+      "verifiedHashes": {
+        "sha256": "90c93c0fa978cc1c68fbac6a78707dd75b8b9069cb01a1ade6846e2435aa1eb1",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "libmelotts/models/decoder-zh.axmodel",
+      "size": 44092592,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/models/decoder-zh.axmodel",
+      "verifiedHashes": {
+        "sha256": "37ea2d8401f18dd371eec50b90bd39dcadf9684aaf3543dace8ce1a9499ef253",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "libmelotts/models/encoder-en.onnx",
+      "size": 31488385,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/models/encoder-en.onnx",
+      "verifiedHashes": {
+        "sha256": "6cc51185fb81934c7490c5f9ac993fff7efa98ab41c08cd3753c96abcb297582",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "libmelotts/models/encoder-zh.onnx",
+      "size": 31397760,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/models/encoder-zh.onnx",
+      "verifiedHashes": {
+        "sha256": "a2b0a5bc2789faef16b4bfc56ab4905364f8163a59f2db3d071b4a14792bfee5",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "libmelotts/models/g-en.bin",
+      "size": 1024,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/models/g-en.bin",
+      "verifiedHashes": {
+        "sha256": "094bf0dbe1cd6c9408707209b2b7261b9df2cd5917d310bfac5945a15a31821a",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "libmelotts/models/g-jp.bin",
+      "size": 1024,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/models/g-jp.bin",
+      "verifiedHashes": {
+        "sha256": "c01dd0961bbe1effca4ed378d2969d6fbd9b579133b722f6968db5cf4d22281e",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "libmelotts/models/g-zh_mix_en.bin",
+      "size": 1024,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/models/g-zh_mix_en.bin",
+      "verifiedHashes": {
+        "sha256": "c70d897674847882bd35e780aee696ddaff8d04d5c57e4f9cf37611b6821879f",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "libmelotts/models/lexicon.txt",
+      "size": 6837671,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/models/lexicon.txt",
+      "verifiedHashes": {
+        "sha256": "7236884b02435ac5d10cf69b4be40a61b45aa676b5300f0e412f185748fee528",
+        "gitBlob": "1a1119efceca0c2dae243f84061e70e4e3d99710"
+      }
+    },
+    {
+      "path": "libmelotts/models/tokens.txt",
+      "size": 655,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/models/tokens.txt",
+      "verifiedHashes": {
+        "sha256": "d18664a7e12bd7ea1022ddaf951e534e136815016c5a809d6b64156bffb4369d",
+        "gitBlob": "78ed7abf73cfa7955577a2894388dcd8f5a317c3"
+      }
+    },
+    {
+      "path": "libmelotts/python/split_utils.py",
+      "size": 6759,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/split_utils.py",
+      "verifiedHashes": {
+        "sha256": "7a137e77ad0a6d7c40f3508433fb668896912db8d639b5d5ba960f77501aa70e",
+        "gitBlob": "9322853c78f9c0465ca66227c57248b993d8f588"
+      }
+    },
+    {
+      "path": "libmelotts/python/symbols.py",
+      "size": 12485,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/symbols.py",
+      "verifiedHashes": {
+        "sha256": "52faf967b6524e56452dd68ecfbf4314753931c9635fc9c2e26ca016d36b76d6",
+        "gitBlob": "360af5bf588a93df1a16335300be1e1d6eee282f"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/__init__.py",
+      "size": 1477,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/__init__.py",
+      "verifiedHashes": {
+        "sha256": "eca8c17764c4dcd57d3a71185775d1c6e4d53689d6a9a54708ec63577a2ac8ba",
+        "gitBlob": "6e482be187778c62ac4aa18a00601ad7d5eb2c8b"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/bert-base-multilingual-uncased/special_tokens_map.json",
+      "size": 125,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/bert-base-multilingual-uncased/special_tokens_map.json",
+      "verifiedHashes": {
+        "sha256": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3",
+        "gitBlob": "a8b3208c2884c4efb86e49300fdd3dc877220cdf"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/bert-base-multilingual-uncased/tokenizer.json",
+      "size": 2563370,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/bert-base-multilingual-uncased/tokenizer.json",
+      "verifiedHashes": {
+        "sha256": "11aaf894a4ccf3d95e8830e27c0f8152791fbbff2b988e29a265580b86edd216",
+        "gitBlob": "24ce57bee78a391706c443e2417f3339a842438f"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/bert-base-multilingual-uncased/tokenizer_config.json",
+      "size": 309,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/bert-base-multilingual-uncased/tokenizer_config.json",
+      "verifiedHashes": {
+        "sha256": "0555362981aea41d0723bfd0ed41cea32881c84dc132238bf7d57e6ba72009af",
+        "gitBlob": "40738533e46196c5a664452e3cd4e08cd6bcbc35"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/bert-base-multilingual-uncased/vocab.txt",
+      "size": 871891,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/bert-base-multilingual-uncased/vocab.txt",
+      "verifiedHashes": {
+        "sha256": "87b44292b452f6c05afa49b2e488e7eedf79ea4f4c39db6f2f4b37764228ef3f",
+        "gitBlob": "03c53303f0ef6535e93372a93be2db71ec46a1e3"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/bert-base-uncased/special_tokens_map.json",
+      "size": 125,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/bert-base-uncased/special_tokens_map.json",
+      "verifiedHashes": {
+        "sha256": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3",
+        "gitBlob": "a8b3208c2884c4efb86e49300fdd3dc877220cdf"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/bert-base-uncased/tokenizer.json",
+      "size": 711396,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/bert-base-uncased/tokenizer.json",
+      "verifiedHashes": {
+        "sha256": "d241a60d5e8f04cc1b2b3e9ef7a4921b27bf526d9f6050ab90f9267a1f9e5c66",
+        "gitBlob": "688882a79f44442ddc1f60d70334a7ff5df0fb47"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/bert-base-uncased/tokenizer_config.json",
+      "size": 309,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/bert-base-uncased/tokenizer_config.json",
+      "verifiedHashes": {
+        "sha256": "0555362981aea41d0723bfd0ed41cea32881c84dc132238bf7d57e6ba72009af",
+        "gitBlob": "40738533e46196c5a664452e3cd4e08cd6bcbc35"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/bert-base-uncased/vocab.txt",
+      "size": 231508,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/bert-base-uncased/vocab.txt",
+      "verifiedHashes": {
+        "sha256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3",
+        "gitBlob": "fb140275c155a9c7c5a3b3e0e77a9e839594a938"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/chinese.py",
+      "size": 5830,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/chinese.py",
+      "verifiedHashes": {
+        "sha256": "b22e27908512db187269857b52c1d3086eaa226034afcbe2ea18123da90bd844",
+        "gitBlob": "533d07f8a94374decc113fabcb77bd7cdbdab9cd"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/chinese_bert.py",
+      "size": 2521,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/chinese_bert.py",
+      "verifiedHashes": {
+        "sha256": "c0b36edd94e54b271d971dab5597f8fb0aac03d1e634dba1e7ff304714518db9",
+        "gitBlob": "ae454c46dd47a20f3ef26565cb6ccac105af0770"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/chinese_mix.py",
+      "size": 10547,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/chinese_mix.py",
+      "verifiedHashes": {
+        "sha256": "2db1566b602386e6a2449608a3b269721b671ce932a7ca9b1d5abb51868d0d5d",
+        "gitBlob": "43cc7b318f45c19a90780d1d331e7158fd12a8b8"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/cl-tohoku/bert-base-japanese-v3/special_tokens_map.json",
+      "size": 125,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/cl-tohoku/bert-base-japanese-v3/special_tokens_map.json",
+      "verifiedHashes": {
+        "sha256": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3",
+        "gitBlob": "a8b3208c2884c4efb86e49300fdd3dc877220cdf"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/cl-tohoku/bert-base-japanese-v3/tokenizer_config.json",
+      "size": 1398,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/cl-tohoku/bert-base-japanese-v3/tokenizer_config.json",
+      "verifiedHashes": {
+        "sha256": "64f03d544958e76a59bdfd2326e12e26ca153c5b9ac9b1ec687d897f20767dcb",
+        "gitBlob": "869283f29b2aef400598c996b52d9e7b39c8b9d2"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/cl-tohoku/bert-base-japanese-v3/vocab.txt",
+      "size": 231026,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/cl-tohoku/bert-base-japanese-v3/vocab.txt",
+      "verifiedHashes": {
+        "sha256": "5e9a696b0191b833cfdf8eefada01f41f23ccbd7e7746946864260b1cdd0a784",
+        "gitBlob": "421500f13b8d3fc8e962a4a9ecedf0d55ca14c89"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/cleaner.py",
+      "size": 2319,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/cleaner.py",
+      "verifiedHashes": {
+        "sha256": "fc06d4f00142fc63bf93d663f55edb68b15ceefa69e99d439059e75da521fd26",
+        "gitBlob": "d2d7625dd63c46f6cf1dd498cf3dcdb6358008b0"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/cleaner_multiling.py",
+      "size": 2639,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/cleaner_multiling.py",
+      "verifiedHashes": {
+        "sha256": "a44be0634e915c716b8c067ceadceaff1a2531d2e6b5413ed0c80b58d5013afa",
+        "gitBlob": "a59a7215cd9d818b5a23434aac8b22e206c9f0a7"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/cmudict.rep",
+      "size": 3969309,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/cmudict.rep",
+      "verifiedHashes": {
+        "sha256": "d127b5ce8b8e695732701e8efde04b9b0fa11991218b1fb9d21bd0c9264636aa",
+        "gitBlob": "9bc61ebd759c72458da28bb74e039298068fcc0b"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/dccuchile/bert-base-spanish-wwm-uncased/special_tokens_map.json",
+      "size": 695,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/dccuchile/bert-base-spanish-wwm-uncased/special_tokens_map.json",
+      "verifiedHashes": {
+        "sha256": "5d5b662e421ea9fac075174bb0688ee0d9431699900b90662acd44b2a350503a",
+        "gitBlob": "9bbecc17cabbcbd3112c14d6982b51403b264bfa"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/dccuchile/bert-base-spanish-wwm-uncased/tokenizer.json",
+      "size": 735280,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/dccuchile/bert-base-spanish-wwm-uncased/tokenizer.json",
+      "verifiedHashes": {
+        "sha256": "37bbe3b096fe1852607ee109ace4e29f6467ae0291dfa2cb88af05b7b19c7976",
+        "gitBlob": "0bcbea577210dc608bcd9dfd932d0e7eb49890da"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/dccuchile/bert-base-spanish-wwm-uncased/tokenizer_config.json",
+      "size": 1236,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/dccuchile/bert-base-spanish-wwm-uncased/tokenizer_config.json",
+      "verifiedHashes": {
+        "sha256": "6cb12c493292a74cd9d8f86985aabbbd315aebff64c7c41737c0c491283d64b5",
+        "gitBlob": "4b9ddcc0893e7d86170d8c9d8c52f4f7a394f8f5"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/dccuchile/bert-base-spanish-wwm-uncased/vocab.txt",
+      "size": 247723,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/dccuchile/bert-base-spanish-wwm-uncased/vocab.txt",
+      "verifiedHashes": {
+        "sha256": "a7e3f713aafb7d9dbd789a0f0bc30a457e622d963294e40b391b4d83ca4508b5",
+        "gitBlob": "8f80d4a1897f3fdc6d8b2e13a426108eb3f771b6"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/distilbert-base-multilingual-cased/special_tokens_map.json",
+      "size": 695,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/distilbert-base-multilingual-cased/special_tokens_map.json",
+      "verifiedHashes": {
+        "sha256": "5d5b662e421ea9fac075174bb0688ee0d9431699900b90662acd44b2a350503a",
+        "gitBlob": "9bbecc17cabbcbd3112c14d6982b51403b264bfa"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/distilbert-base-multilingual-cased/tokenizer.json",
+      "size": 2919362,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/distilbert-base-multilingual-cased/tokenizer.json",
+      "verifiedHashes": {
+        "sha256": "bf1b59b7b11c95f194f51708d918eea378e09d05f84c0e1656dc5180e8117088",
+        "gitBlob": "21f54a4b56685f29358f3a8de1f5b8d827357d07"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/distilbert-base-multilingual-cased/tokenizer_config.json",
+      "size": 1198,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/distilbert-base-multilingual-cased/tokenizer_config.json",
+      "verifiedHashes": {
+        "sha256": "228e2c7cc6d20d298f7a3d69b89103f6dcb0b533c0b1146a6e6b6e7bb511ae35",
+        "gitBlob": "f4a46fa248690b0b2adc680e845ec8fd491eb24c"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/distilbert-base-multilingual-cased/vocab.txt",
+      "size": 995526,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/distilbert-base-multilingual-cased/vocab.txt",
+      "verifiedHashes": {
+        "sha256": "fe0fda7c425b48c516fc8f160d594c8022a0808447475c1a7c6d6479763f310c",
+        "gitBlob": "e837bab60a5d204e29622d127c2dafe508aa0731"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/english.py",
+      "size": 7396,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/english.py",
+      "verifiedHashes": {
+        "sha256": "116b57d7c19d4cf423a9c43ba3396f6526bbbd79cca648bcb67d7366c127a8f8",
+        "gitBlob": "1ad3b625d45137a0d917207b3bff3b317808544c"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/english_bert.py",
+      "size": 1194,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/english_bert.py",
+      "verifiedHashes": {
+        "sha256": "0987c4ce65ff9aff4c1b23b25f5903a580e4c907b3d1814e2e97db6dcb020805",
+        "gitBlob": "a473d6de7e4e8152c6b2a8f9b6266eaa02c06d07"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/english_utils/__init__.py",
+      "size": 0,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/english_utils/__init__.py",
+      "verifiedHashes": {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "gitBlob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/english_utils/abbreviations.py",
+      "size": 948,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/english_utils/abbreviations.py",
+      "verifiedHashes": {
+        "sha256": "b08ad007a93111ccc5b533e1b38cfa9a4ee15e9f517c465eb80903b1c8df088c",
+        "gitBlob": "e284a5a2a682dc8b4636a275032acb09876777e2"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/english_utils/number_norm.py",
+      "size": 2659,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/english_utils/number_norm.py",
+      "verifiedHashes": {
+        "sha256": "75dd5ff3e9642385c2bfc1acee4a4feb316710721acba84bdfa3a4f004b4381b",
+        "gitBlob": "33bad16464a7a6562fccc8c5b6c9d4f79a3c01f0"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/english_utils/time_norm.py",
+      "size": 1414,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/english_utils/time_norm.py",
+      "verifiedHashes": {
+        "sha256": "c255fef2643dde397227dca718cd98c95d216bb6c448fdd195d50dccc817b46d",
+        "gitBlob": "6020894b769bb954a97dd3bfb8930292b409758d"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/es_phonemizer/__init__.py",
+      "size": 0,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/es_phonemizer/__init__.py",
+      "verifiedHashes": {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "gitBlob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/es_phonemizer/base.py",
+      "size": 4339,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/es_phonemizer/base.py",
+      "verifiedHashes": {
+        "sha256": "bb0c2536068c4c08f6d3f55bc98f1476c411fc12a26ac1975ba5e4a9cf826396",
+        "gitBlob": "b954515bfbcef53887c3bd392b45b540011f1bdf"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/es_phonemizer/cleaner.py",
+      "size": 2598,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/es_phonemizer/cleaner.py",
+      "verifiedHashes": {
+        "sha256": "2abe7a80e82fec0f3185366a73fd111d4ba7837efee6ab9013e75a24e3178925",
+        "gitBlob": "1a60c894b90bcecbbce62d704e0d7805f11313f6"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/es_phonemizer/es_symbols.json",
+      "size": 1180,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/es_phonemizer/es_symbols.json",
+      "verifiedHashes": {
+        "sha256": "7abd2e28fe7a8c59b92ed647e18b1faff19df60e299d61e9ae6f24477e50e27c",
+        "gitBlob": "7c3779fb840876900a1dc0557cf557d0d5bc2d50"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/es_phonemizer/es_symbols.txt",
+      "size": 123,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/es_phonemizer/es_symbols.txt",
+      "verifiedHashes": {
+        "sha256": "f845be6f68a6aefc3e479049317cd6b172047fb7366d620a3f5660f7ee26b01f",
+        "gitBlob": "d0e58e37e5295689c36497184f8c7fe76c264350"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/es_phonemizer/es_symbols_v2.json",
+      "size": 1243,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/es_phonemizer/es_symbols_v2.json",
+      "verifiedHashes": {
+        "sha256": "ac6e027b7bdf654f7b52f7646be0ac3a12fca3797d4b132a1a1c37fd25db1060",
+        "gitBlob": "690036b0a3fee2ef019492fcbe8e4ff560f536f7"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/es_phonemizer/es_to_ipa.py",
+      "size": 396,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/es_phonemizer/es_to_ipa.py",
+      "verifiedHashes": {
+        "sha256": "1ac08d27f63a0ad96f1b9fd12864e83bf208aaa894b44b79a079b8340d4b73d2",
+        "gitBlob": "e6ade4dd0d5469bdd7ceb2a66971be869886db78"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/es_phonemizer/example_ipa.txt",
+      "size": 44840,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/es_phonemizer/example_ipa.txt",
+      "verifiedHashes": {
+        "sha256": "54c8e9eb3084b84f8d049a42bc93a274a3bf03ac14867a08be2a8543d2b85f16",
+        "gitBlob": "dc558ee4f23776c9ce79f61733cf17f16570a588"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/es_phonemizer/gruut_wrapper.py",
+      "size": 7010,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/es_phonemizer/gruut_wrapper.py",
+      "verifiedHashes": {
+        "sha256": "003c3c2e56bec3660d8586fa101d4a4713a032959ca05df92a0a4247d49b9590",
+        "gitBlob": "17dee78cf0cb0b39ad88923953f0009e27d72c5e"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/es_phonemizer/punctuation.py",
+      "size": 5538,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/es_phonemizer/punctuation.py",
+      "verifiedHashes": {
+        "sha256": "573a16ec2715c957d6db8a7980da8c6b344c202cdaeb1d7ebdd987cec40ea990",
+        "gitBlob": "58a3080cca0699dabbd69d70febe051cbf069b77"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/es_phonemizer/spanish_symbols.txt",
+      "size": 54,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/es_phonemizer/spanish_symbols.txt",
+      "verifiedHashes": {
+        "sha256": "819cb2054292ce8f3f3a5f138656216a2dd7a65c4960cc91e717b279eca6acef",
+        "gitBlob": "74a974cf4854cf4743341a9a71b9c384c6615b27"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/es_phonemizer/test.ipynb",
+      "size": 5605,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/es_phonemizer/test.ipynb",
+      "verifiedHashes": {
+        "sha256": "16927525b3d487633ea5e260de0756854aeb33cdcc91c5ab8bbb1f5b7fbbe737",
+        "gitBlob": "6ce2f84b1d5b04840abe37cbe964ef754ef8322b"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/fast_tokenizer.py",
+      "size": 335,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/fast_tokenizer.py",
+      "verifiedHashes": {
+        "sha256": "f0f1b8a9d2d2d6102ef79989647eeaec16c77dff9848153651eeb5255637d744",
+        "gitBlob": "5632a9ab8322c877f4d17d062fabf9dab27935c4"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/fr_phonemizer/__init__.py",
+      "size": 0,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/fr_phonemizer/__init__.py",
+      "verifiedHashes": {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "gitBlob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/fr_phonemizer/base.py",
+      "size": 4339,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/fr_phonemizer/base.py",
+      "verifiedHashes": {
+        "sha256": "bb0c2536068c4c08f6d3f55bc98f1476c411fc12a26ac1975ba5e4a9cf826396",
+        "gitBlob": "b954515bfbcef53887c3bd392b45b540011f1bdf"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/fr_phonemizer/cleaner.py",
+      "size": 2926,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/fr_phonemizer/cleaner.py",
+      "verifiedHashes": {
+        "sha256": "9cd70a473afc00db9fa690bd72955a3ba48995fc1c6537c9bd5ee107c592bcd6",
+        "gitBlob": "08f97e92e503186d71b24de3ad5c93e00c71ed75"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/fr_phonemizer/en_symbols.json",
+      "size": 853,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/fr_phonemizer/en_symbols.json",
+      "verifiedHashes": {
+        "sha256": "e1b0f9ec832f37484e4181b0b44dd0d14cf20b340b03de26628ed9a22f7efb2d",
+        "gitBlob": "94a441c42748fcb649371267fe8f8a1a7026e82c"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/fr_phonemizer/example_ipa.txt",
+      "size": 11784078,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/fr_phonemizer/example_ipa.txt",
+      "verifiedHashes": {
+        "sha256": "8cf7852f6caf514451f2bc3e85e437a683fb725f4568d5877649b0d9bed0a4bd",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "libmelotts/python/text/fr_phonemizer/fr_symbols.json",
+      "size": 1351,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/fr_phonemizer/fr_symbols.json",
+      "verifiedHashes": {
+        "sha256": "4f9d69caf5fe712adb37258c9e329a41698943d887305ae3331a44ae3a45eb4a",
+        "gitBlob": "1fc779fbc4c39cd66c898594d00146c6f01d01ae"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/fr_phonemizer/fr_to_ipa.py",
+      "size": 742,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/fr_phonemizer/fr_to_ipa.py",
+      "verifiedHashes": {
+        "sha256": "06c4e093dbffe079cfcf194774a6b051498c45786345aa7e5a8f06a562d8f4b7",
+        "gitBlob": "76dae2ce858e04a4d30d6844de7d2c09a20255fe"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/fr_phonemizer/french_abbreviations.py",
+      "size": 1368,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/fr_phonemizer/french_abbreviations.py",
+      "verifiedHashes": {
+        "sha256": "04f66202ba013a4e12a5835bec09b31b21c7b3533e8362d1af20bd33b99b9e8f",
+        "gitBlob": "6eface4c77d3fce3cba838d17edb5e02b3be76f3"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/fr_phonemizer/french_symbols.txt",
+      "size": 135,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/fr_phonemizer/french_symbols.txt",
+      "verifiedHashes": {
+        "sha256": "8b661586292fcaae545c3dee85a4ca7f81e5c78a7add77ffccd4c4a399103c2d",
+        "gitBlob": "902a2715656f1e37595a7f05ff3d07c1724aca13"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/fr_phonemizer/gruut_wrapper.py",
+      "size": 7193,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/fr_phonemizer/gruut_wrapper.py",
+      "verifiedHashes": {
+        "sha256": "4b3dfbd6d009221100e7263f39f61e1da924912bf134984aef34e51607026661",
+        "gitBlob": "50e32c70c5549dfdcd22f0d3f23c65ecea318b20"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/fr_phonemizer/punctuation.py",
+      "size": 5454,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/fr_phonemizer/punctuation.py",
+      "verifiedHashes": {
+        "sha256": "c7f5c1057ed1e279055281e43ef861e5618cf1f5dd4a56b5c79dd3a59314625c",
+        "gitBlob": "bb7471d2494a5c14fbbfcb6d251dbf3f15ce542f"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/french.py",
+      "size": 3070,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/french.py",
+      "verifiedHashes": {
+        "sha256": "9a115742c7e99b1e5dca883865d1c7e24397745910ff69c815e27246d32ebb63",
+        "gitBlob": "bd6c62344220d945462361572bd7254b7e87d966"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/french_bert.py",
+      "size": 1215,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/french_bert.py",
+      "verifiedHashes": {
+        "sha256": "736d89859a72570e6d9fa9ef16e4ec3672827269077d1c5026c540534189f7a7",
+        "gitBlob": "f30d12dc38ef35d712da69d42b53218314835503"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/japanese.py",
+      "size": 15763,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/japanese.py",
+      "verifiedHashes": {
+        "sha256": "70fb531e9b5b85b520262a50a2a77e4d692a000d2dcbee8ad7e42f84f242438c",
+        "gitBlob": "9c1e572798c97b5ef774993402e546027aa10dfd"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/japanese_bert.py",
+      "size": 1510,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/japanese_bert.py",
+      "verifiedHashes": {
+        "sha256": "9095dcf2c0725ec8f96ed167983b07e93a897c9034fb8f1544b482337eb12acf",
+        "gitBlob": "315fef2fb00baa9b53ccfe29c5d57a53874736c5"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/jp_tokenizer.py",
+      "size": 1231,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/jp_tokenizer.py",
+      "verifiedHashes": {
+        "sha256": "a31b87ed7f00be5fbaba37fe3e3376d28b331a41582d8e3dc8fb24fdac572d70",
+        "gitBlob": "5fa83fbad961ca4c439a85dd1e027d7c265aab17"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/ko_dictionary.py",
+      "size": 878,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/ko_dictionary.py",
+      "verifiedHashes": {
+        "sha256": "ebedde65a10b08390a2fc5717e472123b6fba0c1d0f259f8c3a265c8d089f641",
+        "gitBlob": "5d2a148234be297cca12417964b191f1f521280d"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/korean.py",
+      "size": 6431,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/korean.py",
+      "verifiedHashes": {
+        "sha256": "d9ca9658e40148e6861e2db6c15c8a29d4a2b08db409501f9a6fff3eb2577d95",
+        "gitBlob": "75becda5d77da5ad9a11baa37cb21fb5355f433e"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/opencpop-strict.txt",
+      "size": 4084,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/opencpop-strict.txt",
+      "verifiedHashes": {
+        "sha256": "d66bbb1380a8ebf17d7ace5bf4b459f3728a469eea2aaeae2aeb3969b88223ff",
+        "gitBlob": "1bede89a429e34b1a58781ee570fc313b80c0aee"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/spanish.py",
+      "size": 3345,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/spanish.py",
+      "verifiedHashes": {
+        "sha256": "7d2969e4dec4dc3fa4662ef811695cf634859001e50b281fe9cdd20ac7eaba8b",
+        "gitBlob": "55d5082bfa75f09979d413a5a4a164f4d1d0b9df"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/spanish_bert.py",
+      "size": 1216,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/spanish_bert.py",
+      "verifiedHashes": {
+        "sha256": "afbef4141748f314116cf0f19b7a9ea62d950229019d15dba1755a54ec2c2f27",
+        "gitBlob": "8b6551101ca5d34204cd1092575936c781da5e3d"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/symbols.py",
+      "size": 4329,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/symbols.py",
+      "verifiedHashes": {
+        "sha256": "4c1f3839f7e209b5da45daeb269f955b302d0d4c0df6dbf9be88d534b25ceea2",
+        "gitBlob": "46eea5c975949a69ea8dcb19851fd6c5953778cf"
+      }
+    },
+    {
+      "path": "libmelotts/python/text/tone_sandhi.py",
+      "size": 23396,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/libmelotts/python/text/tone_sandhi.py",
+      "verifiedHashes": {
+        "sha256": "230ba9ffe13dadc5f80c117ea3234f88512380a7d45069a08861e24fc2a33aa9",
+        "gitBlob": "6a6e4c3e64f1a9e8b9da73fc6fbebf8a33e5602d"
+      }
+    },
+    {
+      "path": "model.py",
+      "size": 33686,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/model.py",
+      "verifiedHashes": {
+        "sha256": "7a09634ef76e6a8bd315fda46157118f3eaf0d713341f2265daf9434bbb6fa8e",
+        "gitBlob": "3d19bf223f46c8b1012905cfbef340b24d7ad993"
+      }
+    },
+    {
+      "path": "requirements.txt",
+      "size": 141,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/requirements.txt",
+      "verifiedHashes": {
+        "sha256": "c6fe2bf1df0976e725e8d41442c7cfc34ac0dd571bfbf615f9387e8d6b65c07e",
+        "gitBlob": "69098b46ce0e25221a7dd1e0cc0eef6de44c77dd"
+      }
+    },
+    {
+      "path": "utils/__init__.py",
+      "size": 0,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/utils/__init__.py",
+      "verifiedHashes": {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "gitBlob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+      }
+    },
+    {
+      "path": "utils/ax_model_bin.py",
+      "size": 9945,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/utils/ax_model_bin.py",
+      "verifiedHashes": {
+        "sha256": "cda28e3efbae350ebbb230ee9339d9b894610fd1c251c755e219175d6d15bfdb",
+        "gitBlob": "42ebf6acc0d6d51be6b612681b26547775faa7ff"
+      }
+    },
+    {
+      "path": "utils/ax_vad_bin.py",
+      "size": 6441,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/utils/ax_vad_bin.py",
+      "verifiedHashes": {
+        "sha256": "65504edb429dca2cdeb5e9c25c5194ad1cfc9e0aabbac0e4ff2880238b95050e",
+        "gitBlob": "e3c109dc79ea84baed4e96b07b802c6df79eaa0e"
+      }
+    },
+    {
+      "path": "utils/ctc_alignment.py",
+      "size": 3272,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/utils/ctc_alignment.py",
+      "verifiedHashes": {
+        "sha256": "46fb3d921d23fa0f7f0c068fc4ec2338ac8930fb82272444845f59f5a9d7d7ab",
+        "gitBlob": "f10fcf27e9ce421d858913006fd4d13089f3e993"
+      }
+    },
+    {
+      "path": "utils/frontend.py",
+      "size": 17360,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/utils/frontend.py",
+      "verifiedHashes": {
+        "sha256": "275e84e0f6899d2bee02b44a52c1dd531453e7c126675d0b6908c1023a9edeae",
+        "gitBlob": "7b38f8b76f223099f7fff5f9fbc48f6ad1bc6308"
+      }
+    },
+    {
+      "path": "utils/infer_utils.py",
+      "size": 9184,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/utils/infer_utils.py",
+      "verifiedHashes": {
+        "sha256": "74b04ba2d37e21ca9b03bcde7c7eea681dbf5e758e44031de93fd22debeb4817",
+        "gitBlob": "4e4f5edc7736d7adc628868c95aa46b338471cb5"
+      }
+    },
+    {
+      "path": "utils/utils/__init__.py",
+      "size": 0,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/utils/utils/__init__.py",
+      "verifiedHashes": {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "gitBlob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+      }
+    },
+    {
+      "path": "utils/utils/e2e_vad.py",
+      "size": 30231,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/utils/utils/e2e_vad.py",
+      "verifiedHashes": {
+        "sha256": "3b13734a2995ef9c544be66a4edb95c150afb17484388c594ab70ef7436e7345",
+        "gitBlob": "740c375962f01d4ab85bd53a52c1353daadd15bc"
+      }
+    },
+    {
+      "path": "utils/utils/frontend.py",
+      "size": 17713,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/utils/utils/frontend.py",
+      "verifiedHashes": {
+        "sha256": "6e2f6b8213319f1b1533ea44b378fa58afe23cd8de4dd63c6feb03856586bf75",
+        "gitBlob": "54f9deb71b315bb7b50b2b3a92b675dee8516a8b"
+      }
+    },
+    {
+      "path": "utils/utils/utils.py",
+      "size": 9183,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/utils/utils/utils.py",
+      "verifiedHashes": {
+        "sha256": "7a69bc3d7f30b8d224cefdcd034d01de54a0e6847fa345f17eade25cd3fc3386",
+        "gitBlob": "66defc9635396bfcfa500a5ba07bd7bf5c92c4f3"
+      }
+    },
+    {
+      "path": "utils/vad_utils.py",
+      "size": 2161,
+      "url": "https://huggingface.co/AXERA-TECH/Spoken-Communication.axera/resolve/ecd09194a4ed417f6466dedebcd85192118a7bc8/utils/vad_utils.py",
+      "verifiedHashes": {
+        "sha256": "3284c322cae7ec768d310651b54c0f4df0ebbdad0803c7150c1024861252917d",
+        "gitBlob": "52711641b1a5bb24929c346864cc27706cd68f08"
+      }
+    }
+  ],
+  "runnerSha256": "3a2ebf7df70dbbbd49024c8dee3d1df24e7bb59fc34e5d8cb61f16d6f16e7232"
+}

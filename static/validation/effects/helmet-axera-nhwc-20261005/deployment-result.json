@@ -1,0 +1,97 @@
+{
+  "modelId": "Helmet-axera",
+  "revision": "c48ec87e8e0c65618560d790d598c1081a857d92",
+  "date": "2026-10-05",
+  "variants": [
+    {
+      "label": "helmet · ax_ax650_hel_algo_rgb_nhwc_V1.0.0.axmodel",
+      "observation": "骑行样例输出head 0.840、bike 0.844，分别覆盖头部和车辆；没有helmet框。",
+      "previews": [
+        {
+          "caption": "输入：test.jpg",
+          "path": "/validation/effects/helmet-axera-nhwc-20261005/inputs/helmet.jpg"
+        },
+        {
+          "caption": "NHWC实际输出：helmet",
+          "path": "/validation/effects/helmet-axera-nhwc-20261005/outputs/helmet.jpg"
+        }
+      ],
+      "tables": [],
+      "record": {
+        "completed": true,
+        "provider": "AXCLRTExecutionProvider",
+        "inferenceEvidence": "fixed-nhwc-vision-samples",
+        "modelId": "Helmet-axera",
+        "revision": "c48ec87e8e0c65618560d790d598c1081a857d92",
+        "actualCapacity": "16GB",
+        "case": "helmet",
+        "inputFile": "test.jpg",
+        "inputSha256": "668a12626b54d1bd57d0f71d7a9e4903e595b00db8e42329f6d35569858a8b2f",
+        "inputPath": "/validation/effects/helmet-axera-nhwc-20261005/inputs/helmet.jpg",
+        "inputShape": [
+          1,
+          256,
+          192,
+          3
+        ],
+        "inputLayout": "NHWC",
+        "colorOrder": "RGB from original NCHW preprocessing",
+        "sourceScript": "ax_hed_infer.py",
+        "sourceScriptSha256": "940f4d6c87709e76f3d5dc42e642a54749e9ec1bf25b86b97981f8869712508a",
+        "adapterSha256": "02657a999a22684b10b8923ae5f3fc934baa05c5dee39e4f9e09ad6a88eef7ca",
+        "customerBundleFiles": {
+          "vision_nhwc.py": "6e52df5f5d63c76e7700e6f184d342a1d714f6e0edbb9b102efa45a4d250efb1",
+          "_vision_nhwc_runtime.py": "02657a999a22684b10b8923ae5f3fc934baa05c5dee39e4f9e09ad6a88eef7ca",
+          "plan.json": "efaf9f158e55093b8cbdd3806ca4934aedddfa01c3146c028b000c709d2a48c5",
+          "io.json": "5eed4a7de8bacc6c5935c3d9057ba8bcfc3683731e57f27aa8660e90f45dbb97"
+        },
+        "originalFilesUnchanged": true,
+        "independentRuns": 3,
+        "rawOutputsExact": true,
+        "visualizationsExact": true,
+        "customerCommandVerified": true,
+        "sessions": [
+          {
+            "model": "AX650/ax_ax650_hel_algo_rgb_nhwc_V1.0.0.axmodel",
+            "sha256": "f8a3c59e4a27a2a910864bc73d4cfe6b064df4d4f337c374cf0a36325709f9a1",
+            "allFinite": true,
+            "runMilliseconds": [
+              7.836533000045165,
+              8.298244000002342,
+              7.801534000009269
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "path": "out.jpg",
+            "sha256": "4e7ea79ff3de138eecd359a7dcd1bbf9aa7642ca8f667461803d5e17409b83de",
+            "shape": [
+              256,
+              192,
+              3
+            ]
+          }
+        ],
+        "semanticObservation": "骑行样例输出head 0.840、bike 0.844，分别覆盖头部和车辆；没有helmet框。",
+        "calls": [
+          {
+            "inputSha256": "40a25d7df443642d50dff150f3fa9797f1553f03b43c5f3eb0fa5d1867535eee",
+            "outputSha256": "1e4ca7cefe4d8d9b5984aef39db20737ade1424edcdc7d62663d74e9a58df0b4",
+            "milliseconds": 7.836533000045165
+          },
+          {
+            "inputSha256": "40a25d7df443642d50dff150f3fa9797f1553f03b43c5f3eb0fa5d1867535eee",
+            "outputSha256": "1e4ca7cefe4d8d9b5984aef39db20737ade1424edcdc7d62663d74e9a58df0b4",
+            "milliseconds": 8.298244000002342
+          },
+          {
+            "inputSha256": "40a25d7df443642d50dff150f3fa9797f1553f03b43c5f3eb0fa5d1867535eee",
+            "outputSha256": "1e4ca7cefe4d8d9b5984aef39db20737ade1424edcdc7d62663d74e9a58df0b4",
+            "milliseconds": 7.801534000009269
+          }
+        ]
+      }
+    }
+  ]
+}

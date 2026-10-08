@@ -1,0 +1,140 @@
+{
+  "modelId": "RTMPose",
+  "revision": "726c3acf17cff3a13958bc30da0aa6bf125312b1",
+  "date": "2026-10-05",
+  "variants": [
+    {
+      "label": "RTMPose NPU1",
+      "observation": "单人滑雪样例的17个关键点均超过0.3，骨架覆盖头部、躯干与四肢，位置与人物姿态相符；未覆盖多人或视频。",
+      "previews": [
+        {
+          "caption": "实际输入：test.jpg",
+          "path": "/validation/effects/rtmpose-variant-20261005/inputs/test.jpg"
+        },
+        {
+          "caption": "实际输出：RTMPose NPU1",
+          "path": "/validation/effects/rtmpose-variant-20261005/outputs/pose.jpg"
+        }
+      ],
+      "tables": [],
+      "record": {
+        "completed": true,
+        "provider": "AXCLRTExecutionProvider",
+        "inferenceEvidence": "original-cv-variant-samples",
+        "modelId": "RTMPose",
+        "revision": "726c3acf17cff3a13958bc30da0aa6bf125312b1",
+        "actualCapacity": "16GB",
+        "runsPerWeight": 3,
+        "qualityAccepted": false,
+        "customerCommandVerified": true,
+        "originalFilesUnchanged": true,
+        "sourceScript": "ax_infer.py",
+        "sourceScriptSha256": "cd31445b2135a2e4bc9f53d94059e7aca89581f1b5912e329c560e13712a92d8",
+        "inputFile": "test.jpg",
+        "inputSha256": "83981537a7baeafbeb9c8cb67b3484dc26433f574b3685d021fa537e277e4726",
+        "inputPath": "/validation/effects/rtmpose-variant-20261005/inputs/test.jpg",
+        "outputPath": "/validation/effects/rtmpose-variant-20261005/outputs/pose.jpg",
+        "outputSha256": "6a51a0c154d54b6922e83d43c3ec544eee64557e2626aaf52d34864500d69a19",
+        "adapterSha256": "95dbce768bc422fdce1410abae240dfc34050bebca5b4a62214ad54f9e8f1754",
+        "customerBundleFiles": {
+          "plan.json": "ea6575329454e27edb8987e191dadcd477e9b651f69b11bf0b7aea9934fceead",
+          "_runtime.py": "95dbce768bc422fdce1410abae240dfc34050bebca5b4a62214ad54f9e8f1754",
+          "vision_variant.py": "445fffa8e69b7f2047131e2b5e57dd386110b766a91818b9322aeefc3f5212ca"
+        },
+        "sessions": [
+          {
+            "model": "AX650/rtmpose_m_npu1.axmodel",
+            "sha256": "c4ebc503bdf788009706c60876b3ecd6ed12a833888286868f4cf4208a1eb91e",
+            "allFinite": true,
+            "runMilliseconds": [
+              14.981517999785865,
+              11.369795000064187,
+              11.219877999792516,
+              11.39225399992938,
+              11.508338000112417,
+              11.432796000008238,
+              11.4858799997819,
+              11.446796000200266,
+              11.472462999790878,
+              11.328087000038067,
+              11.423170999933063,
+              11.447962000147527,
+              11.413836999963678,
+              15.718563000064023,
+              11.743421999653947,
+              11.6349220002121,
+              11.492586999793275,
+              11.377670999991096,
+              11.457296000116912,
+              11.443587000030675,
+              11.525838000125077,
+              11.437461999776133,
+              11.583004999920377,
+              11.64425500019206,
+              11.75217199988765,
+              11.785131000124238,
+              16.053688000283728,
+              11.916671000108181,
+              11.834713000098418,
+              11.858922000101302,
+              11.830337999526819,
+              11.746046000553179,
+              11.69004599978507,
+              11.610421000114002,
+              11.583587000131956,
+              11.475670000436367,
+              11.61742000022059,
+              11.410336999688298,
+              11.358710999957111
+            ]
+          }
+        ],
+        "weightResults": [
+          {
+            "weight": "AX650/rtmpose_m_npu1.axmodel",
+            "independentProcesses": 3,
+            "callsPerProcess": 13,
+            "rawOutputsExact": true,
+            "imageSha256": "6a51a0c154d54b6922e83d43c3ec544eee64557e2626aaf52d34864500d69a19",
+            "metadata": [
+              {
+                "inputs": [
+                  {
+                    "name": "input",
+                    "shape": [
+                      1,
+                      256,
+                      192,
+                      3
+                    ],
+                    "dtype": "uint8"
+                  }
+                ],
+                "outputs": [
+                  {
+                    "name": "simcc_x",
+                    "shape": [
+                      1,
+                      17,
+                      384
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "simcc_y",
+                    "shape": [
+                      1,
+                      17,
+                      512
+                    ],
+                    "dtype": "float32"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

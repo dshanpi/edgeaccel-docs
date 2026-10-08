@@ -1,0 +1,28 @@
+{
+  "modelId": "Gesture-axera",
+  "repo": "AXERA-TECH/Gesture-axera",
+  "revision": "6c0782a0a413cd55bdca21e83801f3b8abce9264",
+  "files": [
+    {
+      "path": "ax_ges_infer.py",
+      "bytes": 10426,
+      "verifiedHashes": {
+        "sha256": "0a804693c4f38afe26982c592bceb3585d69aed79cb4d5821ce988c743f10889"
+      }
+    },
+    {
+      "path": "ges_1280_720.jpg",
+      "bytes": 217814,
+      "verifiedHashes": {
+        "sha256": "d35f4269a77b851aedfc6cd76d1da2f5957c99bb818579a2d9b6569fc6453f11"
+      }
+    },
+    {
+      "path": "AX650/ax_ax650_gesture_algo_ok_like_stop_rgb_nhwc_V1.0.0.axmodel",
+      "bytes": 670451,
+      "verifiedHashes": {
+        "sha256": "cd01d6385665cbccc3b9b8d00d222b2420f282e174c5aed9b045bb72facfc0c3"
+      }
+    }
+  ]
+}

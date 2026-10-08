@@ -1,23 +1,23 @@
 {
-  "documents": 327,
+  "documents": 328,
   "models": 252,
   "resources": 12,
   "repositories": 264,
-  "modelGroups": 9,
-  "hardwareValidatedInThisEdition": 188,
-  "hardwareBasicValidatedInThisEdition": 149,
-  "hardwareCorrectnessValidatedInThisEdition": 39,
-  "modelsWithValidationRecords": 189,
-  "validationRuns": 197,
+  "modelGroups": 10,
+  "hardwareValidatedInThisEdition": 228,
+  "hardwareBasicValidatedInThisEdition": 195,
+  "hardwareCorrectnessValidatedInThisEdition": 44,
+  "modelsWithValidationRecords": 230,
+  "validationRuns": 264,
   "modelValidationSummaries": {
     "Bird-Species-Classification": {
-      "id": "effect-bird-species-classification",
+      "id": "20261005-bird-variants",
       "status": "passed",
       "level": "basic",
-      "date": "2026-09-23",
+      "date": "2026-10-05",
       "revision": "b81b4cb3be067a85ba730c5b2a67c566d3d9af68",
-      "environment": "RK3576 DshanPi A1 + AX8850 8GB M.2",
-      "summary": "使用 bird-s 权重并显式传入 --image_size 224 后完成推理，生成 Top-5 图片。Top-1 为 Ciccaba_virgata，分数 0.0727；只能确认分类程序运行，物种识别效果未通过独立核对。"
+      "environment": "RK3576 DshanPi A1 + AX8850 16GB M.2",
+      "summary": "四个AX650权重组成三条运行链路，各执行两轮七张样图，保存完整1486类输出并复算Top-5。部分Top-1与样图类别编号不一致，本记录仅表示基本运行完成。"
     },
     "Qwen3-Embedding-0.6B": {
       "id": "effect-qwen3-embedding-0-6b",
@@ -29,22 +29,22 @@
       "summary": "在 8001 端口完成 2 次批量向量请求，每次输入 4 条短英文文本并得到 4 个 1024 维有限数值向量。逐项复算确认模长接近 1，重复文本余弦为 1.0，相关猫主题文本余弦 0.76854，高于无关巴黎文本的 0.16491；两批响应的向量数据完全一致。"
     },
     "YOLO11": {
-      "id": "effect-yolo11",
+      "id": "20261005-native-cv-variants-yolo11",
       "status": "passed",
-      "level": "correctness",
-      "date": "2026-09-23",
+      "level": "basic",
+      "date": "2026-10-05",
       "revision": "e178719ba1b03eaf07c981f859027f3278c1cb29",
-      "environment": "RK3576 DshanPi A1 + AX8850 8GB M.2",
-      "summary": "单张 football.jpg 完成定性正确性检查。日志输出 5 个 person、2 个 sports ball，图中检测框与主要球员及两个足球位置相符。"
+      "environment": "RK3576 DshanPi A1 + AX8850 16GB M.2",
+      "summary": "1个新增权重各独立启动两次，每次5次预热和10次推理，原始C++示例生成的图片重复一致。下方展示实际输出及程序记录的目标数量。"
     },
     "YOLO11-Seg": {
-      "id": "effect-yolo11-seg",
+      "id": "20261005-native-cv-variants-yolo11-seg",
       "status": "passed",
-      "level": "correctness",
-      "date": "2026-09-23",
+      "level": "basic",
+      "date": "2026-10-05",
       "revision": "5ed6c6e9519930a4a94dd9839d4777399c83fec1",
-      "environment": "RK3576 DshanPi A1 + AX8850 8GB M.2",
-      "summary": "单张 football.jpg 输出 6 个人物实例、3 个足球实例。主要球员的彩色掩码覆盖头部、躯干和四肢，足球掩码位于对应小球区域，完成实例分割的定性核对。"
+      "environment": "RK3576 DshanPi A1 + AX8850 16GB M.2",
+      "summary": "1个新增权重各独立启动两次，每次5次预热和10次推理，原始C++示例生成的图片重复一致。下方展示实际输出及程序记录的目标数量。"
     },
     "YOLO11-Pose": {
       "id": "effect-yolo11-pose",
@@ -65,13 +65,13 @@
       "summary": "单张 ssd_horse.jpg 输出 6 个目标：3 个 person、1 个 horse、1 个 dog、1 个 truck。骑马者、马、狗和左侧车辆的框与原图位置相符，完成主要目标的定性核对。"
     },
     "yolo26": {
-      "id": "effect-yolo26",
+      "id": "20261005-native-cv-variants-yolo26",
       "status": "passed",
-      "level": "correctness",
-      "date": "2026-09-23",
+      "level": "basic",
+      "date": "2026-10-05",
       "revision": "29a97acdbe26f65c2f786bb32fb75023a0714b69",
-      "environment": "RK3576 DshanPi A1 + AX8850 8GB M.2",
-      "summary": "单张 bus.jpg 输出 1 个 bus、4 个 person。公交车、两名完整可见行人及左右边缘部分行人的框与原图对应，完成定性正确性检查。"
+      "environment": "RK3576 DshanPi A1 + AX8850 16GB M.2",
+      "summary": "4个新增权重各独立启动两次，每次5次预热和10次推理，原始C++示例生成的图片重复一致。下方展示实际输出及程序记录的目标数量。"
     },
     "Depth-Anything-V2": {
       "id": "effect-depth-anything-v2",
@@ -85,47 +85,47 @@
     "DeepLabv3Plus": {
       "id": "effect-deeplabv3plus",
       "status": "passed",
-      "level": "basic",
+      "level": "correctness",
       "date": "2026-09-23",
       "revision": "6d29643d003d7e7d22f7c28a177980f292ec5fca",
       "environment": "RK3576 DshanPi A1 + AX8850 8GB M.2",
-      "summary": "AXCL 完成一次飞机样图的语义分割。输出红色区域覆盖机身、机翼、尾翼和起落架，主体位置与输入一致，背景保持黑色；螺旋桨、机翼细边缘和起落架的局部轮廓较粗，不能视为精确描边。"
+      "summary": "固定飞机图片的分割主体已核对：机身、机翼、尾翼和起落架的位置与输入一致。螺旋桨及细边缘较粗，局部存在漏分或外扩；下方叠加图用于检查这些边界。"
     },
     "PPOCR_v5": {
-      "id": "effect-ppocr-v5",
+      "id": "20261005-ocr-variants-ppocr-v5",
       "status": "passed",
-      "level": "correctness",
-      "date": "2026-09-23",
+      "level": "basic",
+      "date": "2026-10-05",
       "revision": "fed5e0b6eaac3e34b01cb3919e0df7810296d850",
-      "environment": "RK3576 DshanPi A1 + AX8850 8GB M.2",
-      "summary": "对 500×500 护发素商品图逐区核对：输出 16 个文本区域，标题“纯臻营养护发素”、产品编号“YM-X-3011”、净含量“220ml”、价格和主要说明与原图基本一致，竖排瓶身文字也被检出。识别文本存在空格合并和标点宽度差异。"
+      "environment": "RK3576 DshanPi A1 + AX8850 16GB M.2",
+      "summary": "检测、方向分类、识别三个NPU1权重完成完整链路。官方原图独立运行两次，再运行180°倒置输入；保存原始输出并独立解码文字。"
     },
     "PPOCR_v6": {
-      "id": "effect-ppocr-v6",
+      "id": "20261005-ocr-variants-ppocr-v6",
       "status": "passed",
-      "level": "correctness",
-      "date": "2026-09-23",
+      "level": "basic",
+      "date": "2026-10-05",
       "revision": "932f227f22b4f838d2cff2b54161aafe30d77a80",
-      "environment": "RK3576 DshanPi A1 + AX8850 8GB M.2",
-      "summary": "对同一护发素商品图人工核对，result.json 与标注图均包含 16 个文本区域；标题、产品编号“YM-X-3011”、净含量“220ml”和主要说明与原图基本一致，品牌行保留 OEM ODM 间空格，瓶身竖排文字输出 ODM OEM。"
+      "environment": "RK3576 DshanPi A1 + AX8850 16GB M.2",
+      "summary": "检测、方向分类、识别三个NPU3权重完成完整链路。官方原图独立运行两次，再运行180°倒置输入；保存原始输出并独立解码文字。"
     },
     "Real-ESRGAN": {
       "id": "effect-real-esrgan",
       "status": "passed",
-      "level": "basic",
+      "level": "correctness",
       "date": "2026-09-23",
       "revision": "45767e2bceb3e624477af4922d31418a7a044bc5",
       "environment": "RK3576 DshanPi A1 + AX8850 8GB M.2",
-      "summary": "动漫人物样图成功生成 1024×1024 输出。人工对照可见人物、持剑姿态、背景和颜色关系保留，脸部与头发轮廓完整，没有明显通道错乱或大片破损。原图实际为 243×243，程序先调整到 256×256，再由模型放大 4 倍。"
+      "summary": "该动漫样例的轮廓、持剑姿态和主要颜色保留，未见明显通道错乱或大片破损。原图为 243×243，先调整到 256×256，再生成 1024×1024；轮廓更平滑不代表恢复了真实细节。 已核对这一固定样例的视觉结果；没有高分辨率真值，也未覆盖其他图片。"
     },
     "RTMPose": {
-      "id": "effect-rtmpose",
+      "id": "20261005-cv-variant-rtmpose",
       "status": "passed",
       "level": "basic",
-      "date": "2026-09-23",
+      "date": "2026-10-05",
       "revision": "726c3acf17cff3a13958bc30da0aa6bf125312b1",
-      "environment": "RK3576 DshanPi A1 + AX8850 8GB M.2",
-      "summary": "滑雪者样图输出 17 个人体关键点，骨架大体沿头部、肩肘腕、髋膝踝连接，与画面中单人的姿态一致。面部关键点集中于较小区域；右侧画面中的手腕点接近阈值，不能据置信度宣称所有关节定位精确。"
+      "environment": "RK3576 DshanPi A1 + AX8850 16GB M.2",
+      "summary": "同一固定样例完成三次独立运行，其中一次使用下方配套运行包入口，原始输出与效果图一致。"
     },
     "superpoint": {
       "id": "effect-superpoint",
@@ -134,151 +134,151 @@
       "date": "2026-09-23",
       "revision": "ee048caa6487d312cea7493ae535eee4b1fcbf70",
       "environment": "RK3576 DshanPi A1 + AX8850 8GB M.2",
-      "summary": "AXCL 完成两张图的特征提取，日志分别记录 1830、1395 个关键点并生成 matches.jpg。但输出左侧是建筑街景、右侧是山地道路，明显不是同一场景，图上的跨图绿线不能视为正确对应；本次只能确认程序和特征提取基本运行，匹配正确性不通过。"
+      "summary": "8GB 实测提取到 1830、1395 个关键点，但两张输入分别是建筑街景和山地道路。跨图连线没有正确场景对应，本次匹配效果未通过；特征提取基本运行结果保留。"
     },
     "E_bike-axera": {
-      "id": "effect-e-bike-axera",
+      "id": "20261005-nhwc-e-bike-axera",
       "status": "passed",
       "level": "correctness",
-      "date": "2026-09-23",
+      "date": "2026-10-05",
       "revision": "72ffc10a3f5802e280e4ed0ad4ee74d62869cf31",
-      "environment": "RK3576 DshanPi A1 + AX8850 8GB M.2",
-      "summary": "AXCL 后端完成 test.jpg 单图推理，输出 1 个 e-bike 框，置信度 0.785。对照原图，框覆盖电梯入口处前景电动车的主要车身和前轮，类别与可见目标一致。"
+      "environment": "RK3576 DshanPi A1 + AX8850 16GB M.2",
+      "summary": "1 个 NHWC 权重完成固定样例测试，每个权重独立运行三次，原始输出与效果图一致。下方展示本次输入、输出及样例范围。"
     },
     "Gesture-axera": {
-      "id": "effect-gesture-axera",
+      "id": "20261005-nhwc-gesture-axera",
       "status": "passed",
       "level": "correctness",
-      "date": "2026-09-23",
+      "date": "2026-10-05",
       "revision": "6c0782a0a413cd55bdca21e83801f3b8abce9264",
-      "environment": "RK3576 DshanPi A1 + AX8850 8GB M.2",
-      "summary": "AXCL 后端完成三幅手势拼接图推理。输出 ok、like、stop 各 1 个框，置信度分别为 0.936、0.910、0.929；逐图对照可见的 OK 手势、竖拇指和张开手掌，标签及框位置一致。"
+      "environment": "RK3576 DshanPi A1 + AX8850 16GB M.2",
+      "summary": "1 个 NHWC 权重完成固定样例测试，每个权重独立运行三次，原始输出与效果图一致。下方展示本次输入、输出及样例范围。"
     },
     "Helmet-axera": {
-      "id": "effect-helmet-axera",
+      "id": "20261005-nhwc-helmet-axera",
       "status": "passed",
       "level": "correctness",
-      "date": "2026-09-23",
+      "date": "2026-10-05",
       "revision": "c48ec87e8e0c65618560d790d598c1081a857d92",
-      "environment": "RK3576 DshanPi A1 + AX8850 8GB M.2",
-      "summary": "AXCL 后端完成 test.jpg 单图推理。未戴头盔的骑行者图像输出 head 0.840、bike 0.844，两框分别落在头部和车辆区域；该输入中未产生 helmet 框。"
+      "environment": "RK3576 DshanPi A1 + AX8850 16GB M.2",
+      "summary": "1 个 NHWC 权重完成固定样例测试，每个权重独立运行三次，原始输出与效果图一致。下方展示本次输入、输出及样例范围。"
     },
     "Package-axera": {
-      "id": "effect-package-axera",
+      "id": "20261005-nhwc-package-axera",
       "status": "passed",
       "level": "correctness",
-      "date": "2026-09-23",
+      "date": "2026-10-05",
       "revision": "b8943b1189b6e09e7fa819bf43bc7dcaeb8532dd",
-      "environment": "RK3576 DshanPi A1 + AX8850 8GB M.2",
-      "summary": "AXCL 后端完成 package.jpg 单图推理，输出 1 个 package 框，置信度 0.915。框覆盖门口地面的纸箱，与原图中的包裹位置和边界基本一致。"
+      "environment": "RK3576 DshanPi A1 + AX8850 16GB M.2",
+      "summary": "1 个 NHWC 权重完成固定样例测试，每个权重独立运行三次，原始输出与效果图一致。下方展示本次输入、输出及样例范围。"
     },
     "Person_car-axera": {
-      "id": "effect-person-car-axera",
+      "id": "20261005-nhwc-person-car-axera",
       "status": "passed",
       "level": "correctness",
-      "date": "2026-09-23",
+      "date": "2026-10-05",
       "revision": "20e3e18e65c7874da8e6dbe65e248dfb5a48ddde",
-      "environment": "RK3576 DshanPi A1 + AX8850 8GB M.2",
-      "summary": "AXCL 后端完成道路图片推理，输出 15 个目标：13 个 car 和 2 个 person。对照原图，车辆框覆盖道路上的可见汽车，2 个人员框对应右侧人行道上的两名行人；框的位置和类别未见明显错位。"
+      "environment": "RK3576 DshanPi A1 + AX8850 16GB M.2",
+      "summary": "2 个 NHWC 权重完成固定样例测试，每个权重独立运行三次，原始输出与效果图一致。下方展示本次输入、输出及样例范围。"
     },
     "yolo11-obb": {
-      "id": "effect-yolo11-obb",
+      "id": "20261005-ax650-variants-yolo11-obb",
       "status": "passed",
       "level": "basic",
-      "date": "2026-09-23",
+      "date": "2026-10-05",
       "revision": "c4b6bb36c9de0f874d3bf5dfaaacda3d1ed2092c",
-      "environment": "RK3576 DshanPi A1 + AX8850 8GB M.2",
-      "summary": "AXCL 后端完成 boats.jpg 航拍图推理，输出 166 个旋转框：160 个 ship、6 个 harbor。多数 ship 框覆盖船体且旋转方向与船体长轴一致，harbor 框覆盖泊位区域；右上密集泊位仍有可见船只未被框出。本次保留为基本运行通过，并记录漏检现象。"
+      "environment": "RK3576 DshanPi A1 + AX8850 16GB M.2",
+      "summary": "9个AX650权重各独立运行两次，原始输出及效果图可重复。下方展示五种规模的旋转框结果；同规模NPU1/NPU3输出图完全相同时合并展示。"
     },
     "yolo26-obb": {
-      "id": "effect-yolo26-obb",
+      "id": "20261005-ax650-variants-yolo26-obb",
       "status": "passed",
       "level": "basic",
-      "date": "2026-09-23",
+      "date": "2026-10-05",
       "revision": "40df39440148761ea151593467e5e0ad33acca77",
-      "environment": "RK3576 DshanPi A1 + AX8850 8GB M.2",
-      "summary": "AXCL 后端完成 boats.jpg 航拍图推理，输出 163 个旋转框：162 个 ship、1 个 harbor。可见船体上的旋转框朝向合理，下方泊位有 harbor 框；右上密集泊位存在多艘可见船只未检出。本次保留为基本运行通过，并记录漏检现象。"
+      "environment": "RK3576 DshanPi A1 + AX8850 16GB M.2",
+      "summary": "9个AX650权重各独立运行两次，原始输出及效果图可重复。下方展示五种规模的旋转框结果；同规模NPU1/NPU3输出图完全相同时合并展示。"
     },
     "yolo26-pose": {
-      "id": "effect-yolo26-pose",
-      "status": "passed",
-      "level": "correctness",
-      "date": "2026-09-23",
-      "revision": "48847027a8d718f7586e2024a348555a89a79b80",
-      "environment": "RK3576 DshanPi A1 + AX8850 8GB M.2",
-      "summary": "AXCL 后端完成 bus.jpg 姿态推理，输出 4 个人员框及关键点。中间两名完整可见行人的头部、肩部、躯干和下肢关键点落在相应人体部位，骨架随站姿和屈腿方向连接；两侧被画面截断的行人只显示部分关键点，未出现整图坐标偏移。"
-    },
-    "yolo26-seg": {
-      "id": "effect-yolo26-seg",
-      "status": "passed",
-      "level": "correctness",
-      "date": "2026-09-23",
-      "revision": "266383e32988080759a92764eb1afd9c8cbea192",
-      "environment": "RK3576 DshanPi A1 + AX8850 8GB M.2",
-      "summary": "AXCL 后端完成 bus.jpg 实例分割，输出 1 个 bus 和 4 个 person。叠加图中公交车与人员使用不同类别颜色，车身掩码覆盖公交车主要区域，人员掩码沿可见衣物和肢体分布；掩码与原图位置一致，未出现整体平移或尺寸错配。"
-    },
-    "YOLOv8": {
-      "id": "effect-yolov8",
+      "id": "20261005-ax650-variants-yolo26-pose",
       "status": "passed",
       "level": "basic",
-      "date": "2026-09-23",
+      "date": "2026-10-05",
+      "revision": "48847027a8d718f7586e2024a348555a89a79b80",
+      "environment": "RK3576 DshanPi A1 + AX8850 16GB M.2",
+      "summary": "9个AX650权重各独立运行两次，原始输出及效果图可重复。下方展示五种规模的姿态结果；同规模NPU1/NPU3输出图完全相同时合并展示。"
+    },
+    "yolo26-seg": {
+      "id": "20261005-ax650-variants-yolo26-seg",
+      "status": "passed",
+      "level": "basic",
+      "date": "2026-10-05",
+      "revision": "266383e32988080759a92764eb1afd9c8cbea192",
+      "environment": "RK3576 DshanPi A1 + AX8850 16GB M.2",
+      "summary": "9个AX650权重各独立运行两次，原始输出及效果图可重复。下方展示五种规模的实例分割结果；同规模NPU1/NPU3输出图完全相同时合并展示。"
+    },
+    "YOLOv8": {
+      "id": "20261005-ax650-variants-yolov8",
+      "status": "passed",
+      "level": "basic",
+      "date": "2026-10-05",
       "revision": "65567714c2388b9c6b85bfb10b21535e7db0dee0",
-      "environment": "RK3576 DshanPi A1 + AX8850 8GB M.2",
-      "summary": "AXCL 后端完成 bus.jpg 检测并生成输出图。公交车及 3 名行人的框与可见目标对应，但左边缘被截断的行人未检出，左上红蓝圆形交通标志被标为 stop sign（0.34），与原图的非 STOP 标志不符。本次只计基本运行通过，保留漏检和类别误判记录。"
+      "environment": "RK3576 DshanPi A1 + AX8850 16GB M.2",
+      "summary": "9个AX650权重各独立运行两次，原始输出及效果图可重复。下方展示五种规模的检测结果；同规模NPU1/NPU3输出图完全相同时合并展示。"
     },
     "YOLOv8-Pose": {
-      "id": "effect-yolov8-pose",
+      "id": "20261005-ax650-variants-yolov8-pose",
       "status": "passed",
-      "level": "correctness",
-      "date": "2026-09-23",
+      "level": "basic",
+      "date": "2026-10-05",
       "revision": "f8bd38d5e1bd439ac22e1503c314ea16a3b4a885",
-      "environment": "RK3576 DshanPi A1 + AX8850 8GB M.2",
-      "summary": "bus.jpg 输出 4 个人体框；中间两名完整可见行人的骨架与躯干及肢体大致对应，左右边缘人物仅有部分身体可见，完成单样本姿态结果核对。"
+      "environment": "RK3576 DshanPi A1 + AX8850 16GB M.2",
+      "summary": "9个AX650权重各独立运行两次，原始输出及效果图可重复。下方展示五种规模的姿态结果；同规模NPU1/NPU3输出图完全相同时合并展示。"
     },
     "YOLOv8-Seg": {
-      "id": "effect-yolov8-seg",
+      "id": "20261005-ax650-variants-yolov8-seg",
       "status": "passed",
-      "level": "correctness",
-      "date": "2026-09-23",
+      "level": "basic",
+      "date": "2026-10-05",
       "revision": "c53ebcbf84d783488a878fa462d3b3f28f3b858d",
-      "environment": "RK3576 DshanPi A1 + AX8850 8GB M.2",
-      "summary": "bus.jpg 输出 1 个公交车与 4 个人物实例；公交车与主要行人的掩码覆盖对应物体区域，完成单样本实例分割核对。"
+      "environment": "RK3576 DshanPi A1 + AX8850 16GB M.2",
+      "summary": "9个AX650权重各独立运行两次，原始输出及效果图可重复。下方展示五种规模的实例分割结果；同规模NPU1/NPU3输出图完全相同时合并展示。"
     },
     "Fall-axera": {
-      "id": "effect-fall-axera",
+      "id": "20261005-nhwc-fall-axera",
       "status": "passed",
       "level": "correctness",
-      "date": "2026-09-23",
+      "date": "2026-10-05",
       "revision": "a73bc26fd1c7b2df94419565bbe5ac0ec21cd42e",
-      "environment": "RK3576 DshanPi A1 + AX8850 8GB M.2",
-      "summary": "fall4.png 中位于地面的人体被标记为 fall，置信度约 0.74，检测框和骨架覆盖对应人物，完成静态样例的定性核对。"
+      "environment": "RK3576 DshanPi A1 + AX8850 16GB M.2",
+      "summary": "1 个 NHWC 权重完成固定样例测试，每个权重独立运行三次，原始输出与效果图一致。下方展示本次输入、输出及样例范围。"
     },
     "Cow-axera": {
-      "id": "effect-cow-axera",
+      "id": "20261005-nhwc-cow-axera",
       "status": "passed",
       "level": "correctness",
-      "date": "2026-09-23",
+      "date": "2026-10-05",
       "revision": "e1b24eb694c6a4420f2e4278dd7e2f77ede3805d",
-      "environment": "RK3576 DshanPi A1 + AX8850 8GB M.2",
-      "summary": "000000235857.jpg 输出 3 个 cow 框，与前景两头牛及背景部分遮挡的牛对应，日志置信度为 0.76、0.94、0.95，完成单样本核对。"
+      "environment": "RK3576 DshanPi A1 + AX8850 16GB M.2",
+      "summary": "1 个 NHWC 权重完成固定样例测试，每个权重独立运行三次，原始输出与效果图一致。下方展示本次输入、输出及样例范围。"
     },
     "Pet-axera": {
-      "id": "effect-pet-axera",
+      "id": "20261005-nhwc-pet-axera",
       "status": "passed",
       "level": "correctness",
-      "date": "2026-09-23",
+      "date": "2026-10-05",
       "revision": "4107b2ed559ecd4f8872e83af733b2f0bab2d2f1",
-      "environment": "RK3576 DshanPi A1 + AX8850 8GB M.2",
-      "summary": "pet.jpg 中两只猫均被 pet 类别框覆盖，日志置信度约 0.92 和 0.95，位置与输入图对应，完成单样本核对。"
+      "environment": "RK3576 DshanPi A1 + AX8850 16GB M.2",
+      "summary": "1 个 NHWC 权重完成固定样例测试，每个权重独立运行三次，原始输出与效果图一致。下方展示本次输入、输出及样例范围。"
     },
     "Drone-axera": {
-      "id": "effect-drone-axera",
+      "id": "20261005-cv-variant-drone-axera",
       "status": "passed",
-      "level": "correctness",
-      "date": "2026-09-23",
+      "level": "basic",
+      "date": "2026-10-05",
       "revision": "bca09e938a5ef7cdf81862e4acd4b706718558a3",
-      "environment": "RK3576 DshanPi A1 + AX8850 8GB M.2",
-      "summary": "test/23.jpg 输出 1 个 Drone 框，约 0.97 的分数与天空中可见无人机的位置对应，完成 YOLO11 无人机权重的单样本核对。"
+      "environment": "RK3576 DshanPi A1 + AX8850 16GB M.2",
+      "summary": "同一固定样例完成三次独立运行，其中一次使用下方配套运行包入口，原始输出与效果图一致。"
     },
     "YOLOv8-Aquarium": {
       "id": "effect-yolov8-aquarium",
@@ -290,13 +290,13 @@
       "summary": "test.png 输出 26 个 fish 检测框，大部分框与可见鱼体位置对应；原图仍有多条明显未框出的鱼，记录为具有合理检测输出的单样本核对。"
     },
     "Depth-Anything-3": {
-      "id": "effect-depth-anything-3",
+      "id": "20261005-depth-three-variants",
       "status": "passed",
-      "level": "correctness",
-      "date": "2026-09-23",
+      "level": "basic",
+      "date": "2026-10-05",
       "revision": "7bf36032e88d4cfba089a6ddb05fa99724742177",
-      "environment": "RK3576 DshanPi A1 + AX8850 8GB M.2",
-      "summary": "da3-small 在 AXCL 上生成街景深度可视化；近处车辆和道路、远处建筑的层次与输入场景大致对应，输出张量均为有限数值。"
+      "environment": "RK3576 DshanPi A1 + AX8850 16GB M.2",
+      "summary": "三个新增权重分别完成20张官方样图的两轮推理，保留原始深度张量，重新核对前处理和可视化。以下展示街道、桥梁和室内样图。"
     },
     "RMBG-1.4": {
       "id": "effect-rmbg-1-4",
@@ -314,16 +314,16 @@
       "date": "2026-09-23",
       "revision": "38efdf670e0a4c78d3d8e4f67d76058221bbfd0a",
       "environment": "RK3576 DshanPi A1 + AX8850 8GB M.2",
-      "summary": "AXCL 推理生成 5 个框，马、骑乘者和货车的主要框与输入对应。左下犬只未检出，远处 bench 框未独立确认，因此记录为基本运行。"
+      "summary": "本次 8GB 样例输出马、两名人物、货车和 bench 共 5 个框。前景犬只没有检测框，远处 bench 类别未独立确认；本次效果核对未通过，保留实际图片与原始结果。"
     },
     "Plate-axera": {
-      "id": "effect-plate-axera",
+      "id": "20261005-nhwc-plate-axera",
       "status": "passed",
       "level": "correctness",
-      "date": "2026-09-23",
+      "date": "2026-10-05",
       "revision": "e528f3e145f0ec35e3c2c05a019d8369d6fdef3c",
-      "environment": "RK3576 DshanPi A1 + AX8850 8GB M.2",
-      "summary": "检测和识别两个 AXCL 模型完成单张蓝牌测试；控制台识别为“川A2E7V7”，与原图车牌一致，颜色为 blue。"
+      "environment": "RK3576 DshanPi A1 + AX8850 16GB M.2",
+      "summary": "2 个 NHWC 权重完成固定样例测试，每个权重独立运行三次，原始输出与效果图一致。下方展示本次输入、输出及样例范围。"
     },
     "Qwen3-0.6B": {
       "id": "effect-qwen3-0-6b",
@@ -332,7 +332,7 @@
       "date": "2026-09-23",
       "revision": "9bd240869b5ec6f28964a635cd421a80fcad9dc8",
       "environment": "RK3576 DshanPi A1 + AX8850 8GB M.2",
-      "summary": "在 AXCL 后端完成 3 次短文本生成，均以 stop 正常结束且无 UTF-8 替换字符。两次数学问题都得到“2 + 3 = 5”，数值正确，但没有遵循“只输出数字”的格式要求；中文 PCIe 问答给出完整、相关的接口用途说明。服务停止后卡端 CMM 回到测试前 18 MiB，NPU 为 0%，进程栏为空。"
+      "summary": "中文问答完整且与 PCIe 用途相关；两次数学回复均为 2 + 3 = 5，数值正确，但没有遵循只输出数字的要求。格式检查未通过，JSON 任务尚未执行。"
     },
     "FastVLM-1.5B-GPTQ-Int4": {
       "id": "effect-fastvlm-1-5b-gptq-int4",
@@ -341,7 +341,7 @@
       "date": "2026-09-23",
       "revision": "0cdae3c2711cc457708b9bb5b4dee77839755d7a",
       "environment": "RK3576 DshanPi A1 + AX8850 8GB M.2",
-      "summary": "对实际保存的 512×512 图片人工核对，画面确有 3 名穿白色宇航服的人位于树林。3 次图文 API 请求均结束于 stop；第一次与第三次的一句描述相同，主体、人数及场景基本一致。第二次回答人数仍为 3，但附加了冗长描述，并出现“black and white”“floating”等不可靠细节。"
+      "summary": "三次英文图文请求均正常结束，人数回答为三人；长回复把图片称为黑白图，并加入无法确认的漂浮描述，细节质量未通过。尚未测试中文视觉问题。"
     },
     "Whisper": {
       "id": "effect-whisper",
@@ -350,7 +350,7 @@
       "date": "2026-09-23",
       "revision": "143121c8a628bbb463bf4e19e8e7711dd2192e27",
       "environment": "RK3576 DshanPi A1 + AX8850 8GB M.2",
-      "summary": "Whisper tiny 的 encoder 与 decoder 在显式 AXCL provider 下完成短音频转写。一次带记录器运行与两次不带记录器的独立 CLI 运行均输出“擅职出现交易几乎停止的情况”，后两次 RTF 分别为 0.499203、0.531010。与上游给出的参考“甚至出现交易几乎停止的情况”相比，开头两字不一致；本次只能确认部署与转写链路基本运行，不能认证识别准确率。三次进程退出后 CMM 均回到 18 MiB。"
+      "summary": "8GB 卡的三次历史 Whisper tiny 运行均输出“擅职出现交易几乎停止的情况”。同一音频对照 FireRedASR 固定文字标注有 3/13 字符差异；原 Whisper 模型卡参考使用“停止”，因此先前与该参考比较只有开头两字差异。"
     },
     "Qwen3-0.6B-GPTQ-Int4": {
       "id": "effect-qwen3-0-6b-gptq-int4",
@@ -359,7 +359,7 @@
       "date": "2026-09-23",
       "revision": "bae58c0d34c89755ba25e3d28e155cac5ac13eef",
       "environment": "RK3576 DshanPi A1 + AX8850 8GB M.2",
-      "summary": "完成三组短文本请求。算术题给出正确的 2 + 3 = 5，但带有解释和 Markdown；中文 PCIe 问答可读；JSON 字段和值正确，但回复带代码围栏。当前确认基本运行，严格格式指令仍需应用侧检查。"
+      "summary": "算术数值正确，但附带解释和 Markdown，未按要求只输出数字；JSON 字段和值正确，外层带代码围栏。基本运行完成，指定格式检查未通过。"
     },
     "Qwen3-1.7B-GPTQ-Int4": {
       "id": "effect-qwen3-1-7b-gptq-int4",
@@ -368,7 +368,7 @@
       "date": "2026-09-23",
       "revision": "6bbc2ec7f7cff174d06058de4aed85112df6261b",
       "environment": "RK3576 DshanPi A1 + AX8850 8GB M.2",
-      "summary": "三组短文本请求均完成。算术题直接回复 5；中文回复解释 PCIe 用于连接主板与扩展设备；JSON 中 apple=3、pear=2 正确，但外层包含 Markdown 代码围栏。本次展示实际回复，不将结构化输出格式视为完全通过。"
+      "summary": "算术题直接返回 5，中文说明与问题相关；JSON 中 apple=3、pear=2 正确，但外层包含代码围栏，严格格式检查未通过。"
     },
     "gemma-3-270m-it": {
       "id": "effect-gemma-3-270m-it",
@@ -377,7 +377,7 @@
       "date": "2026-09-23",
       "revision": "62abd3daa7abbab7896146fb10b9ebed6e0b46fe",
       "environment": "RK3576 DshanPi A1 + AX8850 8GB M.2",
-      "summary": "改用独立端口后完成三组请求。算术题输出 5，JSON 的字段和值正确但带代码围栏；PCIe 回答将用途描述为从单个设备传到多个设备，表达不够准确。当前确认基本运行，保留实际回复供对照。"
+      "summary": "算术题直接返回 5；JSON 的字段和值正确，但外层有 Markdown 代码围栏，未满足只输出 JSON 的要求。PCIe 用途描述不够准确，当前质量未通过。"
     },
     "Gemma-3-1B-it-AX650": {
       "id": "effect-gemma-3-1b-it-ax650",
@@ -386,7 +386,7 @@
       "date": "2026-09-23",
       "revision": "1be017de5bd0ded9c878de745b3f3fa6199ce4b6",
       "environment": "RK3576 DshanPi A1 + AX8850 8GB M.2",
-      "summary": "服务能够加载并完成三组请求，但本次效果存在明确问题：2 + 3 被回答为 23；中文与 JSON 回复中出现可见的 ▁ 字符。当前只确认基本运行，暂不建议直接作为问答或结构化输出方案使用。"
+      "summary": "算术题 2 + 3 被回答为 23；中文与 JSON 回复含可见的 ▁ 字符，原始回复不能直接解析为 JSON。基本运行完成，内容与格式质量未通过。"
     },
     "MiniCPM5-1B": {
       "id": "effect-minicpm5-1b",
@@ -395,7 +395,7 @@
       "date": "2026-09-23",
       "revision": "dd7e37c9ce9f2f9018973e57c0d37a7a2964272a",
       "environment": "RK3576 DshanPi A1 + AX8850 8GB M.2",
-      "summary": "三组短请求均完成。算术题直接回复 5，中文 PCIe 解释可读；JSON 的字段和值正确，但带有 Markdown 代码围栏。本次确认短文本服务可用，尚未验证严格结构化输出。"
+      "summary": "算术题直接返回 5，中文 PCIe 说明与问题相关；JSON 字段和值正确，但原始回复带代码围栏，严格格式检查未通过。"
     },
     "SmolVLM2-500M-Video-Instruct": {
       "id": "effect-smolvlm2-500m-video-instruct",
@@ -404,7 +404,7 @@
       "date": "2026-09-23",
       "revision": "aec89ce86a85e498ea60884325aae9012b08bda6",
       "environment": "RK3576 DshanPi A1 + AX8850 8GB M.2",
-      "summary": "单图三组请求均返回文本。英文描述识别出宇航服与树林，人数回答为三人；中文回答误写服装颜色并重复“他们都有胳膊”，达到 128 token 上限时仍未完成。当前仅确认单图接口运行，中文效果不满足本样例要求。"
+      "summary": "单图三组请求返回文本，英文识别出宇航服和树林，人数为三人；中文误述服装颜色并反复输出“他们都有胳膊”，达到 128 token 上限时仍未结束。本次中文效果和完整性未通过。"
     },
     "Qwen3-VL-2B-Instruct-GPTQ-Int4": {
       "id": "effect-qwen3-vl-2b-instruct-gptq-int4",
@@ -413,7 +413,7 @@
       "date": "2026-09-23",
       "revision": "16fe252a65016ba1ad44e92a60cfc879462fac4c",
       "environment": "RK3576 DshanPi A1 + AX8850 8GB M.2",
-      "summary": "对同一图片完成英文描述、人数问答和中文描述。人数为三人与画面相符，但人数回复误称左侧人物举起双臂，并推测右侧人物在种植；中文回复达到 128 token 上限，末句未完成。当前确认单图运行，细节准确性仍需检查。"
+      "summary": "三次单图请求均返回文本，人数回答为三人；回复误述左侧人物举手并推测种植，中文在 128 token 上限处截断。当前基本运行通过，细节与完整回复质量未通过。"
     },
     "Qwen3.5-0.8B-AX650-GPTQ-Int4-C128-P1152-CTX2047": {
       "id": "effect-qwen3-5-0-8b-ax650-gptq-int4-c128-p1152-ctx2047",
@@ -422,7 +422,7 @@
       "date": "2026-09-23",
       "revision": "855ab1611373684389ba0945ab2594d6e98fbbe4",
       "environment": "RK3576 DshanPi A1 + AX8850 8GB M.2",
-      "summary": "三组单图请求均完成。英文短描述识别出三名白色宇航服人物与中间人物举手，人数回答为 3；中文回复添加了“清晰看到面部”“面带微笑”等无法确认的细节，并在 128 token 上限处中断。当前确认单图运行。"
+      "summary": "三次单图请求均返回文本。中文误述面部清晰、左侧双手下垂及微笑，并在128 token处止于未完成的列表；细节和完整回复未通过。"
     },
     "Qwen3.5-2B-AX650N-GPTQ-Int4-C128-P1152-CTX2047": {
       "id": "effect-qwen3-5-2b-ax650n-gptq-int4-c128-p1152-ctx2047",
@@ -431,7 +431,7 @@
       "date": "2026-09-23",
       "revision": "14aafe22f5b269c200fe3affd6f5d031a5ef93a6",
       "environment": "RK3576 DshanPi A1 + AX8850 8GB M.2",
-      "summary": "完成三组单图请求，人数回答为三人，能够描述白色宇航服、树林与中间人物举手。中文回复附带“表情惊讶”“庆祝”等无法确认的解释，并在 128 token 上限处停止。当前确认基本运行，保留完整原始回复供核对。"
+      "summary": "三次单图请求均返回文本。中文误述左侧双手交叉胸前及惊讶表情，并在128 token处未完整结束；细节和完整回复未通过。"
     },
     "HY-MT1.5-1.8B_GPTQ_INT4": {
       "id": "effect-hy-mt1-5-1-8b-gptq-int4",
@@ -440,7 +440,7 @@
       "date": "2026-09-23",
       "revision": "5c0ecd91cd2dab6ad03892d510bb6f27e7170083",
       "environment": "RK3576 DshanPi A1 + AX8850 8GB M.2",
-      "summary": "完成两次中译英和一次英译中。目录指令和温度、内存数值翻译可读；首句把“算力卡”译成 computing power，丢失了卡这一实体含义。当前确认翻译服务可用，专业术语仍需审校。"
+      "summary": "三次翻译均返回文本，目录指令及 42 摄氏度、6 GB 的数值保留；首句把“算力卡”译成 computing power，丢失卡这一实体含义。本次专业术语翻译未通过。"
     },
     "InternVL3_5-1B_GPTQ_INT4": {
       "id": "effect-internvl3-5-1b-gptq-int4",
@@ -494,7 +494,7 @@
       "date": "2026-09-23",
       "revision": "f77a4ab10991c6476dafb111371960d6cdce5e6f",
       "environment": "RK3576 DshanPi A1 + AX8850 8GB M.2",
-      "summary": "三组文本请求均完成。算术与 PCIe 说明内容符合样例要求；JSON 字段和值正确，但回复附带 Markdown 代码围栏，未完全遵循“只输出 JSON”的格式要求。"
+      "summary": "算术题直接返回 5，中文说明与 PCIe 连接扩展设备的用途相符；JSON 字段和值正确，但附带代码围栏，严格格式检查未通过。"
     },
     "qwenpaw-2b-flash-gptq-int4": {
       "id": "effect-qwenpaw-2b-flash-gptq-int4",
@@ -503,7 +503,7 @@
       "date": "2026-09-23",
       "revision": "5f605815e04cc22d3571ecc7cad5365a3e867d2b",
       "environment": "RK3576 DshanPi A1 + AX8850 8GB M.2",
-      "summary": "此仓库实际配置启用了 Qwen3VL 视觉分支。三次单图问答完成，人数回答为 3，中文识别出白色宇航服与树林；英文描述中的兴奋或惊讶属于未经证实的情绪推测。"
+      "summary": "三次单图请求均返回文本。人数直接回答3，中文人数、举手和弯腰姿态与图相符；英文兴奋或惊讶属于推测，其他图片和适用视频链路仍待验证。"
     },
     "Qwen3.5-0.8B-AX650-C128-P1152-CTX2047": {
       "id": "effect-qwen3-5-0-8b-ax650-c128-p1152-ctx2047",
@@ -512,16 +512,7 @@
       "date": "2026-09-23",
       "revision": "e1954678877f8194380513bb8ae47066ba09af5c",
       "environment": "RK3576 DshanPi A1 + AX8850 8GB M.2",
-      "summary": "三次单图请求完成，英文描述与人数回答识别出三名白色宇航服人物。中文回复增加了“面带微笑”，图中无法确认面部表情，尚不能作为可靠的细节描述。"
-    },
-    "Qwen2.5-7B-Instruct-GPTQ-Int4": {
-      "id": "effect-qwen2-5-7b-instruct-gptq-int4",
-      "status": "failed",
-      "level": "basic",
-      "date": "2026-09-23",
-      "revision": "5b09894da95a2cdfb3cfd542441b8c0cd8c92d7c",
-      "environment": "RK3576 DshanPi A1 + AX8850 8GB M.2",
-      "summary": "此固定版本尚未完成有效推理，部署效果待验证。"
+      "summary": "三次单图请求均返回文本。中文在明确要求不推测表情时仍写面带微笑，图中无法确认面部表情；人数正确，但两侧人物均蹲伏的补充不准确。 本次细节质量未通过。"
     },
     "Qwen3-VL-4B-Instruct-GPTQ-Int4": {
       "id": "effect-qwen3-vl-4b-instruct-gptq-int4",
@@ -530,7 +521,7 @@
       "date": "2026-09-23",
       "revision": "49e8c2a907b6355a365e5bb62ed6298d9596574b",
       "environment": "RK3576 DshanPi A1 + AX8850 8GB M.2",
-      "summary": "三次单图问答均返回结果。英文识别出三名穿宇航服的人，但包含特殊标记和不可靠细节；中文仅返回特殊标记，未取得有效描述。"
+      "summary": "三次单图请求返回文本。人数回答正确，但英文描述带有特殊标记，中文仅返回 <|im_start|><|im_start|>，没有有效描述；本次中文问答质量未通过。"
     },
     "SenseVoice": {
       "id": "effect-sensevoice",
@@ -548,7 +539,7 @@
       "date": "2026-09-23",
       "revision": "f49e047022ae4a451a92e186b7d5a2ce187ff2a9",
       "environment": "RK3576 DshanPi A1 + AX8850 8GB M.2",
-      "summary": "三句中文均完成主机编码与卡端解码，生成 44.1 kHz 单声道 WAV。下方展示原始音频及输入文本，尚未完成人工听音质量核对。"
+      "summary": "历史 8GB 测试生成的三句中文 WAV 已完成主机 ASR 辅助对照；算力卡、加载、推理及电源连接等词出现识别偏差。保留原音频，发音和自然度仍待人工听审。"
     },
     "3D-Speaker": {
       "id": "effect-3d-speaker",
@@ -557,7 +548,7 @@
       "date": "2026-09-23",
       "revision": "19be2b978d867ad8a2f3f2acf9bd91aa949d8b91",
       "environment": "RK3576 DshanPi A1 + AX8850 8GB M.2",
-      "summary": "两套声纹模型均通过 AXCL 完成三段录音的特征提取，按文件分组的同人分数均高于异人分数。ERes2NetV2 的卡端与 CPU ONNX 向量余弦约为 0.993–0.994；ECAPA-TDNN 仅约 0.36–0.41，仍存在明显差异。"
+      "summary": "两套声纹模型均输出 192 维特征；从完整卡端向量复算三组录音组合，同组分数均高于不同组。ECAPA-TDNN 的卡端与 CPU 对照差异仍明显，重复输入和说话人身份未独立验证，效果仍需评估。"
     },
     "Qwen3.5-0.8B-AX650-C256-P6K-CTX8K": {
       "id": "effect-16gb-qwen3-5-0-8b-ax650-c256-p6k-ctx8k",
@@ -566,7 +557,7 @@
       "date": "2026-09-23",
       "revision": "2ffde3840cc95e0cda44a01d7082079b35b114ce",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "三次图片问答均完成。英文一句话描述与画面相符，人数回答为 3；人数回答的扩展说明和中文描述含不可靠细节，尚未通过完整效果核对。"
+      "summary": "三次单图请求均返回文本。中文仍推测面带微笑，人数回答把两侧均描述为蹲伏并推测太空行走准备；人数正确不代表细节通过。 本次细节质量未通过。"
     },
     "Qwen3.5-0.8B-AX650-C256-P6K-CTX8K-HP": {
       "id": "effect-16gb-qwen3-5-0-8b-ax650-c256-p6k-ctx8k-hp",
@@ -575,7 +566,7 @@
       "date": "2026-09-23",
       "revision": "77df2130de56c3e18bc78d48c5f4cfd03f7e5aeb",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "HP 版本完成三次图片问答，人数回答为 3。英文描述包含动作意图推测，中文描述含无法核实的表情，仍需评估回答质量。"
+      "summary": "三次单图请求均返回文本。中文仍推测面带微笑，英文附庆祝或展示的意图；人数正确，表情与部分姿态描述未通过。"
     },
     "Qwen3.5-0.8B-AX650-GPTQ-Int4-C256-P6K-CTX8K": {
       "id": "effect-16gb-qwen3-5-0-8b-ax650-gptq-int4-c256-p6k-ctx8k",
@@ -593,7 +584,7 @@
       "date": "2026-09-23",
       "revision": "616df689cb53481448a69302f1df78fc45244e69",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "三次图片问答均完成，人数回答为 3。模型识别出宇航服与树林，但英文带情绪推测，中文把静态姿态描述为行走，仍需评估描述的可靠性。"
+      "summary": "三次单图请求均返回文本。人数、服装和树林可对照，中文行走及英文胜利姿态仍是推测；保留待完成，继续细节和适用视频链路。"
     },
     "Qwen3.5-4B-AX650-GPTQ-Int4-C128-P1152-CTX2047": {
       "id": "effect-16gb-qwen3-5-4b-ax650-gptq-int4-c128-p1152-ctx2047",
@@ -602,7 +593,7 @@
       "date": "2026-09-23",
       "revision": "3ad68d4698661672935bddc274f00bd1471400f3",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "三次图片问答均完成，人数为 3，并正确描述中间人物举手、左侧站立和右侧前倾。英文对色彩的概括及中文“行走”仍存在偏差，未判定全部描述通过。"
+      "summary": "三次单图请求均返回文本。人数、服装和主要姿态可对照；中文行走与英文单色环境的表述尚需复核，保留待完成。"
     },
     "PaddleOCR-VL-1.5": {
       "id": "effect-16gb-paddleocr-vl-1-5",
@@ -620,7 +611,7 @@
       "date": "2026-09-23",
       "revision": "eacc66d062de0ca30c716d83db6b5b55b4e50179",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "在 16GB 卡上完成三次图片问答，识别出三名宇航员；描述中仍包含图片无法确认的意图推测。"
+      "summary": "三次单图请求均返回文本。人数正确，但中文在要求不推测意图时仍写仪式或表演；意图约束未通过。"
     },
     "MiniCPM-V-4.6": {
       "id": "effect-16gb-minicpm-v-4-6",
@@ -629,7 +620,7 @@
       "date": "2026-09-23",
       "revision": "35470c6072a771607bf89f9742d84046e86f1563",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "在 16GB 卡上完成三次图片问答，中文描述识别出森林中的三名宇航员；英文回复仍存在格式和内容问题。"
+      "summary": "16GB 卡的三次单图请求均返回文本，中文识别出树林中的三名宇航服人物。英文描述未遵守一句话要求并加入意图推测；人数回复含思考标记且在 128 token 处截断，完整回复与格式质量未通过。"
     },
     "MiniCPM-V-4.6-GPTQ-INT4-C256-P6K-CTX8K": {
       "id": "effect-16gb-minicpm-v-4-6-gptq-int4-c256-p6k-ctx8k",
@@ -647,7 +638,7 @@
       "date": "2026-09-23",
       "revision": "c3668ca8d4c9fcc9be0978e2c32be1eeaf44a3e0",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "在 16GB 卡上完成三次文本生成。PCIe 说明与输入相关，但算术答案错误，JSON 回复未满足只输出 JSON 的格式要求。"
+      "summary": "16GB 卡完成三次短请求，但算术题 2 + 3 返回 7；JSON 字段和值正确，外层代码围栏不符合指定格式。当前内容与格式质量未通过，未据此验证 12K 上下文。"
     },
     "MiniCPM5-1B-C256-P12K-CTX16K": {
       "id": "effect-16gb-minicpm5-1b-c256-p12k-ctx16k",
@@ -656,7 +647,7 @@
       "date": "2026-09-23",
       "revision": "2cb277e14e0b453f66cf9e77b8aa72315e68a901",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "在 16GB 卡上完成三次文本生成。PCIe 说明与输入相关，但算术答案错误，JSON 回复未满足只输出 JSON 的格式要求。"
+      "summary": "16GB 卡完成三次短请求，但算术题 2 + 3 返回 7；JSON 字段和值正确，外层代码围栏不符合指定格式。当前内容与格式质量未通过，未据此验证 16K 上下文。"
     },
     "MiniCPM5-2B-GPTQ-Int4-AX650-C128-P4K-CTX6K": {
       "id": "effect-16gb-minicpm5-2b-gptq-int4-ax650-c128-p4k-ctx6k",
@@ -674,7 +665,7 @@
       "date": "2026-09-23",
       "revision": "e36200659c15f6c22adb5f1d1720c73459c58e20",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "公交车图片的 Top-1 为 ImageNet 类别 654（minibus），Softmax 分数约 0.7184；同图三次输出一致。该样例未核对细分车型标签，不代表完整分类精度。"
+      "summary": "同一公交车图片运行三次，保存的 Top-5 类别及分数逐项一致，Top-1 为类别 654（minibus），分数约 0.7184。已核对标签表和官方 RGB 归一化流程；未保存完整 1000 维输出，也未取得独立细分车型标注，分类质量仍待验证。"
     },
     "mobilenetv3-small": {
       "id": "effect-16gb-python-mobilenetv3-small",
@@ -692,7 +683,7 @@
       "date": "2026-09-23",
       "revision": "2e4fdf033e79f8eabd21453f0902a8ee3b547f29",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "三段无标点中文均生成了补入标点的结果，包括一段超过单窗口长度的文字。输出存在句末逗号和不合理断句，以下保留原文供核对。"
+      "summary": "三段中文去除输出标点后均与输入一致，没有丢失原文；前两段以逗号结尾，长段落存在“拥有悠久。的历史文化”等错误断句，标点质量尚未通过核对。"
     },
     "Qwen3.5-2B-GPTQ-Int4-AX650-C256-P12k-CTX17k": {
       "id": "effect-16gb-qwen3-5-2b-gptq-int4-ax650-c256-p12k-ctx17k",
@@ -701,7 +692,7 @@
       "date": "2026-09-23",
       "revision": "4876360c20e713a030f2c0afa0e802bd6aa32f50",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "在 16GB 卡上完成三次图片问答，识别出三名宇航员；描述中仍包含图片无法确认的意图推测。"
+      "summary": "三次单图请求均返回文本。人数正确，但中文在要求不推测意图时仍写仪式或表演；意图约束未通过，17K配置也未进行长上下文验证。"
     },
     "Qwen3.5-4B-AX650-GPTQ-Int4-C256-P10K-CTX12K": {
       "id": "effect-16gb-qwen3-5-4b-ax650-gptq-int4-c256-p10k-ctx12k",
@@ -710,7 +701,7 @@
       "date": "2026-09-23",
       "revision": "3d0723b1e9928bf56a8932f3d8ad4d88fe0b9ba9",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "在 16GB 卡上完成三次图片问答，人数、宇航服和人物位置基本符合输入；对色彩和动作的描述仍有偏差。"
+      "summary": "三次单图请求均返回文本。人数、服装和主要姿态可对照；中文行走与英文单色环境尚需复核，12K配置未进行长上下文验证。"
     },
     "Qwen3.5-4B-AX650-GPTQ-Int4-C256-P16k-CTX20k": {
       "id": "effect-16gb-qwen3-5-4b-ax650-gptq-int4-c256-p16k-ctx20k",
@@ -719,7 +710,7 @@
       "date": "2026-09-23",
       "revision": "b77518b9f17397b95b35ba0a970b090e1e513680",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "在 16GB 卡上完成三次图片问答，人数和中间人物举手的描述符合图片；回复仍包含外星环境和行走动作等无法确认的细节。"
+      "summary": "三次单图请求均返回文本。人数和主要场景可对照；英文外星探险与中文行走仍是推测，保留待完成并补细节和20K上下文验证。"
     },
     "Qwen3-VL-2B-Instruct-GPTQ-Int4-C256-P3584-CTX4095": {
       "id": "effect-16gb-qwen3-vl-2b-instruct-gptq-int4-c256-p3584-ctx4095",
@@ -728,7 +719,7 @@
       "date": "2026-09-23",
       "revision": "3546b5857ff79800f64e8cb3111ec8286697dc6b",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "在 16GB 卡上完成三次图片问答，人数回答为 3；右侧人物双手撑地的描述不符合图片，中文输出达到 128 token 上限而截断。"
+      "summary": "16GB 卡完成三次单图请求，人数回答为三人；右侧人物双手撑地的描述不符图片，中文达到 128 token 上限而未完成。当前基本运行通过，细节与完整回复质量未通过。"
     },
     "Qwen3-1.7B-GPTQ-INT4-16K": {
       "id": "effect-16gb-qwen3-1-7b-gptq-int4-16k",
@@ -737,7 +728,7 @@
       "date": "2026-09-23",
       "revision": "5547208bdcc155ed683bcfd15df6a42760eff6f5",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "在 16GB 单卡上完成三次短文本请求：加法返回 5，PCIe 解释基本正确；结构化结果数值正确，但带 Markdown 代码块，未满足只输出 JSON 的要求。"
+      "summary": "16GB 卡完成三次短请求：算术返回 5，PCIe 说明与问题相关；JSON 数值正确但带代码围栏，严格格式检查未通过。短请求不代表已验证 16K 上下文。"
     },
     "Laya": {
       "id": "effect-16gb-laya-three-checkpoints",
@@ -764,7 +755,7 @@
       "date": "2026-09-23",
       "revision": "6a15e0cc1436740ccef0e6f0fe50324b2cdef49b",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "AOD-Net、DehazeFormer、FFA-Net、GridDehazeNet、LightDehazeNet、MixDehazeNet 与 GCANet 全部完成样例推理。下方展示各算法实际输出；部分结果偏暗或细节变软。"
+      "summary": "七种去雾权重均完成样例推理。部分样例的楼体或山体对比度提高，但也存在暗部过暗、偏色和细节变软；FFA-Net 的输出还改变了原图宽高比，去雾质量尚未通过核对。"
     },
     "LowLightImageEnhancement": {
       "id": "effect-16gb-lowlightimageenhancement-all-variants",
@@ -773,16 +764,16 @@
       "date": "2026-09-23",
       "revision": "61df6da7399d54fbe8786235ceb06a5cef1118fa",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "Zero-DCE、Zero-DCE++、SCI 与 Retinexformer 四个权重均完成样例推理。输出亮度提高，同时保留放大的噪点与细节变软等实际现象。"
+      "summary": "四个权重均完成暗光样例推理。暗部亮度提高，但 Zero-DCE 与 Retinexformer 的细节变软，Zero-DCE++ 与 SCI 的噪点被放大；下方逐项展示实际差异。"
     },
     "DeOldify": {
       "id": "effect-16gb-deoldify-all-variants",
       "status": "passed",
-      "level": "basic",
+      "level": "correctness",
       "date": "2026-09-23",
       "revision": "9f8a5b53053a224ad6da0974b069c72b87a26837",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "Stable 与 Artistic 两个上色权重处理同一张官方老照片，分别生成 572×694 的彩色图片。"
+      "summary": "Stable 与 Artistic 均完成同一张老照片的上色，输出为 572×694。人物、地球仪、书本和椅子结构保留；Stable 偏暖褐，Artistic 的紫色衣物和蓝绿色背景更明显。已核对该样例的上色效果，没有原始彩照用于颜色准确性评价。"
     },
     "CodeFormer": {
       "id": "effect-16gb-codeformer-all-variants",
@@ -791,7 +782,7 @@
       "date": "2026-09-23",
       "revision": "0badefa602a33ba9867c6f6dbe5518ebb3aa310b",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "完成整图的人脸检测、人像修复与背景增强流程，三个配套模型均实际执行。下方展示原图与本次合成结果。"
+      "summary": "四张人脸完成修复，人物位置和构图保留，轮廓与头发更清晰；背景及衬衫的竖纹明显增强，面部纹理偏平滑。当前确认整图流程能够运行，修复质量仍需改进。"
     },
     "ImageDenosing": {
       "id": "effect-16gb-imagedenosing-three-variants",
@@ -800,16 +791,16 @@
       "date": "2026-09-23",
       "revision": "2bd3be823a15cf79862a9dfaa21979028457f10f",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "DnCNN、FFDNet、NAFNet 三个权重完成图像降噪推理，下面展示各自实际输入与输出。Restormer 与 FastDVDnet 尚未取得有效输出，本页暂不提供这两个权重的部署效果。"
+      "summary": "DnCNN、FFDNet 和 NAFNet 均减轻了样例噪点；DnCNN 仍有残余颗粒，FFDNet 略有平滑，NAFNet 的文字仍模糊。Restormer 与 FastDVDnet 尚未取得有效输出，仍需补测。"
     },
     "Real-ESRGAN.axera": {
       "id": "20260924-wave4-real-esrgan-axera",
       "status": "passed",
-      "level": "basic",
+      "level": "correctness",
       "date": "2026-09-24",
       "revision": "e56bfc5639dca3d6d36899aaa37345c13183d198",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "已运行 x2、x4 两种倍率，179×179 官方输入分别生成 358×358、716×716 图片。"
+      "summary": "x2 与 x4 在同一张插画上分别生成 358×358、716×716 输出，主要轮廓与颜色保留，未见明显分块接缝；已核对这两个固定样例。细线与重建纹理不代表真实细节恢复。"
     },
     "SuperResolution": {
       "id": "20260924-wave4-superresolution",
@@ -818,7 +809,7 @@
       "date": "2026-09-24",
       "revision": "4b9163681800096ca7af49062273bbebe0152ecb",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "EDSR 与 ESPCN 的四个 AX650 权重均取得输出，分别覆盖 1080p→4K 和 720p→1440p。"
+      "summary": "EDSR 与 ESPCN 的四个 AX650 权重均产生预期尺寸的首帧输出。EDSR 主要结构和颜色保留；两个 ESPCN 结果在浅色墙面出现明显色阶，本次渐变质量未通过。"
     },
     "RF-DETR": {
       "id": "20260924-wave4-rf-detr",
@@ -827,7 +818,7 @@
       "date": "2026-09-24",
       "revision": "b18cd74e6e7c1df8f86e4a56e020faeb412a0b26",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "官方道路图片生成车辆与信号灯检测框；同一输入的三次框坐标和分数一致。"
+      "summary": "道路图在阈值 0.3 下得到 25 个 car 和 6 个 traffic_light 候选，三次框坐标与分数一致；右侧外车道仍有可见车辆未检出，本次效果核对未通过。候选数量不代表道路真实车辆数。"
     },
     "YOLOv7-Face": {
       "id": "20260924-wave4-yolov7-face",
@@ -836,7 +827,7 @@
       "date": "2026-09-24",
       "revision": "e4f3f97e87dad8a31b4e20f452ef312dd102469d",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "官方多人样例生成 277 个候选人脸框，保留本次检测图。"
+      "summary": "多人合照在阈值 0.2 下输出 277 个候选人脸框，前景多个人脸有对应框；后排密集区域仍有可见人脸未检出，本次效果核对未通过。277 不是准确人数，图中分数也不是准确率。"
     },
     "dinov3_vits_pretrain_lvd1689m": {
       "id": "20260924-wave4-dinov3-vits-pretrain-lvd1689m",
@@ -845,7 +836,7 @@
       "date": "2026-09-24",
       "revision": "79b5d51c3d7c46aa0195b8b4df1d8c9b84ed9a16",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "两张官方图片分别得到 384 维特征；重复第一张图片的向量一致。"
+      "summary": "两张图片均得到 384 维特征；保存的不同图片向量余弦相似度为 0.017665。运行记录中的重复输入余弦相似度接近 1，尚未独立确认两次完整向量逐元素一致。"
     },
     "MobileCLIP": {
       "id": "20260924-wave4-mobileclip",
@@ -854,7 +845,7 @@
       "date": "2026-09-24",
       "revision": "a21f67267a09dd50fdb035dbb8b2018f7a7b5343",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "MobileCLIP2-S2 已运行配套图像与文本编码器，在三条候选中将 two zebras 排在首位。"
+      "summary": "输入图中有两只斑马。MobileCLIP2-S2 将 two zebras 排在 a zebra、a dog 之前，与该图相符；这是单图、三条候选的匹配结果，尚未完成重复输入与其他权重验证。"
     },
     "siglip2-base-patch16-224": {
       "id": "20260924-wave4-siglip2-base-patch16-224",
@@ -872,7 +863,7 @@
       "date": "2026-09-24",
       "revision": "b0983d011a38dad39589a7e5930bb9fa9bc9dc56",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "60 秒官方录音完成 1875 帧推理；按本页分段规则输出 17 个语音片段。"
+      "summary": "60 秒录音输出 17 段、合计 47.680 秒，所有片段的 PCM 与原录音对应区间一致。分段保留了 43 个低于阈值的短间隙帧，过滤了 3 个达到阈值的帧；这些时长和计数尚无人工标注验证。"
     },
     "satrn": {
       "id": "20260924-wave4-satrn",
@@ -886,11 +877,11 @@
     "MixFormerV2": {
       "id": "20260924-wave4-mixformerv2",
       "status": "passed",
-      "level": "basic",
+      "level": "correctness",
       "date": "2026-09-24",
       "revision": "f4f94e988421b7a03fb70148ea97ab5811297d09",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "在官方道路视频中指定货车后连续跟踪 60 帧，保存动画与原尺寸关键帧。"
+      "summary": "首帧指定货车后完成 60 帧连续跟踪。已核对 30 张动画采样帧及第 1、30、60 帧原图，红框随同一辆货车的位置和尺度变化，未见切换到邻车；结论限于该短片段。"
     },
     "Qwen2.5-0.5B-Instruct-GPTQ-Int4": {
       "id": "20260927-legacy-qwen2-5-0-5b-instruct-gptq-int4",
@@ -899,7 +890,7 @@
       "date": "2026-09-27",
       "revision": "10db075dd5e99796adcec79452fcae0ec03ddded",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "官方 AXCL ARM64 程序完成三组输入：算术题返回 5；中文说明和指定 JSON 的回复存在明显问题，下面保留原文。"
+      "summary": "固定问答已返回文本，但JSON 回复含代码围栏或额外文字，不能直接解析为指定对象；本次格式要求未通过。 JSON 字段也不符合要求。"
     },
     "SmolLM2-360M-Instruct": {
       "id": "20260927-legacy-smollm2-360m-instruct",
@@ -908,7 +899,7 @@
       "date": "2026-09-27",
       "revision": "17a64761eff9cee7817f368f7a398e91635a055b",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "使用配套 SmolLM2 系统提示词完成三组输入。JSON 内容和格式符合要求；算术数值正确但格式不符，中文说明存在重复与不准确表述。"
+      "summary": "固定问答已返回文本，但算术回复含解释；本次格式要求未通过。"
     },
     "DeepSeek-R1-Distill-Qwen-1.5B-GPTQ-Int4": {
       "id": "20260927-legacy-deepseek-r1-distill-qwen-1-5b-gptq-int4",
@@ -917,7 +908,7 @@
       "date": "2026-09-27",
       "revision": "496f830bba4e2310ccd17aa7d243ead4d59df12d",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "三组输入均取得完整回复并正常退出。算术答案为 5，JSON 最终片段的字段和值正确；附带的思考文本和说明不符合仅输出结果的要求，中文技术说明也不准确。"
+      "summary": "固定问答已返回文本，但算术回复含解释；JSON 回复含代码围栏或额外文字，不能直接解析为指定对象；本次格式要求未通过。"
     },
     "DEIMv2": {
       "id": "20260927-cv-deimv2",
@@ -926,7 +917,7 @@
       "date": "2026-09-27",
       "revision": "3aac1231f17c1c8a61903ecf3f63e4c3ae6a9f70",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "官方样例已通过 AXCL 生成本次检测图；每张图片重复运行三次，保留相同的候选框。"
+      "summary": "画面可见 5 人，官方 -ms n 配置输出 7 个类别 0 候选框和 2 个类别 29 框；中央人物有重复框，另有大框覆盖多人区域。本次检测质量未通过，三次输出一致不能消除这些问题。"
     },
     "rf-detr-small": {
       "id": "20260927-cv-rf-detr-small",
@@ -935,7 +926,7 @@
       "date": "2026-09-27",
       "revision": "f5e2fd44266bf30bcafe6879c091c130db015f91",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "官方样例已通过 AXCL 生成本次检测图；每张图片重复运行三次，保留相同的候选框。"
+      "summary": "三张官方样例的历史输出已与 COCO 标注核对。置信度阈值 0.5、同类别 IoU≥0.5 时，25 个候选框中 21 个匹配标注，36 个标注目标中 15 个未匹配。结果仅限这三图，完整数据集与浮点参考仍待验证。"
     },
     "rf-detr-large": {
       "id": "20260927-cv-rf-detr-large",
@@ -944,7 +935,7 @@
       "date": "2026-09-27",
       "revision": "6a71d9f1f392415f214d573af99989da405610cc",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "官方样例已通过 AXCL 生成本次检测图；每张图片重复运行三次，保留相同的候选框。"
+      "summary": "三张官方样例的历史输出已与 COCO 标注核对。置信度阈值 0.5、同类别 IoU≥0.5 时，21 个候选框中 19 个匹配标注，36 个标注目标中 17 个未匹配。结果仅限这三图，完整数据集与浮点参考仍待验证。"
     },
     "YOLOv5-Seg": {
       "id": "20260927-cv-yolov5-seg",
@@ -953,7 +944,7 @@
       "date": "2026-09-27",
       "revision": "cd7b96d24bbb899c6ac03bb448ee5974e9054d60",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "官方足球图片生成本次实例掩码与检测框，共保留 6 个候选实例。"
+      "summary": "足球图输出 5 个 person 和 1 个 sports ball 实例，前景主要人物有掩码；其他可见足球及部分遮挡人物未独立分割，左侧人物掩码还覆盖了相邻人物的部分区域，本次效果核对未通过。未计算像素级掩码 IoU。"
     },
     "visdrone-yolov11s": {
       "id": "20260927-cv-visdrone-yolov11s",
@@ -962,7 +953,7 @@
       "date": "2026-09-27",
       "revision": "cdf29a6bd81b0980e68e6725abe0f8e1d52c6eb2",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "官方样例已通过 AXCL 生成本次检测图；每张图片重复运行三次，保留相同的候选框。"
+      "summary": "三张航拍图分别输出 23、43、0 个候选，逐图重复三次的框、类别和分数一致；夜景中央举手人物未检出，部分栈道候选也无法从画面确认。本次效果核对未通过，城市图的空结果不代表无漏检。"
     },
     "MiniCPM4-0.5B": {
       "id": "20260927-legacy-minicpm4-0-5b",
@@ -980,7 +971,7 @@
       "date": "2026-09-27",
       "revision": "01d5a6eb90d9be5dd3de32518ec99c04d9ae5da5",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "官方 AXCL 程序完成三组单轮输入：算术精确返回 5；中文回复超过一句，JSON 附带 Markdown 围栏，格式要求未全部满足。"
+      "summary": "固定问答已返回文本，但JSON 回复含代码围栏或额外文字，不能直接解析为指定对象；本次格式要求未通过。"
     },
     "rnnoise": {
       "id": "20260927-audio-rnnoise",
@@ -989,7 +980,7 @@
       "date": "2026-09-27",
       "revision": "f2b2f87603576f27b303f0b3b033ad4aac0acc18",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "通过 AXCL 完成官方录音和固定加噪录音的逐帧降噪，另检查静音分支；每份输入重复两次，输出一致。下方可试听实际输入与输出。"
+      "summary": "三组 1 秒音频均保留 48000 个采样点；官方录音与加噪录音每遍各调用 NPU 100 次，静音走旁路、未调用 NPU。仅覆盖整帧输入，音质与非整帧边界待补。"
     },
     "Qwen2.5-0.5B-Instruct-CTX-Int8": {
       "id": "20260927-legacy-qwen2-5-0-5b-instruct-ctx-int8",
@@ -998,7 +989,7 @@
       "date": "2026-09-27",
       "revision": "2aca5290377e6fa7ec1f49e37eda6554699ccfd0",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "复用固定版本官方 AXCL ARM64 程序，完成 CTX Int8 权重的三组单轮输入。算术返回 5；中文回复超过一句，JSON 字段与数值未符合请求。"
+      "summary": "固定问答已返回文本，但JSON 回复含代码围栏或额外文字，不能直接解析为指定对象；本次格式要求未通过。 JSON 字段也不符合要求。"
     },
     "clip": {
       "id": "20260927-clip-clip",
@@ -1025,7 +1016,7 @@
       "date": "2026-09-28",
       "revision": "8ec863e2de22f93305f2927d5b7c8d5d31a021ee",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "三段官方录音与 2 秒静音已在算力卡运行，每份重复两次，共 3488 次 AXCL 推理，输出一致。下方展示语音区间图、逐帧评分和输入/置零试听。"
+      "summary": "三段官方录音的 1619 帧合并评分：误检 38 帧、漏检 81 帧，F1 为 95.20%；还存在 7 段所有帧中心都落在非语音标注中的短触发。两秒静音未触发，完整数据集与持续服务仍待验证。"
     },
     "FastVLM-0.5B": {
       "id": "20260928-vlm-fastvlm-0-5b",
@@ -1034,16 +1025,7 @@
       "date": "2026-09-28",
       "revision": "8182c1f3eda4239c7b663cfd04605a02967784ce",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "两张官方图片完成六次图像问答，能识别熊猫、马和狗，重复提问输出一致；中文细节和人数计数存在错误，下方保留全部实际回复。"
-    },
-    "Qwen3-VL-8B-Instruct-GPTQ-Int4": {
-      "id": "20260928-vlm-qwen3-vl-8b-instruct-gptq-int4",
-      "status": "passed",
-      "level": "basic",
-      "date": "2026-09-28",
-      "revision": "e9e73ad656bd299aedd92c9dad85cf0b308c77fd",
-      "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "两张官方图片与八张视频帧完成七次问答：动物识别、人数问答及重复输出已核对；街景扩展描述和视频细节按下方说明限定，不作为完整精度评测。"
+      "summary": "两张图片的六次问答识别出熊猫、马和狗，重复提问文字一致；中文误述熊猫坐在树上，骑马图人数答为 3，与两名清晰人物不符。本次细节和计数质量未通过。"
     },
     "SmolVLM2-256M-Video-Instruct_Ax650": {
       "id": "20260928-vlm-smolvlm2-256m-video-instruct-ax650",
@@ -1052,7 +1034,7 @@
       "date": "2026-09-28",
       "revision": "cc9a5dcec93777403e14512b53c54ccb2b4add8c",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "完成六次图片与八帧视频问答，动物计数和重复输出已核对；中文遵循、颜色细节与标志文字识别存在错误，下方保留真实回复。另用文档客户端复测图片、视频各一次。"
+      "summary": "六次图片、视频问答及两次文档客户端请求均返回回复。动物计数为 2，重复图片回复一致；中文视频问题返回英文并误述蓝色毛发，标志文字误读为 XC2A。本次语言遵循、颜色及文字识别未通过。"
     },
     "FastVLM-1.5B": {
       "id": "20260928-vlm-fastvlm-1-5b",
@@ -1061,7 +1043,7 @@
       "date": "2026-09-28",
       "revision": "d1e86badf01ec701bb6b5f06a005622f3074614f",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "两种图像规格分别完成六次问答，均能识别熊猫、马和狗，各自重复提问一致。1024 规格将两名清晰人物答为一名，512 规格回答两名；下方保留全部十二次回复。"
+      "summary": "1024 与 512 两种规格各完成六次问答，马和狗识别正确，各自重复回复一致；1024 规格把两名清晰人物答为 1，512 规格答为 2。不能因一种规格计数正确就判定整个模型质量通过，本次 1024 规格计数未通过。"
     },
     "Deformable-Detr": {
       "id": "20260928-cv-deformable-detr",
@@ -1070,7 +1052,7 @@
       "date": "2026-09-28",
       "revision": "4c8ecf91689ce36126281c575b1087ba9d04bcc7",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "官方公交车图片完成三次检测，保留公交车和三名行人的候选框，三次原始输出一致；边缘不完整人物存在漏检。"
+      "summary": "本次 16GB 样例三次输出一致，检测到公交车和三名行人；左边缘不完整人物仍未检出，本次效果核对未通过。重复一致只证明该输入下的结果可重复，不代表完整检出。"
     },
     "MobileSAM": {
       "id": "20260928-seg-mobilesam",
@@ -1079,7 +1061,7 @@
       "date": "2026-09-28",
       "revision": "36552af82921ea8d253a4bf4e1893bff64544e08",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "两张官方图片完成 4 组点提示和 8 组框提示，生成对应分割图；各输入重复输出一致。点提示可能选择上衣或车窗等局部区域，不能视为完整目标分割。"
+      "summary": "16GB 实测两张图的 4 组点提示和 8 组框提示。四个正点均落在对应掩码中；左侧人物框仍包含相邻人体，部分点选还有零散误选，本次效果核对未通过。点选上衣或车窗属于局部提示结果，不能单凭未覆盖整个人或整车判为错误。"
     },
     "RIFE.axera": {
       "id": "20260928-video-rife-axera",
@@ -1088,7 +1070,7 @@
       "date": "2026-09-28",
       "revision": "c3220f49ad89a3138edd70f4a5792cef4e16e0ad",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "720p 官方视频完整插帧通过，输出 255 帧、50 fps；首个推理输入重复结果一致。1080p 和 4K 尚未通过本环境验证。"
+      "summary": "16GB 算力卡完成 720p 视频插帧：128 帧、25 fps 输入生成 255 帧、50 fps 输出，完整视频可解码。5.12 秒输入处理耗时 110.808 秒，约为视频时长的 21.64 倍；当前流程不具备实时处理能力。插帧精度仍待真实中间帧评测。"
     },
     "EdgeTAM": {
       "id": "20260928-seg-edgetam",
@@ -1097,7 +1079,7 @@
       "date": "2026-09-28",
       "revision": "c6e1533ccf984f76b8c3afbed858ae2336a612fc",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "完成六组点、框、负点与输入掩码修正；四个子模型均实际调用，重复输出一致。掩码随提示变化，局部边缘与负点效果仍需质量核对。"
+      "summary": "16GB 实测六组点、框和掩码修正。逐像素核对确认 5 个正点均被包含、3 个负点均被排除；车轮负点排除轮心，保留周围轮胎。提示响应符合这些坐标的要求，完整边界质量仍待像素标注评测。"
     },
     "RAFT-stereo": {
       "id": "20260928-stereo-raft-stereo",
@@ -1106,16 +1088,16 @@
       "date": "2026-09-28",
       "revision": "58fd067370fb50d3a3997978886403555ec342b6",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "两份 AX650 权重均完成官方 10 对双目图，生成 20 份视差结果；各输入重复输出一致。近车与路面数值存在规格间差异，精度仍需参考视差评测。"
+      "summary": "16GB 算力卡完成两规格、10 对双目图，共 20 份视差输出。按原图尺度比较，r1 与 r4 每组平均绝对差为 3.467–39.374 像素；这只是规格间差异，尚无标注支持精度排名。"
     },
     "OpenWakeWord.AXERA": {
-      "id": "20260928-audio-openwakeword-axera",
+      "id": "20261004-audio-openwakeword-axera",
       "status": "passed",
       "level": "basic",
-      "date": "2026-09-28",
+      "date": "2026-10-04",
       "revision": "3b8f2926204e69a36a9b55edeb60c75749589470",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "CPU mel 特征处理配合 AXCL 特征编码和六组分类器，完成三段官方音频及四秒静音。Alexa 与 Hey Mycroft 正确触发对应项，另两份输入未触发。"
+      "summary": "CPU mel 配合七个 AXCL 子模型，已完成全部 11 个目标的合成样例、329 条原始 Alexa 真人录音，以及同组录音在三种 10 dB 噪声条件下的 987 条带噪输入。下方保留完整检出、漏检和其他类别触发结果。"
     },
     "fastenhancer.axera": {
       "id": "20260928-audio-fastenhancer-axera",
@@ -1124,7 +1106,7 @@
       "date": "2026-09-28",
       "revision": "e1ba7551c386e6b3f8f24b5de03db18197593ce3",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "16kHz 与 48kHz 两份权重均完成官方语音和两秒静音处理，样本长度不变，重复输出一致。下方可试听实际输入与输出。"
+      "summary": "16k 与 48k 的官方音频和静音均保留输入长度；两档官方样例来自同一段 3.943 秒录音。静音经 NPU 后为零，连续流、短音频边界与音质仍待验证。"
     },
     "gtcrn.axera": {
       "id": "20260928-audio-gtcrn-axera",
@@ -1133,7 +1115,7 @@
       "date": "2026-09-28",
       "revision": "c45728a099cf257a9b5dcbd44abb1c7842812e86",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "AX650 权重在算力卡上完成四份官方音频和两秒静音；全部输出与循环状态在重置后复测一致。下方展示本次实际音频和波形。"
+      "summary": "五组音频的输出长度均为输入长度向下取整到 256 点；四段非静音输出缩短 3.938–8.875 ms，静音等长且为零。输出长度差不等于已测算法延迟或语音丢失量。"
     },
     "H-GTCRN.AXERA": {
       "id": "20260928-audio-h-gtcrn-axera",
@@ -1142,7 +1124,7 @@
       "date": "2026-09-28",
       "revision": "283b7b78328c10dc05cdae6fe96d30d16d8317c8",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "官方双声道样例、左右单声道及静音均完成 AXCL 推理，重复输出一致；下方是本次实际输出。"
+      "summary": "官方双声道、单声道与静音样例均完成运行。与两份官方附带输出存在差异，离线调整整体增益后仍有明显残差，不能用单一音量缩放解释；音质验证仍待完成。"
     },
     "GCRN": {
       "id": "20260928-audio-gcrn",
@@ -1151,7 +1133,7 @@
       "date": "2026-09-28",
       "revision": "5e2371051382c0dedd6bc560379059af79121e5f",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "官方音频、静音及三个4秒边界长度完成 AXCL 推理；两次输出一致且长度正确。静音输出和分块拼接仍存在待核对的质量问题。"
+      "summary": "官方音频和边界长度样例均完成运行；两秒全零输入产生非零输出，浮点 RMS 为 0.0029955（−50.47 dBFS），保存的 PCM16 仍有 31855 个非零采样点。静音保持检查未通过，分块连续性和音质仍需核对。"
     },
     "Lightweight-Speech-Denoising.axera": {
       "id": "20260928-audio-lightweight-speech-denoising-axera",
@@ -1160,7 +1142,7 @@
       "date": "2026-09-28",
       "revision": "55235db82957ad09943a9a808442d0172b72ee1e",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "三份 AX650 权重均已通过原生 AXCL 运行：官方音频、静音与块边界样例各两遍，共 2002 次调用；以下为实际音频和波形。"
+      "summary": "三模型共 15 组音频的长度、原始输出和重复结果已核对。分块边界样例是第 3 个分块前后，额外 1 点不改变输出；尚未覆盖不足一个分块的输入，音质与延迟仍待验证。"
     },
     "CosyVoice2": {
       "id": "20260928-audio-cosyvoice2",
@@ -1169,7 +1151,7 @@
       "date": "2026-09-28",
       "revision": "047c1933de85c7bef59eaf726c2ad1c17cda0f71",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "默认 W8A16 与 GPTQ Int4 均已完成三句中英文语音合成，以下为本次 16GB M.2 卡的六段真实输出。"
+      "summary": "默认 W8A16 与 Int4 的六段实际音频已做主机 ASR 辅助对照：两段英文词语对应；中文“算力卡语音合成”及 Int4 句尾有识别偏差，仍需人工听审。"
     },
     "CosyVoice3": {
       "id": "20260928-audio-cosyvoice3",
@@ -1178,7 +1160,7 @@
       "date": "2026-09-28",
       "revision": "6ca7c7e124eb88d5219be18d4c6aedd159b494f4",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "官方 W8A16 配置已完成两句中文、一句英文和一句拼音标注文本的语音生成，下面展示四段实际输出。"
+      "summary": "四段实际音频已做主机 ASR 辅助对照：英文词语对应，中文术语、句尾和拼音标注样例存在识别偏差，未判定发音质量通过。"
     },
     "DeepSeek-R1-Distill-Qwen-1.5B": {
       "id": "20260928-legacy-deepseek-r1-distill-qwen-1-5b-int4",
@@ -1187,7 +1169,7 @@
       "date": "2026-09-28",
       "revision": "88000a3b344735e9ee0b59f3e6f5f0e7168738e8",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "W4A16 权重已完成相同三题的单轮生成。算术结果为 5；PCIe 说明存在事实错误，JSON 则附带说明和代码块。以下保留实际输出。"
+      "summary": "固定问答已返回文本，但算术回复含解释；JSON 回复含代码围栏或额外文字，不能直接解析为指定对象；本次格式要求未通过。"
     },
     "InternVL2_5-1B": {
       "id": "20260928-legacy-internvl2-5-1b",
@@ -1196,7 +1178,7 @@
       "date": "2026-09-28",
       "revision": "123ee66991d912a70487a6d17343982ec67e7444",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "两张官方图片完成四次单轮问答。公交车颜色和小熊猫类别回答与画面一致；街景描述包含无法从单张图片确认的细节，以下保留原始回复。"
+      "summary": "两张图片的四次问答中，公交车颜色、小熊猫类别和中文主体描述与图相符；首句把面向镜头的人物写成朝公交车微笑，并推断车辆停放。街景细节质量未通过。"
     },
     "InternVL3-1B": {
       "id": "20260928-legacy-internvl3-1b",
@@ -1205,7 +1187,7 @@
       "date": "2026-09-28",
       "revision": "797dd3d7676d1900815a53906c72015e172bbad1",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "同一张官方街景图片完成四次问答。模型识别出红色双层公交车，并读出了广告主要单词；颜色、OCR 和中文回答没有全部遵守要求的输出格式。"
+      "summary": "四次街景问答识别出红色双层公交车及广告主要单词；颜色题附加完整句子，OCR 附加解释，中文题扩展为三句话，均未遵守对应格式要求。本次格式质量未通过。"
     },
     "InternVL3-2B": {
       "id": "20260928-legacy-internvl3-2b",
@@ -1214,7 +1196,7 @@
       "date": "2026-09-28",
       "revision": "48bb181aa11917fea8309a6304c570152f9b5903",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "四张官方图片完成单轮问答，识别出小熊猫、大熊猫、三个人物和银色头发的海边肖像。人物数量正确，但没有遵守只返回数字的要求。"
+      "summary": "四张图片分别识别出小熊猫、大熊猫、三名人物和银发海边肖像；人数题返回完整句子，没有遵守只输出数字的要求。本次指定格式未通过。"
     },
     "InternVL2_5-1B-MPO": {
       "id": "20260928-legacy-internvl2-5-1b-mpo",
@@ -1223,7 +1205,7 @@
       "date": "2026-09-28",
       "revision": "f0f00da263a769220d5ab6e6e2ec8e680dc7d96b",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "同一张官方小熊猫图片完成四次问答。类别识别和简短中文场景描述与画面相符；颜色题不完整，头部支撑物问题没有得到回答。"
+      "summary": "同一张小熊猫图片完成四次问答，类别和中文主体描述与图相符；颜色回答遗漏白色面部与浅色耳缘，头部支撑物问题转为一般介绍，没有回答木板。本次颜色细节和问题相关性未通过。"
     },
     "Inflect-Micro-v2-zh": {
       "id": "20260928-audio-inflect-micro-v2-zh",
@@ -1232,7 +1214,7 @@
       "date": "2026-09-28",
       "revision": "f5af82ee9c1cac911584ccd91f759ab54258e0a1",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "已完成两句中文女声和两句男声合成，生成 24 kHz 单声道音频。流程可运行，输出音质仍需评估。"
+      "summary": "四段算力卡音频与四段同输入 CPU 声码器参考已做相同 ASR 对照。女声 CPU 参考更接近目标文字，男声两条路径均有偏差；原始量化波形差异及发音仍需进一步核对。"
     },
     "inflect_micro_v2": {
       "id": "20260928-audio-inflect-micro-v2",
@@ -1241,7 +1223,7 @@
       "date": "2026-09-28",
       "revision": "5f32b245c249374bb5b6c1b6c1fb7b78f2dd37c2",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "四组英文语音已在算力卡上完成编码与解码，覆盖单句、双句拼接及数字文本归一化。下面展示实际音频。"
+      "summary": "四段实际英文音频完成主机 ASR 辅助对照，三组词语对应，数字样例识别为“$12”。这只核对可识别内容，不代表音色、自然度或完整语音质量通过。"
     },
     "inflect_nano_v2": {
       "id": "20260928-audio-inflect-nano-v2",
@@ -1250,7 +1232,7 @@
       "date": "2026-09-28",
       "revision": "b57a7ddf5bed32338a79153a43479ea9eee3cde2",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "四组英文语音已在算力卡上完成编码与解码，覆盖单句、双句拼接及数字文本归一化。下面展示实际音频。"
+      "summary": "四段实际英文音频完成主机 ASR 辅助对照，三组词语对应，数字样例识别为“$12”。这只核对可识别内容，不代表音色、自然度或完整语音质量通过。"
     },
     "InternVL3_5-1B": {
       "id": "20260928-audio-internvl3-5-1b",
@@ -1259,7 +1241,7 @@
       "date": "2026-09-28",
       "revision": "ead75a3befa5b9c17b97bc0093c34db1b72c1d99",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "已完成小熊猫识别、大熊猫图片描述和纯文本算术问答。下面保留本次实际输入、回答与耗时。"
+      "summary": "本次三题识别出小熊猫、大熊猫，算术按要求只回答 5；大熊猫描述中的休息、进食状态未由单张图片独立确认。类别与格式样例可对照，描述细节、计数、OCR 和更多场景仍待验证。"
     },
     "InternVL3_5-2B": {
       "id": "20260928-audio-internvl3-5-2b",
@@ -1268,7 +1250,7 @@
       "date": "2026-09-28",
       "revision": "4fa9bf62377c33e0e37d8c44c24adea3d523e753",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "已完成小熊猫识别、大熊猫图片描述和纯文本算术问答。下面保留本次实际输入、回答与耗时。"
+      "summary": "本次三题识别出小熊猫、大熊猫，算术按要求只回答 5；图片可见大熊猫和竹叶，进食动作不能仅凭遮挡的嘴部确认。少量问答不足以判定整体质量通过，计数、OCR 和更多场景仍待验证。"
     },
     "bge-small-en-v1.5": {
       "id": "20260928-audio-bge-small-en-v1-5",
@@ -1277,7 +1259,7 @@
       "date": "2026-09-28",
       "revision": "7a15f5aa8ecb76e1f87c4e8e6c9c73f87d33f7b4",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "已运行官方batch 1、batch 2两份权重，并对照CPU ONNX。下面展示句子相似度、两个检索问题的完整候选排序与实际耗时。"
+      "summary": "两个英文问题在 batch 1 和 batch 2 下均将预期答案排在首位，完整候选顺序与 CPU ONNX 相同。新增热力图展示实际分数；八条文本仅 6–20 个 token，长文本、位置交换和更难候选仍待验证。"
     },
     "bge-m3": {
       "id": "20260928-audio-bge-m3",
@@ -1286,7 +1268,7 @@
       "date": "2026-09-28",
       "revision": "46734ad9f85c79a243364ba51f5ffa64a628079a",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "已完成10条中英文文本编码与四个查询的六候选检索，三种输出均实际生成。下面展示真实候选、三种分数和融合排序。"
+      "summary": "四个问题在 dense、sparse、ColBERT 及融合评分下均将预期答案排在首位。热力图展示六段候选的实际分数；四组正例均为同语言匹配，不能据此认定跨语言检索已验证。"
     },
     "IGEV-plusplus": {
       "id": "20260928-audio-igev-plusplus",
@@ -1295,7 +1277,7 @@
       "date": "2026-09-28",
       "revision": "b5e505fcaeaecdcee9bae2959d29c1f1ebec08a5",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "已完成官方七组双目图片推理和 CPU ONNX 数值对照，以下展示全部统计及三组输入输出。PipesH 的数值差异明显大于其他样例。"
+      "summary": "16GB 算力卡完成七组双目图片推理和 CPU ONNX 对照。其中四组原图与 Middlebury 官方标注逐文件一致，算力卡视差 EPE 为 2.369–4.136 原图像素。以下展示标注、预测和误差图；PipesH 的 CPU 对照差异仍需进一步核对。"
     },
     "Janus-Pro-1B": {
       "id": "20260928-audio-janus-pro-1b",
@@ -1304,7 +1286,7 @@
       "date": "2026-09-28",
       "revision": "6627e1e38ec2a3ef0d94e4249e8b5f619522ad70",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "已完成同图两次问答和一张完整文生图，实际输入、原始回答、生成图片及耗时如下。"
+      "summary": "同图两次问答正确描述三名白色宇航服人物并回答人数为 3。生成图呈现红色机器人、绿色盆栽、木桌和暖光，但浇水动作与水流不清晰；当前单图单种子结果不足以判定文生图质量通过。"
     },
     "jina-clip-v2": {
       "id": "20260928-audio-jina-clip-v2",
@@ -1313,7 +1295,7 @@
       "date": "2026-09-28",
       "revision": "00914adf025ae2b9fa62ead49bd1f1c401a37502",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "已完成文本编码器及两种尺寸图像编码器的图文匹配，以下展示实际输入和全部六条候选描述的分数。"
+      "summary": "两种图像尺寸完成中英文描述匹配；对保存的 AXCL 向量分别取前 512 维和完整 1024 维后计算余弦，四组排序一致。新增维度对照为离线计算，单图结果不代表完整检索精度。"
     },
     "siglip-so400m-patch14-384": {
       "id": "20260928-audio-siglip-so400m-patch14-384",
@@ -1322,7 +1304,7 @@
       "date": "2026-09-28",
       "revision": "002659be687de26fead6d991b6307a0553d34c27",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "已完成官方图片的双编码器推理，以下展示六条英文描述的实际匹配结果及原始输入。"
+      "summary": "六条描述中两条猫描述排在前两位，较低的猫描述仍领先最高干扰项 0.076628。该候选集没有猫数量或沙发颜色的单独对照，不能据此判断计数或颜色辨别能力。"
     },
     "WeNet": {
       "id": "20260928-audio-wenet",
@@ -1331,7 +1313,7 @@
       "date": "2026-09-28",
       "revision": "00024247696833df2b74c226b2c6cdf3fe5fe13b",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "已完成离线与文件分块在线识别，两种解码方式均得到实际中文输出。以下保留原始音频、识别文本和四组耗时。"
+      "summary": "16GB 卡完成 WeNet 离线/分块、CTC/注意力四种组合及重复运行。8 次均输出“甚至出现交易几乎停止的情况”；同文件的官方标注使用“停滞”，每次有 1/13 字符差异（7.692%），不能仅凭重复一致判为识别准确。"
     },
     "FG-CLIP": {
       "id": "20260928-audio-fg-clip",
@@ -1340,7 +1322,7 @@
       "date": "2026-09-28",
       "revision": "1681903f53b528b37d0220e8d5f52291aace19f9",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "已完成官方卧室图片与四条中文描述的细粒度匹配，以下展示真实输入和全部候选分数。"
+      "summary": "四条候选中原始卧室描述得分最高，领先最近干扰项 0.042051。两个近似候选同时改变多处属性，尚不能隔离每项细节的辨别能力；图像输入 1024 个 patch 中 1020 个有效、4 个填充。"
     },
     "OWLViT2": {
       "id": "20260928-audio-owlvit2",
@@ -1349,7 +1331,7 @@
       "date": "2026-09-28",
       "revision": "c8eab07c17622318cbd1f6234bb261c4eace2c51",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "已完成官方三组图片的三段AXCL推理和CPU ONNX对照，以下保留完整结果及低分框、重复框和后端差异。"
+      "summary": "三张图均完成 AXCL 与 CPU ONNX 对照。猫图按 COCO 标注核对：两只猫对应 4 个猫框和 1 个狗框；IoU≥0.5 时两种后端均为 2 个匹配、3 个误检，当前固定样例的类别与框质量检查未通过。"
     },
     "YOLO-World-V2": {
       "id": "20260928-audio-yolo-world-v2",
@@ -1358,7 +1340,7 @@
       "date": "2026-09-28",
       "revision": "a1f2c183776eaf127649c227ecfa27d9aeddd269",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "已完成官方ARM64 AXCL SDK的两图两词表检测，以下展示真实输入、完整检测结果及切换词表后的变化。"
+      "summary": "两图两词表的完整结果与重复输出已核对，新增逐提示词数量与分数范围。足球图第二组词表的 7 框中有 4 框低于 0.25；实际检测仍使用 0.1，未更改阈值或隐藏输出。"
     },
     "ViT-L-14-336-CN__axera": {
       "id": "20260928-audio-vit-l-14-336-cn-axera",
@@ -1367,7 +1349,7 @@
       "date": "2026-09-28",
       "revision": "c99ea50e6f0e3ae9146239035a8217998bb0eda7",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "已在 16GB 算力卡上运行配套图像与文本编码器，使用三张官方图片对照两种图像处理方式。"
+      "summary": "三张图与小鸟、猫咪、狗子三个固定标签在两种前处理下均双向匹配正确；新增文字找图表由已保存的 AXCL 向量计算。仍未验证任意中文分词、浮点参考或大规模检索。"
     },
     "ViT-L-14-336__axera": {
       "id": "20260928-audio-vit-l-14-336-axera",
@@ -1376,7 +1358,7 @@
       "date": "2026-09-28",
       "revision": "d461cbe322991aaec35a359b0defc81356c8db46",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "已在 16GB 算力卡上运行配套图像与文本编码器，使用三张官方图片对照两种图像处理方式。"
+      "summary": "三张图与 bird、cat、dog 三个固定标签在两种前处理下均双向匹配正确；新增文字找图表由已保存的 AXCL 向量计算。仍未验证任意英文分词、浮点参考或大规模检索。"
     },
     "SmolVLM-256M-Instruct": {
       "id": "20260928-audio-smolvlm-256m-instruct",
@@ -1385,7 +1367,7 @@
       "date": "2026-09-28",
       "revision": "a41ab40883f156fd50bb3371acdfaed626ca38d6",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "32 份 AXMODEL 已通过 AXCL 完成单图问答、重复请求和纯文本算术；下方展示实际输入与原始回答。"
+      "summary": "四次请求识别出公交车、汽车和路杆，车身颜色回答 Red；重复图片的回答一致。算术输出 2 + 3 = 5，违反只回答数字的要求，本次指令格式质量未通过。"
     },
     "SmolVLM2-500M-Video-Instruct-python": {
       "id": "20260928-audio-smolvlm2-500m-video-instruct-python",
@@ -1394,7 +1376,7 @@
       "date": "2026-09-28",
       "revision": "42557bc3bff11187d71d001e43e8cb011a1fbf7b",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "34 份 AXMODEL 已通过 AXCL 完成三次单图问答；下面展示实际图片、原始回答及主机预处理耗时。"
+      "summary": "三次单图请求识别出主体蜜蜂和粉紫色花瓣，重复回答一致；描述额外加入红花上的背景蜜蜂，画面中未见该对象，本次描述细节质量未通过。当前 Python 入口尚未验证视频效果。"
     },
     "FireRedASR-AED": {
       "id": "20260928-audio-fireredasr-aed",
@@ -1403,7 +1385,7 @@
       "date": "2026-09-28",
       "revision": "1303e534008032d79b4f15996589f36f2543e10d",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "已通过 AXCL 完成四段官方音频、重复识别和静音门控；以下展示实际音频、参考文本、转写与耗时。"
+      "summary": "16GB 卡完成四段官方音频、重复识别和静音门控。对固定官方标注逐字复核共 1/89 字符差异（1.124%）：会议样例“说完的”输出为“说完了”；其余三个样例文字一致。"
     },
     "campplus.AXERA": {
       "id": "20260928-audio-campplus-axera",
@@ -1412,7 +1394,7 @@
       "date": "2026-09-28",
       "revision": "906ada2445acad77cddd465a312ee8569d818ba6",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "已通过 AXCL 完成三段音频的特征提取、滑窗处理与重复运行；下方展示原始音频、两两相似度和实际耗时。"
+      "summary": "三段录音的 17 个滑窗分别与三份单次提取向量比较，最近参考均来自相同录音。因窗口与参考包含重叠内容，这属于样例一致性检查，不能用作独立说话人识别准确率。"
     },
     "Zipformer.axera": {
       "id": "20260928-audio-zipformer-axera",
@@ -1421,7 +1403,7 @@
       "date": "2026-09-28",
       "revision": "a690cb0f701b11274505209cb3dec6bf7bd91e4b",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "三份 AX650N 权重已通过 AXCL 完成十段官方音频、重复识别和静音测试；下方提供实际音频与原始转写。"
+      "summary": "16GB 卡完成 Zipformer 十段官方音频、重复识别及静音测试。demo.wav 与同文件的官方标注逐字一致；其余九段尚无独立文字标注，英文句尾“NE”等原始输出继续保留，不能据单句一致认定全组通过。"
     },
     "FS-EEND.AXERA": {
       "id": "20260928-audio-fs-eend-axera",
@@ -1430,7 +1412,7 @@
       "date": "2026-09-28",
       "revision": "e775bd5df7cfffd37a374f29c6e47f8b94e68f09",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "simu 与 AMI 两套权重均已在 AXCL 算力卡上完成官方四人录音、重复与静音测试；下方提供录音、实际时间轴和独立复核的分段误差。"
+      "summary": "16GB 卡完成 simu 与 AMI 权重的同一段官方四人模拟录音。零容差 DER 分别为 5.4844% 与 44.9837%；AMI 的参考说话人 1 无独立匹配通道、说话人 2 匹配覆盖率 11.64%。两套流程尾部约 0.818 秒参考发言未输出，已计入误差。"
     },
     "DiariZen": {
       "id": "20260928-audio-diarizen",
@@ -1439,7 +1421,7 @@
       "date": "2026-09-28",
       "revision": "4067c933f38204b128f29adbda48a4d0f52d5454",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "CNN 算力卡前端与 CPU 后端已完成官方会议录音的全部八个窗口、重复和静音测试；下方展示真实活动预测和分类概率。"
+      "summary": "16GB 卡的 CNN 前端与 CPU 后端完成八个窗口、重复和静音测试。末窗 99 个录音范围帧中 89 帧预测为单人，跨界 1 帧及补零范围 99 帧均为无说话人类；窗口编号仍独立，尚不能输出整段会议身份或认证分段准确率。"
     },
     "mel_band_roformer": {
       "id": "20260928-audio-mel-band-roformer",
@@ -1448,7 +1430,7 @@
       "date": "2026-09-28",
       "revision": "f104690c6af6e4258aaad61124114fe0819451bb",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "四路音乐分离已在 AXCL 算力卡完成真实歌曲片段、重复和静音测试，下方提供输入与实际分轨音频。"
+      "summary": "四路分轨均保留 8 秒、44.1 kHz 立体声长度；原始分轨之和与输入的差值 RMS 为输入 RMS 的 3.574%。这仅核对混合一致性，没有独立分轨参考，不能作为分离质量评分。"
     },
     "Insightface": {
       "id": "20260928-audio-insightface",
@@ -1466,7 +1448,7 @@
       "date": "2026-09-28",
       "revision": "aa48d14426f528a63ccb0720edb79651597e5316",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "普通版和蒸馏版均完成中英文短句及中文重复测试，11个独立权重实际运行，下方可对照参考录音与生成音频。"
+      "summary": "普通版与蒸馏版四段实际音频已做主机 ASR 辅助对照。英文词语对应，中文主要句子对应但句尾有识别偏差；未据此判定发音或音色克隆质量通过。"
     },
     "Sherpa-ONNX-KWS.AXERA": {
       "id": "20260928-audio-sherpa-onnx-kws-axera",
@@ -1475,7 +1457,7 @@
       "date": "2026-09-28",
       "revision": "7420e0d67d20c246b0cd58b5255a0f89d0e4c42e",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "两种分块均完成AXCL关键词检测流程；下方列出九段录音的真实输出、未触发项及chunk 16的两项参考差异。"
+      "summary": "九段官方录音中，chunk 8 与 chunk 16 分别命中过 11 个配置关键词中的 8 个和 7 个；与历史输出记录的一致性不代表人工标注准确率。"
     },
     "WakeUp.axera": {
       "id": "20260928-audio-wakeup-axera",
@@ -1484,7 +1466,7 @@
       "date": "2026-09-28",
       "revision": "139f25e18b0bce7af805f0f5dc34bd209fcf16b0",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "四组输入完成AXCL实测：正例触发，近似发音反例与短静音未触发；逐帧特征、分数和阈值判定已复核。"
+      "summary": "正例及其重复各出现一段连续触发，共 12 帧，帧结束位置为 0.992–1.344 秒；近似发音反例与两秒静音未触发。"
     },
     "WeDetect.axera": {
       "id": "20260928-audio-wedetect-axera",
@@ -1511,7 +1493,7 @@
       "date": "2026-09-28",
       "revision": "4c12e1d456fd05bd8ffa5a8e272916e1d748dcfb",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "五个AX8850N版本完成20次深度预测，展示真实热图、重复输入、空白图及同版本浮点参考对照。"
+      "summary": "16GB 算力卡完成 n/s/m/l/x 五版、20 次深度预测；15 组同版 FP32 差异统计已从原始数组复算。两张实景的平均相对差异为 1.846%–4.508%，并非真实距离误差。热图逐图归一化，空白输入也会生成正值，测距精度仍待验证。"
     },
     "LibCLIP": {
       "id": "20260928-audio-libclip",
@@ -1529,7 +1511,7 @@
       "date": "2026-09-28",
       "revision": "7748f88f9f6dd8e536f2db920ba76822826fd52a",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "完成七组输入、43次串行图块调用与实际2倍放大，展示插值对照、边缘行为及单图缩小后恢复指标。"
+      "summary": "16GB 算力卡完成七组输入、43 次串行图块调用，基本运行通过；当前无重叠分块方式的效果验收未通过。可见分块细线，单图缩小后恢复 PSNR 为 30.773 dB，低于双三次插值的 34.748 dB。"
     },
     "libdet.axera": {
       "id": "20260928-audio-libdet-axera",
@@ -1556,7 +1538,7 @@
       "date": "2026-09-28",
       "revision": "7e8b1618599e4528b465af9973ffbbce6cb6d274",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "五个AXCL网络完成官方句、时长调整、两组分段文本及重复输入，展示五段实际音频与波形。"
+      "summary": "五个音频条目已做主机 ASR 对照：时长系数 1.4 的“北京”开头识别不完整，系数 1.0 的文字对应；近似前端样例主要句意对应。重复条目不计为独立文本，仍待发音和衔接听审。"
     },
     "kokoro.axera": {
       "id": "20260928-audio-kokoro-axera",
@@ -1565,7 +1547,7 @@
       "date": "2026-09-28",
       "revision": "db9625f0270396c108d0273b01477d86b4e5e7fe",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "完成中文、英语、日语及重复输入，展示五段板端生成音频、波形与分段耗时。"
+      "summary": "中、英、日五个音频条目已做主机 ASR 辅助对照。英文词语对应，中文短句尾音和日语有识别偏差；中文重复结果相同，三语言音质仍待人工听审。"
     },
     "pp-nsfw_Inspector": {
       "id": "20260928-audio-pp-nsfw-inspector",
@@ -1583,7 +1565,7 @@
       "date": "2026-09-28",
       "revision": "cee17e0534ba216649d82055a326b995b6cf35c4",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "13个AXCL网络完成中英文短句和重复输入，展示三段实际音频、波形与合成耗时。"
+      "summary": "中英文短句与一次英文重复音频均完成主机 ASR 辅助对照，文字内容对应。当前仅核对短句可识别内容，其他音色、长文本、自然度和输入边界仍待验证。"
     },
     "chatterbox-onestep": {
       "id": "20260928-audio-chatterbox-onestep",
@@ -1619,7 +1601,7 @@
       "date": "2026-09-28",
       "revision": "186e6a83fac0f4e89b6989628d1e214e4746e877",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "完成官方 50 帧点云推理和三帧重复。展示实际检测、完整短片及浮点参考差异；当前车辆检测效果尚未通过。"
+      "summary": "完成官方 50 帧点云推理和三帧重复。全部 50 帧汽车分数最高为 0.5，固定阈值下未保留汽车框；浮点参考存在明显差异，车辆检测效果未通过。"
     },
     "Qwen2.5-1.5B-Instruct": {
       "id": "20260928-qwen15b-ctx-int4",
@@ -1628,7 +1610,7 @@
       "date": "2026-09-28",
       "revision": "eaa03390b75ff42286b46ad492d007ce536b303d",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "INT4完成三条单轮输入及两轮连续对话。算术与短对话记忆检查符合要求，中文回答长度和严格JSON格式仍需改进。"
+      "summary": "固定问答已返回文本，但JSON 回复含代码围栏或额外文字，不能直接解析为指定对象；本次格式要求未通过。 两轮短对话能原样回忆 4729；该结果不代表长上下文通过。"
     },
     "Qwen2.5-3B-Instruct": {
       "id": "20260929-qwen3b-ctx-int4",
@@ -1637,7 +1619,7 @@
       "date": "2026-09-29",
       "revision": "ad62e7be39deda430ce48469961d7ed4701f5405",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "INT4完成三条单轮输入和两轮连续对话，算术与短对话记忆符合要求；JSON字段数值正确，但多出Markdown围栏。"
+      "summary": "固定问答已返回文本，但JSON 回复含代码围栏或额外文字，不能直接解析为指定对象；本次格式要求未通过。 两轮短对话能原样回忆 4729；该结果不代表长上下文通过。"
     },
     "Qwen3-4B": {
       "id": "20260929-qwen3-4b-normal",
@@ -1646,7 +1628,7 @@
       "date": "2026-09-29",
       "revision": "d3bf9ef4c74ffa2c3c3d1232908265b500fa7731",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "三条单轮请求完成算术、中文说明和JSON输出；两轮对话能够返回前文数字，但确认和追问回复均附带句号。下方保留原始输出。"
+      "summary": "固定问答已返回文本，但短对话回复附加句点，未遵守仅输出 OK 或数字的要求；本次格式要求未通过。"
     },
     "Qwen2.5-3B-Instruct-GPTQ-Int4": {
       "id": "20260929-qwen3b-gptq-ctx",
@@ -1655,7 +1637,7 @@
       "date": "2026-09-29",
       "revision": "f1994e9ff277d8dfea28ead7878041e1a1f00cf0",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "CTX版本完成三条单轮输入与同一进程内的两轮对话，第二轮正确返回第一轮给出的数字。"
+      "summary": "固定问答已返回文本，但JSON 回复含代码围栏或额外文字，不能直接解析为指定对象；本次格式要求未通过。 两轮短对话能原样回忆 4729；该结果不代表长上下文通过。"
     },
     "Qwen2.5-1.5B-Instruct-GPTQ-Int8": {
       "id": "20260929-qwen15b-gptq-int8",
@@ -1664,7 +1646,7 @@
       "date": "2026-09-29",
       "revision": "a882598b8893f0baec13189cac7f62f57109c835",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "在 RK3576 + AX8850 16GB 上完成三条独立短输入，展示算术回答、中文用途说明和带代码围栏的 JSON 回复。"
+      "summary": "固定问答已返回文本，但JSON 回复含代码围栏或额外文字，不能直接解析为指定对象；本次格式要求未通过。"
     },
     "Qwen2.5-1.5B-Instruct-python": {
       "id": "20260929-qwen15b-python",
@@ -1673,7 +1655,7 @@
       "date": "2026-09-29",
       "revision": "aa999d91e7789a80a00bb910cfed4ca8de2b38a2",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "在 RK3576 + AX8850 16GB 上通过 Python 调用 AXCL，完成算术、中文问答和 JSON 输出三条独立输入。"
+      "summary": "算术只输出数字、直接输出 JSON 的固定样例符合要求；中文说明已保留。长上下文、持续运行及其他输入仍待验证。"
     },
     "Qwen2.5-0.5B-Instruct-GPTQ-Int4-tmp": {
       "id": "20260929-qwen05-tmp-v3",
@@ -1682,7 +1664,7 @@
       "date": "2026-09-29",
       "revision": "af30672a4213bc1bb689781928f3d15760da3efa",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "该组权重完成三条独立短输入推理。算术回答正确；中文说明与 JSON 输出存在内容或格式问题，下方保留原始回复。"
+      "summary": "固定问答已返回文本，但JSON 回复含代码围栏或额外文字，不能直接解析为指定对象；本次格式要求未通过。 JSON 字段也不符合要求。"
     },
     "Qwen3-1.7B-GPTQ-Int4-tmp": {
       "id": "20260929-qwen17-tmp-v3",
@@ -1691,7 +1673,7 @@
       "date": "2026-09-29",
       "revision": "f93afe51b24b084020f6fd32c666b2e7fd4c7d31",
       "environment": "RK3576 + AX8850 16GB M.2",
-      "summary": "三条独立问答与两轮短对话均完成。算术、中文用途说明、JSON和代码回忆符合本次样例要求；首次确认回复多了句号。"
+      "summary": "固定问答已返回文本，但短对话回复附加句点，未遵守仅输出 OK 或数字的要求；本次格式要求未通过。"
     },
     "jina-embeddings-v5-omni-nano": {
       "id": "20260929-audio-jina-embeddings-v5-omni-nano",
@@ -1710,6 +1692,393 @@
       "revision": "6a92e331bd8813a98e2eac602b6f9412a7eec709",
       "environment": "RK3576 + AX8850 16GB M.2",
       "summary": "已在 16GB 算力卡完成文本、图片、8 秒与 30 秒音频、视频帧编码，并展示实际检索分数。"
+    },
+    "jina-embeddings-v5-omni-small": {
+      "id": "20260930-audio-jina-embeddings-v5-omni-small",
+      "status": "passed",
+      "level": "basic",
+      "date": "2026-09-30",
+      "revision": "3369e03364b29a2af7d1fd766d0e59f31b92d5b8",
+      "environment": "RK3576 + AX8850 16GB M.2",
+      "summary": "已在 16GB 算力卡完成四任务文本、图片与音频的基本编码，并展示真实相似度和候选排序。"
+    },
+    "lcm-lora-sdv1-5": {
+      "id": "20260930-audio-lcm-lora-sdv1-5",
+      "status": "passed",
+      "level": "basic",
+      "date": "2026-09-30",
+      "revision": "4ba40db7f8fddbf3e4f86edacf7fb255bb45d339",
+      "environment": "RK3576 + AX8850 16GB M.2",
+      "summary": "已在 16GB M.2 算力卡完成 512×512 文生图与图生图，以下展示本次真实生成图片。"
+    },
+    "MOSS-Transcribe-Diarize-0.9B": {
+      "id": "20260930-audio-moss-transcribe-diarize-0-9b",
+      "status": "passed",
+      "level": "basic",
+      "date": "2026-09-30",
+      "revision": "c627e9bad59af4074d95c4bc24a87483141d5cc7",
+      "environment": "RK3576 + AX8850 16GB M.2",
+      "summary": "16GB 卡完成双人对话和 MP3 转写，20 个分段时间戳均在音频范围内。双人样例有 70 毫秒预测重叠，MP3 末尾 1.532 秒未覆盖；已展示输入波形和预测时间轴，尚无人工标注确认文字、边界及说话人是否正确。"
+    },
+    "Qwen3-ASR-0.6B-AX650-C64-P448-CTX2047": {
+      "id": "20260930-audio-qwen3-asr-0-6b-ax650-c64-p448-ctx2047",
+      "status": "passed",
+      "level": "basic",
+      "date": "2026-09-30",
+      "revision": "db1e8640ea9e888aa0ac04f4edd410eee98ef817",
+      "environment": "RK3576 + AX8850 16GB M.2",
+      "summary": "已在 16GB M.2 算力卡完成 4 段音频的基本运行验证。单独中英文短句可识别；混合输入存在英文漏识别，下面保留原始音频和实际输出。"
+    },
+    "3D-Speaker-MT.Axera": {
+      "id": "20260930-audio-3d-speaker-mt-axera",
+      "status": "passed",
+      "level": "basic",
+      "date": "2026-09-30",
+      "revision": "3592794622a5627aca47c81fdc2569e632ffc910",
+      "environment": "RK3576 + AX8850 16GB M.2",
+      "summary": "两段文件已完成离线转录，但九个 ASR 切片均有词级时间戳超出本切片长度，时间边界检查未通过；自然录音还保留特殊标记。现有时间戳不能直接用于逐词字幕同步。"
+    },
+    "AX-Meeting-Studio": {
+      "id": "20261001-audio-ax-meeting-studio",
+      "status": "passed",
+      "level": "basic",
+      "date": "2026-10-01",
+      "revision": "5ff3c960c78a6726c9e4968b1deb090c4beb1764",
+      "environment": "RK3576 + AX8850 16GB M.2",
+      "summary": "已在 16GB M.2 算力卡运行官方离线会议转录 CLI，使用同一段完整录音验证 SenseVoice 与 FireRed/Punc 两种后端，输出说话人标签、时间段和转录文本。"
+    },
+    "ABot-Recon-Axera": {
+      "id": "20261001-audio-abot-recon-axera",
+      "status": "passed",
+      "level": "basic",
+      "date": "2026-10-01",
+      "revision": "fbe73fc5686c6c0ed2af5255272cf3ebf248da58",
+      "environment": "RK3576 + AX8850 16GB M.2",
+      "summary": "已在 16GB M.2 算力卡处理完整样例视频，生成相机位姿、RGB 点云、Gaussian splat 数据及三张重建视图。"
+    },
+    "immich": {
+      "id": "20261001-audio-immich",
+      "status": "passed",
+      "level": "basic",
+      "date": "2026-10-01",
+      "revision": "81c75d735f4087a4359ff152646436da1685af1c",
+      "environment": "RK3576 + AX8850 16GB M.2",
+      "summary": "已在 16GB M.2 算力卡运行官方 Immich 2.7.5 ML 服务，完成中英文图文检索与重复输入检查。"
+    },
+    "Qwen3-TTS-12Hz-0.6B-Base-AX650": {
+      "id": "20261001-audio-qwen3-tts-12hz-0-6b-base-ax650",
+      "status": "passed",
+      "level": "basic",
+      "date": "2026-10-01",
+      "revision": "3b3fde9cb90b3646c7c9fdeefe083402c0399c2f",
+      "environment": "RK3576 + AX8850 16GB M.2",
+      "summary": "已在 16GB M.2 算力卡完成 Qwen3-TTS 0.6B 中文语音合成，生成可播放的 3.36 秒音频。"
+    },
+    "SmolLM3-3B": {
+      "id": "20261001-audio-smollm3-3b",
+      "status": "passed",
+      "level": "basic",
+      "date": "2026-10-01",
+      "revision": "a00aaa540d2c0dcb911dbaa64e499254a6671a30",
+      "environment": "RK3576 + AX8850 16GB M.2",
+      "summary": "已在 16GB M.2 算力卡完成 SmolLM3-3B 三组短输入生成，原始回答见本页。"
+    },
+    "Qwen3-VL-Embedding-2B-AX650-C128_P1280_CTX1407": {
+      "id": "20261001-audio-qwen3-vl-embedding-2b-ax650-c128-p1280-ctx1407",
+      "status": "passed",
+      "level": "basic",
+      "date": "2026-10-01",
+      "revision": "97ecf827ecfc3b07d35b74b852981d3415d14a1a",
+      "environment": "RK3576 + AX8850 16GB M.2",
+      "summary": "已在 16GB M.2 算力卡运行 Qwen3-VL-Embedding 2B 图文向量服务，完成中英文图片检索。"
+    },
+    "QwenPaw-Flash-2B-GPTQ-Int4-AX650-C256-P14336-CTX17408": {
+      "id": "20261001-audio-qwenpaw-flash-2b-gptq-int4-ax650-c256-p14336-ctx17408",
+      "status": "passed",
+      "level": "basic",
+      "date": "2026-10-01",
+      "revision": "cf9b102777b59d552bd9820afeb996224f36732c",
+      "environment": "RK3576 + AX8850 16GB M.2",
+      "summary": "已在 16GB M.2 算力卡运行 QwenPaw 文本与图片问答，实际回答和两轮对话见本页。"
+    },
+    "LocateAnything-3B": {
+      "id": "20261001-audio-locateanything-3b",
+      "status": "passed",
+      "level": "basic",
+      "date": "2026-10-01",
+      "revision": "c6ad2b1a52a6c75ca604e3e4eb775240aa31718a",
+      "environment": "RK3576 + AX8850 16GB M.2",
+      "summary": "已在 16GB M.2 算力卡完成图片人物检测、文字区域定位和描述目标点定位，实际输出如下。"
+    },
+    "SenseVoice_AgenticRAG": {
+      "id": "20261001-audio-sensevoice-agenticrag",
+      "status": "passed",
+      "level": "basic",
+      "date": "2026-10-01",
+      "revision": "748b06f6b0e43660f2092dbcf158189f543ab88c",
+      "environment": "RK3576 + AX8850 16GB M.2",
+      "summary": "已在 16GB M.2 算力卡运行五种语言的整段与分块语音识别，下面保留实际音频和转写。"
+    },
+    "MiniCPM-V-4": {
+      "id": "20261001-audio-minicpm-v-4",
+      "status": "passed",
+      "level": "basic",
+      "date": "2026-10-01",
+      "revision": "b7e4aaefa66d21dbc4aa0c59d618f79f3eae44c3",
+      "environment": "RK3576 + AX8850 16GB M.2",
+      "summary": "已在 16GB M.2 算力卡完成同一张图片的中英文问答，以下保留实际生成的完整文本。"
+    },
+    "Speech-Translation.axera": {
+      "id": "20261001-audio-speech-translation-axera",
+      "status": "passed",
+      "level": "basic",
+      "date": "2026-10-01",
+      "revision": "f3672ca715ee6380317eb2c87ed8fd049e51d691",
+      "environment": "RK3576 + AX8850 16GB M.2",
+      "summary": "16GB 卡已完成英译中、中译英及实际语音合成；两条译文保留识别文本的主要含义。合成回转写在中文人物和数量、英文 hold on / grip / handrails 处有差异，辅助识别对原音频也有错词，仍需复听，不能据此判定端到端质量通过。"
+    },
+    "Spoken-Communication.axera": {
+      "id": "20261001-audio-spoken-communication-axera",
+      "status": "passed",
+      "level": "basic",
+      "date": "2026-10-01",
+      "revision": "ecd09194a4ed417f6466dedebcd85192118a7bc8",
+      "environment": "RK3576 + AX8850 16GB M.2",
+      "summary": "已在16GB M.2算力卡完成三条语音问题的识别、Qwen回答与语音合成，下面展示本次实际输出。"
+    },
+    "Voice_Assistant.AXERA": {
+      "id": "20261002-voice-assistant-offline",
+      "status": "passed",
+      "level": "basic",
+      "date": "2026-10-02",
+      "revision": "1af3f0baa89d48a11e0177445d15290892ce1a07",
+      "environment": "RK3576 + AX8850 16GB M.2",
+      "summary": "已用独立运行包完成两轮语音检测→FireRed识别→Qwen3.5回答→Melo合成，下面展示本次实际文字与音频。"
+    },
+    "VoxCPM": {
+      "id": "20261002-audio-voxcpm",
+      "status": "passed",
+      "level": "basic",
+      "date": "2026-10-02",
+      "revision": "4362ceca842ace15a8f7e67a2302f72143a60f06",
+      "environment": "RK3576 + AX8850 16GB M.2",
+      "summary": "已在 16GB M.2 算力卡完成 VoxCPM 英文语音合成，生成 4.08 秒单声道音频。"
+    },
+    "RAG.axera": {
+      "id": "20261002-rag-axera",
+      "status": "passed",
+      "level": "basic",
+      "date": "2026-10-02",
+      "revision": "1ed9a31a4ffb70912a225e0247e4b14158a67a7b",
+      "environment": "RK3576 + AX8850 16GB M.2",
+      "summary": "已在 16GB M.2 算力卡完成 PDF 上传、向量建库、检索与三次文档问答。"
+    },
+    "Qwen2.5-VL-3B-Instruct-GPTQ-Int4": {
+      "id": "20261002-qwen2-5-vl-3b-instruct-gptq-int4",
+      "status": "failed",
+      "level": "basic",
+      "date": "2026-10-02",
+      "revision": "3cccf4c9262c3c656ae1c84a19e2e91d8f3b0c9e",
+      "environment": "RK3576 + AX8850 16GB M.2",
+      "summary": "配套运行程序正在更新，本页旧结果暂不作为部署验收依据。待同条件复测后更新运行包与效果。"
+    },
+    "Qwen2.5-VL-3B-Instruct": {
+      "id": "20261002-qwen2-5-vl-3b-instruct",
+      "status": "passed",
+      "level": "basic",
+      "date": "2026-10-02",
+      "revision": "d967363ac68ee8c46a46110b8ee92f0f0cb332cb",
+      "environment": "RK3576 + AX8850 16GB M.2",
+      "summary": "已在 16GB M.2 算力卡完成三组图片问答和两组八帧视频问答，展示原始输出及核对结果。"
+    },
+    "Qwen3-VL-2B-Instruct": {
+      "id": "20261002-qwen3-vl-2b-instruct",
+      "status": "passed",
+      "level": "basic",
+      "date": "2026-10-02",
+      "revision": "b88b51a9b583a5480717de7955a7b10a28dde9d4",
+      "environment": "RK3576 + AX8850 16GB M.2",
+      "summary": "已在 16GB M.2 算力卡完成五组图片问答与两组八帧视频问答，展示原始输出及核对结果。"
+    },
+    "Qwen3-VL-2B-Instruct-GPTQ-Int4-C512-P3584-CTX4095": {
+      "id": "20261002-qwen3-vl-2b-instruct-gptq-int4-c512-p3584-ctx4095",
+      "status": "passed",
+      "level": "basic",
+      "date": "2026-10-02",
+      "revision": "ced30de327fcd7580ac26ebd6d18a7fc6a2bb028",
+      "environment": "RK3576 + AX8850 16GB M.2",
+      "summary": "已在 16GB M.2 算力卡完成 384 和 640 两种分辨率的图片问答与八帧视频问答，展示原始输出及核对结果。"
+    },
+    "Qwen3-VL-2B-Instruct-GPTQ-Int4-P1536-CTX2047": {
+      "id": "20261003-qwen3-vl-2b-instruct-gptq-int4-p1536-ctx2047",
+      "status": "passed",
+      "level": "basic",
+      "date": "2026-10-03",
+      "revision": "cf4b904ba59e66fefd17668af196fc9c199ab70f",
+      "environment": "RK3576 + AX8850 16GB M.2",
+      "summary": "已在 16GB M.2 算力卡完成三个视觉编码器的图片与视频帧问答，展示原始输出及核对结果。"
+    },
+    "Qwen3-VL-4B-Instruct": {
+      "id": "20261003-qwen3-vl-4b-instruct",
+      "status": "passed",
+      "level": "basic",
+      "date": "2026-10-03",
+      "revision": "052d3999478f8974b736f8663072e9a72aaabbf5",
+      "environment": "RK3576 + AX8850 16GB M.2",
+      "summary": "已在 16GB M.2 算力卡完成图片、官方三帧及配套八帧视频问答，展示原始输出与核对结果。"
+    },
+    "Qwen3-VL-8B-Instruct": {
+      "id": "20261003-qwen3-vl-8b-instruct",
+      "status": "passed",
+      "level": "basic",
+      "date": "2026-10-03",
+      "revision": "f3c9f23de6de9aa5c78b5cc9177094e1be7d913f",
+      "environment": "RK3576 + AX8850 16GB M.2",
+      "summary": "已在 16GB M.2 算力卡完成五组图片与八帧视频问答，展示原始输出和核对结果。"
+    },
+    "Qwen3-VL-8B-Instruct-GPTQ-Int4": {
+      "id": "20261003-qwen3-vl-8b-instruct-gptq-int4",
+      "status": "passed",
+      "level": "basic",
+      "date": "2026-10-03",
+      "revision": "e9e73ad656bd299aedd92c9dad85cf0b308c77fd",
+      "environment": "RK3576 + AX8850 16GB M.2",
+      "summary": "已在 16GB M.2 算力卡完成五组图片与八帧视频问答，展示原始输出和核对结果。"
+    },
+    "Qwen3-4B-Instruct-2507-GPTQ-Int8": {
+      "id": "20261003-qwen3-instruct-int8-native",
+      "status": "passed",
+      "level": "basic",
+      "date": "2026-10-03",
+      "revision": "b334419218b9640ae78ae163ba484eb587589a8f",
+      "environment": "RK3576 + AX8850 16GB M.2",
+      "summary": "已在16GB M.2算力卡完成算术、中文说明和JSON格式三条独立问答，均正常返回并以EOS结束；下方展示原始回复。"
+    },
+    "Qwen3.5-4B-AX650-GPTQ-Int4-C512-P30k-CTX32k": {
+      "id": "20261003-qwen35-4b-customer",
+      "status": "passed",
+      "level": "basic",
+      "date": "2026-10-03",
+      "revision": "4222f23a3459751d20239a51621df62538cfd409",
+      "environment": "RK3576 + AX8850 16GB M.2",
+      "summary": "已在 16GB M.2 算力卡完成文字、图片和视频共 10 条请求，包含 8 种输入及两次重复检查。算术、JSON 格式、马犬识别和室内人数符合本轮要求；两次重复回答一致。下方保留实际回复及尚需复核的细节。"
+    },
+    "DeepSeek-R1-Distill-Qwen-7B-GPTQ-Int4": {
+      "id": "20261003-deepseek7b-int4-native",
+      "status": "passed",
+      "level": "basic",
+      "date": "2026-10-03",
+      "revision": "9b903307e1ea3b216330e88f8e6fe39b6627bb74",
+      "environment": "RK3576 + AX8850 16GB M.2",
+      "summary": "在 16GB M.2 算力卡上完成算术、中文说明和 JSON 三条独立问答。算术最终结果为 5，中文回复可读，JSON 代码块内的键值正确；三条均包含思考文本，严格输出格式尚未通过。"
+    },
+    "Qwen2.5-7B-Instruct": {
+      "id": "20261003-qwen25-7b-standard-native",
+      "status": "passed",
+      "level": "basic",
+      "date": "2026-10-03",
+      "revision": "97ccbbde2f2282a24ff00bb5df8e5c9eb34033fb",
+      "environment": "RK3576 + AX8850 16GB M.2",
+      "summary": "在RK3576 + AX8850 16GB上完成算术、中文问答和结构化输出三条独立样例。算术和中文回答符合要求；结构化输出的字段、数值正确，但额外包含Markdown代码围栏。"
+    },
+    "Z-Image-Turbo": {
+      "id": "20261003-z-image-turbo",
+      "status": "passed",
+      "level": "basic",
+      "date": "2026-10-03",
+      "revision": "117d8586d5c50de6f4c6e0a7058e934c207407be",
+      "environment": "RK3576 + AX8850 16GB M.2",
+      "summary": "已在 16GB M.2 算力卡完成中英文两组 512×512 出图，展示实际图片和提示词符合情况。"
+    },
+    "Qwen2.5-Omni-3B": {
+      "id": "20261004-audio-qwen2-5-omni-3b",
+      "status": "passed",
+      "level": "basic",
+      "date": "2026-10-04",
+      "revision": "38c42b43ece9cca5acf024aeddd8d0a188eca44d",
+      "environment": "RK3576 + AX8850 16GB M.2",
+      "summary": "已在 16GB M.2 算力卡完成图片两问、视频中英文回答及语音生成。图片中的人数和狗的数量正确，动作、朝向等细节有误；下方保留完整原始输出，作为部署效果对照。"
+    },
+    "Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4": {
+      "id": "20261004-audio-xiaomi-mimo-vl-miloco-7b-ax650-gptq-int4",
+      "status": "passed",
+      "level": "basic",
+      "date": "2026-10-04",
+      "revision": "839273460d343a02f2e88a0cfe059f8ec78a50ea",
+      "environment": "RK3576 + AX8850 16GB M.2",
+      "summary": "已在 16GB M.2 算力卡完成图片描述、人数与车辆问答、八帧视频问答。人物和动物数量可对照，车型及动物种类存在识别偏差；以下保留实际输入与原始回答。"
+    },
+    "VideoAgent-AX650N": {
+      "id": "videoagent-ax650n-customer-20261004",
+      "status": "passed",
+      "level": "basic",
+      "date": "2026-10-04",
+      "revision": "6a2c8e976059bd3bb945187b49e09651413ed7a8",
+      "environment": "RK3576 + AX8850 16GB + Windows PC",
+      "summary": "完成原版网页的上传、空索引、问题检索和引用视频播放；配套包已在 16GB M.2 算力卡上实测。回答内容仍有语言与细节限制。"
+    },
+    "openclaw-ax8850-qqbot-media": {
+      "id": "openclaw-local-media-customer-20261004",
+      "status": "blocked",
+      "level": "basic",
+      "date": "2026-10-04",
+      "revision": "45cbc485b03f48064e67c47839022c448f0391e1",
+      "environment": "RK3576 + AX8850 16GB",
+      "summary": "部署包已完成本地语音识别、Kokoro 1.0/1.1 合成、图片问答和原生视频问答。以下展示实际输入与输出；QQ 机器人完整链路尚未验证。"
+    },
+    "3D-Speaker-Meeting-Summary": {
+      "id": "20261004-audio-3d-speaker-meeting-summary",
+      "status": "passed",
+      "level": "basic",
+      "date": "2026-10-04",
+      "revision": "b55d044e8eb419c779dc15c4b3e486dfe531f67e",
+      "environment": "RK3576 + AX8850 16GB M.2",
+      "summary": "已在 16GB M.2 算力卡完成会议录音的转录与本地总结。部署页提供原始录音、完整转录和模型生成的总结。"
+    },
+    "chatterbox-p192-ctx384-ax650": {
+      "id": "20261004-audio-chatterbox-p192-ctx384-ax650",
+      "status": "passed",
+      "level": "basic",
+      "date": "2026-10-04",
+      "revision": "f37f2a4bd7331fbf511e089a6741f5685d58c2c0",
+      "environment": "RK3576 + AX8850 16GB M.2",
+      "summary": "已在 16GB M.2 算力卡完成 T3 文字生成语音 token，并串接官方 S3Gen/HiFT 生成 2.04 秒音频；独立识别内容与输入英文短句一致。"
+    },
+    "Qwen3-4B-Instruct-2507-GPTQ-Int4": {
+      "id": "20261004-qwen3-instruct-int4-native",
+      "status": "passed",
+      "level": "basic",
+      "date": "2026-10-04",
+      "revision": "ff1d40a1ca779b69146e883ef9e7f5b0c7af3213",
+      "environment": "RK3576 + AX8850 16GB M.2",
+      "summary": "已在16GB M.2算力卡完成算术、中文说明和JSON三条独立问答，均正常生成结束标记。下方展示实际输入、原始回复和耗时。"
+    },
+    "Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650": {
+      "id": "20261004-audio-qwen3-tts-12hz-1-7b-voicedesign-ax650",
+      "status": "passed",
+      "level": "basic",
+      "date": "2026-10-04",
+      "revision": "3d4e2e70131378bd8bfbe307ef2de01192f0bc32",
+      "environment": "RK3576 + AX8850 16GB M.2",
+      "summary": "已在 16GB M.2 算力卡完成 1.7B VoiceDesign 中文短句合成，生成可播放的 3.44 秒音频。"
+    },
+    "Qwen2.5-7B-Instruct-GPTQ-Int4": {
+      "id": "20261004-qwen25-7b-gptq-native",
+      "status": "passed",
+      "level": "basic",
+      "date": "2026-10-04",
+      "revision": "5b09894da95a2cdfb3cfd542441b8c0cd8c92d7c",
+      "environment": "RK3576 + AX8850 16GB M.2",
+      "summary": "在16GB M.2算力卡上完成三条独立短问答。算术和中文回答符合要求；结构化输出的字段和值正确，但附加代码围栏和无依据说明，严格JSON格式项未通过。"
+    },
+    "Qwen3-Embedding-0.6B-GPTQ-Int8": {
+      "id": "20261004-qwen3-embedding-int8-full",
+      "status": "passed",
+      "level": "basic",
+      "date": "2026-10-04",
+      "revision": "4c972fca3731832e33899e14da1555dd78c3f8d6",
+      "environment": "RK3576 + AX8850 16GB M.2",
+      "summary": "在16GB M.2算力卡上完成完整模型的中英文向量与检索。下方展示简单部署样例、构造语料，以及采用外部相关性标注的检索子集；实际向量均已与原始完整模型的CPU结果核对，未命中项也保留在结果中。"
     }
   }
 }

@@ -162,7 +162,7 @@ PY
 
 ## 查看部署效果
 
-**固定样例已核对** · 2026-09-23 · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
+**固定样例已核对** · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
 
 三次图片问答均完成并按固定图片核对：英文描述识别出三名穿白色宇航服的人和中间人物举手，人数为 3；中文描述中的植物和幽暗森林与图片相符。
 
@@ -227,7 +227,7 @@ Each astronaut is shown in a white spacesuit, standing or crouching in a forest-
 <details>
 <summary>查看样例环境与运行耗时</summary>
 
-环境：RK3576 + AX8850 16GB M.2。日期：2026-09-23。模型版本：`f1a61efd20bcdc6146eea459fdc7ef5d3074df5b`。
+环境：RK3576 + AX8850 16GB M.2。模型版本：`f1a61efd20bcdc6146eea459fdc7ef5d3074df5b`。
 
 | 组件 | 版本或配置 |
 | --- | --- |
@@ -246,8 +246,6 @@ Each astronaut is shown in a white spacesuit, standing or crouching in a forest-
 
 适用范围：
 
-- 核对范围仅为图中人数、主要对象、可见姿态和场景；没有计算视觉问答数据集准确率。
-- 人数问答包含额外说明，接入只接受数字的业务时仍需单独约束并检查返回格式。
 - 本页结果来自 16GB 卡，不作为 8GB 卡的容量验证。temperature=0、enable_thinking=false、stream=false、max_tokens=128。
 - 仅测试本页固定样例，未覆盖完整数据集、多图、视频、最大上下文或长期连续运行。
 

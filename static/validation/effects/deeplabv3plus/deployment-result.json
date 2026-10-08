@@ -1,0 +1,50 @@
+{
+  "modelId": "DeepLabv3Plus",
+  "revision": "6d29643d003d7e7d22f7c28a177980f292ec5fca",
+  "date": "2026-09-23",
+  "variants": [
+    {
+      "label": "飞机前景与边界",
+      "observation": "依次显示实际输入、原始分割掩码和叠加图。叠加图由保存的原图与原始掩码在主机上按50%颜色混合生成，背景不变，未修正掩码；不是新增推理输出。",
+      "previews": [
+        {
+          "caption": "实际输入：513×513 飞机图",
+          "path": "/validation/effects/deeplabv3plus/inputs/1_image.png"
+        },
+        {
+          "caption": "原始输出掩码",
+          "path": "/validation/effects/deeplabv3plus/outputs/output-ax.png"
+        },
+        {
+          "caption": "原图与掩码叠加（主机生成，未修正掩码）",
+          "path": "/validation/effects/deeplabv3plus/outputs/input-mask-overlay.png"
+        }
+      ],
+      "tables": [],
+      "audio": [],
+      "overlayDerivation": {
+        "inputSha256": "7fd691ea077d004934b52854d6882b5d5620b2bd839a086199cc26a4194d099e",
+        "maskSha256": "574a5654adc5334763bc16154ee49a916b5e6e2cee69cf8fcffd7737dd0b18a5",
+        "overlaySha256": "0d6ad81b483f694a5d594691d12e94727dc34a21fffb0e47af9b22e45845a125",
+        "method": "Same-size pixel overlay; mask nonblack pixels = round((original RGB + raw mask RGB)/2), background unchanged. No inference or mask correction."
+      },
+      "record": {
+        "completed": true,
+        "provider": "AXCLRTExecutionProvider",
+        "sessions": [
+          {
+            "model": "models-ax650/deeplabv3plus_mobilenet_u16.axmodel",
+            "runMilliseconds": [
+              113.74361499997576
+            ],
+            "allFinite": true
+          }
+        ],
+        "sourceRecord": "tensors.json",
+        "sourceSha256": "9a9421c42cff4eb22ba4301258d4fb6cd0a7ac34f08f2817b79cca63fcae9367",
+        "recordDerivation": "Display fields mapped from archived 2026-09-23 tensors.json; no new inference.",
+        "timingScope": "host wall time of session.run; includes AXCL call and copies; excludes tensor statistics"
+      }
+    }
+  ]
+}

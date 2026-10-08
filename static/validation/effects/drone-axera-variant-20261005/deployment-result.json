@@ -1,0 +1,116 @@
+{
+  "modelId": "Drone-axera",
+  "revision": "bca09e938a5ef7cdf81862e4acd4b706718558a3",
+  "date": "2026-10-05",
+  "variants": [
+    {
+      "label": "YOLO26无人机检测",
+      "observation": "原始雪景样例中一个无人机被框出，框295,228到332,265，置信度约0.34；未覆盖独立数据集或复杂背景。",
+      "previews": [
+        {
+          "caption": "实际输入：test/23.jpg",
+          "path": "/validation/effects/drone-axera-variant-20261005/inputs/23.jpg"
+        },
+        {
+          "caption": "实际输出：YOLO26无人机检测",
+          "path": "/validation/effects/drone-axera-variant-20261005/outputs/23.jpg"
+        }
+      ],
+      "tables": [],
+      "record": {
+        "completed": true,
+        "provider": "AXCLRTExecutionProvider",
+        "inferenceEvidence": "original-cv-variant-samples",
+        "modelId": "Drone-axera",
+        "revision": "bca09e938a5ef7cdf81862e4acd4b706718558a3",
+        "actualCapacity": "16GB",
+        "runsPerWeight": 3,
+        "qualityAccepted": false,
+        "customerCommandVerified": true,
+        "originalFilesUnchanged": true,
+        "sourceScript": "axmodel_infer_yolo26.py",
+        "sourceScriptSha256": "21c5fb80b4c22b30672a5e870a5a579515e9ffc52228043bb10001526dc117f8",
+        "inputFile": "test/23.jpg",
+        "inputSha256": "e0909d98ca629d9d97a2687240351fa7d95a5d97056c7dff6065b06f5aa76bab",
+        "inputPath": "/validation/effects/drone-axera-variant-20261005/inputs/23.jpg",
+        "outputPath": "/validation/effects/drone-axera-variant-20261005/outputs/23.jpg",
+        "outputSha256": "0839fcfcd94048d42a7bc8aa7636dcd820d795ab5e2986e6fbed8c553ad326fe",
+        "adapterSha256": "95dbce768bc422fdce1410abae240dfc34050bebca5b4a62214ad54f9e8f1754",
+        "customerBundleFiles": {
+          "plan.json": "ea6575329454e27edb8987e191dadcd477e9b651f69b11bf0b7aea9934fceead",
+          "_runtime.py": "95dbce768bc422fdce1410abae240dfc34050bebca5b4a62214ad54f9e8f1754",
+          "vision_variant.py": "445fffa8e69b7f2047131e2b5e57dd386110b766a91818b9322aeefc3f5212ca"
+        },
+        "sessions": [
+          {
+            "model": "AX650/yolo26s_drone_650.axmodel",
+            "sha256": "82c1afbf5f20e0bc2a44a01c9726df1cc679d5e0adfd87d509d9a932b98468ee",
+            "allFinite": true,
+            "runMilliseconds": [
+              21.937214999979915,
+              21.864006999749108,
+              21.958210999400762
+            ]
+          }
+        ],
+        "weightResults": [
+          {
+            "weight": "AX650/yolo26s_drone_650.axmodel",
+            "independentProcesses": 3,
+            "callsPerProcess": 1,
+            "rawOutputsExact": true,
+            "imageSha256": "0839fcfcd94048d42a7bc8aa7636dcd820d795ab5e2986e6fbed8c553ad326fe",
+            "metadata": [
+              {
+                "inputs": [
+                  {
+                    "name": "images",
+                    "shape": [
+                      1,
+                      640,
+                      640,
+                      3
+                    ],
+                    "dtype": "uint8"
+                  }
+                ],
+                "outputs": [
+                  {
+                    "name": "output0",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      5
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "548",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      5
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "563",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      5
+                    ],
+                    "dtype": "float32"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

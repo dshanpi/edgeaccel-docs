@@ -1,0 +1,28 @@
+{
+  "modelId": "Pet-axera",
+  "repo": "AXERA-TECH/Pet-axera",
+  "revision": "4107b2ed559ecd4f8872e83af733b2f0bab2d2f1",
+  "files": [
+    {
+      "path": "axmodel_infer_pet.py",
+      "bytes": 10069,
+      "verifiedHashes": {
+        "sha256": "10421217ee2c3c89f680f385b11dd09a3df9c47d76912d58b7c50fc6e2e3773f"
+      }
+    },
+    {
+      "path": "pet.jpg",
+      "bytes": 144684,
+      "verifiedHashes": {
+        "sha256": "05b9bc894553921c8a51304c9f19115fb3aa89c08e3bab4d7ea4c2723500e4cb"
+      }
+    },
+    {
+      "path": "AX650/pet_ax650_nhwc_npu3.axmodel",
+      "bytes": 1265980,
+      "verifiedHashes": {
+        "sha256": "9a62a281544ccd83709ada13a3e3e147c4ffff4c54a52dcb3d93483a5bc45d9d"
+      }
+    }
+  ]
+}

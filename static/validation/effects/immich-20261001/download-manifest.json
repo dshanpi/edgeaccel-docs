@@ -1,0 +1,36 @@
+{
+  "modelId": "immich",
+  "repo": "AXERA-TECH/immich",
+  "revision": "81c75d735f4087a4359ff152646436da1685af1c",
+  "complete": true,
+  "files": [
+    {
+      "path": "README.md",
+      "size": 11532,
+      "url": "https://huggingface.co/AXERA-TECH/immich/resolve/81c75d735f4087a4359ff152646436da1685af1c/README.md",
+      "verifiedHashes": {
+        "sha256": "917484881006f2e0859126dcc44117baa4643818f71825d6fa944cef3c1fd943",
+        "gitBlob": "6b021f0c17eccc2aa50e5f54be18a0795dc9c12e"
+      }
+    },
+    {
+      "path": "immich_ml-2.7.5-py3-none-any.whl",
+      "size": 121268,
+      "url": "https://huggingface.co/AXERA-TECH/immich/resolve/81c75d735f4087a4359ff152646436da1685af1c/immich_ml-2.7.5-py3-none-any.whl",
+      "verifiedHashes": {
+        "sha256": "c204b6d6e6bd1e2dd41277b9bfdc072a062d368d934cb60c274d3d0fd72de18e",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "requirements.txt",
+      "size": 376,
+      "url": "https://huggingface.co/AXERA-TECH/immich/resolve/81c75d735f4087a4359ff152646436da1685af1c/requirements.txt",
+      "verifiedHashes": {
+        "sha256": "dc6a7892be03c7b486f746b0b4528340ef5e93aa2052b458d014646da5188005",
+        "gitBlob": "5114137c4c6366673a4ce8146d02cc72e26d0750"
+      }
+    }
+  ],
+  "runnerSha256": "647a6d559e9c4429cea4093de587265c7a8ab6f1f18e3ab572b432a3f1abfd5f"
+}

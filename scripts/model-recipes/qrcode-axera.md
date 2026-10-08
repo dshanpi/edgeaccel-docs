@@ -30,7 +30,7 @@ python qrcode_card.py --model-dir . \
 
 日志应显示 `AXCLRTExecutionProvider`，随后逐张输出 `boxes` 和 `decoded` 数量。`boxes` 表示检测到的区域数量；`decoded` 表示在裁剪区域中成功解码的结果数量。存在检测框不代表一定能够读出二维码文字。
 
-脚本会生成标注图片和 `qrcode-result.json`，其中保留框坐标、解码文字、输入文件校验值及单图耗时。此图的正确解码文字为 `EdgeAccel AX8850 M.2 - deployment test 2026-09-23`。省略 `--images` 时处理仓库内的 48 张 JPG 样例。
+脚本会生成标注图片和 `qrcode-result.json`，其中保留框坐标、解码文字、输入文件校验值及单图耗时。解码文字应与配套 `qrcode-result.json` 中该输入的原始记录一致。省略 `--images` 时处理仓库内的 48 张 JPG 样例。
 
 ## 运行其余模型
 

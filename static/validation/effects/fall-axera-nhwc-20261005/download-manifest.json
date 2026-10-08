@@ -1,0 +1,28 @@
+{
+  "modelId": "Fall-axera",
+  "repo": "AXERA-TECH/Fall-axera",
+  "revision": "a73bc26fd1c7b2df94419565bbe5ac0ec21cd42e",
+  "files": [
+    {
+      "path": "axmodel_infer_fall.py",
+      "bytes": 14265,
+      "verifiedHashes": {
+        "sha256": "b56008df1016dc24139cc7db648d92e7385cf9a9afcc3940b53d5419a613bd3f"
+      }
+    },
+    {
+      "path": "fall4.png",
+      "bytes": 667600,
+      "verifiedHashes": {
+        "sha256": "5919910f56b047a3b697b95eb415e227de75738be7db92bab1d350a4d8de695b"
+      }
+    },
+    {
+      "path": "AX650/fall_ax650_nhwc_npu3.axmodel",
+      "bytes": 1127498,
+      "verifiedHashes": {
+        "sha256": "5df23012035499d66daba44777ba575e7af63c4483ad59dd5f48699c830ea98a"
+      }
+    }
+  ]
+}

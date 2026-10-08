@@ -103,9 +103,9 @@ python ~/edgeaccel/igev_card.py --model-dir "$MODEL_DIR" \
 
 ## 查看部署效果
 
-**已运行，效果仍需评估** · 2026-09-28 · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
+**已运行，效果仍需评估** · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
 
-已完成官方七组双目图片推理和 CPU ONNX 数值对照，以下展示全部统计及三组输入输出。PipesH 的数值差异明显大于其他样例。
+16GB 算力卡完成七组双目图片推理和 CPU ONNX 对照。其中四组原图与 Middlebury 官方标注逐文件一致，算力卡视差 EPE 为 2.369–4.136 原图像素。以下展示标注、预测和误差图；PipesH 的 CPU 对照差异仍需进一步核对。
 
 **七组双目输入统计**
 
@@ -236,9 +236,56 @@ python ~/edgeaccel/igev_card.py --model-dir "$MODEL_DIR" \
 
 </div>
 
+**四组官方视差标注对照**
+
+使用 [Middlebury 2014 官方标注](https://vision.middlebury.edu/stereo/data/scenes2014/) 的 perfect 校正版本，四组左右原图均与实测来源逐文件一致。评估 保存的 512 × 384 原始输出：双线性放大到原图尺寸，再将水平视差乘以原图宽度 / 512。EPE 为视差绝对误差均值，Bad > 2 px 为误差超过 2 原图像素的比例；仅排除非有限标注，未排除遮挡区。下表均以原图像素计量，与上方 CPU 差值表的输入像素单位不同。此四组结果采用自定义输入尺寸和上采样方法，不是 Middlebury 官方排行榜分数，也不代表米制测距精度。 图中预测与标注共用每组校准文件的视差色阶，误差图色阶为 0–16 原图像素；颜色截断不参与数值统计。Cable 的细线、孔洞及 Classroom 的上方墙面仍可见局部误差。
+
+<div className="model-effect-gallery">
+
+<figure>
+
+[![Adirondack：左目输入、官方视差标注、算力卡预测、绝对误差（点击放大）](../../../static/validation/effects/igev-plusplus-20260928/Adirondack-ground-truth.png)](../../../static/validation/effects/igev-plusplus-20260928/Adirondack-ground-truth.png)
+
+<figcaption>Adirondack：左目输入、官方视差标注、算力卡预测、绝对误差（点击放大）</figcaption>
+</figure>
+
+<figure>
+
+[![Backpack：左目输入、官方视差标注、算力卡预测、绝对误差（点击放大）](../../../static/validation/effects/igev-plusplus-20260928/Backpack-ground-truth.png)](../../../static/validation/effects/igev-plusplus-20260928/Backpack-ground-truth.png)
+
+<figcaption>Backpack：左目输入、官方视差标注、算力卡预测、绝对误差（点击放大）</figcaption>
+</figure>
+
+<figure>
+
+[![Cable：左目输入、官方视差标注、算力卡预测、绝对误差（点击放大）](../../../static/validation/effects/igev-plusplus-20260928/Cable-ground-truth.png)](../../../static/validation/effects/igev-plusplus-20260928/Cable-ground-truth.png)
+
+<figcaption>Cable：左目输入、官方视差标注、算力卡预测、绝对误差（点击放大）</figcaption>
+</figure>
+
+<figure>
+
+[![Classroom：左目输入、官方视差标注、算力卡预测、绝对误差（点击放大）](../../../static/validation/effects/igev-plusplus-20260928/Classroom-ground-truth.png)](../../../static/validation/effects/igev-plusplus-20260928/Classroom-ground-truth.png)
+
+<figcaption>Classroom：左目输入、官方视差标注、算力卡预测、绝对误差（点击放大）</figcaption>
+</figure>
+
+</div>
+
+| 图片组 | 计算后端 | 有效标注像素 | EPE / 原图 px | Bad > 2 原图 px |
+| --- | --- | --- | --- | --- |
+| Adirondack | 算力卡 | 5691206 | 2.369 | 22.59% |
+| Adirondack | CPU ONNX | 5691206 | 2.122 | 19.99% |
+| Backpack | 算力卡 | 5786938 | 4.136 | 25.14% |
+| Backpack | CPU ONNX | 5786938 | 3.870 | 24.83% |
+| Cable | 算力卡 | 5438079 | 4.074 | 37.26% |
+| Cable | CPU ONNX | 5438079 | 3.931 | 33.76% |
+| Classroom | 算力卡 | 5672088 | 2.471 | 13.06% |
+| Classroom | CPU ONNX | 5672088 | 2.342 | 11.87% |
+
 **使用时注意：**
 
-- PipesH 与 CPU 参考存在较大数值差异；没有完整标注数据集，未判定整体精度通过。
+- 四组官方标注已评估，另三组未完成标注精度核对；PipesH 与 CPU 参考差异较大。当前没有完整数据集及约定验收阈值，未判定整体精度通过。
 - 只验证静态图和 AX650 编译模型；未测试 AX637 权重、双目摄像头同步、实时视频或米制测距。
 
 这些结果用于对照部署后的输出，未覆盖完整数据集精度或长期连续运行。
@@ -246,7 +293,7 @@ python ~/edgeaccel/igev_card.py --model-dir "$MODEL_DIR" \
 <details>
 <summary>查看样例环境与运行耗时</summary>
 
-环境：RK3576 + AX8850 16GB M.2。日期：2026-09-28。模型版本：`b5e505fcaeaecdcee9bae2959d29c1f1ebec08a5`。
+环境：RK3576 + AX8850 16GB M.2。模型版本：`b5e505fcaeaecdcee9bae2959d29c1f1ebec08a5`。
 
 | 组件 | 版本或配置 |
 | --- | --- |
@@ -260,11 +307,10 @@ python ~/edgeaccel/igev_card.py --model-dir "$MODEL_DIR" \
 | AXCL 平均耗时 | 150.335 ms | 七组输入各两次，共14次 session.run，包含传输，不含加载、缩放、CPU参考和文件保存。 |
 | 与 CPU 平均绝对差 | 0.066494–2.470881 px | 每组独立统计；不是与标注真值的EPE，也不是米制距离误差。 |
 | 重复运行 | 7 / 7 组输出一致 | 相同输入的两次原始AXCL输出逐字节一致，不代表跨设备或长期稳定性。 |
+| 四组标注视差 EPE | 2.369–4.136 原图 px | 四组 perfect 原图的有效左视差标注，包含遮挡区；512×384 输出放大并还原水平尺度。各图独立统计，不是完整基准或距离误差。 |
 
 适用范围：
 
-- PipesH 与 CPU 参考存在较大数值差异；没有完整标注数据集，未判定整体精度通过。
-- 只验证静态图和 AX650 编译模型；未测试 AX637 权重、双目摄像头同步、实时视频或米制测距。
 - 本次为16GB算力卡，真实8GB容量与长期连续运行仍需回归。
 
 </details>

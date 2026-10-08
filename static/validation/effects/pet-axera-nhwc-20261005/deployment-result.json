@@ -1,0 +1,97 @@
+{
+  "modelId": "Pet-axera",
+  "revision": "4107b2ed559ecd4f8872e83af733b2f0bab2d2f1",
+  "date": "2026-10-05",
+  "variants": [
+    {
+      "label": "pet · pet_ax650_nhwc_npu3.axmodel",
+      "observation": "两个pet框分别覆盖左侧橙猫和右侧白猫，分数0.92和0.95。",
+      "previews": [
+        {
+          "caption": "输入：pet.jpg",
+          "path": "/validation/effects/pet-axera-nhwc-20261005/inputs/pet.jpg"
+        },
+        {
+          "caption": "NHWC实际输出：pet",
+          "path": "/validation/effects/pet-axera-nhwc-20261005/outputs/pet.jpg"
+        }
+      ],
+      "tables": [],
+      "record": {
+        "completed": true,
+        "provider": "AXCLRTExecutionProvider",
+        "inferenceEvidence": "fixed-nhwc-vision-samples",
+        "modelId": "Pet-axera",
+        "revision": "4107b2ed559ecd4f8872e83af733b2f0bab2d2f1",
+        "actualCapacity": "16GB",
+        "case": "pet",
+        "inputFile": "pet.jpg",
+        "inputSha256": "05b9bc894553921c8a51304c9f19115fb3aa89c08e3bab4d7ea4c2723500e4cb",
+        "inputPath": "/validation/effects/pet-axera-nhwc-20261005/inputs/pet.jpg",
+        "inputShape": [
+          1,
+          320,
+          480,
+          3
+        ],
+        "inputLayout": "NHWC",
+        "colorOrder": "RGB from original NCHW preprocessing",
+        "sourceScript": "axmodel_infer_pet.py",
+        "sourceScriptSha256": "10421217ee2c3c89f680f385b11dd09a3df9c47d76912d58b7c50fc6e2e3773f",
+        "adapterSha256": "02657a999a22684b10b8923ae5f3fc934baa05c5dee39e4f9e09ad6a88eef7ca",
+        "customerBundleFiles": {
+          "vision_nhwc.py": "6e52df5f5d63c76e7700e6f184d342a1d714f6e0edbb9b102efa45a4d250efb1",
+          "_vision_nhwc_runtime.py": "02657a999a22684b10b8923ae5f3fc934baa05c5dee39e4f9e09ad6a88eef7ca",
+          "plan.json": "efaf9f158e55093b8cbdd3806ca4934aedddfa01c3146c028b000c709d2a48c5",
+          "io.json": "5eed4a7de8bacc6c5935c3d9057ba8bcfc3683731e57f27aa8660e90f45dbb97"
+        },
+        "originalFilesUnchanged": true,
+        "independentRuns": 3,
+        "rawOutputsExact": true,
+        "visualizationsExact": true,
+        "customerCommandVerified": true,
+        "sessions": [
+          {
+            "model": "AX650/pet_ax650_nhwc_npu3.axmodel",
+            "sha256": "9a62a281544ccd83709ada13a3e3e147c4ffff4c54a52dcb3d93483a5bc45d9d",
+            "allFinite": true,
+            "runMilliseconds": [
+              9.29341400001249,
+              9.420289999980014,
+              8.717663000197717
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "path": "axmodel_res.jpg",
+            "sha256": "0b9e866902b7b91c61975023757cbdc923b21732f80d979bdb2862d1e40c87f8",
+            "shape": [
+              960,
+              1280,
+              3
+            ]
+          }
+        ],
+        "semanticObservation": "两个pet框分别覆盖左侧橙猫和右侧白猫，分数0.92和0.95。",
+        "calls": [
+          {
+            "inputSha256": "efd247124d4444f2fa9a7041bb77c758e73929b6c5b20600086024a520c86b87",
+            "outputSha256": "97d50e034eeb5e4b05f125db0736b4841e2afecc808f7c637744889de078d7db",
+            "milliseconds": 9.29341400001249
+          },
+          {
+            "inputSha256": "efd247124d4444f2fa9a7041bb77c758e73929b6c5b20600086024a520c86b87",
+            "outputSha256": "97d50e034eeb5e4b05f125db0736b4841e2afecc808f7c637744889de078d7db",
+            "milliseconds": 9.420289999980014
+          },
+          {
+            "inputSha256": "efd247124d4444f2fa9a7041bb77c758e73929b6c5b20600086024a520c86b87",
+            "outputSha256": "97d50e034eeb5e4b05f125db0736b4841e2afecc808f7c637744889de078d7db",
+            "milliseconds": 8.717663000197717
+          }
+        ]
+      }
+    }
+  ]
+}

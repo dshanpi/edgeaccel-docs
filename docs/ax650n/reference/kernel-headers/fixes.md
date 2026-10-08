@@ -8,7 +8,7 @@ slug: /ax650n/reference/kernel-headers/fixes
 
 # 修复与验证记录
 
-日期：2026-09-16。目标为当前 DShanPi-A1 主机的 AXCL 驱动编译环境。
+目标为当前 DShanPi-A1 主机的 AXCL 驱动编译环境。
 
 ## 为什么原包编译出的驱动不匹配
 

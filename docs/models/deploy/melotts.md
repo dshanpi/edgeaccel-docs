@@ -178,9 +178,9 @@ python melotts_axcl.py --sentence "请检查电源连接，然后启动程序。
 
 ## 查看部署效果
 
-**已运行，效果仍需评估** · 2026-09-23 · RK3576 DshanPi A1 + AX8850 8GB M.2。以下输入与输出来自本页固定版本的实际运行。
+**已运行，效果仍需评估** · RK3576 DshanPi A1 + AX8850 8GB M.2。以下输入与输出来自本页固定版本的实际运行。
 
-三句中文均完成主机编码与卡端解码，生成 44.1 kHz 单声道 WAV。下方展示原始音频及输入文本，尚未完成人工听音质量核对。
+历史 8GB 测试生成的三句中文 WAV 已完成主机 ASR 辅助对照；算力卡、加载、推理及电源连接等词出现识别偏差。保留原音频，发音和自然度仍待人工听审。
 
 下面三段 WAV 均由本次中文输入生成，可直接试听。采样率为 44.1 kHz，单声道，speed=0.8。
 
@@ -196,6 +196,14 @@ python melotts_axcl.py --sentence "请检查电源连接，然后启动程序。
 
 [下载音频](../../../static/validation/effects/melotts/outputs/sample-1.wav)
 
+Whisper-base（主机 CPU） 自动回转写：
+
+```text
+你好,欢迎使用算栗塔
+```
+
+“算力卡”被识别为近音文字，需结合原音频复听。
+
 **示例 2：输入文本**
 
 ```text
@@ -207,6 +215,14 @@ python melotts_axcl.py --sentence "请检查电源连接，然后启动程序。
 <audio controls preload="metadata" src="/validation/effects/melotts/outputs/sample-2.wav" aria-label="MeloTTS 合成结果 2"></audio>
 
 [下载音频](../../../static/validation/effects/melotts/outputs/sample-2.wav)
+
+Whisper-base（主机 CPU） 自动回转写：
+
+```text
+模型已經加在完成,可以開始推離
+```
+
+“加载”“推理”出现同音或近音识别差异。
 
 **示例 3：输入文本**
 
@@ -220,7 +236,15 @@ python melotts_axcl.py --sentence "请检查电源连接，然后启动程序。
 
 [下载音频](../../../static/validation/effects/melotts/outputs/sample-3.wav)
 
-本次保留原始合成音频，尚未完成人工听音或自然度评分。
+Whisper-base（主机 CPU） 自动回转写：
+
+```text
+新剪查店原鏈間然後啟動程序
+```
+
+“请检查电源连接”等词出现识别偏差。
+
+回转写用于发现明显内容差异，仍包含语音识别模型自身的误差；不能代替人工听音、自然度评分或长文本测试。
 
 **使用时注意：**
 
@@ -232,7 +256,7 @@ python melotts_axcl.py --sentence "请检查电源连接，然后启动程序。
 <details>
 <summary>查看样例环境与运行耗时</summary>
 
-环境：RK3576 DshanPi A1 + AX8850 8GB M.2。日期：2026-09-23。模型版本：`f49e047022ae4a451a92e186b7d5a2ce187ff2a9`。
+环境：RK3576 DshanPi A1 + AX8850 8GB M.2。模型版本：`f49e047022ae4a451a92e186b7d5a2ce187ff2a9`。
 
 | 组件 | 版本或配置 |
 | --- | --- |
@@ -246,8 +270,7 @@ python melotts_axcl.py --sentence "请检查电源连接，然后启动程序。
 
 适用范围：
 
-- 仅测试三句中文、默认音色与 speed=0.8；其他语言、长文本及音色克隆未测试。
-- 程序完成和音频可读不代表发音、自然度或语音质量全部正确。
+- 本次 Whisper-base 主机转写仅辅助核对内容，不代替人工听审、发音与自然度评测。
 
 </details>
 

@@ -20,17 +20,28 @@ npm run serve -- --port 3000
 
 中文搜索索引在生产构建时生成，请用 `npm run serve` 验证搜索功能。
 
+内存较紧张时，可使用串行 Webpack 构建。此入口保留全部页面、压缩、搜索索引和链接检查，逐文件复制并校验静态附件；校验清单保存在 `.cache-docs/low-memory-builds/`。
+
+```powershell
+npm run build:low-memory
+npm run serve -- --port 3000
+```
+
+该入口使用单独的 `docusaurus.low-memory.config.js`，不改变默认构建配置。复制插件依赖锁定版本的 Docusaurus 内部接口；升级依赖后须重新执行完整构建与页面检查。
+
 ## GitHub Actions 自动构建与发布
 
-工作流为 `.github/workflows/build-docs.yml`。推送到 `main`、向 `main` 提交 PR 或在 Actions 页面手动运行时，会安装锁定依赖、执行首次推理脚本的本地模拟测试，并运行 `npm run build`，自动生成文档和检查链接、模型记录及附件。
+工作流为 `.github/workflows/build-docs.yml`。推送到 `main`、向 `main` 提交 PR 或在 Actions 页面手动运行时，会安装锁定依赖、执行首次推理脚本的本地模拟测试，并运行 `npm run build:low-memory`，自动生成文档和检查链接、模型记录及附件。
 
 构建环境为 Ubuntu、Node.js 22。构建成功后，可在对应运行页面下载 `edgeaccel-docs-site` 产物，保留 7 天。`main` 的构建会自动将网页发布到 `gh-pages` 分支；PR 只执行检查和构建，不发布。
 
 默认网址为 https://dshanpi.github.io/edgeaccel-docs/ 。仓库 **Settings → Pages** 中选择 **Deploy from a branch → gh-pages → / (root)**。源码始终在 `main` 维护，不要直接编辑 `gh-pages` 中的生成文件。
 
-`scripts/prepare-pages.py` 在发布前合并重复打包的媒体文件并同步更新网页引用，保留原始附件和验证数据，检查站点未超过 GitHub Pages 的 1 GB 限制。
+`scripts/prepare-pages.py` 在发布前合并重复打包的媒体文件并同步更新网页引用，保留原始附件和验证数据，检查站点未超过 GitHub Pages 的 1 GB 限制。Pages 构建通过 `PAGES_ATTACHMENT_REVISION` 指定完整提交 SHA，将 `static/examples/` 的 ZIP / tar.gz 程序包和 `static/validation/effects/` 的 JSON 结果链接到该提交的 GitHub 原始文件，避免附件重复占用网页空间。附件仍提交在源码仓库中，内容与 SHA-256 不变；图片、音频、视频继续由站点提供。本地构建不设置此变量，保留全部附件。链接转换由 `scripts/remark-pages-attachments.mjs` 完成，串行构建同时记录外部附件清单。
 
-后续绑定自定义域名时：
+当前在线文档为 https://edgeaccel.100ask.net/ 。
+
+绑定或更换自定义域名时：
 
 1. 在仓库 **Settings → Secrets and variables → Actions → Variables** 新建 `PAGES_CUSTOM_DOMAIN`，值填写域名，不带 `https://` 或路径。
 2. 在 **Settings → Pages → Custom domain** 填写同一域名，并按 GitHub 提示完成 DNS 配置。
@@ -45,7 +56,7 @@ npm run serve -- --port 3000
 - `docs/projects/`：项目实战入口，包含六路 AI 视频推流总览与 Laya 游戏实验室。
 - `docs/models/`：模型选择、目录及各类部署步骤。
 - `docs/reference/`：验证计划、资料来源与原始附件目录。原始附件目录为 unlisted 页面，不显示在侧栏或站内搜索中，仅保留直接链接；此设置由生成脚本维护。
-- `docs/ax650n/applications/`：已导入的六路项目正文与 Qwen3-VL 记录；保留原文件位置和 URL，导航分别归入项目实战与多模态模型资料。
+- `docs/ax650n/applications/`：已导入的六路项目正文与 Qwen3-VL 记录；保留原文件位置和 URL，导航分别归入项目实战与参考资料。
 - `docs/ax650n/archive/`：早期版本快照，保留原适用环境。
 - `src/pages/`：首页；`src/css/`：参考站全局样式。
 - `src/components/learning/`、`src/hooks/`：参考站学习路线及浏览器进度组件。
@@ -69,7 +80,7 @@ npm run import:docs -- "F:\AX\AX650N_card\doc"
 
 通用指南可直接编辑 `docs/`。新增通用文档后在 `sidebars.js` 添加入口；逐模型页面按下节生成，不能直接编辑生成文件。首页与上手路线分别在 `src/pages/index.js`、`src/data/learningRoadmaps.js` 中维护。
 
-六路项目总览位于 `docs/projects/six-streams.md`，开发版正文保留在 `docs/ax650n/applications/six-streams/`，演示版服务说明保留在 `docs/usage/services.md`。这些文档均已归入“项目实战”，重新导入不会覆盖整理后的正文。“既有项目与历史记录”侧栏已移除，11 篇早期快照保留原链接及附件索引。若另需删除快照源文件，还需同步处理导入映射和原始附件目录中的链接。
+六路项目总览位于 `docs/projects/six-streams.md`，分步部署正文保留在 `docs/ax650n/applications/six-streams/`，服务管理说明保留在 `docs/usage/services.md`。这些文档均已归入“项目实战”，重新导入不会覆盖整理后的正文。“既有项目与历史记录”侧栏已移除，11 篇早期快照保留原链接及附件索引。若另需删除快照源文件，还需同步处理导入映射和原始附件目录中的链接。
 
 ## 维护模型与验证状态
 
@@ -116,4 +127,6 @@ npm run build
 
 模型页的效果排版由 `scripts/model-effects.mjs` 生成；图片、音频和 API 回复读取原始记录，未实测模型明确标注待补充。任务分类页只保留选型和部署入口，不重复具体模型命令。
 
-任务选型页由 `scripts/generate-task-guides.mjs` 维护模型入口及当前效果状态，避免独立模型更新后分类页仍显示过时命令。
+任务选型页由 `scripts/generate-task-guides.mjs` 维护模型入口、实测状态和设备环境；选型矩阵、输入准备、验收要点和后续入口保存在 `scripts/task-guide-content.mjs`。修改这两个源文件后重新生成，避免手改分类页被构建覆盖。
+
+选型、分类与公共指南共用 `src/components/ModelGuideLayout/` 的页首摘要和后续入口。保留 `.md` 路径的交互页面使用 `mdx: {format: mdx}`，现有内部链接无需改名。目录汇总按每个模型最近一条记录统计，与表格筛选采用相同口径；历史记录仍在独立模型页保留。

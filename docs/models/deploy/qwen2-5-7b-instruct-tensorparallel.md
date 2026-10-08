@@ -12,13 +12,26 @@ Qwen2.5-7B-Instruct-TensorParallel 用于文本生成。本页说明 M.2 算力�
 
 ## 准备运行环境
 
-在连接算力卡的 Linux 主机终端执行，RK3576 使用 ARM64 环境。首次部署先完成[驱动与设备检查](../../usage/device-check.md)、[准备主机环境](../../getting-started/prepare.md)和[下载工具安装](../../usage/download-models.md#使用-hugging-face-下载)。已完成这些步骤可直接下载模型。
+该固定版本的启动程序为 **x86-64 Linux** 可执行文件，原始脚本使用 **4 张算力卡**。准备可同时识别这些设备的主机，完成[驱动与设备检查](../../usage/device-check.md)和[下载工具安装](../../usage/download-models.md#使用-hugging-face-下载)。
 
-后文使用设备 0，运行前用 `axcl-smi` 确认设备可用。
+运行前用 `axcl-smi` 核对全部设备及其编号顺序。RK3576 属于 ARM64 主机，不能直接运行此仓库配套的 x86-64 程序；需要另行取得匹配的 ARM64 多卡入口并完成验证。
 
 ## 确认算力卡接入条件
 
 这是张量并行模型包。先按模型卡确认设备数量、设备编号顺序和各设备可用内存，单卡不能直接沿用多卡配置。
+
+### 核对多卡启动参数
+
+| 官方启动脚本 | 程序 | 示例设备列表 |
+| --- | --- | --- |
+| [`run_qwen2.5_7B_axcl_context_tp.sh`](https://huggingface.co/AXERA-TECH/Qwen2.5-7B-Instruct-TensorParallel/blob/41ea4657159e37fa1116dd78204c82635bc0e13d/run_qwen2.5_7B_axcl_context_tp.sh) | `main_tp_x86` | `4,5,6,7` |
+| [`run_qwen2.5_7B_int4_axcl_context_tp.sh`](https://huggingface.co/AXERA-TECH/Qwen2.5-7B-Instruct-TensorParallel/blob/41ea4657159e37fa1116dd78204c82635bc0e13d/run_qwen2.5_7B_int4_axcl_context_tp.sh) | `main_tp_x86` | `4,5,6,7` |
+
+设备编号是原脚本的示例值。按主机实际编号配置，保留四个设备及分片顺序；每张卡的内存需求仍需按该包实际加载结果确认。
+
+此提交的 `config.json` 为 0 字节，不能作为有效 JSON 配置使用。原脚本通过命令行传入模型、分词器和设备参数。
+
+语言层及 post 分片保存在 `.tar` 包中；仅统计顶层 `.axmodel` 文件不能代表完整权重数量。保留同提交的分片、embedding 和分词文件，不能用普通单卡包替换。
 
 核对分片到各卡的分配、主机到设备的数据传输及卡间依赖。先逐卡检查设备状态，不能仅将 devices 字段缩成一个编号。
 ## 下载模型与样例
@@ -50,14 +63,14 @@ cd "$MODEL_DIR"
 
 | 文件 / 目录内路径 | 用途 |
 | --- | --- |
-| [`config.json`](https://huggingface.co/AXERA-TECH/Qwen2.5-7B-Instruct-TensorParallel/blob/41ea4657159e37fa1116dd78204c82635bc0e13d/config.json) | 运行配置 |
+| [`config.json`](https://huggingface.co/AXERA-TECH/Qwen2.5-7B-Instruct-TensorParallel/blob/41ea4657159e37fa1116dd78204c82635bc0e13d/config.json) | 该提交为空文件；运行参数见启动脚本 |
 | [`post_config.json`](https://huggingface.co/AXERA-TECH/Qwen2.5-7B-Instruct-TensorParallel/blob/41ea4657159e37fa1116dd78204c82635bc0e13d/post_config.json) | 运行配置 |
 | [`qwen2.5_tokenizer/tokenizer_config.json`](https://huggingface.co/AXERA-TECH/Qwen2.5-7B-Instruct-TensorParallel/blob/41ea4657159e37fa1116dd78204c82635bc0e13d/qwen2.5_tokenizer/tokenizer_config.json) | 运行配置 |
 | [`qwen2.5_tokenizer_uid.py`](https://huggingface.co/AXERA-TECH/Qwen2.5-7B-Instruct-TensorParallel/blob/41ea4657159e37fa1116dd78204c82635bc0e13d/qwen2.5_tokenizer_uid.py) | 旧版分词服务入口 |
 | [`run_qwen2.5_7B_axcl_context_tp.sh`](https://huggingface.co/AXERA-TECH/Qwen2.5-7B-Instruct-TensorParallel/blob/41ea4657159e37fa1116dd78204c82635bc0e13d/run_qwen2.5_7B_axcl_context_tp.sh) | 启动或构建脚本 |
 | [`run_qwen2.5_7B_int4_axcl_context_tp.sh`](https://huggingface.co/AXERA-TECH/Qwen2.5-7B-Instruct-TensorParallel/blob/41ea4657159e37fa1116dd78204c82635bc0e13d/run_qwen2.5_7B_int4_axcl_context_tp.sh) | 启动或构建脚本 |
 
-仓库提交：`41ea4657159e37fa1116dd78204c82635bc0e13d`。仓库中的 0 个 `.axmodel` 文件可能包括多个芯片、规格和分片。运行时使用本页指定的配套文件，完整列表见[固定版本目录](https://huggingface.co/AXERA-TECH/Qwen2.5-7B-Instruct-TensorParallel/tree/41ea4657159e37fa1116dd78204c82635bc0e13d)。
+仓库提交：`41ea4657159e37fa1116dd78204c82635bc0e13d`。该提交没有预编译 `.axmodel` 文件。运行时使用本页指定的配套文件，完整列表见[固定版本目录](https://huggingface.co/AXERA-TECH/Qwen2.5-7B-Instruct-TensorParallel/tree/41ea4657159e37fa1116dd78204c82635bc0e13d)。
 
 </details>
 

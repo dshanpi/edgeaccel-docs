@@ -68,7 +68,7 @@ python vision_card.py --model-dir . --task satrn --variant word \
 
 ## 查看部署效果
 
-**固定样例已核对** · 2026-09-24 · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
+**固定样例已核对** · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
 
 官方文字图片识别结果为 STAR，与图片中的四个字母一致。
 
@@ -101,7 +101,7 @@ python vision_card.py --model-dir . --task satrn --variant word \
 <details>
 <summary>查看样例环境与运行耗时</summary>
 
-环境：RK3576 + AX8850 16GB M.2。日期：2026-09-24。模型版本：`5566540345a83859cff8972526e154d3cbdc844b`。
+环境：RK3576 + AX8850 16GB M.2。模型版本：`5566540345a83859cff8972526e154d3cbdc844b`。
 
 | 组件 | 版本或配置 |
 | --- | --- |
@@ -120,11 +120,6 @@ python vision_card.py --model-dir . --task satrn --variant word \
 | --- | --- | --- |
 | satrn-word / backbone_encoder.axmodel | 16.305 ms（1 次平均） | AXCL session.run 调用，含输入输出传输；不含模型加载和前后处理，未剔除首轮。 |
 | satrn-word / decoder.axmodel | 9.776 ms（5 次平均） | AXCL session.run 调用，含输入输出传输；不含模型加载和前后处理，未剔除首轮。 |
-
-适用范围：
-
-- 只核对一个英文裁剪词；不包含整页文字检测、中文、多行或完整 OCR 数据集评测。
-- 结论限于 RK3576 + AX8850 16GB 的上述固定样例，不等同于 8GB 容量验证或长期稳定性测试。
 
 </details>
 

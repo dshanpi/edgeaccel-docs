@@ -1,0 +1,187 @@
+{
+  "modelId": "Person_car-axera",
+  "revision": "20e3e18e65c7874da8e6dbe65e248dfb5a48ddde",
+  "date": "2026-10-05",
+  "variants": [
+    {
+      "label": "person-car-max · ax_ax650_pcd_max_800_480_rgb_nhwc_V2.0.0.axmodel",
+      "observation": "道路图输出13个car框和2个person框；两个人体框位于右侧人行道，车辆框与道路可见车辆对应。",
+      "previews": [
+        {
+          "caption": "输入：car_away_1920x1080.jpg",
+          "path": "/validation/effects/person-car-axera-nhwc-20261005/inputs/person-car-max.jpg"
+        },
+        {
+          "caption": "NHWC实际输出：person-car-max",
+          "path": "/validation/effects/person-car-axera-nhwc-20261005/outputs/person-car-max.jpg"
+        }
+      ],
+      "tables": [],
+      "record": {
+        "completed": true,
+        "provider": "AXCLRTExecutionProvider",
+        "inferenceEvidence": "fixed-nhwc-vision-samples",
+        "modelId": "Person_car-axera",
+        "revision": "20e3e18e65c7874da8e6dbe65e248dfb5a48ddde",
+        "actualCapacity": "16GB",
+        "case": "person-car-max",
+        "inputFile": "car_away_1920x1080.jpg",
+        "inputSha256": "fbf29eb4d94167142cc14c92f735f4964e8f21fcbeb2bf82098687821cd8c966",
+        "inputPath": "/validation/effects/person-car-axera-nhwc-20261005/inputs/person-car-max.jpg",
+        "inputShape": [
+          1,
+          480,
+          800,
+          3
+        ],
+        "inputLayout": "NHWC",
+        "colorOrder": "BGR from original NHWC branch",
+        "sourceScript": "ax_pcd_infer.py",
+        "sourceScriptSha256": "8bc6e0f916326f00a4e858d4d91d49bf123c3d144fe8e26d3d95b8e96a1443c3",
+        "adapterSha256": "02657a999a22684b10b8923ae5f3fc934baa05c5dee39e4f9e09ad6a88eef7ca",
+        "customerBundleFiles": {
+          "vision_nhwc.py": "6e52df5f5d63c76e7700e6f184d342a1d714f6e0edbb9b102efa45a4d250efb1",
+          "_vision_nhwc_runtime.py": "02657a999a22684b10b8923ae5f3fc934baa05c5dee39e4f9e09ad6a88eef7ca",
+          "plan.json": "efaf9f158e55093b8cbdd3806ca4934aedddfa01c3146c028b000c709d2a48c5",
+          "io.json": "5eed4a7de8bacc6c5935c3d9057ba8bcfc3683731e57f27aa8660e90f45dbb97"
+        },
+        "originalFilesUnchanged": true,
+        "independentRuns": 3,
+        "rawOutputsExact": true,
+        "visualizationsExact": true,
+        "customerCommandVerified": true,
+        "sessions": [
+          {
+            "model": "AX650/ax_ax650_pcd_max_800_480_rgb_nhwc_V2.0.0.axmodel",
+            "sha256": "e7db7f38eebb25aac6642746fa61873ec2b38403cf496bfa480e10c7d75104e3",
+            "allFinite": true,
+            "runMilliseconds": [
+              14.951187999940885,
+              14.691018999883454,
+              14.887896000118417
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "path": "out.jpg",
+            "sha256": "c6053f378ae18ab9d8e18a52f1e7ab4ca692b4206a21923771fb2c3e2d7105c7",
+            "shape": [
+              1080,
+              1920,
+              3
+            ]
+          }
+        ],
+        "semanticObservation": "道路图输出13个car框和2个person框；两个人体框位于右侧人行道，车辆框与道路可见车辆对应。",
+        "calls": [
+          {
+            "inputSha256": "70d76d92327ba26c7b084baca12624fac89360369070a9ed8a98e678db41107f",
+            "outputSha256": "6435ca365fdd261ec716d58c3069cdf435b0f1095cbb0d73a85c339f452a292c",
+            "milliseconds": 14.951187999940885
+          },
+          {
+            "inputSha256": "70d76d92327ba26c7b084baca12624fac89360369070a9ed8a98e678db41107f",
+            "outputSha256": "6435ca365fdd261ec716d58c3069cdf435b0f1095cbb0d73a85c339f452a292c",
+            "milliseconds": 14.691018999883454
+          },
+          {
+            "inputSha256": "70d76d92327ba26c7b084baca12624fac89360369070a9ed8a98e678db41107f",
+            "outputSha256": "6435ca365fdd261ec716d58c3069cdf435b0f1095cbb0d73a85c339f452a292c",
+            "milliseconds": 14.887896000118417
+          }
+        ]
+      }
+    },
+    {
+      "label": "person-car-tiny · ax_ax650_pcd_tiny_algo_rgb_nhwc_V2.0.0.axmodel",
+      "observation": "tiny模型在同一道路图输出13个car框和2个person框，位置与车辆和右侧行人对应；置信度多为0.889、0.644、0.250，按实际输出保留。",
+      "previews": [
+        {
+          "caption": "输入：car_away_1920x1080.jpg",
+          "path": "/validation/effects/person-car-axera-nhwc-20261005/inputs/person-car-tiny.jpg"
+        },
+        {
+          "caption": "NHWC实际输出：person-car-tiny",
+          "path": "/validation/effects/person-car-axera-nhwc-20261005/outputs/person-car-tiny.jpg"
+        }
+      ],
+      "tables": [],
+      "record": {
+        "completed": true,
+        "provider": "AXCLRTExecutionProvider",
+        "inferenceEvidence": "fixed-nhwc-vision-samples",
+        "modelId": "Person_car-axera",
+        "revision": "20e3e18e65c7874da8e6dbe65e248dfb5a48ddde",
+        "actualCapacity": "16GB",
+        "case": "person-car-tiny",
+        "inputFile": "car_away_1920x1080.jpg",
+        "inputSha256": "fbf29eb4d94167142cc14c92f735f4964e8f21fcbeb2bf82098687821cd8c966",
+        "inputPath": "/validation/effects/person-car-axera-nhwc-20261005/inputs/person-car-tiny.jpg",
+        "inputShape": [
+          1,
+          352,
+          640,
+          3
+        ],
+        "inputLayout": "NHWC",
+        "colorOrder": "RGB from original NCHW preprocessing",
+        "sourceScript": "ax_pcd_infer.py",
+        "sourceScriptSha256": "8bc6e0f916326f00a4e858d4d91d49bf123c3d144fe8e26d3d95b8e96a1443c3",
+        "adapterSha256": "02657a999a22684b10b8923ae5f3fc934baa05c5dee39e4f9e09ad6a88eef7ca",
+        "customerBundleFiles": {
+          "vision_nhwc.py": "6e52df5f5d63c76e7700e6f184d342a1d714f6e0edbb9b102efa45a4d250efb1",
+          "_vision_nhwc_runtime.py": "02657a999a22684b10b8923ae5f3fc934baa05c5dee39e4f9e09ad6a88eef7ca",
+          "plan.json": "efaf9f158e55093b8cbdd3806ca4934aedddfa01c3146c028b000c709d2a48c5",
+          "io.json": "5eed4a7de8bacc6c5935c3d9057ba8bcfc3683731e57f27aa8660e90f45dbb97"
+        },
+        "originalFilesUnchanged": true,
+        "independentRuns": 3,
+        "rawOutputsExact": true,
+        "visualizationsExact": true,
+        "customerCommandVerified": true,
+        "sessions": [
+          {
+            "model": "AX650/ax_ax650_pcd_tiny_algo_rgb_nhwc_V2.0.0.axmodel",
+            "sha256": "41fb98d1b7adfd82db67621871c6b269567c7bf7a04893f997be1d57cd6ca26b",
+            "allFinite": true,
+            "runMilliseconds": [
+              9.76591600010579,
+              9.937708000052226,
+              10.206918999983827
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "path": "out.jpg",
+            "sha256": "8c53aad03ffb0c1fff6aa43ab1b4910d4fce0b78826e74f2d13d1e959a932495",
+            "shape": [
+              1080,
+              1920,
+              3
+            ]
+          }
+        ],
+        "semanticObservation": "tiny模型在同一道路图输出13个car框和2个person框，位置与车辆和右侧行人对应；置信度多为0.889、0.644、0.250，按实际输出保留。",
+        "calls": [
+          {
+            "inputSha256": "99c1603639c691c05cdfd91477fc0564af9f9a7e76bd56f631f6261ca1f75f4a",
+            "outputSha256": "5fca677f55f688b5d252f2b916bca3206882701185c84998226b267640fd2a57",
+            "milliseconds": 9.76591600010579
+          },
+          {
+            "inputSha256": "99c1603639c691c05cdfd91477fc0564af9f9a7e76bd56f631f6261ca1f75f4a",
+            "outputSha256": "5fca677f55f688b5d252f2b916bca3206882701185c84998226b267640fd2a57",
+            "milliseconds": 9.937708000052226
+          },
+          {
+            "inputSha256": "99c1603639c691c05cdfd91477fc0564af9f9a7e76bd56f631f6261ca1f75f4a",
+            "outputSha256": "5fca677f55f688b5d252f2b916bca3206882701185c84998226b267640fd2a57",
+            "milliseconds": 10.206918999983827
+          }
+        ]
+      }
+    }
+  ]
+}

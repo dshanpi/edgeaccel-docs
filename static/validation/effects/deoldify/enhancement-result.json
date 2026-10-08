@@ -5,7 +5,7 @@
     {
       "name": "deoldify-stable",
       "label": "Stable",
-      "observation": "输入为黑白老照片；下方展示 Stable 权重的实际上色结果。",
+      "observation": "人物、地球仪、书本和椅子的轮廓与原图一致；整体为低饱和暖褐色，皮肤及物件获得轻微色彩。照片颗粒和模糊仍保留，未见明显结构扭曲；没有原始彩照，不能判断原色准确性。",
       "input": {
         "file": "image/1850Geography.jpg",
         "sha256": "7e6a52eeb7631d400f6f40fc418eea94c72a4b28ced0c629b834de172980a87c"
@@ -65,7 +65,7 @@
     {
       "name": "deoldify-artistic",
       "label": "Artistic",
-      "observation": "使用同一输入；下方展示 Artistic 权重的实际上色结果。",
+      "observation": "人物、地球仪、书本和椅子的轮廓与原图一致；衣物偏紫、背景偏蓝绿，肤色比 Stable 更鲜明。照片颗粒和模糊仍保留；颜色仅为推测，不是历史原色复原。",
       "input": {
         "file": "image/1850Geography.jpg",
         "sha256": "7e6a52eeb7631d400f6f40fc418eea94c72a4b28ced0c629b834de172980a87c"

@@ -5,7 +5,7 @@
   "variants": [
     {
       "label": "普通版：10步 · 中文",
-      "observation": "今天午后天气很好，我打开窗户，听见远处有人聊天，水杯也轻轻晃了一下。",
+      "observation": "今天午后天气很好，我打开窗户，听见远处有人聊天，水杯也轻轻晃了一下。 下面使用独立 Whisper-base 在主机 CPU 上识别本页实际生成的 WAV，不向识别器提供目标文字。转写可能包含同音字、繁简体和识别器自身误差，用于定位复听位置，不是人工听审或语音合成准确率。",
       "previews": [],
       "audio": [
         {
@@ -51,6 +51,20 @@
             [
               "PCM16 截断采样",
               "8 / 153856"
+            ]
+          ]
+        },
+        {
+          "headers": [
+            "合成输入文字",
+            "实际音频的 ASR 辅助转写",
+            "核对说明"
+          ],
+          "rows": [
+            [
+              "今天午后天气很好，我打开窗户，听见远处有人聊天，水杯也轻轻晃了一下。",
+              "今天午后天气很好我打开窗户听见远处有人聊天水杯也轻轻缌了一下",
+              "主要句子对应，句尾“晃”出现识别偏差。"
             ]
           ]
         }
@@ -4094,7 +4108,7 @@
     },
     {
       "label": "普通版：10步 · 英文",
-      "observation": "This morning, a small train left the station, carrying sleepy passengers toward a bright coastal town.",
+      "observation": "This morning, a small train left the station, carrying sleepy passengers toward a bright coastal town. 下面使用独立 Whisper-base 在主机 CPU 上识别本页实际生成的 WAV，不向识别器提供目标文字。转写可能包含同音字、繁简体和识别器自身误差，用于定位复听位置，不是人工听审或语音合成准确率。",
       "previews": [],
       "audio": [
         {
@@ -4140,6 +4154,20 @@
             [
               "PCM16 截断采样",
               "0 / 153856"
+            ]
+          ]
+        },
+        {
+          "headers": [
+            "合成输入文字",
+            "实际音频的 ASR 辅助转写",
+            "核对说明"
+          ],
+          "rows": [
+            [
+              "This morning, a small train left the station, carrying sleepy passengers toward a bright coastal town.",
+              "This morning, a small train left the station carrying sleepy passengers toward a bright coastal town.",
+              "英文词语对应，未据此评价音色相似度或自然度。"
             ]
           ]
         }
@@ -8183,7 +8211,7 @@
     },
     {
       "label": "蒸馏版：4步 · 中文",
-      "observation": "今天午后天气很好，我打开窗户，听见远处有人聊天，水杯也轻轻晃了一下。",
+      "observation": "今天午后天气很好，我打开窗户，听见远处有人聊天，水杯也轻轻晃了一下。 下面使用独立 Whisper-base 在主机 CPU 上识别本页实际生成的 WAV，不向识别器提供目标文字。转写可能包含同音字、繁简体和识别器自身误差，用于定位复听位置，不是人工听审或语音合成准确率。",
       "previews": [],
       "audio": [
         {
@@ -8229,6 +8257,20 @@
             [
               "PCM16 截断采样",
               "26 / 153856"
+            ]
+          ]
+        },
+        {
+          "headers": [
+            "合成输入文字",
+            "实际音频的 ASR 辅助转写",
+            "核对说明"
+          ],
+          "rows": [
+            [
+              "今天午后天气很好，我打开窗户，听见远处有人聊天，水杯也轻轻晃了一下。",
+              "今天午后天气很好我打开窗户听见远处有人聊天水杯也轻轻缌了一下",
+              "与普通版的辅助转写相同，句尾“晃”仍有识别偏差；不能据此认定两版音质相同。"
             ]
           ]
         }
@@ -10386,7 +10428,7 @@
     },
     {
       "label": "蒸馏版：4步 · 英文",
-      "observation": "This morning, a small train left the station, carrying sleepy passengers toward a bright coastal town.",
+      "observation": "This morning, a small train left the station, carrying sleepy passengers toward a bright coastal town. 下面使用独立 Whisper-base 在主机 CPU 上识别本页实际生成的 WAV，不向识别器提供目标文字。转写可能包含同音字、繁简体和识别器自身误差，用于定位复听位置，不是人工听审或语音合成准确率。",
       "previews": [],
       "audio": [
         {
@@ -10432,6 +10474,20 @@
             [
               "PCM16 截断采样",
               "0 / 153856"
+            ]
+          ]
+        },
+        {
+          "headers": [
+            "合成输入文字",
+            "实际音频的 ASR 辅助转写",
+            "核对说明"
+          ],
+          "rows": [
+            [
+              "This morning, a small train left the station, carrying sleepy passengers toward a bright coastal town.",
+              "This morning, a small train left the station carrying sleepy passengers toward a bright coastal town.",
+              "英文词语对应，未据此评价音色相似度或自然度。"
             ]
           ]
         }
@@ -23774,5 +23830,50 @@
         ]
       }
     }
-  ]
+  ],
+  "auxiliarySpeechReview": {
+    "reviewedAt": "2026-10-01T18:13:14.127522+00:00",
+    "asrRepo": "openai/whisper-base",
+    "asrRevision": "e37978b90ca9030d5170a5c07aadb050351a65bb",
+    "device": "host CPU",
+    "initialPrompt": null,
+    "newNpuRuns": 0,
+    "scope": "下面使用独立 Whisper-base 在主机 CPU 上识别本页实际生成的 WAV，不向识别器提供目标文字。转写可能包含同音字、繁简体和识别器自身误差，用于定位复听位置，不是人工听审或语音合成准确率。",
+    "originalSynthesisCapacity": "16GB",
+    "originalSynthesisDate": "2026-09-28",
+    "results": [
+      {
+        "audioPath": "/validation/effects/zipvoice-axera-20260928/standard-zh.wav",
+        "sha256": "00b6b10266fde2c9e16658877569a3824b46a4c99ed22b4f33db6c3eef72402e",
+        "targetText": "今天午后天气很好，我打开窗户，听见远处有人聊天，水杯也轻轻晃了一下。",
+        "asrTranscript": "今天午后天气很好我打开窗户听见远处有人聊天水杯也轻轻缌了一下",
+        "language": "zh",
+        "observation": "主要句子对应，句尾“晃”出现识别偏差。"
+      },
+      {
+        "audioPath": "/validation/effects/zipvoice-axera-20260928/standard-en.wav",
+        "sha256": "897bb755e9450ba96aab8b4cc9b108b5251613077a958ffd0c77281193b02459",
+        "targetText": "This morning, a small train left the station, carrying sleepy passengers toward a bright coastal town.",
+        "asrTranscript": " This morning, a small train left the station carrying sleepy passengers toward a bright coastal town.",
+        "language": "en",
+        "observation": "英文词语对应，未据此评价音色相似度或自然度。"
+      },
+      {
+        "audioPath": "/validation/effects/zipvoice-axera-20260928/distill-zh.wav",
+        "sha256": "9137b7579bca6fd28e30f106ae8dffc4bd5129f064bcf399c15835221dc87812",
+        "targetText": "今天午后天气很好，我打开窗户，听见远处有人聊天，水杯也轻轻晃了一下。",
+        "asrTranscript": "今天午后天气很好我打开窗户听见远处有人聊天水杯也轻轻缌了一下",
+        "language": "zh",
+        "observation": "与普通版的辅助转写相同，句尾“晃”仍有识别偏差；不能据此认定两版音质相同。"
+      },
+      {
+        "audioPath": "/validation/effects/zipvoice-axera-20260928/distill-en.wav",
+        "sha256": "a23414b58d32ec23e776ee0c475e71074a718f7307e2e586e8cee36b92ea9a07",
+        "targetText": "This morning, a small train left the station, carrying sleepy passengers toward a bright coastal town.",
+        "asrTranscript": " This morning, a small train left the station carrying sleepy passengers toward a bright coastal town.",
+        "language": "en",
+        "observation": "英文词语对应，未据此评价音色相似度或自然度。"
+      }
+    ]
+  }
 }

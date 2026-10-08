@@ -5,7 +5,7 @@
   "variants": [
     {
       "label": "图片特征与重复输入",
-      "observation": "pooler_output 为 1×384；last_hidden_state 为 1×201×384。下表仅比较这两张样例及一次重复输入。",
+      "observation": "pooler_output 为 1×384，last_hidden_state 为 1×201×384。保存向量未做单位归一化，余弦计算除以两者 L2 范数；每次输入一张图片，不使用文本分词器。下表重复输入一行来自原始运行记录，未独立复核完整向量相等。",
       "previews": [
         {
           "caption": "ILSVRC2012_val_00000001.jpeg",

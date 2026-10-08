@@ -8,7 +8,7 @@ description: "MixFormerV2 的 M.2 算力卡部署步骤、配套文件与效果�
 
 MixFormerV2 用于单目标跟踪。本页说明 M.2 算力卡的接入条件、部署步骤与结果检查方法。
 
-> 已实测，效果仍需评估。[查看部署效果](#查看部署效果)。
+> 已实测，固定样例已核对。[查看部署效果](#查看部署效果)。
 
 ## 准备运行环境
 
@@ -63,13 +63,13 @@ python vision_card.py --model-dir . --task mixformer --variant car60 \
 
 ## 查看部署效果
 
-**已运行，效果仍需评估** · 2026-09-24 · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
+**固定样例已核对** · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
 
-在官方道路视频中指定货车后连续跟踪 60 帧，保存动画与原尺寸关键帧。
+首帧指定货车后完成 60 帧连续跟踪。已核对 30 张动画采样帧及第 1、30、60 帧原图，红框随同一辆货车的位置和尺度变化，未见切换到邻车；结论限于该短片段。
 
 **货车连续跟踪**
 
-首帧使用官方指定框，随后跟踪 60 帧。动画每两帧取一帧，按源视频时间间隔播放；红框为模型跟踪结果。
+动画展示第 2、4、6 至 60 帧，每帧播放 80 毫秒；下方三张原尺寸图片用于对照开始、中间和结束时的目标框。
 
 <div className="model-effect-gallery">
 
@@ -89,6 +89,13 @@ python vision_card.py --model-dir . --task mixformer --variant car60 \
 
 <figure>
 
+[![第 30 帧推理结果](../../../static/validation/effects/mixformerv2-20260924/mixformer-car60/frame-030.png)](../../../static/validation/effects/mixformerv2-20260924/mixformer-car60/frame-030.png)
+
+<figcaption>第 30 帧推理结果</figcaption>
+</figure>
+
+<figure>
+
 [![第 60 帧推理结果](../../../static/validation/effects/mixformerv2-20260924/mixformer-car60/frame-060.webp)](../../../static/validation/effects/mixformerv2-20260924/mixformer-car60/frame-060.webp)
 
 <figcaption>第 60 帧推理结果</figcaption>
@@ -104,15 +111,15 @@ python vision_card.py --model-dir . --task mixformer --variant car60 \
 
 **使用时注意：**
 
+- 人工核对 30 张每两帧采样的动画及 3 张原尺寸关键帧；其余帧仅核对记录连续性和数值，未逐帧人工标注，跟踪分数不是定位准确率。
 - 未测试长时遮挡、目标离开画面后的恢复或人工标注跟踪指标；动画播放速度不是推理帧率。
-- 结论限于 RK3576 + AX8850 16GB 的上述固定样例，不等同于 8GB 容量验证或长期稳定性测试。
 
 这些结果用于对照部署后的输出，未覆盖完整数据集精度或长期连续运行。
 
 <details>
 <summary>查看样例环境与运行耗时</summary>
 
-环境：RK3576 + AX8850 16GB M.2。日期：2026-09-24。模型版本：`f4f94e988421b7a03fb70148ea97ab5811297d09`。
+环境：RK3576 + AX8850 16GB M.2。模型版本：`f4f94e988421b7a03fb70148ea97ab5811297d09`。
 
 | 组件 | 版本或配置 |
 | --- | --- |
@@ -133,7 +140,6 @@ python vision_card.py --model-dir . --task mixformer --variant car60 \
 
 适用范围：
 
-- 未测试长时遮挡、目标离开画面后的恢复或人工标注跟踪指标；动画播放速度不是推理帧率。
 - 结论限于 RK3576 + AX8850 16GB 的上述固定样例，不等同于 8GB 容量验证或长期稳定性测试。
 
 </details>

@@ -132,18 +132,23 @@ python ~/edgeaccel/kokoro-example/kokoro_card.py \
 
 ## 查看部署效果
 
-**已运行，效果仍需评估** · 2026-09-28 · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
+**已运行，效果仍需评估** · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
 
-完成中文、英语、日语及重复输入，展示五段板端生成音频、波形与分段耗时。
+中、英、日五个音频条目已做主机 ASR 辅助对照。英文词语对应，中文短句尾音和日语有识别偏差；中文重复结果相同，三语言音质仍待人工听审。
 
 **合成中文短句与官方样例**
 
-以下音频由本次 RK3576 + AX8850 16GB 算力卡运行生成。中文使用 zf_xiaoyi 声纹；短句的20个token先重复为40个再裁剪，官方样例含首尾标记共96个token，按一段合成。
+以下音频由本次 RK3576 + AX8850 16GB 算力卡运行生成。中文使用 zf_xiaoyi 声纹；短句的20个token先重复为40个再裁剪，官方样例含首尾标记共96个token，按一段合成。 下面使用独立 Whisper-base 在主机 CPU 上识别本页实际生成的 WAV，不向识别器提供目标文字。转写可能包含同音字、繁简体和识别器自身误差，用于定位复听位置，不是人工听审或语音合成准确率。
 
 | 文本 | 分段数 | 音频时长 / s | 声纹 |
 | --- | --- | --- | --- |
 | 你好，世界。 | 1 | 1.225 | zf_xiaoyi |
 | 致力于打造世界领先的人工智能感知与边缘计算芯片。 | 1 | 4.800 | zf_xiaoyi |
+
+| 合成输入文字 | 实际音频的 ASR 辅助转写 | 核对说明 |
+| --- | --- | --- |
+| 你好，世界。 | 你好,世间 | “世界”被识别为“世间”，需复听短句尾音。 |
+| 致力于打造世界领先的人工智能感知与边缘计算芯片。 | 治理於打造世界領先的人工智能感知與邊緣計算芯片。 | “致力于”出现同音或近音文字差异。 |
 
 你好，世界。（zh-short）
 
@@ -159,12 +164,17 @@ python ~/edgeaccel/kokoro-example/kokoro_card.py \
 
 **合成英语与日语**
 
-英语使用仓库示例句和 af_heart 声纹，日语输入两句话并使用 jm_kumo 声纹。音素转换和音频还原在主机 CPU 上执行，三个 AXMODEL 在算力卡上执行。
+英语使用仓库示例句和 af_heart 声纹，日语输入两句话并使用 jm_kumo 声纹。音素转换和音频还原在主机 CPU 上执行，三个 AXMODEL 在算力卡上执行。 下面使用独立 Whisper-base 在主机 CPU 上识别本页实际生成的 WAV，不向识别器提供目标文字。转写可能包含同音字、繁简体和识别器自身误差，用于定位复听位置，不是人工听审或语音合成准确率。
 
 | 文本 | 分段数 | 音频时长 / s | 声纹 |
 | --- | --- | --- | --- |
 | The sky above the port was the color of television, tuned to a dead channel. | 1 | 4.700 | af_heart |
 | 今日はいい天気です。一緒に公園へ行きましょう。 | 1 | 3.225 | jm_kumo |
+
+| 合成输入文字 | 实际音频的 ASR 辅助转写 | 核对说明 |
+| --- | --- | --- |
+| The sky above the port was the color of television, tuned to a dead channel. | The sky above the port was the color of television, tuned to a dead channel. | 英文词语对应，未评价音色或自然度。 |
+| 今日はいい天気です。一緒に公園へ行きましょう。 | 今日はイテンキです。一緒に声ね行きましょう。 | 日语两句中存在识别偏差，需要日语听审确认发音。 |
 
 The sky above the port was the color of television, tuned to a dead channel.（en-official）
 
@@ -180,7 +190,7 @@ The sky above the port was the color of television, tuned to a dead channel.（e
 
 **重复合成与音频核对**
 
-在其他语言输入之后重复官方中文句。CPU 谐波模型包含随机算子，本例逐样例重置种子并重建 CPU 会话；重复结果按实际文件核对。所有样例的跨网络输入、时长对齐、裁剪和 PCM16 保存均经过独立复核。
+在其他语言输入之后重复官方中文句。CPU 谐波模型包含随机算子，本例逐样例重置种子并重建 CPU 会话；重复结果按实际文件核对。所有样例的跨网络输入、时长对齐、裁剪和 PCM16 保存均经过独立复核。 下面使用独立 Whisper-base 在主机 CPU 上识别本页实际生成的 WAV，不向识别器提供目标文字。转写可能包含同音字、繁简体和识别器自身误差，用于定位复听位置，不是人工听审或语音合成准确率。
 
 | 项目 | 本次结果 |
 | --- | --- |
@@ -189,6 +199,10 @@ The sky above the port was the color of television, tuned to a dead channel.（e
 | 音频格式 | 24 kHz，单声道，PCM16 |
 | 超出 [-1, 1] 的采样点 | 0 |
 | 空文本 | 在 NPU 调用前拒绝 |
+
+| 合成输入文字 | 实际音频的 ASR 辅助转写 | 核对说明 |
+| --- | --- | --- |
+| 致力于打造世界领先的人工智能感知与边缘计算芯片。 | 治理於打造世界領先的人工智能感知與邊緣計算芯片。 | 重复音频与首次 SHA 一致，辅助转写也相同，不算新的独立文本样本。 |
 
 致力于打造世界领先的人工智能感知与边缘计算芯片。（zh-official-repeat）
 
@@ -233,7 +247,7 @@ The sky above the port was the color of television, tuned to a dead channel.（e
 <details>
 <summary>查看样例环境与运行耗时</summary>
 
-环境：RK3576 + AX8850 16GB M.2。日期：2026-09-28。模型版本：`db9625f0270396c108d0273b01477d86b4e5e7fe`。
+环境：RK3576 + AX8850 16GB M.2。模型版本：`db9625f0270396c108d0273b01477d86b4e5e7fe`。
 
 | 组件 | 版本或配置 |
 | --- | --- |
@@ -250,9 +264,8 @@ The sky above the port was the color of television, tuned to a dead channel.（e
 
 适用范围：
 
-- 仅三种声纹及本页文本；其他发音人、混合语言和长篇连续合成需另测。
-- 独立复核覆盖数据流和官方音频还原，不包含浮点原模型对照、ASR字错率或听感评分；只计基础部署通过。
 - 结果来自AX8850 16GB，不能替代实际8GB卡的容量和稳定性回归。
+- 本次 Whisper-base 主机转写仅辅助核对内容，不代替人工听审、发音与自然度评测。
 
 </details>
 

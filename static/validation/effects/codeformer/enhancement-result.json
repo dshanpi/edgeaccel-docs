@@ -5,7 +5,7 @@
     {
       "name": "codeformer-pipeline",
       "label": "CodeFormer 整图修复",
-      "observation": "检测、对齐、修复和背景增强后，按官方流程合成整图。",
+      "observation": "四张脸的轮廓、眼睛和头发比输入更清晰，人物位置与构图保留；皮肤细节偏平滑，背景及中间人物衬衫的竖纹明显增强，局部纹理强度不一致。未认定高保真修复质量通过。",
       "input": {
         "file": "images/image/02.png",
         "sha256": "9c7d80aa1e999ffa9437375f00cab5e439284d00797958e175516f777a8e7129"

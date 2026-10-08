@@ -1,4 +1,5 @@
 import {themes as prismThemes} from 'prism-react-renderer';
+import remarkPagesAttachments from './scripts/remark-pages-attachments.mjs';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -14,7 +15,7 @@ const config = {
   onBrokenLinks: 'throw',
   i18n: {defaultLocale: 'zh-Hans', locales: ['zh-Hans']},
   presets: [['classic', {
-    docs: {sidebarPath: './sidebars.js', editUrl: 'https://github.com/dshanpi/edgeaccel-docs/tree/main/'},
+    docs: {sidebarPath: './sidebars.js', editUrl: 'https://github.com/dshanpi/edgeaccel-docs/tree/main/', beforeDefaultRemarkPlugins: [remarkPagesAttachments]},
     blog: false,
     theme: {customCss: './src/css/custom.css'},
   }]],

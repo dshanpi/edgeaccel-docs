@@ -1,0 +1,97 @@
+{
+  "modelId": "Gesture-axera",
+  "revision": "6c0782a0a413cd55bdca21e83801f3b8abce9264",
+  "date": "2026-10-05",
+  "variants": [
+    {
+      "label": "gesture · ax_ax650_gesture_algo_ok_like_stop_rgb_nhwc_V1.0.0.axmodel",
+      "observation": "拼图中三个手势分别输出ok 0.936、like 0.910、stop 0.929，位置与手势一致。",
+      "previews": [
+        {
+          "caption": "输入：ges_1280_720.jpg",
+          "path": "/validation/effects/gesture-axera-nhwc-20261005/inputs/gesture.jpg"
+        },
+        {
+          "caption": "NHWC实际输出：gesture",
+          "path": "/validation/effects/gesture-axera-nhwc-20261005/outputs/gesture.jpg"
+        }
+      ],
+      "tables": [],
+      "record": {
+        "completed": true,
+        "provider": "AXCLRTExecutionProvider",
+        "inferenceEvidence": "fixed-nhwc-vision-samples",
+        "modelId": "Gesture-axera",
+        "revision": "6c0782a0a413cd55bdca21e83801f3b8abce9264",
+        "actualCapacity": "16GB",
+        "case": "gesture",
+        "inputFile": "ges_1280_720.jpg",
+        "inputSha256": "d35f4269a77b851aedfc6cd76d1da2f5957c99bb818579a2d9b6569fc6453f11",
+        "inputPath": "/validation/effects/gesture-axera-nhwc-20261005/inputs/gesture.jpg",
+        "inputShape": [
+          1,
+          256,
+          448,
+          3
+        ],
+        "inputLayout": "NHWC",
+        "colorOrder": "RGB from original NCHW preprocessing",
+        "sourceScript": "ax_ges_infer.py",
+        "sourceScriptSha256": "0a804693c4f38afe26982c592bceb3585d69aed79cb4d5821ce988c743f10889",
+        "adapterSha256": "02657a999a22684b10b8923ae5f3fc934baa05c5dee39e4f9e09ad6a88eef7ca",
+        "customerBundleFiles": {
+          "vision_nhwc.py": "6e52df5f5d63c76e7700e6f184d342a1d714f6e0edbb9b102efa45a4d250efb1",
+          "_vision_nhwc_runtime.py": "02657a999a22684b10b8923ae5f3fc934baa05c5dee39e4f9e09ad6a88eef7ca",
+          "plan.json": "efaf9f158e55093b8cbdd3806ca4934aedddfa01c3146c028b000c709d2a48c5",
+          "io.json": "5eed4a7de8bacc6c5935c3d9057ba8bcfc3683731e57f27aa8660e90f45dbb97"
+        },
+        "originalFilesUnchanged": true,
+        "independentRuns": 3,
+        "rawOutputsExact": true,
+        "visualizationsExact": true,
+        "customerCommandVerified": true,
+        "sessions": [
+          {
+            "model": "AX650/ax_ax650_gesture_algo_ok_like_stop_rgb_nhwc_V1.0.0.axmodel",
+            "sha256": "cd01d6385665cbccc3b9b8d00d222b2420f282e174c5aed9b045bb72facfc0c3",
+            "allFinite": true,
+            "runMilliseconds": [
+              8.234080000079302,
+              8.477914999957648,
+              8.17049100010081
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "path": "out.jpg",
+            "sha256": "375ca4713ceeb3e98ad6aba8dfa25deebd2edf34f2c3326db6398d7caa54d348",
+            "shape": [
+              720,
+              1280,
+              3
+            ]
+          }
+        ],
+        "semanticObservation": "拼图中三个手势分别输出ok 0.936、like 0.910、stop 0.929，位置与手势一致。",
+        "calls": [
+          {
+            "inputSha256": "328471e15c0421cd6c29285fa7063e77c79d02774328b6312f01929fc4a780f5",
+            "outputSha256": "72c8418224f481f31b5ea30a38a97d8a7dcc158df3692344f400c42a0969f5dd",
+            "milliseconds": 8.234080000079302
+          },
+          {
+            "inputSha256": "328471e15c0421cd6c29285fa7063e77c79d02774328b6312f01929fc4a780f5",
+            "outputSha256": "72c8418224f481f31b5ea30a38a97d8a7dcc158df3692344f400c42a0969f5dd",
+            "milliseconds": 8.477914999957648
+          },
+          {
+            "inputSha256": "328471e15c0421cd6c29285fa7063e77c79d02774328b6312f01929fc4a780f5",
+            "outputSha256": "72c8418224f481f31b5ea30a38a97d8a7dcc158df3692344f400c42a0969f5dd",
+            "milliseconds": 8.17049100010081
+          }
+        ]
+      }
+    }
+  ]
+}

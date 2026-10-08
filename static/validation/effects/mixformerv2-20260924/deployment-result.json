@@ -5,7 +5,7 @@
   "variants": [
     {
       "label": "货车连续跟踪",
-      "observation": "首帧使用官方指定框，随后跟踪 60 帧。动画每两帧取一帧，按源视频时间间隔播放；红框为模型跟踪结果。",
+      "observation": "动画展示第 2、4、6 至 60 帧，每帧播放 80 毫秒；下方三张原尺寸图片用于对照开始、中间和结束时的目标框。",
       "previews": [
         {
           "caption": "60 帧跟踪效果（每两帧采样）",
@@ -14,6 +14,10 @@
         {
           "caption": "第 1 帧推理结果",
           "path": "/validation/effects/mixformerv2-20260924/mixformer-car60/frame-001.webp"
+        },
+        {
+          "caption": "第 30 帧推理结果",
+          "path": "/validation/effects/mixformerv2-20260924/mixformer-car60/frame-030.png"
         },
         {
           "caption": "第 60 帧推理结果",

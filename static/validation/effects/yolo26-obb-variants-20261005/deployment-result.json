@@ -1,0 +1,1414 @@
+{
+  "modelId": "yolo26-obb",
+  "revision": "40df39440148761ea151593467e5e0ad33acca77",
+  "date": "2026-10-05",
+  "variants": [
+    {
+      "label": "yolo26l · NPU1 / NPU3",
+      "observation": "蓝色旋转框大体沿船身方向，黄色大框覆盖部分码头区域；右上方仍有可见船只未检出。 NPU1与NPU3输出图的文件内容相同，因此合并展示。",
+      "previews": [
+        {
+          "caption": "固定输入：boats.jpg",
+          "path": "/validation/effects/yolo26-obb-variants-20261005/inputs/boats.jpg"
+        },
+        {
+          "caption": "实际旋转框输出：yolo26l",
+          "path": "/validation/effects/yolo26-obb-variants-20261005/outputs/yolo26l.jpg"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "权重",
+            "程序输出ship框数",
+            "程序输出harbor框数"
+          ],
+          "rows": [
+            [
+              "yolo26l-obb_npu1.axmodel",
+              170,
+              4
+            ],
+            [
+              "yolo26l-obb_npu3.axmodel",
+              170,
+              4
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "completed": true,
+        "provider": "AXCLRTExecutionProvider",
+        "inferenceEvidence": "original-cv-variant-samples",
+        "modelId": "yolo26-obb",
+        "revision": "40df39440148761ea151593467e5e0ad33acca77",
+        "actualCapacity": "16GB",
+        "sessions": [
+          {
+            "model": "ax650/yolo26l-obb_npu1.axmodel",
+            "sha256": "df421e4ab6ad1d7831a35b0e712653a92acc0f79f6af761f0b503eaf9a213b47",
+            "allFinite": true,
+            "runMilliseconds": [
+              114.2558960000315,
+              112.48722300024383
+            ]
+          },
+          {
+            "model": "ax650/yolo26l-obb_npu3.axmodel",
+            "sha256": "b7a703e12d78af0cd41b46ac360e0926fa093ee49b3e47c8705eaa2087cc6572",
+            "allFinite": true,
+            "runMilliseconds": [
+              67.63834199955454,
+              63.71657699946809
+            ]
+          }
+        ],
+        "weightResults": [
+          {
+            "weight": "ax650/yolo26l-obb_npu1.axmodel",
+            "independentProcesses": 2,
+            "rawOutputsExact": true,
+            "imageSha256": "85be859cd5224032771b0eaffb0aa058d4806b34c2b6fdb87fa90d4d862a3390",
+            "metadata": [
+              {
+                "inputs": [
+                  {
+                    "name": "images",
+                    "shape": [
+                      1,
+                      1024,
+                      1024,
+                      3
+                    ],
+                    "dtype": "uint8"
+                  }
+                ],
+                "outputs": [
+                  {
+                    "name": "output0",
+                    "shape": [
+                      1,
+                      128,
+                      128,
+                      4
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1011",
+                    "shape": [
+                      1,
+                      128,
+                      128,
+                      15
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1033",
+                    "shape": [
+                      1,
+                      128,
+                      128,
+                      1
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1055",
+                    "shape": [
+                      1,
+                      64,
+                      64,
+                      4
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1095",
+                    "shape": [
+                      1,
+                      64,
+                      64,
+                      15
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1117",
+                    "shape": [
+                      1,
+                      64,
+                      64,
+                      1
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1139",
+                    "shape": [
+                      1,
+                      32,
+                      32,
+                      4
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1179",
+                    "shape": [
+                      1,
+                      32,
+                      32,
+                      15
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1201",
+                    "shape": [
+                      1,
+                      32,
+                      32,
+                      1
+                    ],
+                    "dtype": "float32"
+                  }
+                ]
+              }
+            ],
+            "detectedBoxes": {
+              "ship": 170,
+              "harbor": 4
+            }
+          },
+          {
+            "weight": "ax650/yolo26l-obb_npu3.axmodel",
+            "independentProcesses": 2,
+            "rawOutputsExact": true,
+            "imageSha256": "85be859cd5224032771b0eaffb0aa058d4806b34c2b6fdb87fa90d4d862a3390",
+            "metadata": [
+              {
+                "inputs": [
+                  {
+                    "name": "images",
+                    "shape": [
+                      1,
+                      1024,
+                      1024,
+                      3
+                    ],
+                    "dtype": "uint8"
+                  }
+                ],
+                "outputs": [
+                  {
+                    "name": "output0",
+                    "shape": [
+                      1,
+                      128,
+                      128,
+                      4
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1011",
+                    "shape": [
+                      1,
+                      128,
+                      128,
+                      15
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1033",
+                    "shape": [
+                      1,
+                      128,
+                      128,
+                      1
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1055",
+                    "shape": [
+                      1,
+                      64,
+                      64,
+                      4
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1095",
+                    "shape": [
+                      1,
+                      64,
+                      64,
+                      15
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1117",
+                    "shape": [
+                      1,
+                      64,
+                      64,
+                      1
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1139",
+                    "shape": [
+                      1,
+                      32,
+                      32,
+                      4
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1179",
+                    "shape": [
+                      1,
+                      32,
+                      32,
+                      15
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1201",
+                    "shape": [
+                      1,
+                      32,
+                      32,
+                      1
+                    ],
+                    "dtype": "float32"
+                  }
+                ]
+              }
+            ],
+            "detectedBoxes": {
+              "ship": 170,
+              "harbor": 4
+            }
+          }
+        ],
+        "originalFilesUnchanged": true,
+        "sourceScript": "ax_infer.py",
+        "sourceScriptSha256": "a52364217a238332bfc9f2c4a5caeb940ab79cc52a6c913436d70e18bf12a1af",
+        "inputFile": "boats.jpg",
+        "inputSha256": "8c5ada657cf8110a9f8aaac954c1dd96cde0187315b581276c32b0d1863e756f",
+        "inputPath": "/validation/effects/yolo26-obb-variants-20261005/inputs/boats.jpg",
+        "outputPath": "/validation/effects/yolo26-obb-variants-20261005/outputs/yolo26l.jpg",
+        "outputSha256": "85be859cd5224032771b0eaffb0aa058d4806b34c2b6fdb87fa90d4d862a3390",
+        "runsPerWeight": 2,
+        "qualityAccepted": false
+      }
+    },
+    {
+      "label": "yolo26m · NPU1 / NPU3",
+      "observation": "船只框大体沿船身方向；码头区域仅有两个黄色大框，与其他规模的覆盖范围不同，尚未用人工标注计算准确率。 NPU1与NPU3输出图的文件内容相同，因此合并展示。",
+      "previews": [
+        {
+          "caption": "实际旋转框输出：yolo26m",
+          "path": "/validation/effects/yolo26-obb-variants-20261005/outputs/yolo26m.jpg"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "权重",
+            "程序输出ship框数",
+            "程序输出harbor框数"
+          ],
+          "rows": [
+            [
+              "yolo26m-obb_npu1.axmodel",
+              179,
+              2
+            ],
+            [
+              "yolo26m-obb_npu3.axmodel",
+              179,
+              2
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "completed": true,
+        "provider": "AXCLRTExecutionProvider",
+        "inferenceEvidence": "original-cv-variant-samples",
+        "modelId": "yolo26-obb",
+        "revision": "40df39440148761ea151593467e5e0ad33acca77",
+        "actualCapacity": "16GB",
+        "sessions": [
+          {
+            "model": "ax650/yolo26m-obb_npu1.axmodel",
+            "sha256": "c532a84a01d34feb2b6e59a58184499acb993abd863271428624113a908f9d4f",
+            "allFinite": true,
+            "runMilliseconds": [
+              100.38125899973238,
+              97.1131210008025
+            ]
+          },
+          {
+            "model": "ax650/yolo26m-obb_npu3.axmodel",
+            "sha256": "91105b4dc7fac2b01debe2c3d86a44351344440fe0aa3cd661baefdfa1a62fe7",
+            "allFinite": true,
+            "runMilliseconds": [
+              52.62824300007196,
+              58.53568199927395
+            ]
+          }
+        ],
+        "weightResults": [
+          {
+            "weight": "ax650/yolo26m-obb_npu1.axmodel",
+            "independentProcesses": 2,
+            "rawOutputsExact": true,
+            "imageSha256": "ac34359d09f64624dc2ea232d470beae08076a9055f8fe61b1b76109c861105f",
+            "metadata": [
+              {
+                "inputs": [
+                  {
+                    "name": "images",
+                    "shape": [
+                      1,
+                      1024,
+                      1024,
+                      3
+                    ],
+                    "dtype": "uint8"
+                  }
+                ],
+                "outputs": [
+                  {
+                    "name": "output0",
+                    "shape": [
+                      1,
+                      128,
+                      128,
+                      4
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "692",
+                    "shape": [
+                      1,
+                      128,
+                      128,
+                      15
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "714",
+                    "shape": [
+                      1,
+                      128,
+                      128,
+                      1
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "736",
+                    "shape": [
+                      1,
+                      64,
+                      64,
+                      4
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "776",
+                    "shape": [
+                      1,
+                      64,
+                      64,
+                      15
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "798",
+                    "shape": [
+                      1,
+                      64,
+                      64,
+                      1
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "820",
+                    "shape": [
+                      1,
+                      32,
+                      32,
+                      4
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "860",
+                    "shape": [
+                      1,
+                      32,
+                      32,
+                      15
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "882",
+                    "shape": [
+                      1,
+                      32,
+                      32,
+                      1
+                    ],
+                    "dtype": "float32"
+                  }
+                ]
+              }
+            ],
+            "detectedBoxes": {
+              "ship": 179,
+              "harbor": 2
+            }
+          },
+          {
+            "weight": "ax650/yolo26m-obb_npu3.axmodel",
+            "independentProcesses": 2,
+            "rawOutputsExact": true,
+            "imageSha256": "ac34359d09f64624dc2ea232d470beae08076a9055f8fe61b1b76109c861105f",
+            "metadata": [
+              {
+                "inputs": [
+                  {
+                    "name": "images",
+                    "shape": [
+                      1,
+                      1024,
+                      1024,
+                      3
+                    ],
+                    "dtype": "uint8"
+                  }
+                ],
+                "outputs": [
+                  {
+                    "name": "output0",
+                    "shape": [
+                      1,
+                      128,
+                      128,
+                      4
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "692",
+                    "shape": [
+                      1,
+                      128,
+                      128,
+                      15
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "714",
+                    "shape": [
+                      1,
+                      128,
+                      128,
+                      1
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "736",
+                    "shape": [
+                      1,
+                      64,
+                      64,
+                      4
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "776",
+                    "shape": [
+                      1,
+                      64,
+                      64,
+                      15
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "798",
+                    "shape": [
+                      1,
+                      64,
+                      64,
+                      1
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "820",
+                    "shape": [
+                      1,
+                      32,
+                      32,
+                      4
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "860",
+                    "shape": [
+                      1,
+                      32,
+                      32,
+                      15
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "882",
+                    "shape": [
+                      1,
+                      32,
+                      32,
+                      1
+                    ],
+                    "dtype": "float32"
+                  }
+                ]
+              }
+            ],
+            "detectedBoxes": {
+              "ship": 179,
+              "harbor": 2
+            }
+          }
+        ],
+        "originalFilesUnchanged": true,
+        "sourceScript": "ax_infer.py",
+        "sourceScriptSha256": "a52364217a238332bfc9f2c4a5caeb940ab79cc52a6c913436d70e18bf12a1af",
+        "inputFile": "boats.jpg",
+        "inputSha256": "8c5ada657cf8110a9f8aaac954c1dd96cde0187315b581276c32b0d1863e756f",
+        "inputPath": "/validation/effects/yolo26-obb-variants-20261005/inputs/boats.jpg",
+        "outputPath": "/validation/effects/yolo26-obb-variants-20261005/outputs/yolo26m.jpg",
+        "outputSha256": "ac34359d09f64624dc2ea232d470beae08076a9055f8fe61b1b76109c861105f",
+        "runsPerWeight": 2,
+        "qualityAccepted": false
+      }
+    },
+    {
+      "label": "yolo26n · NPU1",
+      "observation": "已检出图中多处船只，右上方相邻的多艘船明显漏检；黄色大框主要覆盖左下码头。",
+      "previews": [
+        {
+          "caption": "实际旋转框输出：yolo26n",
+          "path": "/validation/effects/yolo26-obb-variants-20261005/outputs/yolo26n.jpg"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "权重",
+            "程序输出ship框数",
+            "程序输出harbor框数"
+          ],
+          "rows": [
+            [
+              "yolo26n-obb_npu1.axmodel",
+              162,
+              1
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "completed": true,
+        "provider": "AXCLRTExecutionProvider",
+        "inferenceEvidence": "original-cv-variant-samples",
+        "modelId": "yolo26-obb",
+        "revision": "40df39440148761ea151593467e5e0ad33acca77",
+        "actualCapacity": "16GB",
+        "sessions": [
+          {
+            "model": "ax650/yolo26n-obb_npu1.axmodel",
+            "sha256": "c59b43b2ea7d8cf8dfad0b80e0e4502ab701736692033aa9f6f1d8cdf8b064f0",
+            "allFinite": true,
+            "runMilliseconds": [
+              41.02074000002176,
+              39.6501929999431
+            ]
+          }
+        ],
+        "weightResults": [
+          {
+            "weight": "ax650/yolo26n-obb_npu1.axmodel",
+            "independentProcesses": 2,
+            "rawOutputsExact": true,
+            "imageSha256": "5c45a776dd76992b6683769422994d2e7fa46b61750718f67699a401a1c4e909",
+            "metadata": [
+              {
+                "inputs": [
+                  {
+                    "name": "images",
+                    "shape": [
+                      1,
+                      1024,
+                      1024,
+                      3
+                    ],
+                    "dtype": "uint8"
+                  }
+                ],
+                "outputs": [
+                  {
+                    "name": "output0",
+                    "shape": [
+                      1,
+                      128,
+                      128,
+                      4
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "638",
+                    "shape": [
+                      1,
+                      128,
+                      128,
+                      15
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "660",
+                    "shape": [
+                      1,
+                      128,
+                      128,
+                      1
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "682",
+                    "shape": [
+                      1,
+                      64,
+                      64,
+                      4
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "722",
+                    "shape": [
+                      1,
+                      64,
+                      64,
+                      15
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "744",
+                    "shape": [
+                      1,
+                      64,
+                      64,
+                      1
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "766",
+                    "shape": [
+                      1,
+                      32,
+                      32,
+                      4
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "806",
+                    "shape": [
+                      1,
+                      32,
+                      32,
+                      15
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "828",
+                    "shape": [
+                      1,
+                      32,
+                      32,
+                      1
+                    ],
+                    "dtype": "float32"
+                  }
+                ]
+              }
+            ],
+            "detectedBoxes": {
+              "ship": 162,
+              "harbor": 1
+            }
+          }
+        ],
+        "originalFilesUnchanged": true,
+        "sourceScript": "ax_infer.py",
+        "sourceScriptSha256": "a52364217a238332bfc9f2c4a5caeb940ab79cc52a6c913436d70e18bf12a1af",
+        "inputFile": "boats.jpg",
+        "inputSha256": "8c5ada657cf8110a9f8aaac954c1dd96cde0187315b581276c32b0d1863e756f",
+        "inputPath": "/validation/effects/yolo26-obb-variants-20261005/inputs/boats.jpg",
+        "outputPath": "/validation/effects/yolo26-obb-variants-20261005/outputs/yolo26n.jpg",
+        "outputSha256": "5c45a776dd76992b6683769422994d2e7fa46b61750718f67699a401a1c4e909",
+        "runsPerWeight": 2,
+        "qualityAccepted": false
+      }
+    },
+    {
+      "label": "yolo26s · NPU1 / NPU3",
+      "observation": "船只与码头均有框输出，右上方暗处连续多艘船漏检；不能把输出框数当作真实船只数量。 NPU1与NPU3输出图的文件内容相同，因此合并展示。",
+      "previews": [
+        {
+          "caption": "实际旋转框输出：yolo26s",
+          "path": "/validation/effects/yolo26-obb-variants-20261005/outputs/yolo26s.jpg"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "权重",
+            "程序输出ship框数",
+            "程序输出harbor框数"
+          ],
+          "rows": [
+            [
+              "yolo26s-obb_npu1.axmodel",
+              162,
+              4
+            ],
+            [
+              "yolo26s-obb_npu3.axmodel",
+              162,
+              4
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "completed": true,
+        "provider": "AXCLRTExecutionProvider",
+        "inferenceEvidence": "original-cv-variant-samples",
+        "modelId": "yolo26-obb",
+        "revision": "40df39440148761ea151593467e5e0ad33acca77",
+        "actualCapacity": "16GB",
+        "sessions": [
+          {
+            "model": "ax650/yolo26s-obb_npu1.axmodel",
+            "sha256": "990c7e3147f511c83eb5b5065459912bf22f4eb9b8060960fbd543bcdf2fed8f",
+            "allFinite": true,
+            "runMilliseconds": [
+              55.495628999779,
+              55.82725600015692
+            ]
+          },
+          {
+            "model": "ax650/yolo26s-obb_npu3.axmodel",
+            "sha256": "03261e3eb488161044ac0e13b00fc99a694f53ce7fd6c8d74028cdfadaa8ea4b",
+            "allFinite": true,
+            "runMilliseconds": [
+              40.64128099980735,
+              37.35389200028294
+            ]
+          }
+        ],
+        "weightResults": [
+          {
+            "weight": "ax650/yolo26s-obb_npu1.axmodel",
+            "independentProcesses": 2,
+            "rawOutputsExact": true,
+            "imageSha256": "d97be72142710c1bffaebd109cc349b71493ea8cdd2114b6056e1c118ff27677",
+            "metadata": [
+              {
+                "inputs": [
+                  {
+                    "name": "images",
+                    "shape": [
+                      1,
+                      1024,
+                      1024,
+                      3
+                    ],
+                    "dtype": "uint8"
+                  }
+                ],
+                "outputs": [
+                  {
+                    "name": "output0",
+                    "shape": [
+                      1,
+                      128,
+                      128,
+                      4
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "638",
+                    "shape": [
+                      1,
+                      128,
+                      128,
+                      15
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "660",
+                    "shape": [
+                      1,
+                      128,
+                      128,
+                      1
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "682",
+                    "shape": [
+                      1,
+                      64,
+                      64,
+                      4
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "722",
+                    "shape": [
+                      1,
+                      64,
+                      64,
+                      15
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "744",
+                    "shape": [
+                      1,
+                      64,
+                      64,
+                      1
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "766",
+                    "shape": [
+                      1,
+                      32,
+                      32,
+                      4
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "806",
+                    "shape": [
+                      1,
+                      32,
+                      32,
+                      15
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "828",
+                    "shape": [
+                      1,
+                      32,
+                      32,
+                      1
+                    ],
+                    "dtype": "float32"
+                  }
+                ]
+              }
+            ],
+            "detectedBoxes": {
+              "ship": 162,
+              "harbor": 4
+            }
+          },
+          {
+            "weight": "ax650/yolo26s-obb_npu3.axmodel",
+            "independentProcesses": 2,
+            "rawOutputsExact": true,
+            "imageSha256": "d97be72142710c1bffaebd109cc349b71493ea8cdd2114b6056e1c118ff27677",
+            "metadata": [
+              {
+                "inputs": [
+                  {
+                    "name": "images",
+                    "shape": [
+                      1,
+                      1024,
+                      1024,
+                      3
+                    ],
+                    "dtype": "uint8"
+                  }
+                ],
+                "outputs": [
+                  {
+                    "name": "output0",
+                    "shape": [
+                      1,
+                      128,
+                      128,
+                      4
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "638",
+                    "shape": [
+                      1,
+                      128,
+                      128,
+                      15
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "660",
+                    "shape": [
+                      1,
+                      128,
+                      128,
+                      1
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "682",
+                    "shape": [
+                      1,
+                      64,
+                      64,
+                      4
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "722",
+                    "shape": [
+                      1,
+                      64,
+                      64,
+                      15
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "744",
+                    "shape": [
+                      1,
+                      64,
+                      64,
+                      1
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "766",
+                    "shape": [
+                      1,
+                      32,
+                      32,
+                      4
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "806",
+                    "shape": [
+                      1,
+                      32,
+                      32,
+                      15
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "828",
+                    "shape": [
+                      1,
+                      32,
+                      32,
+                      1
+                    ],
+                    "dtype": "float32"
+                  }
+                ]
+              }
+            ],
+            "detectedBoxes": {
+              "ship": 162,
+              "harbor": 4
+            }
+          }
+        ],
+        "originalFilesUnchanged": true,
+        "sourceScript": "ax_infer.py",
+        "sourceScriptSha256": "a52364217a238332bfc9f2c4a5caeb940ab79cc52a6c913436d70e18bf12a1af",
+        "inputFile": "boats.jpg",
+        "inputSha256": "8c5ada657cf8110a9f8aaac954c1dd96cde0187315b581276c32b0d1863e756f",
+        "inputPath": "/validation/effects/yolo26-obb-variants-20261005/inputs/boats.jpg",
+        "outputPath": "/validation/effects/yolo26-obb-variants-20261005/outputs/yolo26s.jpg",
+        "outputSha256": "d97be72142710c1bffaebd109cc349b71493ea8cdd2114b6056e1c118ff27677",
+        "runsPerWeight": 2,
+        "qualityAccepted": false
+      }
+    },
+    {
+      "label": "yolo26x · NPU1 / NPU3",
+      "observation": "蓝色框大体沿船身，黄色码头框与其他规模的边界不同；右上方仍有可见船只未被框出。 NPU1与NPU3输出图的文件内容相同，因此合并展示。",
+      "previews": [
+        {
+          "caption": "实际旋转框输出：yolo26x",
+          "path": "/validation/effects/yolo26-obb-variants-20261005/outputs/yolo26x.jpg"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "权重",
+            "程序输出ship框数",
+            "程序输出harbor框数"
+          ],
+          "rows": [
+            [
+              "yolo26x-obb_npu1.axmodel",
+              175,
+              5
+            ],
+            [
+              "yolo26x-obb_npu3.axmodel",
+              175,
+              5
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "completed": true,
+        "provider": "AXCLRTExecutionProvider",
+        "inferenceEvidence": "original-cv-variant-samples",
+        "modelId": "yolo26-obb",
+        "revision": "40df39440148761ea151593467e5e0ad33acca77",
+        "actualCapacity": "16GB",
+        "sessions": [
+          {
+            "model": "ax650/yolo26x-obb_npu1.axmodel",
+            "sha256": "cb2c4093c6cd6bed85ba98e2d31d7b2c6cc57419194fd4811d940c10e69f4418",
+            "allFinite": true,
+            "runMilliseconds": [
+              227.13716100042802,
+              224.64252700046927
+            ]
+          },
+          {
+            "model": "ax650/yolo26x-obb_npu3.axmodel",
+            "sha256": "c358db5d6e2376b411e9b4e5ee3ccae0fa2a750316613a1de445f935abe44857",
+            "allFinite": true,
+            "runMilliseconds": [
+              102.08897400025307,
+              101.32509600043704
+            ]
+          }
+        ],
+        "weightResults": [
+          {
+            "weight": "ax650/yolo26x-obb_npu1.axmodel",
+            "independentProcesses": 2,
+            "rawOutputsExact": true,
+            "imageSha256": "c0b83e1bbb731f9a01ebc1288485b39e8a189bbbe461541d4eaa6c4d7448d3ef",
+            "metadata": [
+              {
+                "inputs": [
+                  {
+                    "name": "images",
+                    "shape": [
+                      1,
+                      1024,
+                      1024,
+                      3
+                    ],
+                    "dtype": "uint8"
+                  }
+                ],
+                "outputs": [
+                  {
+                    "name": "output0",
+                    "shape": [
+                      1,
+                      128,
+                      128,
+                      4
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1011",
+                    "shape": [
+                      1,
+                      128,
+                      128,
+                      15
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1033",
+                    "shape": [
+                      1,
+                      128,
+                      128,
+                      1
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1055",
+                    "shape": [
+                      1,
+                      64,
+                      64,
+                      4
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1095",
+                    "shape": [
+                      1,
+                      64,
+                      64,
+                      15
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1117",
+                    "shape": [
+                      1,
+                      64,
+                      64,
+                      1
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1139",
+                    "shape": [
+                      1,
+                      32,
+                      32,
+                      4
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1179",
+                    "shape": [
+                      1,
+                      32,
+                      32,
+                      15
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1201",
+                    "shape": [
+                      1,
+                      32,
+                      32,
+                      1
+                    ],
+                    "dtype": "float32"
+                  }
+                ]
+              }
+            ],
+            "detectedBoxes": {
+              "ship": 175,
+              "harbor": 5
+            }
+          },
+          {
+            "weight": "ax650/yolo26x-obb_npu3.axmodel",
+            "independentProcesses": 2,
+            "rawOutputsExact": true,
+            "imageSha256": "c0b83e1bbb731f9a01ebc1288485b39e8a189bbbe461541d4eaa6c4d7448d3ef",
+            "metadata": [
+              {
+                "inputs": [
+                  {
+                    "name": "images",
+                    "shape": [
+                      1,
+                      1024,
+                      1024,
+                      3
+                    ],
+                    "dtype": "uint8"
+                  }
+                ],
+                "outputs": [
+                  {
+                    "name": "output0",
+                    "shape": [
+                      1,
+                      128,
+                      128,
+                      4
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1011",
+                    "shape": [
+                      1,
+                      128,
+                      128,
+                      15
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1033",
+                    "shape": [
+                      1,
+                      128,
+                      128,
+                      1
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1055",
+                    "shape": [
+                      1,
+                      64,
+                      64,
+                      4
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1095",
+                    "shape": [
+                      1,
+                      64,
+                      64,
+                      15
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1117",
+                    "shape": [
+                      1,
+                      64,
+                      64,
+                      1
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1139",
+                    "shape": [
+                      1,
+                      32,
+                      32,
+                      4
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1179",
+                    "shape": [
+                      1,
+                      32,
+                      32,
+                      15
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "1201",
+                    "shape": [
+                      1,
+                      32,
+                      32,
+                      1
+                    ],
+                    "dtype": "float32"
+                  }
+                ]
+              }
+            ],
+            "detectedBoxes": {
+              "ship": 175,
+              "harbor": 5
+            }
+          }
+        ],
+        "originalFilesUnchanged": true,
+        "sourceScript": "ax_infer.py",
+        "sourceScriptSha256": "a52364217a238332bfc9f2c4a5caeb940ab79cc52a6c913436d70e18bf12a1af",
+        "inputFile": "boats.jpg",
+        "inputSha256": "8c5ada657cf8110a9f8aaac954c1dd96cde0187315b581276c32b0d1863e756f",
+        "inputPath": "/validation/effects/yolo26-obb-variants-20261005/inputs/boats.jpg",
+        "outputPath": "/validation/effects/yolo26-obb-variants-20261005/outputs/yolo26x.jpg",
+        "outputSha256": "c0b83e1bbb731f9a01ebc1288485b39e8a189bbbe461541d4eaa6c4d7448d3ef",
+        "runsPerWeight": 2,
+        "qualityAccepted": false
+      }
+    }
+  ]
+}

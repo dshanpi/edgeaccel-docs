@@ -1,0 +1,84 @@
+{
+  "modelId": "yolo26-pose",
+  "repo": "AXERA-TECH/yolo26-pose",
+  "revision": "48847027a8d718f7586e2024a348555a89a79b80",
+  "files": [
+    {
+      "path": "ax_infer.py",
+      "size": 11940,
+      "verifiedHashes": {
+        "sha256": "e295f2b52a69423eafd7fe10da124bbd0555139bee5e7c3ec3ca19e3d851c6a6"
+      }
+    },
+    {
+      "path": "bus.jpg",
+      "size": 487438,
+      "verifiedHashes": {
+        "sha256": "33b198a1d2839bb9ac4c65d61f9e852196793cae9a0781360859425f6022b69c"
+      }
+    },
+    {
+      "path": "ax650/yolo26l-pose_npu1.axmodel",
+      "size": 28056705,
+      "verifiedHashes": {
+        "sha256": "d3d119522a1c6b41de10095cfd3a698150876051496987ad8aef8ba7442fff54"
+      }
+    },
+    {
+      "path": "ax650/yolo26l-pose_npu3.axmodel",
+      "size": 28740641,
+      "verifiedHashes": {
+        "sha256": "66a1c3c21393a94544ff89371f3ae36fe3e4ac44bbddf0c15c0acbb800c958b8"
+      }
+    },
+    {
+      "path": "ax650/yolo26m-pose_npu1.axmodel",
+      "size": 23276303,
+      "verifiedHashes": {
+        "sha256": "7b232983d2748f87f6b272e42d4eb7bb38b37ad0081d126b73c95e24fbbc7cf0"
+      }
+    },
+    {
+      "path": "ax650/yolo26m-pose_npu3.axmodel",
+      "size": 23838511,
+      "verifiedHashes": {
+        "sha256": "3b34911fc57f684c4a6f8387bbfbbc47a65bf77a2b19bf67cf99f94b3d776b9e"
+      }
+    },
+    {
+      "path": "ax650/yolo26n-pose_npu1.axmodel",
+      "size": 3536285,
+      "verifiedHashes": {
+        "sha256": "960b82523374bd29ea36e2f47ec8a88755abb47bcdefcc535c7db2f66d1b8e2d"
+      }
+    },
+    {
+      "path": "ax650/yolo26s-pose_npu1.axmodel",
+      "size": 11401825,
+      "verifiedHashes": {
+        "sha256": "8d05e6649d31e39258e18b531b828b916a879c47d51b9b6086f47a40019b69f4"
+      }
+    },
+    {
+      "path": "ax650/yolo26s-pose_npu3.axmodel",
+      "size": 11820509,
+      "verifiedHashes": {
+        "sha256": "bc38e8b8362123e3bb6e58c37b22e613e742e1a222c6f1e92606d2b095bf3b90"
+      }
+    },
+    {
+      "path": "ax650/yolo26x-pose_npu1.axmodel",
+      "size": 60545045,
+      "verifiedHashes": {
+        "sha256": "b85ce210b1023d247729fef0f3316e0c52788684c0a1fd344e77328df6a63135"
+      }
+    },
+    {
+      "path": "ax650/yolo26x-pose_npu3.axmodel",
+      "size": 61002997,
+      "verifiedHashes": {
+        "sha256": "cf4579188770980c17972e1897c9a52e7baff84493fc054d6e6cea9f4d478f3e"
+      }
+    }
+  ]
+}

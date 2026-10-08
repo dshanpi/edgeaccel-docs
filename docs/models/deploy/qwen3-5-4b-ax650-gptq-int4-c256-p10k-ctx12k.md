@@ -170,9 +170,9 @@ PY
 
 ## 查看部署效果
 
-**已运行，效果仍需评估** · 2026-09-23 · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
+**已运行，效果仍需评估** · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
 
-在 16GB 卡上完成三次图片问答，人数、宇航服和人物位置基本符合输入；对色彩和动作的描述仍有偏差。
+三次单图请求均返回文本。人数、服装和主要姿态可对照；中文行走与英文单色环境尚需复核，12K配置未进行长上下文验证。
 
 点击图片可查看原尺寸。
 
@@ -237,7 +237,7 @@ They are all dressed in white astronaut suits and are standing in a forest-like 
 <details>
 <summary>查看样例环境与运行耗时</summary>
 
-环境：RK3576 + AX8850 16GB M.2。日期：2026-09-23。模型版本：`3d0723b1e9928bf56a8932f3d8ad4d88fe0b9ba9`。
+环境：RK3576 + AX8850 16GB M.2。模型版本：`3d0723b1e9928bf56a8932f3d8ad4d88fe0b9ba9`。
 
 | 组件 | 版本或配置 |
 | --- | --- |
@@ -256,8 +256,6 @@ They are all dressed in white astronaut suits and are standing in a forest-like 
 
 适用范围：
 
-- 人数为 3，举手、站立和前倾的位置描述符合图片。英文把画面称为 monochromatic；中文将人物描述为行走，单张图片不足以确认这一动作。
-- 本次仅测试短图片问答，没有验证此 12K 编译包的最大上下文。
 - 本页结果来自 16GB 卡，不作为 8GB 卡的容量验证。temperature=0、enable_thinking=false、stream=false、max_tokens=128。
 - 仅测试本页短请求，未覆盖完整数据集、最大上下文、多轮对话、并发或长期连续运行。
 

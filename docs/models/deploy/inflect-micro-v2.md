@@ -112,13 +112,13 @@ JSON 的 `completed` 应为 `true`，`sessions` 中两个 AXCL 模型和 `cpuSes
 
 ## 查看部署效果
 
-**已运行，效果仍需评估** · 2026-09-28 · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
+**已运行，效果仍需评估** · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
 
-四组英文语音已在算力卡上完成编码与解码，覆盖单句、双句拼接及数字文本归一化。下面展示实际音频。
+四段实际英文音频完成主机 ASR 辅助对照，三组词语对应，数字样例识别为“$12”。这只核对可识别内容，不代表音色、自然度或完整语音质量通过。
 
 **英文短句、拼接与数字读法**
 
-四组英文输入生成实际语音，包含一次双句拼接；数字输入的前端文本变为“The price is twelve dollars.”。编码器、解码器和 CPU 时长预测各执行五次，输出有限且非静音。尚未据此认定发音和听感合格。
+四组英文输入生成实际语音，包含一次双句拼接；数字输入的前端文本变为“The price is twelve dollars.”。编码器、解码器和 CPU 时长预测各执行五次，输出有限且非静音。尚未据此认定发音和听感合格。 使用独立的 Whisper-base 在主机 CPU 上识别本页实际 WAV，未向识别器提供目标文字提示。识别结果可能包含同音字、繁简体差异、漏词或识别器自身错误；下表用于辅助定位需要复听的位置，不是人工听审，也不是语音合成准确率。
 
 <div className="model-effect-gallery">
 
@@ -137,6 +137,13 @@ JSON 的 `completed` 应为 `true`，`sessions` 中两个 AXCL 模型和 `cpuSes
 | The weather today is sunny with a gentle breeze. | 2.645 s | 0.197 s | 0.074 |
 | The robot is ready. Please press start. | 2.533 s | 0.372 s | 0.147 |
 | The price is 12 dollars. | 1.760 s | 0.200 s | 0.114 |
+
+| 合成输入文字 | 实际音频的 ASR 辅助转写 | 核对说明 |
+| --- | --- | --- |
+| Hello world. | Hello World. | 英文词语对应。 |
+| The weather today is sunny with a gentle breeze. | The weather today is sunny with a gentle breeze. | 英文词语对应。 |
+| The robot is ready. Please press start. | The robot is ready. Please press start. | 两句文字均被识别，停顿与自然度仍待试听。 |
+| The price is 12 dollars. | The price is $12. | 识别为 $12，金额含义对应；未核实数字的实际发音。 |
 
 Hello world.
 
@@ -172,7 +179,7 @@ The price is 12 dollars.
 <details>
 <summary>查看样例环境与运行耗时</summary>
 
-环境：RK3576 + AX8850 16GB M.2。日期：2026-09-28。模型版本：`5f32b245c249374bb5b6c1b6c1fb7b78f2dd37c2`。
+环境：RK3576 + AX8850 16GB M.2。模型版本：`5f32b245c249374bb5b6c1b6c1fb7b78f2dd37c2`。
 
 | 组件 | 版本或配置 |
 | --- | --- |
@@ -189,9 +196,8 @@ The price is 12 dollars.
 
 适用范围：
 
-- 本次仅完成流程与输出检查，尚未做听音和 ASR 对照；前端将12转换为twelve不等同于实际发音已验收。
-- 官方输出幅度存在量化台阶；本次波形保持实际幅度，没有另外放大或降噪。长文本、音色和拼接听感需独立评估。
 - 采用官方 AX650 权重在 AX8850 16GB 上实测；不代表 AX620E、AX637 或真实 8GB 卡通过。
+- 本次独立 ASR 仅辅助对照可识别文字，未做人类听审、发音准确率或音色自然度验收。
 
 </details>
 

@@ -8,11 +8,11 @@ description: "PPOCR_v6 的 M.2 算力卡部署步骤、配套文件与效果展�
 
 PPOCR_v6 用于文字检测与识别。本页说明 M.2 算力卡的接入条件、部署步骤与结果检查方法。本页选择 `axmodel/ax650/det_npu1.axmodel`。
 
-> 已实测，固定样例已核对。[查看部署效果](#查看部署效果)。
+> 已实测，效果仍需评估。[查看部署效果](#查看部署效果)。
 
 ## 准备运行环境
 
-本页效果展示使用 **RK3576 DshanPi A1 + AX8850 8GB M.2**；其他容量或平台需重新确认模型能否加载并正确运行。
+本页包含 **RK3576 DshanPi A1 + AX8850 16GB M.2** 与 **RK3576 DshanPi A1 + AX8850 8GB M.2** 的样例。按效果展示中的权重和容量对应使用，不同环境的结果不能互相替代。
 
 在连接算力卡的 Linux 主机终端执行，RK3576 使用 ARM64 环境。首次部署先完成[驱动与设备检查](../../usage/device-check.md)、[安装 PyAXEngine](../../usage/python.md)和[下载工具安装](../../usage/download-models.md#使用-hugging-face-下载)。已完成这些步骤可直接下载模型。
 
@@ -20,19 +20,29 @@ PPOCR_v6 用于文字检测与识别。本页说明 M.2 算力卡的接入条件
 
 ## 下载模型与样例
 
-本页使用 `AXERA-TECH/PPOCR_v6` 的固定版本。下面下载本页选用的 7 个文件。
+本页使用 `AXERA-TECH/PPOCR_v6` 的固定版本。下面下载本页选用的 17 个文件。
 
 ```bash
 MODEL_DIR=~/edgeaccel/models/ppocr-v6/932f227f22b4
 mkdir -p "$MODEL_DIR"
 ~/edgeaccel/hf-env/bin/hf download AXERA-TECH/PPOCR_v6 \
-  "ppocrv6_ax.py" \
-  "axmodel/ax650/det_npu1.axmodel" \
   "11.jpg" \
+  "README.md" \
+  "config.json" \
+  "fonts/simfang.ttf" \
+  "onnx/rec_inference.yml" \
+  "ppocrv6_ax.py" \
+  "ppocrv6_onnx.py" \
+  "run_det_ax.py" \
+  "run_det_onnx.py" \
+  "run_rec_ax.py" \
+  "run_rec_onnx.py" \
+  "axmodel/ax650/cls_npu3.axmodel" \
+  "axmodel/ax650/det_npu3.axmodel" \
+  "axmodel/ax650/rec_npu3.axmodel" \
+  "axmodel/ax650/det_npu1.axmodel" \
   "axmodel/ax650/rec_npu1.axmodel" \
   "axmodel/ax650/cls_npu1.axmodel" \
-  "onnx/rec_inference.yml" \
-  "fonts/simfang.ttf" \
   --revision 932f227f22b4f838d2cff2b54161aafe30d77a80 \
   --local-dir "$MODEL_DIR"
 cd "$MODEL_DIR"
@@ -54,7 +64,7 @@ python -c "import axengine; print(axengine.get_available_providers())"
 在已激活的环境中安装该入口直接使用的依赖；以下依赖用于本页的命令行示例：
 
 ```bash
-python -m pip install Pillow PyYAML numpy==1.26.4 ml-dtypes==0.5.3 opencv-python-headless==4.11.0.86 pyclipper shapely
+python -m pip install Pillow PyYAML==6.0.3 numpy==1.26.4 ml-dtypes==0.5.3 opencv-python-headless==4.11.0.86 pyclipper==1.4.0 shapely==2.0.7
 ```
 
 
@@ -101,9 +111,181 @@ python ppocrv6_ax.py --det_onnx axmodel/ax650/det_npu1.axmodel --rec_onnx axmode
 
 参数依据：[`ppocrv6_ax.py` 源码](https://huggingface.co/AXERA-TECH/PPOCR_v6/blob/932f227f22b4f838d2cff2b54161aafe30d77a80/ppocrv6_ax.py)。
 
+## 运行 NPU3 完整链路
+
+前面的下载命令同时包含本节三个权重。在已配置 AXCL 后端的 Python 环境中执行，保留对应版本的字典、字体及前后处理。本节组合在16GB卡上实测。
+
+| 权重 | 阶段 |
+| --- | --- |
+| `axmodel/ax650/cls_npu3.axmodel` | 方向分类 |
+| `axmodel/ax650/det_npu3.axmodel` | 文本检测 |
+| `axmodel/ax650/rec_npu3.axmodel` | 文字识别 |
+
+```bash
+cd "$MODEL_DIR"
+INPUT="$MODEL_DIR/11.jpg"
+OUT=~/edgeaccel/results/ppocr-v6-npu3/original
+mkdir -p "$OUT"
+set -o pipefail
+python ppocrv6_ax.py \
+  --det_onnx axmodel/ax650/det_npu3.axmodel \
+  --rec_onnx axmodel/ax650/rec_npu3.axmodel \
+  --cls_onnx axmodel/ax650/cls_npu3.axmodel \
+  --char_dict onnx/rec_inference.yml --use_angle_cls \
+  --image "$INPUT" --visualize --output "$OUT/result.jpg" \
+  --json "$OUT/ocr.json" 2>&1 | tee "$OUT/run.log"
+```
+
+识别文字、分数与四点坐标写入 `OUT/ocr.json`，结果图为 `OUT/result.jpg`。检查三个模型均加载成功、没有设备错误，并逐行比对图片中的文字。标题正确不代表金额、编号和细字全部正确。
+
+### 检查倒置图片
+
+在同一终端生成180°旋转输入，并设置独立输出目录：
+
+```bash
+OUT=~/edgeaccel/results/ppocr-v6-npu3/rotated180
+mkdir -p "$OUT"
+python - "$MODEL_DIR/11.jpg" "$OUT/input.png" <<'PY'
+import cv2, sys
+image = cv2.imread(sys.argv[1])
+assert image is not None
+assert cv2.imwrite(sys.argv[2], cv2.rotate(image, cv2.ROTATE_180))
+PY
+INPUT="$OUT/input.png"
+python ppocrv6_ax.py \
+  --det_onnx axmodel/ax650/det_npu3.axmodel \
+  --rec_onnx axmodel/ax650/rec_npu3.axmodel \
+  --cls_onnx axmodel/ax650/cls_npu3.axmodel \
+  --char_dict onnx/rec_inference.yml --use_angle_cls \
+  --image "$INPUT" --visualize --output "$OUT/result.jpg" \
+  --json "$OUT/ocr.json" 2>&1 | tee "$OUT/run.log"
+```
+
+查看倒置输入对应的新结果图及识别文字。方向分类纠正的是文本裁剪，输出可视化仍保留倒置原图；两种输入的检测框或文字不一定完全相同。
+
+
 ## 查看部署效果
 
-**固定样例已核对** · 2026-09-23 · RK3576 DshanPi A1 + AX8850 8GB M.2。以下输入与输出来自本页固定版本的实际运行。
+### NPU3完整链路：16GB卡样例
+
+**已运行，效果仍需评估** · RK3576 DshanPi A1 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
+
+检测、方向分类、识别三个NPU3权重完成完整链路。官方原图独立运行两次，再运行180°倒置输入；保存原始输出并独立解码文字。
+
+**原图**
+
+完整检测、方向分类和识别链路产生16个文本裁剪，最终保留16项识别结果。方向分类中0个裁剪预测为180°且分数超过0.9。四个短字段的精确子串核对命中4/4，仅用于样例对照。结果图以不同颜色对应文本框和文字，包含瓶身竖排文字；标题、编号和净含量可核对，未据此评价整页逐字正确率。 原图两次独立进程的输入张量、输出张量、识别文字和结果图完全一致。
+
+<div className="model-effect-gallery">
+
+<figure>
+
+[![原图实际输入](../../../static/validation/effects/ppocr-v6-variants-20261005/input-0.png)](../../../static/validation/effects/ppocr-v6-variants-20261005/input-0.png)
+
+<figcaption>原图实际输入</figcaption>
+</figure>
+
+<figure>
+
+[![原图实际识别输出](../../../static/validation/effects/ppocr-v6-variants-20261005/output-0.jpg)](../../../static/validation/effects/ppocr-v6-variants-20261005/output-0.jpg)
+
+<figcaption>原图实际识别输出</figcaption>
+</figure>
+
+</div>
+
+| 序号 | 实际识别文本 | 分数 |
+| --- | --- | --- |
+| 1 | 纯臻营养护发素 | 0.9988 |
+| 2 | 产品信息/参数 | 0.9999 |
+| 3 | (45元/每公斤，100公斤起订) | 0.9979 |
+| 4 | 每瓶22元，1000瓶起订） | 0.9665 |
+| 5 | 【品牌】：代加工方式/OEM ODM | 0.9869 |
+| 6 | 【品名】：纯臻营养护发素 | 0.9988 |
+| 7 | 【产品编号】：YM-X-3011 | 0.9938 |
+| 8 | ODM OEM | 0.9919 |
+| 9 | 【净含量】:220ml | 0.9678 |
+| 10 | 【适用人群】：适合所有肤质 | 0.9976 |
+| 11 | 【主要成分】：鲸蜡硬脂醇、燕麦β-葡聚 | 0.9938 |
+| 12 | 糖、椰油酰胺丙基甜菜碱、泛醌 | 0.9974 |
+| 13 | (成品包材) | 0.9234 |
+| 14 | 【主要功能】：可紧致头发磷层，从而达到 | 0.9993 |
+| 15 | 即时持久改善头发光泽的效果，给干燥的头 | 0.9996 |
+| 16 | 发足够的滋养 | 0.9987 |
+
+| 人工读取的样图字段 | 精确子串核对 |
+| --- | --- |
+| 纯臻营养护发素 | 命中 |
+| 产品信息/参数 | 命中 |
+| YM-X-3011 | 命中 |
+| 220ml | 命中 |
+
+**180°倒置图**
+
+完整检测、方向分类和识别链路产生16个文本裁剪，最终保留16项识别结果。方向分类中16个裁剪预测为180°且分数超过0.9。四个短字段的精确子串核对命中4/4，仅用于样例对照。倒置图16个文本裁剪均触发180°纠正；可读取中文标题及编号，输出仍展示倒置原图及其检测区域。
+
+<div className="model-effect-gallery">
+
+<figure>
+
+[![180°倒置图实际输入](../../../static/validation/effects/ppocr-v6-variants-20261005/input-180.png)](../../../static/validation/effects/ppocr-v6-variants-20261005/input-180.png)
+
+<figcaption>180°倒置图实际输入</figcaption>
+</figure>
+
+<figure>
+
+[![180°倒置图实际识别输出](../../../static/validation/effects/ppocr-v6-variants-20261005/output-180.jpg)](../../../static/validation/effects/ppocr-v6-variants-20261005/output-180.jpg)
+
+<figcaption>180°倒置图实际识别输出</figcaption>
+</figure>
+
+</div>
+
+| 序号 | 实际识别文本 | 分数 |
+| --- | --- | --- |
+| 1 | 发足够的滋养 | 0.9988 |
+| 2 | 即时持久改善头发光泽的效果，给干燥的头 | 0.9996 |
+| 3 | 【主要功能】：可紧致头发磷层，从而达到 | 0.9984 |
+| 4 | (成品包材) | 0.8771 |
+| 5 | 糖、椰油酰胺丙基甜菜碱、泛醌 | 0.9982 |
+| 6 | 【主要成分】：鲸蜡硬脂醇、燕麦β-葡聚 | 0.9902 |
+| 7 | 【适用人群】：适合所有肤质 | 0.9953 |
+| 8 | ODM OEM | 0.9875 |
+| 9 | 【净含量】:220ml | 0.9941 |
+| 10 | 【产品编号】：YM-X-3011 | 0.9889 |
+| 11 | 【品名】：纯臻营养护发素 | 0.9982 |
+| 12 | 【品牌】：代加工方式/OEM ODM | 0.9667 |
+| 13 | 每瓶22元，1000瓶起订) | 0.9648 |
+| 14 | (45元/每公斤，100公斤起订) | 0.9967 |
+| 15 | 产品信息/参数 | 0.9998 |
+| 16 | 纯臻营养护发素 | 0.9974 |
+
+| 人工读取的样图字段 | 精确子串核对 |
+| --- | --- |
+| 纯臻营养护发素 | 命中 |
+| 产品信息/参数 | 命中 |
+| YM-X-3011 | 命中 |
+| 220ml | 命中 |
+
+识别内容节选：
+
+```text
+纯臻营养护发素
+YM-X-3011
+220ml
+```
+
+**使用时注意：**
+
+- 仅一张官方样图及其旋转版本；四个短字段命中不等于整页无错，未计算整页CER/WER，也未验证独立数据集精度。
+- 16GB卡实测不能替代新增权重的8GB回归；图片中的细字、竖排和相近汉字仍需逐项核对。
+
+这些结果用于对照部署后的输出，未覆盖完整数据集精度或长期连续运行。
+
+### 原规格：8GB卡样例
+
+**固定样例已核对** · RK3576 DshanPi A1 + AX8850 8GB M.2。以下输入与输出来自本页固定版本的实际运行。
 
 对同一护发素商品图人工核对，result.json 与标注图均包含 16 个文本区域；标题、产品编号“YM-X-3011”、净含量“220ml”和主要说明与原图基本一致，品牌行保留 OEM ODM 间空格，瓶身竖排文字输出 ODM OEM。
 
@@ -142,10 +324,37 @@ YM-X-3011
 
 这些结果用于对照部署后的输出，未覆盖完整数据集精度或长期连续运行。
 
+**NPU3完整链路：16GB卡样例**
+
 <details>
 <summary>查看样例环境与运行耗时</summary>
 
-环境：RK3576 DshanPi A1 + AX8850 8GB M.2。日期：2026-09-23。模型版本：`932f227f22b4f838d2cff2b54161aafe30d77a80`。
+环境：RK3576 DshanPi A1 + AX8850 16GB M.2。模型版本：`932f227f22b4f838d2cff2b54161aafe30d77a80`。
+
+| 组件 | 版本或配置 |
+| --- | --- |
+| AXCL / 固件 | V3.16.0_20260729180218 / V3.16.0 |
+| Python依赖 | NumPy1.26.4、OpenCV4.11.0、Shapely2.0.7、pyclipper1.4.0、PyYAML6.0.3 |
+| 后端与输入 | AXCLRTExecutionProvider；官方11.jpg及其180°旋转图，原图独立启动两次 |
+| 设备状态 | 每次程序退出后恢复空闲18MiB，主机及卡启动标识保持不变 |
+
+| 指标 | 实测值 | 计时或统计范围 |
+| --- | --- | --- |
+| 原图 / cls_npu3.axmodel | 16次；3.097–3.497 ms | session.run墙钟，含数据传输，不含模型加载、前后处理及存盘；含首次调用，不代表持续吞吐。 |
+| 原图 / det_npu3.axmodel | 1次；113.833–113.833 ms | session.run墙钟，含数据传输，不含模型加载、前后处理及存盘；含首次调用，不代表持续吞吐。 |
+| 原图 / rec_npu3.axmodel | 16次；18.091–18.381 ms | session.run墙钟，含数据传输，不含模型加载、前后处理及存盘；含首次调用，不代表持续吞吐。 |
+| 180°倒置图 / cls_npu3.axmodel | 16次；2.963–3.556 ms | session.run墙钟，含数据传输，不含模型加载、前后处理及存盘；含首次调用，不代表持续吞吐。 |
+| 180°倒置图 / det_npu3.axmodel | 1次；114.598–114.598 ms | session.run墙钟，含数据传输，不含模型加载、前后处理及存盘；含首次调用，不代表持续吞吐。 |
+| 180°倒置图 / rec_npu3.axmodel | 16次；17.943–18.810 ms | session.run墙钟，含数据传输，不含模型加载、前后处理及存盘；含首次调用，不代表持续吞吐。 |
+
+</details>
+
+**原规格：8GB卡样例**
+
+<details>
+<summary>查看样例环境与运行耗时</summary>
+
+环境：RK3576 DshanPi A1 + AX8850 8GB M.2。模型版本：`932f227f22b4f838d2cff2b54161aafe30d77a80`。
 
 | 组件 | 版本或配置 |
 | --- | --- |
@@ -170,8 +379,6 @@ YM-X-3011
 
 适用范围：
 
-- correctness 仅限这张固定图主要字词的人工对照；未计算全文 CER/WER，也不能据此宣称整体优于 v5。
-- 净含量行的冒号、价格行括号等标点与原图存在全半角差异，排版空格不保证逐字符保留。
 - v6 本次使用 npu1，v5 使用 npu3；时延不能直接当作同条件版本性能比较。
 - run.log 记录 rec/cls 编译版本含 dirty 标记，应原样保留实际编译版本；不能把置信度当成准确率。
 - 运行源码包含显式 AXCL 后端或本页说明的适配修改；result.json 保存逐项替换及修改后 SHA256。

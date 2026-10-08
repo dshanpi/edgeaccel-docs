@@ -5,7 +5,7 @@
     {
       "name": "zero-dce",
       "label": "Zero-DCE",
-      "observation": "左为输入，右为输出。人物和道路更亮，细节明显变软。",
+      "observation": "人物及道路暗部变亮，但右侧结果中的人脸、树枝和建筑边缘明显变软。该图只展示亮度提升，不证明细节得到恢复。",
       "input": {
         "file": "Zero-DCE/pic/10.jpg",
         "sha256": "9f281f827c51dbcd7dd30e532e43745109f6f71018db4333371215c4699cd62b"
@@ -61,7 +61,7 @@
     {
       "name": "zero-dcepp",
       "label": "Zero-DCE++",
-      "observation": "左为输入，右为输出。室内物体可见度提高，噪点也被放大。",
+      "observation": "暗室墙面和家具更易辨认，同时出现明显彩色噪点；不能把提亮等同于降噪。",
       "input": {
         "file": "Zero-DCE++/pic/101_3_.png",
         "sha256": "28e77ab4aa0b768aa7568781e85e0cdc17403ed681b028980ec7ef14a569e338"
@@ -128,7 +128,7 @@
     {
       "name": "sci",
       "label": "SCI",
-      "observation": "左为输入，右为输出。书柜和冰箱更亮，暗部仍有噪点。",
+      "observation": "书柜、书脊和猫图案的暗部更清楚，细节大体保留；书柜暗区的彩色噪点同时被放大。",
       "input": {
         "file": "SCI/pic/00001.png",
         "sha256": "12f3b5d4c3823dbf2503e825944213974248e788726b6f7aebb275b644c76c89"
@@ -184,7 +184,7 @@
     {
       "name": "retinexformer",
       "label": "Retinexformer",
-      "observation": "左为输入，右为输出。亮度提高，但文字和边缘经过 224×224 模型缩放后变软。",
+      "observation": "书柜和白色柜面变亮；书脊、门框和猫图案边缘明显变软，低分辨率处理后的细节损失可见。",
       "input": {
         "file": "Retinexformer/pic/1.png",
         "sha256": "12f3b5d4c3823dbf2503e825944213974248e788726b6f7aebb275b644c76c89"

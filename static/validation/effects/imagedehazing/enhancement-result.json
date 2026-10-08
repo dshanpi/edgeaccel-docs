@@ -5,7 +5,7 @@
     {
       "name": "aod-net",
       "label": "AOD-Net",
-      "observation": "左为原图，右为去雾输出。山体和天空对比度提高，前景较暗。",
+      "observation": "山体、田地和天空的对比度提高，人物与前景明显变暗，衣物和草地的暗部细节减少；主体位置和轮廓保留。",
       "input": {
         "file": "AOD-Net/pic/canyon2.jpg",
         "sha256": "e3b05599d760033586a4f36ee1d88b7718e964a917269742ccc4ea977067d3e1"
@@ -61,7 +61,7 @@
     {
       "name": "dehazeformer",
       "label": "DehazeFormer",
-      "observation": "左为原图，右为去雾输出。灰雾减轻，画面整体偏绿、偏暗。",
+      "observation": "树枝周围的灰雾减轻，但整体偏绿、偏暗；不能据此认定恢复了真实颜色。",
       "input": {
         "file": "DehazeFormer/pic/00000_0_0.1800.png",
         "sha256": "1761dc0533f77290c0d2e67d71fa2dae0628b2e18286402b5f13227f2ab13137"
@@ -117,7 +117,7 @@
     {
       "name": "ffa-net",
       "label": "FFA-Net",
-      "observation": "输出按官方脚本缩放为 512×512。道路场景仍偏暗，图像生成不代表去雾质量已经通过。",
+      "observation": "道路、车辆和路牌仍可辨认，但整体较原图更暗，近处车辆和树木的暗部细节损失。输出按官方脚本缩放为 512×512，原图宽高比没有保留。",
       "input": {
         "file": "FFA-Net/pic/nh(4).jpg",
         "sha256": "1aac5f17ecf644ffc0e3939d0c7060776f6761998d23fb8a76648dc99903d9bc"
@@ -177,7 +177,7 @@
     {
       "name": "griddehazenet",
       "label": "GridDehazeNet",
-      "observation": "左为原图，右为去雾输出。楼体对比度提高。",
+      "observation": "楼体、窗格和远处建筑的对比度提高，红色外墙更鲜明，楼体结构保留；没有无雾参考图，不能判断颜色准确性。",
       "input": {
         "file": "GridDehazeNet/pic/0001_0.8_0.2.jpg",
         "sha256": "fe92fccd590a6a354d8e526b0bfbb241fd5f26118ba1df96a213c3c9dc28929a"
@@ -233,7 +233,7 @@
     {
       "name": "lightdehazenet",
       "label": "LightDehazeNet",
-      "observation": "左为原图，右为去雾输出。建筑轮廓更明显，黄色色调仍然存在。",
+      "observation": "屋檐、红旗和树枝的轮廓更明显，黄色色调仍然存在，前景花坛更暗。",
       "input": {
         "file": "LightDehazeNet/pic/outdoor_natural/nh(5).png",
         "sha256": "9a6be814342c375a064ff7939ea316cd0dee0ec6058fc10fb6616eef0afbc509"
@@ -289,7 +289,7 @@
     {
       "name": "mixdehazenet",
       "label": "MixDehazeNet",
-      "observation": "左为原图，右为去雾输出。天空颜色更深，但建筑细节变软。",
+      "observation": "天空更蓝、建筑对比度提高，但建筑网格、车身和路灯边缘明显变软；清晰度未随去雾同步改善。",
       "input": {
         "file": "MixDehazeNet/pic/0003_0.8_0.2.jpg",
         "sha256": "9b093fd7e17d27cd57327dbb9ddfae36c2db1e539320e0266f0eaa6942f086a5"
@@ -345,7 +345,7 @@
     {
       "name": "gcanet",
       "label": "GCANet",
-      "observation": "左为原图，右为去雾输出。建筑和绿植对比度提高。",
+      "observation": "建筑窗格和绿植更易辨认，主体结构保留；树冠暗部变深，部分阴影细节减少。",
       "input": {
         "file": "GCANet/pic/0051_0.8_0.2_input.png",
         "sha256": "ae2885d3ccc0f5723805dabb6b865226b7da7c2236b5b41f828a0e017b145c4e"

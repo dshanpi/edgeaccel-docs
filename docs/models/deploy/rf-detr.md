@@ -64,13 +64,13 @@ python vision_card.py --model-dir . --task rf-detr --variant default \
 
 ## 查看部署效果
 
-**已运行，效果仍需评估** · 2026-09-24 · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
+**已运行，效果仍需评估** · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
 
-官方道路图片生成车辆与信号灯检测框；同一输入的三次框坐标和分数一致。
+道路图在阈值 0.3 下得到 25 个 car 和 6 个 traffic_light 候选，三次框坐标与分数一致；右侧外车道仍有可见车辆未检出，本次效果核对未通过。候选数量不代表道路真实车辆数。
 
 **道路图片检测**
 
-阈值 0.3，共输出 31 个候选框。检测图使用官方类别名称和绘制函数。
+阈值 0.3，输出 31 个候选，其中 car 25 个、traffic_light 6 个。近处多辆车有对应框，右侧外车道可见车辆未框出。三次候选坐标和分数一致，未建立完整道路目标标注，不能计算整图召回率。
 
 <div className="model-effect-gallery">
 
@@ -105,7 +105,7 @@ python vision_card.py --model-dir . --task rf-detr --variant default \
 <details>
 <summary>查看样例环境与运行耗时</summary>
 
-环境：RK3576 + AX8850 16GB M.2。日期：2026-09-24。模型版本：`b18cd74e6e7c1df8f86e4a56e020faeb412a0b26`。
+环境：RK3576 + AX8850 16GB M.2。模型版本：`b18cd74e6e7c1df8f86e4a56e020faeb412a0b26`。
 
 | 组件 | 版本或配置 |
 | --- | --- |
@@ -123,11 +123,6 @@ python vision_card.py --model-dir . --task rf-detr --variant default \
 | 指标 | 实测值 | 计时或统计范围 |
 | --- | --- | --- |
 | rf-detr-default / detr.axmodel | 30.878 ms（3 次平均） | AXCL session.run 调用，含输入输出传输；不含模型加载和前后处理，未剔除首轮。 |
-
-适用范围：
-
-- 只检查一张道路图片，未使用人工标注计算 mAP，低分候选仍需人工复核。
-- 结论限于 RK3576 + AX8850 16GB 的上述固定样例，不等同于 8GB 容量验证或长期稳定性测试。
 
 </details>
 

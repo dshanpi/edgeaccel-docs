@@ -81,13 +81,13 @@ python vision_card.py --model-dir . --task visdrone --variant official \
 
 ## 查看部署效果
 
-**已运行，效果仍需评估** · 2026-09-27 · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
+**已运行，效果仍需评估** · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
 
-官方样例已通过 AXCL 生成本次检测图；每张图片重复运行三次，保留相同的候选框。
+三张航拍图分别输出 23、43、0 个候选，逐图重复三次的框、类别和分数一致；夜景中央举手人物未检出，部分栈道候选也无法从画面确认。本次效果核对未通过，城市图的空结果不代表无漏检。
 
 **demo_00**
 
-阈值 0.25，保留 23 个候选框。同一输入运行三次，框坐标、类别和分数一致。 图像按官方前处理缩放到 640×640；SDK 单次结果最多保存 64 个候选目标。
+阈值 0.25，夜景输出 23 个 pedestrian 候选。中央举手人物没有对应框；昏暗区域和长阴影附近的低分候选还需标注核对。三次框、类别与分数一致，不代表完整检出。
 
 <div className="model-effect-gallery">
 
@@ -113,7 +113,7 @@ python vision_card.py --model-dir . --task visdrone --variant official \
 
 **demo_01**
 
-阈值 0.25，保留 43 个候选框。同一输入运行三次，框坐标、类别和分数一致。 图像按官方前处理缩放到 640×640；SDK 单次结果最多保存 64 个候选目标。
+阈值 0.25，河岸图输出 43 个候选。部分人行区域有对应框，右侧木质栈道上的部分候选无法从当前图片确认，不将其直接视为正确目标。仍需配套标注判定误检与定位误差。
 
 <div className="model-effect-gallery">
 
@@ -140,7 +140,7 @@ python vision_card.py --model-dir . --task visdrone --variant official \
 
 **demo_02**
 
-阈值 0.25，保留 0 个候选框。同一输入运行三次，框坐标、类别和分数一致。 图像按官方前处理缩放到 640×640；SDK 单次结果最多保存 64 个候选目标。
+阈值 0.25，城市远景图输出 0 个候选；输出图与输入图像素相同。没有目标标注，无法据此判断所有远处小目标均被正确排除。
 
 <div className="model-effect-gallery">
 
@@ -166,7 +166,7 @@ python vision_card.py --model-dir . --task visdrone --variant official \
 
 **使用时注意：**
 
-- 只测试仓库内 3 张图片；重复运行一致性不等同于检测准确率，未计算 COCO mAP。
+- 只核对这三张航拍图，没有配套目标标注或 VisDrone 数据集 AP；重复一致和零候选都不能证明整体检测正确。当前最多 43 个候选，未触及 SDK 的 64 个保存上限，不能据此认定漏检由该上限造成。
 - 仅在 RK3576 + AX8850 16GB 上验证；未测试 8GB、实时视频或长期运行。
 
 这些结果用于对照部署后的输出，未覆盖完整数据集精度或长期连续运行。
@@ -174,7 +174,7 @@ python vision_card.py --model-dir . --task visdrone --variant official \
 <details>
 <summary>查看样例环境与运行耗时</summary>
 
-环境：RK3576 + AX8850 16GB M.2。日期：2026-09-27。模型版本：`cdf29a6bd81b0980e68e6725abe0f8e1d52c6eb2`。
+环境：RK3576 + AX8850 16GB M.2。模型版本：`cdf29a6bd81b0980e68e6725abe0f8e1d52c6eb2`。
 
 | 组件 | 版本或配置 |
 | --- | --- |
@@ -191,11 +191,6 @@ python vision_card.py --model-dir . --task visdrone --variant official \
 | 指标 | 实测值 | 计时或统计范围 |
 | --- | --- | --- |
 | model.axmodel | 31.455 ms（9 次平均） | 官方 libdet detect 调用，包含库内部的图像处理、数据传输、AXCL 推理和后处理；不含加载与画图，未剔除首轮。 |
-
-适用范围：
-
-- 只测试仓库内 3 张图片；重复运行一致性不等同于检测准确率，未计算 COCO mAP。
-- 仅在 RK3576 + AX8850 16GB 上验证；未测试 8GB、实时视频或长期运行。
 
 </details>
 

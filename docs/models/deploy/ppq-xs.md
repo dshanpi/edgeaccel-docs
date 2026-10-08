@@ -28,7 +28,7 @@ description: "ppq-xs 的 M.2 算力卡部署步骤、配套文件与效果展示
 | [`tools/ppq-xs-1.7.6/ppq/samples/TensorRT/trt_infer.py`](https://huggingface.co/AXERA-TECH/ppq-xs/blob/5311ae8bd583f1442af06a69b2d052812fe7aee4/tools/ppq-xs-1.7.6/ppq/samples/TensorRT/trt_infer.py) | Python 程序 / 前后处理 |
 | [`tools/ppq-xs-1.7.6/requirements.txt`](https://huggingface.co/AXERA-TECH/ppq-xs/blob/5311ae8bd583f1442af06a69b2d052812fe7aee4/tools/ppq-xs-1.7.6/requirements.txt) | Python 依赖清单 |
 
-仓库提交：`5311ae8bd583f1442af06a69b2d052812fe7aee4`。仓库中的 0 个 `.axmodel` 文件可能包括多个芯片、规格和分片。运行时使用本页指定的配套文件，完整列表见[固定版本目录](https://huggingface.co/AXERA-TECH/ppq-xs/tree/5311ae8bd583f1442af06a69b2d052812fe7aee4)。
+仓库提交：`5311ae8bd583f1442af06a69b2d052812fe7aee4`。该提交没有预编译 `.axmodel` 文件。运行时使用本页指定的配套文件，完整列表见[固定版本目录](https://huggingface.co/AXERA-TECH/ppq-xs/tree/5311ae8bd583f1442af06a69b2d052812fe7aee4)。
 
 </details>
 

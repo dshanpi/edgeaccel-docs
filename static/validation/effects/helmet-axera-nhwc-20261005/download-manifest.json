@@ -1,0 +1,28 @@
+{
+  "modelId": "Helmet-axera",
+  "repo": "AXERA-TECH/Helmet-axera",
+  "revision": "c48ec87e8e0c65618560d790d598c1081a857d92",
+  "files": [
+    {
+      "path": "ax_hed_infer.py",
+      "bytes": 10223,
+      "verifiedHashes": {
+        "sha256": "940f4d6c87709e76f3d5dc42e642a54749e9ec1bf25b86b97981f8869712508a"
+      }
+    },
+    {
+      "path": "test.jpg",
+      "bytes": 21690,
+      "verifiedHashes": {
+        "sha256": "668a12626b54d1bd57d0f71d7a9e4903e595b00db8e42329f6d35569858a8b2f"
+      }
+    },
+    {
+      "path": "AX650/ax_ax650_hel_algo_rgb_nhwc_V1.0.0.axmodel",
+      "bytes": 605098,
+      "verifiedHashes": {
+        "sha256": "f8a3c59e4a27a2a910864bc73d4cfe6b064df4d4f337c374cf0a36325709f9a1"
+      }
+    }
+  ]
+}

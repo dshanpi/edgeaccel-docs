@@ -1,0 +1,49 @@
+{
+  "modelId": "Plate-axera",
+  "repo": "AXERA-TECH/Plate-axera",
+  "revision": "e528f3e145f0ec35e3c2c05a019d8369d6fdef3c",
+  "files": [
+    {
+      "path": "axmodel_infer_pld.py",
+      "bytes": 10110,
+      "verifiedHashes": {
+        "sha256": "0145ae9d86ff519466e57a63b74acd5454799815f579a84a4bb96e43ae07335c"
+      }
+    },
+    {
+      "path": "test.jpg",
+      "bytes": 438938,
+      "verifiedHashes": {
+        "sha256": "6d96e9ab8dc69d226e8e4ab9543c9de0590b2b11e351ed41b106c9cec54125d9"
+      }
+    },
+    {
+      "path": "AX650/pld_650_nhwc_npu3.axmodel",
+      "bytes": 1197188,
+      "verifiedHashes": {
+        "sha256": "f877eaf19016a64e3f19b2ffd5c0144906a8ba68ba44bff87b26f4e5ddce17b9"
+      }
+    },
+    {
+      "path": "axmodel_infer_plr.py",
+      "bytes": 3084,
+      "verifiedHashes": {
+        "sha256": "34b01e20a697531387b8aa31c78690718a5552f4bf9ec50462c597526ca22ee2"
+      }
+    },
+    {
+      "path": "苏A8A68Y.jpg",
+      "bytes": 10204,
+      "verifiedHashes": {
+        "sha256": "5e439109b2773ae9f8b71d3cfedea4e7fc951c3b205c53c49b3e48bf7fd13472"
+      }
+    },
+    {
+      "path": "AX650/plr_650_nhwc_npu3.axmodel",
+      "bytes": 950159,
+      "verifiedHashes": {
+        "sha256": "3b322f1e3f7710b2e3737f4e05834156b0f1b3dcb4e93fad81dc86badf92c39f"
+      }
+    }
+  ]
+}

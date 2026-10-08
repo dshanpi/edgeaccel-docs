@@ -1,0 +1,70 @@
+{
+  "kind": "native-text",
+  "provider": "AXCL C++",
+  "modelId": "DeepSeek-R1-Distill-Qwen-7B-GPTQ-Int4",
+  "revision": "9b903307e1ea3b216330e88f8e6fe39b6627bb74",
+  "date": "2026-10-03",
+  "completed": true,
+  "runtimeBinarySha256": "bb111fc00c54abb6142a8f44df087bf104c8150a1cefa6be55c6b174b932c4ec",
+  "requestSettings": {
+    "continueConversation": false,
+    "top_k": 1,
+    "mmap_embed": 0,
+    "tokenizerPort": 8519
+  },
+  "testedWeightFiles": [
+    "deepseek-r1-7b-gptq-int4-ax650/qwen2_p128_l0_together.axmodel",
+    "deepseek-r1-7b-gptq-int4-ax650/qwen2_p128_l10_together.axmodel",
+    "deepseek-r1-7b-gptq-int4-ax650/qwen2_p128_l11_together.axmodel",
+    "deepseek-r1-7b-gptq-int4-ax650/qwen2_p128_l12_together.axmodel",
+    "deepseek-r1-7b-gptq-int4-ax650/qwen2_p128_l13_together.axmodel",
+    "deepseek-r1-7b-gptq-int4-ax650/qwen2_p128_l14_together.axmodel",
+    "deepseek-r1-7b-gptq-int4-ax650/qwen2_p128_l15_together.axmodel",
+    "deepseek-r1-7b-gptq-int4-ax650/qwen2_p128_l16_together.axmodel",
+    "deepseek-r1-7b-gptq-int4-ax650/qwen2_p128_l17_together.axmodel",
+    "deepseek-r1-7b-gptq-int4-ax650/qwen2_p128_l18_together.axmodel",
+    "deepseek-r1-7b-gptq-int4-ax650/qwen2_p128_l19_together.axmodel",
+    "deepseek-r1-7b-gptq-int4-ax650/qwen2_p128_l1_together.axmodel",
+    "deepseek-r1-7b-gptq-int4-ax650/qwen2_p128_l20_together.axmodel",
+    "deepseek-r1-7b-gptq-int4-ax650/qwen2_p128_l21_together.axmodel",
+    "deepseek-r1-7b-gptq-int4-ax650/qwen2_p128_l22_together.axmodel",
+    "deepseek-r1-7b-gptq-int4-ax650/qwen2_p128_l23_together.axmodel",
+    "deepseek-r1-7b-gptq-int4-ax650/qwen2_p128_l24_together.axmodel",
+    "deepseek-r1-7b-gptq-int4-ax650/qwen2_p128_l25_together.axmodel",
+    "deepseek-r1-7b-gptq-int4-ax650/qwen2_p128_l26_together.axmodel",
+    "deepseek-r1-7b-gptq-int4-ax650/qwen2_p128_l27_together.axmodel",
+    "deepseek-r1-7b-gptq-int4-ax650/qwen2_p128_l2_together.axmodel",
+    "deepseek-r1-7b-gptq-int4-ax650/qwen2_p128_l3_together.axmodel",
+    "deepseek-r1-7b-gptq-int4-ax650/qwen2_p128_l4_together.axmodel",
+    "deepseek-r1-7b-gptq-int4-ax650/qwen2_p128_l5_together.axmodel",
+    "deepseek-r1-7b-gptq-int4-ax650/qwen2_p128_l6_together.axmodel",
+    "deepseek-r1-7b-gptq-int4-ax650/qwen2_p128_l7_together.axmodel",
+    "deepseek-r1-7b-gptq-int4-ax650/qwen2_p128_l8_together.axmodel",
+    "deepseek-r1-7b-gptq-int4-ax650/qwen2_p128_l9_together.axmodel",
+    "deepseek-r1-7b-gptq-int4-ax650/qwen2_post.axmodel"
+  ],
+  "independentEosTokenIdCaptured": false,
+  "samples": [
+    {
+      "input": "What is 2 + 3? Reply with only the number.",
+      "output": "Okay, so I need to figure out what 2 plus 3 is. Hmm, let's see. I remember from when I was a kid that addition is like combining things. So if I have 2 apples and someone gives me 3 more apples, how many apples do I have in total? That should be 2 plus 3. \n\nWait, but I'm not sure if I'm thinking about this correctly. Maybe I should count them out. Let me try. Starting with 2, if I add 1, that's 3, then 4, then 5. So 2 plus 3 equals 5. Yeah, that makes sense. I think I got it right. So the answer should be 5.\n</think>\n\n5",
+      "observation": "最终数值为 5，与预检结果一致；完整回复包含思考文本，没有满足“只返回数字”的格式要求。",
+      "exitCode": 0,
+      "processSeconds": 204.87468471600005
+    },
+    {
+      "input": "请用一句中文说明 PCIe 的用途。",
+      "output": "好的，用户让我用一句中文说明PCIe的用途。首先，我得明确PCIe是什么。PCIe是PCIExpress的缩写，是一种用于传输数据的专用总线，对吧？它主要用在计算机内部，帮助不同组件之间传输数据，比如CPU、GPU、内存控制器等。\n\n那PCIe的用途是什么呢？它主要用来提高计算机内部的性能，因为总线带宽高，传输速度快，这样系统整体运行会更流畅。另外，PCIe还支持扩展性，可以增加更多的设备，比如更多的GPU或存储设备，这样系统功能更丰富，性能也更强。\n\n所以，总结一下，PCIe的用途就是作为高性能的总线，用于连接和传输数据，提升计算机内部的性能和扩展性。这样用户就能明白PCIe在现代计算机中的重要性了。\n</think>\n\nPCIe（PCI Express）是一种高性能的总线技术，主要用于在计算机内部连接和传输数据，提升设备之间的性能和扩展性。",
+      "observation": "最终回答用一句中文概括了 PCIe 的连接和数据传输用途；完整回复还包含思考过程。",
+      "exitCode": 0,
+      "processSeconds": 220.1204493579935
+    },
+    {
+      "input": "Return only a JSON object with apple equal to 3 and pear equal to 2.",
+      "output": "Alright, so I just received a query from a user. Let me try to understand what they're asking for. The user wrote, \"You are DeepSeek-R1, You are a helpful assistant. Return only a JSON object with apple equal to 3 and pear equal to 2.\" Hmm, okay, so they're telling me that they're DeepSeek-R1, an AI assistant, and they want me to return a JSON object with specific values: apple set to 3 and pear set to 2.\n\nFirst, I need to parse the user's request correctly. They mention that I'm DeepSeek-R1, so I should acknowledge that. Then, they want a JSON object. JSON objects are key-value pairs, so I need to structure it correctly. The keys should be \"apple\" and \"pear\", with the corresponding values 3 and 2.\n\nI should make sure that the JSON syntax is correct. That means proper use of quotation marks, colons, and commas. Also, the JSON should be valid so that it can be parsed without errors. So, I'll structure it as {\"apple\": 3, \"pear\": 2}.\n\nNow, I need to respond to the user. They might be testing my ability to generate specific JSON outputs or perhaps they're using this for some application that requires exact data. It's also possible they're checking if I can follow instructions precisely. Either way, the response needs to be clear and concise.\n\nI should also consider if there's any additional context I might need. The user didn't mention anything else, so I can assume they just want the JSON object as specified. No extra information or formatting is needed.\n\nI should make sure to return only the JSON object without any extra text. The user emphasized \"Return only a JSON object,\" so I need to stick to that. No explanations, no extra sentences—just the JSON.\n\nPutting it all together, I'll start with a friendly greeting, mention that I'm DeepSeek-R1, and then provide the JSON object as specified. I'll make sure the JSON is correctly formatted so that it's valid and can be used wherever it's needed.\n\nI don't see any hidden requirements here, so I can proceed without overcomplicating things. The user's request seems straightforward, so I'll execute it as such.\n</think>\n\n```json\n{\"apple\": 3, \"pear\": 2}\n```",
+      "observation": "代码块内的对象包含 apple=3、pear=2；最终回答保留 Markdown 代码块，完整回复还含思考文本，不能直接作为纯 JSON 解析。",
+      "exitCode": 0,
+      "processSeconds": 314.5356034830038
+    }
+  ]
+}

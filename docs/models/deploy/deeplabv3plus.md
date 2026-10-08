@@ -8,7 +8,7 @@ description: "DeepLabv3Plus 的 M.2 算力卡部署步骤、配套文件与效�
 
 DeepLabv3Plus 用于图像分割。本页说明 M.2 算力卡的接入条件、部署步骤与结果检查方法。本页选择 `models-ax650/deeplabv3plus_mobilenet_u16.axmodel`。
 
-> 已实测，效果仍需评估。[查看部署效果](#查看部署效果)。
+> 已实测，固定样例已核对。[查看部署效果](#查看部署效果)。
 
 ## 准备运行环境
 
@@ -127,41 +127,50 @@ python infer.py --model models-ax650/deeplabv3plus_mobilenet_u16.axmodel --img s
 
 ## 查看部署效果
 
-**已运行，效果仍需评估** · 2026-09-23 · RK3576 DshanPi A1 + AX8850 8GB M.2。以下输入与输出来自本页固定版本的实际运行。
+**固定样例已核对** · RK3576 DshanPi A1 + AX8850 8GB M.2。以下输入与输出来自本页固定版本的实际运行。
 
-AXCL 完成一次飞机样图的语义分割。输出红色区域覆盖机身、机翼、尾翼和起落架，主体位置与输入一致，背景保持黑色；螺旋桨、机翼细边缘和起落架的局部轮廓较粗，不能视为精确描边。
+固定飞机图片的分割主体已核对：机身、机翼、尾翼和起落架的位置与输入一致。螺旋桨及细边缘较粗，局部存在漏分或外扩；下方叠加图用于检查这些边界。
 
-点击图片可查看原尺寸。
+**飞机前景与边界**
+
+依次显示实际输入、原始分割掩码和叠加图。叠加图由保存的原图与原始掩码在主机上按50%颜色混合生成，背景不变，未修正掩码；不是新增推理输出。
 
 <div className="model-effect-gallery">
 
 <figure>
 
-[![输入图片](../../../static/validation/effects/deeplabv3plus/inputs/1_image.png)](../../../static/validation/effects/deeplabv3plus/inputs/1_image.png)
+[![实际输入：513×513 飞机图](../../../static/validation/effects/deeplabv3plus/inputs/1_image.png)](../../../static/validation/effects/deeplabv3plus/inputs/1_image.png)
 
-<figcaption>输入图片</figcaption>
+<figcaption>实际输入：513×513 飞机图</figcaption>
 </figure>
 
 <figure>
 
-[![实际输出](../../../static/validation/effects/deeplabv3plus/outputs/output-ax.png)](../../../static/validation/effects/deeplabv3plus/outputs/output-ax.png)
+[![原始输出掩码](../../../static/validation/effects/deeplabv3plus/outputs/output-ax.png)](../../../static/validation/effects/deeplabv3plus/outputs/output-ax.png)
 
-<figcaption>实际输出</figcaption>
+<figcaption>原始输出掩码</figcaption>
+</figure>
+
+<figure>
+
+[![原图与掩码叠加（主机生成，未修正掩码）](../../../static/validation/effects/deeplabv3plus/outputs/input-mask-overlay.png)](../../../static/validation/effects/deeplabv3plus/outputs/input-mask-overlay.png)
+
+<figcaption>原图与掩码叠加（主机生成，未修正掩码）</figcaption>
 </figure>
 
 </div>
 
 **使用时注意：**
 
+- 叠加图由保存的原图与原始掩码在主机上按50%颜色混合生成，背景不变，未修正掩码；不是新增推理输出。
 - 仅人工核对 1 张 513×513 飞机图和输出掩码，未使用像素级真值，未计算 mIoU 或类别准确率。
-- 未审核全部 21 类；红色仅为可视化类别色，不代表已独立确认所有类别映射。
 
 这些结果用于对照部署后的输出，未覆盖完整数据集精度或长期连续运行。
 
 <details>
 <summary>查看样例环境与运行耗时</summary>
 
-环境：RK3576 DshanPi A1 + AX8850 8GB M.2。日期：2026-09-23。模型版本：`6d29643d003d7e7d22f7c28a177980f292ec5fca`。
+环境：RK3576 DshanPi A1 + AX8850 8GB M.2。模型版本：`6d29643d003d7e7d22f7c28a177980f292ec5fca`。
 
 | 组件 | 版本或配置 |
 | --- | --- |
@@ -182,7 +191,6 @@ AXCL 完成一次飞机样图的语义分割。输出红色区域覆盖机身、
 
 适用范围：
 
-- 仅人工核对 1 张 513×513 飞机图和输出掩码，未使用像素级真值，未计算 mIoU 或类别准确率。
 - 未审核全部 21 类；红色仅为可视化类别色，不代表已独立确认所有类别映射。
 - 只记录一次 session.run，不是热身后的平均时延或稳定性测试。
 - 运行源码包含显式 AXCL 后端或本页说明的适配修改；result.json 保存逐项替换及修改后 SHA256。

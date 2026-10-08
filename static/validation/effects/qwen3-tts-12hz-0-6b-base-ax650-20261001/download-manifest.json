@@ -1,0 +1,828 @@
+{
+  "modelId": "Qwen3-TTS-12Hz-0.6B-Base-AX650",
+  "repo": "AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650",
+  "revision": "3b3fde9cb90b3646c7c9fdeefe083402c0399c2f",
+  "complete": true,
+  "files": [
+    {
+      "path": "README.md",
+      "size": 120,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/README.md",
+      "verifiedHashes": {
+        "sha256": "17448bad78f1dcd0eea404d10c57cd9e52cfe8ae466d75fb0592c3c6aaebc533",
+        "gitBlob": "794ade76f86c91593213771685a939b294ab2c18"
+      }
+    },
+    {
+      "path": "assets/zero_shot_prompt.wav",
+      "size": 334138,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/assets/zero_shot_prompt.wav",
+      "verifiedHashes": {
+        "sha256": "c7b31d6dbe7cc6a716dded00550db5b50940bf209e424e4ad207b12e657c8ff6",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/code_predictor_lm_head_0.axmodel",
+      "size": 2259876,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/code-predictor/code_predictor_lm_head_0.axmodel",
+      "verifiedHashes": {
+        "sha256": "41088a1121265981c895b4c3ed5fe2b27e815730c08d54e9f1f96002bbbbb2f3",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/code_predictor_lm_head_1.axmodel",
+      "size": 2259876,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/code-predictor/code_predictor_lm_head_1.axmodel",
+      "verifiedHashes": {
+        "sha256": "cc862728ef2381712d7a6c99abf91fbf63223b5da802406c68a9926aaa9754c9",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/code_predictor_lm_head_10.axmodel",
+      "size": 2259876,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/code-predictor/code_predictor_lm_head_10.axmodel",
+      "verifiedHashes": {
+        "sha256": "2ef2e6917e4efa9fedbdb0743ef659c51d391a46341fe9eced3c4b7229421c18",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/code_predictor_lm_head_11.axmodel",
+      "size": 2259876,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/code-predictor/code_predictor_lm_head_11.axmodel",
+      "verifiedHashes": {
+        "sha256": "65536c9d5e1616203c6443039efbeb8a7c3240d8c1d1b578002bc28bd56c99c8",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/code_predictor_lm_head_12.axmodel",
+      "size": 2259876,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/code-predictor/code_predictor_lm_head_12.axmodel",
+      "verifiedHashes": {
+        "sha256": "e97475a1506a283fa9fc23bbc7d08116235b69321c24dc4b9bddbf1e5420cc30",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/code_predictor_lm_head_13.axmodel",
+      "size": 2259876,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/code-predictor/code_predictor_lm_head_13.axmodel",
+      "verifiedHashes": {
+        "sha256": "176d064619cc865b2f4e0feb91b90101d022caf861ba907e581b1b0f59954bad",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/code_predictor_lm_head_14.axmodel",
+      "size": 2259876,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/code-predictor/code_predictor_lm_head_14.axmodel",
+      "verifiedHashes": {
+        "sha256": "d902873c9d93a4b8709ef9539f68dcad00b21886119ad5dd63b3f45830f9b3a7",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/code_predictor_lm_head_2.axmodel",
+      "size": 2259876,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/code-predictor/code_predictor_lm_head_2.axmodel",
+      "verifiedHashes": {
+        "sha256": "d9cf3872b5f0f500ed07e931b2da6118d739afb85c3abf5fcfbf38678316198d",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/code_predictor_lm_head_3.axmodel",
+      "size": 2259876,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/code-predictor/code_predictor_lm_head_3.axmodel",
+      "verifiedHashes": {
+        "sha256": "54b809987cf19d4288399b7fa88c2dd39f71afdef0157cdba547dab052c49de5",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/code_predictor_lm_head_4.axmodel",
+      "size": 2259876,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/code-predictor/code_predictor_lm_head_4.axmodel",
+      "verifiedHashes": {
+        "sha256": "20abed175034120211690a86e0a6d4325b1194b624834cae038191981eb89472",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/code_predictor_lm_head_5.axmodel",
+      "size": 2259876,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/code-predictor/code_predictor_lm_head_5.axmodel",
+      "verifiedHashes": {
+        "sha256": "6f4a75a3a643a67b9dde4ff4917fe0e246adf81aa28c1989e5c692e0915de0f8",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/code_predictor_lm_head_6.axmodel",
+      "size": 2259876,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/code-predictor/code_predictor_lm_head_6.axmodel",
+      "verifiedHashes": {
+        "sha256": "f4c4b11f9d3b5d1d0f9c5ced284acfd2ce16877e8b6134e985cc28856130f2e9",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/code_predictor_lm_head_7.axmodel",
+      "size": 2259876,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/code-predictor/code_predictor_lm_head_7.axmodel",
+      "verifiedHashes": {
+        "sha256": "f1d70d99f28fd9f52c5ac0d4e5633ca73d24a99d9cd4c11d5c46e3017a147a90",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/code_predictor_lm_head_8.axmodel",
+      "size": 2259876,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/code-predictor/code_predictor_lm_head_8.axmodel",
+      "verifiedHashes": {
+        "sha256": "70c6ad485a73392aa83f0019e5d220a3677f583660e256c00a3643f47dcbd1f7",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/code_predictor_lm_head_9.axmodel",
+      "size": 2259876,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/code-predictor/code_predictor_lm_head_9.axmodel",
+      "verifiedHashes": {
+        "sha256": "bb39d1a762d9bbf98de2f25e70898dc42ec4f1724fc0bbc7213a1d550cfa12a9",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/qwen3_tts_talker_code_predictor_p64_l0_together.axmodel",
+      "size": 17610846,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/code-predictor/qwen3_tts_talker_code_predictor_p64_l0_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "aa4ea8e591c7fa02a12b2b8395da504de35bc02076de37ca76b2982e66541cfc",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/qwen3_tts_talker_code_predictor_p64_l1_together.axmodel",
+      "size": 17611262,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/code-predictor/qwen3_tts_talker_code_predictor_p64_l1_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "db0f40d37f3cc546ac6eef80daa1742e97ffde824271396ee264ab3760f847a4",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/qwen3_tts_talker_code_predictor_p64_l2_together.axmodel",
+      "size": 17611006,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/code-predictor/qwen3_tts_talker_code_predictor_p64_l2_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "98fc3b04a4649305aedc80b03dc92a80c3255ed6f31a8a5922e344255a59c2c2",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/qwen3_tts_talker_code_predictor_p64_l3_together.axmodel",
+      "size": 17610782,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/code-predictor/qwen3_tts_talker_code_predictor_p64_l3_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "c0f2d1dde72028c547464857e8ccff282a6cb95a73fde055a756032fa8a1b716",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/qwen3_tts_talker_code_predictor_p64_l4_together.axmodel",
+      "size": 17610846,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/code-predictor/qwen3_tts_talker_code_predictor_p64_l4_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "685fa29fdc046e902144efdddd932df2d9c782188ef5eec0fc306e1467e5ba7c",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/qwen3_tts_talker_code_predictor_post.axmodel",
+      "size": 14073,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/code-predictor/qwen3_tts_talker_code_predictor_post.axmodel",
+      "verifiedHashes": {
+        "sha256": "31035becf09e6f1c5a5e5160f1be32367f652dda89c1b62781e54172cf75c156",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/talker.code_predictor.model.codec_embedding.0.weight.bfloat16.bin",
+      "size": 4194304,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/code-predictor/talker.code_predictor.model.codec_embedding.0.weight.bfloat16.bin",
+      "verifiedHashes": {
+        "sha256": "4e2ea23c808b8ec936e88c4d71c5cbbb0e26db23d38311c5558c44ec04bce970",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/talker.code_predictor.model.codec_embedding.1.weight.bfloat16.bin",
+      "size": 4194304,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/code-predictor/talker.code_predictor.model.codec_embedding.1.weight.bfloat16.bin",
+      "verifiedHashes": {
+        "sha256": "a1e224fb7e3a92be93f9ac17020d4ef64235bd118ad3907f896fc7b91b6dd710",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/talker.code_predictor.model.codec_embedding.10.weight.bfloat16.bin",
+      "size": 4194304,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/code-predictor/talker.code_predictor.model.codec_embedding.10.weight.bfloat16.bin",
+      "verifiedHashes": {
+        "sha256": "7869c36dd9c4d3409b43b669e3a3513df804b7235c589eda198ef3e2a97c6174",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/talker.code_predictor.model.codec_embedding.11.weight.bfloat16.bin",
+      "size": 4194304,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/code-predictor/talker.code_predictor.model.codec_embedding.11.weight.bfloat16.bin",
+      "verifiedHashes": {
+        "sha256": "e8cadfd0613e5e8bbd69a65dbcc482e4e8075ed38494e98539d6c8de6e9949a3",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/talker.code_predictor.model.codec_embedding.12.weight.bfloat16.bin",
+      "size": 4194304,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/code-predictor/talker.code_predictor.model.codec_embedding.12.weight.bfloat16.bin",
+      "verifiedHashes": {
+        "sha256": "67bcaeda3eb3204ff4883401bbd29bae29d0546a90216e224d009cb4e6ac3145",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/talker.code_predictor.model.codec_embedding.13.weight.bfloat16.bin",
+      "size": 4194304,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/code-predictor/talker.code_predictor.model.codec_embedding.13.weight.bfloat16.bin",
+      "verifiedHashes": {
+        "sha256": "8c4b48b0ad8b9a4a633769b3e2b00c2f8c190cf48b3066113670121f3c974367",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/talker.code_predictor.model.codec_embedding.14.weight.bfloat16.bin",
+      "size": 4194304,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/code-predictor/talker.code_predictor.model.codec_embedding.14.weight.bfloat16.bin",
+      "verifiedHashes": {
+        "sha256": "ad8a062efa214976394798b0e574125d30618a1a6c0144d93b5b91cbfeae7e52",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/talker.code_predictor.model.codec_embedding.2.weight.bfloat16.bin",
+      "size": 4194304,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/code-predictor/talker.code_predictor.model.codec_embedding.2.weight.bfloat16.bin",
+      "verifiedHashes": {
+        "sha256": "245890bb0754e37b4e33070b4e5ebbbfaaf9c2539c8d513ceb4038fe72fe2153",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/talker.code_predictor.model.codec_embedding.3.weight.bfloat16.bin",
+      "size": 4194304,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/code-predictor/talker.code_predictor.model.codec_embedding.3.weight.bfloat16.bin",
+      "verifiedHashes": {
+        "sha256": "5866c10687c0d445568290dc5f17e0d7d0598755034c05ffd4bd5c7f4ab775a3",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/talker.code_predictor.model.codec_embedding.4.weight.bfloat16.bin",
+      "size": 4194304,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/code-predictor/talker.code_predictor.model.codec_embedding.4.weight.bfloat16.bin",
+      "verifiedHashes": {
+        "sha256": "2e7cd9b518c86a6e11ce614d4bbeeb69326dc0eeec8585532e3a412e134b6e68",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/talker.code_predictor.model.codec_embedding.5.weight.bfloat16.bin",
+      "size": 4194304,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/code-predictor/talker.code_predictor.model.codec_embedding.5.weight.bfloat16.bin",
+      "verifiedHashes": {
+        "sha256": "b9c9b9431cc419c5fc80674f4edec481923b41015263413138cc997b1430116c",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/talker.code_predictor.model.codec_embedding.6.weight.bfloat16.bin",
+      "size": 4194304,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/code-predictor/talker.code_predictor.model.codec_embedding.6.weight.bfloat16.bin",
+      "verifiedHashes": {
+        "sha256": "eee6aea0c7abb7ed298c7ef85f375fb4888f09cc2d3a47904df275011782e69e",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/talker.code_predictor.model.codec_embedding.7.weight.bfloat16.bin",
+      "size": 4194304,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/code-predictor/talker.code_predictor.model.codec_embedding.7.weight.bfloat16.bin",
+      "verifiedHashes": {
+        "sha256": "54b778ab448934462ebd9f6d931b43f9ba7a3596e7ff7825e37a829d1c09fd8d",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/talker.code_predictor.model.codec_embedding.8.weight.bfloat16.bin",
+      "size": 4194304,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/code-predictor/talker.code_predictor.model.codec_embedding.8.weight.bfloat16.bin",
+      "verifiedHashes": {
+        "sha256": "3dfdbfce7a686502fd57f5eae2d3e96a6f333636727dd09e55ca94a66548c850",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/talker.code_predictor.model.codec_embedding.9.weight.bfloat16.bin",
+      "size": 4194304,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/code-predictor/talker.code_predictor.model.codec_embedding.9.weight.bfloat16.bin",
+      "verifiedHashes": {
+        "sha256": "d3c2b59d73bc4b9badabfb8b31109109e25cfa4b0427adce716fa176f580b398",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "configuration.json",
+      "size": 45,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/configuration.json",
+      "verifiedHashes": {
+        "sha256": "2421eda28d97a6d37a4ee1644338ad08c8ccf1a9adf0b4e908cb1bead2387f87",
+        "gitBlob": "3f6b2fa7b66fcd5784a6316a6cce9910c8450ddc"
+      }
+    },
+    {
+      "path": "extract_speaker_embedding_3s.axmodel",
+      "size": 10988718,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/extract_speaker_embedding_3s.axmodel",
+      "verifiedHashes": {
+        "sha256": "da6d70ffbb36698fde6eeb8d6392b7e72d6d8beed4b701028234904728e3e111",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "infer.py",
+      "size": 69727,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/infer.py",
+      "verifiedHashes": {
+        "sha256": "621a844bf0d739bdefdcf8a4db2e82c203d22a44affc2d1403b42714974b821b",
+        "gitBlob": "dbc110289aeac3a529f8c0065d8b43ada8859851"
+      }
+    },
+    {
+      "path": "infer.sh",
+      "size": 506,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/infer.sh",
+      "verifiedHashes": {
+        "sha256": "66b842b22befa4de6afdf582649f80d5a12c9bfea57d2c390493f4ccec60e5b1",
+        "gitBlob": "fbc966d72a8e977a051242f2886f8e0e99ad1ffd"
+      }
+    },
+    {
+      "path": "speech_tokenizer/decoder/qwen3_tts_tokenizer_12hz_p64_l0_together.axmodel",
+      "size": 4242100,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/speech_tokenizer/decoder/qwen3_tts_tokenizer_12hz_p64_l0_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "2c957cb7d07ab2cd8baa9677c1ddd51872ff956cdfef8c790ae4463d941c8de0",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "speech_tokenizer/decoder/qwen3_tts_tokenizer_12hz_p64_l1_together.axmodel",
+      "size": 4242100,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/speech_tokenizer/decoder/qwen3_tts_tokenizer_12hz_p64_l1_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "f5fb417c72ac41569e4074d6afef38f9bf6b8d8d44e84d44e9ff39aa414b9234",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "speech_tokenizer/decoder/qwen3_tts_tokenizer_12hz_p64_l2_together.axmodel",
+      "size": 4242100,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/speech_tokenizer/decoder/qwen3_tts_tokenizer_12hz_p64_l2_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "ca1653e8ef1e4875ee6f6982b665b8d0d441f0e051be2e922ce45963a60ca20b",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "speech_tokenizer/decoder/qwen3_tts_tokenizer_12hz_p64_l3_together.axmodel",
+      "size": 4242100,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/speech_tokenizer/decoder/qwen3_tts_tokenizer_12hz_p64_l3_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "bbe93d2f47d55f437f1c13171de2e923b5421c66c943ddff2c3d2bad5aba02df",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "speech_tokenizer/decoder/qwen3_tts_tokenizer_12hz_p64_l4_together.axmodel",
+      "size": 4242100,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/speech_tokenizer/decoder/qwen3_tts_tokenizer_12hz_p64_l4_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "5ac177546b574dd4158cb8bddc0dca140b6524dfe43ba03dde33a56110a55e04",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "speech_tokenizer/decoder/qwen3_tts_tokenizer_12hz_p64_l5_together.axmodel",
+      "size": 4242100,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/speech_tokenizer/decoder/qwen3_tts_tokenizer_12hz_p64_l5_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "aea94e35035d66152f3d20edc4d9db023a0d8f6c4ef552895388638d123c11c6",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "speech_tokenizer/decoder/qwen3_tts_tokenizer_12hz_p64_l6_together.axmodel",
+      "size": 4242100,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/speech_tokenizer/decoder/qwen3_tts_tokenizer_12hz_p64_l6_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "5c3da74cee6fee277fe496fce923a54dd5839192a4f8f11c8ab2e34dce545dc1",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "speech_tokenizer/decoder/qwen3_tts_tokenizer_12hz_p64_l7_together.axmodel",
+      "size": 4242100,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/speech_tokenizer/decoder/qwen3_tts_tokenizer_12hz_p64_l7_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "b0aca67c1f0c17186bed260bdb93b9e836d0215a62d14df50d441a7f681008ad",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "speech_tokenizer/decoder/qwen3_tts_tokenizer_12hz_post.axmodel",
+      "size": 589541,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/speech_tokenizer/decoder/qwen3_tts_tokenizer_12hz_post.axmodel",
+      "verifiedHashes": {
+        "sha256": "a4ed2653e592ed684c8b55289ca5d3163cdde5143254d45db5afc9658725643b",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "speech_tokenizer/speech_tokenizer_decode_post_t64.axmodel",
+      "size": 92519852,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/speech_tokenizer/speech_tokenizer_decode_post_t64.axmodel",
+      "verifiedHashes": {
+        "sha256": "fa8fc49b9622e0c403b226ed1bae26e9ab597f9bed386ce0ae0d9aeaf959becf",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "speech_tokenizer/speech_tokenizer_decode_pre_inproj.axmodel",
+      "size": 19381025,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/speech_tokenizer/speech_tokenizer_decode_pre_inproj.axmodel",
+      "verifiedHashes": {
+        "sha256": "4e485e0c0bbfda6e60daf215dc64d65bd3cafe9941ddd98618a6f80d7f0ab1d2",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "speech_tokenizer/speech_tokenizer_encoder.axmodel",
+      "size": 68001517,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/speech_tokenizer/speech_tokenizer_encoder.axmodel",
+      "verifiedHashes": {
+        "sha256": "61634d88a3721db6c5a1e30cff4d25042e678d6d8e816d3d2e8c0bd3814f2b0c",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "speech_tokenizer/speech_tokenizer_encoder_sim.onnx",
+      "size": 219824357,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/speech_tokenizer/speech_tokenizer_encoder_sim.onnx",
+      "verifiedHashes": {
+        "sha256": "3d86e0ddca6e00e1ac9e7b4f523d83392ed302b2a7659929957f889c9c052ecf",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/config.json",
+      "size": 637,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/talker/config.json",
+      "verifiedHashes": {
+        "sha256": "45099b0a95560d0c6952f57aaf0ff1f5f267775382463a2c0eccfe0b8b27f578",
+        "gitBlob": "0c8360dc9fc37002f4b1b0e703b7b68c9f548e88"
+      }
+    },
+    {
+      "path": "talker/post_config.json",
+      "size": 279,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/talker/post_config.json",
+      "verifiedHashes": {
+        "sha256": "21ecd0699e5ba6a1b53e0811fd74ca4e11a31382ea22c05f7175f6bc56191305",
+        "gitBlob": "8e1d6b0aa669ce6b2fb506209abc447289fd8331"
+      }
+    },
+    {
+      "path": "talker/qwen3_tokenizer.txt",
+      "size": 1611555,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/talker/qwen3_tokenizer.txt",
+      "verifiedHashes": {
+        "sha256": "46fafa42f69d10f67677adffd3ca6285e0c97b7deddfebaa98ceeac3557f04a3",
+        "gitBlob": "d980165de67b8cbdba0de5daabacc79187e3d910"
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l0_together.axmodel",
+      "size": 21777175,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/talker/qwen3_tts_talker_p128_l0_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "2aaa02e87c6b5bc05417228c61448b71638199383b1313dc44efd00b440f11a2",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l10_together.axmodel",
+      "size": 21776511,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/talker/qwen3_tts_talker_p128_l10_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "4be86023b43fe23ea58d1b228f8a483e2bbf2c2c26b57f8fabd5912897265f1f",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l11_together.axmodel",
+      "size": 21777503,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/talker/qwen3_tts_talker_p128_l11_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "e7d041fa4ce4d228f8a1769819be798a14de0e575f2c3b4f203e64d10f98920f",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l12_together.axmodel",
+      "size": 21777919,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/talker/qwen3_tts_talker_p128_l12_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "61e4dceaa08375c4d20878b0452752820dcb46029c4856115f71a5a574801536",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l13_together.axmodel",
+      "size": 21777759,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/talker/qwen3_tts_talker_p128_l13_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "ce294ea70bd43b5faf92a8701bb047b941fcd4867246e58b4052b3c8cb5bccaa",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l14_together.axmodel",
+      "size": 21776511,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/talker/qwen3_tts_talker_p128_l14_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "8fa4f1a4962b2cdb91002a3897f7fad8f716c52c0cdfd97759d2a9701a19b266",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l15_together.axmodel",
+      "size": 21777151,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/talker/qwen3_tts_talker_p128_l15_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "d22cb61a40f4e04cf5eef6ea28104d7245b68507079cbcc634009657432331b1",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l16_together.axmodel",
+      "size": 21777823,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/talker/qwen3_tts_talker_p128_l16_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "e10a773d72e9523adc018a7013ce5cd39d02d425a0b2fbe649827346b231ed53",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l17_together.axmodel",
+      "size": 21777375,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/talker/qwen3_tts_talker_p128_l17_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "176ee6db45ddaacca3a214e6a8cd1972d4aa8dedf0eb42e1813b55d878cfc1ea",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l18_together.axmodel",
+      "size": 21777599,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/talker/qwen3_tts_talker_p128_l18_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "4863c8da1a1d6fe65e1726edbdee4c3d15551eeb6f8d718a17453ea5d2dd6a7a",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l19_together.axmodel",
+      "size": 21777855,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/talker/qwen3_tts_talker_p128_l19_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "b72ec2b4cc542cf6afe4804bd58b8bd9c622e18bffeab05fa7fd47af9479dd17",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l1_together.axmodel",
+      "size": 21777559,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/talker/qwen3_tts_talker_p128_l1_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "e9afc77a83b00d7ec66586e9662c855de3c790b1a56070149e2fbe372644de64",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l20_together.axmodel",
+      "size": 21777183,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/talker/qwen3_tts_talker_p128_l20_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "f0409934c2957513f230a696f80da9e441d8c3c9407322307468b0e09f99fdde",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l21_together.axmodel",
+      "size": 21776799,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/talker/qwen3_tts_talker_p128_l21_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "2980a9d98cd2f9c51a2bf9386a3fd06a909be3ee2103c4de896b6e3cf29722a5",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l22_together.axmodel",
+      "size": 21777535,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/talker/qwen3_tts_talker_p128_l22_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "04eefbb35aa356a2c8a8673c60f398b3d1cad81e674fae7ca66fa18b3227916f",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l23_together.axmodel",
+      "size": 21777951,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/talker/qwen3_tts_talker_p128_l23_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "48fde9565595836f6e3cc09569e5036718a418b6cc794ee5db2e04c126382143",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l24_together.axmodel",
+      "size": 21777631,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/talker/qwen3_tts_talker_p128_l24_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "0381c02563064d566eb947ea4f5c73d290af8235d60ccfd734552e121081264f",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l25_together.axmodel",
+      "size": 21777567,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/talker/qwen3_tts_talker_p128_l25_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "7c45a15674d855cfae14a57d6be5855129d10c2291e501fc05ecb6268cdbde61",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l26_together.axmodel",
+      "size": 21776511,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/talker/qwen3_tts_talker_p128_l26_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "16c4ae1cecde9cb1f206e19284d38438a5a5c52290ebd7fd08ef93ed15b86d48",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l27_together.axmodel",
+      "size": 21776511,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/talker/qwen3_tts_talker_p128_l27_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "24dedba90aa8ecda922503d3342f421bb1e57f32ff34a2aeb14efb5e041d175d",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l2_together.axmodel",
+      "size": 21776983,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/talker/qwen3_tts_talker_p128_l2_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "20a4c47778a9a1ac1f7e6edc69b72ef4bef43ccee3bc4dfd8bbc74890cbfffe9",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l3_together.axmodel",
+      "size": 21777975,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/talker/qwen3_tts_talker_p128_l3_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "3c44e1d2df1beb3ec60d401b36725db4c8be41534f2fd5f179e9ee958163bff2",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l4_together.axmodel",
+      "size": 21776471,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/talker/qwen3_tts_talker_p128_l4_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "c9094cfca9e06476a505f0e65926261c8f503020b9c9e5248c1e0cddc96b6175",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l5_together.axmodel",
+      "size": 21776727,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/talker/qwen3_tts_talker_p128_l5_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "f97c27cd635c15eae3cb4694d53ea879bc9973e51edeec6dfa7f4791cb53eab8",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l6_together.axmodel",
+      "size": 21776887,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/talker/qwen3_tts_talker_p128_l6_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "052d1901524ce7a5c2a9f7881d783a8636fd3938e774fcbb66afb40941df0116",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l7_together.axmodel",
+      "size": 21776791,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/talker/qwen3_tts_talker_p128_l7_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "62e4313afd3dd091d9d8fb07e2e75d0863b066db2a13035224b50cc0c57b141b",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l8_together.axmodel",
+      "size": 21777271,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/talker/qwen3_tts_talker_p128_l8_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "74506ed475186753ed75badd60ecd0a6ae6606bea5c0e9e472879d223e911ce7",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l9_together.axmodel",
+      "size": 21776471,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/talker/qwen3_tts_talker_p128_l9_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "88d7f85a47c188b3418c62e90a5726fafd288050a93e200e7e1ccd16c8336ba2",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_post.axmodel",
+      "size": 3446575,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/talker/qwen3_tts_talker_post.axmodel",
+      "verifiedHashes": {
+        "sha256": "9572352cbd8690a791940585f740608b2429be0654c3feccccb19cfbe3f656b9",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/talker.model.codec_embedding.weight.bfloat16.bin",
+      "size": 6291456,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/talker/talker.model.codec_embedding.weight.bfloat16.bin",
+      "verifiedHashes": {
+        "sha256": "733b4f6c4afcce1d4880e65691c3284046a5f01382398a3008d4bdfc7156d41d",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/talker.model.text_embedding.weight.bfloat16.bin",
+      "size": 622329856,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/talker/talker.model.text_embedding.weight.bfloat16.bin",
+      "verifiedHashes": {
+        "sha256": "1ed4fbb339ef48327faee2aa2154756320fb54e9131976c7b063827ed984edf4",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/talker_resize_mlp_28.axmodel",
+      "size": 6796563,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/talker/talker_resize_mlp_28.axmodel",
+      "verifiedHashes": {
+        "sha256": "5340ce12cbd0e3b799ece4d388091dfb5ca6e19658a1117334e4c90c1dee0f32",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/talker_resize_mlp_3.axmodel",
+      "size": 6774070,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-0.6B-Base-AX650/resolve/3b3fde9cb90b3646c7c9fdeefe083402c0399c2f/talker/talker_resize_mlp_3.axmodel",
+      "verifiedHashes": {
+        "sha256": "4995689bd049fcfff8066e1888eace75fb90bce71c8590217a9533117d4704e5",
+        "gitBlob": null
+      }
+    }
+  ],
+  "runnerSha256": "9d45e51081b5eabed7913d41b6d48793c9b7638d7f30231823d88accddcb0ead"
+}

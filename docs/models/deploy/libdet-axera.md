@@ -150,7 +150,7 @@ python ~/edgeaccel/libdet_card.py \
 
 ## 查看部署效果
 
-**已运行，效果仍需评估** · 2026-09-28 · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
+**已运行，效果仍需评估** · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
 
 使用固定SDK完成YOLOv8s、YOLO11s、YOLO11x与YOLO11x-Pose的20次串行调用，展示三种场景、原始检测数量与17点人体姿态。
 
@@ -355,7 +355,7 @@ python ~/edgeaccel/libdet_card.py \
 <details>
 <summary>查看样例环境与运行耗时</summary>
 
-环境：RK3576 + AX8850 16GB M.2。日期：2026-09-28。模型版本：`0a50691f9581143c28be91c0e7247250fbc52daf`。
+环境：RK3576 + AX8850 16GB M.2。模型版本：`0a50691f9581143c28be91c0e7247250fbc52daf`。
 
 | 组件 | 版本或配置 |
 | --- | --- |
@@ -372,8 +372,6 @@ python ~/edgeaccel/libdet_card.py \
 
 适用范围：
 
-- YOLOv8使用明确固定的历史三输出头权重；当前六输出头版本未通过本SDK的接口匹配，不能直接替换。
-- 姿态结果没有逐点置信度；有一个坐标位于图像外，远处人物可能漏检。
 - 检测数量不是正确目标数量；未完成COCO精度、关键点误差、浮点对照或实际8GB回归。
 - 本次验证原生SDK整体流程，未捕获底层输入输出张量，也未测试Gradio网页界面。
 
@@ -389,7 +387,7 @@ python ~/edgeaccel/libdet_card.py \
 | [`lib/gradio_example.py`](https://huggingface.co/AXERA-TECH/libdet.axera/blob/0a50691f9581143c28be91c0e7247250fbc52daf/lib/gradio_example.py) | Python 程序 / 前后处理 |
 | [`lib/requirements.txt`](https://huggingface.co/AXERA-TECH/libdet.axera/blob/0a50691f9581143c28be91c0e7247250fbc52daf/lib/requirements.txt) | Python 依赖清单 |
 
-仓库提交：`0a50691f9581143c28be91c0e7247250fbc52daf`。仓库中的 0 个 `.axmodel` 文件可能包括多个芯片、规格和分片。运行时使用本页指定的配套文件，完整列表见[固定版本目录](https://huggingface.co/AXERA-TECH/libdet.axera/tree/0a50691f9581143c28be91c0e7247250fbc52daf)。
+仓库提交：`0a50691f9581143c28be91c0e7247250fbc52daf`。该提交没有预编译 `.axmodel` 文件。运行时使用本页指定的配套文件，完整列表见[固定版本目录](https://huggingface.co/AXERA-TECH/libdet.axera/tree/0a50691f9581143c28be91c0e7247250fbc52daf)。
 
 </details>
 

@@ -1,0 +1,5147 @@
+{
+  "modelId": "3D-Speaker-MT.Axera",
+  "revision": "3592794622a5627aca47c81fdc2569e632ffc910",
+  "date": "2026-09-30",
+  "variants": [
+    {
+      "label": "会议音频：说话人分段",
+      "observation": "输入使用仓库中的完整音频。下表保留原始转录，包括错字、标点和特殊标记；说话人标签尚无独立人工标注校验。词级时间边界检查未通过：每个 ASR 切片均有时间戳超出其实际时长。新增表中的时间以各切片起点为零；最终文本中的时间段经过合并，不能替代逐词对齐验证。接入字幕或按词定位播放前，需要修正并复测时间边界。",
+      "previews": [],
+      "audio": [
+        {
+          "caption": "播放本次输入音频",
+          "path": "/validation/effects/3d-speaker-mt-axera-20260930/meeting-mt-offline-a.wav"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "说话人标签",
+            "时间段（秒）",
+            "实际转录"
+          ],
+          "rows": [
+            [
+              "Speaker_0",
+              "0.000–63.810",
+              "试错的过程很简单。而且特别是今天报名仓雪卡的同学，你们可以。听到后面的有专门的活动课，他会大大降低你的试绸成本。其实你也可以不来听课。为什么你自己写嘛？我先今天写5个点，我就试试试验一下，反正这5个点不行，我再写5个点，这试再不行。那再写5个点吧。你总会所谓的活动大神和所谓的高手都是只有一个。把所有的错，所有的坑全国趟一遍，留下正确的，你就是所谓的大神，。明白吗？所以说关于活动通过这一块，我只送给你们四个字啊，换位思考。如果说你要想降低。你的试错成本，今天来这里你们就是对的。。因为有畅血畅血卡这个机会，所以说关于活动过于不过这个问题，或者活动很难通过这个话题。呃，如果真的。那要坐下来聊的话，要聊一天。但是我觉得我刚才说的四个字足够。好，谢谢。"
+            ],
+            [
+              "Speaker_1",
+              "63.810–70.471",
+              "好，非常感谢那个三茂老师的回答。三茂老师说，我们在。整个店铺的这个活动当中，我们要学会换位思考。其实。"
+            ]
+          ]
+        },
+        {
+          "headers": [
+            "音频时长",
+            "文件处理流程",
+            "AXCL 调用合计",
+            "调用次数"
+          ],
+          "rows": [
+            [
+              "70.471 s",
+              "20.406 s",
+              "1.660 s",
+              "95"
+            ]
+          ]
+        },
+        {
+          "headers": [
+            "内部 ASR 切片",
+            "实际输入时长",
+            "最晚词级时间戳",
+            "超出切片末尾的词条数"
+          ],
+          "rows": [
+            [
+              "segment_0",
+              "6.480000 s",
+              "7.650 s",
+              "1"
+            ],
+            [
+              "segment_1",
+              "17.190000 s",
+              "23.010 s",
+              "1"
+            ],
+            [
+              "segment_2",
+              "14.540000 s",
+              "15.330 s",
+              "2"
+            ],
+            [
+              "segment_3",
+              "11.700000 s",
+              "15.330 s",
+              "1"
+            ],
+            [
+              "segment_4",
+              "9.910000 s",
+              "15.330 s",
+              "1"
+            ],
+            [
+              "segment_5",
+              "10.650625 s",
+              "15.330 s",
+              "1"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "modelId": "3D-Speaker-MT.Axera",
+        "revision": "3592794622a5627aca47c81fdc2569e632ffc910",
+        "completed": true,
+        "scope": "official offline VAD, speaker clustering and ASR; web and LLM summary not tested",
+        "runnerSha256": "08e81ff59bcabe5bc47e33250cfc3d7ef6166cff3a030b1d463232fa1ff529ff",
+        "inputPath": "wav/vad_example.wav",
+        "inputSha256": "a7431f0169ef76ef630c945a1d2c3675d8c8c2df2ae4a6b16f8a88ba1bccfbbb",
+        "filesBefore": [
+          {
+            "path": "README.md",
+            "sha256": "6d039f2aa644b7b773eb43837d50fbf2c07be80cba6f2c381284f82059ff8b45"
+          },
+          {
+            "path": "ax_meeting/__init__.py",
+            "sha256": "5a03509ec06b415534670c2798cebe136ffddde8d3d875ba1cb73cebb44d414a"
+          },
+          {
+            "path": "ax_meeting/ax_model/auto.npy",
+            "sha256": "8d0997706b30274f7ff3b157ca90df50b7ed8ced35091a0231700355d5ee1374"
+          },
+          {
+            "path": "ax_meeting/ax_model/campplus.axmodel",
+            "sha256": "3e85b4d59a94488caa727ca76c7fe2ba408de02587cd8c9a6680b83488338b16"
+          },
+          {
+            "path": "ax_meeting/ax_model/chn_jpn_yue_eng_ko_spectok.bpe.model",
+            "sha256": "aa87f86064c3730d799ddf7af3c04659151102cba548bce325cf06ba4da4e6a8"
+          },
+          {
+            "path": "ax_meeting/ax_model/en.npy",
+            "sha256": "1f21c6d5a0b876c696b15ee80317ee558b6a19a084c1147a13a2871900f6c72e"
+          },
+          {
+            "path": "ax_meeting/ax_model/event_emo.npy",
+            "sha256": "1d22e3df5d192fdc3e73e368a2cb576975a5a43a114a8432a91c036adf8e2263"
+          },
+          {
+            "path": "ax_meeting/ax_model/ja.npy",
+            "sha256": "75a83ded838de7d02a56de32b774a50d2f02b5ec69880e7acdce600666f77517"
+          },
+          {
+            "path": "ax_meeting/ax_model/ko.npy",
+            "sha256": "f371fffcecd75c1268e2ef8043c276ec9b231177b5138b39e5732c65401749db"
+          },
+          {
+            "path": "ax_meeting/ax_model/sensevoice.axmodel",
+            "sha256": "7b64a36fa15e75ab5e3b75f18ae87a058970cff76219407e503b54fb53dd8e38"
+          },
+          {
+            "path": "ax_meeting/ax_model/sensevoice/am.mvn",
+            "sha256": "29b3c740a2c0cfc6b308126d31d7f265fa2be74f3bb095cd2f143ea970896ae5"
+          },
+          {
+            "path": "ax_meeting/ax_model/sensevoice/config.yaml",
+            "sha256": "f71e239ba36705564b5bf2d2ffd07eece07b8e3f2bbf6d2c99d8df856339ac19"
+          },
+          {
+            "path": "ax_meeting/ax_model/vad.axmodel",
+            "sha256": "7d89d1087f14597bc93ae5cf89e1c60d8ee76d7bdffbe679ef6dc002635e6f6b"
+          },
+          {
+            "path": "ax_meeting/ax_model/vad/am.mvn",
+            "sha256": "6820fef9687708c4fc3fab2530179c8fcea6262daa25514380056cd8f6eb1754"
+          },
+          {
+            "path": "ax_meeting/ax_model/vad/config.yaml",
+            "sha256": "486861ca26ddb79081663b6179cb204c6bfae71c52f04aafc48a9e9d8dde1e93"
+          },
+          {
+            "path": "ax_meeting/ax_model/withitn.npy",
+            "sha256": "39bf02586f59237894fc2918ab2db4f12ec3c084c41465718832fbd7646ea729"
+          },
+          {
+            "path": "ax_meeting/ax_model/yue.npy",
+            "sha256": "319c3d30e6b176338a6d8871f81ec57af5c3c112cecbdce4a0bf36bec51f3ceb"
+          },
+          {
+            "path": "ax_meeting/ax_model/zh.npy",
+            "sha256": "0c952f976ae70642c8f682c88711abce3a2b64ba20a6d8ca0b706f227de816eb"
+          },
+          {
+            "path": "ax_meeting/axengine_loader.py",
+            "sha256": "cf83bcd0ea7b0ec794f0a2d087c6e1f79d33de0381f32f82786547d818a2369b"
+          },
+          {
+            "path": "ax_meeting/config.py",
+            "sha256": "87d30493f20cd2a91b55ca435a076e43d366631bfe489cae9378dfd169b2d333"
+          },
+          {
+            "path": "ax_meeting/diar_asr_cli.py",
+            "sha256": "c39df0bd98333edbe081175852a19e059dd578e3e70405a876ba875bf08d0259"
+          },
+          {
+            "path": "ax_meeting/diar_utils.py",
+            "sha256": "a71b0e8f7b216f9ff64d245f6e9389fe2773dfb7f819962cd77729684378487f"
+          },
+          {
+            "path": "ax_meeting/engines.py",
+            "sha256": "33e3eab7314a230460f3d82430cf7268475f436ea8bbf1b8ae072e20b6038590"
+          },
+          {
+            "path": "ax_meeting/model_bundle.py",
+            "sha256": "58ec5f322830fe830b9beb36c5287042cd9d18d054b62eb84b734b35c3c4d570"
+          },
+          {
+            "path": "ax_meeting/pipeline.py",
+            "sha256": "6ea174452036704b89101b0d01e56f48606d12dd6d4304feafdccaf97e9da281"
+          },
+          {
+            "path": "ax_meeting/positional.py",
+            "sha256": "eb26fc3ac8d0f9266dbd3393afaba8769fcc2427c2211f852f9dc31f8a569330"
+          },
+          {
+            "path": "ax_meeting/server.py",
+            "sha256": "0f6fd3b80718706539e69b0c8caafcc1ae0de7e7390ab3be61f840120eea5bd0"
+          },
+          {
+            "path": "ax_meeting/static/app.js",
+            "sha256": "84890dfa6ef3e6bdde09f89a5721deb4fc7cd65c4519ba80438134722cb0529e"
+          },
+          {
+            "path": "ax_meeting/static/index.html",
+            "sha256": "79351ce7f06da14fd1398206f1225126847209f6889fd8ab534c2ee7140723c2"
+          },
+          {
+            "path": "ax_meeting/static/style.css",
+            "sha256": "65bc898d7a1b73c416d051d58948b42170d86958102ee025caffeac893d7ac12"
+          },
+          {
+            "path": "ax_meeting/summarize_cli.py",
+            "sha256": "fa7e06df38ddb2493f02014485734ceaf6dd12530ee767c162c241e7a03bd6a8"
+          },
+          {
+            "path": "ax_meeting/summarizer.py",
+            "sha256": "43822005ccb7a0ac180945ad509a9629610b351e4e6ee3aa830f7609b951ff06"
+          },
+          {
+            "path": "ax_meeting/text_cleaner.py",
+            "sha256": "244e2262b0c762f50fbb093d07d1cae71aafe0a745bd7832a88ec275044a71a5"
+          },
+          {
+            "path": "ax_meeting/utils/__init__.py",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "ax_meeting/utils/ax_cam_bin.py",
+            "sha256": "c6439cb2a250846e1304131b7d99d563d29526b2b36cb5e85235957fff6f0557"
+          },
+          {
+            "path": "ax_meeting/utils/ax_model_bin.py",
+            "sha256": "495975a8b580bf2804a3bd35dcc37adf633a089bef0fd4f6547e01f7131ff90a"
+          },
+          {
+            "path": "ax_meeting/utils/ax_vad_bin.py",
+            "sha256": "a032024208a75de16ad011609ba232a5ca5da67bfe353f967472a99dccfca1ef"
+          },
+          {
+            "path": "ax_meeting/utils/cluster_utils.py",
+            "sha256": "a9c35572d702576838e7aa481325dce208e2712792f6e30ad6bc7b2e77fad611"
+          },
+          {
+            "path": "ax_meeting/utils/ctc_alignment.py",
+            "sha256": "46fb3d921d23fa0f7f0c068fc4ec2338ac8930fb82272444845f59f5a9d7d7ab"
+          },
+          {
+            "path": "ax_meeting/utils/frontend.py",
+            "sha256": "685e19bcdb76a6277f48416e0e9b2f67ee1a9fce03d7456fdd8ecb3f51f11f7d"
+          },
+          {
+            "path": "ax_meeting/utils/infer_func.py",
+            "sha256": "266ed33cdfd036c1c2515cc0be3a932b6f5957e239aef6bbd25971e96b3513e6"
+          },
+          {
+            "path": "ax_meeting/utils/infer_utils.py",
+            "sha256": "74b04ba2d37e21ca9b03bcde7c7eea681dbf5e758e44031de93fd22debeb4817"
+          },
+          {
+            "path": "ax_meeting/utils/sentencepiece_tokenizer.py",
+            "sha256": "0f1f6250fda106d3d7c9693d1519ebd8f972c7c75d022a6cc149132b03a0e58d"
+          },
+          {
+            "path": "ax_meeting/utils/speaker_fbank.py",
+            "sha256": "4d181caccbb7298297c1433601a609844276d1d310dc18758048458ff4a3793a"
+          },
+          {
+            "path": "ax_meeting/utils/speakerlab/process/augmentation.py",
+            "sha256": "28ddff0b88c2cec886c7aa1a78ab1d1f4ff0ebdb826118ef2bef17aba7f59143"
+          },
+          {
+            "path": "ax_meeting/utils/speakerlab/process/processor.py",
+            "sha256": "c6145c34ff2d3889d3bcf3d75564f354e1f85bd83f2c8edb1d22cf9163ef87fa"
+          },
+          {
+            "path": "ax_meeting/utils/speakerlab/utils/fileio.py",
+            "sha256": "83c66a90d2fd819e259a5904e84460e1472d7e914a0462ea3a477e44f89a260d"
+          },
+          {
+            "path": "ax_meeting/utils/speakerlab/utils/utils.py",
+            "sha256": "9624c0d3f40efa75c6365e4e0fcdb75a8225b234700f7b97571a70e9ba264190"
+          },
+          {
+            "path": "ax_meeting/utils/utils/__init__.py",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "ax_meeting/utils/utils/e2e_vad.py",
+            "sha256": "3b13734a2995ef9c544be66a4edb95c150afb17484388c594ab70ef7436e7345"
+          },
+          {
+            "path": "ax_meeting/utils/utils/frontend.py",
+            "sha256": "1fe1e7115efc2e20c11eb4ae50b0b421de5f40d2a9546b9cf7003184e0003be6"
+          },
+          {
+            "path": "ax_meeting/utils/utils/utils.py",
+            "sha256": "7a69bc3d7f30b8d224cefdcd034d01de54a0e6847fa345f17eade25cd3fc3386"
+          },
+          {
+            "path": "ax_meeting/utils/vad_utils.py",
+            "sha256": "2c24b223d223bdceff79fd9d8e92c14c7fd1e41d6a3f3bf236788335ab4ae47b"
+          },
+          {
+            "path": "ax_meeting/vad_asr_cli.py",
+            "sha256": "f84d778110be13c681ddc073f1bda08bff76e2795265c8c1332d672a87b74892"
+          },
+          {
+            "path": "requirements.txt",
+            "sha256": "788136d8d516d68cfa7e31b68a80fe1a9355aa7d5311768c4c503592fc9ed916"
+          },
+          {
+            "path": "wav/002.mp3",
+            "sha256": "4bdd7d1fb5723e253083820c659d65449e43abff0fbf7b5ac52fea3c1d7572fc"
+          },
+          {
+            "path": "wav/vad_example.wav",
+            "sha256": "a7431f0169ef76ef630c945a1d2c3675d8c8c2df2ae4a6b16f8a88ba1bccfbbb"
+          }
+        ],
+        "filesAfter": [
+          {
+            "path": "README.md",
+            "sha256": "6d039f2aa644b7b773eb43837d50fbf2c07be80cba6f2c381284f82059ff8b45"
+          },
+          {
+            "path": "ax_meeting/__init__.py",
+            "sha256": "5a03509ec06b415534670c2798cebe136ffddde8d3d875ba1cb73cebb44d414a"
+          },
+          {
+            "path": "ax_meeting/ax_model/auto.npy",
+            "sha256": "8d0997706b30274f7ff3b157ca90df50b7ed8ced35091a0231700355d5ee1374"
+          },
+          {
+            "path": "ax_meeting/ax_model/campplus.axmodel",
+            "sha256": "3e85b4d59a94488caa727ca76c7fe2ba408de02587cd8c9a6680b83488338b16"
+          },
+          {
+            "path": "ax_meeting/ax_model/chn_jpn_yue_eng_ko_spectok.bpe.model",
+            "sha256": "aa87f86064c3730d799ddf7af3c04659151102cba548bce325cf06ba4da4e6a8"
+          },
+          {
+            "path": "ax_meeting/ax_model/en.npy",
+            "sha256": "1f21c6d5a0b876c696b15ee80317ee558b6a19a084c1147a13a2871900f6c72e"
+          },
+          {
+            "path": "ax_meeting/ax_model/event_emo.npy",
+            "sha256": "1d22e3df5d192fdc3e73e368a2cb576975a5a43a114a8432a91c036adf8e2263"
+          },
+          {
+            "path": "ax_meeting/ax_model/ja.npy",
+            "sha256": "75a83ded838de7d02a56de32b774a50d2f02b5ec69880e7acdce600666f77517"
+          },
+          {
+            "path": "ax_meeting/ax_model/ko.npy",
+            "sha256": "f371fffcecd75c1268e2ef8043c276ec9b231177b5138b39e5732c65401749db"
+          },
+          {
+            "path": "ax_meeting/ax_model/sensevoice.axmodel",
+            "sha256": "7b64a36fa15e75ab5e3b75f18ae87a058970cff76219407e503b54fb53dd8e38"
+          },
+          {
+            "path": "ax_meeting/ax_model/sensevoice/am.mvn",
+            "sha256": "29b3c740a2c0cfc6b308126d31d7f265fa2be74f3bb095cd2f143ea970896ae5"
+          },
+          {
+            "path": "ax_meeting/ax_model/sensevoice/config.yaml",
+            "sha256": "f71e239ba36705564b5bf2d2ffd07eece07b8e3f2bbf6d2c99d8df856339ac19"
+          },
+          {
+            "path": "ax_meeting/ax_model/vad.axmodel",
+            "sha256": "7d89d1087f14597bc93ae5cf89e1c60d8ee76d7bdffbe679ef6dc002635e6f6b"
+          },
+          {
+            "path": "ax_meeting/ax_model/vad/am.mvn",
+            "sha256": "6820fef9687708c4fc3fab2530179c8fcea6262daa25514380056cd8f6eb1754"
+          },
+          {
+            "path": "ax_meeting/ax_model/vad/config.yaml",
+            "sha256": "486861ca26ddb79081663b6179cb204c6bfae71c52f04aafc48a9e9d8dde1e93"
+          },
+          {
+            "path": "ax_meeting/ax_model/withitn.npy",
+            "sha256": "39bf02586f59237894fc2918ab2db4f12ec3c084c41465718832fbd7646ea729"
+          },
+          {
+            "path": "ax_meeting/ax_model/yue.npy",
+            "sha256": "319c3d30e6b176338a6d8871f81ec57af5c3c112cecbdce4a0bf36bec51f3ceb"
+          },
+          {
+            "path": "ax_meeting/ax_model/zh.npy",
+            "sha256": "0c952f976ae70642c8f682c88711abce3a2b64ba20a6d8ca0b706f227de816eb"
+          },
+          {
+            "path": "ax_meeting/axengine_loader.py",
+            "sha256": "cf83bcd0ea7b0ec794f0a2d087c6e1f79d33de0381f32f82786547d818a2369b"
+          },
+          {
+            "path": "ax_meeting/config.py",
+            "sha256": "87d30493f20cd2a91b55ca435a076e43d366631bfe489cae9378dfd169b2d333"
+          },
+          {
+            "path": "ax_meeting/diar_asr_cli.py",
+            "sha256": "c39df0bd98333edbe081175852a19e059dd578e3e70405a876ba875bf08d0259"
+          },
+          {
+            "path": "ax_meeting/diar_utils.py",
+            "sha256": "a71b0e8f7b216f9ff64d245f6e9389fe2773dfb7f819962cd77729684378487f"
+          },
+          {
+            "path": "ax_meeting/engines.py",
+            "sha256": "33e3eab7314a230460f3d82430cf7268475f436ea8bbf1b8ae072e20b6038590"
+          },
+          {
+            "path": "ax_meeting/model_bundle.py",
+            "sha256": "58ec5f322830fe830b9beb36c5287042cd9d18d054b62eb84b734b35c3c4d570"
+          },
+          {
+            "path": "ax_meeting/pipeline.py",
+            "sha256": "6ea174452036704b89101b0d01e56f48606d12dd6d4304feafdccaf97e9da281"
+          },
+          {
+            "path": "ax_meeting/positional.py",
+            "sha256": "eb26fc3ac8d0f9266dbd3393afaba8769fcc2427c2211f852f9dc31f8a569330"
+          },
+          {
+            "path": "ax_meeting/server.py",
+            "sha256": "0f6fd3b80718706539e69b0c8caafcc1ae0de7e7390ab3be61f840120eea5bd0"
+          },
+          {
+            "path": "ax_meeting/static/app.js",
+            "sha256": "84890dfa6ef3e6bdde09f89a5721deb4fc7cd65c4519ba80438134722cb0529e"
+          },
+          {
+            "path": "ax_meeting/static/index.html",
+            "sha256": "79351ce7f06da14fd1398206f1225126847209f6889fd8ab534c2ee7140723c2"
+          },
+          {
+            "path": "ax_meeting/static/style.css",
+            "sha256": "65bc898d7a1b73c416d051d58948b42170d86958102ee025caffeac893d7ac12"
+          },
+          {
+            "path": "ax_meeting/summarize_cli.py",
+            "sha256": "fa7e06df38ddb2493f02014485734ceaf6dd12530ee767c162c241e7a03bd6a8"
+          },
+          {
+            "path": "ax_meeting/summarizer.py",
+            "sha256": "43822005ccb7a0ac180945ad509a9629610b351e4e6ee3aa830f7609b951ff06"
+          },
+          {
+            "path": "ax_meeting/text_cleaner.py",
+            "sha256": "244e2262b0c762f50fbb093d07d1cae71aafe0a745bd7832a88ec275044a71a5"
+          },
+          {
+            "path": "ax_meeting/utils/__init__.py",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "ax_meeting/utils/ax_cam_bin.py",
+            "sha256": "c6439cb2a250846e1304131b7d99d563d29526b2b36cb5e85235957fff6f0557"
+          },
+          {
+            "path": "ax_meeting/utils/ax_model_bin.py",
+            "sha256": "495975a8b580bf2804a3bd35dcc37adf633a089bef0fd4f6547e01f7131ff90a"
+          },
+          {
+            "path": "ax_meeting/utils/ax_vad_bin.py",
+            "sha256": "a032024208a75de16ad011609ba232a5ca5da67bfe353f967472a99dccfca1ef"
+          },
+          {
+            "path": "ax_meeting/utils/cluster_utils.py",
+            "sha256": "a9c35572d702576838e7aa481325dce208e2712792f6e30ad6bc7b2e77fad611"
+          },
+          {
+            "path": "ax_meeting/utils/ctc_alignment.py",
+            "sha256": "46fb3d921d23fa0f7f0c068fc4ec2338ac8930fb82272444845f59f5a9d7d7ab"
+          },
+          {
+            "path": "ax_meeting/utils/frontend.py",
+            "sha256": "685e19bcdb76a6277f48416e0e9b2f67ee1a9fce03d7456fdd8ecb3f51f11f7d"
+          },
+          {
+            "path": "ax_meeting/utils/infer_func.py",
+            "sha256": "266ed33cdfd036c1c2515cc0be3a932b6f5957e239aef6bbd25971e96b3513e6"
+          },
+          {
+            "path": "ax_meeting/utils/infer_utils.py",
+            "sha256": "74b04ba2d37e21ca9b03bcde7c7eea681dbf5e758e44031de93fd22debeb4817"
+          },
+          {
+            "path": "ax_meeting/utils/sentencepiece_tokenizer.py",
+            "sha256": "0f1f6250fda106d3d7c9693d1519ebd8f972c7c75d022a6cc149132b03a0e58d"
+          },
+          {
+            "path": "ax_meeting/utils/speaker_fbank.py",
+            "sha256": "4d181caccbb7298297c1433601a609844276d1d310dc18758048458ff4a3793a"
+          },
+          {
+            "path": "ax_meeting/utils/speakerlab/process/augmentation.py",
+            "sha256": "28ddff0b88c2cec886c7aa1a78ab1d1f4ff0ebdb826118ef2bef17aba7f59143"
+          },
+          {
+            "path": "ax_meeting/utils/speakerlab/process/processor.py",
+            "sha256": "c6145c34ff2d3889d3bcf3d75564f354e1f85bd83f2c8edb1d22cf9163ef87fa"
+          },
+          {
+            "path": "ax_meeting/utils/speakerlab/utils/fileio.py",
+            "sha256": "83c66a90d2fd819e259a5904e84460e1472d7e914a0462ea3a477e44f89a260d"
+          },
+          {
+            "path": "ax_meeting/utils/speakerlab/utils/utils.py",
+            "sha256": "9624c0d3f40efa75c6365e4e0fcdb75a8225b234700f7b97571a70e9ba264190"
+          },
+          {
+            "path": "ax_meeting/utils/utils/__init__.py",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "ax_meeting/utils/utils/e2e_vad.py",
+            "sha256": "3b13734a2995ef9c544be66a4edb95c150afb17484388c594ab70ef7436e7345"
+          },
+          {
+            "path": "ax_meeting/utils/utils/frontend.py",
+            "sha256": "1fe1e7115efc2e20c11eb4ae50b0b421de5f40d2a9546b9cf7003184e0003be6"
+          },
+          {
+            "path": "ax_meeting/utils/utils/utils.py",
+            "sha256": "7a69bc3d7f30b8d224cefdcd034d01de54a0e6847fa345f17eade25cd3fc3386"
+          },
+          {
+            "path": "ax_meeting/utils/vad_utils.py",
+            "sha256": "2c24b223d223bdceff79fd9d8e92c14c7fd1e41d6a3f3bf236788335ab4ae47b"
+          },
+          {
+            "path": "ax_meeting/vad_asr_cli.py",
+            "sha256": "f84d778110be13c681ddc073f1bda08bff76e2795265c8c1332d672a87b74892"
+          },
+          {
+            "path": "requirements.txt",
+            "sha256": "788136d8d516d68cfa7e31b68a80fe1a9355aa7d5311768c4c503592fc9ed916"
+          },
+          {
+            "path": "wav/002.mp3",
+            "sha256": "4bdd7d1fb5723e253083820c659d65449e43abff0fbf7b5ac52fea3c1d7572fc"
+          },
+          {
+            "path": "wav/vad_example.wav",
+            "sha256": "a7431f0169ef76ef630c945a1d2c3675d8c8c2df2ae4a6b16f8a88ba1bccfbbb"
+          }
+        ],
+        "sessions": [
+          {
+            "model": "ax_meeting/ax_model/vad.axmodel",
+            "sha256": "7d89d1087f14597bc93ae5cf89e1c60d8ee76d7bdffbe679ef6dc002635e6f6b",
+            "provider": "AXCLRTExecutionProvider",
+            "loadSeconds": 0.5508384200002183,
+            "calls": 2,
+            "allFinite": true,
+            "runMilliseconds": [
+              65.6736560013087,
+              77.89074100037396
+            ],
+            "groups": {
+              "0": {
+                "inputs": [
+                  {
+                    "name": "speech",
+                    "shape": [
+                      1,
+                      6000,
+                      400
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "in_cache0",
+                    "shape": [
+                      1,
+                      128,
+                      19,
+                      1
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "in_cache1",
+                    "shape": [
+                      1,
+                      128,
+                      19,
+                      1
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "in_cache2",
+                    "shape": [
+                      1,
+                      128,
+                      19,
+                      1
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "in_cache3",
+                    "shape": [
+                      1,
+                      128,
+                      19,
+                      1
+                    ],
+                    "dtype": "float32"
+                  }
+                ],
+                "outputs": [
+                  {
+                    "name": "logits",
+                    "shape": [
+                      1,
+                      6000,
+                      248
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "out_cache0",
+                    "shape": [
+                      1,
+                      128,
+                      19,
+                      1
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "out_cache1",
+                    "shape": [
+                      1,
+                      128,
+                      19,
+                      1
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "out_cache2",
+                    "shape": [
+                      1,
+                      128,
+                      19,
+                      1
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "out_cache3",
+                    "shape": [
+                      1,
+                      128,
+                      19,
+                      1
+                    ],
+                    "dtype": "float32"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "model": "ax_meeting/ax_model/campplus.axmodel",
+            "sha256": "3e85b4d59a94488caa727ca76c7fe2ba408de02587cd8c9a6680b83488338b16",
+            "provider": "AXCLRTExecutionProvider",
+            "loadSeconds": 0.2009013139995659,
+            "calls": 81,
+            "allFinite": true,
+            "runMilliseconds": [
+              6.085938999603968,
+              5.8546460004436085,
+              5.863396001586807,
+              5.804188000183785,
+              5.94710500081419,
+              5.922604999796022,
+              5.681979000655701,
+              5.830437999975402,
+              5.852312999195419,
+              5.82577100067283,
+              5.6895620000432245,
+              5.766562999269809,
+              5.743813000663067,
+              5.865438000910217,
+              5.7971879996330244,
+              5.633562999719288,
+              5.851437999808695,
+              5.654562000927399,
+              5.78289599980053,
+              5.81206300012127,
+              5.64785399910761,
+              5.567644999246113,
+              5.715813000279013,
+              5.737395998949069,
+              5.789021000964567,
+              5.743520001487923,
+              5.761604999861447,
+              5.757811999501428,
+              5.822854000143707,
+              5.729521000830573,
+              5.738854000810534,
+              5.632977999994182,
+              5.724270000428078,
+              5.834520999997039,
+              5.707062000510632,
+              5.777936999947997,
+              5.659812000885722,
+              5.867480000233627,
+              5.753437999374,
+              6.4231069991365075,
+              5.812646000777022,
+              5.786686999272206,
+              5.8566879997670185,
+              5.818187999466318,
+              5.83218799874885,
+              5.7826039992505684,
+              5.75606199890899,
+              5.804186999739613,
+              5.757229000664665,
+              5.7706460011104355,
+              5.775020999863045,
+              5.7344790002389345,
+              5.969564001134131,
+              6.120646999988821,
+              5.779979999715579,
+              5.816729999423842,
+              5.94943800024339,
+              5.831603999467916,
+              5.772395999883884,
+              5.866020999746979,
+              5.807687999549671,
+              5.796604998977273,
+              5.754604000685504,
+              5.835979000039515,
+              5.7960209996963385,
+              5.83218799874885,
+              5.7715210004971595,
+              5.705020999812405,
+              5.712605001463089,
+              5.804188000183785,
+              5.830437999975402,
+              5.742646000726381,
+              5.797478999738814,
+              5.706186999304919,
+              5.845313000463648,
+              5.777354999736417,
+              5.783770999187254,
+              5.764520999946399,
+              5.8692290003818925,
+              5.711728999813204,
+              5.740896000133944
+            ],
+            "groups": {
+              "0": {
+                "inputs": [
+                  {
+                    "name": "feature",
+                    "shape": [
+                      1,
+                      360,
+                      80
+                    ],
+                    "dtype": "float32"
+                  }
+                ],
+                "outputs": [
+                  {
+                    "name": "embedding",
+                    "shape": [
+                      1,
+                      192
+                    ],
+                    "dtype": "float32"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "model": "ax_meeting/ax_model/sensevoice.axmodel",
+            "sha256": "7b64a36fa15e75ab5e3b75f18ae87a058970cff76219407e503b54fb53dd8e38",
+            "provider": "AXCLRTExecutionProvider",
+            "loadSeconds": 4.3455180959990685,
+            "calls": 12,
+            "allFinite": true,
+            "runMilliseconds": [
+              93.84730000056152,
+              93.86217499923077,
+              81.04425300007279,
+              80.9748360006779,
+              81.03667000068526,
+              81.6127130001405,
+              82.19838199875085,
+              89.13890799885849,
+              92.0065850004903,
+              84.5597240004281,
+              92.6677949992154,
+              93.99196699996537
+            ],
+            "groups": {
+              "0": {
+                "inputs": [
+                  {
+                    "name": "speech",
+                    "shape": [
+                      1,
+                      132,
+                      560
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "masks",
+                    "shape": [
+                      1,
+                      1,
+                      132
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "position_encoding",
+                    "shape": [
+                      1,
+                      132,
+                      560
+                    ],
+                    "dtype": "float32"
+                  }
+                ],
+                "outputs": [
+                  {
+                    "name": "ctc_logits",
+                    "shape": [
+                      1,
+                      132,
+                      25055
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "encoder_out_lens",
+                    "shape": [
+                      1
+                    ],
+                    "dtype": "int32"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "totalCalls": 95,
+        "stages": {
+          "vad": [
+            [
+              [
+                70,
+                2340
+              ],
+              [
+                2620,
+                6200
+              ],
+              [
+                6480,
+                23670
+              ],
+              [
+                23950,
+                26270
+              ],
+              [
+                26770,
+                28990
+              ],
+              [
+                29950,
+                31430
+              ],
+              [
+                31750,
+                37600
+              ],
+              [
+                38210,
+                46900
+              ],
+              [
+                47310,
+                49630
+              ],
+              [
+                49910,
+                56460
+              ],
+              [
+                56740,
+                59540
+              ],
+              [
+                59820,
+                70550
+              ]
+            ]
+          ],
+          "speaker": {
+            "chunks": [
+              [
+                0.07,
+                1.57
+              ],
+              [
+                0.8200000000000001,
+                2.3200000000000003
+              ],
+              [
+                1.57,
+                2.34
+              ],
+              [
+                2.62,
+                4.12
+              ],
+              [
+                3.37,
+                4.87
+              ],
+              [
+                4.12,
+                5.62
+              ],
+              [
+                4.87,
+                6.2
+              ],
+              [
+                6.48,
+                7.98
+              ],
+              [
+                7.23,
+                8.73
+              ],
+              [
+                7.98,
+                9.48
+              ],
+              [
+                8.73,
+                10.23
+              ],
+              [
+                9.48,
+                10.98
+              ],
+              [
+                10.23,
+                11.73
+              ],
+              [
+                10.98,
+                12.48
+              ],
+              [
+                11.73,
+                13.23
+              ],
+              [
+                12.48,
+                13.98
+              ],
+              [
+                13.23,
+                14.73
+              ],
+              [
+                13.98,
+                15.48
+              ],
+              [
+                14.73,
+                16.23
+              ],
+              [
+                15.48,
+                16.98
+              ],
+              [
+                16.23,
+                17.73
+              ],
+              [
+                16.98,
+                18.48
+              ],
+              [
+                17.73,
+                19.23
+              ],
+              [
+                18.48,
+                19.98
+              ],
+              [
+                19.23,
+                20.73
+              ],
+              [
+                19.98,
+                21.48
+              ],
+              [
+                20.73,
+                22.23
+              ],
+              [
+                21.48,
+                22.98
+              ],
+              [
+                22.23,
+                23.67
+              ],
+              [
+                23.95,
+                25.45
+              ],
+              [
+                24.7,
+                26.2
+              ],
+              [
+                25.45,
+                26.27
+              ],
+              [
+                26.77,
+                28.27
+              ],
+              [
+                27.52,
+                28.99
+              ],
+              [
+                29.95,
+                31.43
+              ],
+              [
+                31.75,
+                33.25
+              ],
+              [
+                32.5,
+                34.0
+              ],
+              [
+                33.25,
+                34.75
+              ],
+              [
+                34.0,
+                35.5
+              ],
+              [
+                34.75,
+                36.25
+              ],
+              [
+                35.5,
+                37.0
+              ],
+              [
+                36.25,
+                37.6
+              ],
+              [
+                38.21,
+                39.71
+              ],
+              [
+                38.96,
+                40.46
+              ],
+              [
+                39.71,
+                41.21
+              ],
+              [
+                40.46,
+                41.96
+              ],
+              [
+                41.21,
+                42.71
+              ],
+              [
+                41.96,
+                43.46
+              ],
+              [
+                42.71,
+                44.21
+              ],
+              [
+                43.46,
+                44.96
+              ],
+              [
+                44.21,
+                45.71
+              ],
+              [
+                44.96,
+                46.46
+              ],
+              [
+                45.71,
+                46.9
+              ],
+              [
+                47.31,
+                48.81
+              ],
+              [
+                48.06,
+                49.56
+              ],
+              [
+                48.81,
+                49.63
+              ],
+              [
+                49.91,
+                51.41
+              ],
+              [
+                50.66,
+                52.16
+              ],
+              [
+                51.41,
+                52.91
+              ],
+              [
+                52.16,
+                53.66
+              ],
+              [
+                52.91,
+                54.41
+              ],
+              [
+                53.66,
+                55.16
+              ],
+              [
+                54.41,
+                55.91
+              ],
+              [
+                55.16,
+                56.46
+              ],
+              [
+                56.74,
+                58.24
+              ],
+              [
+                57.49,
+                58.99
+              ],
+              [
+                58.24,
+                59.54
+              ],
+              [
+                59.82,
+                61.32
+              ],
+              [
+                60.57,
+                62.07
+              ],
+              [
+                61.32,
+                62.82
+              ],
+              [
+                62.07,
+                63.57
+              ],
+              [
+                62.82,
+                64.32
+              ],
+              [
+                63.57,
+                65.07
+              ],
+              [
+                64.32,
+                65.82
+              ],
+              [
+                65.07,
+                66.57
+              ],
+              [
+                65.82,
+                67.32
+              ],
+              [
+                66.57,
+                68.07
+              ],
+              [
+                67.32,
+                68.82
+              ],
+              [
+                68.07,
+                69.57
+              ],
+              [
+                68.82,
+                70.32
+              ],
+              [
+                69.57,
+                70.55
+              ]
+            ],
+            "embeddingShape": [
+              81,
+              192
+            ],
+            "sha256": "d378bda07648210769af476479073dd369f889742550b3fcdd47e49961859159"
+          },
+          "asr": [
+            {
+              "key": "segment_0",
+              "samples": 103680,
+              "text": "试错的过程很简单。而且特别是今天报名仓雪卡的同学，你们可以。",
+              "metadata": {
+                "load_data": "0.000",
+                "preprocess": "0.003",
+                "extract_feat": "0.085",
+                "total_time": "1.583",
+                "inference_time": "1.495",
+                "merged_timestamps": [
+                  [
+                    0.0,
+                    0.57
+                  ],
+                  [
+                    0.57,
+                    0.63
+                  ],
+                  [
+                    0.63,
+                    0.87
+                  ],
+                  [
+                    0.87,
+                    1.05
+                  ],
+                  [
+                    1.05,
+                    1.23
+                  ],
+                  [
+                    1.23,
+                    1.65
+                  ],
+                  [
+                    1.65,
+                    1.83
+                  ],
+                  [
+                    1.83,
+                    2.07
+                  ],
+                  [
+                    2.07,
+                    2.79
+                  ],
+                  [
+                    2.79,
+                    2.91
+                  ],
+                  [
+                    2.91,
+                    3.09
+                  ],
+                  [
+                    3.09,
+                    3.21
+                  ],
+                  [
+                    3.21,
+                    3.27
+                  ],
+                  [
+                    3.27,
+                    3.45
+                  ],
+                  [
+                    3.45,
+                    3.57
+                  ],
+                  [
+                    3.57,
+                    3.75
+                  ],
+                  [
+                    3.75,
+                    4.11
+                  ],
+                  [
+                    4.11,
+                    4.23
+                  ],
+                  [
+                    4.23,
+                    4.35
+                  ],
+                  [
+                    4.35,
+                    4.47
+                  ],
+                  [
+                    4.47,
+                    4.59
+                  ],
+                  [
+                    4.59,
+                    4.71
+                  ],
+                  [
+                    4.71,
+                    4.83
+                  ],
+                  [
+                    4.83,
+                    4.95
+                  ],
+                  [
+                    4.95,
+                    5.07
+                  ],
+                  [
+                    5.07,
+                    5.37
+                  ],
+                  [
+                    5.37,
+                    5.49
+                  ],
+                  [
+                    5.49,
+                    5.67
+                  ],
+                  [
+                    5.67,
+                    5.85
+                  ],
+                  [
+                    5.85,
+                    7.65
+                  ]
+                ],
+                "merged_words": [
+                  "试",
+                  "错",
+                  "的",
+                  "过",
+                  "程",
+                  "很",
+                  "简",
+                  "单",
+                  "。",
+                  "而",
+                  "且",
+                  "特",
+                  "别",
+                  "是",
+                  "今",
+                  "天",
+                  "报",
+                  "名",
+                  "仓",
+                  "雪",
+                  "卡",
+                  "的",
+                  "同",
+                  "学",
+                  "，",
+                  "你",
+                  "们",
+                  "可",
+                  "以",
+                  "。"
+                ]
+              }
+            },
+            {
+              "key": "segment_1",
+              "samples": 275040,
+              "text": "听到后面的有专门的活动课，他会大大降低你的试绸成本。其实你也可以不来听课。为什么你自己写嘛？我先今天写5个点，我就试试试验一下，反正这5个点不行，我再写5个点，这试再不行。那再写5个点吧。",
+              "metadata": {
+                "load_data": "0.000",
+                "preprocess": "0.002",
+                "extract_feat": "0.230",
+                "total_time": "1.027",
+                "inference_time": "0.795",
+                "merged_timestamps": [
+                  [
+                    0.0,
+                    0.21
+                  ],
+                  [
+                    0.21,
+                    0.45
+                  ],
+                  [
+                    0.45,
+                    0.57
+                  ],
+                  [
+                    0.57,
+                    0.69
+                  ],
+                  [
+                    0.69,
+                    0.87
+                  ],
+                  [
+                    0.87,
+                    1.47
+                  ],
+                  [
+                    1.47,
+                    1.71
+                  ],
+                  [
+                    1.71,
+                    1.89
+                  ],
+                  [
+                    1.89,
+                    2.19
+                  ],
+                  [
+                    2.19,
+                    2.31
+                  ],
+                  [
+                    2.31,
+                    2.49
+                  ],
+                  [
+                    2.49,
+                    2.73
+                  ],
+                  [
+                    2.73,
+                    2.85
+                  ],
+                  [
+                    2.85,
+                    3.09
+                  ],
+                  [
+                    3.09,
+                    3.33
+                  ],
+                  [
+                    3.33,
+                    3.39
+                  ],
+                  [
+                    3.45,
+                    3.99
+                  ],
+                  [
+                    3.99,
+                    4.35
+                  ],
+                  [
+                    4.35,
+                    4.53
+                  ],
+                  [
+                    4.53,
+                    4.65
+                  ],
+                  [
+                    4.65,
+                    4.83
+                  ],
+                  [
+                    4.83,
+                    4.95
+                  ],
+                  [
+                    4.95,
+                    5.07
+                  ],
+                  [
+                    5.07,
+                    5.25
+                  ],
+                  [
+                    5.25,
+                    5.43
+                  ],
+                  [
+                    5.43,
+                    5.49
+                  ],
+                  [
+                    5.49,
+                    5.91
+                  ],
+                  [
+                    5.91,
+                    6.03
+                  ],
+                  [
+                    6.03,
+                    6.15
+                  ],
+                  [
+                    6.15,
+                    6.27
+                  ],
+                  [
+                    6.27,
+                    6.39
+                  ],
+                  [
+                    6.39,
+                    6.51
+                  ],
+                  [
+                    6.51,
+                    6.75
+                  ],
+                  [
+                    6.75,
+                    6.99
+                  ],
+                  [
+                    6.99,
+                    7.11
+                  ],
+                  [
+                    7.11,
+                    7.29
+                  ],
+                  [
+                    7.29,
+                    7.65
+                  ],
+                  [
+                    7.68,
+                    7.77
+                  ],
+                  [
+                    7.77,
+                    7.89
+                  ],
+                  [
+                    7.89,
+                    8.01
+                  ],
+                  [
+                    8.01,
+                    8.31
+                  ],
+                  [
+                    8.31,
+                    8.43
+                  ],
+                  [
+                    8.43,
+                    8.55
+                  ],
+                  [
+                    8.55,
+                    8.73
+                  ],
+                  [
+                    8.73,
+                    8.91
+                  ],
+                  [
+                    8.91,
+                    8.97
+                  ],
+                  [
+                    8.97,
+                    9.57
+                  ],
+                  [
+                    9.57,
+                    9.81
+                  ],
+                  [
+                    9.81,
+                    9.99
+                  ],
+                  [
+                    9.99,
+                    10.05
+                  ],
+                  [
+                    10.05,
+                    10.23
+                  ],
+                  [
+                    10.23,
+                    10.35
+                  ],
+                  [
+                    10.35,
+                    10.47
+                  ],
+                  [
+                    10.47,
+                    10.65
+                  ],
+                  [
+                    10.65,
+                    10.71
+                  ],
+                  [
+                    10.71,
+                    10.89
+                  ],
+                  [
+                    10.89,
+                    11.07
+                  ],
+                  [
+                    11.07,
+                    11.37
+                  ],
+                  [
+                    11.43,
+                    11.55
+                  ],
+                  [
+                    11.61,
+                    11.91
+                  ],
+                  [
+                    11.91,
+                    12.03
+                  ],
+                  [
+                    12.03,
+                    12.15
+                  ],
+                  [
+                    12.15,
+                    12.27
+                  ],
+                  [
+                    12.27,
+                    12.39
+                  ],
+                  [
+                    12.39,
+                    12.45
+                  ],
+                  [
+                    12.45,
+                    12.57
+                  ],
+                  [
+                    12.57,
+                    12.69
+                  ],
+                  [
+                    12.69,
+                    12.81
+                  ],
+                  [
+                    12.81,
+                    12.93
+                  ],
+                  [
+                    12.93,
+                    13.05
+                  ],
+                  [
+                    13.05,
+                    13.17
+                  ],
+                  [
+                    13.17,
+                    13.29
+                  ],
+                  [
+                    13.29,
+                    13.35
+                  ],
+                  [
+                    13.35,
+                    13.59
+                  ],
+                  [
+                    13.59,
+                    13.77
+                  ],
+                  [
+                    13.77,
+                    13.89
+                  ],
+                  [
+                    13.89,
+                    14.01
+                  ],
+                  [
+                    14.01,
+                    14.19
+                  ],
+                  [
+                    14.19,
+                    14.31
+                  ],
+                  [
+                    14.31,
+                    14.61
+                  ],
+                  [
+                    14.61,
+                    14.73
+                  ],
+                  [
+                    14.73,
+                    14.91
+                  ],
+                  [
+                    14.91,
+                    15.03
+                  ],
+                  [
+                    15.03,
+                    15.15
+                  ],
+                  [
+                    15.15,
+                    15.27
+                  ],
+                  [
+                    15.27,
+                    15.33
+                  ],
+                  [
+                    15.36,
+                    16.11
+                  ],
+                  [
+                    16.11,
+                    16.23
+                  ],
+                  [
+                    16.23,
+                    16.41
+                  ],
+                  [
+                    16.41,
+                    16.47
+                  ],
+                  [
+                    16.47,
+                    16.65
+                  ],
+                  [
+                    16.65,
+                    16.77
+                  ],
+                  [
+                    16.77,
+                    16.89
+                  ],
+                  [
+                    16.89,
+                    23.01
+                  ]
+                ],
+                "merged_words": [
+                  "听",
+                  "到",
+                  "后",
+                  "面",
+                  "的",
+                  "有",
+                  "专",
+                  "门",
+                  "的",
+                  "活",
+                  "动",
+                  "课",
+                  "，",
+                  "他",
+                  "会",
+                  "大",
+                  "大",
+                  "降",
+                  "低",
+                  "你",
+                  "的",
+                  "试",
+                  "绸",
+                  "成",
+                  "本",
+                  "。",
+                  "其",
+                  "实",
+                  "你",
+                  "也",
+                  "可",
+                  "以",
+                  "不",
+                  "来",
+                  "听",
+                  "课",
+                  "。",
+                  "为",
+                  "什",
+                  "么",
+                  "你",
+                  "自",
+                  "己",
+                  "写",
+                  "嘛",
+                  "？",
+                  "我",
+                  "先",
+                  "今",
+                  "天",
+                  "写",
+                  "5",
+                  "个",
+                  "点",
+                  "，",
+                  "我",
+                  "就",
+                  "试",
+                  "试",
+                  "试",
+                  "验",
+                  "一",
+                  "下",
+                  "，",
+                  "反",
+                  "正",
+                  "这",
+                  "5",
+                  "个",
+                  "点",
+                  "不",
+                  "行",
+                  "，",
+                  "我",
+                  "再",
+                  "写",
+                  "5",
+                  "个",
+                  "点",
+                  "，",
+                  "这",
+                  "试",
+                  "再",
+                  "不",
+                  "行",
+                  "。",
+                  "那",
+                  "再",
+                  "写",
+                  "5",
+                  "个",
+                  "点",
+                  "吧",
+                  "。"
+                ]
+              }
+            },
+            {
+              "key": "segment_2",
+              "samples": 232640,
+              "text": "你总会所谓的活动大神和所谓的高手都是只有一个。把所有的错，所有的坑全国趟一遍，留下正确的，你就是所谓的大神，。",
+              "metadata": {
+                "load_data": "0.000",
+                "preprocess": "0.001",
+                "extract_feat": "0.185",
+                "total_time": "0.696",
+                "inference_time": "0.509",
+                "merged_timestamps": [
+                  [
+                    0.0,
+                    0.45
+                  ],
+                  [
+                    0.45,
+                    0.63
+                  ],
+                  [
+                    0.63,
+                    1.11
+                  ],
+                  [
+                    1.11,
+                    1.71
+                  ],
+                  [
+                    1.71,
+                    1.83
+                  ],
+                  [
+                    1.83,
+                    3.27
+                  ],
+                  [
+                    3.27,
+                    3.45
+                  ],
+                  [
+                    3.45,
+                    3.57
+                  ],
+                  [
+                    3.57,
+                    3.81
+                  ],
+                  [
+                    3.81,
+                    4.05
+                  ],
+                  [
+                    4.05,
+                    4.29
+                  ],
+                  [
+                    4.29,
+                    4.41
+                  ],
+                  [
+                    4.41,
+                    4.53
+                  ],
+                  [
+                    4.53,
+                    4.71
+                  ],
+                  [
+                    4.71,
+                    4.83
+                  ],
+                  [
+                    4.83,
+                    5.07
+                  ],
+                  [
+                    5.07,
+                    6.51
+                  ],
+                  [
+                    6.51,
+                    6.81
+                  ],
+                  [
+                    6.81,
+                    6.99
+                  ],
+                  [
+                    6.99,
+                    7.11
+                  ],
+                  [
+                    7.11,
+                    7.23
+                  ],
+                  [
+                    7.23,
+                    7.53
+                  ],
+                  [
+                    7.53,
+                    7.65
+                  ],
+                  [
+                    7.68,
+                    8.49
+                  ],
+                  [
+                    8.49,
+                    8.67
+                  ],
+                  [
+                    8.67,
+                    8.79
+                  ],
+                  [
+                    8.79,
+                    8.97
+                  ],
+                  [
+                    8.97,
+                    9.15
+                  ],
+                  [
+                    9.15,
+                    9.39
+                  ],
+                  [
+                    9.39,
+                    9.57
+                  ],
+                  [
+                    9.57,
+                    9.69
+                  ],
+                  [
+                    9.69,
+                    9.87
+                  ],
+                  [
+                    9.87,
+                    10.11
+                  ],
+                  [
+                    10.11,
+                    10.41
+                  ],
+                  [
+                    10.41,
+                    10.65
+                  ],
+                  [
+                    10.65,
+                    10.83
+                  ],
+                  [
+                    10.83,
+                    11.25
+                  ],
+                  [
+                    11.25,
+                    11.31
+                  ],
+                  [
+                    11.31,
+                    11.85
+                  ],
+                  [
+                    11.85,
+                    11.97
+                  ],
+                  [
+                    11.97,
+                    12.15
+                  ],
+                  [
+                    12.15,
+                    12.33
+                  ],
+                  [
+                    12.33,
+                    12.39
+                  ],
+                  [
+                    12.39,
+                    12.63
+                  ],
+                  [
+                    12.63,
+                    12.75
+                  ],
+                  [
+                    12.75,
+                    12.87
+                  ],
+                  [
+                    12.87,
+                    12.99
+                  ],
+                  [
+                    12.99,
+                    13.17
+                  ],
+                  [
+                    13.17,
+                    13.23
+                  ],
+                  [
+                    13.23,
+                    13.35
+                  ],
+                  [
+                    13.35,
+                    13.47
+                  ],
+                  [
+                    13.47,
+                    13.59
+                  ],
+                  [
+                    13.59,
+                    13.65
+                  ],
+                  [
+                    13.65,
+                    15.09
+                  ],
+                  [
+                    15.09,
+                    15.33
+                  ]
+                ],
+                "merged_words": [
+                  "你",
+                  "总",
+                  "会",
+                  "所",
+                  "谓",
+                  "的",
+                  "活",
+                  "动",
+                  "大",
+                  "神",
+                  "和",
+                  "所",
+                  "谓",
+                  "的",
+                  "高",
+                  "手",
+                  "都",
+                  "是",
+                  "只",
+                  "有",
+                  "一",
+                  "个",
+                  "。",
+                  "把",
+                  "所",
+                  "有",
+                  "的",
+                  "错",
+                  "，",
+                  "所",
+                  "有",
+                  "的",
+                  "坑",
+                  "全",
+                  "国",
+                  "趟",
+                  "一",
+                  "遍",
+                  "，",
+                  "留",
+                  "下",
+                  "正",
+                  "确",
+                  "的",
+                  "，",
+                  "你",
+                  "就",
+                  "是",
+                  "所",
+                  "谓",
+                  "的",
+                  "大",
+                  "神",
+                  "，",
+                  "。"
+                ]
+              }
+            },
+            {
+              "key": "segment_3",
+              "samples": 187200,
+              "text": "明白吗？所以说关于活动通过这一块，我只送给你们四个字啊，换位思考。如果说你要想降低。你的试错成本，今天来这里你们就是对的。。",
+              "metadata": {
+                "load_data": "0.000",
+                "preprocess": "0.001",
+                "extract_feat": "0.149",
+                "total_time": "0.711",
+                "inference_time": "0.562",
+                "merged_timestamps": [
+                  [
+                    0.0,
+                    0.33
+                  ],
+                  [
+                    0.33,
+                    0.51
+                  ],
+                  [
+                    0.51,
+                    0.69
+                  ],
+                  [
+                    0.69,
+                    0.75
+                  ],
+                  [
+                    0.75,
+                    0.99
+                  ],
+                  [
+                    0.99,
+                    1.11
+                  ],
+                  [
+                    1.11,
+                    1.29
+                  ],
+                  [
+                    1.29,
+                    1.47
+                  ],
+                  [
+                    1.47,
+                    1.59
+                  ],
+                  [
+                    1.59,
+                    1.71
+                  ],
+                  [
+                    1.71,
+                    1.89
+                  ],
+                  [
+                    1.89,
+                    2.07
+                  ],
+                  [
+                    2.07,
+                    2.19
+                  ],
+                  [
+                    2.19,
+                    2.25
+                  ],
+                  [
+                    2.25,
+                    2.37
+                  ],
+                  [
+                    2.37,
+                    2.43
+                  ],
+                  [
+                    2.43,
+                    2.55
+                  ],
+                  [
+                    2.55,
+                    2.73
+                  ],
+                  [
+                    2.73,
+                    2.85
+                  ],
+                  [
+                    2.85,
+                    2.97
+                  ],
+                  [
+                    2.97,
+                    3.09
+                  ],
+                  [
+                    3.09,
+                    3.21
+                  ],
+                  [
+                    3.21,
+                    3.39
+                  ],
+                  [
+                    3.39,
+                    3.51
+                  ],
+                  [
+                    3.51,
+                    3.69
+                  ],
+                  [
+                    3.69,
+                    3.81
+                  ],
+                  [
+                    3.81,
+                    4.23
+                  ],
+                  [
+                    4.23,
+                    4.41
+                  ],
+                  [
+                    4.41,
+                    4.65
+                  ],
+                  [
+                    4.65,
+                    4.89
+                  ],
+                  [
+                    4.89,
+                    5.01
+                  ],
+                  [
+                    5.01,
+                    5.19
+                  ],
+                  [
+                    5.19,
+                    5.31
+                  ],
+                  [
+                    5.31,
+                    5.73
+                  ],
+                  [
+                    5.73,
+                    5.91
+                  ],
+                  [
+                    5.91,
+                    6.27
+                  ],
+                  [
+                    6.27,
+                    6.69
+                  ],
+                  [
+                    6.69,
+                    6.93
+                  ],
+                  [
+                    6.93,
+                    7.17
+                  ],
+                  [
+                    7.17,
+                    7.41
+                  ],
+                  [
+                    7.41,
+                    7.59
+                  ],
+                  [
+                    7.59,
+                    7.65
+                  ],
+                  [
+                    7.68,
+                    7.77
+                  ],
+                  [
+                    7.77,
+                    7.89
+                  ],
+                  [
+                    7.89,
+                    8.01
+                  ],
+                  [
+                    8.01,
+                    8.19
+                  ],
+                  [
+                    8.19,
+                    8.31
+                  ],
+                  [
+                    8.31,
+                    8.55
+                  ],
+                  [
+                    8.55,
+                    9.21
+                  ],
+                  [
+                    9.21,
+                    9.39
+                  ],
+                  [
+                    9.39,
+                    9.57
+                  ],
+                  [
+                    9.57,
+                    9.93
+                  ],
+                  [
+                    9.93,
+                    10.11
+                  ],
+                  [
+                    10.11,
+                    10.29
+                  ],
+                  [
+                    10.29,
+                    10.47
+                  ],
+                  [
+                    10.47,
+                    10.65
+                  ],
+                  [
+                    10.65,
+                    10.71
+                  ],
+                  [
+                    10.71,
+                    10.89
+                  ],
+                  [
+                    10.89,
+                    11.01
+                  ],
+                  [
+                    11.01,
+                    11.25
+                  ],
+                  [
+                    11.25,
+                    11.37
+                  ],
+                  [
+                    11.43,
+                    15.33
+                  ]
+                ],
+                "merged_words": [
+                  "明",
+                  "白",
+                  "吗",
+                  "？",
+                  "所",
+                  "以",
+                  "说",
+                  "关",
+                  "于",
+                  "活",
+                  "动",
+                  "通",
+                  "过",
+                  "这",
+                  "一",
+                  "块",
+                  "，",
+                  "我",
+                  "只",
+                  "送",
+                  "给",
+                  "你",
+                  "们",
+                  "四",
+                  "个",
+                  "字",
+                  "啊",
+                  "，",
+                  "换",
+                  "位",
+                  "思",
+                  "考",
+                  "。",
+                  "如",
+                  "果",
+                  "说",
+                  "你",
+                  "要",
+                  "想",
+                  "降",
+                  "低",
+                  "。",
+                  "你",
+                  "的",
+                  "试",
+                  "错",
+                  "成",
+                  "本",
+                  "，",
+                  "今",
+                  "天",
+                  "来",
+                  "这",
+                  "里",
+                  "你",
+                  "们",
+                  "就",
+                  "是",
+                  "对",
+                  "的",
+                  "。",
+                  "。"
+                ]
+              }
+            },
+            {
+              "key": "segment_4",
+              "samples": 158560,
+              "text": "因为有畅血畅血卡这个机会，所以说关于活动过于不过这个问题，或者活动很难通过这个话题。呃，如果真的。那要坐下来聊的话，要聊一天。",
+              "metadata": {
+                "load_data": "0.000",
+                "preprocess": "0.001",
+                "extract_feat": "0.128",
+                "total_time": "0.728",
+                "inference_time": "0.598",
+                "merged_timestamps": [
+                  [
+                    0.0,
+                    0.33
+                  ],
+                  [
+                    0.33,
+                    0.51
+                  ],
+                  [
+                    0.51,
+                    0.75
+                  ],
+                  [
+                    0.75,
+                    0.93
+                  ],
+                  [
+                    0.93,
+                    1.17
+                  ],
+                  [
+                    1.17,
+                    1.35
+                  ],
+                  [
+                    1.35,
+                    1.53
+                  ],
+                  [
+                    1.53,
+                    1.71
+                  ],
+                  [
+                    1.71,
+                    1.83
+                  ],
+                  [
+                    1.83,
+                    1.95
+                  ],
+                  [
+                    1.95,
+                    2.01
+                  ],
+                  [
+                    2.01,
+                    2.19
+                  ],
+                  [
+                    2.19,
+                    2.43
+                  ],
+                  [
+                    2.43,
+                    2.49
+                  ],
+                  [
+                    2.49,
+                    2.61
+                  ],
+                  [
+                    2.61,
+                    2.79
+                  ],
+                  [
+                    2.79,
+                    2.91
+                  ],
+                  [
+                    2.91,
+                    3.03
+                  ],
+                  [
+                    3.03,
+                    3.15
+                  ],
+                  [
+                    3.15,
+                    3.27
+                  ],
+                  [
+                    3.27,
+                    3.45
+                  ],
+                  [
+                    3.45,
+                    3.57
+                  ],
+                  [
+                    3.57,
+                    3.69
+                  ],
+                  [
+                    3.69,
+                    3.87
+                  ],
+                  [
+                    3.87,
+                    4.23
+                  ],
+                  [
+                    4.23,
+                    4.35
+                  ],
+                  [
+                    4.35,
+                    4.41
+                  ],
+                  [
+                    4.41,
+                    4.53
+                  ],
+                  [
+                    4.53,
+                    4.71
+                  ],
+                  [
+                    4.71,
+                    4.77
+                  ],
+                  [
+                    4.77,
+                    4.95
+                  ],
+                  [
+                    4.95,
+                    5.07
+                  ],
+                  [
+                    5.07,
+                    5.19
+                  ],
+                  [
+                    5.19,
+                    5.31
+                  ],
+                  [
+                    5.31,
+                    5.49
+                  ],
+                  [
+                    5.49,
+                    5.61
+                  ],
+                  [
+                    5.61,
+                    5.73
+                  ],
+                  [
+                    5.73,
+                    5.85
+                  ],
+                  [
+                    5.85,
+                    5.97
+                  ],
+                  [
+                    5.97,
+                    6.15
+                  ],
+                  [
+                    6.15,
+                    6.33
+                  ],
+                  [
+                    6.33,
+                    6.45
+                  ],
+                  [
+                    6.45,
+                    6.99
+                  ],
+                  [
+                    6.99,
+                    7.17
+                  ],
+                  [
+                    7.17,
+                    7.29
+                  ],
+                  [
+                    7.29,
+                    7.41
+                  ],
+                  [
+                    7.41,
+                    7.53
+                  ],
+                  [
+                    7.53,
+                    7.59
+                  ],
+                  [
+                    7.59,
+                    7.65
+                  ],
+                  [
+                    7.68,
+                    7.71
+                  ],
+                  [
+                    7.71,
+                    7.89
+                  ],
+                  [
+                    7.89,
+                    8.13
+                  ],
+                  [
+                    8.13,
+                    8.25
+                  ],
+                  [
+                    8.25,
+                    8.37
+                  ],
+                  [
+                    8.37,
+                    8.49
+                  ],
+                  [
+                    8.49,
+                    8.55
+                  ],
+                  [
+                    8.55,
+                    8.67
+                  ],
+                  [
+                    8.67,
+                    8.73
+                  ],
+                  [
+                    8.73,
+                    8.91
+                  ],
+                  [
+                    8.91,
+                    9.03
+                  ],
+                  [
+                    9.03,
+                    9.15
+                  ],
+                  [
+                    9.15,
+                    9.39
+                  ],
+                  [
+                    9.39,
+                    15.33
+                  ]
+                ],
+                "merged_words": [
+                  "因",
+                  "为",
+                  "有",
+                  "畅",
+                  "血",
+                  "畅",
+                  "血",
+                  "卡",
+                  "这",
+                  "个",
+                  "机",
+                  "会",
+                  "，",
+                  "所",
+                  "以",
+                  "说",
+                  "关",
+                  "于",
+                  "活",
+                  "动",
+                  "过",
+                  "于",
+                  "不",
+                  "过",
+                  "这",
+                  "个",
+                  "问",
+                  "题",
+                  "，",
+                  "或",
+                  "者",
+                  "活",
+                  "动",
+                  "很",
+                  "难",
+                  "通",
+                  "过",
+                  "这",
+                  "个",
+                  "话",
+                  "题",
+                  "。",
+                  "呃",
+                  "，",
+                  "如",
+                  "果",
+                  "真",
+                  "的",
+                  "。",
+                  "那",
+                  "要",
+                  "坐",
+                  "下",
+                  "来",
+                  "聊",
+                  "的",
+                  "话",
+                  "，",
+                  "要",
+                  "聊",
+                  "一",
+                  "天",
+                  "。"
+                ]
+              }
+            },
+            {
+              "key": "segment_5",
+              "samples": 170410,
+              "text": "但是我觉得我刚才说的四个字足够。好，谢谢。好，非常感谢那个三茂老师的回答。三茂老师说，我们在。整个店铺的这个活动当中，我们要学会换位思考。其实。",
+              "metadata": {
+                "load_data": "0.000",
+                "preprocess": "0.001",
+                "extract_feat": "0.132",
+                "total_time": "0.769",
+                "inference_time": "0.636",
+                "merged_timestamps": [
+                  [
+                    0.0,
+                    0.27
+                  ],
+                  [
+                    0.27,
+                    0.39
+                  ],
+                  [
+                    0.39,
+                    0.57
+                  ],
+                  [
+                    0.57,
+                    0.69
+                  ],
+                  [
+                    0.69,
+                    0.81
+                  ],
+                  [
+                    0.81,
+                    1.23
+                  ],
+                  [
+                    1.23,
+                    1.35
+                  ],
+                  [
+                    1.35,
+                    1.47
+                  ],
+                  [
+                    1.47,
+                    1.59
+                  ],
+                  [
+                    1.59,
+                    1.77
+                  ],
+                  [
+                    1.77,
+                    1.83
+                  ],
+                  [
+                    1.83,
+                    2.01
+                  ],
+                  [
+                    2.01,
+                    2.25
+                  ],
+                  [
+                    2.25,
+                    2.49
+                  ],
+                  [
+                    2.49,
+                    2.67
+                  ],
+                  [
+                    2.67,
+                    2.85
+                  ],
+                  [
+                    2.85,
+                    3.33
+                  ],
+                  [
+                    3.33,
+                    3.39
+                  ],
+                  [
+                    3.39,
+                    3.51
+                  ],
+                  [
+                    3.57,
+                    3.69
+                  ],
+                  [
+                    3.69,
+                    3.99
+                  ],
+                  [
+                    3.99,
+                    4.17
+                  ],
+                  [
+                    4.17,
+                    4.29
+                  ],
+                  [
+                    4.29,
+                    4.41
+                  ],
+                  [
+                    4.41,
+                    4.53
+                  ],
+                  [
+                    4.53,
+                    4.71
+                  ],
+                  [
+                    4.71,
+                    4.89
+                  ],
+                  [
+                    4.89,
+                    5.01
+                  ],
+                  [
+                    5.01,
+                    5.19
+                  ],
+                  [
+                    5.19,
+                    5.31
+                  ],
+                  [
+                    5.31,
+                    5.43
+                  ],
+                  [
+                    5.43,
+                    5.55
+                  ],
+                  [
+                    5.55,
+                    5.61
+                  ],
+                  [
+                    5.61,
+                    5.79
+                  ],
+                  [
+                    5.79,
+                    5.85
+                  ],
+                  [
+                    5.85,
+                    5.91
+                  ],
+                  [
+                    5.91,
+                    6.21
+                  ],
+                  [
+                    6.21,
+                    6.27
+                  ],
+                  [
+                    6.27,
+                    6.39
+                  ],
+                  [
+                    6.39,
+                    6.51
+                  ],
+                  [
+                    6.51,
+                    6.57
+                  ],
+                  [
+                    6.57,
+                    6.69
+                  ],
+                  [
+                    6.69,
+                    6.75
+                  ],
+                  [
+                    6.75,
+                    6.87
+                  ],
+                  [
+                    6.87,
+                    6.99
+                  ],
+                  [
+                    6.99,
+                    7.59
+                  ],
+                  [
+                    7.59,
+                    7.65
+                  ],
+                  [
+                    7.68,
+                    7.71
+                  ],
+                  [
+                    7.71,
+                    7.83
+                  ],
+                  [
+                    7.83,
+                    7.95
+                  ],
+                  [
+                    7.95,
+                    8.07
+                  ],
+                  [
+                    8.07,
+                    8.19
+                  ],
+                  [
+                    8.19,
+                    8.25
+                  ],
+                  [
+                    8.25,
+                    8.43
+                  ],
+                  [
+                    8.43,
+                    8.49
+                  ],
+                  [
+                    8.49,
+                    8.61
+                  ],
+                  [
+                    8.61,
+                    8.73
+                  ],
+                  [
+                    8.73,
+                    8.85
+                  ],
+                  [
+                    8.85,
+                    8.97
+                  ],
+                  [
+                    8.97,
+                    9.03
+                  ],
+                  [
+                    9.03,
+                    9.09
+                  ],
+                  [
+                    9.09,
+                    9.21
+                  ],
+                  [
+                    9.21,
+                    9.33
+                  ],
+                  [
+                    9.33,
+                    9.45
+                  ],
+                  [
+                    9.45,
+                    9.63
+                  ],
+                  [
+                    9.63,
+                    9.81
+                  ],
+                  [
+                    9.81,
+                    9.93
+                  ],
+                  [
+                    9.93,
+                    10.11
+                  ],
+                  [
+                    10.11,
+                    10.17
+                  ],
+                  [
+                    10.17,
+                    10.29
+                  ],
+                  [
+                    10.29,
+                    10.53
+                  ],
+                  [
+                    10.53,
+                    15.33
+                  ]
+                ],
+                "merged_words": [
+                  "但",
+                  "是",
+                  "我",
+                  "觉",
+                  "得",
+                  "我",
+                  "刚",
+                  "才",
+                  "说",
+                  "的",
+                  "四",
+                  "个",
+                  "字",
+                  "足",
+                  "够",
+                  "。",
+                  "好",
+                  "，",
+                  "谢",
+                  "谢",
+                  "。",
+                  "好",
+                  "，",
+                  "非",
+                  "常",
+                  "感",
+                  "谢",
+                  "那",
+                  "个",
+                  "三",
+                  "茂",
+                  "老",
+                  "师",
+                  "的",
+                  "回",
+                  "答",
+                  "。",
+                  "三",
+                  "茂",
+                  "老",
+                  "师",
+                  "说",
+                  "，",
+                  "我",
+                  "们",
+                  "在",
+                  "。",
+                  "整",
+                  "个",
+                  "店",
+                  "铺",
+                  "的",
+                  "这",
+                  "个",
+                  "活",
+                  "动",
+                  "当",
+                  "中",
+                  "，",
+                  "我",
+                  "们",
+                  "要",
+                  "学",
+                  "会",
+                  "换",
+                  "位",
+                  "思",
+                  "考",
+                  "。",
+                  "其",
+                  "实",
+                  "。"
+                ]
+              }
+            }
+          ]
+        },
+        "versions": {
+          "numpy": "1.26.4",
+          "scipy": "1.17.1",
+          "scikit-learn": "1.9.1",
+          "fastcluster": "1.2.6",
+          "kaldi-native-fbank": "1.22.3",
+          "soundfile": "0.13.1",
+          "torch": "2.5.1",
+          "sentencepiece": "0.2.1",
+          "jieba": "0.42.1"
+        },
+        "audio": {
+          "originalSamples": 1127530,
+          "originalSampleRate": 16000,
+          "originalChannels": 1,
+          "processedSamples": 1127530,
+          "sampleRate": 16000,
+          "durationSeconds": 70.470625
+        },
+        "transcript": "Speaker_0: [0.000 63.810] 试错的过程很简单。而且特别是今天报名仓雪卡的同学，你们可以。听到后面的有专门的活动课，他会大大降低你的试绸成本。其实你也可以不来听课。为什么你自己写嘛？我先今天写5个点，我就试试试验一下，反正这5个点不行，我再写5个点，这试再不行。那再写5个点吧。你总会所谓的活动大神和所谓的高手都是只有一个。把所有的错，所有的坑全国趟一遍，留下正确的，你就是所谓的大神，。明白吗？所以说关于活动通过这一块，我只送给你们四个字啊，换位思考。如果说你要想降低。你的试错成本，今天来这里你们就是对的。。因为有畅血畅血卡这个机会，所以说关于活动过于不过这个问题，或者活动很难通过这个话题。呃，如果真的。那要坐下来聊的话，要聊一天。但是我觉得我刚才说的四个字足够。好，谢谢。\nSpeaker_1: [63.810 70.471] 好，非常感谢那个三茂老师的回答。三茂老师说，我们在。整个店铺的这个活动当中，我们要学会换位思考。其实。",
+        "transcriptSha256": "9dd9718066b2b96900d82b73905babe62d3bf8e37893e950348a82a6eab9852a",
+        "segments": [
+          {
+            "speaker": 0,
+            "start": 0.0,
+            "end": 63.81,
+            "text": "试错的过程很简单。而且特别是今天报名仓雪卡的同学，你们可以。听到后面的有专门的活动课，他会大大降低你的试绸成本。其实你也可以不来听课。为什么你自己写嘛？我先今天写5个点，我就试试试验一下，反正这5个点不行，我再写5个点，这试再不行。那再写5个点吧。你总会所谓的活动大神和所谓的高手都是只有一个。把所有的错，所有的坑全国趟一遍，留下正确的，你就是所谓的大神，。明白吗？所以说关于活动通过这一块，我只送给你们四个字啊，换位思考。如果说你要想降低。你的试错成本，今天来这里你们就是对的。。因为有畅血畅血卡这个机会，所以说关于活动过于不过这个问题，或者活动很难通过这个话题。呃，如果真的。那要坐下来聊的话，要聊一天。但是我觉得我刚才说的四个字足够。好，谢谢。"
+          },
+          {
+            "speaker": 1,
+            "start": 63.81,
+            "end": 70.471,
+            "text": "好，非常感谢那个三茂老师的回答。三茂老师说，我们在。整个店铺的这个活动当中，我们要学会换位思考。其实。"
+          }
+        ],
+        "speakerCount": 2,
+        "elapsedSeconds": 20.40556917200047,
+        "provider": "AXCLRTExecutionProvider",
+        "publicationNormalization": "Top-level provider derived from all archived sessions; original archive unchanged."
+      },
+      "sourceArchiveSha256": "65d8b7b6f1207af8482f7cd3fc977984ef583cabf569aa7696cf1131457e6100"
+    },
+    {
+      "label": "自然中文录音：原始识别结果",
+      "observation": "输入使用仓库中的完整音频。下表保留原始转录，包括错字、标点和特殊标记；说话人标签尚无独立人工标注校验。词级时间边界检查未通过：每个 ASR 切片均有时间戳超出其实际时长。新增表中的时间以各切片起点为零；最终文本中的时间段经过合并，不能替代逐词对齐验证。接入字幕或按词定位播放前，需要修正并复测时间边界。",
+      "previews": [],
+      "audio": [
+        {
+          "caption": "播放本次输入音频",
+          "path": "/validation/effects/3d-speaker-mt-axera-20260930/meeting-mt-natural-a.mp3"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "说话人标签",
+            "时间段（秒）",
+            "实际转录"
+          ],
+          "rows": [
+            [
+              "Speaker_0",
+              "0.000–29.952",
+              "有的，那么一般是非本人医院的。嗯，单位停保的时候，如实给你妻子填写停保原因，或者说呃如。过单位停报原因填写错了，导致你妻子生育津贴这个呃申请失业金申请的这个原因，就是非本人。医院中断这个原因不符合的，那么需要提呃申请失业金的时候，提供一个单位开具的解除劳动关系证明，写明具体。解除劳动关系原因证明是非本人意愿的。&lt;|EMO_UNKNOWN|&gt;&lt;|Speech|&gt;&lt;|woitn|&gt;."
+            ]
+          ]
+        },
+        {
+          "headers": [
+            "音频时长",
+            "文件处理流程",
+            "AXCL 调用合计",
+            "调用次数"
+          ],
+          "rows": [
+            [
+              "29.952 s",
+              "14.996 s",
+              "0.811 s",
+              "45"
+            ]
+          ]
+        },
+        {
+          "headers": [
+            "内部 ASR 切片",
+            "实际输入时长",
+            "最晚词级时间戳",
+            "超出切片末尾的词条数"
+          ],
+          "rows": [
+            [
+              "segment_0",
+              "2.820000 s",
+              "7.650 s",
+              "2"
+            ],
+            [
+              "segment_1",
+              "25.780000 s",
+              "30.690 s",
+              "1"
+            ],
+            [
+              "segment_2",
+              "1.300000 s",
+              "7.650 s",
+              "4"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "modelId": "3D-Speaker-MT.Axera",
+        "revision": "3592794622a5627aca47c81fdc2569e632ffc910",
+        "provider": "AXCLRTExecutionProvider",
+        "completed": true,
+        "scope": "official offline VAD, speaker clustering and ASR; web and LLM summary not tested",
+        "runnerSha256": "f2e7b945451dbf801ab4c7b5fcc1abfd96f20c482601d45df1558990471ab8d2",
+        "inputPath": "wav/002.mp3",
+        "inputSha256": "4bdd7d1fb5723e253083820c659d65449e43abff0fbf7b5ac52fea3c1d7572fc",
+        "filesBefore": [
+          {
+            "path": "README.md",
+            "sha256": "6d039f2aa644b7b773eb43837d50fbf2c07be80cba6f2c381284f82059ff8b45"
+          },
+          {
+            "path": "ax_meeting/__init__.py",
+            "sha256": "5a03509ec06b415534670c2798cebe136ffddde8d3d875ba1cb73cebb44d414a"
+          },
+          {
+            "path": "ax_meeting/ax_model/auto.npy",
+            "sha256": "8d0997706b30274f7ff3b157ca90df50b7ed8ced35091a0231700355d5ee1374"
+          },
+          {
+            "path": "ax_meeting/ax_model/campplus.axmodel",
+            "sha256": "3e85b4d59a94488caa727ca76c7fe2ba408de02587cd8c9a6680b83488338b16"
+          },
+          {
+            "path": "ax_meeting/ax_model/chn_jpn_yue_eng_ko_spectok.bpe.model",
+            "sha256": "aa87f86064c3730d799ddf7af3c04659151102cba548bce325cf06ba4da4e6a8"
+          },
+          {
+            "path": "ax_meeting/ax_model/en.npy",
+            "sha256": "1f21c6d5a0b876c696b15ee80317ee558b6a19a084c1147a13a2871900f6c72e"
+          },
+          {
+            "path": "ax_meeting/ax_model/event_emo.npy",
+            "sha256": "1d22e3df5d192fdc3e73e368a2cb576975a5a43a114a8432a91c036adf8e2263"
+          },
+          {
+            "path": "ax_meeting/ax_model/ja.npy",
+            "sha256": "75a83ded838de7d02a56de32b774a50d2f02b5ec69880e7acdce600666f77517"
+          },
+          {
+            "path": "ax_meeting/ax_model/ko.npy",
+            "sha256": "f371fffcecd75c1268e2ef8043c276ec9b231177b5138b39e5732c65401749db"
+          },
+          {
+            "path": "ax_meeting/ax_model/sensevoice.axmodel",
+            "sha256": "7b64a36fa15e75ab5e3b75f18ae87a058970cff76219407e503b54fb53dd8e38"
+          },
+          {
+            "path": "ax_meeting/ax_model/sensevoice/am.mvn",
+            "sha256": "29b3c740a2c0cfc6b308126d31d7f265fa2be74f3bb095cd2f143ea970896ae5"
+          },
+          {
+            "path": "ax_meeting/ax_model/sensevoice/config.yaml",
+            "sha256": "f71e239ba36705564b5bf2d2ffd07eece07b8e3f2bbf6d2c99d8df856339ac19"
+          },
+          {
+            "path": "ax_meeting/ax_model/vad.axmodel",
+            "sha256": "7d89d1087f14597bc93ae5cf89e1c60d8ee76d7bdffbe679ef6dc002635e6f6b"
+          },
+          {
+            "path": "ax_meeting/ax_model/vad/am.mvn",
+            "sha256": "6820fef9687708c4fc3fab2530179c8fcea6262daa25514380056cd8f6eb1754"
+          },
+          {
+            "path": "ax_meeting/ax_model/vad/config.yaml",
+            "sha256": "486861ca26ddb79081663b6179cb204c6bfae71c52f04aafc48a9e9d8dde1e93"
+          },
+          {
+            "path": "ax_meeting/ax_model/withitn.npy",
+            "sha256": "39bf02586f59237894fc2918ab2db4f12ec3c084c41465718832fbd7646ea729"
+          },
+          {
+            "path": "ax_meeting/ax_model/yue.npy",
+            "sha256": "319c3d30e6b176338a6d8871f81ec57af5c3c112cecbdce4a0bf36bec51f3ceb"
+          },
+          {
+            "path": "ax_meeting/ax_model/zh.npy",
+            "sha256": "0c952f976ae70642c8f682c88711abce3a2b64ba20a6d8ca0b706f227de816eb"
+          },
+          {
+            "path": "ax_meeting/axengine_loader.py",
+            "sha256": "cf83bcd0ea7b0ec794f0a2d087c6e1f79d33de0381f32f82786547d818a2369b"
+          },
+          {
+            "path": "ax_meeting/config.py",
+            "sha256": "87d30493f20cd2a91b55ca435a076e43d366631bfe489cae9378dfd169b2d333"
+          },
+          {
+            "path": "ax_meeting/diar_asr_cli.py",
+            "sha256": "c39df0bd98333edbe081175852a19e059dd578e3e70405a876ba875bf08d0259"
+          },
+          {
+            "path": "ax_meeting/diar_utils.py",
+            "sha256": "a71b0e8f7b216f9ff64d245f6e9389fe2773dfb7f819962cd77729684378487f"
+          },
+          {
+            "path": "ax_meeting/engines.py",
+            "sha256": "33e3eab7314a230460f3d82430cf7268475f436ea8bbf1b8ae072e20b6038590"
+          },
+          {
+            "path": "ax_meeting/model_bundle.py",
+            "sha256": "58ec5f322830fe830b9beb36c5287042cd9d18d054b62eb84b734b35c3c4d570"
+          },
+          {
+            "path": "ax_meeting/pipeline.py",
+            "sha256": "6ea174452036704b89101b0d01e56f48606d12dd6d4304feafdccaf97e9da281"
+          },
+          {
+            "path": "ax_meeting/positional.py",
+            "sha256": "eb26fc3ac8d0f9266dbd3393afaba8769fcc2427c2211f852f9dc31f8a569330"
+          },
+          {
+            "path": "ax_meeting/server.py",
+            "sha256": "0f6fd3b80718706539e69b0c8caafcc1ae0de7e7390ab3be61f840120eea5bd0"
+          },
+          {
+            "path": "ax_meeting/static/app.js",
+            "sha256": "84890dfa6ef3e6bdde09f89a5721deb4fc7cd65c4519ba80438134722cb0529e"
+          },
+          {
+            "path": "ax_meeting/static/index.html",
+            "sha256": "79351ce7f06da14fd1398206f1225126847209f6889fd8ab534c2ee7140723c2"
+          },
+          {
+            "path": "ax_meeting/static/style.css",
+            "sha256": "65bc898d7a1b73c416d051d58948b42170d86958102ee025caffeac893d7ac12"
+          },
+          {
+            "path": "ax_meeting/summarize_cli.py",
+            "sha256": "fa7e06df38ddb2493f02014485734ceaf6dd12530ee767c162c241e7a03bd6a8"
+          },
+          {
+            "path": "ax_meeting/summarizer.py",
+            "sha256": "43822005ccb7a0ac180945ad509a9629610b351e4e6ee3aa830f7609b951ff06"
+          },
+          {
+            "path": "ax_meeting/text_cleaner.py",
+            "sha256": "244e2262b0c762f50fbb093d07d1cae71aafe0a745bd7832a88ec275044a71a5"
+          },
+          {
+            "path": "ax_meeting/utils/__init__.py",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "ax_meeting/utils/ax_cam_bin.py",
+            "sha256": "c6439cb2a250846e1304131b7d99d563d29526b2b36cb5e85235957fff6f0557"
+          },
+          {
+            "path": "ax_meeting/utils/ax_model_bin.py",
+            "sha256": "495975a8b580bf2804a3bd35dcc37adf633a089bef0fd4f6547e01f7131ff90a"
+          },
+          {
+            "path": "ax_meeting/utils/ax_vad_bin.py",
+            "sha256": "a032024208a75de16ad011609ba232a5ca5da67bfe353f967472a99dccfca1ef"
+          },
+          {
+            "path": "ax_meeting/utils/cluster_utils.py",
+            "sha256": "a9c35572d702576838e7aa481325dce208e2712792f6e30ad6bc7b2e77fad611"
+          },
+          {
+            "path": "ax_meeting/utils/ctc_alignment.py",
+            "sha256": "46fb3d921d23fa0f7f0c068fc4ec2338ac8930fb82272444845f59f5a9d7d7ab"
+          },
+          {
+            "path": "ax_meeting/utils/frontend.py",
+            "sha256": "685e19bcdb76a6277f48416e0e9b2f67ee1a9fce03d7456fdd8ecb3f51f11f7d"
+          },
+          {
+            "path": "ax_meeting/utils/infer_func.py",
+            "sha256": "266ed33cdfd036c1c2515cc0be3a932b6f5957e239aef6bbd25971e96b3513e6"
+          },
+          {
+            "path": "ax_meeting/utils/infer_utils.py",
+            "sha256": "74b04ba2d37e21ca9b03bcde7c7eea681dbf5e758e44031de93fd22debeb4817"
+          },
+          {
+            "path": "ax_meeting/utils/sentencepiece_tokenizer.py",
+            "sha256": "0f1f6250fda106d3d7c9693d1519ebd8f972c7c75d022a6cc149132b03a0e58d"
+          },
+          {
+            "path": "ax_meeting/utils/speaker_fbank.py",
+            "sha256": "4d181caccbb7298297c1433601a609844276d1d310dc18758048458ff4a3793a"
+          },
+          {
+            "path": "ax_meeting/utils/speakerlab/process/augmentation.py",
+            "sha256": "28ddff0b88c2cec886c7aa1a78ab1d1f4ff0ebdb826118ef2bef17aba7f59143"
+          },
+          {
+            "path": "ax_meeting/utils/speakerlab/process/processor.py",
+            "sha256": "c6145c34ff2d3889d3bcf3d75564f354e1f85bd83f2c8edb1d22cf9163ef87fa"
+          },
+          {
+            "path": "ax_meeting/utils/speakerlab/utils/fileio.py",
+            "sha256": "83c66a90d2fd819e259a5904e84460e1472d7e914a0462ea3a477e44f89a260d"
+          },
+          {
+            "path": "ax_meeting/utils/speakerlab/utils/utils.py",
+            "sha256": "9624c0d3f40efa75c6365e4e0fcdb75a8225b234700f7b97571a70e9ba264190"
+          },
+          {
+            "path": "ax_meeting/utils/utils/__init__.py",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "ax_meeting/utils/utils/e2e_vad.py",
+            "sha256": "3b13734a2995ef9c544be66a4edb95c150afb17484388c594ab70ef7436e7345"
+          },
+          {
+            "path": "ax_meeting/utils/utils/frontend.py",
+            "sha256": "1fe1e7115efc2e20c11eb4ae50b0b421de5f40d2a9546b9cf7003184e0003be6"
+          },
+          {
+            "path": "ax_meeting/utils/utils/utils.py",
+            "sha256": "7a69bc3d7f30b8d224cefdcd034d01de54a0e6847fa345f17eade25cd3fc3386"
+          },
+          {
+            "path": "ax_meeting/utils/vad_utils.py",
+            "sha256": "2c24b223d223bdceff79fd9d8e92c14c7fd1e41d6a3f3bf236788335ab4ae47b"
+          },
+          {
+            "path": "ax_meeting/vad_asr_cli.py",
+            "sha256": "f84d778110be13c681ddc073f1bda08bff76e2795265c8c1332d672a87b74892"
+          },
+          {
+            "path": "requirements.txt",
+            "sha256": "788136d8d516d68cfa7e31b68a80fe1a9355aa7d5311768c4c503592fc9ed916"
+          },
+          {
+            "path": "wav/002.mp3",
+            "sha256": "4bdd7d1fb5723e253083820c659d65449e43abff0fbf7b5ac52fea3c1d7572fc"
+          },
+          {
+            "path": "wav/vad_example.wav",
+            "sha256": "a7431f0169ef76ef630c945a1d2c3675d8c8c2df2ae4a6b16f8a88ba1bccfbbb"
+          }
+        ],
+        "filesAfter": [
+          {
+            "path": "README.md",
+            "sha256": "6d039f2aa644b7b773eb43837d50fbf2c07be80cba6f2c381284f82059ff8b45"
+          },
+          {
+            "path": "ax_meeting/__init__.py",
+            "sha256": "5a03509ec06b415534670c2798cebe136ffddde8d3d875ba1cb73cebb44d414a"
+          },
+          {
+            "path": "ax_meeting/ax_model/auto.npy",
+            "sha256": "8d0997706b30274f7ff3b157ca90df50b7ed8ced35091a0231700355d5ee1374"
+          },
+          {
+            "path": "ax_meeting/ax_model/campplus.axmodel",
+            "sha256": "3e85b4d59a94488caa727ca76c7fe2ba408de02587cd8c9a6680b83488338b16"
+          },
+          {
+            "path": "ax_meeting/ax_model/chn_jpn_yue_eng_ko_spectok.bpe.model",
+            "sha256": "aa87f86064c3730d799ddf7af3c04659151102cba548bce325cf06ba4da4e6a8"
+          },
+          {
+            "path": "ax_meeting/ax_model/en.npy",
+            "sha256": "1f21c6d5a0b876c696b15ee80317ee558b6a19a084c1147a13a2871900f6c72e"
+          },
+          {
+            "path": "ax_meeting/ax_model/event_emo.npy",
+            "sha256": "1d22e3df5d192fdc3e73e368a2cb576975a5a43a114a8432a91c036adf8e2263"
+          },
+          {
+            "path": "ax_meeting/ax_model/ja.npy",
+            "sha256": "75a83ded838de7d02a56de32b774a50d2f02b5ec69880e7acdce600666f77517"
+          },
+          {
+            "path": "ax_meeting/ax_model/ko.npy",
+            "sha256": "f371fffcecd75c1268e2ef8043c276ec9b231177b5138b39e5732c65401749db"
+          },
+          {
+            "path": "ax_meeting/ax_model/sensevoice.axmodel",
+            "sha256": "7b64a36fa15e75ab5e3b75f18ae87a058970cff76219407e503b54fb53dd8e38"
+          },
+          {
+            "path": "ax_meeting/ax_model/sensevoice/am.mvn",
+            "sha256": "29b3c740a2c0cfc6b308126d31d7f265fa2be74f3bb095cd2f143ea970896ae5"
+          },
+          {
+            "path": "ax_meeting/ax_model/sensevoice/config.yaml",
+            "sha256": "f71e239ba36705564b5bf2d2ffd07eece07b8e3f2bbf6d2c99d8df856339ac19"
+          },
+          {
+            "path": "ax_meeting/ax_model/vad.axmodel",
+            "sha256": "7d89d1087f14597bc93ae5cf89e1c60d8ee76d7bdffbe679ef6dc002635e6f6b"
+          },
+          {
+            "path": "ax_meeting/ax_model/vad/am.mvn",
+            "sha256": "6820fef9687708c4fc3fab2530179c8fcea6262daa25514380056cd8f6eb1754"
+          },
+          {
+            "path": "ax_meeting/ax_model/vad/config.yaml",
+            "sha256": "486861ca26ddb79081663b6179cb204c6bfae71c52f04aafc48a9e9d8dde1e93"
+          },
+          {
+            "path": "ax_meeting/ax_model/withitn.npy",
+            "sha256": "39bf02586f59237894fc2918ab2db4f12ec3c084c41465718832fbd7646ea729"
+          },
+          {
+            "path": "ax_meeting/ax_model/yue.npy",
+            "sha256": "319c3d30e6b176338a6d8871f81ec57af5c3c112cecbdce4a0bf36bec51f3ceb"
+          },
+          {
+            "path": "ax_meeting/ax_model/zh.npy",
+            "sha256": "0c952f976ae70642c8f682c88711abce3a2b64ba20a6d8ca0b706f227de816eb"
+          },
+          {
+            "path": "ax_meeting/axengine_loader.py",
+            "sha256": "cf83bcd0ea7b0ec794f0a2d087c6e1f79d33de0381f32f82786547d818a2369b"
+          },
+          {
+            "path": "ax_meeting/config.py",
+            "sha256": "87d30493f20cd2a91b55ca435a076e43d366631bfe489cae9378dfd169b2d333"
+          },
+          {
+            "path": "ax_meeting/diar_asr_cli.py",
+            "sha256": "c39df0bd98333edbe081175852a19e059dd578e3e70405a876ba875bf08d0259"
+          },
+          {
+            "path": "ax_meeting/diar_utils.py",
+            "sha256": "a71b0e8f7b216f9ff64d245f6e9389fe2773dfb7f819962cd77729684378487f"
+          },
+          {
+            "path": "ax_meeting/engines.py",
+            "sha256": "33e3eab7314a230460f3d82430cf7268475f436ea8bbf1b8ae072e20b6038590"
+          },
+          {
+            "path": "ax_meeting/model_bundle.py",
+            "sha256": "58ec5f322830fe830b9beb36c5287042cd9d18d054b62eb84b734b35c3c4d570"
+          },
+          {
+            "path": "ax_meeting/pipeline.py",
+            "sha256": "6ea174452036704b89101b0d01e56f48606d12dd6d4304feafdccaf97e9da281"
+          },
+          {
+            "path": "ax_meeting/positional.py",
+            "sha256": "eb26fc3ac8d0f9266dbd3393afaba8769fcc2427c2211f852f9dc31f8a569330"
+          },
+          {
+            "path": "ax_meeting/server.py",
+            "sha256": "0f6fd3b80718706539e69b0c8caafcc1ae0de7e7390ab3be61f840120eea5bd0"
+          },
+          {
+            "path": "ax_meeting/static/app.js",
+            "sha256": "84890dfa6ef3e6bdde09f89a5721deb4fc7cd65c4519ba80438134722cb0529e"
+          },
+          {
+            "path": "ax_meeting/static/index.html",
+            "sha256": "79351ce7f06da14fd1398206f1225126847209f6889fd8ab534c2ee7140723c2"
+          },
+          {
+            "path": "ax_meeting/static/style.css",
+            "sha256": "65bc898d7a1b73c416d051d58948b42170d86958102ee025caffeac893d7ac12"
+          },
+          {
+            "path": "ax_meeting/summarize_cli.py",
+            "sha256": "fa7e06df38ddb2493f02014485734ceaf6dd12530ee767c162c241e7a03bd6a8"
+          },
+          {
+            "path": "ax_meeting/summarizer.py",
+            "sha256": "43822005ccb7a0ac180945ad509a9629610b351e4e6ee3aa830f7609b951ff06"
+          },
+          {
+            "path": "ax_meeting/text_cleaner.py",
+            "sha256": "244e2262b0c762f50fbb093d07d1cae71aafe0a745bd7832a88ec275044a71a5"
+          },
+          {
+            "path": "ax_meeting/utils/__init__.py",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "ax_meeting/utils/ax_cam_bin.py",
+            "sha256": "c6439cb2a250846e1304131b7d99d563d29526b2b36cb5e85235957fff6f0557"
+          },
+          {
+            "path": "ax_meeting/utils/ax_model_bin.py",
+            "sha256": "495975a8b580bf2804a3bd35dcc37adf633a089bef0fd4f6547e01f7131ff90a"
+          },
+          {
+            "path": "ax_meeting/utils/ax_vad_bin.py",
+            "sha256": "a032024208a75de16ad011609ba232a5ca5da67bfe353f967472a99dccfca1ef"
+          },
+          {
+            "path": "ax_meeting/utils/cluster_utils.py",
+            "sha256": "a9c35572d702576838e7aa481325dce208e2712792f6e30ad6bc7b2e77fad611"
+          },
+          {
+            "path": "ax_meeting/utils/ctc_alignment.py",
+            "sha256": "46fb3d921d23fa0f7f0c068fc4ec2338ac8930fb82272444845f59f5a9d7d7ab"
+          },
+          {
+            "path": "ax_meeting/utils/frontend.py",
+            "sha256": "685e19bcdb76a6277f48416e0e9b2f67ee1a9fce03d7456fdd8ecb3f51f11f7d"
+          },
+          {
+            "path": "ax_meeting/utils/infer_func.py",
+            "sha256": "266ed33cdfd036c1c2515cc0be3a932b6f5957e239aef6bbd25971e96b3513e6"
+          },
+          {
+            "path": "ax_meeting/utils/infer_utils.py",
+            "sha256": "74b04ba2d37e21ca9b03bcde7c7eea681dbf5e758e44031de93fd22debeb4817"
+          },
+          {
+            "path": "ax_meeting/utils/sentencepiece_tokenizer.py",
+            "sha256": "0f1f6250fda106d3d7c9693d1519ebd8f972c7c75d022a6cc149132b03a0e58d"
+          },
+          {
+            "path": "ax_meeting/utils/speaker_fbank.py",
+            "sha256": "4d181caccbb7298297c1433601a609844276d1d310dc18758048458ff4a3793a"
+          },
+          {
+            "path": "ax_meeting/utils/speakerlab/process/augmentation.py",
+            "sha256": "28ddff0b88c2cec886c7aa1a78ab1d1f4ff0ebdb826118ef2bef17aba7f59143"
+          },
+          {
+            "path": "ax_meeting/utils/speakerlab/process/processor.py",
+            "sha256": "c6145c34ff2d3889d3bcf3d75564f354e1f85bd83f2c8edb1d22cf9163ef87fa"
+          },
+          {
+            "path": "ax_meeting/utils/speakerlab/utils/fileio.py",
+            "sha256": "83c66a90d2fd819e259a5904e84460e1472d7e914a0462ea3a477e44f89a260d"
+          },
+          {
+            "path": "ax_meeting/utils/speakerlab/utils/utils.py",
+            "sha256": "9624c0d3f40efa75c6365e4e0fcdb75a8225b234700f7b97571a70e9ba264190"
+          },
+          {
+            "path": "ax_meeting/utils/utils/__init__.py",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "ax_meeting/utils/utils/e2e_vad.py",
+            "sha256": "3b13734a2995ef9c544be66a4edb95c150afb17484388c594ab70ef7436e7345"
+          },
+          {
+            "path": "ax_meeting/utils/utils/frontend.py",
+            "sha256": "1fe1e7115efc2e20c11eb4ae50b0b421de5f40d2a9546b9cf7003184e0003be6"
+          },
+          {
+            "path": "ax_meeting/utils/utils/utils.py",
+            "sha256": "7a69bc3d7f30b8d224cefdcd034d01de54a0e6847fa345f17eade25cd3fc3386"
+          },
+          {
+            "path": "ax_meeting/utils/vad_utils.py",
+            "sha256": "2c24b223d223bdceff79fd9d8e92c14c7fd1e41d6a3f3bf236788335ab4ae47b"
+          },
+          {
+            "path": "ax_meeting/vad_asr_cli.py",
+            "sha256": "f84d778110be13c681ddc073f1bda08bff76e2795265c8c1332d672a87b74892"
+          },
+          {
+            "path": "requirements.txt",
+            "sha256": "788136d8d516d68cfa7e31b68a80fe1a9355aa7d5311768c4c503592fc9ed916"
+          },
+          {
+            "path": "wav/002.mp3",
+            "sha256": "4bdd7d1fb5723e253083820c659d65449e43abff0fbf7b5ac52fea3c1d7572fc"
+          },
+          {
+            "path": "wav/vad_example.wav",
+            "sha256": "a7431f0169ef76ef630c945a1d2c3675d8c8c2df2ae4a6b16f8a88ba1bccfbbb"
+          }
+        ],
+        "sessions": [
+          {
+            "model": "ax_meeting/ax_model/vad.axmodel",
+            "sha256": "7d89d1087f14597bc93ae5cf89e1c60d8ee76d7bdffbe679ef6dc002635e6f6b",
+            "provider": "AXCLRTExecutionProvider",
+            "loadSeconds": 0.546955447000073,
+            "calls": 1,
+            "allFinite": true,
+            "runMilliseconds": [
+              65.25890400007484
+            ],
+            "groups": {
+              "0": {
+                "inputs": [
+                  {
+                    "name": "speech",
+                    "shape": [
+                      1,
+                      6000,
+                      400
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "in_cache0",
+                    "shape": [
+                      1,
+                      128,
+                      19,
+                      1
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "in_cache1",
+                    "shape": [
+                      1,
+                      128,
+                      19,
+                      1
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "in_cache2",
+                    "shape": [
+                      1,
+                      128,
+                      19,
+                      1
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "in_cache3",
+                    "shape": [
+                      1,
+                      128,
+                      19,
+                      1
+                    ],
+                    "dtype": "float32"
+                  }
+                ],
+                "outputs": [
+                  {
+                    "name": "logits",
+                    "shape": [
+                      1,
+                      6000,
+                      248
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "out_cache0",
+                    "shape": [
+                      1,
+                      128,
+                      19,
+                      1
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "out_cache1",
+                    "shape": [
+                      1,
+                      128,
+                      19,
+                      1
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "out_cache2",
+                    "shape": [
+                      1,
+                      128,
+                      19,
+                      1
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "out_cache3",
+                    "shape": [
+                      1,
+                      128,
+                      19,
+                      1
+                    ],
+                    "dtype": "float32"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "model": "ax_meeting/ax_model/campplus.axmodel",
+            "sha256": "3e85b4d59a94488caa727ca76c7fe2ba408de02587cd8c9a6680b83488338b16",
+            "provider": "AXCLRTExecutionProvider",
+            "loadSeconds": 0.20082285500029684,
+            "calls": 38,
+            "allFinite": true,
+            "runMilliseconds": [
+              6.11568899876147,
+              5.928438000410097,
+              5.859896000401932,
+              5.854937999174581,
+              5.749062000177219,
+              5.754895999416476,
+              5.915312998695299,
+              5.833938001160277,
+              5.6910200000857,
+              5.849397000929457,
+              5.8164380006928695,
+              5.797478999738814,
+              5.92202199914027,
+              5.906563001190079,
+              5.744104000768857,
+              5.784062999737216,
+              5.866895999133703,
+              5.7805619999271585,
+              5.802146000860375,
+              5.889355001272634,
+              5.880605000129435,
+              5.85931299974618,
+              5.9024799993494526,
+              5.827520999446278,
+              5.735062000894686,
+              5.887896000785986,
+              5.890230000659358,
+              5.867480000233627,
+              5.890813999940292,
+              5.792228999780491,
+              6.11364700125705,
+              5.823437999424641,
+              6.287771999268443,
+              5.651061999742524,
+              6.023230000209878,
+              5.747313000028953,
+              5.915604000620078,
+              5.868938000276103
+            ],
+            "groups": {
+              "0": {
+                "inputs": [
+                  {
+                    "name": "feature",
+                    "shape": [
+                      1,
+                      360,
+                      80
+                    ],
+                    "dtype": "float32"
+                  }
+                ],
+                "outputs": [
+                  {
+                    "name": "embedding",
+                    "shape": [
+                      1,
+                      192
+                    ],
+                    "dtype": "float32"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "model": "ax_meeting/ax_model/sensevoice.axmodel",
+            "sha256": "7b64a36fa15e75ab5e3b75f18ae87a058970cff76219407e503b54fb53dd8e38",
+            "provider": "AXCLRTExecutionProvider",
+            "loadSeconds": 4.418560444999457,
+            "calls": 6,
+            "allFinite": true,
+            "runMilliseconds": [
+              93.53142300096806,
+              93.32025599906046,
+              85.92706299896236,
+              80.83775200066157,
+              83.75501299997268,
+              85.09318500000518
+            ],
+            "groups": {
+              "0": {
+                "inputs": [
+                  {
+                    "name": "speech",
+                    "shape": [
+                      1,
+                      132,
+                      560
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "masks",
+                    "shape": [
+                      1,
+                      1,
+                      132
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "position_encoding",
+                    "shape": [
+                      1,
+                      132,
+                      560
+                    ],
+                    "dtype": "float32"
+                  }
+                ],
+                "outputs": [
+                  {
+                    "name": "ctc_logits",
+                    "shape": [
+                      1,
+                      132,
+                      25055
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "encoder_out_lens",
+                    "shape": [
+                      1
+                    ],
+                    "dtype": "int32"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "totalCalls": 45,
+        "stages": {
+          "vad": [
+            [
+              [
+                0,
+                2540
+              ],
+              [
+                2820,
+                28600
+              ],
+              [
+                28950,
+                29900
+              ]
+            ]
+          ],
+          "speaker": {
+            "chunks": [
+              [
+                0.0,
+                1.5
+              ],
+              [
+                0.75,
+                2.25
+              ],
+              [
+                1.5,
+                2.54
+              ],
+              [
+                2.82,
+                4.32
+              ],
+              [
+                3.57,
+                5.07
+              ],
+              [
+                4.32,
+                5.82
+              ],
+              [
+                5.07,
+                6.57
+              ],
+              [
+                5.82,
+                7.32
+              ],
+              [
+                6.57,
+                8.07
+              ],
+              [
+                7.32,
+                8.82
+              ],
+              [
+                8.07,
+                9.57
+              ],
+              [
+                8.82,
+                10.32
+              ],
+              [
+                9.57,
+                11.07
+              ],
+              [
+                10.32,
+                11.82
+              ],
+              [
+                11.07,
+                12.57
+              ],
+              [
+                11.82,
+                13.32
+              ],
+              [
+                12.57,
+                14.07
+              ],
+              [
+                13.32,
+                14.82
+              ],
+              [
+                14.07,
+                15.57
+              ],
+              [
+                14.82,
+                16.32
+              ],
+              [
+                15.57,
+                17.07
+              ],
+              [
+                16.32,
+                17.82
+              ],
+              [
+                17.07,
+                18.57
+              ],
+              [
+                17.82,
+                19.32
+              ],
+              [
+                18.57,
+                20.07
+              ],
+              [
+                19.32,
+                20.82
+              ],
+              [
+                20.07,
+                21.57
+              ],
+              [
+                20.82,
+                22.32
+              ],
+              [
+                21.57,
+                23.07
+              ],
+              [
+                22.32,
+                23.82
+              ],
+              [
+                23.07,
+                24.57
+              ],
+              [
+                23.82,
+                25.32
+              ],
+              [
+                24.57,
+                26.07
+              ],
+              [
+                25.32,
+                26.82
+              ],
+              [
+                26.07,
+                27.57
+              ],
+              [
+                26.82,
+                28.32
+              ],
+              [
+                27.57,
+                28.6
+              ],
+              [
+                28.95,
+                29.9
+              ]
+            ],
+            "embeddingShape": [
+              38,
+              192
+            ],
+            "sha256": "2dbc55f909dddd9279e4d324ccf770ceb4b3760d9ca8d706e0cdbbd8852abbd8"
+          },
+          "asr": [
+            {
+              "key": "segment_0",
+              "samples": 45120,
+              "text": "有的，那么一般是非本人医院的。",
+              "metadata": {
+                "load_data": "0.000",
+                "preprocess": "0.002",
+                "extract_feat": "0.038",
+                "total_time": "1.516",
+                "inference_time": "1.476",
+                "merged_timestamps": [
+                  [
+                    0.0,
+                    0.33
+                  ],
+                  [
+                    0.33,
+                    0.45
+                  ],
+                  [
+                    0.45,
+                    0.57
+                  ],
+                  [
+                    0.57,
+                    0.69
+                  ],
+                  [
+                    0.69,
+                    0.75
+                  ],
+                  [
+                    0.75,
+                    0.93
+                  ],
+                  [
+                    0.93,
+                    1.05
+                  ],
+                  [
+                    1.05,
+                    1.23
+                  ],
+                  [
+                    1.23,
+                    1.41
+                  ],
+                  [
+                    1.41,
+                    1.59
+                  ],
+                  [
+                    1.59,
+                    1.77
+                  ],
+                  [
+                    1.77,
+                    1.95
+                  ],
+                  [
+                    1.95,
+                    2.01
+                  ],
+                  [
+                    2.01,
+                    7.59
+                  ],
+                  [
+                    7.59,
+                    7.65
+                  ]
+                ],
+                "merged_words": [
+                  "有",
+                  "的",
+                  "，",
+                  "那",
+                  "么",
+                  "一",
+                  "般",
+                  "是",
+                  "非",
+                  "本",
+                  "人",
+                  "医",
+                  "院",
+                  "的",
+                  "。"
+                ]
+              }
+            },
+            {
+              "key": "segment_1",
+              "samples": 412480,
+              "text": "嗯，单位停保的时候，如实给你妻子填写停保原因，或者说呃如。过单位停报原因填写错了，导致你妻子生育津贴这个呃申请失业金申请的这个原因，就是非本人。医院中断这个原因不符合的，那么需要提呃申请失业金的时候，提供一个单位开具的解除劳动关系证明，写明具体。解除劳动关系原因证明是非本人意愿的。",
+              "metadata": {
+                "load_data": "0.000",
+                "preprocess": "0.002",
+                "extract_feat": "0.356",
+                "total_time": "1.466",
+                "inference_time": "1.108",
+                "merged_timestamps": [
+                  [
+                    0.0,
+                    0.39
+                  ],
+                  [
+                    0.39,
+                    0.81
+                  ],
+                  [
+                    0.81,
+                    0.87
+                  ],
+                  [
+                    0.87,
+                    1.11
+                  ],
+                  [
+                    1.11,
+                    1.23
+                  ],
+                  [
+                    1.23,
+                    1.35
+                  ],
+                  [
+                    1.35,
+                    1.47
+                  ],
+                  [
+                    1.47,
+                    1.59
+                  ],
+                  [
+                    1.59,
+                    1.65
+                  ],
+                  [
+                    1.65,
+                    1.77
+                  ],
+                  [
+                    1.77,
+                    1.89
+                  ],
+                  [
+                    1.89,
+                    1.95
+                  ],
+                  [
+                    1.95,
+                    2.13
+                  ],
+                  [
+                    2.13,
+                    2.31
+                  ],
+                  [
+                    2.31,
+                    2.49
+                  ],
+                  [
+                    2.49,
+                    2.91
+                  ],
+                  [
+                    2.91,
+                    3.27
+                  ],
+                  [
+                    3.27,
+                    3.51
+                  ],
+                  [
+                    3.51,
+                    3.63
+                  ],
+                  [
+                    3.63,
+                    3.81
+                  ],
+                  [
+                    3.81,
+                    3.99
+                  ],
+                  [
+                    3.99,
+                    4.17
+                  ],
+                  [
+                    4.17,
+                    4.29
+                  ],
+                  [
+                    4.29,
+                    4.77
+                  ],
+                  [
+                    4.77,
+                    5.01
+                  ],
+                  [
+                    5.01,
+                    5.25
+                  ],
+                  [
+                    5.25,
+                    7.23
+                  ],
+                  [
+                    7.23,
+                    7.59
+                  ],
+                  [
+                    7.59,
+                    7.65
+                  ],
+                  [
+                    7.68,
+                    7.83
+                  ],
+                  [
+                    7.83,
+                    7.95
+                  ],
+                  [
+                    7.95,
+                    8.07
+                  ],
+                  [
+                    8.07,
+                    8.19
+                  ],
+                  [
+                    8.19,
+                    8.37
+                  ],
+                  [
+                    8.37,
+                    8.49
+                  ],
+                  [
+                    8.49,
+                    8.67
+                  ],
+                  [
+                    8.67,
+                    8.79
+                  ],
+                  [
+                    8.79,
+                    9.03
+                  ],
+                  [
+                    9.03,
+                    9.15
+                  ],
+                  [
+                    9.15,
+                    9.27
+                  ],
+                  [
+                    9.27,
+                    9.39
+                  ],
+                  [
+                    9.39,
+                    9.51
+                  ],
+                  [
+                    9.51,
+                    9.63
+                  ],
+                  [
+                    9.63,
+                    9.81
+                  ],
+                  [
+                    9.81,
+                    9.93
+                  ],
+                  [
+                    9.93,
+                    10.17
+                  ],
+                  [
+                    10.17,
+                    10.35
+                  ],
+                  [
+                    10.35,
+                    10.47
+                  ],
+                  [
+                    10.47,
+                    10.65
+                  ],
+                  [
+                    10.65,
+                    10.77
+                  ],
+                  [
+                    10.77,
+                    10.95
+                  ],
+                  [
+                    10.95,
+                    11.07
+                  ],
+                  [
+                    11.07,
+                    11.55
+                  ],
+                  [
+                    11.55,
+                    11.91
+                  ],
+                  [
+                    11.91,
+                    12.21
+                  ],
+                  [
+                    12.21,
+                    12.45
+                  ],
+                  [
+                    12.45,
+                    12.63
+                  ],
+                  [
+                    12.63,
+                    12.87
+                  ],
+                  [
+                    12.87,
+                    13.05
+                  ],
+                  [
+                    13.05,
+                    13.23
+                  ],
+                  [
+                    13.23,
+                    13.41
+                  ],
+                  [
+                    13.41,
+                    13.53
+                  ],
+                  [
+                    13.53,
+                    13.65
+                  ],
+                  [
+                    13.65,
+                    13.83
+                  ],
+                  [
+                    13.83,
+                    14.13
+                  ],
+                  [
+                    14.13,
+                    14.19
+                  ],
+                  [
+                    14.19,
+                    14.67
+                  ],
+                  [
+                    14.67,
+                    14.85
+                  ],
+                  [
+                    14.85,
+                    14.97
+                  ],
+                  [
+                    14.97,
+                    15.09
+                  ],
+                  [
+                    15.09,
+                    15.27
+                  ],
+                  [
+                    15.27,
+                    15.33
+                  ],
+                  [
+                    15.36,
+                    15.51
+                  ],
+                  [
+                    15.51,
+                    15.57
+                  ],
+                  [
+                    15.57,
+                    15.69
+                  ],
+                  [
+                    15.69,
+                    15.87
+                  ],
+                  [
+                    15.87,
+                    15.99
+                  ],
+                  [
+                    15.99,
+                    16.11
+                  ],
+                  [
+                    16.11,
+                    16.17
+                  ],
+                  [
+                    16.17,
+                    16.35
+                  ],
+                  [
+                    16.35,
+                    16.47
+                  ],
+                  [
+                    16.47,
+                    16.59
+                  ],
+                  [
+                    16.59,
+                    16.71
+                  ],
+                  [
+                    16.71,
+                    16.89
+                  ],
+                  [
+                    16.89,
+                    16.95
+                  ],
+                  [
+                    16.95,
+                    17.07
+                  ],
+                  [
+                    17.07,
+                    17.19
+                  ],
+                  [
+                    17.19,
+                    17.31
+                  ],
+                  [
+                    17.31,
+                    17.49
+                  ],
+                  [
+                    17.49,
+                    17.67
+                  ],
+                  [
+                    17.67,
+                    18.09
+                  ],
+                  [
+                    18.09,
+                    18.33
+                  ],
+                  [
+                    18.33,
+                    18.51
+                  ],
+                  [
+                    18.51,
+                    18.69
+                  ],
+                  [
+                    18.69,
+                    18.81
+                  ],
+                  [
+                    18.81,
+                    18.87
+                  ],
+                  [
+                    18.87,
+                    19.05
+                  ],
+                  [
+                    19.05,
+                    19.11
+                  ],
+                  [
+                    19.11,
+                    19.23
+                  ],
+                  [
+                    19.23,
+                    19.35
+                  ],
+                  [
+                    19.35,
+                    19.41
+                  ],
+                  [
+                    19.41,
+                    19.59
+                  ],
+                  [
+                    19.59,
+                    19.71
+                  ],
+                  [
+                    19.71,
+                    19.83
+                  ],
+                  [
+                    19.83,
+                    19.95
+                  ],
+                  [
+                    19.95,
+                    20.07
+                  ],
+                  [
+                    20.07,
+                    20.25
+                  ],
+                  [
+                    20.25,
+                    20.43
+                  ],
+                  [
+                    20.43,
+                    20.55
+                  ],
+                  [
+                    20.55,
+                    20.73
+                  ],
+                  [
+                    20.73,
+                    20.91
+                  ],
+                  [
+                    20.91,
+                    21.03
+                  ],
+                  [
+                    21.03,
+                    21.21
+                  ],
+                  [
+                    21.21,
+                    21.33
+                  ],
+                  [
+                    21.33,
+                    21.51
+                  ],
+                  [
+                    21.51,
+                    21.69
+                  ],
+                  [
+                    21.69,
+                    21.93
+                  ],
+                  [
+                    21.93,
+                    22.35
+                  ],
+                  [
+                    22.35,
+                    22.41
+                  ],
+                  [
+                    22.41,
+                    22.59
+                  ],
+                  [
+                    22.59,
+                    22.71
+                  ],
+                  [
+                    22.71,
+                    22.95
+                  ],
+                  [
+                    22.95,
+                    23.01
+                  ],
+                  [
+                    23.04,
+                    23.13
+                  ],
+                  [
+                    23.13,
+                    23.31
+                  ],
+                  [
+                    23.31,
+                    23.43
+                  ],
+                  [
+                    23.43,
+                    23.55
+                  ],
+                  [
+                    23.55,
+                    23.67
+                  ],
+                  [
+                    23.67,
+                    23.85
+                  ],
+                  [
+                    23.85,
+                    24.03
+                  ],
+                  [
+                    24.03,
+                    24.15
+                  ],
+                  [
+                    24.15,
+                    24.33
+                  ],
+                  [
+                    24.33,
+                    24.45
+                  ],
+                  [
+                    24.45,
+                    24.63
+                  ],
+                  [
+                    24.63,
+                    24.81
+                  ],
+                  [
+                    24.81,
+                    24.93
+                  ],
+                  [
+                    24.93,
+                    25.11
+                  ],
+                  [
+                    25.11,
+                    25.23
+                  ],
+                  [
+                    25.23,
+                    25.35
+                  ],
+                  [
+                    25.35,
+                    25.53
+                  ],
+                  [
+                    25.53,
+                    30.69
+                  ]
+                ],
+                "merged_words": [
+                  "嗯",
+                  "，",
+                  "单",
+                  "位",
+                  "停",
+                  "保",
+                  "的",
+                  "时",
+                  "候",
+                  "，",
+                  "如",
+                  "实",
+                  "给",
+                  "你",
+                  "妻",
+                  "子",
+                  "填",
+                  "写",
+                  "停",
+                  "保",
+                  "原",
+                  "因",
+                  "，",
+                  "或",
+                  "者",
+                  "说",
+                  "呃",
+                  "如",
+                  "。",
+                  "过",
+                  "单",
+                  "位",
+                  "停",
+                  "报",
+                  "原",
+                  "因",
+                  "填",
+                  "写",
+                  "错",
+                  "了",
+                  "，",
+                  "导",
+                  "致",
+                  "你",
+                  "妻",
+                  "子",
+                  "生",
+                  "育",
+                  "津",
+                  "贴",
+                  "这",
+                  "个",
+                  "呃",
+                  "申",
+                  "请",
+                  "失",
+                  "业",
+                  "金",
+                  "申",
+                  "请",
+                  "的",
+                  "这",
+                  "个",
+                  "原",
+                  "因",
+                  "，",
+                  "就",
+                  "是",
+                  "非",
+                  "本",
+                  "人",
+                  "。",
+                  "医",
+                  "院",
+                  "中",
+                  "断",
+                  "这",
+                  "个",
+                  "原",
+                  "因",
+                  "不",
+                  "符",
+                  "合",
+                  "的",
+                  "，",
+                  "那",
+                  "么",
+                  "需",
+                  "要",
+                  "提",
+                  "呃",
+                  "申",
+                  "请",
+                  "失",
+                  "业",
+                  "金",
+                  "的",
+                  "时",
+                  "候",
+                  "，",
+                  "提",
+                  "供",
+                  "一",
+                  "个",
+                  "单",
+                  "位",
+                  "开",
+                  "具",
+                  "的",
+                  "解",
+                  "除",
+                  "劳",
+                  "动",
+                  "关",
+                  "系",
+                  "证",
+                  "明",
+                  "，",
+                  "写",
+                  "明",
+                  "具",
+                  "体",
+                  "。",
+                  "解",
+                  "除",
+                  "劳",
+                  "动",
+                  "关",
+                  "系",
+                  "原",
+                  "因",
+                  "证",
+                  "明",
+                  "是",
+                  "非",
+                  "本",
+                  "人",
+                  "意",
+                  "愿",
+                  "的",
+                  "。"
+                ]
+              }
+            },
+            {
+              "key": "segment_2",
+              "samples": 20800,
+              "text": ".",
+              "metadata": {
+                "load_data": "0.000",
+                "preprocess": "0.001",
+                "extract_feat": "0.018",
+                "total_time": "0.289",
+                "inference_time": "0.270",
+                "merged_timestamps": [
+                  [
+                    0.0,
+                    1.53
+                  ],
+                  [
+                    1.53,
+                    1.59
+                  ],
+                  [
+                    1.59,
+                    1.71
+                  ],
+                  [
+                    1.71,
+                    7.65
+                  ]
+                ],
+                "merged_words": [
+                  "<|EMO_UNKNOWN|>",
+                  "<|Speech|>",
+                  "<|woitn|>",
+                  "."
+                ]
+              }
+            }
+          ]
+        },
+        "versions": {
+          "numpy": "1.26.4",
+          "scipy": "1.17.1",
+          "scikit-learn": "1.9.1",
+          "fastcluster": "1.2.6",
+          "kaldi-native-fbank": "1.22.3",
+          "soundfile": "0.13.1",
+          "torch": "2.5.1",
+          "sentencepiece": "0.2.1",
+          "jieba": "0.42.1"
+        },
+        "audio": {
+          "originalSamples": 479232,
+          "originalSampleRate": 16000,
+          "originalChannels": 1,
+          "processedSamples": 479232,
+          "sampleRate": 16000,
+          "durationSeconds": 29.952
+        },
+        "transcript": "Speaker_0: [0.000 29.952] 有的，那么一般是非本人医院的。嗯，单位停保的时候，如实给你妻子填写停保原因，或者说呃如。过单位停报原因填写错了，导致你妻子生育津贴这个呃申请失业金申请的这个原因，就是非本人。医院中断这个原因不符合的，那么需要提呃申请失业金的时候，提供一个单位开具的解除劳动关系证明，写明具体。解除劳动关系原因证明是非本人意愿的。<|EMO_UNKNOWN|><|Speech|><|woitn|>.",
+        "transcriptSha256": "063d82cb7bab7e29322b3bc2d04e8202b83b4bf38f7aa6896eac4f6519930291",
+        "segments": [
+          {
+            "speaker": 0,
+            "start": 0.0,
+            "end": 29.952,
+            "text": "有的，那么一般是非本人医院的。嗯，单位停保的时候，如实给你妻子填写停保原因，或者说呃如。过单位停报原因填写错了，导致你妻子生育津贴这个呃申请失业金申请的这个原因，就是非本人。医院中断这个原因不符合的，那么需要提呃申请失业金的时候，提供一个单位开具的解除劳动关系证明，写明具体。解除劳动关系原因证明是非本人意愿的。<|EMO_UNKNOWN|><|Speech|><|woitn|>."
+          }
+        ],
+        "speakerCount": 1,
+        "elapsedSeconds": 14.996035830999972
+      },
+      "sourceArchiveSha256": "74b7bce21f2dd67533767f8b022d3c3dd58e2c019f482607fb99d01480bf73e0"
+    }
+  ]
+}

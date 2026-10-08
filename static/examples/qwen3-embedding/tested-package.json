@@ -1,0 +1,253 @@
+{
+  "sourceRevision": "4c972fca3731832e33899e14da1555dd78c3f8d6",
+  "compiler": {
+    "version": "7.0-patch1",
+    "commit": "29f4c81a",
+    "imageId": "sha256:f9d2e54003775abaa782acb2bf92cbd5e3f19c88b7e5615bb3e6673da80b456e"
+  },
+  "sourceFiles": [
+    {
+      "path": ".gitattributes",
+      "size": 93,
+      "sha256": "177edd30283db1e826677db639fecb3976f0f20001ea56a1e669e94b69f4acaa"
+    },
+    {
+      "path": "README.md",
+      "size": 17529,
+      "sha256": "889286f56745001500bcddb4596103c9429d07edbf5171c8ee5b70fef4a00757"
+    },
+    {
+      "path": "added_tokens.json",
+      "size": 707,
+      "sha256": "c0284b582e14987fbd3d5a2cb2bd139084371ed9acbae488829a1c900833c680"
+    },
+    {
+      "path": "chat_template.jinja",
+      "size": 4116,
+      "sha256": "87a2728cb8dc9fe424d624542f6060ec05a1d285ebbec578bb078900e33396b5"
+    },
+    {
+      "path": "config.json",
+      "size": 1933,
+      "sha256": "3685971057fdecc9db898989c82d7561318b08dd064806ae1f63f225cedc2252"
+    },
+    {
+      "path": "generation_config.json",
+      "size": 117,
+      "sha256": "84df728a3785026c42a0668310ead46d1024f52dd892d44432032e53b9bd01c1"
+    },
+    {
+      "path": "merges.txt",
+      "size": 1671853,
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+    },
+    {
+      "path": "model.safetensors",
+      "size": 762718928,
+      "sha256": "3ef6e7ba596d1d4ff7aa0e119eae4c602c1ef81017dcb12febce66cfb2e54708"
+    },
+    {
+      "path": "quant_eval_results.json",
+      "size": 124,
+      "sha256": "7848756726ec85e37d421008da2759c2a850e8d4be5cde80cfdf4a1b454cb9b2"
+    },
+    {
+      "path": "quant_log.csv",
+      "size": 9067,
+      "sha256": "890cc5c8b68cfba7a9ffe44754581ece0a25f27007a6efa0aea000c530e7e173"
+    },
+    {
+      "path": "quantize_config.json",
+      "size": 500,
+      "sha256": "037d1d85b0b79efea61cb1589222355e0b21341955db9fbc32ba879ac69bdabe"
+    },
+    {
+      "path": "special_tokens_map.json",
+      "size": 499,
+      "sha256": "b82ed33617eedfa71a8e8dda13de1bb8a5443fdf9910cc23e47a6a1585b8a951"
+    },
+    {
+      "path": "tokenizer.json",
+      "size": 11423705,
+      "sha256": "def76fb086971c7867b829c23a26261e38d9d74e02139253b38aeb9df8b4b50a"
+    },
+    {
+      "path": "tokenizer_config.json",
+      "size": 5431,
+      "sha256": "56761b8bb816db9eebe029858bf2ada1d26f0c6a7bea0a61b0ff7b4f094246a9"
+    },
+    {
+      "path": "vocab.json",
+      "size": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    }
+  ],
+  "files": [
+    {
+      "file": "qwen3_p128_l0_together.axmodel",
+      "bytes": 19838377,
+      "sha256": "005cd90eb32b5a13dbe61e1985bc0da17cf9f75bb81bd9f8277f972fdd3281c8"
+    },
+    {
+      "file": "qwen3_p128_l1_together.axmodel",
+      "bytes": 19838377,
+      "sha256": "6b1d583a251d616c4ec244963f6fa5b8904cdf130e84484e7d50ebc0e6e11a06"
+    },
+    {
+      "file": "qwen3_p128_l2_together.axmodel",
+      "bytes": 19838377,
+      "sha256": "913726d7da0f7e5c5746b4d32f6b206c0dd389e07b21a2b76f37923463b781f5"
+    },
+    {
+      "file": "qwen3_p128_l3_together.axmodel",
+      "bytes": 19838377,
+      "sha256": "c757594bbe250c0da3343bedfe09c1e989a86f581332ecdfe5fee7772b5fd6a8"
+    },
+    {
+      "file": "qwen3_p128_l4_together.axmodel",
+      "bytes": 19838377,
+      "sha256": "0767cab8e331bc10c69d150e5a9a6ea26c53d13a869b5702e1b3c2de02cfbf05"
+    },
+    {
+      "file": "qwen3_p128_l5_together.axmodel",
+      "bytes": 19838377,
+      "sha256": "abca14cca383827b283b43c1cee07c75b9810f7b57f2884b8c1cef0a5c7d694c"
+    },
+    {
+      "file": "qwen3_p128_l6_together.axmodel",
+      "bytes": 19838377,
+      "sha256": "c9a1ab5376ddde92237e31edca3d535dfd6b12d0de2d792204cdac4190308ced"
+    },
+    {
+      "file": "qwen3_p128_l7_together.axmodel",
+      "bytes": 19838377,
+      "sha256": "1fbd8dabd70e3867fc4d8dfcac4cf4549a892f8e21eb56a043fd30c13270fd91"
+    },
+    {
+      "file": "qwen3_p128_l8_together.axmodel",
+      "bytes": 19838377,
+      "sha256": "86046d010f4447ac84ff56e4bb3878e1bd97441a8641165bb3c7f34dd6a0cf0c"
+    },
+    {
+      "file": "qwen3_p128_l9_together.axmodel",
+      "bytes": 19838377,
+      "sha256": "9b4252fe52ca4bb71bfe36e073e54b6c3cd48ee292fd8df7114d1fa165078f95"
+    },
+    {
+      "file": "qwen3_p128_l10_together.axmodel",
+      "bytes": 19838377,
+      "sha256": "64656fe4126bf01bcbd56be2391b1dee477ea27f3bdfe0b8bc2db218fd17f042"
+    },
+    {
+      "file": "qwen3_p128_l11_together.axmodel",
+      "bytes": 19838377,
+      "sha256": "9dfd95032957dcd9efb91805396a21f543b31e1086991fa04655d083ad12ad26"
+    },
+    {
+      "file": "qwen3_p128_l12_together.axmodel",
+      "bytes": 19838377,
+      "sha256": "7c5f581255bec016395d1cb8c43d54cbcda407bdb137070fb031634daa0656b2"
+    },
+    {
+      "file": "qwen3_p128_l13_together.axmodel",
+      "bytes": 19838377,
+      "sha256": "4f16cf801c6f24a7a4c669f25cc1f548f2ed7b22d86d3e3a148211575fdd5b41"
+    },
+    {
+      "file": "qwen3_p128_l14_together.axmodel",
+      "bytes": 19838377,
+      "sha256": "c25e599a40d67eb577f62a23c44ba96c64241e7383700956d38416ae1e18c260"
+    },
+    {
+      "file": "qwen3_p128_l15_together.axmodel",
+      "bytes": 19838377,
+      "sha256": "6842518d944de372123c2c41f4a3c7b224ed1adea200ab8ea49f499b73a8e7f4"
+    },
+    {
+      "file": "qwen3_p128_l16_together.axmodel",
+      "bytes": 19838377,
+      "sha256": "d6b84240c1d77a16f4628fc684cefdb649a600360bd4a870b4cbc073324ff53b"
+    },
+    {
+      "file": "qwen3_p128_l17_together.axmodel",
+      "bytes": 19838377,
+      "sha256": "0e5f3c7f9882104fbc806246f9ac2155991ffd94d5ff3d0fc572b95b376c67a0"
+    },
+    {
+      "file": "qwen3_p128_l18_together.axmodel",
+      "bytes": 19838377,
+      "sha256": "2cc9be5c65f407152fa1bd60d14a1b4c518a39557dcbc5df7ca483d0876a3059"
+    },
+    {
+      "file": "qwen3_p128_l19_together.axmodel",
+      "bytes": 19838377,
+      "sha256": "738d46d74592038494bdee35727cf38b62c49a950b2cd120db6c2ce1eb0af739"
+    },
+    {
+      "file": "qwen3_p128_l20_together.axmodel",
+      "bytes": 19838377,
+      "sha256": "cdbd07db7826763f5e80d81876578027dcc9ae3004172b89110655b4e46966b4"
+    },
+    {
+      "file": "qwen3_p128_l21_together.axmodel",
+      "bytes": 19838377,
+      "sha256": "c74cee27c12b9aaa49a2eebcd732249a10bfde92d9961c26cf5489b8c7cc74df"
+    },
+    {
+      "file": "qwen3_p128_l22_together.axmodel",
+      "bytes": 19838377,
+      "sha256": "fdec97aec9cb57affb1bbf2d6845cbedbb60f751e1c1abdf7bf0a1b8d9457d95"
+    },
+    {
+      "file": "qwen3_p128_l23_together.axmodel",
+      "bytes": 19838377,
+      "sha256": "86b2a03c95f9e8e755e63c7627debca402a5e586d49ae2a826417c90ecdd448f"
+    },
+    {
+      "file": "qwen3_p128_l24_together.axmodel",
+      "bytes": 19838377,
+      "sha256": "701284bb381a70609a325e393d777a84f55c8c6a405b81c5fbbfbf77669fe25b"
+    },
+    {
+      "file": "qwen3_p128_l25_together.axmodel",
+      "bytes": 19838377,
+      "sha256": "4a1875df0e9a4406e8cdf921bf098028fe4f85c62c7e75ae7bd45eccfd0dfc9a"
+    },
+    {
+      "file": "qwen3_p128_l26_together.axmodel",
+      "bytes": 19838377,
+      "sha256": "c866317f7d0fc2c13c08a3b21e0f7e27459327c02a6d09351b810afa0880a9c4"
+    },
+    {
+      "file": "qwen3_p128_l27_together.axmodel",
+      "bytes": 19838377,
+      "sha256": "4f05162c2e154c594c64c620005c18e8264916ccb8101aa4f6d5d451604aece9"
+    },
+    {
+      "file": "qwen3_post.axmodel",
+      "bytes": 14029,
+      "sha256": "42d757c47f4eb3a849523f6a133f322c623d59e482d1f1df94df0a0e884df86f"
+    },
+    {
+      "file": "model.embed_tokens.weight.bfloat16.bin",
+      "bytes": 310618112,
+      "sha256": "a55b140d86852835bd18d8200222a9f302340730f0670eb7e23a4895e5489033"
+    },
+    {
+      "file": "tokenizer.json",
+      "bytes": 11423705,
+      "sha256": "def76fb086971c7867b829c23a26261e38d9d74e02139253b38aeb9df8b4b50a"
+    }
+  ],
+  "profile": {
+    "chip": "AX650",
+    "layers": 28,
+    "prefillLength": 512,
+    "prefillStep": 128,
+    "hiddenStateType": "bf16",
+    "weightType": "s8",
+    "postWeightType": "bf16",
+    "parallel": 1,
+    "maxContext": 1024
+  }
+}

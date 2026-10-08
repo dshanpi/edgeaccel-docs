@@ -1,0 +1,5957 @@
+{
+  "modelId": "AX-Meeting-Studio",
+  "revision": "5ff3c960c78a6726c9e4968b1deb090c4beb1764",
+  "date": "2026-10-01",
+  "variants": [
+    {
+      "label": "SenseVoice：说话人分段与转录",
+      "observation": "以下为官方离线 CLI 的原始分段文本。可播放同一段输入录音对照；识别文本和说话人边界尚无独立人工标注核验。",
+      "previews": [],
+      "audio": [
+        {
+          "caption": "播放两种后端共同使用的完整录音",
+          "path": "/validation/effects/ax-meeting-studio-20261001/meeting-studio-input.wav"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "说话人标签",
+            "时间段（秒）",
+            "实际转录"
+          ],
+          "rows": [
+            [
+              "Speaker_0",
+              "0.000–63.810",
+              "试错的过程很简单。而且特别是今天报名仓雪卡的同学，你们可以。听到后面的有专门的活动课，他会大大降低你的试绸成本。其实你也可以过来听课。为什么你自己写嘛？我先今天写5个点，我就试试试验一下，反正这5个点不行，我再写5个点，这是再不行。那再写五个点吧。你总会所谓的活动大神和所谓的高手都是只有一个。把所有的错，所有的坑全国趟一遍，留下正确的，你就是所谓的大神，。明白吗？所以说关于活动通过这一块，我只送给你们四个字啊，换位思考。如果说你要想降低。你的试错成本，今天来这里你们就是对的。因为有畅血畅血卡这个机会，所以说关于活动过于不过这个问题，或者活动很难通过这个话题。呃，如果真的。那要坐下来聊的话，要聊一天。但是我觉得我刚才说的四个字足够。好，谢谢。"
+            ],
+            [
+              "Speaker_1",
+              "63.810–70.471",
+              "好，非常感谢那个三茂老师的回答。三茂老师说，我们在。整个店铺的这个活动当中，我们要学会换位思考。其实。"
+            ]
+          ]
+        },
+        {
+          "headers": [
+            "音频时长",
+            "CLI 总耗时",
+            "AXCL 调用合计",
+            "调用次数"
+          ],
+          "rows": [
+            [
+              "70.471 s",
+              "15.323 s",
+              "0.606 s",
+              "95"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "modelId": "AX-Meeting-Studio",
+        "revision": "5ff3c960c78a6726c9e4968b1deb090c4beb1764",
+        "provider": "AXCL C API",
+        "completed": true,
+        "scope": "official offline CLI meeting transcription",
+        "asrBackend": "sensevoice",
+        "inputPath": "wav/vad_example.wav",
+        "inputSha256": "a7431f0169ef76ef630c945a1d2c3675d8c8c2df2ae4a6b16f8a88ba1bccfbbb",
+        "audio": {
+          "sampleRate": 16000,
+          "channels": 1,
+          "frames": 1127530,
+          "durationSeconds": 70.470625
+        },
+        "cliExitCode": 0,
+        "cliSeconds": 15.322584389999975,
+        "elapsedSeconds": 27.44451680399652,
+        "totalCalls": 95,
+        "transcripts": [
+          {
+            "start_ms": 0,
+            "end_ms": 63810,
+            "speaker": 0,
+            "text": "试错的过程很简单。而且特别是今天报名仓雪卡的同学，你们可以。听到后面的有专门的活动课，他会大大降低你的试绸成本。其实你也可以过来听课。为什么你自己写嘛？我先今天写5个点，我就试试试验一下，反正这5个点不行，我再写5个点，这是再不行。那再写五个点吧。你总会所谓的活动大神和所谓的高手都是只有一个。把所有的错，所有的坑全国趟一遍，留下正确的，你就是所谓的大神，。明白吗？所以说关于活动通过这一块，我只送给你们四个字啊，换位思考。如果说你要想降低。你的试错成本，今天来这里你们就是对的。因为有畅血畅血卡这个机会，所以说关于活动过于不过这个问题，或者活动很难通过这个话题。呃，如果真的。那要坐下来聊的话，要聊一天。但是我觉得我刚才说的四个字足够。好，谢谢。"
+          },
+          {
+            "start_ms": 63810,
+            "end_ms": 70471,
+            "speaker": 1,
+            "text": "好，非常感谢那个三茂老师的回答。三茂老师说，我们在。整个店铺的这个活动当中，我们要学会换位思考。其实。"
+          }
+        ],
+        "sessions": [
+          {
+            "model": "models/cam++/campplus.axmodel",
+            "provider": "AXCL C API",
+            "sha256": "3e85b4d59a94488caa727ca76c7fe2ba408de02587cd8c9a6680b83488338b16",
+            "calls": 81,
+            "runMilliseconds": [
+              3.40143,
+              3.342805,
+              3.34368,
+              3.341639,
+              3.33318,
+              3.329097,
+              3.33318,
+              3.332014,
+              3.336389,
+              3.33143,
+              3.32968,
+              3.328221,
+              3.118512,
+              3.409305,
+              3.49389,
+              3.494473,
+              3.50964,
+              3.516639,
+              3.496223,
+              3.505848,
+              3.501764,
+              3.493014,
+              3.510806,
+              3.430014,
+              3.511972,
+              3.516056,
+              3.499431,
+              3.508473,
+              3.524223,
+              3.497681,
+              3.47639,
+              3.509348,
+              3.621931,
+              3.510223,
+              3.529765,
+              3.39093,
+              3.549889,
+              3.436722,
+              3.502931,
+              3.452764,
+              3.501473,
+              3.493014,
+              3.498556,
+              3.473764,
+              3.496222,
+              3.483097,
+              3.49214,
+              3.439348,
+              3.486014,
+              3.419223,
+              3.497098,
+              3.432347,
+              3.502931,
+              3.427681,
+              3.487764,
+              3.475515,
+              3.495347,
+              3.447806,
+              3.503514,
+              3.425639,
+              3.491848,
+              3.475515,
+              3.50439,
+              3.486597,
+              3.497973,
+              3.510223,
+              3.499431,
+              3.503223,
+              3.500598,
+              3.511973,
+              3.491848,
+              3.502056,
+              3.501764,
+              3.484847,
+              3.499431,
+              3.490097,
+              3.509639,
+              3.490098,
+              3.426514,
+              3.507889,
+              3.499431
+            ],
+            "allReturnCodesZero": true,
+            "rawOutputTensorsCaptured": false
+          },
+          {
+            "model": "models/sensevoice/sensevoice.axmodel",
+            "provider": "AXCL C API",
+            "sha256": "7b64a36fa15e75ab5e3b75f18ae87a058970cff76219407e503b54fb53dd8e38",
+            "calls": 12,
+            "runMilliseconds": [
+              26.106023,
+              26.061981,
+              26.06694,
+              26.056148,
+              26.049732,
+              25.852856,
+              26.273733,
+              26.062565,
+              25.94444,
+              25.836814,
+              26.07394,
+              25.836814
+            ],
+            "allReturnCodesZero": true,
+            "rawOutputTensorsCaptured": false
+          },
+          {
+            "model": "models/vad/vad.axmodel",
+            "provider": "AXCL C API",
+            "sha256": "7d89d1087f14597bc93ae5cf89e1c60d8ee76d7bdffbe679ef6dc002635e6f6b",
+            "calls": 2,
+            "runMilliseconds": [
+              6.714485,
+              6.1889
+            ],
+            "allReturnCodesZero": true,
+            "rawOutputTensorsCaptured": false
+          }
+        ],
+        "filesBefore": [
+          {
+            "path": "README.md",
+            "sha256": "1b33294618eed8fd32a5cecb0273099e6d6bc2fd24e59a890320d229cd238766"
+          },
+          {
+            "path": "models/README.md",
+            "sha256": "cccaeeed460ce611379714216c9ef2550a8d78dbd2a43db1a817ece66c77fb40"
+          },
+          {
+            "path": "models/cam++/campplus.axmodel",
+            "sha256": "3e85b4d59a94488caa727ca76c7fe2ba408de02587cd8c9a6680b83488338b16"
+          },
+          {
+            "path": "models/fireredasr/cmvn.ark",
+            "sha256": "6efba6105429d1630c05d818d956bfe4edfad37a04b3b27bb5a029b9adb37945"
+          },
+          {
+            "path": "models/fireredasr/decoder_loop.axmodel",
+            "sha256": "a2912496e6804027f2dc77c903f6b2f76678603dd616e662b78e3f226bcaa91a"
+          },
+          {
+            "path": "models/fireredasr/dict.txt",
+            "sha256": "6907215aeb034f6926b26bf8abfd650f756781622480a2342ec1f29b2072cafe"
+          },
+          {
+            "path": "models/fireredasr/encoder.axmodel",
+            "sha256": "6cc674ba54cf0e57f3c7dffa3824cd53700e4e7709827893f8708c4958e116c1"
+          },
+          {
+            "path": "models/fireredasr/pe.npy",
+            "sha256": "1d0b03c72e71c8e01e36b390154520cc4bb28cf18aed448d6a0c1b93b8603042"
+          },
+          {
+            "path": "models/fireredasr/train_bpe1000.model",
+            "sha256": "473bbc157cb4eade2059b30a3c877a1c29bd50cadbfbed869ae36eeade7fee07"
+          },
+          {
+            "path": "models/punc/model.axmodel",
+            "sha256": "bdc5e8051c89961b4212929ddf129b9e8976c04ec55000a7c9b72c66678e4886"
+          },
+          {
+            "path": "models/punc/tokens.json",
+            "sha256": "c960ab87bccea4aa15cf49a59f71973c2c330b46668048cd8da253749ec71ee3"
+          },
+          {
+            "path": "models/sensevoice/am.mvn",
+            "sha256": "29b3c740a2c0cfc6b308126d31d7f265fa2be74f3bb095cd2f143ea970896ae5"
+          },
+          {
+            "path": "models/sensevoice/auto.npy",
+            "sha256": "8d0997706b30274f7ff3b157ca90df50b7ed8ced35091a0231700355d5ee1374"
+          },
+          {
+            "path": "models/sensevoice/chn_jpn_yue_eng_ko_spectok.bpe.model",
+            "sha256": "aa87f86064c3730d799ddf7af3c04659151102cba548bce325cf06ba4da4e6a8"
+          },
+          {
+            "path": "models/sensevoice/config.yaml",
+            "sha256": "f71e239ba36705564b5bf2d2ffd07eece07b8e3f2bbf6d2c99d8df856339ac19"
+          },
+          {
+            "path": "models/sensevoice/en.npy",
+            "sha256": "1f21c6d5a0b876c696b15ee80317ee558b6a19a084c1147a13a2871900f6c72e"
+          },
+          {
+            "path": "models/sensevoice/event_emo.npy",
+            "sha256": "1d22e3df5d192fdc3e73e368a2cb576975a5a43a114a8432a91c036adf8e2263"
+          },
+          {
+            "path": "models/sensevoice/ja.npy",
+            "sha256": "75a83ded838de7d02a56de32b774a50d2f02b5ec69880e7acdce600666f77517"
+          },
+          {
+            "path": "models/sensevoice/ko.npy",
+            "sha256": "f371fffcecd75c1268e2ef8043c276ec9b231177b5138b39e5732c65401749db"
+          },
+          {
+            "path": "models/sensevoice/sensevoice.axmodel",
+            "sha256": "7b64a36fa15e75ab5e3b75f18ae87a058970cff76219407e503b54fb53dd8e38"
+          },
+          {
+            "path": "models/sensevoice/withitn.npy",
+            "sha256": "39bf02586f59237894fc2918ab2db4f12ec3c084c41465718832fbd7646ea729"
+          },
+          {
+            "path": "models/sensevoice/yue.npy",
+            "sha256": "319c3d30e6b176338a6d8871f81ec57af5c3c112cecbdce4a0bf36bec51f3ceb"
+          },
+          {
+            "path": "models/sensevoice/zh.npy",
+            "sha256": "0c952f976ae70642c8f682c88711abce3a2b64ba20a6d8ca0b706f227de816eb"
+          },
+          {
+            "path": "models/vad/am.mvn",
+            "sha256": "6820fef9687708c4fc3fab2530179c8fcea6262daa25514380056cd8f6eb1754"
+          },
+          {
+            "path": "models/vad/config.yaml",
+            "sha256": "486861ca26ddb79081663b6179cb204c6bfae71c52f04aafc48a9e9d8dde1e93"
+          },
+          {
+            "path": "models/vad/vad.axmodel",
+            "sha256": "7d89d1087f14597bc93ae5cf89e1c60d8ee76d7bdffbe679ef6dc002635e6f6b"
+          },
+          {
+            "path": "requirements-runtime.txt",
+            "sha256": "c5742e66b429f18f09112344bce093b60696c71322c8e553503e1a1d2921c72d"
+          },
+          {
+            "path": "run_web_studio.sh",
+            "sha256": "9e2126ba6d634838242039106e3742233957c798c7df362abd650956d804c115"
+          },
+          {
+            "path": "src/ax_meeting_cpp/resources/model_assets.json",
+            "sha256": "0389a6d785bde3951d9c212318ab8eec47ec9793412439fdd0e8bc5c6db0da83"
+          },
+          {
+            "path": "tools/verify_assets.py",
+            "sha256": "df7b0dceab33958a29eafc61c7a9c35357614bd832f10ea776712544b56b268b"
+          },
+          {
+            "path": "wav/002.mp3",
+            "sha256": "4bdd7d1fb5723e253083820c659d65449e43abff0fbf7b5ac52fea3c1d7572fc"
+          },
+          {
+            "path": "wav/20200327_2P.wav",
+            "sha256": "3bd799992bb9327844b78547d3c91b444376cf359b5fdc03f26c14c1c921f0c0"
+          },
+          {
+            "path": "wav/2speakers_example.wav",
+            "sha256": "8dd999996bfc3dfbef07d71401dd9043096ffbff576bcccdd8f8ddce33563b14"
+          },
+          {
+            "path": "wav/vad_example.wav",
+            "sha256": "a7431f0169ef76ef630c945a1d2c3675d8c8c2df2ae4a6b16f8a88ba1bccfbbb"
+          },
+          {
+            "path": "wheel/ax_meeting_studio-0.3.0+axcl-py3-none-linux_aarch64.whl",
+            "sha256": "c2b9c8866a7eace265c72cfd8f6b84841bbe323379725eee44fbcff65738280f"
+          }
+        ],
+        "filesAfter": [
+          {
+            "path": "README.md",
+            "sha256": "1b33294618eed8fd32a5cecb0273099e6d6bc2fd24e59a890320d229cd238766"
+          },
+          {
+            "path": "models/README.md",
+            "sha256": "cccaeeed460ce611379714216c9ef2550a8d78dbd2a43db1a817ece66c77fb40"
+          },
+          {
+            "path": "models/cam++/campplus.axmodel",
+            "sha256": "3e85b4d59a94488caa727ca76c7fe2ba408de02587cd8c9a6680b83488338b16"
+          },
+          {
+            "path": "models/fireredasr/cmvn.ark",
+            "sha256": "6efba6105429d1630c05d818d956bfe4edfad37a04b3b27bb5a029b9adb37945"
+          },
+          {
+            "path": "models/fireredasr/decoder_loop.axmodel",
+            "sha256": "a2912496e6804027f2dc77c903f6b2f76678603dd616e662b78e3f226bcaa91a"
+          },
+          {
+            "path": "models/fireredasr/dict.txt",
+            "sha256": "6907215aeb034f6926b26bf8abfd650f756781622480a2342ec1f29b2072cafe"
+          },
+          {
+            "path": "models/fireredasr/encoder.axmodel",
+            "sha256": "6cc674ba54cf0e57f3c7dffa3824cd53700e4e7709827893f8708c4958e116c1"
+          },
+          {
+            "path": "models/fireredasr/pe.npy",
+            "sha256": "1d0b03c72e71c8e01e36b390154520cc4bb28cf18aed448d6a0c1b93b8603042"
+          },
+          {
+            "path": "models/fireredasr/train_bpe1000.model",
+            "sha256": "473bbc157cb4eade2059b30a3c877a1c29bd50cadbfbed869ae36eeade7fee07"
+          },
+          {
+            "path": "models/punc/model.axmodel",
+            "sha256": "bdc5e8051c89961b4212929ddf129b9e8976c04ec55000a7c9b72c66678e4886"
+          },
+          {
+            "path": "models/punc/tokens.json",
+            "sha256": "c960ab87bccea4aa15cf49a59f71973c2c330b46668048cd8da253749ec71ee3"
+          },
+          {
+            "path": "models/sensevoice/am.mvn",
+            "sha256": "29b3c740a2c0cfc6b308126d31d7f265fa2be74f3bb095cd2f143ea970896ae5"
+          },
+          {
+            "path": "models/sensevoice/auto.npy",
+            "sha256": "8d0997706b30274f7ff3b157ca90df50b7ed8ced35091a0231700355d5ee1374"
+          },
+          {
+            "path": "models/sensevoice/chn_jpn_yue_eng_ko_spectok.bpe.model",
+            "sha256": "aa87f86064c3730d799ddf7af3c04659151102cba548bce325cf06ba4da4e6a8"
+          },
+          {
+            "path": "models/sensevoice/config.yaml",
+            "sha256": "f71e239ba36705564b5bf2d2ffd07eece07b8e3f2bbf6d2c99d8df856339ac19"
+          },
+          {
+            "path": "models/sensevoice/en.npy",
+            "sha256": "1f21c6d5a0b876c696b15ee80317ee558b6a19a084c1147a13a2871900f6c72e"
+          },
+          {
+            "path": "models/sensevoice/event_emo.npy",
+            "sha256": "1d22e3df5d192fdc3e73e368a2cb576975a5a43a114a8432a91c036adf8e2263"
+          },
+          {
+            "path": "models/sensevoice/ja.npy",
+            "sha256": "75a83ded838de7d02a56de32b774a50d2f02b5ec69880e7acdce600666f77517"
+          },
+          {
+            "path": "models/sensevoice/ko.npy",
+            "sha256": "f371fffcecd75c1268e2ef8043c276ec9b231177b5138b39e5732c65401749db"
+          },
+          {
+            "path": "models/sensevoice/sensevoice.axmodel",
+            "sha256": "7b64a36fa15e75ab5e3b75f18ae87a058970cff76219407e503b54fb53dd8e38"
+          },
+          {
+            "path": "models/sensevoice/withitn.npy",
+            "sha256": "39bf02586f59237894fc2918ab2db4f12ec3c084c41465718832fbd7646ea729"
+          },
+          {
+            "path": "models/sensevoice/yue.npy",
+            "sha256": "319c3d30e6b176338a6d8871f81ec57af5c3c112cecbdce4a0bf36bec51f3ceb"
+          },
+          {
+            "path": "models/sensevoice/zh.npy",
+            "sha256": "0c952f976ae70642c8f682c88711abce3a2b64ba20a6d8ca0b706f227de816eb"
+          },
+          {
+            "path": "models/vad/am.mvn",
+            "sha256": "6820fef9687708c4fc3fab2530179c8fcea6262daa25514380056cd8f6eb1754"
+          },
+          {
+            "path": "models/vad/config.yaml",
+            "sha256": "486861ca26ddb79081663b6179cb204c6bfae71c52f04aafc48a9e9d8dde1e93"
+          },
+          {
+            "path": "models/vad/vad.axmodel",
+            "sha256": "7d89d1087f14597bc93ae5cf89e1c60d8ee76d7bdffbe679ef6dc002635e6f6b"
+          },
+          {
+            "path": "requirements-runtime.txt",
+            "sha256": "c5742e66b429f18f09112344bce093b60696c71322c8e553503e1a1d2921c72d"
+          },
+          {
+            "path": "run_web_studio.sh",
+            "sha256": "9e2126ba6d634838242039106e3742233957c798c7df362abd650956d804c115"
+          },
+          {
+            "path": "src/ax_meeting_cpp/resources/model_assets.json",
+            "sha256": "0389a6d785bde3951d9c212318ab8eec47ec9793412439fdd0e8bc5c6db0da83"
+          },
+          {
+            "path": "tools/verify_assets.py",
+            "sha256": "df7b0dceab33958a29eafc61c7a9c35357614bd832f10ea776712544b56b268b"
+          },
+          {
+            "path": "wav/002.mp3",
+            "sha256": "4bdd7d1fb5723e253083820c659d65449e43abff0fbf7b5ac52fea3c1d7572fc"
+          },
+          {
+            "path": "wav/20200327_2P.wav",
+            "sha256": "3bd799992bb9327844b78547d3c91b444376cf359b5fdc03f26c14c1c921f0c0"
+          },
+          {
+            "path": "wav/2speakers_example.wav",
+            "sha256": "8dd999996bfc3dfbef07d71401dd9043096ffbff576bcccdd8f8ddce33563b14"
+          },
+          {
+            "path": "wav/vad_example.wav",
+            "sha256": "a7431f0169ef76ef630c945a1d2c3675d8c8c2df2ae4a6b16f8a88ba1bccfbbb"
+          },
+          {
+            "path": "wheel/ax_meeting_studio-0.3.0+axcl-py3-none-linux_aarch64.whl",
+            "sha256": "c2b9c8866a7eace265c72cfd8f6b84841bbe323379725eee44fbcff65738280f"
+          }
+        ],
+        "outputSha256": "c6a3d27ea3277abf4eaa1dbbe9baaa99e6e7639170fb6a92c8911ee390b6587b",
+        "inferenceEvidence": "native-return-codes-and-application-output",
+        "nativeEvents": [
+          {
+            "event": "load",
+            "modelId": 281473298994016,
+            "status": 0,
+            "model": "models/vad/vad.axmodel"
+          },
+          {
+            "event": "load",
+            "modelId": 281473298993168,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298994016,
+            "group": 0,
+            "milliseconds": 6.714485,
+            "status": 0,
+            "model": "models/vad/vad.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298994016,
+            "group": 0,
+            "milliseconds": 6.1889,
+            "status": 0,
+            "model": "models/vad/vad.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.40143,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.342805,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.34368,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.341639,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.33318,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.329097,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.33318,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.332014,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.336389,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.33143,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.32968,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.328221,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.118512,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.409305,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.49389,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.494473,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.50964,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.516639,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.496223,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.505848,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.501764,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.493014,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.510806,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.430014,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.511972,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.516056,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.499431,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.508473,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.524223,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.497681,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.47639,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.509348,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.621931,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.510223,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.529765,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.39093,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.549889,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.436722,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.502931,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.452764,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.501473,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.493014,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.498556,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.473764,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.496222,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.483097,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.49214,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.439348,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.486014,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.419223,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.497098,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.432347,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.502931,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.427681,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.487764,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.475515,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.495347,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.447806,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.503514,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.425639,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.491848,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.475515,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.50439,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.486597,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.497973,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.510223,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.499431,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.503223,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.500598,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.511973,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.491848,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.502056,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.501764,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.484847,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.499431,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.490097,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.509639,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.490098,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.426514,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.507889,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473298993168,
+            "group": 0,
+            "milliseconds": 3.499431,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "load",
+            "modelId": 281473299028176,
+            "status": 0,
+            "model": "models/sensevoice/sensevoice.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473299028176,
+            "group": 0,
+            "milliseconds": 26.106023,
+            "status": 0,
+            "model": "models/sensevoice/sensevoice.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473299028176,
+            "group": 0,
+            "milliseconds": 26.061981,
+            "status": 0,
+            "model": "models/sensevoice/sensevoice.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473299028176,
+            "group": 0,
+            "milliseconds": 26.06694,
+            "status": 0,
+            "model": "models/sensevoice/sensevoice.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473299028176,
+            "group": 0,
+            "milliseconds": 26.056148,
+            "status": 0,
+            "model": "models/sensevoice/sensevoice.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473299028176,
+            "group": 0,
+            "milliseconds": 26.049732,
+            "status": 0,
+            "model": "models/sensevoice/sensevoice.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473299028176,
+            "group": 0,
+            "milliseconds": 25.852856,
+            "status": 0,
+            "model": "models/sensevoice/sensevoice.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473299028176,
+            "group": 0,
+            "milliseconds": 26.273733,
+            "status": 0,
+            "model": "models/sensevoice/sensevoice.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473299028176,
+            "group": 0,
+            "milliseconds": 26.062565,
+            "status": 0,
+            "model": "models/sensevoice/sensevoice.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473299028176,
+            "group": 0,
+            "milliseconds": 25.94444,
+            "status": 0,
+            "model": "models/sensevoice/sensevoice.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473299028176,
+            "group": 0,
+            "milliseconds": 25.836814,
+            "status": 0,
+            "model": "models/sensevoice/sensevoice.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473299028176,
+            "group": 0,
+            "milliseconds": 26.07394,
+            "status": 0,
+            "model": "models/sensevoice/sensevoice.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473299028176,
+            "group": 0,
+            "milliseconds": 25.836814,
+            "status": 0,
+            "model": "models/sensevoice/sensevoice.axmodel"
+          },
+          {
+            "event": "unload",
+            "modelId": 281473299028176,
+            "status": 0,
+            "model": "models/sensevoice/sensevoice.axmodel"
+          },
+          {
+            "event": "unload",
+            "modelId": 281473298993168,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "unload",
+            "modelId": 281473298994016,
+            "status": 0,
+            "model": "models/vad/vad.axmodel"
+          }
+        ],
+        "rawOutputTensorsCaptured": false
+      },
+      "sourceArchiveSha256": "49925a6d6e72e82f564d92b2b64d0e15f1b5fdb7676a8beea782fefa576063e8"
+    },
+    {
+      "label": "FireRed/Punc：说话人分段与转录",
+      "observation": "以下为官方离线 CLI 的原始分段文本。可播放同一段输入录音对照；识别文本和说话人边界尚无独立人工标注核验。 本例按输入音频长度处理时间边界：第 3 段结束时间由原始 70.550 秒裁剪为 70.471 秒，文本未修改；原始时间戳保留在输入输出记录中。",
+      "previews": [],
+      "audio": [
+        {
+          "caption": "播放两种后端共同使用的完整录音",
+          "path": "/validation/effects/ax-meeting-studio-20261001/meeting-studio-input.wav"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "说话人标签",
+            "时间段（秒）",
+            "实际转录"
+          ],
+          "rows": [
+            [
+              "Speaker_0",
+              "0.070–28.990",
+              "试错的过程很简单啊，就特别是今天报名参选卡的同学，你们可以听到后面的有专门的活动课，它会大大降低你的试错成本。其实你也可以不要来听课。为什么你自己写嘛？我写今天写五个点，我就试试试验一下，发现这五个点不行，我再写五个点，这是再不行，那再写五个点嘛，你总会所谓的活动大神和所谓的高手，"
+            ],
+            [
+              "Speaker_0",
+              "29.960–63.945",
+              "都是只有一个，把所有的错，所有的坑全给我趟一遍，留下正确的你就是所谓的大神明白吗？所以说关于活动通过这一块儿，我只送给你们四个字啊，换位思考。如果说你要想降低你的试错成本，今天来这里你们就是对的。因为有参选参选卡这个机会，所以说关于活动过于不过这个问题或者活动很难通过。这个话题啊，如果真的要坐下来聊的话要聊一天。但是我觉得我刚才说的四个字足够好，谢谢"
+            ],
+            [
+              "Speaker_1",
+              "63.945–70.471",
+              "好，非常感谢那个三胖老师的回答啊。三胖老师说我们在整个店铺的这个活动当中，我们要学会换位思考。"
+            ]
+          ]
+        },
+        {
+          "headers": [
+            "音频时长",
+            "CLI 总耗时",
+            "AXCL 调用合计",
+            "调用次数"
+          ],
+          "rows": [
+            [
+              "70.471 s",
+              "46.166 s",
+              "10.423 s",
+              "459"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "modelId": "AX-Meeting-Studio",
+        "revision": "5ff3c960c78a6726c9e4968b1deb090c4beb1764",
+        "provider": "AXCL C API",
+        "completed": true,
+        "scope": "official offline CLI meeting transcription",
+        "asrBackend": "firered_punc",
+        "inputPath": "wav/vad_example.wav",
+        "inputSha256": "a7431f0169ef76ef630c945a1d2c3675d8c8c2df2ae4a6b16f8a88ba1bccfbbb",
+        "audio": {
+          "sampleRate": 16000,
+          "channels": 1,
+          "frames": 1127530,
+          "durationSeconds": 70.470625
+        },
+        "cliExitCode": 0,
+        "cliSeconds": 46.1655805219998,
+        "elapsedSeconds": 53.102220708999084,
+        "totalCalls": 459,
+        "transcripts": [
+          {
+            "start_ms": 70,
+            "end_ms": 28990,
+            "speaker": 0,
+            "text": "试错的过程很简单啊，就特别是今天报名参选卡的同学，你们可以听到后面的有专门的活动课，它会大大降低你的试错成本。其实你也可以不要来听课。为什么你自己写嘛？我写今天写五个点，我就试试试验一下，发现这五个点不行，我再写五个点，这是再不行，那再写五个点嘛，你总会所谓的活动大神和所谓的高手，"
+          },
+          {
+            "start_ms": 29960,
+            "end_ms": 63945,
+            "speaker": 0,
+            "text": "都是只有一个，把所有的错，所有的坑全给我趟一遍，留下正确的你就是所谓的大神明白吗？所以说关于活动通过这一块儿，我只送给你们四个字啊，换位思考。如果说你要想降低你的试错成本，今天来这里你们就是对的。因为有参选参选卡这个机会，所以说关于活动过于不过这个问题或者活动很难通过。这个话题啊，如果真的要坐下来聊的话要聊一天。但是我觉得我刚才说的四个字足够好，谢谢"
+          },
+          {
+            "start_ms": 63945,
+            "end_ms": 70471,
+            "speaker": 1,
+            "text": "好，非常感谢那个三胖老师的回答啊。三胖老师说我们在整个店铺的这个活动当中，我们要学会换位思考。"
+          }
+        ],
+        "sessions": [
+          {
+            "model": "models/cam++/campplus.axmodel",
+            "provider": "AXCL C API",
+            "sha256": "3e85b4d59a94488caa727ca76c7fe2ba408de02587cd8c9a6680b83488338b16",
+            "calls": 81,
+            "runMilliseconds": [
+              3.371681,
+              3.34368,
+              3.336972,
+              3.352723,
+              3.329097,
+              3.328514,
+              3.335514,
+              3.325889,
+              3.337556,
+              3.333764,
+              3.329972,
+              3.250347,
+              3.385388,
+              3.378681,
+              3.381014,
+              3.385098,
+              3.381888,
+              3.383056,
+              3.405222,
+              3.381597,
+              3.39268,
+              3.381597,
+              3.387723,
+              3.386847,
+              3.386848,
+              3.374597,
+              3.389472,
+              3.391806,
+              3.373139,
+              3.378972,
+              3.377222,
+              3.385097,
+              3.325888,
+              3.388889,
+              3.378681,
+              3.376347,
+              3.379555,
+              3.37868,
+              3.385972,
+              3.38218,
+              3.379556,
+              3.380139,
+              3.391514,
+              3.320055,
+              3.372555,
+              3.395306,
+              3.387139,
+              3.371389,
+              3.391514,
+              3.318889,
+              3.378097,
+              3.375763,
+              3.386264,
+              3.392681,
+              3.375764,
+              3.372555,
+              3.323555,
+              3.134263,
+              3.51839,
+              3.521015,
+              3.433222,
+              3.489222,
+              3.41368,
+              3.424472,
+              3.505556,
+              3.494473,
+              3.493014,
+              3.494764,
+              3.496223,
+              3.491847,
+              3.507306,
+              3.562431,
+              3.507015,
+              3.488931,
+              3.52189,
+              3.515473,
+              3.432931,
+              3.511681,
+              3.508181,
+              3.488931,
+              3.496806
+            ],
+            "allReturnCodesZero": true,
+            "rawOutputTensorsCaptured": false
+          },
+          {
+            "model": "models/fireredasr/decoder_loop.axmodel",
+            "provider": "AXCL C API",
+            "sha256": "a2912496e6804027f2dc77c903f6b2f76678603dd616e662b78e3f226bcaa91a",
+            "calls": 360,
+            "runMilliseconds": [
+              24.134349,
+              24.065807,
+              24.110432,
+              24.151557,
+              24.13464,
+              23.967515,
+              24.011557,
+              24.066098,
+              24.097015,
+              23.993765,
+              23.979473,
+              24.004848,
+              24.019432,
+              24.070765,
+              23.977723,
+              24.047431,
+              24.02614,
+              24.049182,
+              23.949139,
+              24.069307,
+              24.112765,
+              24.072806,
+              23.945931,
+              23.928432,
+              24.024682,
+              24.013307,
+              23.943307,
+              23.987931,
+              24.10139,
+              24.103432,
+              24.103432,
+              23.923764,
+              24.098182,
+              24.012723,
+              24.103432,
+              23.997265,
+              23.919682,
+              24.042765,
+              24.600434,
+              24.831143,
+              25.108519,
+              24.842226,
+              24.864102,
+              24.369434,
+              24.303808,
+              24.207849,
+              24.202891,
+              24.094974,
+              24.156224,
+              24.258516,
+              24.328599,
+              24.492517,
+              24.4511,
+              24.554642,
+              24.355141,
+              24.59985,
+              24.740435,
+              24.658476,
+              24.835518,
+              24.633976,
+              24.447891,
+              24.687935,
+              24.549392,
+              24.422516,
+              24.422225,
+              24.699602,
+              24.728477,
+              24.996519,
+              24.595768,
+              24.801976,
+              24.717976,
+              24.499808,
+              24.576517,
+              24.598684,
+              24.500101,
+              24.584392,
+              24.402392,
+              24.424267,
+              24.421058,
+              24.440892,
+              24.454892,
+              24.401225,
+              24.406184,
+              24.520517,
+              24.44585,
+              24.387225,
+              24.424558,
+              24.422808,
+              24.446142,
+              24.457517,
+              24.264141,
+              24.467725,
+              24.81481,
+              24.06464,
+              24.088848,
+              24.043348,
+              23.988223,
+              23.955848,
+              24.02614,
+              23.943598,
+              23.898098,
+              23.988806,
+              24.078641,
+              23.97014,
+              23.877097,
+              23.908306,
+              23.903347,
+              24.021473,
+              23.945056,
+              23.966057,
+              24.005723,
+              23.954973,
+              23.900723,
+              23.920848,
+              23.931932,
+              24.059098,
+              24.143099,
+              24.001932,
+              24.003682,
+              23.917348,
+              24.081849,
+              24.051223,
+              23.988223,
+              23.894889,
+              23.993181,
+              24.07864,
+              24.105473,
+              24.057057,
+              23.974223,
+              24.143099,
+              23.990556,
+              23.971307,
+              23.98589,
+              23.994348,
+              24.06639,
+              24.066682,
+              23.894014,
+              24.059682,
+              24.127932,
+              24.083891,
+              24.338807,
+              24.722352,
+              24.747435,
+              24.752101,
+              24.613851,
+              24.225932,
+              24.125015,
+              24.099057,
+              24.048598,
+              23.986181,
+              23.935139,
+              24.090599,
+              24.209016,
+              24.031974,
+              23.841222,
+              23.98764,
+              24.02439,
+              24.046849,
+              24.010974,
+              24.049474,
+              23.99814,
+              24.100224,
+              24.078932,
+              23.962556,
+              23.958181,
+              24.069307,
+              24.176932,
+              24.05939,
+              24.015932,
+              24.030807,
+              24.084765,
+              24.094099,
+              23.924931,
+              23.851139,
+              24.035474,
+              24.071057,
+              24.065807,
+              23.937764,
+              23.956432,
+              23.958473,
+              23.964598,
+              23.886139,
+              23.949432,
+              24.039265,
+              24.045974,
+              24.029348,
+              23.902764,
+              23.988515,
+              24.007765,
+              24.031682,
+              23.961973,
+              23.914723,
+              24.06639,
+              24.051515,
+              23.970431,
+              23.98239,
+              23.955264,
+              24.030515,
+              24.621434,
+              24.581184,
+              24.816268,
+              24.78331,
+              24.698143,
+              24.092641,
+              23.936306,
+              24.012432,
+              24.122391,
+              23.986182,
+              23.943306,
+              23.967807,
+              24.029932,
+              23.980057,
+              24.017682,
+              23.962848,
+              24.029057,
+              23.996099,
+              24.092349,
+              23.971598,
+              23.988223,
+              23.967515,
+              24.044807,
+              24.069891,
+              23.912098,
+              24.115099,
+              24.016806,
+              23.965764,
+              23.991139,
+              23.875348,
+              24.026723,
+              24.071057,
+              23.91939,
+              23.876223,
+              23.962264,
+              24.028182,
+              24.000765,
+              24.053557,
+              24.058224,
+              24.031099,
+              23.921723,
+              24.064641,
+              24.003973,
+              23.965765,
+              24.099932,
+              24.101682,
+              24.071057,
+              23.927556,
+              24.000182,
+              24.106057,
+              23.991139,
+              23.99114,
+              23.93164,
+              24.014182,
+              24.002807,
+              23.931056,
+              24.112474,
+              24.029932,
+              24.373225,
+              24.617351,
+              24.86906,
+              24.544434,
+              24.717976,
+              24.613268,
+              24.16264,
+              24.225932,
+              24.101682,
+              24.237891,
+              24.215724,
+              24.568642,
+              24.46335,
+              24.555808,
+              24.657601,
+              24.513225,
+              24.280766,
+              24.566017,
+              24.418141,
+              24.339975,
+              24.497767,
+              24.434184,
+              24.365641,
+              24.393642,
+              24.637185,
+              24.335599,
+              24.546476,
+              24.44585,
+              24.469475,
+              24.535684,
+              24.472683,
+              24.479392,
+              24.430391,
+              24.473558,
+              24.466558,
+              24.490183,
+              24.357767,
+              24.458975,
+              24.347849,
+              24.506225,
+              24.482892,
+              24.426309,
+              24.562517,
+              24.666935,
+              24.304974,
+              24.534226,
+              24.621143,
+              24.674809,
+              24.562809,
+              24.568934,
+              24.545892,
+              24.603351,
+              24.510892,
+              24.4616,
+              24.501558,
+              24.416975,
+              24.571267,
+              24.484058,
+              23.968682,
+              23.995807,
+              24.178391,
+              24.022932,
+              23.966056,
+              24.071348,
+              24.152432,
+              23.993473,
+              23.935431,
+              23.927848,
+              24.05239,
+              24.075723,
+              23.981807,
+              23.775597,
+              23.973932,
+              24.049765,
+              24.06814,
+              24.099932,
+              23.98764,
+              23.962848,
+              24.02964,
+              24.018848,
+              24.038973,
+              24.083599,
+              24.021765,
+              24.032266,
+              23.927557,
+              23.911514,
+              23.943307,
+              24.106932,
+              23.970139,
+              24.065807,
+              24.060849,
+              24.073391,
+              24.080973,
+              24.029057,
+              23.944182,
+              24.051224,
+              24.033432,
+              24.072224,
+              23.987639,
+              23.94914,
+              24.090307,
+              23.946806,
+              23.920556,
+              23.903056
+            ],
+            "allReturnCodesZero": true,
+            "rawOutputTensorsCaptured": false
+          },
+          {
+            "model": "models/fireredasr/encoder.axmodel",
+            "provider": "AXCL C API",
+            "sha256": "6cc674ba54cf0e57f3c7dffa3824cd53700e4e7709827893f8708c4958e116c1",
+            "calls": 9,
+            "runMilliseconds": [
+              158.210856,
+              158.030897,
+              158.657983,
+              158.027397,
+              158.237106,
+              158.044313,
+              157.869605,
+              158.40919,
+              158.357856
+            ],
+            "allReturnCodesZero": true,
+            "rawOutputTensorsCaptured": false
+          },
+          {
+            "model": "models/punc/model.axmodel",
+            "provider": "AXCL C API",
+            "sha256": "bdc5e8051c89961b4212929ddf129b9e8976c04ec55000a7c9b72c66678e4886",
+            "calls": 7,
+            "runMilliseconds": [
+              1.334963,
+              0.562628,
+              0.498169,
+              0.609002,
+              0.497585,
+              0.595002,
+              0.91292
+            ],
+            "allReturnCodesZero": true,
+            "rawOutputTensorsCaptured": false
+          },
+          {
+            "model": "models/vad/vad.axmodel",
+            "provider": "AXCL C API",
+            "sha256": "7d89d1087f14597bc93ae5cf89e1c60d8ee76d7bdffbe679ef6dc002635e6f6b",
+            "calls": 2,
+            "runMilliseconds": [
+              6.334443,
+              5.978608
+            ],
+            "allReturnCodesZero": true,
+            "rawOutputTensorsCaptured": false
+          }
+        ],
+        "filesBefore": [
+          {
+            "path": "README.md",
+            "sha256": "1b33294618eed8fd32a5cecb0273099e6d6bc2fd24e59a890320d229cd238766"
+          },
+          {
+            "path": "models/README.md",
+            "sha256": "cccaeeed460ce611379714216c9ef2550a8d78dbd2a43db1a817ece66c77fb40"
+          },
+          {
+            "path": "models/cam++/campplus.axmodel",
+            "sha256": "3e85b4d59a94488caa727ca76c7fe2ba408de02587cd8c9a6680b83488338b16"
+          },
+          {
+            "path": "models/fireredasr/cmvn.ark",
+            "sha256": "6efba6105429d1630c05d818d956bfe4edfad37a04b3b27bb5a029b9adb37945"
+          },
+          {
+            "path": "models/fireredasr/decoder_loop.axmodel",
+            "sha256": "a2912496e6804027f2dc77c903f6b2f76678603dd616e662b78e3f226bcaa91a"
+          },
+          {
+            "path": "models/fireredasr/dict.txt",
+            "sha256": "6907215aeb034f6926b26bf8abfd650f756781622480a2342ec1f29b2072cafe"
+          },
+          {
+            "path": "models/fireredasr/encoder.axmodel",
+            "sha256": "6cc674ba54cf0e57f3c7dffa3824cd53700e4e7709827893f8708c4958e116c1"
+          },
+          {
+            "path": "models/fireredasr/pe.npy",
+            "sha256": "1d0b03c72e71c8e01e36b390154520cc4bb28cf18aed448d6a0c1b93b8603042"
+          },
+          {
+            "path": "models/fireredasr/train_bpe1000.model",
+            "sha256": "473bbc157cb4eade2059b30a3c877a1c29bd50cadbfbed869ae36eeade7fee07"
+          },
+          {
+            "path": "models/punc/model.axmodel",
+            "sha256": "bdc5e8051c89961b4212929ddf129b9e8976c04ec55000a7c9b72c66678e4886"
+          },
+          {
+            "path": "models/punc/tokens.json",
+            "sha256": "c960ab87bccea4aa15cf49a59f71973c2c330b46668048cd8da253749ec71ee3"
+          },
+          {
+            "path": "models/sensevoice/am.mvn",
+            "sha256": "29b3c740a2c0cfc6b308126d31d7f265fa2be74f3bb095cd2f143ea970896ae5"
+          },
+          {
+            "path": "models/sensevoice/auto.npy",
+            "sha256": "8d0997706b30274f7ff3b157ca90df50b7ed8ced35091a0231700355d5ee1374"
+          },
+          {
+            "path": "models/sensevoice/chn_jpn_yue_eng_ko_spectok.bpe.model",
+            "sha256": "aa87f86064c3730d799ddf7af3c04659151102cba548bce325cf06ba4da4e6a8"
+          },
+          {
+            "path": "models/sensevoice/config.yaml",
+            "sha256": "f71e239ba36705564b5bf2d2ffd07eece07b8e3f2bbf6d2c99d8df856339ac19"
+          },
+          {
+            "path": "models/sensevoice/en.npy",
+            "sha256": "1f21c6d5a0b876c696b15ee80317ee558b6a19a084c1147a13a2871900f6c72e"
+          },
+          {
+            "path": "models/sensevoice/event_emo.npy",
+            "sha256": "1d22e3df5d192fdc3e73e368a2cb576975a5a43a114a8432a91c036adf8e2263"
+          },
+          {
+            "path": "models/sensevoice/ja.npy",
+            "sha256": "75a83ded838de7d02a56de32b774a50d2f02b5ec69880e7acdce600666f77517"
+          },
+          {
+            "path": "models/sensevoice/ko.npy",
+            "sha256": "f371fffcecd75c1268e2ef8043c276ec9b231177b5138b39e5732c65401749db"
+          },
+          {
+            "path": "models/sensevoice/sensevoice.axmodel",
+            "sha256": "7b64a36fa15e75ab5e3b75f18ae87a058970cff76219407e503b54fb53dd8e38"
+          },
+          {
+            "path": "models/sensevoice/withitn.npy",
+            "sha256": "39bf02586f59237894fc2918ab2db4f12ec3c084c41465718832fbd7646ea729"
+          },
+          {
+            "path": "models/sensevoice/yue.npy",
+            "sha256": "319c3d30e6b176338a6d8871f81ec57af5c3c112cecbdce4a0bf36bec51f3ceb"
+          },
+          {
+            "path": "models/sensevoice/zh.npy",
+            "sha256": "0c952f976ae70642c8f682c88711abce3a2b64ba20a6d8ca0b706f227de816eb"
+          },
+          {
+            "path": "models/vad/am.mvn",
+            "sha256": "6820fef9687708c4fc3fab2530179c8fcea6262daa25514380056cd8f6eb1754"
+          },
+          {
+            "path": "models/vad/config.yaml",
+            "sha256": "486861ca26ddb79081663b6179cb204c6bfae71c52f04aafc48a9e9d8dde1e93"
+          },
+          {
+            "path": "models/vad/vad.axmodel",
+            "sha256": "7d89d1087f14597bc93ae5cf89e1c60d8ee76d7bdffbe679ef6dc002635e6f6b"
+          },
+          {
+            "path": "requirements-runtime.txt",
+            "sha256": "c5742e66b429f18f09112344bce093b60696c71322c8e553503e1a1d2921c72d"
+          },
+          {
+            "path": "run_web_studio.sh",
+            "sha256": "9e2126ba6d634838242039106e3742233957c798c7df362abd650956d804c115"
+          },
+          {
+            "path": "src/ax_meeting_cpp/resources/model_assets.json",
+            "sha256": "0389a6d785bde3951d9c212318ab8eec47ec9793412439fdd0e8bc5c6db0da83"
+          },
+          {
+            "path": "tools/verify_assets.py",
+            "sha256": "df7b0dceab33958a29eafc61c7a9c35357614bd832f10ea776712544b56b268b"
+          },
+          {
+            "path": "wav/002.mp3",
+            "sha256": "4bdd7d1fb5723e253083820c659d65449e43abff0fbf7b5ac52fea3c1d7572fc"
+          },
+          {
+            "path": "wav/20200327_2P.wav",
+            "sha256": "3bd799992bb9327844b78547d3c91b444376cf359b5fdc03f26c14c1c921f0c0"
+          },
+          {
+            "path": "wav/2speakers_example.wav",
+            "sha256": "8dd999996bfc3dfbef07d71401dd9043096ffbff576bcccdd8f8ddce33563b14"
+          },
+          {
+            "path": "wav/vad_example.wav",
+            "sha256": "a7431f0169ef76ef630c945a1d2c3675d8c8c2df2ae4a6b16f8a88ba1bccfbbb"
+          },
+          {
+            "path": "wheel/ax_meeting_studio-0.3.0+axcl-py3-none-linux_aarch64.whl",
+            "sha256": "c2b9c8866a7eace265c72cfd8f6b84841bbe323379725eee44fbcff65738280f"
+          }
+        ],
+        "filesAfter": [
+          {
+            "path": "README.md",
+            "sha256": "1b33294618eed8fd32a5cecb0273099e6d6bc2fd24e59a890320d229cd238766"
+          },
+          {
+            "path": "models/README.md",
+            "sha256": "cccaeeed460ce611379714216c9ef2550a8d78dbd2a43db1a817ece66c77fb40"
+          },
+          {
+            "path": "models/cam++/campplus.axmodel",
+            "sha256": "3e85b4d59a94488caa727ca76c7fe2ba408de02587cd8c9a6680b83488338b16"
+          },
+          {
+            "path": "models/fireredasr/cmvn.ark",
+            "sha256": "6efba6105429d1630c05d818d956bfe4edfad37a04b3b27bb5a029b9adb37945"
+          },
+          {
+            "path": "models/fireredasr/decoder_loop.axmodel",
+            "sha256": "a2912496e6804027f2dc77c903f6b2f76678603dd616e662b78e3f226bcaa91a"
+          },
+          {
+            "path": "models/fireredasr/dict.txt",
+            "sha256": "6907215aeb034f6926b26bf8abfd650f756781622480a2342ec1f29b2072cafe"
+          },
+          {
+            "path": "models/fireredasr/encoder.axmodel",
+            "sha256": "6cc674ba54cf0e57f3c7dffa3824cd53700e4e7709827893f8708c4958e116c1"
+          },
+          {
+            "path": "models/fireredasr/pe.npy",
+            "sha256": "1d0b03c72e71c8e01e36b390154520cc4bb28cf18aed448d6a0c1b93b8603042"
+          },
+          {
+            "path": "models/fireredasr/train_bpe1000.model",
+            "sha256": "473bbc157cb4eade2059b30a3c877a1c29bd50cadbfbed869ae36eeade7fee07"
+          },
+          {
+            "path": "models/punc/model.axmodel",
+            "sha256": "bdc5e8051c89961b4212929ddf129b9e8976c04ec55000a7c9b72c66678e4886"
+          },
+          {
+            "path": "models/punc/tokens.json",
+            "sha256": "c960ab87bccea4aa15cf49a59f71973c2c330b46668048cd8da253749ec71ee3"
+          },
+          {
+            "path": "models/sensevoice/am.mvn",
+            "sha256": "29b3c740a2c0cfc6b308126d31d7f265fa2be74f3bb095cd2f143ea970896ae5"
+          },
+          {
+            "path": "models/sensevoice/auto.npy",
+            "sha256": "8d0997706b30274f7ff3b157ca90df50b7ed8ced35091a0231700355d5ee1374"
+          },
+          {
+            "path": "models/sensevoice/chn_jpn_yue_eng_ko_spectok.bpe.model",
+            "sha256": "aa87f86064c3730d799ddf7af3c04659151102cba548bce325cf06ba4da4e6a8"
+          },
+          {
+            "path": "models/sensevoice/config.yaml",
+            "sha256": "f71e239ba36705564b5bf2d2ffd07eece07b8e3f2bbf6d2c99d8df856339ac19"
+          },
+          {
+            "path": "models/sensevoice/en.npy",
+            "sha256": "1f21c6d5a0b876c696b15ee80317ee558b6a19a084c1147a13a2871900f6c72e"
+          },
+          {
+            "path": "models/sensevoice/event_emo.npy",
+            "sha256": "1d22e3df5d192fdc3e73e368a2cb576975a5a43a114a8432a91c036adf8e2263"
+          },
+          {
+            "path": "models/sensevoice/ja.npy",
+            "sha256": "75a83ded838de7d02a56de32b774a50d2f02b5ec69880e7acdce600666f77517"
+          },
+          {
+            "path": "models/sensevoice/ko.npy",
+            "sha256": "f371fffcecd75c1268e2ef8043c276ec9b231177b5138b39e5732c65401749db"
+          },
+          {
+            "path": "models/sensevoice/sensevoice.axmodel",
+            "sha256": "7b64a36fa15e75ab5e3b75f18ae87a058970cff76219407e503b54fb53dd8e38"
+          },
+          {
+            "path": "models/sensevoice/withitn.npy",
+            "sha256": "39bf02586f59237894fc2918ab2db4f12ec3c084c41465718832fbd7646ea729"
+          },
+          {
+            "path": "models/sensevoice/yue.npy",
+            "sha256": "319c3d30e6b176338a6d8871f81ec57af5c3c112cecbdce4a0bf36bec51f3ceb"
+          },
+          {
+            "path": "models/sensevoice/zh.npy",
+            "sha256": "0c952f976ae70642c8f682c88711abce3a2b64ba20a6d8ca0b706f227de816eb"
+          },
+          {
+            "path": "models/vad/am.mvn",
+            "sha256": "6820fef9687708c4fc3fab2530179c8fcea6262daa25514380056cd8f6eb1754"
+          },
+          {
+            "path": "models/vad/config.yaml",
+            "sha256": "486861ca26ddb79081663b6179cb204c6bfae71c52f04aafc48a9e9d8dde1e93"
+          },
+          {
+            "path": "models/vad/vad.axmodel",
+            "sha256": "7d89d1087f14597bc93ae5cf89e1c60d8ee76d7bdffbe679ef6dc002635e6f6b"
+          },
+          {
+            "path": "requirements-runtime.txt",
+            "sha256": "c5742e66b429f18f09112344bce093b60696c71322c8e553503e1a1d2921c72d"
+          },
+          {
+            "path": "run_web_studio.sh",
+            "sha256": "9e2126ba6d634838242039106e3742233957c798c7df362abd650956d804c115"
+          },
+          {
+            "path": "src/ax_meeting_cpp/resources/model_assets.json",
+            "sha256": "0389a6d785bde3951d9c212318ab8eec47ec9793412439fdd0e8bc5c6db0da83"
+          },
+          {
+            "path": "tools/verify_assets.py",
+            "sha256": "df7b0dceab33958a29eafc61c7a9c35357614bd832f10ea776712544b56b268b"
+          },
+          {
+            "path": "wav/002.mp3",
+            "sha256": "4bdd7d1fb5723e253083820c659d65449e43abff0fbf7b5ac52fea3c1d7572fc"
+          },
+          {
+            "path": "wav/20200327_2P.wav",
+            "sha256": "3bd799992bb9327844b78547d3c91b444376cf359b5fdc03f26c14c1c921f0c0"
+          },
+          {
+            "path": "wav/2speakers_example.wav",
+            "sha256": "8dd999996bfc3dfbef07d71401dd9043096ffbff576bcccdd8f8ddce33563b14"
+          },
+          {
+            "path": "wav/vad_example.wav",
+            "sha256": "a7431f0169ef76ef630c945a1d2c3675d8c8c2df2ae4a6b16f8a88ba1bccfbbb"
+          },
+          {
+            "path": "wheel/ax_meeting_studio-0.3.0+axcl-py3-none-linux_aarch64.whl",
+            "sha256": "c2b9c8866a7eace265c72cfd8f6b84841bbe323379725eee44fbcff65738280f"
+          }
+        ],
+        "outputSha256": "fdac2cbd53148524fa8b23f6fa3978d2a5ddd81cdf610f868e9d82815268d007",
+        "inferenceEvidence": "native-return-codes-and-application-output",
+        "nativeEvents": [
+          {
+            "event": "load",
+            "modelId": 281473366102880,
+            "status": 0,
+            "model": "models/vad/vad.axmodel"
+          },
+          {
+            "event": "load",
+            "modelId": 281473366102032,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102880,
+            "group": 0,
+            "milliseconds": 6.334443,
+            "status": 0,
+            "model": "models/vad/vad.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102880,
+            "group": 0,
+            "milliseconds": 5.978608,
+            "status": 0,
+            "model": "models/vad/vad.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.371681,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.34368,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.336972,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.352723,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.329097,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.328514,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.335514,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.325889,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.337556,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.333764,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.329972,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.250347,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.385388,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.378681,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.381014,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.385098,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.381888,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.383056,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.405222,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.381597,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.39268,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.381597,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.387723,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.386847,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.386848,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.374597,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.389472,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.391806,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.373139,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.378972,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.377222,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.385097,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.325888,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.388889,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.378681,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.376347,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.379555,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.37868,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.385972,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.38218,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.379556,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.380139,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.391514,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.320055,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.372555,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.395306,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.387139,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.371389,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.391514,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.318889,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.378097,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.375763,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.386264,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.392681,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.375764,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.372555,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.323555,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.134263,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.51839,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.521015,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.433222,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.489222,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.41368,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.424472,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.505556,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.494473,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.493014,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.494764,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.496223,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.491847,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.507306,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.562431,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.507015,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.488931,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.52189,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.515473,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.432931,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.511681,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.508181,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.488931,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366102032,
+            "group": 0,
+            "milliseconds": 3.496806,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "load",
+            "modelId": 281473366137040,
+            "status": 0,
+            "model": "models/fireredasr/encoder.axmodel"
+          },
+          {
+            "event": "load",
+            "modelId": 281473366159360,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366137040,
+            "group": 0,
+            "milliseconds": 158.210856,
+            "status": 0,
+            "model": "models/fireredasr/encoder.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.134349,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.065807,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.110432,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.151557,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.13464,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.967515,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.011557,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.066098,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.097015,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.993765,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.979473,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.004848,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.019432,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.070765,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.977723,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.047431,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.02614,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.049182,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.949139,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.069307,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.112765,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.072806,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.945931,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.928432,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.024682,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.013307,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.943307,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.987931,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366137040,
+            "group": 0,
+            "milliseconds": 158.030897,
+            "status": 0,
+            "model": "models/fireredasr/encoder.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.10139,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.103432,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.103432,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.923764,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.098182,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.012723,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.103432,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.997265,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.919682,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.042765,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.600434,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.831143,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 25.108519,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.842226,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.864102,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.369434,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.303808,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.207849,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.202891,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.094974,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.156224,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.258516,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.328599,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.492517,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.4511,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.554642,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.355141,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.59985,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.740435,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.658476,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.835518,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.633976,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.447891,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.687935,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.549392,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.422516,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.422225,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.699602,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.728477,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.996519,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.595768,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.801976,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.717976,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.499808,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366137040,
+            "group": 0,
+            "milliseconds": 158.657983,
+            "status": 0,
+            "model": "models/fireredasr/encoder.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.576517,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.598684,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.500101,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.584392,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.402392,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.424267,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.421058,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.440892,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.454892,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.401225,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.406184,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.520517,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.44585,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.387225,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.424558,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.422808,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.446142,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.457517,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.264141,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.467725,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.81481,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.06464,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.088848,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.043348,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.988223,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.955848,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.02614,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.943598,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.898098,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.988806,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.078641,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.97014,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.877097,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.908306,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.903347,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.021473,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.945056,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.966057,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.005723,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.954973,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.900723,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.920848,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.931932,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.059098,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.143099,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.001932,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.003682,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.917348,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366137040,
+            "group": 0,
+            "milliseconds": 158.027397,
+            "status": 0,
+            "model": "models/fireredasr/encoder.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.081849,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.051223,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.988223,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.894889,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.993181,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.07864,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.105473,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.057057,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.974223,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.143099,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.990556,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.971307,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.98589,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.994348,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.06639,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.066682,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.894014,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366137040,
+            "group": 0,
+            "milliseconds": 158.237106,
+            "status": 0,
+            "model": "models/fireredasr/encoder.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.059682,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.127932,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.083891,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.338807,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.722352,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.747435,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.752101,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.613851,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.225932,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.125015,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.099057,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.048598,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.986181,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.935139,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.090599,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.209016,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.031974,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.841222,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.98764,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.02439,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.046849,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.010974,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.049474,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.99814,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.100224,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.078932,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.962556,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.958181,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.069307,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.176932,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.05939,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.015932,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.030807,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.084765,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.094099,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366137040,
+            "group": 0,
+            "milliseconds": 158.044313,
+            "status": 0,
+            "model": "models/fireredasr/encoder.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.924931,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.851139,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.035474,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.071057,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.065807,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.937764,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.956432,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.958473,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.964598,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.886139,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.949432,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.039265,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.045974,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.029348,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.902764,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.988515,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.007765,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.031682,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.961973,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.914723,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.06639,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.051515,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.970431,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.98239,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.955264,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.030515,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.621434,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.581184,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.816268,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.78331,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.698143,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.092641,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.936306,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.012432,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.122391,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.986182,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.943306,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.967807,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.029932,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.980057,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.017682,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.962848,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.029057,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.996099,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.092349,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366137040,
+            "group": 0,
+            "milliseconds": 157.869605,
+            "status": 0,
+            "model": "models/fireredasr/encoder.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.971598,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.988223,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.967515,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.044807,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.069891,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.912098,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.115099,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.016806,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.965764,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.991139,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.875348,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.026723,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.071057,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.91939,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.876223,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.962264,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.028182,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.000765,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.053557,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.058224,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.031099,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.921723,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.064641,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.003973,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.965765,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.099932,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.101682,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.071057,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.927556,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.000182,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.106057,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.991139,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.99114,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.93164,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.014182,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.002807,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.931056,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.112474,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.029932,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.373225,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.617351,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.86906,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.544434,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.717976,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.613268,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.16264,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.225932,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.101682,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.237891,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.215724,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.568642,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.46335,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.555808,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.657601,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366137040,
+            "group": 0,
+            "milliseconds": 158.40919,
+            "status": 0,
+            "model": "models/fireredasr/encoder.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.513225,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.280766,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.566017,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.418141,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.339975,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.497767,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.434184,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.365641,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.393642,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.637185,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.335599,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.546476,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.44585,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.469475,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.535684,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.472683,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.479392,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.430391,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.473558,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.466558,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.490183,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.357767,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.458975,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.347849,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.506225,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.482892,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.426309,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.562517,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.666935,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.304974,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.534226,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.621143,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.674809,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.562809,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.568934,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.545892,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.603351,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.510892,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.4616,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.501558,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.416975,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.571267,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.484058,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366137040,
+            "group": 0,
+            "milliseconds": 158.357856,
+            "status": 0,
+            "model": "models/fireredasr/encoder.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.968682,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.995807,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.178391,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.022932,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.966056,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.071348,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.152432,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.993473,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.935431,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.927848,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.05239,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.075723,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.981807,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.775597,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.973932,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.049765,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.06814,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.099932,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.98764,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.962848,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.02964,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.018848,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.038973,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.083599,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.021765,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.032266,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.927557,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.911514,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.943307,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.106932,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.970139,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.065807,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.060849,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.073391,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.080973,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.029057,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.944182,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.051224,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.033432,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.072224,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.987639,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.94914,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 24.090307,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.946806,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.920556,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366159360,
+            "group": 0,
+            "milliseconds": 23.903056,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "load",
+            "modelId": 281473366185824,
+            "status": 0,
+            "model": "models/punc/model.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366185824,
+            "group": 0,
+            "milliseconds": 1.334963,
+            "status": 0,
+            "model": "models/punc/model.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366185824,
+            "group": 0,
+            "milliseconds": 0.562628,
+            "status": 0,
+            "model": "models/punc/model.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366185824,
+            "group": 0,
+            "milliseconds": 0.498169,
+            "status": 0,
+            "model": "models/punc/model.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366185824,
+            "group": 0,
+            "milliseconds": 0.609002,
+            "status": 0,
+            "model": "models/punc/model.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366185824,
+            "group": 0,
+            "milliseconds": 0.497585,
+            "status": 0,
+            "model": "models/punc/model.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366185824,
+            "group": 0,
+            "milliseconds": 0.595002,
+            "status": 0,
+            "model": "models/punc/model.axmodel"
+          },
+          {
+            "event": "execute",
+            "modelId": 281473366185824,
+            "group": 0,
+            "milliseconds": 0.91292,
+            "status": 0,
+            "model": "models/punc/model.axmodel"
+          },
+          {
+            "event": "unload",
+            "modelId": 281473366185824,
+            "status": 0,
+            "model": "models/punc/model.axmodel"
+          },
+          {
+            "event": "unload",
+            "modelId": 281473366159360,
+            "status": 0,
+            "model": "models/fireredasr/decoder_loop.axmodel"
+          },
+          {
+            "event": "unload",
+            "modelId": 281473366137040,
+            "status": 0,
+            "model": "models/fireredasr/encoder.axmodel"
+          },
+          {
+            "event": "unload",
+            "modelId": 281473366102032,
+            "status": 0,
+            "model": "models/cam++/campplus.axmodel"
+          },
+          {
+            "event": "unload",
+            "modelId": 281473366102880,
+            "status": 0,
+            "model": "models/vad/vad.axmodel"
+          }
+        ],
+        "rawOutputTensorsCaptured": false,
+        "rawTranscripts": [
+          {
+            "start_ms": 70,
+            "end_ms": 28990,
+            "speaker": 0,
+            "text": "试错的过程很简单啊，就特别是今天报名参选卡的同学，你们可以听到后面的有专门的活动课，它会大大降低你的试错成本。其实你也可以不要来听课。为什么你自己写嘛？我写今天写五个点，我就试试试验一下，发现这五个点不行，我再写五个点，这是再不行，那再写五个点嘛，你总会所谓的活动大神和所谓的高手，"
+          },
+          {
+            "start_ms": 29960,
+            "end_ms": 63945,
+            "speaker": 0,
+            "text": "都是只有一个，把所有的错，所有的坑全给我趟一遍，留下正确的你就是所谓的大神明白吗？所以说关于活动通过这一块儿，我只送给你们四个字啊，换位思考。如果说你要想降低你的试错成本，今天来这里你们就是对的。因为有参选参选卡这个机会，所以说关于活动过于不过这个问题或者活动很难通过。这个话题啊，如果真的要坐下来聊的话要聊一天。但是我觉得我刚才说的四个字足够好，谢谢"
+          },
+          {
+            "start_ms": 63945,
+            "end_ms": 70550,
+            "speaker": 1,
+            "text": "好，非常感谢那个三胖老师的回答啊。三胖老师说我们在整个店铺的这个活动当中，我们要学会换位思考。"
+          }
+        ],
+        "timestampCorrections": [
+          {
+            "segment": 2,
+            "originalEndMs": 70550,
+            "clippedEndMs": 70471
+          }
+        ],
+        "postprocessing": "Clamp transcript end timestamps to rounded input duration; text and original CLI JSON preserved separately.",
+        "rawOutputSha256": "cd084b1ebb16051eaf1d6023417a4265a68b89449a38c764c88f0da8c34ddc68"
+      },
+      "sourceArchiveSha256": "9ce7df9e3e1a1a1f4a9016fef350a6fe439e6b40a6f2cfefb4a1b923d12f3f35"
+    }
+  ]
+}

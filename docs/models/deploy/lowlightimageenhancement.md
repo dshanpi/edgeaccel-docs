@@ -77,15 +77,15 @@ done
 
 ## 查看部署效果
 
-**已运行，效果仍需评估** · 2026-09-23 · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
+**已运行，效果仍需评估** · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
 
-Zero-DCE、Zero-DCE++、SCI 与 Retinexformer 四个权重均完成样例推理。输出亮度提高，同时保留放大的噪点与细节变软等实际现象。
+四个权重均完成暗光样例推理。暗部亮度提高，但 Zero-DCE 与 Retinexformer 的细节变软，Zero-DCE++ 与 SCI 的噪点被放大；下方逐项展示实际差异。
 
 以下图片由本次运行生成，点击可查看原尺寸。各算法的输入、模型分辨率和后处理不同，不能直接根据这些样例比较算法优劣。
 
 **Zero-DCE**
 
-左为输入，右为输出。人物和道路更亮，细节明显变软。
+人物及道路暗部变亮，但右侧结果中的人脸、树枝和建筑边缘明显变软。该图只展示亮度提升，不证明细节得到恢复。
 
 <div className="model-effect-gallery">
 
@@ -100,7 +100,7 @@ Zero-DCE、Zero-DCE++、SCI 与 Retinexformer 四个权重均完成样例推理�
 
 **Zero-DCE++**
 
-左为输入，右为输出。室内物体可见度提高，噪点也被放大。
+暗室墙面和家具更易辨认，同时出现明显彩色噪点；不能把提亮等同于降噪。
 
 <div className="model-effect-gallery">
 
@@ -115,7 +115,7 @@ Zero-DCE、Zero-DCE++、SCI 与 Retinexformer 四个权重均完成样例推理�
 
 **SCI**
 
-左为输入，右为输出。书柜和冰箱更亮，暗部仍有噪点。
+书柜、书脊和猫图案的暗部更清楚，细节大体保留；书柜暗区的彩色噪点同时被放大。
 
 <div className="model-effect-gallery">
 
@@ -130,7 +130,7 @@ Zero-DCE、Zero-DCE++、SCI 与 Retinexformer 四个权重均完成样例推理�
 
 **Retinexformer**
 
-左为输入，右为输出。亮度提高，但文字和边缘经过 224×224 模型缩放后变软。
+书柜和白色柜面变亮；书脊、门框和猫图案边缘明显变软，低分辨率处理后的细节损失可见。
 
 <div className="model-effect-gallery">
 
@@ -145,15 +145,15 @@ Zero-DCE、Zero-DCE++、SCI 与 Retinexformer 四个权重均完成样例推理�
 
 **使用时注意：**
 
+- 提亮伴随细节变软或噪点放大，不能将亮度提升等同于细节恢复或降噪。
 - 每种算法仅使用一张配套图片；未进行有参考图的亮度、颜色或细节恢复评估。
-- SCI 图片标题沿用上游脚本的 AXEngine 字样，本次实际推理后端为 AXCLRTExecutionProvider。
 
 这些结果用于对照部署后的输出，未覆盖完整数据集精度或长期连续运行。
 
 <details>
 <summary>查看样例环境与运行耗时</summary>
 
-环境：RK3576 + AX8850 16GB M.2。日期：2026-09-23。模型版本：`61df6da7399d54fbe8786235ceb06a5cef1118fa`。
+环境：RK3576 + AX8850 16GB M.2。模型版本：`61df6da7399d54fbe8786235ceb06a5cef1118fa`。
 
 | 组件 | 版本或配置 |
 | --- | --- |
@@ -174,7 +174,6 @@ Zero-DCE、Zero-DCE++、SCI 与 Retinexformer 四个权重均完成样例推理�
 
 适用范围：
 
-- 每种算法仅使用一张配套图片；未进行有参考图的亮度、颜色或细节恢复评估。
 - SCI 图片标题沿用上游脚本的 AXEngine 字样，本次实际推理后端为 AXCLRTExecutionProvider。
 - 使用 16GB 算力卡，未验证 8GB 容量、并发或长期连续运行。
 

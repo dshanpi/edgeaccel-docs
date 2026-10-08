@@ -84,35 +84,35 @@ python ~/edgeaccel/rife_card.py \
 
 ## 查看部署效果
 
-**已运行，效果仍需评估** · 2026-09-28 · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
+**已运行，效果仍需评估** · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
 
-720p 官方视频完整插帧通过，输出 255 帧、50 fps；首个推理输入重复结果一致。1080p 和 4K 尚未通过本环境验证。
+16GB 算力卡完成 720p 视频插帧：128 帧、25 fps 输入生成 255 帧、50 fps 输出，完整视频可解码。5.12 秒输入处理耗时 110.808 秒，约为视频时长的 21.64 倍；当前流程不具备实时处理能力。插帧精度仍待真实中间帧评测。
 
 **720p 完整视频插帧**
 
-官方 1280×720 视频由 25 fps、128 帧插为 50 fps、255 帧，完整输出可解码。下方帧图取自第一次实际 NPU 调用，展示前一帧、生成的中间帧及后一帧。原视频已有的运动模糊仍然存在。
+输入、原始输出和网页转码视频均已完整解码，帧数分别为 128、255、128、255。下方三张无损图片取自第一次实际 NPU 调用，分别是该次调用的两张输入和生成结果。官方流程会依据相似度替换近似静止帧、处理切镜，因此这组输入不应简单解释为相邻原视频帧，也不能据此逐帧推断整段输出来源。人物转动时的模糊在输入中已经存在，插帧并不等于去模糊。
 
 <div className="model-effect-gallery">
 
 <figure>
 
-[![实际输入 · 前一帧](../../../static/validation/effects/rife-axera-20260928/left.webp)](../../../static/validation/effects/rife-axera-20260928/left.webp)
+[![首次调用 · 输入图 A](../../../static/validation/effects/rife-axera-20260928/left.webp)](../../../static/validation/effects/rife-axera-20260928/left.webp)
 
-<figcaption>实际输入 · 前一帧</figcaption>
+<figcaption>首次调用 · 输入图 A</figcaption>
 </figure>
 
 <figure>
 
-[![本次 NPU 生成的中间帧](../../../static/validation/effects/rife-axera-20260928/middle.webp)](../../../static/validation/effects/rife-axera-20260928/middle.webp)
+[![首次调用 · 生成结果](../../../static/validation/effects/rife-axera-20260928/middle.webp)](../../../static/validation/effects/rife-axera-20260928/middle.webp)
 
-<figcaption>本次 NPU 生成的中间帧</figcaption>
+<figcaption>首次调用 · 生成结果</figcaption>
 </figure>
 
 <figure>
 
-[![实际输入 · 后一帧](../../../static/validation/effects/rife-axera-20260928/right.webp)](../../../static/validation/effects/rife-axera-20260928/right.webp)
+[![首次调用 · 输入图 B](../../../static/validation/effects/rife-axera-20260928/right.webp)](../../../static/validation/effects/rife-axera-20260928/right.webp)
 
-<figcaption>实际输入 · 后一帧</figcaption>
+<figcaption>首次调用 · 输入图 B</figcaption>
 </figure>
 
 </div>
@@ -122,6 +122,14 @@ python ~/edgeaccel/rife_card.py \
 | 画面尺寸 | 1280×720 | 1280×720 |
 | 帧数 | 128 | 255 |
 | 播放帧率 | 25 fps | 50 fps |
+
+| 性能项目 | 实测值 | 统计范围 |
+| --- | --- | --- |
+| 输入视频时长 | 5.120 s | 128 帧 / 25 fps |
+| 整段处理耗时 | 110.808 s | 含读取、前后处理、相似度判断、一次额外重复调用及编码；不含模型加载 |
+| 处理耗时 / 输入时长 | 21.64 倍 | 此流程非实时 |
+| 按输出帧数折算的处理速度 | 2.30 帧/s | 255 / 110.808；包含输入帧及生成帧，非 NPU 调用频率 |
+| 结果播放帧率 | 50 fps | 播放器显示速度，非推理吞吐 |
 
 官方输入 · 25 fps / 128 帧
 
@@ -135,17 +143,32 @@ python ~/edgeaccel/rife_card.py \
 
 [下载视频](../../../static/validation/effects/rife-axera-20260928/720p-50fps.mp4)
 
+**查看输出中的连续运动帧**
+
+图中每行按顺序展示输出视频的三个相邻帧，相邻标称时刻相差 0.02 秒。三处样例可以辨认人物抬手、转身和身体位置的连续变化；运动边缘仍有模糊。图片来自已编码的实际结果视频，不能作为无损原始张量或真实中间帧标注；这些局部观察不代表完整时序精度通过。
+
+<div className="model-effect-gallery">
+
+<figure>
+
+[![实际输出的三组连续帧：62–64、126–128、190–192（从 0 开始计数，点击放大）](../../../static/validation/effects/rife-axera-20260928/output-sequence-contact.png)](../../../static/validation/effects/rife-axera-20260928/output-sequence-contact.png)
+
+<figcaption>实际输出的三组连续帧：62–64、126–128、190–192（从 0 开始计数，点击放大）</figcaption>
+</figure>
+
+</div>
+
 **使用时注意：**
 
 - 仅 720p 权重完成本页视频验证；1080p 和 4K 未通过当前软件与硬件组合验证。
-- 50 fps 为结果播放帧率，并非实时处理速度；未做逐像素参考帧或 PSNR/SSIM 精度评测。
+- 50 fps 是结果播放帧率；5.12 秒输入处理耗时 110.808 秒，当前流程非实时。缺少真实中间帧和完整逐调用记录，未评估插帧 PSNR/SSIM 或完整时序精度。
 
 这些结果用于对照部署后的输出，未覆盖完整数据集精度或长期连续运行。
 
 <details>
 <summary>查看样例环境与运行耗时</summary>
 
-环境：RK3576 + AX8850 16GB M.2。日期：2026-09-28。模型版本：`c3220f49ad89a3138edd70f4a5792cef4e16e0ad`。
+环境：RK3576 + AX8850 16GB M.2。模型版本：`c3220f49ad89a3138edd70f4a5792cef4e16e0ad`。
 
 | 组件 | 版本或配置 |
 | --- | --- |
@@ -162,8 +185,6 @@ python ~/edgeaccel/rife_card.py \
 
 适用范围：
 
-- 仅 720p 权重完成本页视频验证；1080p 和 4K 未通过当前软件与硬件组合验证。
-- 50 fps 为结果播放帧率，并非实时处理速度；未做逐像素参考帧或 PSNR/SSIM 精度评测。
 - 网页视频由实际输出转为 H.264，保留尺寸、帧率和帧数，移除音轨；静态帧图为无损保存。
 - 仅在 16GB 卡验证，真实 8GB 回归待完成。
 

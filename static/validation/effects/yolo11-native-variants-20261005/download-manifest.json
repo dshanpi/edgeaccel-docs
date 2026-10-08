@@ -1,0 +1,21 @@
+{
+  "modelId": "YOLO11",
+  "repo": "AXERA-TECH/YOLO11",
+  "revision": "e178719ba1b03eaf07c981f859027f3278c1cb29",
+  "files": [
+    {
+      "path": "football.jpg",
+      "size": 324944,
+      "verifiedHashes": {
+        "sha256": "e7c4b752ef447bfec409888cea8709be15c01d0f6bf91bd16b7762deb90950dc"
+      }
+    },
+    {
+      "path": "ax650/yolo11x.axmodel",
+      "size": 60111496,
+      "verifiedHashes": {
+        "sha256": "18e3cd31f8a04750480f5e9c2d98a2684a51c6b5596da2def971427841e65d8b"
+      }
+    }
+  ]
+}

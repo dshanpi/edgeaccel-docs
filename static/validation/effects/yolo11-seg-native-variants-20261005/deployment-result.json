@@ -1,0 +1,2656 @@
+{
+  "modelId": "YOLO11-Seg",
+  "revision": "5ed6c6e9519930a4a94dd9839d4777399c83fec1",
+  "date": "2026-10-05",
+  "variants": [
+    {
+      "label": "yolo11s-seg",
+      "observation": "四个主要人物与两处足球有实例掩码；部分小球、边缘及被遮挡人物未覆盖，掩码边界仍有偏差。",
+      "previews": [
+        {
+          "caption": "实际输入：football.jpg",
+          "path": "/validation/effects/yolo11-seg-native-variants-20261005/inputs/football.jpg"
+        },
+        {
+          "caption": "实际输出：yolo11s-seg",
+          "path": "/validation/effects/yolo11-seg-native-variants-20261005/outputs/yolo11s-seg.jpg"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "权重",
+            "程序输出目标数",
+            "各类别数量"
+          ],
+          "rows": [
+            [
+              "yolo11s-seg.axmodel",
+              6,
+              "person: 4；sports ball: 2"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "completed": true,
+        "provider": "AXCL C++",
+        "inferenceEvidence": "original-native-cv-variants",
+        "modelId": "YOLO11-Seg",
+        "revision": "5ed6c6e9519930a4a94dd9839d4777399c83fec1",
+        "actualCapacity": "16GB",
+        "rawTensorsCaptured": false,
+        "qualityAccepted": false,
+        "originalFilesUnchanged": true,
+        "runtimeSourceRevision": "cbfa4c76891758983ca2b0c99c11d6621d59af39",
+        "binary": "axcl_yolo11_seg",
+        "binarySha256": "4815d254f33f21faeba3fbef49f9cd4659bb28d7fa8623dce3827edf93104c4f",
+        "inputFile": "football.jpg",
+        "inputSha256": "e7c4b752ef447bfec409888cea8709be15c01d0f6bf91bd16b7762deb90950dc",
+        "inputPath": "/validation/effects/yolo11-seg-native-variants-20261005/inputs/football.jpg",
+        "outputPath": "/validation/effects/yolo11-seg-native-variants-20261005/outputs/yolo11s-seg.jpg",
+        "outputSha256": "32a5d2c4eea7c2be54c097542fee13b53fc739f6e7177af3d5e72ee5ad88ec7e",
+        "arguments": [
+          "-m",
+          "ax650/yolo11s-seg.axmodel",
+          "-i",
+          "football.jpg",
+          "-g",
+          "640,640",
+          "-r",
+          "10"
+        ],
+        "metadata": {
+          "inputs": [
+            {
+              "name": "images",
+              "shape": [
+                1,
+                640,
+                640,
+                3
+              ],
+              "dtype": "uint8"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "/model.23/Concat_1_output_0",
+              "shape": [
+                1,
+                80,
+                80,
+                144
+              ],
+              "dtype": "float32"
+            },
+            {
+              "name": "/model.23/Concat_2_output_0",
+              "shape": [
+                1,
+                40,
+                40,
+                144
+              ],
+              "dtype": "float32"
+            },
+            {
+              "name": "/model.23/Concat_3_output_0",
+              "shape": [
+                1,
+                20,
+                20,
+                144
+              ],
+              "dtype": "float32"
+            },
+            {
+              "name": "/model.23/cv4.0/cv4.0.2/Conv_output_0",
+              "shape": [
+                1,
+                80,
+                80,
+                32
+              ],
+              "dtype": "float32"
+            },
+            {
+              "name": "/model.23/cv4.1/cv4.1.2/Conv_output_0",
+              "shape": [
+                1,
+                40,
+                40,
+                32
+              ],
+              "dtype": "float32"
+            },
+            {
+              "name": "/model.23/cv4.2/cv4.2.2/Conv_output_0",
+              "shape": [
+                1,
+                20,
+                20,
+                32
+              ],
+              "dtype": "float32"
+            },
+            {
+              "name": "output1",
+              "shape": [
+                1,
+                32,
+                160,
+                160
+              ],
+              "dtype": "float32"
+            }
+          ]
+        },
+        "processes": [
+          {
+            "repeat": 1,
+            "exitCode": 0,
+            "warmupCalls": 5,
+            "timedCalls": 10,
+            "imageSha256": "32a5d2c4eea7c2be54c097542fee13b53fc739f6e7177af3d5e72ee5ad88ec7e",
+            "apiEvents": [
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 41.364905001,
+                "bytes": 11226215,
+                "copyKind": 1
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 5.161353001,
+                "bytes": 1228800,
+                "copyKind": 1
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 13.678052001,
+                "bytes": 3686400,
+                "copyKind": 1
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 4.030557,
+                "bytes": 921600,
+                "copyKind": 1
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.534756,
+                "bytes": 230400,
+                "copyKind": 1
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.537639001,
+                "bytes": 819200,
+                "copyKind": 1
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.464756,
+                "bytes": 204800,
+                "copyKind": 1
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 0.858087,
+                "bytes": 51200,
+                "copyKind": 1
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 12.388880001,
+                "bytes": 3276800,
+                "copyKind": 1
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 5.415103999,
+                "bytes": 1228800,
+                "copyKind": 1
+              },
+              {
+                "api": "axclrtEngineExecute",
+                "returnCode": 0,
+                "milliseconds": 5.224644001,
+                "bytes": 0,
+                "copyKind": -1
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 12.771547999,
+                "bytes": 3686400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.673847001,
+                "bytes": 921600,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.332922,
+                "bytes": 230400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.359429002,
+                "bytes": 819200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.220629001,
+                "bytes": 204800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 0.702628,
+                "bytes": 51200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 11.421418001,
+                "bytes": 3276800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 5.313311,
+                "bytes": 1228800,
+                "copyKind": 1
+              },
+              {
+                "api": "axclrtEngineExecute",
+                "returnCode": 0,
+                "milliseconds": 5.038269001,
+                "bytes": 0,
+                "copyKind": -1
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 12.77184,
+                "bytes": 3686400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.649054999,
+                "bytes": 921600,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.322130001,
+                "bytes": 230400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.349803999,
+                "bytes": 819200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.266420999,
+                "bytes": 204800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 0.630586001,
+                "bytes": 51200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 11.409751,
+                "bytes": 3276800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 5.181769,
+                "bytes": 1228800,
+                "copyKind": 1
+              },
+              {
+                "api": "axclrtEngineExecute",
+                "returnCode": 0,
+                "milliseconds": 5.012309999,
+                "bytes": 0,
+                "copyKind": -1
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 12.760173,
+                "bytes": 3686400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.663346999,
+                "bytes": 921600,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.337587999,
+                "bytes": 230400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.324720999,
+                "bytes": 819200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.282462999,
+                "bytes": 204800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 0.689795001,
+                "bytes": 51200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 11.476542999,
+                "bytes": 3276800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 5.149395,
+                "bytes": 1228800,
+                "copyKind": 1
+              },
+              {
+                "api": "axclrtEngineExecute",
+                "returnCode": 0,
+                "milliseconds": 5.009102,
+                "bytes": 0,
+                "copyKind": -1
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 12.661588999,
+                "bytes": 3686400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.605305999,
+                "bytes": 921600,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.359464,
+                "bytes": 230400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.352721,
+                "bytes": 819200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.276338,
+                "bytes": 204800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 0.626502999,
+                "bytes": 51200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 11.425209001,
+                "bytes": 3276800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 5.263145,
+                "bytes": 1228800,
+                "copyKind": 1
+              },
+              {
+                "api": "axclrtEngineExecute",
+                "returnCode": 0,
+                "milliseconds": 5.029226999,
+                "bytes": 0,
+                "copyKind": -1
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 12.746465,
+                "bytes": 3686400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.57818,
+                "bytes": 921600,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.334963001,
+                "bytes": 230400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.297888001,
+                "bytes": 819200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.299672,
+                "bytes": 204800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 0.647793999,
+                "bytes": 51200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 11.305042,
+                "bytes": 3276800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 5.233395001,
+                "bytes": 1228800,
+                "copyKind": 1
+              },
+              {
+                "api": "axclrtEngineExecute",
+                "returnCode": 0,
+                "milliseconds": 5.013476999,
+                "bytes": 0,
+                "copyKind": -1
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 12.752881999,
+                "bytes": 3686400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.690181,
+                "bytes": 921600,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.357130001,
+                "bytes": 230400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.326471,
+                "bytes": 819200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.243088002,
+                "bytes": 204800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 0.621836001,
+                "bytes": 51200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 11.310876,
+                "bytes": 3276800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 5.19227,
+                "bytes": 1228800,
+                "copyKind": 1
+              },
+              {
+                "api": "axclrtEngineExecute",
+                "returnCode": 0,
+                "milliseconds": 4.992477001,
+                "bytes": 0,
+                "copyKind": -1
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 12.673839001,
+                "bytes": 3686400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.679388999,
+                "bytes": 921600,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.345172001,
+                "bytes": 230400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.312470999,
+                "bytes": 819200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.302005001,
+                "bytes": 204800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 0.703793999,
+                "bytes": 51200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 11.468668001,
+                "bytes": 3276800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 5.232228001,
+                "bytes": 1228800,
+                "copyKind": 1
+              },
+              {
+                "api": "axclrtEngineExecute",
+                "returnCode": 0,
+                "milliseconds": 5.011435,
+                "bytes": 0,
+                "copyKind": -1
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 12.775340001,
+                "bytes": 3686400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.661597,
+                "bytes": 921600,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.349838001,
+                "bytes": 230400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.354471,
+                "bytes": 819200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.282753999,
+                "bytes": 204800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 0.629710999,
+                "bytes": 51200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 11.362501,
+                "bytes": 3276800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 5.210645,
+                "bytes": 1228800,
+                "copyKind": 1
+              },
+              {
+                "api": "axclrtEngineExecute",
+                "returnCode": 0,
+                "milliseconds": 5.006185,
+                "bytes": 0,
+                "copyKind": -1
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 12.791381001,
+                "bytes": 3686400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.676472999,
+                "bytes": 921600,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.340504999,
+                "bytes": 230400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.242179,
+                "bytes": 819200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.27488,
+                "bytes": 204800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 0.712544001,
+                "bytes": 51200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 11.399834,
+                "bytes": 3276800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 5.111769999,
+                "bytes": 1228800,
+                "copyKind": 1
+              },
+              {
+                "api": "axclrtEngineExecute",
+                "returnCode": 0,
+                "milliseconds": 5.005019,
+                "bytes": 0,
+                "copyKind": -1
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 12.757256,
+                "bytes": 3686400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.625139001,
+                "bytes": 921600,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.359172,
+                "bytes": 230400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.316262,
+                "bytes": 819200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.253004,
+                "bytes": 204800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 0.563210999,
+                "bytes": 51200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 11.319334,
+                "bytes": 3276800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 5.192852001,
+                "bytes": 1228800,
+                "copyKind": 1
+              },
+              {
+                "api": "axclrtEngineExecute",
+                "returnCode": 0,
+                "milliseconds": 5.012602,
+                "bytes": 0,
+                "copyKind": -1
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 12.697464001,
+                "bytes": 3686400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.623388,
+                "bytes": 921600,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.333796999,
+                "bytes": 230400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.259387,
+                "bytes": 819200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.304047,
+                "bytes": 204800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 0.709919001,
+                "bytes": 51200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 11.414126,
+                "bytes": 3276800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 5.210644998,
+                "bytes": 1228800,
+                "copyKind": 1
+              },
+              {
+                "api": "axclrtEngineExecute",
+                "returnCode": 0,
+                "milliseconds": 5.004727002,
+                "bytes": 0,
+                "copyKind": -1
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 12.796047999,
+                "bytes": 3686400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.628347,
+                "bytes": 921600,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.31338,
+                "bytes": 230400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.316846001,
+                "bytes": 819200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.275754999,
+                "bytes": 204800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 0.702628,
+                "bytes": 51200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 11.378543,
+                "bytes": 3276800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 5.210352001,
+                "bytes": 1228800,
+                "copyKind": 1
+              },
+              {
+                "api": "axclrtEngineExecute",
+                "returnCode": 0,
+                "milliseconds": 4.953977001,
+                "bytes": 0,
+                "copyKind": -1
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 12.884714999,
+                "bytes": 3686400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.628346001,
+                "bytes": 921600,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.344296999,
+                "bytes": 230400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.316846001,
+                "bytes": 819200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.204878999,
+                "bytes": 204800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 0.702043999,
+                "bytes": 51200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 11.437168001,
+                "bytes": 3276800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 5.283853001,
+                "bytes": 1228800,
+                "copyKind": 1
+              },
+              {
+                "api": "axclrtEngineExecute",
+                "returnCode": 0,
+                "milliseconds": 5.066852,
+                "bytes": 0,
+                "copyKind": -1
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 12.642923,
+                "bytes": 3686400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.640305,
+                "bytes": 921600,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.345463001,
+                "bytes": 230400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.325888001,
+                "bytes": 819200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.267297001,
+                "bytes": 204800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 0.508669,
+                "bytes": 51200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 11.567544001,
+                "bytes": 3276800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 5.277437,
+                "bytes": 1228800,
+                "copyKind": 1
+              },
+              {
+                "api": "axclrtEngineExecute",
+                "returnCode": 0,
+                "milliseconds": 5.027185001,
+                "bytes": 0,
+                "copyKind": -1
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 12.835423,
+                "bytes": 3686400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.612888999,
+                "bytes": 921600,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.269046001,
+                "bytes": 230400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.317430001,
+                "bytes": 819200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.275754999,
+                "bytes": 204800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 0.697378,
+                "bytes": 51200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 11.268876,
+                "bytes": 3276800,
+                "copyKind": 2
+              }
+            ],
+            "objects": [
+              {
+                "classId": 0,
+                "percentRounded": 92,
+                "box": [
+                  0,
+                  359,
+                  318,
+                  1111
+                ],
+                "label": "person"
+              },
+              {
+                "classId": 0,
+                "percentRounded": 92,
+                "box": [
+                  1350,
+                  344,
+                  1628,
+                  1036
+                ],
+                "label": "person"
+              },
+              {
+                "classId": 0,
+                "percentRounded": 92,
+                "box": [
+                  759,
+                  216,
+                  1126,
+                  1155
+                ],
+                "label": "person"
+              },
+              {
+                "classId": 0,
+                "percentRounded": 89,
+                "box": [
+                  490,
+                  477,
+                  658,
+                  1003
+                ],
+                "label": "person"
+              },
+              {
+                "classId": 32,
+                "percentRounded": 82,
+                "box": [
+                  1231,
+                  876,
+                  1281,
+                  922
+                ],
+                "label": "sports ball"
+              },
+              {
+                "classId": 32,
+                "percentRounded": 79,
+                "box": [
+                  775,
+                  889,
+                  826,
+                  937
+                ],
+                "label": "sports ball"
+              }
+            ],
+            "bootUnchanged": true,
+            "cardBootUnchanged": true,
+            "cardReturnedToIdle": true
+          },
+          {
+            "repeat": 2,
+            "exitCode": 0,
+            "warmupCalls": 5,
+            "timedCalls": 10,
+            "imageSha256": "32a5d2c4eea7c2be54c097542fee13b53fc739f6e7177af3d5e72ee5ad88ec7e",
+            "apiEvents": [
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 40.915445001,
+                "bytes": 11226215,
+                "copyKind": 1
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.669764001,
+                "bytes": 1228800,
+                "copyKind": 1
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 10.675623998,
+                "bytes": 3686400,
+                "copyKind": 1
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.887348001,
+                "bytes": 921600,
+                "copyKind": 1
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.296463,
+                "bytes": 230400,
+                "copyKind": 1
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.521012999,
+                "bytes": 819200,
+                "copyKind": 1
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.368505002,
+                "bytes": 204800,
+                "copyKind": 1
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 0.561168999,
+                "bytes": 51200,
+                "copyKind": 1
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 11.322835,
+                "bytes": 3276800,
+                "copyKind": 1
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 4.848977,
+                "bytes": 1228800,
+                "copyKind": 1
+              },
+              {
+                "api": "axclrtEngineExecute",
+                "returnCode": 0,
+                "milliseconds": 5.210936,
+                "bytes": 0,
+                "copyKind": -1
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 11.836461001,
+                "bytes": 3686400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.445471,
+                "bytes": 921600,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.15588,
+                "bytes": 230400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.020220001,
+                "bytes": 819200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.126421001,
+                "bytes": 204800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 0.710210999,
+                "bytes": 51200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 10.549039998,
+                "bytes": 3276800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 4.734059001,
+                "bytes": 1228800,
+                "copyKind": 1
+              },
+              {
+                "api": "axclrtEngineExecute",
+                "returnCode": 0,
+                "milliseconds": 5.050518999,
+                "bytes": 0,
+                "copyKind": -1
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 11.767627999,
+                "bytes": 3686400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.461803999,
+                "bytes": 921600,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.331463,
+                "bytes": 230400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.085553,
+                "bytes": 819200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.222672001,
+                "bytes": 204800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 0.717502,
+                "bytes": 51200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 10.528623001,
+                "bytes": 3276800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 4.821559,
+                "bytes": 1228800,
+                "copyKind": 1
+              },
+              {
+                "api": "axclrtEngineExecute",
+                "returnCode": 0,
+                "milliseconds": 5.024268999,
+                "bytes": 0,
+                "copyKind": -1
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 11.803211,
+                "bytes": 3686400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.467055001,
+                "bytes": 921600,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.302295999,
+                "bytes": 230400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.037428,
+                "bytes": 819200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.227045999,
+                "bytes": 204800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 0.714002001,
+                "bytes": 51200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 10.528622999,
+                "bytes": 3276800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 4.946686,
+                "bytes": 1228800,
+                "copyKind": 1
+              },
+              {
+                "api": "axclrtEngineExecute",
+                "returnCode": 0,
+                "milliseconds": 5.018144,
+                "bytes": 0,
+                "copyKind": -1
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 11.864169999,
+                "bytes": 3686400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.456262999,
+                "bytes": 921600,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.312795999,
+                "bytes": 230400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.089929001,
+                "bytes": 819200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.156754,
+                "bytes": 204800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 0.717503,
+                "bytes": 51200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 10.641205999,
+                "bytes": 3276800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 4.863560001,
+                "bytes": 1228800,
+                "copyKind": 1
+              },
+              {
+                "api": "axclrtEngineExecute",
+                "returnCode": 0,
+                "milliseconds": 5.013768001,
+                "bytes": 0,
+                "copyKind": -1
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 11.844628001,
+                "bytes": 3686400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.412221,
+                "bytes": 921600,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.318047,
+                "bytes": 230400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.089637001,
+                "bytes": 819200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.229963,
+                "bytes": 204800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 0.721877999,
+                "bytes": 51200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 10.456872998,
+                "bytes": 3276800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 4.890976999,
+                "bytes": 1228800,
+                "copyKind": 1
+              },
+              {
+                "api": "axclrtEngineExecute",
+                "returnCode": 0,
+                "milliseconds": 5.019893999,
+                "bytes": 0,
+                "copyKind": -1
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 11.828585999,
+                "bytes": 3686400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.480471001,
+                "bytes": 921600,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.312213,
+                "bytes": 230400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.090512,
+                "bytes": 819200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.218879001,
+                "bytes": 204800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 0.709919001,
+                "bytes": 51200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 10.522498,
+                "bytes": 3276800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 4.855685,
+                "bytes": 1228800,
+                "copyKind": 1
+              },
+              {
+                "api": "axclrtEngineExecute",
+                "returnCode": 0,
+                "milliseconds": 5.012018999,
+                "bytes": 0,
+                "copyKind": -1
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 11.771128,
+                "bytes": 3686400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.453928999,
+                "bytes": 921600,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.313962999,
+                "bytes": 230400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.094304,
+                "bytes": 819200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.164046,
+                "bytes": 204800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 0.732961,
+                "bytes": 51200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 10.535623,
+                "bytes": 3276800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 4.861517999,
+                "bytes": 1228800,
+                "copyKind": 1
+              },
+              {
+                "api": "axclrtEngineExecute",
+                "returnCode": 0,
+                "milliseconds": 5.033310001,
+                "bytes": 0,
+                "copyKind": -1
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 11.842586,
+                "bytes": 3686400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.450720998,
+                "bytes": 921600,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.302588,
+                "bytes": 230400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.077969999,
+                "bytes": 819200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.255630001,
+                "bytes": 204800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 0.726836,
+                "bytes": 51200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 10.509373002,
+                "bytes": 3276800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 4.850726002,
+                "bytes": 1228800,
+                "copyKind": 1
+              },
+              {
+                "api": "axclrtEngineExecute",
+                "returnCode": 0,
+                "milliseconds": 5.039435999,
+                "bytes": 0,
+                "copyKind": -1
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 11.845211,
+                "bytes": 3686400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.458888001,
+                "bytes": 921600,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.313088,
+                "bytes": 230400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.112094999,
+                "bytes": 819200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.218878999,
+                "bytes": 204800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 0.721294002,
+                "bytes": 51200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 10.485748,
+                "bytes": 3276800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 4.823601999,
+                "bytes": 1228800,
+                "copyKind": 1
+              },
+              {
+                "api": "axclrtEngineExecute",
+                "returnCode": 0,
+                "milliseconds": 5.071519001,
+                "bytes": 0,
+                "copyKind": -1
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 11.815752001,
+                "bytes": 3686400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.459179001,
+                "bytes": 921600,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.238129002,
+                "bytes": 230400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.075344999,
+                "bytes": 819200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.242213,
+                "bytes": 204800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 0.711377001,
+                "bytes": 51200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 10.418080001,
+                "bytes": 3276800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 4.880185001,
+                "bytes": 1228800,
+                "copyKind": 1
+              },
+              {
+                "api": "axclrtEngineExecute",
+                "returnCode": 0,
+                "milliseconds": 5.025727,
+                "bytes": 0,
+                "copyKind": -1
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 11.838211001,
+                "bytes": 3686400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.465303998,
+                "bytes": 921600,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.224420999,
+                "bytes": 230400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.027512001,
+                "bytes": 819200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.199046001,
+                "bytes": 204800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 0.719543999,
+                "bytes": 51200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 10.491872001,
+                "bytes": 3276800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 4.859477,
+                "bytes": 1228800,
+                "copyKind": 1
+              },
+              {
+                "api": "axclrtEngineExecute",
+                "returnCode": 0,
+                "milliseconds": 5.00006,
+                "bytes": 0,
+                "copyKind": -1
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 11.821294,
+                "bytes": 3686400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.452471999,
+                "bytes": 921600,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.31688,
+                "bytes": 230400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.096344999,
+                "bytes": 819200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.222088,
+                "bytes": 204800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 0.714002999,
+                "bytes": 51200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 10.618457001,
+                "bytes": 3276800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 4.870852001,
+                "bytes": 1228800,
+                "copyKind": 1
+              },
+              {
+                "api": "axclrtEngineExecute",
+                "returnCode": 0,
+                "milliseconds": 5.024269001,
+                "bytes": 0,
+                "copyKind": -1
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 11.874961001,
+                "bytes": 3686400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.449263,
+                "bytes": 921600,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.23113,
+                "bytes": 230400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.025469001,
+                "bytes": 819200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.228505,
+                "bytes": 204800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 0.711086001,
+                "bytes": 51200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 10.512582001,
+                "bytes": 3276800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 4.746016999,
+                "bytes": 1228800,
+                "copyKind": 1
+              },
+              {
+                "api": "axclrtEngineExecute",
+                "returnCode": 0,
+                "milliseconds": 5.016394,
+                "bytes": 0,
+                "copyKind": -1
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 11.852211001,
+                "bytes": 3686400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.448971,
+                "bytes": 921600,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.299379001,
+                "bytes": 230400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.304595999,
+                "bytes": 819200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.200797,
+                "bytes": 204800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 0.706127999,
+                "bytes": 51200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 11.373876001,
+                "bytes": 3276800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 5.13277,
+                "bytes": 1228800,
+                "copyKind": 1
+              },
+              {
+                "api": "axclrtEngineExecute",
+                "returnCode": 0,
+                "milliseconds": 5.112352999,
+                "bytes": 0,
+                "copyKind": -1
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 12.70184,
+                "bytes": 3686400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.915638999,
+                "bytes": 921600,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.496839001,
+                "bytes": 230400,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 3.511097,
+                "bytes": 819200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 1.294128999,
+                "bytes": 204800,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 0.778170001,
+                "bytes": 51200,
+                "copyKind": 2
+              },
+              {
+                "api": "axclrtMemcpy",
+                "returnCode": 0,
+                "milliseconds": 11.460793001,
+                "bytes": 3276800,
+                "copyKind": 2
+              }
+            ],
+            "objects": [
+              {
+                "classId": 0,
+                "percentRounded": 92,
+                "box": [
+                  0,
+                  359,
+                  318,
+                  1111
+                ],
+                "label": "person"
+              },
+              {
+                "classId": 0,
+                "percentRounded": 92,
+                "box": [
+                  1350,
+                  344,
+                  1628,
+                  1036
+                ],
+                "label": "person"
+              },
+              {
+                "classId": 0,
+                "percentRounded": 92,
+                "box": [
+                  759,
+                  216,
+                  1126,
+                  1155
+                ],
+                "label": "person"
+              },
+              {
+                "classId": 0,
+                "percentRounded": 89,
+                "box": [
+                  490,
+                  477,
+                  658,
+                  1003
+                ],
+                "label": "person"
+              },
+              {
+                "classId": 32,
+                "percentRounded": 82,
+                "box": [
+                  1231,
+                  876,
+                  1281,
+                  922
+                ],
+                "label": "sports ball"
+              },
+              {
+                "classId": 32,
+                "percentRounded": 79,
+                "box": [
+                  775,
+                  889,
+                  826,
+                  937
+                ],
+                "label": "sports ball"
+              }
+            ],
+            "bootUnchanged": true,
+            "cardBootUnchanged": true,
+            "cardReturnedToIdle": true
+          }
+        ],
+        "sessions": [
+          {
+            "model": "ax650/yolo11s-seg.axmodel",
+            "sha256": "16ce31122a2b8006bb1b6cb7626af4972af9cfb857edede05f61bd531f1fbe35",
+            "runMilliseconds": [
+              5.224644001,
+              5.038269001,
+              5.012309999,
+              5.009102,
+              5.029226999,
+              5.013476999,
+              4.992477001,
+              5.011435,
+              5.006185,
+              5.005019,
+              5.012602,
+              5.004727002,
+              4.953977001,
+              5.066852,
+              5.027185001,
+              5.210936,
+              5.050518999,
+              5.024268999,
+              5.018144,
+              5.013768001,
+              5.019893999,
+              5.012018999,
+              5.033310001,
+              5.039435999,
+              5.071519001,
+              5.025727,
+              5.00006,
+              5.024269001,
+              5.016394,
+              5.112352999
+            ],
+            "allReturnCodesZero": true
+          }
+        ]
+      }
+    }
+  ],
+  "runtime": {
+    "repo": "https://github.com/AXERA-TECH/axcl-samples",
+    "sourceRevision": "cbfa4c76891758983ca2b0c99c11d6621d59af39",
+    "archiveSha256": "28ac29e424cdcb636a539f4e23b34afe52d606add4f96e5967fcc376f5eaccff",
+    "sourceFiles": [
+      {
+        "path": ".gitignore",
+        "bytes": 557,
+        "sha256": "9bb81909373a0b8039826042ba86daecb1e8aa0b9ae3b5c55ee352828b88c786"
+      },
+      {
+        "path": "CMakeLists.txt",
+        "bytes": 2523,
+        "sha256": "b19dace9ec97cb00bc052b3c5fe411ab84050f4fb80f21c1c498ba0aa3f08bf2"
+      },
+      {
+        "path": "LICENSE",
+        "bytes": 1492,
+        "sha256": "16c007489a564d8707109caf0b49500c97891ad349d1b2bd1d24711a3bd58610"
+      },
+      {
+        "path": "README.md",
+        "bytes": 4297,
+        "sha256": "27bb9e0b72fb00d6c4ca677356cfd0820161d671000c74698e3c40c5dacbe7af"
+      },
+      {
+        "path": "README_EN.md",
+        "bytes": 4256,
+        "sha256": "a41469286c6a7ed4ee9bd5aa7922af4e85a693958d811b18e9d402f902f2662e"
+      },
+      {
+        "path": "cmake/axcl.cmake",
+        "bytes": 1449,
+        "sha256": "dc5342b5967df273b31cc90ed0b1653d66fb712ae7e2019669f3f3794ded691e"
+      },
+      {
+        "path": "cmake/check.cmake",
+        "bytes": 9625,
+        "sha256": "21965e18d3b7ca6fd7708b8e451a8c1497e22d1446514ae09791e8955aa0f4b1"
+      },
+      {
+        "path": "cmake/summary.cmake",
+        "bytes": 3384,
+        "sha256": "98bdfe4e4727bf81e0cbeaeb7b6bf7fb52155d833de7c46561aff4e91d7fca99"
+      },
+      {
+        "path": "examples/CMakeLists.txt",
+        "bytes": 1244,
+        "sha256": "4c48449eea3ebad1fafd1b88d84509c40604cae36ff82d9f914dc7f6544a27ea"
+      },
+      {
+        "path": "toolchains/aarch64-none-linux-gnu.toolchain.cmake",
+        "bytes": 585,
+        "sha256": "47fafe24bc43747c06421c1f0f605c6cbbc533270deca850aa08d661a023c01a"
+      },
+      {
+        "path": "docs/boards/AI-001_LLM-8850-main-pictures_01.jpg",
+        "bytes": 163874,
+        "sha256": "a37d1f70601e3fd9eab3056c29bfe04ebe5b635843f2668ce28fd63dee70a833"
+      },
+      {
+        "path": "docs/boards/aicore_ax_m1_bottom.jpg",
+        "bytes": 59226,
+        "sha256": "a99e0928a911e9cf541bc1a9c2709f5efafff4e3fdd3afbb0a636e3105fcf852"
+      },
+      {
+        "path": "docs/boards/aicore_ax_m1_top.jpg",
+        "bytes": 70306,
+        "sha256": "1140aa93eb205bae484e8dcd78ad449a29381fbdadc8e6351a4e04aff95062e8"
+      },
+      {
+        "path": "docs/boards/m4chat.jpg",
+        "bytes": 476399,
+        "sha256": "ceb67b126e251ebce6a8bf6ecc3f65f03c37d9111842318ed0ea7e2b74356901"
+      },
+      {
+        "path": "examples/axcl/ax_classification_steps.cc",
+        "bytes": 7005,
+        "sha256": "85598245b0b50815d5177b036116591a19b3fd5ac2d8c63b3b0856f5b2fa2b9a"
+      },
+      {
+        "path": "examples/axcl/ax_depth_anything_steps.cc",
+        "bytes": 7376,
+        "sha256": "c802a267a23977aad7c19448c0913f2009e6e08c94150a86e2bf71c7ddd5214e"
+      },
+      {
+        "path": "examples/axcl/ax_handpose_steps.cc",
+        "bytes": 6669,
+        "sha256": "6d881474b22e5cbec105547dd176d8a887ca37542496e41d924f2c8c69774f1b"
+      },
+      {
+        "path": "examples/axcl/ax_palm_detection_steps.cc",
+        "bytes": 7327,
+        "sha256": "2a349a8ac40b24c40669112399b3e614ba37e6a8a14953425dad3d21a441207f"
+      },
+      {
+        "path": "examples/axcl/ax_yolo11_pose_steps.cc",
+        "bytes": 9114,
+        "sha256": "1abc5f2cf44610ea2ec8274864a392b8823b6c94a354fa3380c7359f0a0315e7"
+      },
+      {
+        "path": "examples/axcl/ax_yolo11_seg_steps.cc",
+        "bytes": 10482,
+        "sha256": "c9224052dbbf88038532fef972f892f604232807860941ec0786b6366a593fd1"
+      },
+      {
+        "path": "examples/axcl/ax_yolo11_steps.cc",
+        "bytes": 8503,
+        "sha256": "4983af65f4443b5df99c671ec1575f291ed32e23660a99a9ae20042e494729b8"
+      },
+      {
+        "path": "examples/axcl/ax_yolo26_depth_steps.cc",
+        "bytes": 7947,
+        "sha256": "c932af9bab826f3ad380d4d7c72c9e653b563aca4261157b829d8340d3ab55dd"
+      },
+      {
+        "path": "examples/axcl/ax_yolo26_steps.cc",
+        "bytes": 9027,
+        "sha256": "cb2601ef569d359b32b7914707558e62874334016171a294437a5b76c122e22d"
+      },
+      {
+        "path": "examples/axcl/ax_yolov10s_steps.cc",
+        "bytes": 8244,
+        "sha256": "c8f3dc634e2b12b99f990d6aa051fcaac41a40021a1534001975be760767a4a0"
+      },
+      {
+        "path": "examples/axcl/ax_yolov10_ultralytics_steps.cc",
+        "bytes": 8389,
+        "sha256": "6ea53cd99e601cfcef6c8a5d391288f729c77af4831d4fe906e5bf42a233736c"
+      },
+      {
+        "path": "examples/axcl/ax_yolov5s_seg_steps.cc",
+        "bytes": 10283,
+        "sha256": "5d1a48fb34ffa6132d252e5a177ef653223a704e6cf71531fa05cb60b40f545a"
+      },
+      {
+        "path": "examples/axcl/ax_yolov5s_steps.cc",
+        "bytes": 8625,
+        "sha256": "a53e0b1e8b0c70475d39f885b17c5c8b787dcf5251edd992b15c60ff1a8376d6"
+      },
+      {
+        "path": "examples/axcl/ax_yolov5_face_steps.cc",
+        "bytes": 7873,
+        "sha256": "cba76e5ae986f417f393c3be4531d6bc23a3193f6fe9048a6e999869e35e69f9"
+      },
+      {
+        "path": "examples/axcl/ax_yolov7_face_steps.cc",
+        "bytes": 7783,
+        "sha256": "6d651b30b18a61667fbbda3063ee5c33a66cb468bbf19ec62f74cf3134944480"
+      },
+      {
+        "path": "examples/axcl/ax_yolov8_pose_steps.cc",
+        "bytes": 9032,
+        "sha256": "5add799e0ebfc3a8edd2d35a86eb47089da65cbaef0f1987a91169ca03da8fe0"
+      },
+      {
+        "path": "examples/axcl/ax_yolov8_seg_steps.cc",
+        "bytes": 10456,
+        "sha256": "30e3b77716a5a8e6a931c280faeec7235987195eaae9e64a9fac92cb60a03f2b"
+      },
+      {
+        "path": "examples/axcl/ax_yolov8_steps.cc",
+        "bytes": 8424,
+        "sha256": "deb36dd3165cfcdca988c5721d4beb331d6f2c9da0b89fbff4d3c8459cee58eb"
+      },
+      {
+        "path": "examples/axcl/ax_yolov9_steps.cc",
+        "bytes": 8329,
+        "sha256": "ef20ea3647ac9419db683caf91b6302d1bcb13ac97f0d88fb35963d80ef74cd9"
+      },
+      {
+        "path": "examples/axcl/ax_yolov9_ultralytics_steps.cc",
+        "bytes": 8387,
+        "sha256": "14190de2ba7c4087bb7dc49e4a77b7f799aef130f33066d28b9a092a62945168"
+      },
+      {
+        "path": "examples/axcl/ax_yolo_world_open_vocabulary_steps.cc",
+        "bytes": 8714,
+        "sha256": "8c5e6cb9cebab94d2cfb074fc914a7198f1c697b6dd5059cdedaa12851aef7dd"
+      },
+      {
+        "path": "examples/axcl/CMakeLists.txt",
+        "bytes": 1996,
+        "sha256": "113099c9d56002b9e6444f5a73a760181677eb627a3de6a4baec67331a23181a"
+      },
+      {
+        "path": "examples/base/common.hpp",
+        "bytes": 4659,
+        "sha256": "d2da502848fd4acc32d406a31cd4a079cabd3827a37a19f48d18c4e48ab1c94f"
+      },
+      {
+        "path": "examples/base/detection.hpp",
+        "bytes": 131626,
+        "sha256": "7d8d95342a3f31cf6806e6d6b7d5ba47598b426e72c014b704416bc426dcfd2f"
+      },
+      {
+        "path": "examples/base/pose.hpp",
+        "bytes": 15918,
+        "sha256": "07088d2277bd366f9f7bf358460ac4cc133134caaf805a500113e44964bf54b5"
+      },
+      {
+        "path": "examples/base/score.hpp",
+        "bytes": 892,
+        "sha256": "03387de1aa37c930486bf83f9b828ce551af715f38403789456416f14a395475"
+      },
+      {
+        "path": "examples/base/topk.hpp",
+        "bytes": 1430,
+        "sha256": "04601f58a028f205ea62caa57af61727ba3d3d3e690a4b4bd8668987149d7d89"
+      },
+      {
+        "path": "examples/base/transform.hpp",
+        "bytes": 1386,
+        "sha256": "c09b62e831b22ed56f3321f4e31153aafec8617763e88e66a9d55a054de6771a"
+      },
+      {
+        "path": "examples/base/yolo.hpp",
+        "bytes": 18589,
+        "sha256": "46443b284ad71e75a3bef3b8ce5a7564e869e26ac86c2f956498b44d5dd2ee95"
+      },
+      {
+        "path": "examples/utilities/args.hpp",
+        "bytes": 1608,
+        "sha256": "53cebb1d1469b3599cdb4ae501070455f4d8337bc910150649de349ebb775f54"
+      },
+      {
+        "path": "examples/utilities/cmdline.hpp",
+        "bytes": 18872,
+        "sha256": "fa7a26c48f867412898e5957d3716b2da4cd057821f1f923fa0c0f037538c1c3"
+      },
+      {
+        "path": "examples/utilities/file.hpp",
+        "bytes": 2440,
+        "sha256": "33e77452a9ebb8682a932464977d3eaa221b4937ebe67f64502f6d2dd4508dce"
+      },
+      {
+        "path": "examples/utilities/split.hpp",
+        "bytes": 1491,
+        "sha256": "f26ae627617574d7d896d2e1fc1fdff8f35c2f8c45cf4f36ef1a440d67142c69"
+      },
+      {
+        "path": "examples/utilities/timer.hpp",
+        "bytes": 1484,
+        "sha256": "1e783d6143620045c629dcf303f4caa76b2e90c8346a73f5521a86d5225bf239"
+      },
+      {
+        "path": "examples/axcl/ax_model_runner/ax_model_runner.hpp",
+        "bytes": 5190,
+        "sha256": "e28abc5006c9028a1509d1a23b7fc430f6d2dd78b17f9e75d164c2fc8c3bfd94"
+      },
+      {
+        "path": "examples/axcl/ax_model_runner/ax_model_runner_axcl.cpp",
+        "bytes": 15988,
+        "sha256": "2395031aa53fe4b49e0921e9cf1d3e559d085f9e3a73af364b4eb681675768fa"
+      },
+      {
+        "path": "examples/axcl/ax_model_runner/ax_model_runner_axcl.hpp",
+        "bytes": 1045,
+        "sha256": "a6d201b2293bf1e4c26fb0d24d2012e10fe2e3d12203e444a5db5e282f190bbb"
+      }
+    ],
+    "architecture": "aarch64",
+    "binaries": [
+      {
+        "file": "bin/axcl_yolo11",
+        "bytes": 199392,
+        "sha256": "899bba6707018c094077ad0d3de91391bb85c924261bc0d9e7f15714033b1754"
+      },
+      {
+        "file": "bin/axcl_yolo11_seg",
+        "bytes": 199392,
+        "sha256": "4815d254f33f21faeba3fbef49f9cd4659bb28d7fa8623dce3827edf93104c4f"
+      },
+      {
+        "file": "bin/axcl_yolo26",
+        "bytes": 133856,
+        "sha256": "19af54d24bf8dbebde04e18560810e75431114bfb6cf50332696326073010690"
+      },
+      {
+        "file": "bin/libaxcl_api_audit.so",
+        "bytes": 71160,
+        "sha256": "c26c6f9eab90f5254aba664c66c85e6e8b1229b3ddf13f7c89e63fbaead55c90"
+      }
+    ],
+    "nativeMockChecksPassed": 4,
+    "apiAuditSourceSha256": "cc081e1f980cb1f99a0a42ad9f22f1fa01949eb052ee8a956d266ed7d176a900"
+  }
+}

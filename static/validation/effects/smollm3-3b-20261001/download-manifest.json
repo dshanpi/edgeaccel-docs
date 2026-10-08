@@ -1,0 +1,486 @@
+{
+  "modelId": "SmolLM3-3B",
+  "repo": "AXERA-TECH/SmolLM3-3B",
+  "revision": "a00aaa540d2c0dcb911dbaa64e499254a6671a30",
+  "complete": true,
+  "files": [
+    {
+      "path": ".gitignore",
+      "size": 47,
+      "url": "https://huggingface.co/AXERA-TECH/SmolLM3-3B/resolve/a00aaa540d2c0dcb911dbaa64e499254a6671a30/.gitignore",
+      "verifiedHashes": {
+        "sha256": "54890bb63dea753f28c044dbbdee022e3440d4b9a7bb41684f34d83e9cf993ae",
+        "gitBlob": "0ff349b66c9f17a30b65d5b9d337211c0e7ffa54"
+      }
+    },
+    {
+      "path": "README.md",
+      "size": 7183,
+      "url": "https://huggingface.co/AXERA-TECH/SmolLM3-3B/resolve/a00aaa540d2c0dcb911dbaa64e499254a6671a30/README.md",
+      "verifiedHashes": {
+        "sha256": "934d1265f0144a7938edfdc66c3da9d98346429a2fbfa3623faaf0b43bca1d99",
+        "gitBlob": "ede7916e3f4d77629a5b899d6f0bdd77deec175f"
+      }
+    },
+    {
+      "path": "config.json",
+      "size": 0,
+      "url": "https://huggingface.co/AXERA-TECH/SmolLM3-3B/resolve/a00aaa540d2c0dcb911dbaa64e499254a6671a30/config.json",
+      "verifiedHashes": {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "gitBlob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+      }
+    },
+    {
+      "path": "infer_axmodel.py",
+      "size": 2758,
+      "url": "https://huggingface.co/AXERA-TECH/SmolLM3-3B/resolve/a00aaa540d2c0dcb911dbaa64e499254a6671a30/infer_axmodel.py",
+      "verifiedHashes": {
+        "sha256": "9ea92b83d67a6b26f87e89076fb5286aa72cd4d322feea360051d9e88663ba33",
+        "gitBlob": "00451842a1403d0eaa1ef483d5ab7ab52e815833"
+      }
+    },
+    {
+      "path": "smollm3_axmodel/model.embed_tokens.weight.npy",
+      "size": 1050673280,
+      "url": "https://huggingface.co/AXERA-TECH/SmolLM3-3B/resolve/a00aaa540d2c0dcb911dbaa64e499254a6671a30/smollm3_axmodel/model.embed_tokens.weight.npy",
+      "verifiedHashes": {
+        "sha256": "007278f3c51a2ad992d9ba2c8f5b0623f66da7a030eb490107e34ae59cd14e6d",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "smollm3_axmodel/smollm3_p128_l0_together.axmodel",
+      "size": 100180663,
+      "url": "https://huggingface.co/AXERA-TECH/SmolLM3-3B/resolve/a00aaa540d2c0dcb911dbaa64e499254a6671a30/smollm3_axmodel/smollm3_p128_l0_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "66a5639c528524d2137c425155033c92e1b70d32f28cee8e6b7f5439dfe57f13",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "smollm3_axmodel/smollm3_p128_l10_together.axmodel",
+      "size": 100185047,
+      "url": "https://huggingface.co/AXERA-TECH/SmolLM3-3B/resolve/a00aaa540d2c0dcb911dbaa64e499254a6671a30/smollm3_axmodel/smollm3_p128_l10_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "ef11e903bcf69a4f00f448b2cd923b5bbe399fb9f92862b856f4538c2665af13",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "smollm3_axmodel/smollm3_p128_l11_together.axmodel",
+      "size": 100189271,
+      "url": "https://huggingface.co/AXERA-TECH/SmolLM3-3B/resolve/a00aaa540d2c0dcb911dbaa64e499254a6671a30/smollm3_axmodel/smollm3_p128_l11_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "027781437f895ac7fa2dd7b6d09426b1b864b5df2ead1ba7b3ee194f1916d2fe",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "smollm3_axmodel/smollm3_p128_l12_together.axmodel",
+      "size": 100183063,
+      "url": "https://huggingface.co/AXERA-TECH/SmolLM3-3B/resolve/a00aaa540d2c0dcb911dbaa64e499254a6671a30/smollm3_axmodel/smollm3_p128_l12_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "248a266148663c334a3b39c785032b25bd38a9fd9617432ac7042e1be8f4fe5f",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "smollm3_axmodel/smollm3_p128_l13_together.axmodel",
+      "size": 100183575,
+      "url": "https://huggingface.co/AXERA-TECH/SmolLM3-3B/resolve/a00aaa540d2c0dcb911dbaa64e499254a6671a30/smollm3_axmodel/smollm3_p128_l13_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "fc9406d0b8b2cd2ccd10923d794d8389661235956d4cce973d7b34e6531c93cd",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "smollm3_axmodel/smollm3_p128_l14_together.axmodel",
+      "size": 100186935,
+      "url": "https://huggingface.co/AXERA-TECH/SmolLM3-3B/resolve/a00aaa540d2c0dcb911dbaa64e499254a6671a30/smollm3_axmodel/smollm3_p128_l14_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "787bfde4dde0817374587ab724e0ea50122bc8a8aea7a666099853d914691235",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "smollm3_axmodel/smollm3_p128_l15_together.axmodel",
+      "size": 100181303,
+      "url": "https://huggingface.co/AXERA-TECH/SmolLM3-3B/resolve/a00aaa540d2c0dcb911dbaa64e499254a6671a30/smollm3_axmodel/smollm3_p128_l15_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "462366b54a8a0866baf221bb15db72135d33ef0d388ba06e84b1b4827ee5071d",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "smollm3_axmodel/smollm3_p128_l16_together.axmodel",
+      "size": 100185431,
+      "url": "https://huggingface.co/AXERA-TECH/SmolLM3-3B/resolve/a00aaa540d2c0dcb911dbaa64e499254a6671a30/smollm3_axmodel/smollm3_p128_l16_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "5c2fe71c1a837c472b6e9eb4f1c7a9e680aba96b296c23cb0998cf09d446d4fd",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "smollm3_axmodel/smollm3_p128_l17_together.axmodel",
+      "size": 100184343,
+      "url": "https://huggingface.co/AXERA-TECH/SmolLM3-3B/resolve/a00aaa540d2c0dcb911dbaa64e499254a6671a30/smollm3_axmodel/smollm3_p128_l17_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "036e5cf041752d481ee81b613eab47e618870776db81237a09d2652d1eae3198",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "smollm3_axmodel/smollm3_p128_l18_together.axmodel",
+      "size": 100187703,
+      "url": "https://huggingface.co/AXERA-TECH/SmolLM3-3B/resolve/a00aaa540d2c0dcb911dbaa64e499254a6671a30/smollm3_axmodel/smollm3_p128_l18_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "455535e56fe0506eb6f4b892979538918ee560d1556aa55d10e4aa6b5c013fe5",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "smollm3_axmodel/smollm3_p128_l19_together.axmodel",
+      "size": 100185271,
+      "url": "https://huggingface.co/AXERA-TECH/SmolLM3-3B/resolve/a00aaa540d2c0dcb911dbaa64e499254a6671a30/smollm3_axmodel/smollm3_p128_l19_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "f3db3a90ee18b8ceefc9fa9e66526f649665fd69289f94c0be60fb4dc2afe7bb",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "smollm3_axmodel/smollm3_p128_l1_together.axmodel",
+      "size": 100182167,
+      "url": "https://huggingface.co/AXERA-TECH/SmolLM3-3B/resolve/a00aaa540d2c0dcb911dbaa64e499254a6671a30/smollm3_axmodel/smollm3_p128_l1_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "5eb418fc9545d5c8a0607fd425e8f97528af905e58f1b282d341f38494b66d9a",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "smollm3_axmodel/smollm3_p128_l20_together.axmodel",
+      "size": 100181111,
+      "url": "https://huggingface.co/AXERA-TECH/SmolLM3-3B/resolve/a00aaa540d2c0dcb911dbaa64e499254a6671a30/smollm3_axmodel/smollm3_p128_l20_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "cd604aebc14db90a32108cbff73fb33c95fc28f9eccff1daa44e3d86dcfac8bf",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "smollm3_axmodel/smollm3_p128_l21_together.axmodel",
+      "size": 100183639,
+      "url": "https://huggingface.co/AXERA-TECH/SmolLM3-3B/resolve/a00aaa540d2c0dcb911dbaa64e499254a6671a30/smollm3_axmodel/smollm3_p128_l21_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "417c0ae816ec2ac6b633812f1a8ebb1059d5c095e220a18b54a8851c5cb6146d",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "smollm3_axmodel/smollm3_p128_l22_together.axmodel",
+      "size": 100187095,
+      "url": "https://huggingface.co/AXERA-TECH/SmolLM3-3B/resolve/a00aaa540d2c0dcb911dbaa64e499254a6671a30/smollm3_axmodel/smollm3_p128_l22_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "913f0da3baf02a9691a46b36164993a033eac129cea3072a30d1c7787f5fdb03",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "smollm3_axmodel/smollm3_p128_l23_together.axmodel",
+      "size": 100185271,
+      "url": "https://huggingface.co/AXERA-TECH/SmolLM3-3B/resolve/a00aaa540d2c0dcb911dbaa64e499254a6671a30/smollm3_axmodel/smollm3_p128_l23_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "1febf968dca57c080bb2c6ebfcf737d53e020fb7086b8d4f99995967bf67bf64",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "smollm3_axmodel/smollm3_p128_l24_together.axmodel",
+      "size": 100186743,
+      "url": "https://huggingface.co/AXERA-TECH/SmolLM3-3B/resolve/a00aaa540d2c0dcb911dbaa64e499254a6671a30/smollm3_axmodel/smollm3_p128_l24_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "4bffb0ddc7507918bfbd3ffe289d660cad550bd9d4ab39a93e4747b5f919e43c",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "smollm3_axmodel/smollm3_p128_l25_together.axmodel",
+      "size": 100187575,
+      "url": "https://huggingface.co/AXERA-TECH/SmolLM3-3B/resolve/a00aaa540d2c0dcb911dbaa64e499254a6671a30/smollm3_axmodel/smollm3_p128_l25_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "fd0afa2885d980dbcf4cb5255a0a39ebb767a3978148b2c3170456e2de658843",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "smollm3_axmodel/smollm3_p128_l26_together.axmodel",
+      "size": 100182775,
+      "url": "https://huggingface.co/AXERA-TECH/SmolLM3-3B/resolve/a00aaa540d2c0dcb911dbaa64e499254a6671a30/smollm3_axmodel/smollm3_p128_l26_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "383cc020bc009141a76f9670bbfe8b756a83a4c46eabb881c9ecc7a41e936955",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "smollm3_axmodel/smollm3_p128_l27_together.axmodel",
+      "size": 100187607,
+      "url": "https://huggingface.co/AXERA-TECH/SmolLM3-3B/resolve/a00aaa540d2c0dcb911dbaa64e499254a6671a30/smollm3_axmodel/smollm3_p128_l27_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "829bfb1740d0804a2a558d40d622409fa2db83016784dbc230c6b36b9f915ae7",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "smollm3_axmodel/smollm3_p128_l28_together.axmodel",
+      "size": 100184599,
+      "url": "https://huggingface.co/AXERA-TECH/SmolLM3-3B/resolve/a00aaa540d2c0dcb911dbaa64e499254a6671a30/smollm3_axmodel/smollm3_p128_l28_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "e9b7a2abfabac90accb6323629ecf9e568430c732d4969873f9976ee82421fca",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "smollm3_axmodel/smollm3_p128_l29_together.axmodel",
+      "size": 100186103,
+      "url": "https://huggingface.co/AXERA-TECH/SmolLM3-3B/resolve/a00aaa540d2c0dcb911dbaa64e499254a6671a30/smollm3_axmodel/smollm3_p128_l29_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "23c7c5c20f76c684d5bf79186eb05590ad97112decf08e91198a0a4ab9906492",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "smollm3_axmodel/smollm3_p128_l2_together.axmodel",
+      "size": 100185175,
+      "url": "https://huggingface.co/AXERA-TECH/SmolLM3-3B/resolve/a00aaa540d2c0dcb911dbaa64e499254a6671a30/smollm3_axmodel/smollm3_p128_l2_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "64eb8e9ab0a170b4ff6022258a46a464a579fe0d5e51d9cb8b029fc64c759407",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "smollm3_axmodel/smollm3_p128_l30_together.axmodel",
+      "size": 100182455,
+      "url": "https://huggingface.co/AXERA-TECH/SmolLM3-3B/resolve/a00aaa540d2c0dcb911dbaa64e499254a6671a30/smollm3_axmodel/smollm3_p128_l30_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "5994aeb56eaae4d2fb5b076ef98789986b77b94d403cd622cf245e7f7db57eb0",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "smollm3_axmodel/smollm3_p128_l31_together.axmodel",
+      "size": 100186807,
+      "url": "https://huggingface.co/AXERA-TECH/SmolLM3-3B/resolve/a00aaa540d2c0dcb911dbaa64e499254a6671a30/smollm3_axmodel/smollm3_p128_l31_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "41bc5f7808e70253526f8e139e413b66bd3abefd85b142d33ebc31fe4155c470",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "smollm3_axmodel/smollm3_p128_l32_together.axmodel",
+      "size": 100185111,
+      "url": "https://huggingface.co/AXERA-TECH/SmolLM3-3B/resolve/a00aaa540d2c0dcb911dbaa64e499254a6671a30/smollm3_axmodel/smollm3_p128_l32_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "a7eb161e08d748a95296307e10b389cc8e1be31ae0b95bb74fff54e1573179fe",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "smollm3_axmodel/smollm3_p128_l33_together.axmodel",
+      "size": 100186615,
+      "url": "https://huggingface.co/AXERA-TECH/SmolLM3-3B/resolve/a00aaa540d2c0dcb911dbaa64e499254a6671a30/smollm3_axmodel/smollm3_p128_l33_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "12e69776df76335fceb2a6a8082aab158ec7902ac805e24af6d9447c854b70ba",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "smollm3_axmodel/smollm3_p128_l34_together.axmodel",
+      "size": 100182295,
+      "url": "https://huggingface.co/AXERA-TECH/SmolLM3-3B/resolve/a00aaa540d2c0dcb911dbaa64e499254a6671a30/smollm3_axmodel/smollm3_p128_l34_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "42642f4da1c70b6f63af9ce5cb8ffa1339b41401bbd6aec3cf9636ba8da36b2b",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "smollm3_axmodel/smollm3_p128_l35_together.axmodel",
+      "size": 100187415,
+      "url": "https://huggingface.co/AXERA-TECH/SmolLM3-3B/resolve/a00aaa540d2c0dcb911dbaa64e499254a6671a30/smollm3_axmodel/smollm3_p128_l35_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "9c81e256d4f4025394e7208cb77a520d969ec98a3504faabda289ada58b03e24",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "smollm3_axmodel/smollm3_p128_l3_together.axmodel",
+      "size": 100186455,
+      "url": "https://huggingface.co/AXERA-TECH/SmolLM3-3B/resolve/a00aaa540d2c0dcb911dbaa64e499254a6671a30/smollm3_axmodel/smollm3_p128_l3_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "201b4f41fc825554b1ed1ad5eed6247bf1a881c8ee096315c8ba8661b3c4f71c",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "smollm3_axmodel/smollm3_p128_l4_together.axmodel",
+      "size": 100185495,
+      "url": "https://huggingface.co/AXERA-TECH/SmolLM3-3B/resolve/a00aaa540d2c0dcb911dbaa64e499254a6671a30/smollm3_axmodel/smollm3_p128_l4_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "a1cd3e0d86090339360b0e73d6de3c960b7007c73f072bc890f8bf51876c6e85",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "smollm3_axmodel/smollm3_p128_l5_together.axmodel",
+      "size": 100189751,
+      "url": "https://huggingface.co/AXERA-TECH/SmolLM3-3B/resolve/a00aaa540d2c0dcb911dbaa64e499254a6671a30/smollm3_axmodel/smollm3_p128_l5_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "47e755071c64e5bd89d80678ac27fb3ef7c8e8e1057e5acbd321bcaf66fffd86",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "smollm3_axmodel/smollm3_p128_l6_together.axmodel",
+      "size": 100188279,
+      "url": "https://huggingface.co/AXERA-TECH/SmolLM3-3B/resolve/a00aaa540d2c0dcb911dbaa64e499254a6671a30/smollm3_axmodel/smollm3_p128_l6_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "d62ee3b10a488762485e1284fba7afef1c4c5418d0d684758e27e44726e678c2",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "smollm3_axmodel/smollm3_p128_l7_together.axmodel",
+      "size": 100184983,
+      "url": "https://huggingface.co/AXERA-TECH/SmolLM3-3B/resolve/a00aaa540d2c0dcb911dbaa64e499254a6671a30/smollm3_axmodel/smollm3_p128_l7_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "fd503175a3017173e36d52130a99d64500a1c050c101f1aef6f26139717caa2f",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "smollm3_axmodel/smollm3_p128_l8_together.axmodel",
+      "size": 100187319,
+      "url": "https://huggingface.co/AXERA-TECH/SmolLM3-3B/resolve/a00aaa540d2c0dcb911dbaa64e499254a6671a30/smollm3_axmodel/smollm3_p128_l8_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "d6b9b9632050c0ac1eb4bfb9547674bea32415bc2a422bdfcb8fddfa226ab9c1",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "smollm3_axmodel/smollm3_p128_l9_together.axmodel",
+      "size": 100187927,
+      "url": "https://huggingface.co/AXERA-TECH/SmolLM3-3B/resolve/a00aaa540d2c0dcb911dbaa64e499254a6671a30/smollm3_axmodel/smollm3_p128_l9_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "24e2faf3ce56ce9a623417ca6312a4d7b4283cf2737f17a1178251bae80a2d54",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "smollm3_axmodel/smollm3_post.axmodel",
+      "size": 286865743,
+      "url": "https://huggingface.co/AXERA-TECH/SmolLM3-3B/resolve/a00aaa540d2c0dcb911dbaa64e499254a6671a30/smollm3_axmodel/smollm3_post.axmodel",
+      "verifiedHashes": {
+        "sha256": "c04b9e34dc47fcd6e13c660c48a271eb5a107fb8616111974f11d336d80b685c",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "smolvlm3_tokenizer/.gitattributes",
+      "size": 1570,
+      "url": "https://huggingface.co/AXERA-TECH/SmolLM3-3B/resolve/a00aaa540d2c0dcb911dbaa64e499254a6671a30/smolvlm3_tokenizer/.gitattributes",
+      "verifiedHashes": {
+        "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+        "gitBlob": "52373fe24473b1aa44333d318f578ae6bf04b49b"
+      }
+    },
+    {
+      "path": "smolvlm3_tokenizer/README.md",
+      "size": 15932,
+      "url": "https://huggingface.co/AXERA-TECH/SmolLM3-3B/resolve/a00aaa540d2c0dcb911dbaa64e499254a6671a30/smolvlm3_tokenizer/README.md",
+      "verifiedHashes": {
+        "sha256": "ba0a4913c3b712f868f72b326697247acc9a3344e89c148eef7cdf63be379136",
+        "gitBlob": "00f4e0762164bb13e82243f406baea8aeccc3f50"
+      }
+    },
+    {
+      "path": "smolvlm3_tokenizer/chat_template.jinja",
+      "size": 5598,
+      "url": "https://huggingface.co/AXERA-TECH/SmolLM3-3B/resolve/a00aaa540d2c0dcb911dbaa64e499254a6671a30/smolvlm3_tokenizer/chat_template.jinja",
+      "verifiedHashes": {
+        "sha256": "3e0e275a527f249670056e0078e474eadbdd007c134b4fdfae5a7b3089702814",
+        "gitBlob": "e01e3a1bca00ae47bca8326b38cc397729f87481"
+      }
+    },
+    {
+      "path": "smolvlm3_tokenizer/config.json",
+      "size": 1884,
+      "url": "https://huggingface.co/AXERA-TECH/SmolLM3-3B/resolve/a00aaa540d2c0dcb911dbaa64e499254a6671a30/smolvlm3_tokenizer/config.json",
+      "verifiedHashes": {
+        "sha256": "cef25c6da5422f151c06095e524529d9baed243ec9dc4ae7e045618b1ae06e3b",
+        "gitBlob": "b262f5e445649da61940c397c843a236b3453573"
+      }
+    },
+    {
+      "path": "smolvlm3_tokenizer/generation_config.json",
+      "size": 182,
+      "url": "https://huggingface.co/AXERA-TECH/SmolLM3-3B/resolve/a00aaa540d2c0dcb911dbaa64e499254a6671a30/smolvlm3_tokenizer/generation_config.json",
+      "verifiedHashes": {
+        "sha256": "3458d62b3f9654f4bbe285223b0f4e5a1e67cae61c92bb6aeaadf04468bf9e01",
+        "gitBlob": "5339609fb994a8644fe865353cf0f1d3ee0130c8"
+      }
+    },
+    {
+      "path": "smolvlm3_tokenizer/model.safetensors.index.json",
+      "size": 26899,
+      "url": "https://huggingface.co/AXERA-TECH/SmolLM3-3B/resolve/a00aaa540d2c0dcb911dbaa64e499254a6671a30/smolvlm3_tokenizer/model.safetensors.index.json",
+      "verifiedHashes": {
+        "sha256": "e3a7254c086c4a78f95ad5864f435d165ffed1ed8998326ce5107b4423c15b76",
+        "gitBlob": "ee6c028c012814d385be51c1d537c345c9fa9457"
+      }
+    },
+    {
+      "path": "smolvlm3_tokenizer/notebook.ipynb",
+      "size": 317457,
+      "url": "https://huggingface.co/AXERA-TECH/SmolLM3-3B/resolve/a00aaa540d2c0dcb911dbaa64e499254a6671a30/smolvlm3_tokenizer/notebook.ipynb",
+      "verifiedHashes": {
+        "sha256": "2ecd8333659d597e1a75da6de90c33a62a445742796bf2a24c513696be87cdcd",
+        "gitBlob": "b5d90395032ceff728bdfe04bf891b6c2efb5d9c"
+      }
+    },
+    {
+      "path": "smolvlm3_tokenizer/special_tokens_map.json",
+      "size": 289,
+      "url": "https://huggingface.co/AXERA-TECH/SmolLM3-3B/resolve/a00aaa540d2c0dcb911dbaa64e499254a6671a30/smolvlm3_tokenizer/special_tokens_map.json",
+      "verifiedHashes": {
+        "sha256": "12403efb970f069ba62ddf3b66166a27254be4a198166b61ad1ee604bd3a4515",
+        "gitBlob": "190d5624dbbc1ad56f2f34c9d58e03fef7e5328b"
+      }
+    },
+    {
+      "path": "smolvlm3_tokenizer/tokenizer.json",
+      "size": 17208819,
+      "url": "https://huggingface.co/AXERA-TECH/SmolLM3-3B/resolve/a00aaa540d2c0dcb911dbaa64e499254a6671a30/smolvlm3_tokenizer/tokenizer.json",
+      "verifiedHashes": {
+        "sha256": "7b6a500b662a34eb3f0374db856ba4ad7de4c81040571d78dc0d357238930005",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "smolvlm3_tokenizer/tokenizer_config.json",
+      "size": 50387,
+      "url": "https://huggingface.co/AXERA-TECH/SmolLM3-3B/resolve/a00aaa540d2c0dcb911dbaa64e499254a6671a30/smolvlm3_tokenizer/tokenizer_config.json",
+      "verifiedHashes": {
+        "sha256": "59a64b39f05ee0acf7479bbccf99a44d9e481c1a4a494eb03838ae3c35eb29be",
+        "gitBlob": "61910c2db5cbdc9e6a6f37e14aaf00584cc6ad47"
+      }
+    },
+    {
+      "path": "utils/infer_func.py",
+      "size": 8854,
+      "url": "https://huggingface.co/AXERA-TECH/SmolLM3-3B/resolve/a00aaa540d2c0dcb911dbaa64e499254a6671a30/utils/infer_func.py",
+      "verifiedHashes": {
+        "sha256": "8063e4850b6a0e7e05085db2210f6fada8a40aaa5187a8ae5876539176b32962",
+        "gitBlob": "1f7debb8a09b219d9ea106a672e9b6a8ac2e2f73"
+      }
+    }
+  ],
+  "runnerSha256": "6e688ea6bde3dd84a3dcc7cee61484bb2cd0fdbdf9dc94fd2740ab4328d46b9b"
+}

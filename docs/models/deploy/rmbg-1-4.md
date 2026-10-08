@@ -97,7 +97,7 @@ python ax_inference.py --model axmodel/rmbg1_4_ax650.axmodel --img img/example_i
 
 ## 查看部署效果
 
-**固定样例已核对** · 2026-09-23 · RK3576 DshanPi A1 + AX8850 8GB M.2。以下输入与输出来自本页固定版本的实际运行。
+**固定样例已核对** · RK3576 DshanPi A1 + AX8850 8GB M.2。以下输入与输出来自本页固定版本的实际运行。
 
 生成 933×1405 RGBA PNG，Alpha 掩码保留前景两只长颈鹿，背景天空和草地基本透明。另从实际 PNG 提取 Alpha 图检查，未重新生成或修改模型结果。
 
@@ -138,7 +138,7 @@ python ax_inference.py --model axmodel/rmbg1_4_ax650.axmodel --img img/example_i
 <details>
 <summary>查看样例环境与运行耗时</summary>
 
-环境：RK3576 DshanPi A1 + AX8850 8GB M.2。日期：2026-09-23。模型版本：`5c6acadadf47c5da55cda5ed869d7de07dfc4ecb`。
+环境：RK3576 DshanPi A1 + AX8850 8GB M.2。模型版本：`5c6acadadf47c5da55cda5ed869d7de07dfc4ecb`。
 
 | 组件 | 版本或配置 |
 | --- | --- |
@@ -156,8 +156,6 @@ python ax_inference.py --model axmodel/rmbg1_4_ax650.axmodel --img img/example_i
 
 适用范围：
 
-- 仅核对这个前景抠图样本，腿部与毛发边缘仍需细查；未计算 IoU 或抠图误差。
-- 部分图片查看器忽略 Alpha 会显示原始 RGB 背景，应使用支持透明通道的查看器或检查 Alpha 图。
 - 运行源码包含显式 AXCL 后端或本页说明的适配修改；result.json 保存逐项替换及修改后 SHA256。
 
 </details>

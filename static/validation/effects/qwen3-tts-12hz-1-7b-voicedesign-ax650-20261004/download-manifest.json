@@ -1,0 +1,621 @@
+{
+  "modelId": "Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650",
+  "repo": "AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650",
+  "revision": "3d4e2e70131378bd8bfbe307ef2de01192f0bc32",
+  "complete": true,
+  "files": [
+    {
+      "path": "README.md",
+      "size": 31,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/README.md",
+      "verifiedHashes": {
+        "sha256": "4bcf87ecfbbb8e07a01b21415a970c8b53a5283bf6872b657040d3f45c9241f7",
+        "gitBlob": "7b95401dc46245ac339fc25059d4a56d90b4cde5"
+      }
+    },
+    {
+      "path": "code-predictor/code_predictor_lm_head_0.axmodel",
+      "size": 2259945,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/code-predictor/code_predictor_lm_head_0.axmodel",
+      "verifiedHashes": {
+        "sha256": "63c92b1b146934543b68a1c88b45fc0c7d3328b2894b8c0b18a8f11b55285adb",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/code_predictor_lm_head_1.axmodel",
+      "size": 2259881,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/code-predictor/code_predictor_lm_head_1.axmodel",
+      "verifiedHashes": {
+        "sha256": "a7908c4b6fcf11cc13798f510646a85531afb7c0042fc39ecf1e28a03530c2ef",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/code_predictor_lm_head_10.axmodel",
+      "size": 2259881,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/code-predictor/code_predictor_lm_head_10.axmodel",
+      "verifiedHashes": {
+        "sha256": "d43bd936b109f6dccc47048f40483ab8ea1eb156d457de9f52db6a3e28e22449",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/code_predictor_lm_head_11.axmodel",
+      "size": 2259881,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/code-predictor/code_predictor_lm_head_11.axmodel",
+      "verifiedHashes": {
+        "sha256": "99e3b4bc814d0ce6c4751cfdd9bf15ebff0be2b9eb9666edf70a3f4d31366e4b",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/code_predictor_lm_head_12.axmodel",
+      "size": 2259881,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/code-predictor/code_predictor_lm_head_12.axmodel",
+      "verifiedHashes": {
+        "sha256": "39a6f6d76d109cb15d9508dd2376b6b311ffd046f4dff24babf5fd0250df2f81",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/code_predictor_lm_head_13.axmodel",
+      "size": 2259881,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/code-predictor/code_predictor_lm_head_13.axmodel",
+      "verifiedHashes": {
+        "sha256": "171424c3773d9e32d06760e296fc2f6299eab32d7dd1b7a1675744e414b04669",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/code_predictor_lm_head_14.axmodel",
+      "size": 2259881,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/code-predictor/code_predictor_lm_head_14.axmodel",
+      "verifiedHashes": {
+        "sha256": "17c38a4337b91403ced42464543f1dd0413a0f2d2c8cf8b3e8cf3bc1cb7846d6",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/code_predictor_lm_head_2.axmodel",
+      "size": 2259881,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/code-predictor/code_predictor_lm_head_2.axmodel",
+      "verifiedHashes": {
+        "sha256": "4b8b9323b48529561a5412f1e76edb941550de127a062fb97af44639e35b0d18",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/code_predictor_lm_head_3.axmodel",
+      "size": 2259881,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/code-predictor/code_predictor_lm_head_3.axmodel",
+      "verifiedHashes": {
+        "sha256": "6034d6fae9302159ab05d6fa504d8be9171afad795fab323bbf5bfce3a8481f6",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/code_predictor_lm_head_4.axmodel",
+      "size": 2259881,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/code-predictor/code_predictor_lm_head_4.axmodel",
+      "verifiedHashes": {
+        "sha256": "68ac3293f799e4eb8845f054da580970ad25e7fffc2cc37ab7d0fc32bdfdcaa8",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/code_predictor_lm_head_5.axmodel",
+      "size": 2259881,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/code-predictor/code_predictor_lm_head_5.axmodel",
+      "verifiedHashes": {
+        "sha256": "2a8a551abe8ae05e2aa6c374af5f9fb56c31147befdb693f133d1ce46862e00e",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/code_predictor_lm_head_6.axmodel",
+      "size": 2259881,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/code-predictor/code_predictor_lm_head_6.axmodel",
+      "verifiedHashes": {
+        "sha256": "d67766c5003fab63bff12dc8dc5de5337354cc4cd4e141eaaa56de5f9b9cae0c",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/code_predictor_lm_head_7.axmodel",
+      "size": 2259881,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/code-predictor/code_predictor_lm_head_7.axmodel",
+      "verifiedHashes": {
+        "sha256": "b84dd29b7aecdfae699cbd1e89d20663fb9e31edcf9084d07ed08fc6964f566c",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/code_predictor_lm_head_8.axmodel",
+      "size": 2259881,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/code-predictor/code_predictor_lm_head_8.axmodel",
+      "verifiedHashes": {
+        "sha256": "68291d81e027465efdae12dc2692e888dfad882a59d87bd1cb67c65f5760fcd2",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/code_predictor_lm_head_9.axmodel",
+      "size": 2259881,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/code-predictor/code_predictor_lm_head_9.axmodel",
+      "verifiedHashes": {
+        "sha256": "c7e80cf34ee5b4dd4ad690345a16b361cf82d81512656a7269c585b29e8ab7a6",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/qwen3_tts_talker_code_predictor_p64_l0_together.axmodel",
+      "size": 19921502,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/code-predictor/qwen3_tts_talker_code_predictor_p64_l0_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "1e85078342ab238f8211e673f39956f9e9334a52c63e28f1d1a2c08b1128c54c",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/qwen3_tts_talker_code_predictor_p64_l1_together.axmodel",
+      "size": 17611038,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/code-predictor/qwen3_tts_talker_code_predictor_p64_l1_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "f84bd10495a72ba31b4ff2162430849aa8a0ecaa42158040aa46fea401d94447",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/qwen3_tts_talker_code_predictor_p64_l2_together.axmodel",
+      "size": 17611038,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/code-predictor/qwen3_tts_talker_code_predictor_p64_l2_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "ae69206e47df07697dcdc985282abca638da7b949eeef33c075ea26e07e5f7cc",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/qwen3_tts_talker_code_predictor_p64_l3_together.axmodel",
+      "size": 17610814,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/code-predictor/qwen3_tts_talker_code_predictor_p64_l3_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "a7390af0dfca60ad8d1921c916e35e28b0854fb52a4f2325b305ff947217b5b9",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/qwen3_tts_talker_code_predictor_p64_l4_together.axmodel",
+      "size": 17611102,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/code-predictor/qwen3_tts_talker_code_predictor_p64_l4_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "109c298f0d5c0aae1fcf684d20822b767b219114b65f623b0a124cbbe7498256",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/qwen3_tts_talker_code_predictor_post.axmodel",
+      "size": 14073,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/code-predictor/qwen3_tts_talker_code_predictor_post.axmodel",
+      "verifiedHashes": {
+        "sha256": "988d2f615196705865fd607343675515b1deebef1b663d0e4f64f2fcf88ed410",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/talker.code_predictor.model.codec_embedding.0.weight.bfloat16.bin",
+      "size": 8388608,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/code-predictor/talker.code_predictor.model.codec_embedding.0.weight.bfloat16.bin",
+      "verifiedHashes": {
+        "sha256": "23627e2516e1cebef039c47862fc2eaedc49f11c22a88796dff487baacab78e6",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/talker.code_predictor.model.codec_embedding.1.weight.bfloat16.bin",
+      "size": 8388608,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/code-predictor/talker.code_predictor.model.codec_embedding.1.weight.bfloat16.bin",
+      "verifiedHashes": {
+        "sha256": "7643672af994bfcafb6cc8ba74e2c874417ce30e9a436ace113d51943de1d4ea",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/talker.code_predictor.model.codec_embedding.10.weight.bfloat16.bin",
+      "size": 8388608,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/code-predictor/talker.code_predictor.model.codec_embedding.10.weight.bfloat16.bin",
+      "verifiedHashes": {
+        "sha256": "d8e719f62b136f18222bf39cc7a17d3715e39d907fc490c0397d8401e458a229",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/talker.code_predictor.model.codec_embedding.11.weight.bfloat16.bin",
+      "size": 8388608,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/code-predictor/talker.code_predictor.model.codec_embedding.11.weight.bfloat16.bin",
+      "verifiedHashes": {
+        "sha256": "3fd38b33aee5286f0b4468fe6ed01eab9b9bce1d121b769cc6caf5216058175b",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/talker.code_predictor.model.codec_embedding.12.weight.bfloat16.bin",
+      "size": 8388608,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/code-predictor/talker.code_predictor.model.codec_embedding.12.weight.bfloat16.bin",
+      "verifiedHashes": {
+        "sha256": "7c17a0261a82caf344db5265ec36ce54f18d274cd4628c413504cddc7c4308c1",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/talker.code_predictor.model.codec_embedding.13.weight.bfloat16.bin",
+      "size": 8388608,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/code-predictor/talker.code_predictor.model.codec_embedding.13.weight.bfloat16.bin",
+      "verifiedHashes": {
+        "sha256": "e34b2b37cb9d6a5b5bcbfa5fa804bf0e12a95445326651176cbd3ef0c3a6f251",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/talker.code_predictor.model.codec_embedding.14.weight.bfloat16.bin",
+      "size": 8388608,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/code-predictor/talker.code_predictor.model.codec_embedding.14.weight.bfloat16.bin",
+      "verifiedHashes": {
+        "sha256": "e8c041b6272de675745fc902132d062656e6b5ca525127013169073383b22aac",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/talker.code_predictor.model.codec_embedding.2.weight.bfloat16.bin",
+      "size": 8388608,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/code-predictor/talker.code_predictor.model.codec_embedding.2.weight.bfloat16.bin",
+      "verifiedHashes": {
+        "sha256": "548666e0a2588534a06283e7f3eab9ae9358ace7976b4d57eaae9d45c70fcbf3",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/talker.code_predictor.model.codec_embedding.3.weight.bfloat16.bin",
+      "size": 8388608,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/code-predictor/talker.code_predictor.model.codec_embedding.3.weight.bfloat16.bin",
+      "verifiedHashes": {
+        "sha256": "da31ab4f1c9971adc435defa60f4ae6b465603128393ff015e963cf933612c85",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/talker.code_predictor.model.codec_embedding.4.weight.bfloat16.bin",
+      "size": 8388608,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/code-predictor/talker.code_predictor.model.codec_embedding.4.weight.bfloat16.bin",
+      "verifiedHashes": {
+        "sha256": "7bdaeec94b319693f30629af52a76caf81e9518fa5ef9a6015c3152c9af07f90",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/talker.code_predictor.model.codec_embedding.5.weight.bfloat16.bin",
+      "size": 8388608,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/code-predictor/talker.code_predictor.model.codec_embedding.5.weight.bfloat16.bin",
+      "verifiedHashes": {
+        "sha256": "cf783ef644814afd1ed7e6b9a3c3ea554f9b02de2aa0f0902a415b6a38d55861",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/talker.code_predictor.model.codec_embedding.6.weight.bfloat16.bin",
+      "size": 8388608,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/code-predictor/talker.code_predictor.model.codec_embedding.6.weight.bfloat16.bin",
+      "verifiedHashes": {
+        "sha256": "101228f9c2e4609e4477ba1d1670f5307fe4b5d17e5f7e13c51ee199b0147052",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/talker.code_predictor.model.codec_embedding.7.weight.bfloat16.bin",
+      "size": 8388608,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/code-predictor/talker.code_predictor.model.codec_embedding.7.weight.bfloat16.bin",
+      "verifiedHashes": {
+        "sha256": "d4f8c588c4a9071e942db02cc31dac0706627cca050eef9dde692a0b2be783fb",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/talker.code_predictor.model.codec_embedding.8.weight.bfloat16.bin",
+      "size": 8388608,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/code-predictor/talker.code_predictor.model.codec_embedding.8.weight.bfloat16.bin",
+      "verifiedHashes": {
+        "sha256": "ca3b1078bd803bd2787a88cd3ef1d4ad92c37d1be541b6e8b69ef4bc81592554",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "code-predictor/talker.code_predictor.model.codec_embedding.9.weight.bfloat16.bin",
+      "size": 8388608,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/code-predictor/talker.code_predictor.model.codec_embedding.9.weight.bfloat16.bin",
+      "verifiedHashes": {
+        "sha256": "5c86a04dbf6f566a4ce21f29243c4f603dd446a5b27c09c6d7243b9f3f39de12",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l0_together.axmodel",
+      "size": 60967575,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/talker/qwen3_tts_talker_p128_l0_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "8fb3c6cf6155a4d926dc2b5558bc0fb4921d2a16caccb0a1f3c6b68558528cfd",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l10_together.axmodel",
+      "size": 60971359,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/talker/qwen3_tts_talker_p128_l10_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "04c605ad8502e0ef6b3a6c41b20e8d3f9bebfb6d5bb4ef89eae37c74737f9db9",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l11_together.axmodel",
+      "size": 60972223,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/talker/qwen3_tts_talker_p128_l11_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "e41e15eeae12c80114ef88bc5606e37789d8bd09a3ff40fa246e0de60d9f1e5d",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l12_together.axmodel",
+      "size": 60973951,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/talker/qwen3_tts_talker_p128_l12_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "81968731c5ca6db800c38b0af4b2905a608eb5ec1c0733f88d897ec0bdd6a29e",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l13_together.axmodel",
+      "size": 60973343,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/talker/qwen3_tts_talker_p128_l13_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "2eaf325d9bb4ec4aa7e7b7373f8271fae3cfdd9bdfc4760a476e773e0300924b",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l14_together.axmodel",
+      "size": 60972927,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/talker/qwen3_tts_talker_p128_l14_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "4cce3694cbe48c316b83aa2508909450c15c6d07dd6d331d70c8fd76620829d9",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l15_together.axmodel",
+      "size": 60971711,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/talker/qwen3_tts_talker_p128_l15_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "07331a8fb2dbf6a9919226f8e92a7bcadeae5208bbee7e0a9fc0684a50c9470e",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l16_together.axmodel",
+      "size": 60970623,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/talker/qwen3_tts_talker_p128_l16_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "d89b0e2fdd4c4938664a95c581526274dbf8754572fa2b4b26a40c78e401804f",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l17_together.axmodel",
+      "size": 60974303,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/talker/qwen3_tts_talker_p128_l17_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "bbd3c0ce0ba487a28493977565336cc3d574b6d20926197a5c7685c7f31dea9b",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l18_together.axmodel",
+      "size": 60969855,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/talker/qwen3_tts_talker_p128_l18_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "466614f92761239128bb9ee3730afca7e9016dd636e7e13b03b42faa7282db25",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l19_together.axmodel",
+      "size": 60968351,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/talker/qwen3_tts_talker_p128_l19_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "18531c5eb1bd9c433c093893be22abf42eb86eadc12e6e5348661733c6fc1784",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l1_together.axmodel",
+      "size": 60969879,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/talker/qwen3_tts_talker_p128_l1_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "e81dd7b5b12f3d1a55a4cad92a1ca1b913efd914c1ea7e726815fd92bfa91e13",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l20_together.axmodel",
+      "size": 60970431,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/talker/qwen3_tts_talker_p128_l20_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "129890af7b87def4c0480807c6ec4cc066286c223e2ccfc33f0287633ddf8eb4",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l21_together.axmodel",
+      "size": 60972447,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/talker/qwen3_tts_talker_p128_l21_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "19254bae37188cee066d055bf1a0bff9a4bca21a951d919cb2ba9becd4706b47",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l22_together.axmodel",
+      "size": 60968959,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/talker/qwen3_tts_talker_p128_l22_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "2b7171d5d29efb845f0ff002954ca36a0b47dc751afceeb9971c1784e3720788",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l23_together.axmodel",
+      "size": 60971615,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/talker/qwen3_tts_talker_p128_l23_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "985096a827003f1ec4f27dba4ce1d5a1e22a9f6ae9fec66441dfcacfc30ede1a",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l24_together.axmodel",
+      "size": 60970655,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/talker/qwen3_tts_talker_p128_l24_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "ac1ce6b17fe7ba671ed1d24b7241198bc445d4e68b474bc666dd560e2f9c4425",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l25_together.axmodel",
+      "size": 60972255,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/talker/qwen3_tts_talker_p128_l25_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "fb04cbd9528dd611f072367cf0defe19c53c7b283a75073f0b2cd71f9dc2344a",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l26_together.axmodel",
+      "size": 60973151,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/talker/qwen3_tts_talker_p128_l26_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "318f86d34faf8cc087ea15da1925746670545974c813f7c3c58e4ee6199f6869",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l27_together.axmodel",
+      "size": 60973023,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/talker/qwen3_tts_talker_p128_l27_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "ef9e3ca9c8ef1b0c09fe4cb7814f31309b7d98b1f09a70ec601fd3b2e46cde95",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l2_together.axmodel",
+      "size": 60972375,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/talker/qwen3_tts_talker_p128_l2_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "19263e8b4971868496ef1a22f3c9c14dd005f2fd331e1e658792cc6fb4f5a03e",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l3_together.axmodel",
+      "size": 60973399,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/talker/qwen3_tts_talker_p128_l3_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "6f8894be505e6b4e8ce8706ef9eedf23f98ee3ec8bed8f698b8e328cf83ca9b7",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l4_together.axmodel",
+      "size": 60974167,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/talker/qwen3_tts_talker_p128_l4_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "11d75acfd8a334bd2e1e1b21ea36151aa684dfe1701a9925b74c97b867ae0252",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l5_together.axmodel",
+      "size": 60971735,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/talker/qwen3_tts_talker_p128_l5_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "348eed730522938bd4cfe0f33c89f39bec4760cd9958a5c094c789d690587efe",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l6_together.axmodel",
+      "size": 60973687,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/talker/qwen3_tts_talker_p128_l6_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "1c416b291bb4f18f1258cb5f37fb6cd6efb679ce650736ad0a0d6d357e5c9b49",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l7_together.axmodel",
+      "size": 60973687,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/talker/qwen3_tts_talker_p128_l7_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "dd6ba24fd35e19e5157120f679ae02ef913d0b949e87008d10629970908bab94",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l8_together.axmodel",
+      "size": 60973367,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/talker/qwen3_tts_talker_p128_l8_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "e344e59c9f10abe9904f3b1899d3f288fef278253107ccd58ac61fa09056e8b9",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_p128_l9_together.axmodel",
+      "size": 60974007,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/talker/qwen3_tts_talker_p128_l9_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "e4721ad75f1644382be860138982966d326b436ce49cca59d08b02a2a007f22e",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/qwen3_tts_talker_post.axmodel",
+      "size": 6886862,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/talker/qwen3_tts_talker_post.axmodel",
+      "verifiedHashes": {
+        "sha256": "0d7c82a67a4590e2ee58965137848f2a1f39a5f0a00ec8c22ab56da72a779206",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/talker.model.codec_embedding.weight.bfloat16.bin",
+      "size": 12582912,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/talker/talker.model.codec_embedding.weight.bfloat16.bin",
+      "verifiedHashes": {
+        "sha256": "02831536535d69e0b33e093718e73e34f670f80b92b28281d7a7f3cbc051dea6",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "talker/talker.model.text_embedding.weight.bfloat16.bin",
+      "size": 622329856,
+      "url": "https://huggingface.co/AXERA-TECH/Qwen3-TTS-12Hz-1.7B-VoiceDesign-AX650/resolve/3d4e2e70131378bd8bfbe307ef2de01192f0bc32/talker/talker.model.text_embedding.weight.bfloat16.bin",
+      "verifiedHashes": {
+        "sha256": "3b8fd138844a4b856408c1614f12f8d81e27d33b06908ad555a1029fa900c1bf",
+        "gitBlob": null
+      }
+    }
+  ],
+  "runnerSha256": "f3a5e3a6417426da9472b3df3e6e532464201f8d0aa4948c930ea61329bb3007"
+}

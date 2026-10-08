@@ -1,0 +1,196 @@
+{
+  "modelId": "Depth-Anything-3",
+  "repo": "AXERA-TECH/Depth-Anything-3",
+  "revision": "7bf36032e88d4cfba089a6ddb05fa99724742177",
+  "files": [
+    {
+      "path": "README.md",
+      "size": 2375,
+      "verifiedHashes": {
+        "sha256": "8719882dccddc52d4fb77e0cbbd3d2d300ae8459c2ca648e237d3ba12099d650"
+      }
+    },
+    {
+      "path": "config.json",
+      "size": 0,
+      "verifiedHashes": {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "path": "examples/demo01.jpg",
+      "size": 488150,
+      "verifiedHashes": {
+        "sha256": "35ef1bbb63f6540e49aa9b6302b9b938be4fe8b9c08c07c3694b02396b0e87e0"
+      }
+    },
+    {
+      "path": "examples/demo02.jpg",
+      "size": 510806,
+      "verifiedHashes": {
+        "sha256": "c1f116034aa5abd5b5470226be2bb03bd938c8affe90389c52d10fe8b1ac7e21"
+      }
+    },
+    {
+      "path": "examples/demo03.jpg",
+      "size": 464937,
+      "verifiedHashes": {
+        "sha256": "764dffd4d97bbacd620bc005fa86837018393ccb5ffd1059c2245a3cacff7782"
+      }
+    },
+    {
+      "path": "examples/demo04.jpg",
+      "size": 299824,
+      "verifiedHashes": {
+        "sha256": "3a301f4e0361fe75ca4d256a35062f87eecc3f7655d747c9def3259c86e26a45"
+      }
+    },
+    {
+      "path": "examples/demo05.jpg",
+      "size": 353184,
+      "verifiedHashes": {
+        "sha256": "50e7e2f057c5a2d27bb09b0b3e814147966e30139ddaf54362c72746a5320339"
+      }
+    },
+    {
+      "path": "examples/demo06.jpg",
+      "size": 782780,
+      "verifiedHashes": {
+        "sha256": "0fd815bddeab139e7477c948a22fffdf84d9b87f81d77dcf6fd8ef39ebaaafb5"
+      }
+    },
+    {
+      "path": "examples/demo07.jpg",
+      "size": 400463,
+      "verifiedHashes": {
+        "sha256": "345bec735adc4c238bf14ddf1d182c4881f8ba08814c4f4074c1d79e9e4adc52"
+      }
+    },
+    {
+      "path": "examples/demo08.jpg",
+      "size": 102825,
+      "verifiedHashes": {
+        "sha256": "d32b480349013be5f84521b0df1d6590139163aef8457f051076ed03c7371e6f"
+      }
+    },
+    {
+      "path": "examples/demo09.jpg",
+      "size": 410224,
+      "verifiedHashes": {
+        "sha256": "6a64033ba69bb408c092dbff811abfbcb0196f1f87541902d03d2a909a0b8ea9"
+      }
+    },
+    {
+      "path": "examples/demo10.jpg",
+      "size": 486825,
+      "verifiedHashes": {
+        "sha256": "bc77f215081f58de8d079e821e2808f6ee2727dfa729c10a5921c186a32c7638"
+      }
+    },
+    {
+      "path": "examples/demo11.jpg",
+      "size": 243712,
+      "verifiedHashes": {
+        "sha256": "150ef98e997ee6ff705bd06105c343f76a8f181ef93ff9ceebbd62a3ab6b592b"
+      }
+    },
+    {
+      "path": "examples/demo12.jpg",
+      "size": 263007,
+      "verifiedHashes": {
+        "sha256": "264458adcf5af6e3733dfda7ef4628c4a1dc49ed249aa8896256d9534a8377c4"
+      }
+    },
+    {
+      "path": "examples/demo13.jpg",
+      "size": 421112,
+      "verifiedHashes": {
+        "sha256": "9168fc752a002d50138a56621e8de5fab7fed125a978dd293319d28d30993564"
+      }
+    },
+    {
+      "path": "examples/demo14.jpg",
+      "size": 642925,
+      "verifiedHashes": {
+        "sha256": "01480d952bc950332f0eea31da0777f66d5f285d8edfe2a5f47508f4b260a99f"
+      }
+    },
+    {
+      "path": "examples/demo15.jpg",
+      "size": 768703,
+      "verifiedHashes": {
+        "sha256": "bf60ce3879f627e8886280cc61442174c91908894a5b059681341fed600f7db3"
+      }
+    },
+    {
+      "path": "examples/demo16.jpg",
+      "size": 377831,
+      "verifiedHashes": {
+        "sha256": "a92e51732b38ad8b21b5cbbc6883374bd5ab56bb4907d6c4f1e13307970480ee"
+      }
+    },
+    {
+      "path": "examples/demo17.jpg",
+      "size": 152591,
+      "verifiedHashes": {
+        "sha256": "7174dcfbbb95a2e581ebf1e14cfbb4bef7a1295ae9cece405c87145223dcb32d"
+      }
+    },
+    {
+      "path": "examples/demo18.jpg",
+      "size": 178905,
+      "verifiedHashes": {
+        "sha256": "4deeb16dbee40108f194bd87c8621416110427c8ab5fc5ad6a1d9002b2b620c2"
+      }
+    },
+    {
+      "path": "examples/demo19.jpg",
+      "size": 1004211,
+      "verifiedHashes": {
+        "sha256": "7cdb09c34eb0b4d2ac5f6070aec47c8f983a0b1b2c9ee1fc30decafb64f1bd98"
+      }
+    },
+    {
+      "path": "examples/demo20.jpg",
+      "size": 498212,
+      "verifiedHashes": {
+        "sha256": "2958fd1b7018e40b68ccc8d74ff8e50bf143f5046711d57c54eec2a479550ace"
+      }
+    },
+    {
+      "path": "python/infer.py",
+      "size": 1228,
+      "verifiedHashes": {
+        "sha256": "6fcca3d7fc0966fd30473792071807c02e2936c104c40f31eff070a930c700fa"
+      }
+    },
+    {
+      "path": "python/infer_onnx.py",
+      "size": 1521,
+      "verifiedHashes": {
+        "sha256": "a18e2a852065ce76b8cb6802d66be2971968b8d2b0f3cafb1647957c0d27e03b"
+      }
+    },
+    {
+      "path": "models-ax650/da3-base.axmodel",
+      "size": 139250301,
+      "verifiedHashes": {
+        "sha256": "02f0291bb629de91860a17174351c82825a975f4979100882399219f39764ea6"
+      }
+    },
+    {
+      "path": "models-ax650/da3metric-large.axmodel",
+      "size": 382403608,
+      "verifiedHashes": {
+        "sha256": "7f65d9248e36663e989c926653a6f411aecbd822504c4c1364be05f22174e0c9"
+      }
+    },
+    {
+      "path": "models-ax650/da3mono-large.axmodel",
+      "size": 382396604,
+      "verifiedHashes": {
+        "sha256": "3d70bb9242c90ad9425733d8aacd27d18d520f2e5f6f15f86efd08d9035a8745"
+      }
+    }
+  ]
+}

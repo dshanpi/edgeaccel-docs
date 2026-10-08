@@ -1,93 +1,156 @@
 ---
 title: "通过 Python 调用算力卡"
+description: "使用固定版本 YOLOv8n 与公交车图片，完成 PyAXEngine 安装、推理、结果检查和资源释放。"
 ---
 
 # 通过 Python 调用算力卡
 
-Linux 主机先完成 AXCL 安装和设备识别。Python 环境在主机运行，必须选择算力卡后端。
+使用 Python 加载 **YOLOv8n**，检测官方 `bus.jpg`，生成带检测框的图片。全部命令在连接算力卡的 Linux 主机执行。
 
-## 选择接口
+| 项目 | 本页固定配置 |
+| --- | --- |
+| 主机 | RK3576 DShanPi-A1，Ubuntu 24.04，aarch64，Python 3.12.3 |
+| 算力卡 | AX8850 16GB，AXCL / 固件 3.16.0 |
+| 推理接口 | PyAXEngine 0.1.3.rc3 发布的 0.1.3 wheel，`AXCLRTExecutionProvider` |
+| 模型 | `AXERA-TECH/YOLOv8`，`AX650/yolov8n_640x640_npu3.axmodel` |
+| 输入与输出 | 官方公交车图片 → `result.jpg` |
 
-| 接口 | 用途 | 导入名 |
-|---|---|---|
-| pyAXCL | AXCL 设备、内存、NPU、视频等接口 | `axcl` |
-| PyAXEngine | 较简洁的模型推理接口，便于原型验证 | `axengine` |
+## 准备设备与目录
 
-两个包的接口不同，不能互换。需要完整 AXCL 功能时优先使用官方 pyAXCL；仅做模型原型时可采用 PyAXEngine。
-
-## 安装 pyAXCL
-
-使用与安装版本配套的 SDK 中 `axcl/out/python/pyAXCL-版本-py3-none-any.whl`。Python 需符合 SDK 要求，官方文档要求 3.9 或更高。将实际 wheel 放入 `~/axcl-setup`，用其真实文件名替换下面占位符。
+先完成[安装 AXCL](../ax650n/quick-start/arm64.md)和[设备检查](device-check.md)，保持风扇运行，停止其他推理应用。本页需要约 300 MB 可用空间。
 
 ```bash
-python3 -m venv ~/edgeaccel/python-env
-source ~/edgeaccel/python-env/bin/activate
-python -m pip install ~/axcl-setup/实际的pyAXCL文件名.whl
-python -c 'import axcl; print(axcl.__file__)'
+/usr/bin/axcl/axcl-smi
+sudo apt-get install -y python3-venv curl
+APP_ROOT=${EDGEACCEL_WORK:-$HOME/edgeaccel/application-guides}
+mkdir -p "$APP_ROOT/python/AX650"
+cd "$APP_ROOT/python"
 ```
 
-导入成功只证明 Python 可找到包。继续按 SDK 自带设备和 NPU 示例检查设备初始化、内存分配、模型执行及资源释放，不把导入结果作为推理通过。
+设备列表应显示 AX8850，且没有其他推理进程。空间不足时，在执行上述命令前将 `EDGEACCEL_WORK` 设置为已挂载、当前用户可写的存储目录；后续新终端保持相同设置。
+
+网络需要代理时，在当前终端设置自己的代理地址，再执行下载。例如本地代理位于 `192.168.1.38:7897`：
+
+```bash
+export http_proxy=http://192.168.1.38:7897
+export https_proxy=http://192.168.1.38:7897
+export no_proxy=localhost,127.0.0.1
+```
 
 ## 安装已核对的 PyAXEngine 版本
 
-2026-09-23 已在 RK3576 主机的 Python 3.12 虚拟环境中导入 PyAXEngine，并确认可用后端包含 `AXCLRTExecutionProvider`。本节固定使用官方 [0.1.3.rc3 发布版](https://github.com/AXERA-TECH/pyaxengine/releases/tag/0.1.3.rc3)，wheel 内的包版本仍显示为 `0.1.3`，因此同时保留发布标签和文件校验值。
-
-从[官方发布文件](https://github.com/AXERA-TECH/pyaxengine/releases/download/0.1.3.rc3/axengine-0.1.3-py3-none-any.whl)下载 `axengine-0.1.3-py3-none-any.whl`，保存到 `~/axcl-setup`。在 RK3576 主机校验文件：
-
 ```bash
-cd ~/axcl-setup
+curl -fL --retry 2 \
+  https://github.com/AXERA-TECH/pyaxengine/releases/download/0.1.3.rc3/axengine-0.1.3-py3-none-any.whl \
+  -o axengine-0.1.3-py3-none-any.whl
 printf '%s  %s\n' \
-  '762d0284623947aac5e4ecd8253e7049be975e9a73a9a6bfa20ac504c362efac' \
-  'axengine-0.1.3-py3-none-any.whl' | sha256sum -c -
+  762d0284623947aac5e4ecd8253e7049be975e9a73a9a6bfa20ac504c362efac \
+  axengine-0.1.3-py3-none-any.whl | sha256sum -c -
 ```
 
-输出应为 `axengine-0.1.3-py3-none-any.whl: OK`。校验不符时停止安装。使用独立环境，将 wheel 与固定版本的 NumPy、ml-dtypes 和 OpenCV 在同一次安装中提交给依赖解析器：
+校验显示 `OK` 后安装。校验不符时停止，不继续加载文件。
 
 ```bash
-python3 -m venv ~/edgeaccel/python-env
-source ~/edgeaccel/python-env/bin/activate
-python -m pip install \
-  ~/axcl-setup/axengine-0.1.3-py3-none-any.whl \
-  'numpy==1.26.4' 'ml-dtypes==0.5.3' \
-  'opencv-python-headless==4.11.0.86'
+python3 -m venv env
+source env/bin/activate
+python -m pip install --no-cache-dir \
+  ./axengine-0.1.3-py3-none-any.whl \
+  numpy==1.26.4 ml-dtypes==0.5.3 opencv-python-headless==4.11.0.86
 python -m pip check
 python -c 'import axengine; print(axengine.get_available_providers())'
 ```
 
-不要先装固定 NumPy，再单独安装未约束依赖版本的 axengine；后一条命令可能重新选择 NumPy 版本。后续安装模型依赖时同样保留上述版本约束，依赖冲突时为该模型建立独立环境，不直接升级共用环境。
+应显示 `No broken requirements found.`，后端列表包含 `AXCLRTExecutionProvider`。该后端通过 PCIe 调用算力卡；`AxEngineExecutionProvider` 面向芯片板端。
 
-`pip check` 应无依赖冲突，可用后端列表必须包含 `AXCLRTExecutionProvider`。导入和后端发现不等于某个模型已经运行，模型执行结果以[独立部署页面](../models/catalog.mdx)中的实测记录为准。
-
-## 运行配套 Python 示例
-
-获取同版本示例源码，避免 wheel 和示例 API 不一致。在官方 `examples/classification.py` 所在目录执行。`model.axmodel`、`input.jpg` 必须是该分类示例要求的配套模型与图片。
+本站其他模型页使用 `~/edgeaccel/python-env` 作为通用入口。首次安装且该位置不存在时，可为本环境建立链接；已有环境不覆盖：
 
 ```bash
-python classification.py \
-  -m /实际模型目录/model.axmodel \
-  -i /实际输入目录/input.jpg \
-  -p AXCLRTExecutionProvider
+mkdir -p ~/edgeaccel
+if [ ! -e ~/edgeaccel/python-env ] && [ ! -L ~/edgeaccel/python-env ]; then
+  ln -s "$APP_ROOT/python/env" ~/edgeaccel/python-env
+fi
 ```
 
-显式使用 `AXCLRTExecutionProvider`。`AxEngineExecutionProvider` 面向芯片板端，不能用于 RK3576 主机上的 M.2 卡推理。
-
-## 补齐 Whisper 音频依赖
-
-本次 Whisper 示例使用 `librosa==0.9.1`。在 Python 3.12 环境中同时安装 `setuptools==75.8.0`，为该依赖组合提供 `pkg_resources`：
+## 下载模型、输入与配套脚本
 
 ```bash
-source ~/edgeaccel/python-env/bin/activate
-python -m pip install \
-  'numpy==1.26.4' 'ml-dtypes==0.5.3' \
-  'librosa==0.9.1' 'setuptools==75.8.0'
-python -c 'import librosa, pkg_resources; print(librosa.__version__)'
-python -m pip check
+REV=65567714c2388b9c6b85bfb10b21535e7db0dee0
+for FILE in ax_infer.py bus.jpg AX650/yolov8n_640x640_npu3.axmodel; do
+  curl -fL --retry 2 \
+    "https://huggingface.co/AXERA-TECH/YOLOv8/resolve/$REV/$FILE" \
+    -o "$FILE" || break
+done
+sha256sum -c <<'SHA256'
+66c8e8b8b9374c2ec49035986a341b63bbb3cbd69999306889633be7b2f94fb4  ax_infer.py
+33b198a1d2839bb9ac4c65d61f9e852196793cae9a0781360859425f6022b69c  bus.jpg
+e5563cc868a98e9ee051cb9941844be934c55cd5a37264d10bff534dd613e86b  AX650/yolov8n_640x640_npu3.axmodel
+SHA256
 ```
 
-导入失败时先解决 Python 依赖，再加载模型。此处只记录已使用的依赖组合，Whisper 的音频输入、模型文件与运行结果见[Whisper 部署指南](../models/deploy/whisper.md)。
+三个文件均为 `OK` 后运行。脚本、图片与模型来自同一固定提交，不替换为其他芯片目录中的权重。
 
-## 检查输入输出与资源
+## 运行图片推理
 
-按模型元数据核对张量名称、形状、布局与 dtype。分类示例的图片处理不能直接套用 YOLO、OCR 或语音模型。确认 AXCL provider 实际加载，检查设备内存变化、输出类别与参考结果，再循环运行并观察资源是否释放。
+```bash
+set -o pipefail
+python ax_infer.py \
+  --model-path AX650/yolov8n_640x640_npu3.axmodel \
+  --test-img bus.jpg --img-save-path result.jpg \
+  --score-thres 0.25 --nms-thres 0.7 \
+  --providers AXCLRTExecutionProvider 2>&1 | tee inference.log
+```
 
-依据：[pyAXCL 官方说明](https://axcl-docs.readthedocs.io/zh-cn/latest/doc_guide_pyaxcl.html)、[PyAXEngine 0.1.3.rc3](https://github.com/AXERA-TECH/pyaxengine/releases/tag/0.1.3.rc3)。本次仅对上述 PyAXEngine 环境记录实测状态，不将其扩展为 pyAXCL 全部接口或所有模型的验证结论。
+日志应显示 `Using provider: AXCLRTExecutionProvider` 和 `Saved to result.jpg`。这条命令执行一次推理后退出，不启动后台服务。
+
+脚本内部通过以下两步调用模型；图片缩放、填充与检测框解码仍使用同版本官方实现：
+
+```python
+session = axengine.InferenceSession(model_path, providers=["AXCLRTExecutionProvider"])
+outputs = session.run(None, {session.get_inputs()[0].name: input_tensor})
+```
+
+这段用于说明接口，不是可独立运行的完整示例。更换模型时，应同步核对输入布局、数据类型和前后处理。
+
+## 查看部署效果
+
+下图为上述命令在本页 16GB 环境生成的实际结果。
+
+![YOLOv8n 实际检测结果](../../static/examples/application-guides/python-result.jpg)
+
+| 日志输出 | 本次结果 |
+| --- | --- |
+| 目标数 | 5 |
+| 公交车 | 1 个，分数 0.88 |
+| 行人 | 3 个，分数 0.84、0.84、0.80 |
+| stop sign | 1 个，分数 0.34，位于图片左侧边缘，需人工复核 |
+| 输出尺寸 | 810 × 1080 |
+
+检测分数不是准确率。此处核对了固定图片的运行与可见结果，没有使用独立标注集评估模型精度。一次 `session.run` 耗时约 38.46 ms，不包含模型加载、前处理、后处理及写图，也不能直接换算成整套应用帧率。
+
+在主机检查自己的输出文件：
+
+```bash
+python - <<'PY'
+import cv2
+original = cv2.imread('bus.jpg')
+result = cv2.imread('result.jpg')
+assert original is not None and result is not None
+assert original.shape == result.shape and (original != result).any()
+print('OUTPUT_OK', result.shape)
+PY
+```
+
+文件检查通过后仍需打开图片核对检测框。可从主机桌面打开，或复制到自己的电脑查看。
+
+## 结束运行并释放环境
+
+前台运行需要提前结束时按 `Ctrl+C`。正常完成后不需要额外杀进程；执行以下命令退出虚拟环境并检查卡端资源：
+
+```bash
+deactivate
+/usr/bin/axcl/axcl-smi
+```
+
+本次程序正常退出后进程列表为空，CMM 回到空闲基线 18 MiB。其他环境的基线可能不同，应与运行前比较。
+
+后续再次运行时，重新设置 `APP_ROOT`，进入 `$APP_ROOT/python` 并执行 `source env/bin/activate`。视频处理继续阅读[处理视频与接入视频流](video.md)。需要设备管理、内存或视频底层接口时，使用配套 [pyAXCL SDK](https://axcl-docs.readthedocs.io/zh-cn/latest/doc_guide_pyaxcl.html)；它与本页的 PyAXEngine 接口不同。

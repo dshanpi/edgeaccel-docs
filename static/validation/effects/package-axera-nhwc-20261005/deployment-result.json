@@ -1,0 +1,97 @@
+{
+  "modelId": "Package-axera",
+  "revision": "b8943b1189b6e09e7fa819bf43bc7dcaeb8532dd",
+  "date": "2026-10-05",
+  "variants": [
+    {
+      "label": "package · ax_ax650_package_algo_model_rgb_nhwc_V2.0.0.axmodel",
+      "observation": "门口纸箱输出一个package框，分数0.915，框与纸箱位置及边界对应。",
+      "previews": [
+        {
+          "caption": "输入：package.jpg",
+          "path": "/validation/effects/package-axera-nhwc-20261005/inputs/package.jpg"
+        },
+        {
+          "caption": "NHWC实际输出：package",
+          "path": "/validation/effects/package-axera-nhwc-20261005/outputs/package.jpg"
+        }
+      ],
+      "tables": [],
+      "record": {
+        "completed": true,
+        "provider": "AXCLRTExecutionProvider",
+        "inferenceEvidence": "fixed-nhwc-vision-samples",
+        "modelId": "Package-axera",
+        "revision": "b8943b1189b6e09e7fa819bf43bc7dcaeb8532dd",
+        "actualCapacity": "16GB",
+        "case": "package",
+        "inputFile": "package.jpg",
+        "inputSha256": "adbe141b305a51d39b0439b2fa9909f4e690458020f194d9a0b4d09d79c35c09",
+        "inputPath": "/validation/effects/package-axera-nhwc-20261005/inputs/package.jpg",
+        "inputShape": [
+          1,
+          256,
+          448,
+          3
+        ],
+        "inputLayout": "NHWC",
+        "colorOrder": "RGB from original NCHW preprocessing",
+        "sourceScript": "ax_pkg_infer.py",
+        "sourceScriptSha256": "a647830ae9ebccda03c3298892fb11f0d96b0e0578b9efba5a15b39a72e1fb20",
+        "adapterSha256": "02657a999a22684b10b8923ae5f3fc934baa05c5dee39e4f9e09ad6a88eef7ca",
+        "customerBundleFiles": {
+          "vision_nhwc.py": "6e52df5f5d63c76e7700e6f184d342a1d714f6e0edbb9b102efa45a4d250efb1",
+          "_vision_nhwc_runtime.py": "02657a999a22684b10b8923ae5f3fc934baa05c5dee39e4f9e09ad6a88eef7ca",
+          "plan.json": "efaf9f158e55093b8cbdd3806ca4934aedddfa01c3146c028b000c709d2a48c5",
+          "io.json": "5eed4a7de8bacc6c5935c3d9057ba8bcfc3683731e57f27aa8660e90f45dbb97"
+        },
+        "originalFilesUnchanged": true,
+        "independentRuns": 3,
+        "rawOutputsExact": true,
+        "visualizationsExact": true,
+        "customerCommandVerified": true,
+        "sessions": [
+          {
+            "model": "AX650/ax_ax650_package_algo_model_rgb_nhwc_V2.0.0.axmodel",
+            "sha256": "2d47bae80d81890b3e3f6bf391d407a0a27f493ca73b3df197fabcc8dd4f9a4f",
+            "allFinite": true,
+            "runMilliseconds": [
+              8.028161000083855,
+              8.245159000125568,
+              8.349869000085164
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "path": "out.jpg",
+            "sha256": "8b5ea43a5d394c810a2e526330c19ee41f6858d0df3da0b9e0ce24b8021f7722",
+            "shape": [
+              720,
+              1280,
+              3
+            ]
+          }
+        ],
+        "semanticObservation": "门口纸箱输出一个package框，分数0.915，框与纸箱位置及边界对应。",
+        "calls": [
+          {
+            "inputSha256": "f11de5d2f346e2457fcce2fe4f05d13c83ace31c387fc14f3b9a85e8befc48ab",
+            "outputSha256": "d579c90c728ac20bb44fb778a48751ac77909194c0593cd521322c563fe964ac",
+            "milliseconds": 8.028161000083855
+          },
+          {
+            "inputSha256": "f11de5d2f346e2457fcce2fe4f05d13c83ace31c387fc14f3b9a85e8befc48ab",
+            "outputSha256": "d579c90c728ac20bb44fb778a48751ac77909194c0593cd521322c563fe964ac",
+            "milliseconds": 8.245159000125568
+          },
+          {
+            "inputSha256": "f11de5d2f346e2457fcce2fe4f05d13c83ace31c387fc14f3b9a85e8befc48ab",
+            "outputSha256": "d579c90c728ac20bb44fb778a48751ac77909194c0593cd521322c563fe964ac",
+            "milliseconds": 8.349869000085164
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -12,7 +12,7 @@ Package-axera 用于目标检测。本页说明 M.2 算力卡的接入条件、�
 
 ## 准备运行环境
 
-本页效果展示使用 **RK3576 DshanPi A1 + AX8850 8GB M.2**；其他容量或平台需重新确认模型能否加载并正确运行。
+本页包含 **RK3576 DshanPi A1 + AX8850 16GB M.2** 与 **RK3576 DshanPi A1 + AX8850 8GB M.2** 的样例。按效果展示中的权重和容量对应使用，不同环境的结果不能互相替代。
 
 在连接算力卡的 Linux 主机终端执行，RK3576 使用 ARM64 环境。首次部署先完成[驱动与设备检查](../../usage/device-check.md)、[安装 PyAXEngine](../../usage/python.md)和[下载工具安装](../../usage/download-models.md#使用-hugging-face-下载)。已完成这些步骤可直接下载模型。
 
@@ -95,9 +95,80 @@ python ax_pkg_infer.py --model AX650/ax_ax650_package_algo_model_V2.0.0.axmodel 
 
 参数依据：[`ax_pkg_infer.py` 源码](https://huggingface.co/AXERA-TECH/Package-axera/blob/b8943b1189b6e09e7fa819bf43bc7dcaeb8532dd/ax_pkg_infer.py)。
 
+## 运行 NHWC 变体（可选）
+
+默认步骤使用NCHW权重。下列NHWC变体需要配套的输入布局处理，不能只替换模型文件名。
+
+### 准备例程
+
+在RK3576主机激活前文安装的PyAXEngine环境。下载[NHWC视觉运行包](../../../static/examples/vision-nhwc-deployment-20261005.zip)，保存到 `~/edgeaccel`，然后解压：
+
+```bash
+source ~/edgeaccel/python-env/bin/activate
+python -m zipfile -e ~/edgeaccel/vision-nhwc-deployment-20261005.zip ~/edgeaccel
+```
+
+### 下载对应权重和样例
+
+```bash
+NHWC_MODELS=~/edgeaccel/models-nhwc
+~/edgeaccel/hf-env/bin/hf download AXERA-TECH/Package-axera \
+  --revision b8943b1189b6e09e7fa819bf43bc7dcaeb8532dd \
+  --include "ax_pkg_infer.py" "package.jpg" "AX650/ax_ax650_package_algo_model_rgb_nhwc_V2.0.0.axmodel" \
+  --local-dir "$NHWC_MODELS/Package-axera"
+```
+
+### 运行并查看输出
+
+```bash
+python ~/edgeaccel/vision-nhwc/vision_nhwc.py \
+  --models-root "$NHWC_MODELS" --case package \
+  --output ~/edgeaccel/results/package-nhwc
+```
+
+每次使用尚不存在的结果目录。程序应显示 `AXCLRTExecutionProvider`；输出图或终端识别文字应与下方NHWC效果一致。运行包保留固定版本原始前后处理，实际使用的输入布局为NHWC。
+
+
 ## 查看部署效果
 
-**固定样例已核对** · 2026-09-23 · RK3576 DshanPi A1 + AX8850 8GB M.2。以下输入与输出来自本页固定版本的实际运行。
+### NHWC：配套运行包
+
+**固定样例已核对** · RK3576 DshanPi A1 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
+
+1 个 NHWC 权重完成固定样例测试，每个权重独立运行三次，原始输出与效果图一致。下方展示本次输入、输出及样例范围。
+
+**package · ax_ax650_package_algo_model_rgb_nhwc_V2.0.0.axmodel**
+
+门口纸箱输出一个package框，分数0.915，框与纸箱位置及边界对应。
+
+<div className="model-effect-gallery">
+
+<figure>
+
+[![输入：package.jpg](../../../static/validation/effects/package-axera-nhwc-20261005/inputs/package.jpg)](../../../static/validation/effects/package-axera-nhwc-20261005/inputs/package.jpg)
+
+<figcaption>输入：package.jpg</figcaption>
+</figure>
+
+<figure>
+
+[![NHWC实际输出：package](../../../static/validation/effects/package-axera-nhwc-20261005/outputs/package.jpg)](../../../static/validation/effects/package-axera-nhwc-20261005/outputs/package.jpg)
+
+<figcaption>NHWC实际输出：package</figcaption>
+</figure>
+
+</div>
+
+**使用时注意：**
+
+- 固定官方样例，未覆盖独立数据集精度、视频连续运行或长期稳定性。
+- 本次使用16GB算力卡；不替代该NHWC权重在8GB卡上的实测。
+
+这些结果用于对照部署后的输出，未覆盖完整数据集精度或长期连续运行。
+
+### NCHW：原部署入口
+
+**固定样例已核对** · RK3576 DshanPi A1 + AX8850 8GB M.2。以下输入与输出来自本页固定版本的实际运行。
 
 AXCL 后端完成 package.jpg 单图推理，输出 1 个 package 框，置信度 0.915。框覆盖门口地面的纸箱，与原图中的包裹位置和边界基本一致。
 
@@ -128,10 +199,37 @@ AXCL 后端完成 package.jpg 单图推理，输出 1 个 package 框，置信�
 
 这些结果用于对照部署后的输出，未覆盖完整数据集精度或长期连续运行。
 
+**NHWC：配套运行包**
+
 <details>
 <summary>查看样例环境与运行耗时</summary>
 
-环境：RK3576 DshanPi A1 + AX8850 8GB M.2。日期：2026-09-23。模型版本：`b8943b1189b6e09e7fa819bf43bc7dcaeb8532dd`。
+环境：RK3576 DshanPi A1 + AX8850 16GB M.2。模型版本：`b8943b1189b6e09e7fa819bf43bc7dcaeb8532dd`。
+
+| 组件 | 版本或配置 |
+| --- | --- |
+| 主机系统 / 内核 | Ubuntu 24.04 / Armbian；aarch64；6.1.115-vendor-rk35xx |
+| AXCL / 驱动 | V3.16.0_20260729180218 |
+| 固件 / CMM | V3.16.0；总量 15232 MiB，空闲占用 18 MiB |
+| Python 后端 | AXCLRTExecutionProvider；NumPy 1.26.4；OpenCV 4.11.0 |
+| 输入与后处理 | 固定仓库原始样例；保留原始色序和后处理，按模型元数据转换 NHWC 布局 |
+
+| 指标 | 实测值 | 计时或统计范围 |
+| --- | --- | --- |
+| ax_ax650_package_algo_model_rgb_nhwc_V2.0.0.axmodel | 8.028 / 8.245 / 8.350 ms | 三次独立进程各一次session.run墙钟，含传输，不含加载和后处理；非预热平均性能。 |
+
+适用范围：
+
+- 仅单张纸箱样例，未覆盖不同包装与遮挡。
+
+</details>
+
+**NCHW：原部署入口**
+
+<details>
+<summary>查看样例环境与运行耗时</summary>
+
+环境：RK3576 DshanPi A1 + AX8850 8GB M.2。模型版本：`b8943b1189b6e09e7fa819bf43bc7dcaeb8532dd`。
 
 | 组件 | 版本或配置 |
 | --- | --- |
@@ -150,8 +248,6 @@ AXCL 后端完成 package.jpg 单图推理，输出 1 个 package 框，置信�
 
 适用范围：
 
-- 仅核对一个纸箱和一种背景，未覆盖软包装、多包裹堆叠、遮挡、空场景或相似物体。
-- 未使用标注数据集计算精度、召回率或框 IoU，也未进行持续运行测试。
 - 运行源码包含显式 AXCL 后端或本页说明的适配修改；result.json 保存逐项替换及修改后 SHA256。
 
 </details>

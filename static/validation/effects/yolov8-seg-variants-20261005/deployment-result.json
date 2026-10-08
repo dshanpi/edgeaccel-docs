@@ -1,0 +1,2548 @@
+{
+  "modelId": "YOLOv8-Seg",
+  "revision": "c53ebcbf84d783488a878fa462d3b3f28f3b858d",
+  "date": "2026-10-05",
+  "variants": [
+    {
+      "label": "yolov8l · NPU1 / NPU3",
+      "observation": "公交车和人物区域均有掩码输出，左侧截断人物出现两个重叠实例，其中一个框延伸到路面；边界有偏差，未做像素标注精度评估。 NPU1与NPU3输出图的文件内容相同，因此合并展示。",
+      "previews": [
+        {
+          "caption": "固定输入：bus.jpg",
+          "path": "/validation/effects/yolov8-seg-variants-20261005/inputs/bus.jpg"
+        },
+        {
+          "caption": "实际实例分割输出：yolov8l",
+          "path": "/validation/effects/yolov8-seg-variants-20261005/outputs/yolov8l.jpg"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "权重",
+            "程序输出实例总数",
+            "各类别实例数"
+          ],
+          "rows": [
+            [
+              "yolov8l-seg_640x640_npu1.axmodel",
+              6,
+              "person: 5；bus: 1"
+            ],
+            [
+              "yolov8l-seg_640x640_npu3.axmodel",
+              6,
+              "person: 5；bus: 1"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "completed": true,
+        "provider": "AXCLRTExecutionProvider",
+        "inferenceEvidence": "original-cv-variant-samples",
+        "modelId": "YOLOv8-Seg",
+        "revision": "c53ebcbf84d783488a878fa462d3b3f28f3b858d",
+        "actualCapacity": "16GB",
+        "sessions": [
+          {
+            "model": "AX650/yolov8l-seg_640x640_npu1.axmodel",
+            "sha256": "05706482b3ed405510dd6b69e96987470f1d2806d37dd3fb892ffad92066860f",
+            "allFinite": true,
+            "runMilliseconds": [
+              119.94303699975717,
+              126.45189000068058
+            ]
+          },
+          {
+            "model": "AX650/yolov8l-seg_640x640_npu3.axmodel",
+            "sha256": "50417fc2fd1ba22f0ae0712f82b7f0a3628a7ac738f2f9e36262d47044b3cadb",
+            "allFinite": true,
+            "runMilliseconds": [
+              77.26565499979188,
+              83.61473200056935
+            ]
+          }
+        ],
+        "weightResults": [
+          {
+            "weight": "AX650/yolov8l-seg_640x640_npu1.axmodel",
+            "independentProcesses": 2,
+            "rawOutputsExact": true,
+            "imageSha256": "00a315899b8c14d725dc7b4231b1de274ef938cf85b590592abb0161c928e2fd",
+            "metadata": [
+              {
+                "inputs": [
+                  {
+                    "name": "images",
+                    "shape": [
+                      1,
+                      640,
+                      640,
+                      3
+                    ],
+                    "dtype": "uint8"
+                  }
+                ],
+                "outputs": [
+                  {
+                    "name": "output0",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      64
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "output1",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      80
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "614",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      32
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "636",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      64
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "658",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      80
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "680",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      32
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "702",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      64
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "724",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      80
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "746",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      32
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "776",
+                    "shape": [
+                      1,
+                      32,
+                      160,
+                      160
+                    ],
+                    "dtype": "float32"
+                  }
+                ]
+              }
+            ],
+            "segmentationObjects": [
+              {
+                "box": [
+                  12.452239036560059,
+                  230.57425689697266,
+                  803.8724098205566,
+                  735.7550983428955
+                ],
+                "confidence": 0.9369983673095703,
+                "classId": 5,
+                "maskPixels": 265707,
+                "maskBounds": [
+                  8,
+                  230,
+                  802,
+                  731
+                ],
+                "label": "bus"
+              },
+              {
+                "box": [
+                  51.04531717300415,
+                  399.357138633728,
+                  246.69771480560303,
+                  904.9628677368164
+                ],
+                "confidence": 0.91001957654953,
+                "classId": 0,
+                "maskPixels": 51432,
+                "maskBounds": [
+                  49,
+                  398,
+                  243,
+                  903
+                ],
+                "label": "person"
+              },
+              {
+                "box": [
+                  668.7920722961426,
+                  396.62893295288086,
+                  809.5004138946533,
+                  881.1932601928711
+                ],
+                "confidence": 0.9058372974395752,
+                "classId": 0,
+                "maskPixels": 21273,
+                "maskBounds": [
+                  669,
+                  397,
+                  803,
+                  877
+                ],
+                "label": "person"
+              },
+              {
+                "box": [
+                  223.15500926971436,
+                  403.88248443603516,
+                  344.2591152191162,
+                  860.0184516906738
+                ],
+                "confidence": 0.8898974657058716,
+                "classId": 0,
+                "maskPixels": 35782,
+                "maskBounds": [
+                  223,
+                  399,
+                  344,
+                  857
+                ],
+                "label": "person"
+              },
+              {
+                "box": [
+                  0.9346841275691986,
+                  551.106611251831,
+                  79.41781425476074,
+                  872.0671234130859
+                ],
+                "confidence": 0.6277143359184265,
+                "classId": 0,
+                "maskPixels": 12193,
+                "maskBounds": [
+                  0,
+                  554,
+                  74,
+                  869
+                ],
+                "label": "person"
+              },
+              {
+                "box": [
+                  0.47172144055366516,
+                  548.8871326446533,
+                  77.66429328918457,
+                  1064.2177963256836
+                ],
+                "confidence": 0.3325742781162262,
+                "classId": 0,
+                "maskPixels": 12160,
+                "maskBounds": [
+                  0,
+                  554,
+                  74,
+                  871
+                ],
+                "label": "person"
+              }
+            ],
+            "maskSha256": "02892869aada9f2ec28a60c5f0104328c826f89ec2c25284fc0ef1d12f508a39",
+            "maskShape": [
+              6,
+              1080,
+              810
+            ],
+            "postprocessReplayInputExact": true,
+            "postprocessReplayImageExact": true
+          },
+          {
+            "weight": "AX650/yolov8l-seg_640x640_npu3.axmodel",
+            "independentProcesses": 2,
+            "rawOutputsExact": true,
+            "imageSha256": "00a315899b8c14d725dc7b4231b1de274ef938cf85b590592abb0161c928e2fd",
+            "metadata": [
+              {
+                "inputs": [
+                  {
+                    "name": "images",
+                    "shape": [
+                      1,
+                      640,
+                      640,
+                      3
+                    ],
+                    "dtype": "uint8"
+                  }
+                ],
+                "outputs": [
+                  {
+                    "name": "output0",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      64
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "output1",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      80
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "614",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      32
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "636",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      64
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "658",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      80
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "680",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      32
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "702",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      64
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "724",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      80
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "746",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      32
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "776",
+                    "shape": [
+                      1,
+                      32,
+                      160,
+                      160
+                    ],
+                    "dtype": "float32"
+                  }
+                ]
+              }
+            ],
+            "segmentationObjects": [
+              {
+                "box": [
+                  12.452239036560059,
+                  230.57425689697266,
+                  803.8724098205566,
+                  735.7550983428955
+                ],
+                "confidence": 0.9369983673095703,
+                "classId": 5,
+                "maskPixels": 265707,
+                "maskBounds": [
+                  8,
+                  230,
+                  802,
+                  731
+                ],
+                "label": "bus"
+              },
+              {
+                "box": [
+                  51.04531717300415,
+                  399.357138633728,
+                  246.69771480560303,
+                  904.9628677368164
+                ],
+                "confidence": 0.91001957654953,
+                "classId": 0,
+                "maskPixels": 51432,
+                "maskBounds": [
+                  49,
+                  398,
+                  243,
+                  903
+                ],
+                "label": "person"
+              },
+              {
+                "box": [
+                  668.7920722961426,
+                  396.62893295288086,
+                  809.5004138946533,
+                  881.1932601928711
+                ],
+                "confidence": 0.9058372974395752,
+                "classId": 0,
+                "maskPixels": 21273,
+                "maskBounds": [
+                  669,
+                  397,
+                  803,
+                  877
+                ],
+                "label": "person"
+              },
+              {
+                "box": [
+                  223.15500926971436,
+                  403.88248443603516,
+                  344.2591152191162,
+                  860.0184516906738
+                ],
+                "confidence": 0.8898974657058716,
+                "classId": 0,
+                "maskPixels": 35782,
+                "maskBounds": [
+                  223,
+                  399,
+                  344,
+                  857
+                ],
+                "label": "person"
+              },
+              {
+                "box": [
+                  0.9346841275691986,
+                  551.106611251831,
+                  79.41781425476074,
+                  872.0671234130859
+                ],
+                "confidence": 0.6277143359184265,
+                "classId": 0,
+                "maskPixels": 12193,
+                "maskBounds": [
+                  0,
+                  554,
+                  74,
+                  869
+                ],
+                "label": "person"
+              },
+              {
+                "box": [
+                  0.47172144055366516,
+                  548.8871326446533,
+                  77.66429328918457,
+                  1064.2177963256836
+                ],
+                "confidence": 0.3325742781162262,
+                "classId": 0,
+                "maskPixels": 12160,
+                "maskBounds": [
+                  0,
+                  554,
+                  74,
+                  871
+                ],
+                "label": "person"
+              }
+            ],
+            "maskSha256": "02892869aada9f2ec28a60c5f0104328c826f89ec2c25284fc0ef1d12f508a39",
+            "maskShape": [
+              6,
+              1080,
+              810
+            ],
+            "postprocessReplayInputExact": true,
+            "postprocessReplayImageExact": true
+          }
+        ],
+        "originalFilesUnchanged": true,
+        "sourceScript": "ax_infer.py",
+        "sourceScriptSha256": "2cdad25ad15ff8da2dba0a7605b73d8896385f12222dcc6ff43f0137edca0049",
+        "inputFile": "bus.jpg",
+        "inputSha256": "33b198a1d2839bb9ac4c65d61f9e852196793cae9a0781360859425f6022b69c",
+        "inputPath": "/validation/effects/yolov8-seg-variants-20261005/inputs/bus.jpg",
+        "outputPath": "/validation/effects/yolov8-seg-variants-20261005/outputs/yolov8l.jpg",
+        "outputSha256": "00a315899b8c14d725dc7b4231b1de274ef938cf85b590592abb0161c928e2fd",
+        "runsPerWeight": 2,
+        "qualityAccepted": false
+      }
+    },
+    {
+      "label": "yolov8m · NPU1 / NPU3",
+      "observation": "公交车及四个人物有掩码输出；中央左侧人物领口附近额外标出tie，原图不能确认存在领带，应视为疑似误检，不能按实例总数推断准确率。 NPU1与NPU3输出图的文件内容相同，因此合并展示。",
+      "previews": [
+        {
+          "caption": "实际实例分割输出：yolov8m",
+          "path": "/validation/effects/yolov8-seg-variants-20261005/outputs/yolov8m.jpg"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "权重",
+            "程序输出实例总数",
+            "各类别实例数"
+          ],
+          "rows": [
+            [
+              "yolov8m-seg_640x640_npu1.axmodel",
+              6,
+              "person: 4；bus: 1；tie: 1"
+            ],
+            [
+              "yolov8m-seg_640x640_npu3.axmodel",
+              6,
+              "person: 4；bus: 1；tie: 1"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "completed": true,
+        "provider": "AXCLRTExecutionProvider",
+        "inferenceEvidence": "original-cv-variant-samples",
+        "modelId": "YOLOv8-Seg",
+        "revision": "c53ebcbf84d783488a878fa462d3b3f28f3b858d",
+        "actualCapacity": "16GB",
+        "sessions": [
+          {
+            "model": "AX650/yolov8m-seg_640x640_npu1.axmodel",
+            "sha256": "828173a9d6ed8a2baf43d7cf159ca6e93eb2046fc1f06f4f90a50042089c0889",
+            "allFinite": true,
+            "runMilliseconds": [
+              89.82667100099206,
+              94.82964900053048
+            ]
+          },
+          {
+            "model": "AX650/yolov8m-seg_640x640_npu3.axmodel",
+            "sha256": "5156fc8d8fa9e162c5170dc8733b4242e7575bc69533bf8abc732665c413ee18",
+            "allFinite": true,
+            "runMilliseconds": [
+              71.57118600116519,
+              72.09327099917573
+            ]
+          }
+        ],
+        "weightResults": [
+          {
+            "weight": "AX650/yolov8m-seg_640x640_npu1.axmodel",
+            "independentProcesses": 2,
+            "rawOutputsExact": true,
+            "imageSha256": "daa0c302c407efa71d30d6d506b0031698adf71c51499d1bf42a462709c386b4",
+            "metadata": [
+              {
+                "inputs": [
+                  {
+                    "name": "images",
+                    "shape": [
+                      1,
+                      640,
+                      640,
+                      3
+                    ],
+                    "dtype": "uint8"
+                  }
+                ],
+                "outputs": [
+                  {
+                    "name": "output0",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      64
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "output1",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      80
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "508",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      32
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "530",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      64
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "552",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      80
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "574",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      32
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "596",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      64
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "618",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      80
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "640",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      32
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "670",
+                    "shape": [
+                      1,
+                      32,
+                      160,
+                      160
+                    ],
+                    "dtype": "float32"
+                  }
+                ]
+              }
+            ],
+            "segmentationObjects": [
+              {
+                "box": [
+                  13.590740203857422,
+                  230.62717151641846,
+                  803.9285945892334,
+                  736.5574951171875
+                ],
+                "confidence": 0.9316821694374084,
+                "classId": 5,
+                "maskPixels": 264296,
+                "maskBounds": [
+                  15,
+                  230,
+                  802,
+                  733
+                ],
+                "label": "bus"
+              },
+              {
+                "box": [
+                  49.91951036453247,
+                  398.6563482284546,
+                  244.83663940429688,
+                  904.251880645752
+                ],
+                "confidence": 0.9093258380889893,
+                "classId": 0,
+                "maskPixels": 51023,
+                "maskBounds": [
+                  49,
+                  398,
+                  242,
+                  898
+                ],
+                "label": "person"
+              },
+              {
+                "box": [
+                  222.70545387268066,
+                  397.46166229248047,
+                  345.5273666381836,
+                  860.0050621032715
+                ],
+                "confidence": 0.8909769058227539,
+                "classId": 0,
+                "maskPixels": 35392,
+                "maskBounds": [
+                  222,
+                  393,
+                  344,
+                  857
+                ],
+                "label": "person"
+              },
+              {
+                "box": [
+                  667.6823329925537,
+                  395.0927095413208,
+                  810.0,
+                  880.5530319213867
+                ],
+                "confidence": 0.8805911540985107,
+                "classId": 0,
+                "maskPixels": 23366,
+                "maskBounds": [
+                  664,
+                  393,
+                  810,
+                  877
+                ],
+                "label": "person"
+              },
+              {
+                "box": [
+                  0.0,
+                  551.4306392669678,
+                  78.85803937911987,
+                  866.7071685791016
+                ],
+                "confidence": 0.5943448543548584,
+                "classId": 0,
+                "maskPixels": 11771,
+                "maskBounds": [
+                  0,
+                  549,
+                  74,
+                  862
+                ],
+                "label": "person"
+              },
+              {
+                "box": [
+                  137.1930341720581,
+                  472.49325370788574,
+                  148.18799686431885,
+                  504.0827922821045
+                ],
+                "confidence": 0.36861881613731384,
+                "classId": 27,
+                "maskPixels": 107,
+                "maskBounds": [
+                  135,
+                  473,
+                  142,
+                  494
+                ],
+                "label": "tie"
+              }
+            ],
+            "maskSha256": "3f5358c0a7ffce1a47a747c9bc00f3c72a40df96231d1354293fa0bc298b5eca",
+            "maskShape": [
+              6,
+              1080,
+              810
+            ],
+            "postprocessReplayInputExact": true,
+            "postprocessReplayImageExact": true
+          },
+          {
+            "weight": "AX650/yolov8m-seg_640x640_npu3.axmodel",
+            "independentProcesses": 2,
+            "rawOutputsExact": true,
+            "imageSha256": "daa0c302c407efa71d30d6d506b0031698adf71c51499d1bf42a462709c386b4",
+            "metadata": [
+              {
+                "inputs": [
+                  {
+                    "name": "images",
+                    "shape": [
+                      1,
+                      640,
+                      640,
+                      3
+                    ],
+                    "dtype": "uint8"
+                  }
+                ],
+                "outputs": [
+                  {
+                    "name": "output0",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      64
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "output1",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      80
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "508",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      32
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "530",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      64
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "552",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      80
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "574",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      32
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "596",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      64
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "618",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      80
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "640",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      32
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "670",
+                    "shape": [
+                      1,
+                      32,
+                      160,
+                      160
+                    ],
+                    "dtype": "float32"
+                  }
+                ]
+              }
+            ],
+            "segmentationObjects": [
+              {
+                "box": [
+                  13.590740203857422,
+                  230.62717151641846,
+                  803.9285945892334,
+                  736.5574951171875
+                ],
+                "confidence": 0.9316821694374084,
+                "classId": 5,
+                "maskPixels": 264296,
+                "maskBounds": [
+                  15,
+                  230,
+                  802,
+                  733
+                ],
+                "label": "bus"
+              },
+              {
+                "box": [
+                  49.91951036453247,
+                  398.6563482284546,
+                  244.83663940429688,
+                  904.251880645752
+                ],
+                "confidence": 0.9093258380889893,
+                "classId": 0,
+                "maskPixels": 51023,
+                "maskBounds": [
+                  49,
+                  398,
+                  242,
+                  898
+                ],
+                "label": "person"
+              },
+              {
+                "box": [
+                  222.70545387268066,
+                  397.46166229248047,
+                  345.5273666381836,
+                  860.0050621032715
+                ],
+                "confidence": 0.8909769058227539,
+                "classId": 0,
+                "maskPixels": 35392,
+                "maskBounds": [
+                  222,
+                  393,
+                  344,
+                  857
+                ],
+                "label": "person"
+              },
+              {
+                "box": [
+                  667.6823329925537,
+                  395.0927095413208,
+                  810.0,
+                  880.5530319213867
+                ],
+                "confidence": 0.8805911540985107,
+                "classId": 0,
+                "maskPixels": 23366,
+                "maskBounds": [
+                  664,
+                  393,
+                  810,
+                  877
+                ],
+                "label": "person"
+              },
+              {
+                "box": [
+                  0.0,
+                  551.4306392669678,
+                  78.85803937911987,
+                  866.7071685791016
+                ],
+                "confidence": 0.5943448543548584,
+                "classId": 0,
+                "maskPixels": 11771,
+                "maskBounds": [
+                  0,
+                  549,
+                  74,
+                  862
+                ],
+                "label": "person"
+              },
+              {
+                "box": [
+                  137.1930341720581,
+                  472.49325370788574,
+                  148.18799686431885,
+                  504.0827922821045
+                ],
+                "confidence": 0.36861881613731384,
+                "classId": 27,
+                "maskPixels": 107,
+                "maskBounds": [
+                  135,
+                  473,
+                  142,
+                  494
+                ],
+                "label": "tie"
+              }
+            ],
+            "maskSha256": "3f5358c0a7ffce1a47a747c9bc00f3c72a40df96231d1354293fa0bc298b5eca",
+            "maskShape": [
+              6,
+              1080,
+              810
+            ],
+            "postprocessReplayInputExact": true,
+            "postprocessReplayImageExact": true
+          }
+        ],
+        "originalFilesUnchanged": true,
+        "sourceScript": "ax_infer.py",
+        "sourceScriptSha256": "2cdad25ad15ff8da2dba0a7605b73d8896385f12222dcc6ff43f0137edca0049",
+        "inputFile": "bus.jpg",
+        "inputSha256": "33b198a1d2839bb9ac4c65d61f9e852196793cae9a0781360859425f6022b69c",
+        "inputPath": "/validation/effects/yolov8-seg-variants-20261005/inputs/bus.jpg",
+        "outputPath": "/validation/effects/yolov8-seg-variants-20261005/outputs/yolov8m.jpg",
+        "outputSha256": "daa0c302c407efa71d30d6d506b0031698adf71c51499d1bf42a462709c386b4",
+        "runsPerWeight": 2,
+        "qualityAccepted": false
+      }
+    },
+    {
+      "label": "yolov8n · NPU1",
+      "observation": "公交车与四个人物均有实例掩码；人物与车身交界和轮胎附近仍有边界偏差，单张图片未验证分割精度。",
+      "previews": [
+        {
+          "caption": "实际实例分割输出：yolov8n",
+          "path": "/validation/effects/yolov8-seg-variants-20261005/outputs/yolov8n.jpg"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "权重",
+            "程序输出实例总数",
+            "各类别实例数"
+          ],
+          "rows": [
+            [
+              "yolov8n-seg_640x640_npu1.axmodel",
+              5,
+              "person: 4；bus: 1"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "completed": true,
+        "provider": "AXCLRTExecutionProvider",
+        "inferenceEvidence": "original-cv-variant-samples",
+        "modelId": "YOLOv8-Seg",
+        "revision": "c53ebcbf84d783488a878fa462d3b3f28f3b858d",
+        "actualCapacity": "16GB",
+        "sessions": [
+          {
+            "model": "AX650/yolov8n-seg_640x640_npu1.axmodel",
+            "sha256": "5e37a41ab341d08093318353fbd437008e461110ca13aa2ffb53ef0ff80e24ff",
+            "allFinite": true,
+            "runMilliseconds": [
+              60.29881000176829,
+              65.24316200011526
+            ]
+          }
+        ],
+        "weightResults": [
+          {
+            "weight": "AX650/yolov8n-seg_640x640_npu1.axmodel",
+            "independentProcesses": 2,
+            "rawOutputsExact": true,
+            "imageSha256": "fd83af39483e9f5a764360ab0a1831f74b882a2fd1960458a0aa14c5e40a574f",
+            "metadata": [
+              {
+                "inputs": [
+                  {
+                    "name": "images",
+                    "shape": [
+                      1,
+                      640,
+                      640,
+                      3
+                    ],
+                    "dtype": "uint8"
+                  }
+                ],
+                "outputs": [
+                  {
+                    "name": "output0",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      64
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "output1",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      80
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "402",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      32
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "424",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      64
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "446",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      80
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "468",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      32
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "490",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      64
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "512",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      80
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "534",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      32
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "564",
+                    "shape": [
+                      1,
+                      32,
+                      160,
+                      160
+                    ],
+                    "dtype": "float32"
+                  }
+                ]
+              }
+            ],
+            "segmentationObjects": [
+              {
+                "box": [
+                  53.79286050796509,
+                  397.5506000518799,
+                  239.744553565979,
+                  904.7839622497559
+                ],
+                "confidence": 0.8611112236976624,
+                "classId": 0,
+                "maskPixels": 51504,
+                "maskBounds": [
+                  49,
+                  392,
+                  236,
+                  903
+                ],
+                "label": "person"
+              },
+              {
+                "box": [
+                  222.04035186767578,
+                  408.6673049926758,
+                  344.4146919250488,
+                  862.3476219177246
+                ],
+                "confidence": 0.831525981426239,
+                "classId": 0,
+                "maskPixels": 33611,
+                "maskBounds": [
+                  223,
+                  405,
+                  343,
+                  857
+                ],
+                "label": "person"
+              },
+              {
+                "box": [
+                  2.5299625396728516,
+                  225.85638427734375,
+                  805.4079895019531,
+                  739.7671852111816
+                ],
+                "confidence": 0.7971235513687134,
+                "classId": 5,
+                "maskPixels": 260920,
+                "maskBounds": [
+                  0,
+                  227,
+                  802,
+                  733
+                ],
+                "label": "bus"
+              },
+              {
+                "box": [
+                  667.0063648223877,
+                  402.2248020172119,
+                  810.0,
+                  877.6754035949707
+                ],
+                "confidence": 0.7971235513687134,
+                "classId": 0,
+                "maskPixels": 21883,
+                "maskBounds": [
+                  669,
+                  399,
+                  810,
+                  873
+                ],
+                "label": "person"
+              },
+              {
+                "box": [
+                  0.27644670009613037,
+                  552.8034324645996,
+                  77.96261072158813,
+                  872.3660202026367
+                ],
+                "confidence": 0.33532315492630005,
+                "classId": 0,
+                "maskPixels": 12275,
+                "maskBounds": [
+                  0,
+                  551,
+                  73,
+                  869
+                ],
+                "label": "person"
+              }
+            ],
+            "maskSha256": "a0d8035a77d63cf107c0bc3af3e77f2f4bdd7be5e4b0211357da4346bfa5cf41",
+            "maskShape": [
+              5,
+              1080,
+              810
+            ],
+            "postprocessReplayInputExact": true,
+            "postprocessReplayImageExact": true
+          }
+        ],
+        "originalFilesUnchanged": true,
+        "sourceScript": "ax_infer.py",
+        "sourceScriptSha256": "2cdad25ad15ff8da2dba0a7605b73d8896385f12222dcc6ff43f0137edca0049",
+        "inputFile": "bus.jpg",
+        "inputSha256": "33b198a1d2839bb9ac4c65d61f9e852196793cae9a0781360859425f6022b69c",
+        "inputPath": "/validation/effects/yolov8-seg-variants-20261005/inputs/bus.jpg",
+        "outputPath": "/validation/effects/yolov8-seg-variants-20261005/outputs/yolov8n.jpg",
+        "outputSha256": "fd83af39483e9f5a764360ab0a1831f74b882a2fd1960458a0aa14c5e40a574f",
+        "runsPerWeight": 2,
+        "qualityAccepted": false
+      }
+    },
+    {
+      "label": "yolov8s · NPU1 / NPU3",
+      "observation": "公交车与四个人物有掩码输出；中央右侧人物领口额外标出tie，原图不能确认存在领带，保留为疑似误检；掩码边界也有偏差。 NPU1与NPU3输出图的文件内容相同，因此合并展示。",
+      "previews": [
+        {
+          "caption": "实际实例分割输出：yolov8s",
+          "path": "/validation/effects/yolov8-seg-variants-20261005/outputs/yolov8s.jpg"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "权重",
+            "程序输出实例总数",
+            "各类别实例数"
+          ],
+          "rows": [
+            [
+              "yolov8s-seg_640x640_npu1.axmodel",
+              6,
+              "person: 4；bus: 1；tie: 1"
+            ],
+            [
+              "yolov8s-seg_640x640_npu3.axmodel",
+              6,
+              "person: 4；bus: 1；tie: 1"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "completed": true,
+        "provider": "AXCLRTExecutionProvider",
+        "inferenceEvidence": "original-cv-variant-samples",
+        "modelId": "YOLOv8-Seg",
+        "revision": "c53ebcbf84d783488a878fa462d3b3f28f3b858d",
+        "actualCapacity": "16GB",
+        "sessions": [
+          {
+            "model": "AX650/yolov8s-seg_640x640_npu1.axmodel",
+            "sha256": "eb836ddbb151993f20790ff7237650d2636476c96e93a22af9fc218265b9b3b5",
+            "allFinite": true,
+            "runMilliseconds": [
+              71.55076900016866,
+              74.49661399914476
+            ]
+          },
+          {
+            "model": "AX650/yolov8s-seg_640x640_npu3.axmodel",
+            "sha256": "138499d90eba16e6709a75d7ea667fe99bbdd3526a45a707f4a8905c63614604",
+            "allFinite": true,
+            "runMilliseconds": [
+              65.0039949996426,
+              59.53872499958379
+            ]
+          }
+        ],
+        "weightResults": [
+          {
+            "weight": "AX650/yolov8s-seg_640x640_npu1.axmodel",
+            "independentProcesses": 2,
+            "rawOutputsExact": true,
+            "imageSha256": "bb1fd79f5fe8a3c50766f22f45d2d5be56ad792714484d889454cceb4b3b08f3",
+            "metadata": [
+              {
+                "inputs": [
+                  {
+                    "name": "images",
+                    "shape": [
+                      1,
+                      640,
+                      640,
+                      3
+                    ],
+                    "dtype": "uint8"
+                  }
+                ],
+                "outputs": [
+                  {
+                    "name": "output0",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      64
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "output1",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      80
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "402",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      32
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "424",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      64
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "446",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      80
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "468",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      32
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "490",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      64
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "512",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      80
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "534",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      32
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "564",
+                    "shape": [
+                      1,
+                      32,
+                      160,
+                      160
+                    ],
+                    "dtype": "float32"
+                  }
+                ]
+              }
+            ],
+            "segmentationObjects": [
+              {
+                "box": [
+                  50.824363231658936,
+                  397.6084327697754,
+                  244.47045993804932,
+                  903.2187194824219
+                ],
+                "confidence": 0.8945736885070801,
+                "classId": 0,
+                "maskPixels": 50800,
+                "maskBounds": [
+                  50,
+                  392,
+                  243,
+                  898
+                ],
+                "label": "person"
+              },
+              {
+                "box": [
+                  222.50085067749023,
+                  407.3939037322998,
+                  344.5033721923828,
+                  859.6543064117432
+                ],
+                "confidence": 0.8792765736579895,
+                "classId": 0,
+                "maskPixels": 35728,
+                "maskBounds": [
+                  221,
+                  405,
+                  344,
+                  857
+                ],
+                "label": "person"
+              },
+              {
+                "box": [
+                  668.0950412750244,
+                  392.77165031433105,
+                  809.0993957519531,
+                  878.5274963378906
+                ],
+                "confidence": 0.8792765736579895,
+                "classId": 0,
+                "maskPixels": 21022,
+                "maskBounds": [
+                  666,
+                  397,
+                  803,
+                  877
+                ],
+                "label": "person"
+              },
+              {
+                "box": [
+                  23.999650955200195,
+                  230.55489349365234,
+                  800.7858009338379,
+                  747.7804412841797
+                ],
+                "confidence": 0.8621019721031189,
+                "classId": 5,
+                "maskPixels": 253166,
+                "maskBounds": [
+                  20,
+                  230,
+                  796,
+                  738
+                ],
+                "label": "bus"
+              },
+              {
+                "box": [
+                  0.7703824639320374,
+                  546.1610126495361,
+                  76.91340780258179,
+                  872.5257682800293
+                ],
+                "confidence": 0.7143139839172363,
+                "classId": 0,
+                "maskPixels": 12334,
+                "maskBounds": [
+                  0,
+                  544,
+                  74,
+                  869
+                ],
+                "label": "person"
+              },
+              {
+                "box": [
+                  284.98299980163574,
+                  480.4104652404785,
+                  301.7304382324219,
+                  524.7731552124023
+                ],
+                "confidence": 0.32213273644447327,
+                "classId": 27,
+                "maskPixels": 408,
+                "maskBounds": [
+                  284,
+                  480,
+                  297,
+                  519
+                ],
+                "label": "tie"
+              }
+            ],
+            "maskSha256": "69522b7724d58bc8554fa5a2a51615e3028c5008984bd274d9302e4d31a8c224",
+            "maskShape": [
+              6,
+              1080,
+              810
+            ],
+            "postprocessReplayInputExact": true,
+            "postprocessReplayImageExact": true
+          },
+          {
+            "weight": "AX650/yolov8s-seg_640x640_npu3.axmodel",
+            "independentProcesses": 2,
+            "rawOutputsExact": true,
+            "imageSha256": "bb1fd79f5fe8a3c50766f22f45d2d5be56ad792714484d889454cceb4b3b08f3",
+            "metadata": [
+              {
+                "inputs": [
+                  {
+                    "name": "images",
+                    "shape": [
+                      1,
+                      640,
+                      640,
+                      3
+                    ],
+                    "dtype": "uint8"
+                  }
+                ],
+                "outputs": [
+                  {
+                    "name": "output0",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      64
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "output1",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      80
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "402",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      32
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "424",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      64
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "446",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      80
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "468",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      32
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "490",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      64
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "512",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      80
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "534",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      32
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "564",
+                    "shape": [
+                      1,
+                      32,
+                      160,
+                      160
+                    ],
+                    "dtype": "float32"
+                  }
+                ]
+              }
+            ],
+            "segmentationObjects": [
+              {
+                "box": [
+                  50.824363231658936,
+                  397.6084327697754,
+                  244.47045993804932,
+                  903.2187194824219
+                ],
+                "confidence": 0.8945736885070801,
+                "classId": 0,
+                "maskPixels": 50800,
+                "maskBounds": [
+                  50,
+                  392,
+                  243,
+                  898
+                ],
+                "label": "person"
+              },
+              {
+                "box": [
+                  222.50085067749023,
+                  407.3939037322998,
+                  344.5033721923828,
+                  859.6543064117432
+                ],
+                "confidence": 0.8792765736579895,
+                "classId": 0,
+                "maskPixels": 35728,
+                "maskBounds": [
+                  221,
+                  405,
+                  344,
+                  857
+                ],
+                "label": "person"
+              },
+              {
+                "box": [
+                  668.0950412750244,
+                  392.77165031433105,
+                  809.0993957519531,
+                  878.5274963378906
+                ],
+                "confidence": 0.8792765736579895,
+                "classId": 0,
+                "maskPixels": 21022,
+                "maskBounds": [
+                  666,
+                  397,
+                  803,
+                  877
+                ],
+                "label": "person"
+              },
+              {
+                "box": [
+                  23.999650955200195,
+                  230.55489349365234,
+                  800.7858009338379,
+                  747.7804412841797
+                ],
+                "confidence": 0.8621019721031189,
+                "classId": 5,
+                "maskPixels": 253166,
+                "maskBounds": [
+                  20,
+                  230,
+                  796,
+                  738
+                ],
+                "label": "bus"
+              },
+              {
+                "box": [
+                  0.7703824639320374,
+                  546.1610126495361,
+                  76.91340780258179,
+                  872.5257682800293
+                ],
+                "confidence": 0.7143139839172363,
+                "classId": 0,
+                "maskPixels": 12334,
+                "maskBounds": [
+                  0,
+                  544,
+                  74,
+                  869
+                ],
+                "label": "person"
+              },
+              {
+                "box": [
+                  284.98299980163574,
+                  480.4104652404785,
+                  301.7304382324219,
+                  524.7731552124023
+                ],
+                "confidence": 0.32213273644447327,
+                "classId": 27,
+                "maskPixels": 408,
+                "maskBounds": [
+                  284,
+                  480,
+                  297,
+                  519
+                ],
+                "label": "tie"
+              }
+            ],
+            "maskSha256": "69522b7724d58bc8554fa5a2a51615e3028c5008984bd274d9302e4d31a8c224",
+            "maskShape": [
+              6,
+              1080,
+              810
+            ],
+            "postprocessReplayInputExact": true,
+            "postprocessReplayImageExact": true
+          }
+        ],
+        "originalFilesUnchanged": true,
+        "sourceScript": "ax_infer.py",
+        "sourceScriptSha256": "2cdad25ad15ff8da2dba0a7605b73d8896385f12222dcc6ff43f0137edca0049",
+        "inputFile": "bus.jpg",
+        "inputSha256": "33b198a1d2839bb9ac4c65d61f9e852196793cae9a0781360859425f6022b69c",
+        "inputPath": "/validation/effects/yolov8-seg-variants-20261005/inputs/bus.jpg",
+        "outputPath": "/validation/effects/yolov8-seg-variants-20261005/outputs/yolov8s.jpg",
+        "outputSha256": "bb1fd79f5fe8a3c50766f22f45d2d5be56ad792714484d889454cceb4b3b08f3",
+        "runsPerWeight": 2,
+        "qualityAccepted": false
+      }
+    },
+    {
+      "label": "yolov8x · NPU1 / NPU3",
+      "observation": "公交车与人物掩码均可见；左侧截断人物出现两个重叠实例和延伸至路面的框，中央左侧人物领口另有疑似领带误检。未做人工像素标注精度评估。 NPU1与NPU3输出图的文件内容相同，因此合并展示。",
+      "previews": [
+        {
+          "caption": "实际实例分割输出：yolov8x",
+          "path": "/validation/effects/yolov8-seg-variants-20261005/outputs/yolov8x.jpg"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "权重",
+            "程序输出实例总数",
+            "各类别实例数"
+          ],
+          "rows": [
+            [
+              "yolov8x-seg_640x640_npu1.axmodel",
+              7,
+              "person: 5；bus: 1；tie: 1"
+            ],
+            [
+              "yolov8x-seg_640x640_npu3.axmodel",
+              7,
+              "person: 5；bus: 1；tie: 1"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "completed": true,
+        "provider": "AXCLRTExecutionProvider",
+        "inferenceEvidence": "original-cv-variant-samples",
+        "modelId": "YOLOv8-Seg",
+        "revision": "c53ebcbf84d783488a878fa462d3b3f28f3b858d",
+        "actualCapacity": "16GB",
+        "sessions": [
+          {
+            "model": "AX650/yolov8x-seg_640x640_npu1.axmodel",
+            "sha256": "cdad607330d0d0416e9498e881fdabc722cd860ccd51a5f9c36a1027bd0dc8b1",
+            "allFinite": true,
+            "runMilliseconds": [
+              170.61076800018782,
+              168.34509200089087
+            ]
+          },
+          {
+            "model": "AX650/yolov8x-seg_640x640_npu3.axmodel",
+            "sha256": "8b8df655512c825300845ebe0e28ca99faa78372b4ba475ef68041eebb314a3c",
+            "allFinite": true,
+            "runMilliseconds": [
+              91.13275999879988,
+              91.49588699983724
+            ]
+          }
+        ],
+        "weightResults": [
+          {
+            "weight": "AX650/yolov8x-seg_640x640_npu1.axmodel",
+            "independentProcesses": 2,
+            "rawOutputsExact": true,
+            "imageSha256": "239afff19c1b915ba7cf071a4c0c978bd63995f384b298a2866df8e85d8b3d94",
+            "metadata": [
+              {
+                "inputs": [
+                  {
+                    "name": "images",
+                    "shape": [
+                      1,
+                      640,
+                      640,
+                      3
+                    ],
+                    "dtype": "uint8"
+                  }
+                ],
+                "outputs": [
+                  {
+                    "name": "output0",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      64
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "output1",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      80
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "614",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      32
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "636",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      64
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "658",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      80
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "680",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      32
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "702",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      64
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "724",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      80
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "746",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      32
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "776",
+                    "shape": [
+                      1,
+                      32,
+                      160,
+                      160
+                    ],
+                    "dtype": "float32"
+                  }
+                ]
+              }
+            ],
+            "segmentationObjects": [
+              {
+                "box": [
+                  4.47019100189209,
+                  231.44257164001465,
+                  801.2135982513428,
+                  738.0333366394043
+                ],
+                "confidence": 0.943898618221283,
+                "classId": 5,
+                "maskPixels": 264965,
+                "maskBounds": [
+                  0,
+                  230,
+                  796,
+                  732
+                ],
+                "label": "bus"
+              },
+              {
+                "box": [
+                  51.234290599823,
+                  399.14596939086914,
+                  245.62667655944824,
+                  904.1790618896484
+                ],
+                "confidence": 0.9310917854309082,
+                "classId": 0,
+                "maskPixels": 50446,
+                "maskBounds": [
+                  51,
+                  398,
+                  243,
+                  898
+                ],
+                "label": "person"
+              },
+              {
+                "box": [
+                  668.7200775146484,
+                  394.76105976104736,
+                  809.505048751831,
+                  881.8047523498535
+                ],
+                "confidence": 0.9217634797096252,
+                "classId": 0,
+                "maskPixels": 21221,
+                "maskBounds": [
+                  669,
+                  396,
+                  803,
+                  877
+                ],
+                "label": "person"
+              },
+              {
+                "box": [
+                  222.43745613098145,
+                  405.99466609954834,
+                  344.53179931640625,
+                  860.827543258667
+                ],
+                "confidence": 0.8995731472969055,
+                "classId": 0,
+                "maskPixels": 35672,
+                "maskBounds": [
+                  222,
+                  405,
+                  344,
+                  857
+                ],
+                "label": "person"
+              },
+              {
+                "box": [
+                  0.0,
+                  549.0170631408691,
+                  78.94413185119629,
+                  868.0432434082031
+                ],
+                "confidence": 0.694699764251709,
+                "classId": 0,
+                "maskPixels": 12240,
+                "maskBounds": [
+                  0,
+                  549,
+                  74,
+                  863
+                ],
+                "label": "person"
+              },
+              {
+                "box": [
+                  0.0,
+                  547.4903926849365,
+                  79.45419788360596,
+                  1066.6448135375977
+                ],
+                "confidence": 0.39865031838417053,
+                "classId": 0,
+                "maskPixels": 12357,
+                "maskBounds": [
+                  0,
+                  549,
+                  74,
+                  1064
+                ],
+                "label": "person"
+              },
+              {
+                "box": [
+                  136.8006420135498,
+                  475.8357582092285,
+                  147.8913917541504,
+                  505.38879203796387
+                ],
+                "confidence": 0.32534533739089966,
+                "classId": 27,
+                "maskPixels": 111,
+                "maskBounds": [
+                  135,
+                  474,
+                  142,
+                  494
+                ],
+                "label": "tie"
+              }
+            ],
+            "maskSha256": "daf836eab3bb692a0d325436346f29d6906afd8b2a35365e3ab3eeb44109a736",
+            "maskShape": [
+              7,
+              1080,
+              810
+            ],
+            "postprocessReplayInputExact": true,
+            "postprocessReplayImageExact": true
+          },
+          {
+            "weight": "AX650/yolov8x-seg_640x640_npu3.axmodel",
+            "independentProcesses": 2,
+            "rawOutputsExact": true,
+            "imageSha256": "239afff19c1b915ba7cf071a4c0c978bd63995f384b298a2866df8e85d8b3d94",
+            "metadata": [
+              {
+                "inputs": [
+                  {
+                    "name": "images",
+                    "shape": [
+                      1,
+                      640,
+                      640,
+                      3
+                    ],
+                    "dtype": "uint8"
+                  }
+                ],
+                "outputs": [
+                  {
+                    "name": "output0",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      64
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "output1",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      80
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "614",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      32
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "636",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      64
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "658",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      80
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "680",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      32
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "702",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      64
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "724",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      80
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "746",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      32
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "776",
+                    "shape": [
+                      1,
+                      32,
+                      160,
+                      160
+                    ],
+                    "dtype": "float32"
+                  }
+                ]
+              }
+            ],
+            "segmentationObjects": [
+              {
+                "box": [
+                  4.47019100189209,
+                  231.44257164001465,
+                  801.2135982513428,
+                  738.0333366394043
+                ],
+                "confidence": 0.943898618221283,
+                "classId": 5,
+                "maskPixels": 264965,
+                "maskBounds": [
+                  0,
+                  230,
+                  796,
+                  732
+                ],
+                "label": "bus"
+              },
+              {
+                "box": [
+                  51.234290599823,
+                  399.14596939086914,
+                  245.62667655944824,
+                  904.1790618896484
+                ],
+                "confidence": 0.9310917854309082,
+                "classId": 0,
+                "maskPixels": 50446,
+                "maskBounds": [
+                  51,
+                  398,
+                  243,
+                  898
+                ],
+                "label": "person"
+              },
+              {
+                "box": [
+                  668.7200775146484,
+                  394.76105976104736,
+                  809.505048751831,
+                  881.8047523498535
+                ],
+                "confidence": 0.9217634797096252,
+                "classId": 0,
+                "maskPixels": 21221,
+                "maskBounds": [
+                  669,
+                  396,
+                  803,
+                  877
+                ],
+                "label": "person"
+              },
+              {
+                "box": [
+                  222.43745613098145,
+                  405.99466609954834,
+                  344.53179931640625,
+                  860.827543258667
+                ],
+                "confidence": 0.8995731472969055,
+                "classId": 0,
+                "maskPixels": 35672,
+                "maskBounds": [
+                  222,
+                  405,
+                  344,
+                  857
+                ],
+                "label": "person"
+              },
+              {
+                "box": [
+                  0.0,
+                  549.0170631408691,
+                  78.94413185119629,
+                  868.0432434082031
+                ],
+                "confidence": 0.694699764251709,
+                "classId": 0,
+                "maskPixels": 12240,
+                "maskBounds": [
+                  0,
+                  549,
+                  74,
+                  863
+                ],
+                "label": "person"
+              },
+              {
+                "box": [
+                  0.0,
+                  547.4903926849365,
+                  79.45419788360596,
+                  1066.6448135375977
+                ],
+                "confidence": 0.39865031838417053,
+                "classId": 0,
+                "maskPixels": 12357,
+                "maskBounds": [
+                  0,
+                  549,
+                  74,
+                  1064
+                ],
+                "label": "person"
+              },
+              {
+                "box": [
+                  136.8006420135498,
+                  475.8357582092285,
+                  147.8913917541504,
+                  505.38879203796387
+                ],
+                "confidence": 0.32534533739089966,
+                "classId": 27,
+                "maskPixels": 111,
+                "maskBounds": [
+                  135,
+                  474,
+                  142,
+                  494
+                ],
+                "label": "tie"
+              }
+            ],
+            "maskSha256": "daf836eab3bb692a0d325436346f29d6906afd8b2a35365e3ab3eeb44109a736",
+            "maskShape": [
+              7,
+              1080,
+              810
+            ],
+            "postprocessReplayInputExact": true,
+            "postprocessReplayImageExact": true
+          }
+        ],
+        "originalFilesUnchanged": true,
+        "sourceScript": "ax_infer.py",
+        "sourceScriptSha256": "2cdad25ad15ff8da2dba0a7605b73d8896385f12222dcc6ff43f0137edca0049",
+        "inputFile": "bus.jpg",
+        "inputSha256": "33b198a1d2839bb9ac4c65d61f9e852196793cae9a0781360859425f6022b69c",
+        "inputPath": "/validation/effects/yolov8-seg-variants-20261005/inputs/bus.jpg",
+        "outputPath": "/validation/effects/yolov8-seg-variants-20261005/outputs/yolov8x.jpg",
+        "outputSha256": "239afff19c1b915ba7cf071a4c0c978bd63995f384b298a2866df8e85d8b3d94",
+        "runsPerWeight": 2,
+        "qualityAccepted": false
+      }
+    }
+  ]
+}

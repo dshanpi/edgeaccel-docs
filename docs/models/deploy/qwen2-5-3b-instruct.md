@@ -125,9 +125,9 @@ What code did I ask you to remember? Reply with only the digits.
 
 ### INT4：单轮问答与连续对话
 
-**已运行，效果仍需评估** · 2026-09-29 · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
+**已运行，效果仍需评估** · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
 
-INT4完成三条单轮输入和两轮连续对话，算术与短对话记忆符合要求；JSON字段数值正确，但多出Markdown围栏。
+固定问答已返回文本，但JSON 回复含代码围栏或额外文字，不能直接解析为指定对象；本次格式要求未通过。 两轮短对话能原样回忆 4729；该结果不代表长上下文通过。
 
 **示例 1：输入**
 
@@ -229,9 +229,9 @@ What code did I ask you to remember? Reply with only the digits.
 
 ### INT8：单轮问答与连续对话
 
-**已运行，效果仍需评估** · 2026-09-29 · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
+**已运行，效果仍需评估** · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
 
-INT8完成三条单轮输入和两轮连续对话，算术与短对话记忆符合要求；JSON字段数值正确，但多出Markdown围栏。
+固定问答已返回文本，但JSON 回复含代码围栏或额外文字，不能直接解析为指定对象；本次格式要求未通过。 两轮短对话能原样回忆 4729；该结果不代表长上下文通过。
 
 **示例 1：输入**
 
@@ -336,7 +336,7 @@ What code did I ask you to remember? Reply with only the digits.
 <details>
 <summary>查看样例环境与运行耗时</summary>
 
-环境：RK3576 + AX8850 16GB M.2。日期：2026-09-29。模型版本：`ad62e7be39deda430ce48469961d7ed4701f5405`。
+环境：RK3576 + AX8850 16GB M.2。模型版本：`ad62e7be39deda430ce48469961d7ed4701f5405`。
 
 | 组件 | 版本或配置 |
 | --- | --- |
@@ -355,8 +355,6 @@ What code did I ask you to remember? Reply with only the digits.
 
 适用范围：
 
-- 严格JSON格式未通过；固定短样例不代表广泛回答准确性或长期稳定性。
-- 仅实测16GB卡的三条单轮输入和两轮短对话；未验证实际8GB容量、长上下文、并发及持续运行。
 - 两种精度采用同一输入和采样设置；少量样例不足以比较整体精度或稳定性。
 
 </details>
@@ -366,7 +364,7 @@ What code did I ask you to remember? Reply with only the digits.
 <details>
 <summary>查看样例环境与运行耗时</summary>
 
-环境：RK3576 + AX8850 16GB M.2。日期：2026-09-29。模型版本：`ad62e7be39deda430ce48469961d7ed4701f5405`。
+环境：RK3576 + AX8850 16GB M.2。模型版本：`ad62e7be39deda430ce48469961d7ed4701f5405`。
 
 | 组件 | 版本或配置 |
 | --- | --- |
@@ -385,8 +383,6 @@ What code did I ask you to remember? Reply with only the digits.
 
 适用范围：
 
-- 严格JSON格式未通过；固定短样例不代表广泛回答准确性或长期稳定性。
-- 仅实测16GB卡的三条单轮输入和两轮短对话；未验证实际8GB容量、长上下文、并发及持续运行。
 - 两种精度采用同一输入和采样设置；少量样例不足以比较整体精度或稳定性。
 
 </details>

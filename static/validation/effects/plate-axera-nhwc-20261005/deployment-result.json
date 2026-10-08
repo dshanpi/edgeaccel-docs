@@ -1,0 +1,191 @@
+{
+  "modelId": "Plate-axera",
+  "revision": "e528f3e145f0ec35e3c2c05a019d8369d6fdef3c",
+  "date": "2026-10-05",
+  "variants": [
+    {
+      "label": "plate-detection · pld_650_nhwc_npu3.axmodel",
+      "observation": "车牌检测框覆盖车辆前方蓝牌，显示plate 0.884；此步骤只检测车牌位置，不输出识别文字。",
+      "previews": [
+        {
+          "caption": "输入：test.jpg",
+          "path": "/validation/effects/plate-axera-nhwc-20261005/inputs/plate-detection.jpg"
+        },
+        {
+          "caption": "NHWC实际输出：plate-detection",
+          "path": "/validation/effects/plate-axera-nhwc-20261005/outputs/plate-detection.jpg"
+        }
+      ],
+      "tables": [],
+      "record": {
+        "completed": true,
+        "provider": "AXCLRTExecutionProvider",
+        "inferenceEvidence": "fixed-nhwc-vision-samples",
+        "modelId": "Plate-axera",
+        "revision": "e528f3e145f0ec35e3c2c05a019d8369d6fdef3c",
+        "actualCapacity": "16GB",
+        "case": "plate-detection",
+        "inputFile": "test.jpg",
+        "inputSha256": "6d96e9ab8dc69d226e8e4ab9543c9de0590b2b11e351ed41b106c9cec54125d9",
+        "inputPath": "/validation/effects/plate-axera-nhwc-20261005/inputs/plate-detection.jpg",
+        "inputShape": [
+          1,
+          416,
+          416,
+          3
+        ],
+        "inputLayout": "NHWC",
+        "colorOrder": "RGB from original NCHW preprocessing",
+        "sourceScript": "axmodel_infer_pld.py",
+        "sourceScriptSha256": "0145ae9d86ff519466e57a63b74acd5454799815f579a84a4bb96e43ae07335c",
+        "adapterSha256": "02657a999a22684b10b8923ae5f3fc934baa05c5dee39e4f9e09ad6a88eef7ca",
+        "customerBundleFiles": {
+          "vision_nhwc.py": "6e52df5f5d63c76e7700e6f184d342a1d714f6e0edbb9b102efa45a4d250efb1",
+          "_vision_nhwc_runtime.py": "02657a999a22684b10b8923ae5f3fc934baa05c5dee39e4f9e09ad6a88eef7ca",
+          "plan.json": "efaf9f158e55093b8cbdd3806ca4934aedddfa01c3146c028b000c709d2a48c5",
+          "io.json": "5eed4a7de8bacc6c5935c3d9057ba8bcfc3683731e57f27aa8660e90f45dbb97"
+        },
+        "originalFilesUnchanged": true,
+        "independentRuns": 3,
+        "rawOutputsExact": true,
+        "visualizationsExact": true,
+        "customerCommandVerified": true,
+        "sessions": [
+          {
+            "model": "AX650/pld_650_nhwc_npu3.axmodel",
+            "sha256": "f877eaf19016a64e3f19b2ffd5c0144906a8ba68ba44bff87b26f4e5ddce17b9",
+            "allFinite": true,
+            "runMilliseconds": [
+              10.90779600008318,
+              11.167655999997805,
+              10.964672999989489
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "path": "det_res.jpg",
+            "sha256": "d910296e4deef13e22de05bb4349d200281548cc72c5fb551b4cea87bc17d269",
+            "shape": [
+              720,
+              1280,
+              3
+            ]
+          }
+        ],
+        "semanticObservation": "车牌检测框覆盖车辆前方蓝牌，显示plate 0.884；此步骤只检测车牌位置，不输出识别文字。",
+        "calls": [
+          {
+            "inputSha256": "df4208fe153cf19ff14fa9f0d29e6108142d5b0f919da772a5bf5b875f8cd78f",
+            "outputSha256": "4fa28b12e22d4eb07daa64d20877567c4e872023a9caa63e59eb952a5b41afd8",
+            "milliseconds": 10.90779600008318
+          },
+          {
+            "inputSha256": "df4208fe153cf19ff14fa9f0d29e6108142d5b0f919da772a5bf5b875f8cd78f",
+            "outputSha256": "4fa28b12e22d4eb07daa64d20877567c4e872023a9caa63e59eb952a5b41afd8",
+            "milliseconds": 11.167655999997805
+          },
+          {
+            "inputSha256": "df4208fe153cf19ff14fa9f0d29e6108142d5b0f919da772a5bf5b875f8cd78f",
+            "outputSha256": "4fa28b12e22d4eb07daa64d20877567c4e872023a9caa63e59eb952a5b41afd8",
+            "milliseconds": 10.964672999989489
+          }
+        ]
+      }
+    },
+    {
+      "label": "plate-recognition · plr_650_nhwc_npu3.axmodel",
+      "observation": "独立裁剪蓝牌识别为苏A8A68Y，文字与输入图一致；字符序列分数0.9997，颜色blue、分数1.0000。",
+      "previews": [
+        {
+          "caption": "输入：苏A8A68Y.jpg",
+          "path": "/validation/effects/plate-axera-nhwc-20261005/inputs/plate-recognition.jpg"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "识别文字",
+            "序列分数",
+            "颜色",
+            "颜色分数"
+          ],
+          "rows": [
+            [
+              "苏A8A68Y",
+              "0.9997",
+              "blue",
+              "1.0000"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "completed": true,
+        "provider": "AXCLRTExecutionProvider",
+        "inferenceEvidence": "fixed-nhwc-vision-samples",
+        "modelId": "Plate-axera",
+        "revision": "e528f3e145f0ec35e3c2c05a019d8369d6fdef3c",
+        "actualCapacity": "16GB",
+        "case": "plate-recognition",
+        "inputFile": "苏A8A68Y.jpg",
+        "inputSha256": "5e439109b2773ae9f8b71d3cfedea4e7fc951c3b205c53c49b3e48bf7fd13472",
+        "inputPath": "/validation/effects/plate-axera-nhwc-20261005/inputs/plate-recognition.jpg",
+        "inputShape": [
+          1,
+          48,
+          192,
+          3
+        ],
+        "inputLayout": "NHWC",
+        "colorOrder": "RGB from original NCHW preprocessing",
+        "sourceScript": "axmodel_infer_plr.py",
+        "sourceScriptSha256": "34b01e20a697531387b8aa31c78690718a5552f4bf9ec50462c597526ca22ee2",
+        "adapterSha256": "02657a999a22684b10b8923ae5f3fc934baa05c5dee39e4f9e09ad6a88eef7ca",
+        "customerBundleFiles": {
+          "vision_nhwc.py": "6e52df5f5d63c76e7700e6f184d342a1d714f6e0edbb9b102efa45a4d250efb1",
+          "_vision_nhwc_runtime.py": "02657a999a22684b10b8923ae5f3fc934baa05c5dee39e4f9e09ad6a88eef7ca",
+          "plan.json": "efaf9f158e55093b8cbdd3806ca4934aedddfa01c3146c028b000c709d2a48c5",
+          "io.json": "5eed4a7de8bacc6c5935c3d9057ba8bcfc3683731e57f27aa8660e90f45dbb97"
+        },
+        "originalFilesUnchanged": true,
+        "independentRuns": 3,
+        "rawOutputsExact": true,
+        "visualizationsExact": true,
+        "customerCommandVerified": true,
+        "sessions": [
+          {
+            "model": "AX650/plr_650_nhwc_npu3.axmodel",
+            "sha256": "3b322f1e3f7710b2e3737f4e05834156b0f1b3dcb4e93fad81dc86badf92c39f",
+            "allFinite": true,
+            "runMilliseconds": [
+              7.284103000074538,
+              7.226061000210393,
+              7.043781000220406
+            ]
+          }
+        ],
+        "outputs": [],
+        "semanticObservation": "独立裁剪蓝牌识别为苏A8A68Y，文字与输入图一致；字符序列分数0.9997，颜色blue、分数1.0000。",
+        "calls": [
+          {
+            "inputSha256": "c36a410e33950895df99f76efaee43e09fe74c697d9d459e8d17e3d1dbaa64f2",
+            "outputSha256": "b0b24818180a740e730dcecfe8c605056f93601e2ea4a0b73165811b0d5729fd",
+            "milliseconds": 7.284103000074538
+          },
+          {
+            "inputSha256": "c36a410e33950895df99f76efaee43e09fe74c697d9d459e8d17e3d1dbaa64f2",
+            "outputSha256": "b0b24818180a740e730dcecfe8c605056f93601e2ea4a0b73165811b0d5729fd",
+            "milliseconds": 7.226061000210393
+          },
+          {
+            "inputSha256": "c36a410e33950895df99f76efaee43e09fe74c697d9d459e8d17e3d1dbaa64f2",
+            "outputSha256": "b0b24818180a740e730dcecfe8c605056f93601e2ea4a0b73165811b0d5729fd",
+            "milliseconds": 7.043781000220406
+          }
+        ],
+        "consoleText": "Plate: [苏A8A68Y], score: 0.9997, color: [blue], score:1.0000"
+      }
+    }
+  ]
+}

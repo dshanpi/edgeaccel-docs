@@ -5,7 +5,7 @@
   "variants": [
     {
       "label": "alexa_test.wav",
-      "observation": "仅 Alexa 达到阈值，峰值 1.0。 每份输入从空状态运行两次，全部 NPU 原始输出和最终分数一致。",
+      "observation": "仅 Alexa 达到阈值，峰值 1.0。 每份输入从空状态运行两次，全部 NPU 原始输出和最终分数一致。 下表列出 11 个检测目标：五类独立检测项与六种 timer 指令。只有 Alexa 和 Hey Mycroft 有对应正例，其他九项尚缺正例验证；timer 的负类不计作指令触发。短录音与静音结果不能替代长期误唤醒测试。",
       "previews": [
         {
           "caption": "本次输入波形与触发分数",
@@ -55,6 +55,70 @@
               "weather",
               "0.006394",
               "0"
+            ]
+          ]
+        },
+        {
+          "headers": [
+            "检测目标",
+            "本组对应正例",
+            "达到阈值的输入"
+          ],
+          "rows": [
+            [
+              "alexa",
+              "alexa_test.wav",
+              "alexa_test.wav"
+            ],
+            [
+              "hey_jarvis",
+              "尚未提供",
+              "本组未触发"
+            ],
+            [
+              "hey_mycroft",
+              "hey_mycroft_test.wav",
+              "hey_mycroft_test.wav"
+            ],
+            [
+              "hey_rhasspy",
+              "尚未提供",
+              "本组未触发"
+            ],
+            [
+              "weather",
+              "尚未提供",
+              "本组未触发"
+            ],
+            [
+              "1_minute_timer",
+              "尚未提供",
+              "本组未触发"
+            ],
+            [
+              "5_minute_timer",
+              "尚未提供",
+              "本组未触发"
+            ],
+            [
+              "10_minute_timer",
+              "尚未提供",
+              "本组未触发"
+            ],
+            [
+              "20_minute_timer",
+              "尚未提供",
+              "本组未触发"
+            ],
+            [
+              "30_minute_timer",
+              "尚未提供",
+              "本组未触发"
+            ],
+            [
+              "1_hour_timer",
+              "尚未提供",
+              "本组未触发"
             ]
           ]
         }

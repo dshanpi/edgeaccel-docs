@@ -5,7 +5,7 @@
   "variants": [
     {
       "label": "两张图片与两组词表统计",
-      "observation": "同一官方SDK实例中切换四词查询集合，四种组合各重复检测两次，返回框、类别和分数一致。检测时间含SDK前后处理，词表编码时间单独统计。",
+      "observation": "同一官方SDK实例中切换四词查询集合，四种组合各重复检测两次，返回框、类别和分数一致。检测时间含SDK前后处理，词表编码时间单独统计。 两组词表合计七个不同提示词，本组没有 horse 正例。下方按每个提示词列出零检测和分数范围；0.25 仅用于描述分数分布，实际运行阈值仍为 0.1，未重新筛选或运行模型。",
       "previews": [],
       "tables": [
         {
@@ -671,7 +671,42 @@
           "path": "/validation/effects/yolo-world-v2-20260928/host-set1-result.png"
         }
       ],
-      "tables": [],
+      "tables": [
+        {
+          "headers": [
+            "实际提示词",
+            "返回框数",
+            "分数范围",
+            "其中分数低于 0.25"
+          ],
+          "rows": [
+            [
+              "person",
+              "0",
+              "未检出",
+              "0"
+            ],
+            [
+              "dog",
+              "1",
+              "0.879624–0.879624",
+              "0"
+            ],
+            [
+              "car",
+              "3",
+              "0.603217–0.879624",
+              "0"
+            ],
+            [
+              "horse",
+              "0",
+              "未检出",
+              "0"
+            ]
+          ]
+        }
+      ],
       "record": {
         "completed": true,
         "provider": "AXCL C API",
@@ -788,7 +823,42 @@
           "path": "/validation/effects/yolo-world-v2-20260928/host-set2-result.png"
         }
       ],
-      "tables": [],
+      "tables": [
+        {
+          "headers": [
+            "实际提示词",
+            "返回框数",
+            "分数范围",
+            "其中分数低于 0.25"
+          ],
+          "rows": [
+            [
+              "man",
+              "0",
+              "未检出",
+              "0"
+            ],
+            [
+              "shoes",
+              "0",
+              "未检出",
+              "0"
+            ],
+            [
+              "ball",
+              "0",
+              "未检出",
+              "0"
+            ],
+            [
+              "person",
+              "0",
+              "未检出",
+              "0"
+            ]
+          ]
+        }
+      ],
       "record": {
         "completed": true,
         "provider": "AXCL C API",
@@ -843,7 +913,42 @@
           "path": "/validation/effects/yolo-world-v2-20260928/football-set1-result.png"
         }
       ],
-      "tables": [],
+      "tables": [
+        {
+          "headers": [
+            "实际提示词",
+            "返回框数",
+            "分数范围",
+            "其中分数低于 0.25"
+          ],
+          "rows": [
+            [
+              "person",
+              "8",
+              "0.101892–0.879624",
+              "2"
+            ],
+            [
+              "dog",
+              "0",
+              "未检出",
+              "0"
+            ],
+            [
+              "car",
+              "0",
+              "未检出",
+              "0"
+            ],
+            [
+              "horse",
+              "0",
+              "未检出",
+              "0"
+            ]
+          ]
+        }
+      ],
       "record": {
         "completed": true,
         "provider": "AXCL C API",
@@ -1024,7 +1129,42 @@
           "path": "/validation/effects/yolo-world-v2-20260928/football-set2-result.png"
         }
       ],
-      "tables": [],
+      "tables": [
+        {
+          "headers": [
+            "实际提示词",
+            "返回框数",
+            "分数范围",
+            "其中分数低于 0.25"
+          ],
+          "rows": [
+            [
+              "man",
+              "2",
+              "0.132682–0.449073",
+              "1"
+            ],
+            [
+              "shoes",
+              "2",
+              "0.103785–0.117830",
+              "2"
+            ],
+            [
+              "ball",
+              "2",
+              "0.377450–0.402052",
+              "0"
+            ],
+            [
+              "person",
+              "1",
+              "0.147506–0.147506",
+              "1"
+            ]
+          ]
+        }
+      ],
       "record": {
         "completed": true,
         "provider": "AXCL C API",

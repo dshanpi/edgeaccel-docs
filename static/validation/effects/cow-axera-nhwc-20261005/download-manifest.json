@@ -1,0 +1,28 @@
+{
+  "modelId": "Cow-axera",
+  "repo": "AXERA-TECH/Cow-axera",
+  "revision": "e1b24eb694c6a4420f2e4278dd7e2f77ede3805d",
+  "files": [
+    {
+      "path": "axmodel_infer_cow_yolov5.py",
+      "bytes": 10240,
+      "verifiedHashes": {
+        "sha256": "adb1dbb3c49b0de37685b147c849ca5e6513aecdd4b6e218beb291140af944e5"
+      }
+    },
+    {
+      "path": "000000235857.jpg",
+      "bytes": 283118,
+      "verifiedHashes": {
+        "sha256": "7682054b9d4649b1bc46ab6d78fd55c50dc9ddece5341ea69259000a94e3c0de"
+      }
+    },
+    {
+      "path": "AX650/cow_ax650_nhwc_npu3.axmodel",
+      "bytes": 1266424,
+      "verifiedHashes": {
+        "sha256": "f43839fe52953c29b57f8c6271b9cc29d8283b6fda1953a094d2b97e8f712dbf"
+      }
+    }
+  ]
+}

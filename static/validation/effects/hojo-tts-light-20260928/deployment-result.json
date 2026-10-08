@@ -5,7 +5,7 @@
   "variants": [
     {
       "label": "合成中文和英文短句",
-      "observation": "以下两段音频由本次 RK3576 + AX8850 16GB 算力卡生成。英文使用音色索引9，中文使用索引0；两组都正常输出语音结束标记，未达到256 token上限。",
+      "observation": "以下两段音频由本次 RK3576 + AX8850 16GB 算力卡生成。英文使用音色索引9，中文使用索引0；两组都正常输出语音结束标记，未达到256 token上限。 下面使用独立 Whisper-base 在主机 CPU 上识别本页实际生成的 WAV，不向识别器提供目标文字。转写可能包含同音字、繁简体和识别器自身误差，用于定位复听位置，不是人工听审或语音合成准确率。",
       "audio": [
         {
           "caption": "Hello, this is a demo.（音色9）",
@@ -40,6 +40,25 @@
               "2.920",
               "147",
               "speech-end"
+            ]
+          ]
+        },
+        {
+          "headers": [
+            "合成输入文字",
+            "实际音频的 ASR 辅助转写",
+            "核对说明"
+          ],
+          "rows": [
+            [
+              "Hello, this is a demo.",
+              "Hello, this is a demo.",
+              "英文词语对应。"
+            ],
+            [
+              "你好，欢迎使用算力卡。",
+              "你好,歡迎使用算力卡。",
+              "繁简体与标点不同，句子内容对应。"
             ]
           ]
         }
@@ -8143,7 +8162,7 @@
     },
     {
       "label": "核对重复输入",
-      "observation": "在中文样例之后重新输入同一句英文。13个网络的全部输入输出校验值、生成token序列与WAV一致。重复性检查不代表发音或自然度验收。",
+      "observation": "在中文样例之后重新输入同一句英文。13个网络的全部输入输出校验值、生成token序列与WAV一致。重复性检查不代表发音或自然度验收。 下面使用独立 Whisper-base 在主机 CPU 上识别本页实际生成的 WAV，不向识别器提供目标文字。转写可能包含同音字、繁简体和识别器自身误差，用于定位复听位置，不是人工听审或语音合成准确率。",
       "audio": [
         {
           "caption": "Hello, this is a demo.（音色9）",
@@ -8173,6 +8192,20 @@
             [
               "发生PCM裁剪的采样点",
               "0"
+            ]
+          ]
+        },
+        {
+          "headers": [
+            "合成输入文字",
+            "实际音频的 ASR 辅助转写",
+            "核对说明"
+          ],
+          "rows": [
+            [
+              "Hello, this is a demo.",
+              "Hello, this is a demo.",
+              "与首次相同音频和转写；仅用于重复对照。"
             ]
           ]
         }
@@ -32518,5 +32551,42 @@
         }
       }
     }
-  ]
+  ],
+  "auxiliarySpeechReview": {
+    "reviewedAt": "2026-10-01T18:13:14.127522+00:00",
+    "asrRepo": "openai/whisper-base",
+    "asrRevision": "e37978b90ca9030d5170a5c07aadb050351a65bb",
+    "device": "host CPU",
+    "initialPrompt": null,
+    "newNpuRuns": 0,
+    "scope": "下面使用独立 Whisper-base 在主机 CPU 上识别本页实际生成的 WAV，不向识别器提供目标文字。转写可能包含同音字、繁简体和识别器自身误差，用于定位复听位置，不是人工听审或语音合成准确率。",
+    "originalSynthesisCapacity": "16GB",
+    "originalSynthesisDate": "2026-09-28",
+    "results": [
+      {
+        "audioPath": "/validation/effects/hojo-tts-light-20260928/english-short.wav",
+        "sha256": "a9467e04369640fb010375eb100da29ab0ef2b30816fa3c2f5a8e83cc68e37f2",
+        "targetText": "Hello, this is a demo.",
+        "asrTranscript": " Hello, this is a demo.",
+        "language": "en",
+        "observation": "英文词语对应。"
+      },
+      {
+        "audioPath": "/validation/effects/hojo-tts-light-20260928/chinese-short.wav",
+        "sha256": "628bda018192dadd6c9cb8efecea06ee00fd9d654bf42e8d43ffe61f75c736b2",
+        "targetText": "你好，欢迎使用算力卡。",
+        "asrTranscript": "你好,歡迎使用算力卡。",
+        "language": "zh",
+        "observation": "繁简体与标点不同，句子内容对应。"
+      },
+      {
+        "audioPath": "/validation/effects/hojo-tts-light-20260928/english-repeat.wav",
+        "sha256": "a9467e04369640fb010375eb100da29ab0ef2b30816fa3c2f5a8e83cc68e37f2",
+        "targetText": "Hello, this is a demo.",
+        "asrTranscript": " Hello, this is a demo.",
+        "language": "en",
+        "observation": "与首次相同音频和转写；仅用于重复对照。"
+      }
+    ]
+  }
 }

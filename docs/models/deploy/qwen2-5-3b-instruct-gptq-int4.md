@@ -165,9 +165,9 @@ What code did I ask you to remember? Reply with only the digits.
 
 ### CTX：单轮问答与连续对话
 
-**已运行，效果仍需评估** · 2026-09-29 · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
+**已运行，效果仍需评估** · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
 
-CTX版本完成三条单轮输入与同一进程内的两轮对话，第二轮正确返回第一轮给出的数字。
+固定问答已返回文本，但JSON 回复含代码围栏或额外文字，不能直接解析为指定对象；本次格式要求未通过。 两轮短对话能原样回忆 4729；该结果不代表长上下文通过。
 
 **示例 1：输入**
 
@@ -269,9 +269,9 @@ What code did I ask you to remember? Reply with only the digits.
 
 ### 非 CTX：单轮问答
 
-**已运行，效果仍需评估** · 2026-09-29 · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
+**已运行，效果仍需评估** · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
 
-非CTX版本完成算术、中文用途说明和结构化输出三条输入；保留原始回复与完整进程耗时。
+固定问答已返回文本，但JSON 回复含代码围栏或额外文字，不能直接解析为指定对象；本次格式要求未通过。
 
 **示例 1：输入**
 
@@ -332,7 +332,7 @@ Return only a JSON object with apple equal to 3 and pear equal to 2.
 <details>
 <summary>查看样例环境与运行耗时</summary>
 
-环境：RK3576 + AX8850 16GB M.2。日期：2026-09-29。模型版本：`f1994e9ff277d8dfea28ead7878041e1a1f00cf0`。
+环境：RK3576 + AX8850 16GB M.2。模型版本：`f1994e9ff277d8dfea28ead7878041e1a1f00cf0`。
 
 | 组件 | 版本或配置 |
 | --- | --- |
@@ -349,11 +349,6 @@ Return only a JSON object with apple equal to 3 and pear equal to 2.
 | 单轮示例2完整进程 | 60.256 s | 包含模型加载、一次问答和退出，不是单次生成耗时。 |
 | 单轮示例3完整进程 | 58.903 s | 包含模型加载、一次问答和退出，不是单次生成耗时。 |
 
-适用范围：
-
-- JSON回复带代码围栏，不能直接作为裸JSON解析；短输入基础运行不代表长上下文、持续运行或完整质量验收。
-- 仅实测16GB卡上的所列短输入；实际8GB容量、长上下文、并发及持续运行仍需单独验证。
-
 </details>
 
 **非 CTX：单轮问答**
@@ -361,7 +356,7 @@ Return only a JSON object with apple equal to 3 and pear equal to 2.
 <details>
 <summary>查看样例环境与运行耗时</summary>
 
-环境：RK3576 + AX8850 16GB M.2。日期：2026-09-29。模型版本：`f1994e9ff277d8dfea28ead7878041e1a1f00cf0`。
+环境：RK3576 + AX8850 16GB M.2。模型版本：`f1994e9ff277d8dfea28ead7878041e1a1f00cf0`。
 
 | 组件 | 版本或配置 |
 | --- | --- |
@@ -380,8 +375,6 @@ Return only a JSON object with apple equal to 3 and pear equal to 2.
 
 适用范围：
 
-- JSON回复带代码围栏，不能直接作为裸JSON解析；短输入基础运行不代表长上下文、持续运行或完整质量验收。
-- 仅实测16GB卡上的所列短输入；实际8GB容量、长上下文、并发及持续运行仍需单独验证。
 - 该版本程序未输出首token耗时；保留原生生成速率和含模型加载的完整进程耗时。
 
 </details>

@@ -1,0 +1,84 @@
+{
+  "modelId": "PPOCR_v5",
+  "repo": "AXERA-TECH/PPOCR_v5",
+  "revision": "fed5e0b6eaac3e34b01cb3919e0df7810296d850",
+  "files": [
+    {
+      "path": "11.jpg",
+      "size": 48680,
+      "verifiedHashes": {
+        "sha256": "2bb78629be3a6b29025d85db3677642c267d0ff176706ab963e8cb0c132df10b"
+      }
+    },
+    {
+      "path": "README.md",
+      "size": 4710,
+      "verifiedHashes": {
+        "sha256": "4f823d0c7198d6163d0752434da7198cc66153d4184b0f4870d747be8346302c"
+      }
+    },
+    {
+      "path": "config.json",
+      "size": 1285,
+      "verifiedHashes": {
+        "sha256": "660fc5c0ca4ecd555a5ec908743611ba0e0e83745c309cebc8e0d252d7d35c87"
+      }
+    },
+    {
+      "path": "infer_axmodel.py",
+      "size": 20515,
+      "verifiedHashes": {
+        "sha256": "f0a0868c8dfe7d2f98b7c91087f4eda37adc8689c17246a79985c8368f5e6abc"
+      }
+    },
+    {
+      "path": "infer_onnx.py",
+      "size": 20648,
+      "verifiedHashes": {
+        "sha256": "3cc86f67b6988624f8cef82dac1c847630b1f97414154f9b092375a7061ea92f"
+      }
+    },
+    {
+      "path": "ppocrv5_dict.txt",
+      "size": 74012,
+      "verifiedHashes": {
+        "sha256": "d1979e9f794c464c0d2e0b70a7fe14dd978e9dc644c0e71f14158cdf8342af1b"
+      }
+    },
+    {
+      "path": "requirements.txt",
+      "size": 39,
+      "verifiedHashes": {
+        "sha256": "928cedcae20b77275018089cbd496cda7cc796b8c4454ccfa3465001971adc77"
+      }
+    },
+    {
+      "path": "simfang.ttf",
+      "size": 10576012,
+      "verifiedHashes": {
+        "sha256": "521c6f7546b4eb64fa4b0cd604bbd36333a20a57e388c8e2ad2ad07b9e593864"
+      }
+    },
+    {
+      "path": "ax650/cls_npu1.axmodel",
+      "size": 647708,
+      "verifiedHashes": {
+        "sha256": "b6d6e0d6d8a7324acee7c08c8572bbefd268f0f1270a1f0bebb9433be4429be9"
+      }
+    },
+    {
+      "path": "ax650/det_npu1.axmodel",
+      "size": 3418165,
+      "verifiedHashes": {
+        "sha256": "f6719aeae321f7ce2ce0b5064fcc4c16e5bd16a8b57ea26b47682e8fd2c383a1"
+      }
+    },
+    {
+      "path": "ax650/rec_npu1.axmodel",
+      "size": 6438908,
+      "verifiedHashes": {
+        "sha256": "a11ba815bdd14d2c04f66a2ce22ea109638149ba47342a14a9e5895447108169"
+      }
+    }
+  ]
+}

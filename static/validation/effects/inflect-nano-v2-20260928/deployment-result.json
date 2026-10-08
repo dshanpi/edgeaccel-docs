@@ -5,7 +5,7 @@
   "variants": [
     {
       "label": "英文短句、拼接与数字读法",
-      "observation": "四组英文输入生成实际语音，包含一次双句拼接；数字输入的前端文本变为“The price is twelve dollars.”。编码器、解码器和 CPU 时长预测各执行五次，输出有限且非静音。尚未据此认定发音和听感合格。",
+      "observation": "四组英文输入生成实际语音，包含一次双句拼接；数字输入的前端文本变为“The price is twelve dollars.”。编码器、解码器和 CPU 时长预测各执行五次，输出有限且非静音。尚未据此认定发音和听感合格。 使用独立的 Whisper-base 在主机 CPU 上识别本页实际 WAV，未向识别器提供目标文字提示。识别结果可能包含同音字、繁简体差异、漏词或识别器自身错误；下表用于辅助定位需要复听的位置，不是人工听审，也不是语音合成准确率。",
       "previews": [
         {
           "caption": "四组实际语音波形，保持官方幅度",
@@ -62,6 +62,35 @@
               "1.664 s",
               "0.114 s",
               "0.068"
+            ]
+          ]
+        },
+        {
+          "headers": [
+            "合成输入文字",
+            "实际音频的 ASR 辅助转写",
+            "核对说明"
+          ],
+          "rows": [
+            [
+              "Hello world.",
+              "Hello world.",
+              "英文词语对应。"
+            ],
+            [
+              "The weather today is sunny with a gentle breeze.",
+              "The weather today is sunny with a gentle breeze.",
+              "英文词语对应。"
+            ],
+            [
+              "The robot is ready. Please press start.",
+              "The robot is ready. Please press start.",
+              "两句文字均被识别，停顿与自然度仍待试听。"
+            ],
+            [
+              "The price is 12 dollars.",
+              "The price is $12.",
+              "识别为 $12，金额含义对应；未核实数字的实际发音。"
             ]
           ]
         }
@@ -782,5 +811,48 @@
         "coverage": "Official AX650 weights: AXCL encoder and decoder, CPU duration predictor, NumPy embedding/alignment, official frontend and sampling. Four inputs/five sentence segments; basic pipeline only."
       }
     }
-  ]
+  ],
+  "auxiliarySpeechReview": {
+    "reviewedAt": "2026-10-01T18:03:58.419898+00:00",
+    "asrRepo": "openai/whisper-base",
+    "asrRevision": "e37978b90ca9030d5170a5c07aadb050351a65bb",
+    "device": "host CPU",
+    "initialPrompt": null,
+    "newNpuRuns": 0,
+    "scope": "使用独立的 Whisper-base 在主机 CPU 上识别本页实际 WAV，未向识别器提供目标文字提示。识别结果可能包含同音字、繁简体差异、漏词或识别器自身错误；下表用于辅助定位需要复听的位置，不是人工听审，也不是语音合成准确率。",
+    "results": [
+      {
+        "audioPath": "/validation/effects/inflect-nano-v2-20260928/01-english.wav",
+        "sha256": "6010e9b21af6517732b07a92ccaea1aa9d07999325d080cbafc0d311f0a42cb5",
+        "targetText": "Hello world.",
+        "asrTranscript": " Hello world.",
+        "language": "en",
+        "observation": "英文词语对应。"
+      },
+      {
+        "audioPath": "/validation/effects/inflect-nano-v2-20260928/02-english.wav",
+        "sha256": "8e2cec4711d354432ce10011fdb44208b29fa2e1e7e6f118e71f5e6ff1863709",
+        "targetText": "The weather today is sunny with a gentle breeze.",
+        "asrTranscript": " The weather today is sunny with a gentle breeze.",
+        "language": "en",
+        "observation": "英文词语对应。"
+      },
+      {
+        "audioPath": "/validation/effects/inflect-nano-v2-20260928/03-english.wav",
+        "sha256": "b905dff4515d7fdff7252defb52644277c70a44d3767da929b9440c3ec023b51",
+        "targetText": "The robot is ready. Please press start.",
+        "asrTranscript": " The robot is ready. Please press start.",
+        "language": "en",
+        "observation": "两句文字均被识别，停顿与自然度仍待试听。"
+      },
+      {
+        "audioPath": "/validation/effects/inflect-nano-v2-20260928/04-english.wav",
+        "sha256": "3d1c3177a1347894e8b116daf7a7d8f85fcec5e2b057e016918994b92f639ea9",
+        "targetText": "The price is 12 dollars.",
+        "asrTranscript": " The price is $12.",
+        "language": "en",
+        "observation": "识别为 $12，金额含义对应；未核实数字的实际发音。"
+      }
+    ]
+  }
 }

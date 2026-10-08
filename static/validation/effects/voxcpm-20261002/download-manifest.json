@@ -1,0 +1,882 @@
+{
+  "modelId": "VoxCPM",
+  "repo": "AXERA-TECH/VoxCPM",
+  "revision": "4362ceca842ace15a8f7e67a2302f72143a60f06",
+  "complete": true,
+  "files": [
+    {
+      "path": "README.md",
+      "size": 1703,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/README.md",
+      "verifiedHashes": {
+        "sha256": "189af85f2e0adebb7fc841088880beeca7be49f435f7408c725d24cfc1ba47cd",
+        "gitBlob": "d0798118379ee84b6c9cdf88aa03a01fc78142ed"
+      }
+    },
+    {
+      "path": "VoxCPM-0.5B/config.json",
+      "size": 2602,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/VoxCPM-0.5B/config.json",
+      "verifiedHashes": {
+        "sha256": "3e4c4501e1b712e18f302b69944c6b82cf374098ad0e1a991506e55416dbc947",
+        "gitBlob": "1ffe017ebab475ffbdcb7c563d0c5147ca7dedce"
+      }
+    },
+    {
+      "path": "VoxCPM-0.5B/special_tokens_map.json",
+      "size": 1632,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/VoxCPM-0.5B/special_tokens_map.json",
+      "verifiedHashes": {
+        "sha256": "068594063e37662c02b21acf42ebb334ef6a74fb810e68a2368f88f08351de76",
+        "gitBlob": "8619dda6f3eb6d60d0a1bb274820054e46f41699"
+      }
+    },
+    {
+      "path": "VoxCPM-0.5B/tokenizer.json",
+      "size": 3676778,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/VoxCPM-0.5B/tokenizer.json",
+      "verifiedHashes": {
+        "sha256": "63443666e076f48a575030d4861e5bdbf64b71632b48e75d4e867c46dd980aa5",
+        "gitBlob": "5405eda8fc32d18fb5a304cb1e292abf6c61dc3f"
+      }
+    },
+    {
+      "path": "VoxCPM-0.5B/tokenizer_config.json",
+      "size": 4952,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/VoxCPM-0.5B/tokenizer_config.json",
+      "verifiedHashes": {
+        "sha256": "466575c55f0cf49530666c2e46ed14f26237dbd227ba7f4bb3bbec93df90edfc",
+        "gitBlob": "213f667d43be76ffdf226393fe58375f913747fc"
+      }
+    },
+    {
+      "path": "assets/en_man1.mp3",
+      "size": 15309,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/assets/en_man1.mp3",
+      "verifiedHashes": {
+        "sha256": "461dd4cc9cf5bf6b774a9978cc9b7ca96033b214714b12413ecfe9eb1bf03ab9",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "assets/en_man1.txt",
+      "size": 66,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/assets/en_man1.txt",
+      "verifiedHashes": {
+        "sha256": "ce5d3c2b96bf649e61817fd44c913c9abfa2314b3265ad6f115fd5c2477cc017",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "assets/en_woman1.mp3",
+      "size": 16941,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/assets/en_woman1.mp3",
+      "verifiedHashes": {
+        "sha256": "872ff69b74b37763cfc4a49bdd39d8a2acf51f428e42e1ab9fa3dfc0c4a2e3d4",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "assets/en_woman1.txt",
+      "size": 67,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/assets/en_woman1.txt",
+      "verifiedHashes": {
+        "sha256": "c14383963cba5217b00603065c4c1fc4167155d5c8ae8d6b5b6b92c81b8eef6b",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "assets/zh_man1.txt",
+      "size": 57,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/assets/zh_man1.txt",
+      "verifiedHashes": {
+        "sha256": "ac9b54ab8e18581b2fce95bd8e4f8aa4e840beec28d56304b86359e095c57bce",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "assets/zh_man1.wav",
+      "size": 1536044,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/assets/zh_man1.wav",
+      "verifiedHashes": {
+        "sha256": "da1153fca1303cd20470317a4ba93027cc5e172214b777747215add36f41109e",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "assets/zh_man2.mp3",
+      "size": 31761,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/assets/zh_man2.mp3",
+      "verifiedHashes": {
+        "sha256": "cd012ac30fe1ffb5bc3e356a84f4f668a25a62c72f810ffae218f83cbcfdf53e",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "assets/zh_man2.txt",
+      "size": 69,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/assets/zh_man2.txt",
+      "verifiedHashes": {
+        "sha256": "0c68ca97e76f6a966fbee90d95ba2210dad6f1c07fcae0f445282b0035823472",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "assets/zh_woman1.txt",
+      "size": 45,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/assets/zh_woman1.txt",
+      "verifiedHashes": {
+        "sha256": "4ff1a7dd8cb643e4f769735733e7547ff66aa5b29d99f674131f3fb448446efa",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "assets/zh_woman1.wav",
+      "size": 111496,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/assets/zh_woman1.wav",
+      "verifiedHashes": {
+        "sha256": "bd199eb7109fd6ce9943cb297e3cf350c1073af014063dfadbdc100230526243",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "axmodels/audio_vae.decoder.onnx",
+      "size": 107734268,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/axmodels/audio_vae.decoder.onnx",
+      "verifiedHashes": {
+        "sha256": "9eea4adaeec41736b99647b9a6522d5f4e6bb739b2704457a9629d9849876d55",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "axmodels/audio_vae.encoder.onnx",
+      "size": 192214193,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/axmodels/audio_vae.encoder.onnx",
+      "verifiedHashes": {
+        "sha256": "ba12c6ef452a0203eac6a5114e03fa568788695603bcbf391245595dc8fe5f28",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "axmodels/enc_to_lm_proj.axmodel",
+      "size": 1136943,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/axmodels/enc_to_lm_proj.axmodel",
+      "verifiedHashes": {
+        "sha256": "eeb1a23a19f1df319a888d3d264af1498ef67fa7d9e24d3e9ac1a600fd682a85",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "axmodels/feat_encoder.in_proj.axmodel",
+      "size": 88232,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/axmodels/feat_encoder.in_proj.axmodel",
+      "verifiedHashes": {
+        "sha256": "a74576c985e94b51446227a5e6613bb028c68cc5f9e4d85f49230ee600ce315f",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "axmodels/feat_encoder.in_proj.onnx",
+      "size": 266528,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/axmodels/feat_encoder.in_proj.onnx",
+      "verifiedHashes": {
+        "sha256": "8dd32eeaef9f93e7ea5696aaa1a3ecd1f9f0897df8288808dff6678106c3fd84",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "axmodels/feat_encoder.special_token.npy",
+      "size": 4224,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/axmodels/feat_encoder.special_token.npy",
+      "verifiedHashes": {
+        "sha256": "a7e829944d1bbc7953a9ebb763df77c198ab4fd985b789790dcfe92c3dc24f7a",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "axmodels/feat_encoder.special_token.txt",
+      "size": 26135,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/axmodels/feat_encoder.special_token.txt",
+      "verifiedHashes": {
+        "sha256": "37dcd06b609876010b3ef2256933b783f5fae7a8a974183708558dd69db0127e",
+        "gitBlob": "4b3423765b4927b10c0319a2d2f124afebf15bcd"
+      }
+    },
+    {
+      "path": "axmodels/fsq_layer.axmodel",
+      "size": 595889,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/axmodels/fsq_layer.axmodel",
+      "verifiedHashes": {
+        "sha256": "77b4c8e0bb3c40dc7b3eea636bcb83223668ed6e73721b7955a237b35aa7b7c8",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "axmodels/lm_to_dit_proj.axmodel",
+      "size": 1136860,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/axmodels/lm_to_dit_proj.axmodel",
+      "verifiedHashes": {
+        "sha256": "c90981d8b811c530c9180c579dd736ee054bbad213152730b6f99bc97e7fd5f1",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "axmodels/locdit.part1.axmodel",
+      "size": 2452671,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/axmodels/locdit.part1.axmodel",
+      "verifiedHashes": {
+        "sha256": "9da8cd78fe6d4359657e6fdcd49a0c90ba3c984c19b061deed0341b711d5498c",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "axmodels/locdit.part3.axmodel",
+      "size": 76964,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/axmodels/locdit.part3.axmodel",
+      "verifiedHashes": {
+        "sha256": "a7bf4db83090ecbe8b69b63e2ac311324edc820fe7d8e640484af611bd1e5067",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "axmodels/rand_noise.txt",
+      "size": 3264,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/axmodels/rand_noise.txt",
+      "verifiedHashes": {
+        "sha256": "8940dc9741bc15072643653de96f4c1be08da7efb0eb2935bfecbb26dd995eb8",
+        "gitBlob": "8a61713542dc4bcfa2c717f4eff19d8654041bd7"
+      }
+    },
+    {
+      "path": "axmodels/res_to_dit_proj.axmodel",
+      "size": 1136860,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/axmodels/res_to_dit_proj.axmodel",
+      "verifiedHashes": {
+        "sha256": "1f1b72b47814d65df2dfcb78be4db4cbed43312384616224f925e64efa8fa2b5",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "axmodels/stop_predictor.axmodel",
+      "size": 1156587,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/axmodels/stop_predictor.axmodel",
+      "verifiedHashes": {
+        "sha256": "4836478793e6117dd89cf833623b00a70c59e98d48a1116d79edaa41f50a9f97",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "axmodels/stop_predictor.onnx",
+      "size": 4207308,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/axmodels/stop_predictor.onnx",
+      "verifiedHashes": {
+        "sha256": "b6131b1586900b28100638aecb243f767d03a01ad704541c33bae235d1fa372b",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "base_lm-axmodels/MiniCPMForCausalLM_p64_l0_together.axmodel",
+      "size": 17555739,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/base_lm-axmodels/MiniCPMForCausalLM_p64_l0_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "c58274d695a0f23535ba5d6c1c53324f0946cb3067673111840e01a5425fe349",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "base_lm-axmodels/MiniCPMForCausalLM_p64_l10_together.axmodel",
+      "size": 17555739,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/base_lm-axmodels/MiniCPMForCausalLM_p64_l10_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "f2cd037cf37a8fc506f985d28137402b89bb07ea8e253fd54fc1e158dc5bbd07",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "base_lm-axmodels/MiniCPMForCausalLM_p64_l11_together.axmodel",
+      "size": 17555739,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/base_lm-axmodels/MiniCPMForCausalLM_p64_l11_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "8cde9371659061764d32821cd3e396a037afdb8246ea2b11c98d5baa403bf140",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "base_lm-axmodels/MiniCPMForCausalLM_p64_l12_together.axmodel",
+      "size": 17555739,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/base_lm-axmodels/MiniCPMForCausalLM_p64_l12_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "dac1ee90898ee338062d5407b44b13d994c78331bccc256fa9b397df95aee230",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "base_lm-axmodels/MiniCPMForCausalLM_p64_l13_together.axmodel",
+      "size": 17555739,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/base_lm-axmodels/MiniCPMForCausalLM_p64_l13_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "d18125dd6564abc00301f98276c4b460e9f04f249706e5900e54a9569b0e3d78",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "base_lm-axmodels/MiniCPMForCausalLM_p64_l14_together.axmodel",
+      "size": 17555739,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/base_lm-axmodels/MiniCPMForCausalLM_p64_l14_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "e7b167ca963e80c0521120c5137b2d387632b8c4d9fde947c3701b21d7a3d5c8",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "base_lm-axmodels/MiniCPMForCausalLM_p64_l15_together.axmodel",
+      "size": 17555739,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/base_lm-axmodels/MiniCPMForCausalLM_p64_l15_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "6929c20e5f436df9fc1e9b1099127fedf59e377bce749f7fa2a3cc018fb387f5",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "base_lm-axmodels/MiniCPMForCausalLM_p64_l16_together.axmodel",
+      "size": 17555739,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/base_lm-axmodels/MiniCPMForCausalLM_p64_l16_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "6e2c3fa287bff986e0302c27497daf4eb7b33177cb08b0ab141faca88c858826",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "base_lm-axmodels/MiniCPMForCausalLM_p64_l17_together.axmodel",
+      "size": 17555739,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/base_lm-axmodels/MiniCPMForCausalLM_p64_l17_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "25b478b2331dcb799359d1c667573f3afe1e0554700571ed6b4fa9756b9d4b71",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "base_lm-axmodels/MiniCPMForCausalLM_p64_l18_together.axmodel",
+      "size": 17555739,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/base_lm-axmodels/MiniCPMForCausalLM_p64_l18_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "00c5338e385f0603d82dc34a3d11154c446c5107fdc621756f9bf7cd76a1032d",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "base_lm-axmodels/MiniCPMForCausalLM_p64_l19_together.axmodel",
+      "size": 17555739,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/base_lm-axmodels/MiniCPMForCausalLM_p64_l19_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "ede8fc90abd1f99344880d9ec56d5086b46a2ff9f3843fd400409714f9165c17",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "base_lm-axmodels/MiniCPMForCausalLM_p64_l1_together.axmodel",
+      "size": 17555739,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/base_lm-axmodels/MiniCPMForCausalLM_p64_l1_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "927856f2de1d38a55266bed388ab9b1d57768b749c4a8cbffac7ab2b745aca50",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "base_lm-axmodels/MiniCPMForCausalLM_p64_l20_together.axmodel",
+      "size": 17555739,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/base_lm-axmodels/MiniCPMForCausalLM_p64_l20_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "c8cca37a72c959230e830b852c580efbf3b537f15fc2dbce6ad604ee148d4a07",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "base_lm-axmodels/MiniCPMForCausalLM_p64_l21_together.axmodel",
+      "size": 17555739,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/base_lm-axmodels/MiniCPMForCausalLM_p64_l21_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "34fbf2c43bfbc2471f3e255a81907bb71d63b0f9ffc4151bb71163a0bdd60b86",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "base_lm-axmodels/MiniCPMForCausalLM_p64_l22_together.axmodel",
+      "size": 17555739,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/base_lm-axmodels/MiniCPMForCausalLM_p64_l22_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "66a523be7636d730cafa1aa22db929c7ffdf7876e4207d68cdbc2d04dc049bb2",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "base_lm-axmodels/MiniCPMForCausalLM_p64_l23_together.axmodel",
+      "size": 17555739,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/base_lm-axmodels/MiniCPMForCausalLM_p64_l23_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "5a4df1c1be20d45d0064e4aba003d830b8785e7ea62e8313455cf99d6e13ce5c",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "base_lm-axmodels/MiniCPMForCausalLM_p64_l2_together.axmodel",
+      "size": 17555739,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/base_lm-axmodels/MiniCPMForCausalLM_p64_l2_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "3f13e75f8c079b19a750b9c80784cdfd145bfcbb96c163d24a39be704f589302",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "base_lm-axmodels/MiniCPMForCausalLM_p64_l3_together.axmodel",
+      "size": 17555739,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/base_lm-axmodels/MiniCPMForCausalLM_p64_l3_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "d05ef03272b545428d7f42dc2455a53e1d44844b300ab7771df24211309dc404",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "base_lm-axmodels/MiniCPMForCausalLM_p64_l4_together.axmodel",
+      "size": 17555739,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/base_lm-axmodels/MiniCPMForCausalLM_p64_l4_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "0b228835da8e1c49a91c7f1180ebddebfe49c43bc2434141228e6405598099f4",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "base_lm-axmodels/MiniCPMForCausalLM_p64_l5_together.axmodel",
+      "size": 17555739,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/base_lm-axmodels/MiniCPMForCausalLM_p64_l5_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "24ca17b15f3e09cf1c5c204c081392889fdab3e15a3015002955fe9a0220a048",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "base_lm-axmodels/MiniCPMForCausalLM_p64_l6_together.axmodel",
+      "size": 17555739,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/base_lm-axmodels/MiniCPMForCausalLM_p64_l6_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "57a424a62352d28079c1554638aa1369918986f1f4e6d745480662a730c7f337",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "base_lm-axmodels/MiniCPMForCausalLM_p64_l7_together.axmodel",
+      "size": 17555739,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/base_lm-axmodels/MiniCPMForCausalLM_p64_l7_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "f79c8caf897df24f2760a7dc1e7796f191a1fa1c403172358e24b87f82909e27",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "base_lm-axmodels/MiniCPMForCausalLM_p64_l8_together.axmodel",
+      "size": 17555739,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/base_lm-axmodels/MiniCPMForCausalLM_p64_l8_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "d61c44b28283ceca2174eb96caa95811d15b73846e5423d8a2e6af75645d4885",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "base_lm-axmodels/MiniCPMForCausalLM_p64_l9_together.axmodel",
+      "size": 17555739,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/base_lm-axmodels/MiniCPMForCausalLM_p64_l9_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "346e5510ae035e1cb284b6e33b079c92e6df7fe7f61c85d52efe8e162363900c",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "base_lm-axmodels/MiniCPMForCausalLM_post.axmodel",
+      "size": 82174563,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/base_lm-axmodels/MiniCPMForCausalLM_post.axmodel",
+      "verifiedHashes": {
+        "sha256": "6e563de5614ca4a8ed2d7a492a9109ca95f56522f0159ee4e9d2582cb9279c03",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "base_lm-axmodels/model.embed_tokens.weight.bfloat16.bin",
+      "size": 150421504,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/base_lm-axmodels/model.embed_tokens.weight.bfloat16.bin",
+      "verifiedHashes": {
+        "sha256": "18212bf6b1f1aaa32a559e6ee9e48338bd97b266f1da180052e8756b07ed409d",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "base_lm-axmodels/model.embed_tokens.weight.float32.bin",
+      "size": 300843008,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/base_lm-axmodels/model.embed_tokens.weight.float32.bin",
+      "verifiedHashes": {
+        "sha256": "aeb737e73e6a84a7ad76d3321eb1fb89a29073a67be2c5f04ab37b496e86fcf3",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "base_lm-axmodels/model.embed_tokens.weight.npy",
+      "size": 300843136,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/base_lm-axmodels/model.embed_tokens.weight.npy",
+      "verifiedHashes": {
+        "sha256": "8a13e0da6a95e7eb2562468f65e8d64dc412f628057cd9387aaa68cbd4a4cc8f",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "config.json",
+      "size": 0,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/config.json",
+      "verifiedHashes": {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "gitBlob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+      }
+    },
+    {
+      "path": "feat_decoder_estimator_decoder-axmodels/MiniCPMForCausalLM_p5_l0_together.axmodel",
+      "size": 16718702,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/feat_decoder_estimator_decoder-axmodels/MiniCPMForCausalLM_p5_l0_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "5aa16bbb9e750bbc1640054f061d894f62661f4b201913fbefcb5f6e185cd59f",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "feat_decoder_estimator_decoder-axmodels/MiniCPMForCausalLM_p5_l1_together.axmodel",
+      "size": 16718702,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/feat_decoder_estimator_decoder-axmodels/MiniCPMForCausalLM_p5_l1_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "b6be933caaab09678d42dde354d984403e85a7bc4144b4963bcbfa2feecdcbbd",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "feat_decoder_estimator_decoder-axmodels/MiniCPMForCausalLM_p5_l2_together.axmodel",
+      "size": 16718702,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/feat_decoder_estimator_decoder-axmodels/MiniCPMForCausalLM_p5_l2_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "7fa7514a1c67e47cb64d0d808c7940d4ce7653487ac0480d294469af0e7b38b2",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "feat_decoder_estimator_decoder-axmodels/MiniCPMForCausalLM_p5_l3_together.axmodel",
+      "size": 16718702,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/feat_decoder_estimator_decoder-axmodels/MiniCPMForCausalLM_p5_l3_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "ce8a5391dc2a2085b7d351b3f54ccb41f6d3aef443ecc799614618b7bade7312",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "feat_decoder_estimator_decoder-axmodels/MiniCPMForCausalLM_post.axmodel",
+      "size": 37558,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/feat_decoder_estimator_decoder-axmodels/MiniCPMForCausalLM_post.axmodel",
+      "verifiedHashes": {
+        "sha256": "92e46ec3a4a968a76543e6b9e8e6e3698c43d355b0e34459bce0ef9084e68591",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "feat_decoder_estimator_decoder-axmodels/model.embed_tokens.weight.bfloat16.bin",
+      "size": 2048,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/feat_decoder_estimator_decoder-axmodels/model.embed_tokens.weight.bfloat16.bin",
+      "verifiedHashes": {
+        "sha256": "e5a00aa9991ac8a5ee3109844d84a55583bd20572ad3ffcd42792f3c36b183ad",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "feat_decoder_estimator_decoder-axmodels/model.embed_tokens.weight.float32.bin",
+      "size": 4096,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/feat_decoder_estimator_decoder-axmodels/model.embed_tokens.weight.float32.bin",
+      "verifiedHashes": {
+        "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "feat_decoder_estimator_decoder-axmodels/model.embed_tokens.weight.npy",
+      "size": 4224,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/feat_decoder_estimator_decoder-axmodels/model.embed_tokens.weight.npy",
+      "verifiedHashes": {
+        "sha256": "28c6c71f63e0d04a6e6c4871655c8c69ace12f00aa50e7c704fa94dfe707eaa1",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "feat_encoder_encoder-axmodels/MiniCPMForCausalLM_p3_l0_together.axmodel",
+      "size": 16695054,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/feat_encoder_encoder-axmodels/MiniCPMForCausalLM_p3_l0_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "c4bf61a6a3a261173f1c764b06731e9cc99dd00f633dd01cce94535f720e389d",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "feat_encoder_encoder-axmodels/MiniCPMForCausalLM_p3_l1_together.axmodel",
+      "size": 16695054,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/feat_encoder_encoder-axmodels/MiniCPMForCausalLM_p3_l1_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "e1fedbd5e1c316695931347752e4500df9939bd36e6cd21a8e640f66395a0d00",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "feat_encoder_encoder-axmodels/MiniCPMForCausalLM_p3_l2_together.axmodel",
+      "size": 16695054,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/feat_encoder_encoder-axmodels/MiniCPMForCausalLM_p3_l2_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "d0570b6522c5f2e533345ea41ecfec3b7d7389f7557729fa7441494373c3920b",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "feat_encoder_encoder-axmodels/MiniCPMForCausalLM_p3_l3_together.axmodel",
+      "size": 16695054,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/feat_encoder_encoder-axmodels/MiniCPMForCausalLM_p3_l3_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "5ca8a920dcbb282dd266e2aa69edd2c83e3b9510f31bdf597dafa18e8204c1ee",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "feat_encoder_encoder-axmodels/MiniCPMForCausalLM_post.axmodel",
+      "size": 37558,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/feat_encoder_encoder-axmodels/MiniCPMForCausalLM_post.axmodel",
+      "verifiedHashes": {
+        "sha256": "d51ee039826ff233cae480c5d3562bc65058d2fe3649dc0660b8411337648182",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "feat_encoder_encoder-axmodels/model.embed_tokens.weight.bfloat16.bin",
+      "size": 2048,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/feat_encoder_encoder-axmodels/model.embed_tokens.weight.bfloat16.bin",
+      "verifiedHashes": {
+        "sha256": "e5a00aa9991ac8a5ee3109844d84a55583bd20572ad3ffcd42792f3c36b183ad",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "feat_encoder_encoder-axmodels/model.embed_tokens.weight.float32.bin",
+      "size": 4096,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/feat_encoder_encoder-axmodels/model.embed_tokens.weight.float32.bin",
+      "verifiedHashes": {
+        "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "feat_encoder_encoder-axmodels/model.embed_tokens.weight.npy",
+      "size": 4224,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/feat_encoder_encoder-axmodels/model.embed_tokens.weight.npy",
+      "verifiedHashes": {
+        "sha256": "28c6c71f63e0d04a6e6c4871655c8c69ace12f00aa50e7c704fa94dfe707eaa1",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "main_ax650",
+      "size": 6718128,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/main_ax650",
+      "verifiedHashes": {
+        "sha256": "c81f93c3b1089c2279c98af1019d5e852e8a8ffe0f23b577d2960e20be478ff5",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "onnxruntime-aarch64-none-gnu-1.16.0/lib/cmake/onnxruntime/onnxruntimeConfig.cmake",
+      "size": 939,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/onnxruntime-aarch64-none-gnu-1.16.0/lib/cmake/onnxruntime/onnxruntimeConfig.cmake",
+      "verifiedHashes": {
+        "sha256": "880b8c3ceae1ac013b7442b852ae4f7674a439803a2f8dcb875f5043913e62bc",
+        "gitBlob": "7d529981ed8e1ce882e33c73ffe9cf79afaf464f"
+      }
+    },
+    {
+      "path": "onnxruntime-aarch64-none-gnu-1.16.0/lib/cmake/onnxruntime/onnxruntimeConfigVersion.cmake",
+      "size": 2765,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/onnxruntime-aarch64-none-gnu-1.16.0/lib/cmake/onnxruntime/onnxruntimeConfigVersion.cmake",
+      "verifiedHashes": {
+        "sha256": "daf6f2bad52243f767b2c767822f2acc92bba61c65d1060073aafad9598bc1fc",
+        "gitBlob": "bacb5f34cfee334f0a1b3d1971830a9aea04b4bc"
+      }
+    },
+    {
+      "path": "onnxruntime-aarch64-none-gnu-1.16.0/lib/cmake/onnxruntime/onnxruntimeTargets-release.cmake",
+      "size": 922,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/onnxruntime-aarch64-none-gnu-1.16.0/lib/cmake/onnxruntime/onnxruntimeTargets-release.cmake",
+      "verifiedHashes": {
+        "sha256": "ddc9b0a89bdf46a61b307b7075e96ea049cdea18253b283278da934a135bb0d3",
+        "gitBlob": "dd7c36b84ead8385b13cfb5cdf9cd687b51c0a88"
+      }
+    },
+    {
+      "path": "onnxruntime-aarch64-none-gnu-1.16.0/lib/cmake/onnxruntime/onnxruntimeTargets.cmake",
+      "size": 4008,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/onnxruntime-aarch64-none-gnu-1.16.0/lib/cmake/onnxruntime/onnxruntimeTargets.cmake",
+      "verifiedHashes": {
+        "sha256": "68901bc4dc219155303c8c692f12da05e341392cc0a0dfb7f04dd51ee52f2083",
+        "gitBlob": "4e8fcc209860b44477932cfca9da7c1e931d924b"
+      }
+    },
+    {
+      "path": "onnxruntime-aarch64-none-gnu-1.16.0/lib/libonnxruntime.so",
+      "size": 18085192,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/onnxruntime-aarch64-none-gnu-1.16.0/lib/libonnxruntime.so",
+      "verifiedHashes": {
+        "sha256": "4c3547fa67e5c721bf8652b40878ac37fbb89d3b98f3bd45cee856a7db51dea5",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "onnxruntime-aarch64-none-gnu-1.16.0/lib/libonnxruntime.so.1.16.0",
+      "size": 18085192,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/onnxruntime-aarch64-none-gnu-1.16.0/lib/libonnxruntime.so.1.16.0",
+      "verifiedHashes": {
+        "sha256": "4c3547fa67e5c721bf8652b40878ac37fbb89d3b98f3bd45cee856a7db51dea5",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "onnxruntime-aarch64-none-gnu-1.16.0/lib/libonnxruntime_providers_shared.so",
+      "size": 9992,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/onnxruntime-aarch64-none-gnu-1.16.0/lib/libonnxruntime_providers_shared.so",
+      "verifiedHashes": {
+        "sha256": "75f61040045e021e9385081db84cf538e9581bcd64f9077abdbb2d8a4ec6d989",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "onnxruntime-aarch64-none-gnu-1.16.0/lib/pkgconfig/libonnxruntime.pc",
+      "size": 351,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/onnxruntime-aarch64-none-gnu-1.16.0/lib/pkgconfig/libonnxruntime.pc",
+      "verifiedHashes": {
+        "sha256": "73ca21745bdd250de50529519e53611234d40f8e02c49daa076bed14db3cbb5d",
+        "gitBlob": "defa2673e9b4cea42e9072e6ee729d81ed09b56a"
+      }
+    },
+    {
+      "path": "residual_lm-axmodels/MiniCPMForCausalLM_p64_l0_together.axmodel",
+      "size": 17555667,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/residual_lm-axmodels/MiniCPMForCausalLM_p64_l0_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "ae7d84683a50be61c55a518d7700e1bff6205a63ba2bd8a2ff2d5c06a25e5d3f",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "residual_lm-axmodels/MiniCPMForCausalLM_p64_l1_together.axmodel",
+      "size": 17555667,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/residual_lm-axmodels/MiniCPMForCausalLM_p64_l1_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "76398464db229a9f6bf8cab748790443660e1c43ef6e78bd3488c6c3f6aa640a",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "residual_lm-axmodels/MiniCPMForCausalLM_p64_l2_together.axmodel",
+      "size": 17555667,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/residual_lm-axmodels/MiniCPMForCausalLM_p64_l2_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "36ffdd889bc995c1c55761e584537633372ff8a5fad4cb46d2dc9c82f105d7f4",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "residual_lm-axmodels/MiniCPMForCausalLM_p64_l3_together.axmodel",
+      "size": 17555667,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/residual_lm-axmodels/MiniCPMForCausalLM_p64_l3_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "117b81d372e02c9f573c0e64dbe8c4ff0bd29a6b6bf7882bb0c07d92da4c8fc9",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "residual_lm-axmodels/MiniCPMForCausalLM_p64_l4_together.axmodel",
+      "size": 17555667,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/residual_lm-axmodels/MiniCPMForCausalLM_p64_l4_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "f44c1dc3a3f091030d19211fe72d14d6009ced273802895cf6fc0b44ff2c0c7e",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "residual_lm-axmodels/MiniCPMForCausalLM_p64_l5_together.axmodel",
+      "size": 17555667,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/residual_lm-axmodels/MiniCPMForCausalLM_p64_l5_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "f6cfe0d9d40d268226f2fde548e02d88d4d5e345f7a9076f369ced07d8a9a67d",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "residual_lm-axmodels/MiniCPMForCausalLM_post.axmodel",
+      "size": 37570,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/residual_lm-axmodels/MiniCPMForCausalLM_post.axmodel",
+      "verifiedHashes": {
+        "sha256": "782bed54fd14dc1cded76332ce934613e2d850ef048b0b5966b3e872342bbab8",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "residual_lm-axmodels/model.embed_tokens.weight.bfloat16.bin",
+      "size": 2048,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/residual_lm-axmodels/model.embed_tokens.weight.bfloat16.bin",
+      "verifiedHashes": {
+        "sha256": "e5a00aa9991ac8a5ee3109844d84a55583bd20572ad3ffcd42792f3c36b183ad",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "residual_lm-axmodels/model.embed_tokens.weight.float32.bin",
+      "size": 4096,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/residual_lm-axmodels/model.embed_tokens.weight.float32.bin",
+      "verifiedHashes": {
+        "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "residual_lm-axmodels/model.embed_tokens.weight.npy",
+      "size": 4224,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/residual_lm-axmodels/model.embed_tokens.weight.npy",
+      "verifiedHashes": {
+        "sha256": "28c6c71f63e0d04a6e6c4871655c8c69ace12f00aa50e7c704fa94dfe707eaa1",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "run_ax650.py",
+      "size": 1493,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/run_ax650.py",
+      "verifiedHashes": {
+        "sha256": "2ea91c14d75fc6f8a077077d10664d86ed1c1884969005c052629d10eec4fc57",
+        "gitBlob": "073e2e7041d85fd9641430b2901c0229a9b782b5"
+      }
+    },
+    {
+      "path": "run_ax650.sh",
+      "size": 650,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/run_ax650.sh",
+      "verifiedHashes": {
+        "sha256": "186f4de1fc02ee53770c485a8726704013546e89720c071bbe8025b9d0a810dc",
+        "gitBlob": "3d6903cc68d553497f32099693bf7ec96fccea14"
+      }
+    },
+    {
+      "path": "tokenizer.py",
+      "size": 7997,
+      "url": "https://huggingface.co/AXERA-TECH/VoxCPM/resolve/4362ceca842ace15a8f7e67a2302f72143a60f06/tokenizer.py",
+      "verifiedHashes": {
+        "sha256": "cdfd1421d18a50d0e1ea1e8740c801507695394f2c2c6c87f0954a665e0f6d0d",
+        "gitBlob": "1296a429f4f10f4e628dcb404b48716ec10f3248"
+      }
+    }
+  ],
+  "runnerSha256": "bb34ad7b182cd8ba4748282921cb4453bc8685235dbee576a683be4f3c2acdd7"
+}

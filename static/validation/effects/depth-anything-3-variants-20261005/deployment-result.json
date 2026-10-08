@@ -1,0 +1,5304 @@
+{
+  "modelId": "Depth-Anything-3",
+  "revision": "7bf36032e88d4cfba089a6ddb05fa99724742177",
+  "date": "2026-10-05",
+  "variants": [
+    {
+      "label": "da3-base",
+      "observation": "街道近处车辆、远处建筑及桥梁纵深形成可辨认的层次；行人、栏杆和玻璃边缘较模糊。室内桌面反射、线描和绘画的输出不能作为真实几何判断。 20张图均完成两轮，原始输入、输出张量及结果图一致。右侧对每张图单独归一化；颜色表示该图内的输出数值分布，不能跨图比较，也不能从颜色读取米数。",
+      "previews": [
+        {
+          "caption": "da3-base / demo01：左为输入，右为深度可视化",
+          "path": "/validation/effects/depth-anything-3-variants-20261005/da3-base-demo01.png"
+        },
+        {
+          "caption": "da3-base / demo06：左为输入，右为深度可视化",
+          "path": "/validation/effects/depth-anything-3-variants-20261005/da3-base-demo06.png"
+        },
+        {
+          "caption": "da3-base / demo10：左为输入，右为深度可视化",
+          "path": "/validation/effects/depth-anything-3-variants-20261005/da3-base-demo10.png"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "样图",
+            "原始输出最小值",
+            "原始输出最大值",
+            "非正值像素数"
+          ],
+          "rows": [
+            [
+              "demo01",
+              "0.325088",
+              "3.8922",
+              "0"
+            ],
+            [
+              "demo06",
+              "0.334686",
+              "1.70934",
+              "0"
+            ],
+            [
+              "demo10",
+              "0.475097",
+              "1.47088",
+              "0"
+            ]
+          ]
+        },
+        {
+          "headers": [
+            "样图",
+            "近处区域",
+            "远处区域",
+            "近处中位值",
+            "远处中位值",
+            "近值小于远值"
+          ],
+          "rows": [
+            [
+              "demo01",
+              "右下前景汽车挡风玻璃",
+              "左上远处高楼立面",
+              "0.336211",
+              "3.02718",
+              "一致"
+            ],
+            [
+              "demo06",
+              "桥上前景人物上衣",
+              "远处门洞内部",
+              "1.17932",
+              "1.69138",
+              "一致"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "completed": true,
+        "provider": "AXCLRTExecutionProvider",
+        "inferenceEvidence": "original-depth-tensors-and-visualization",
+        "modelId": "Depth-Anything-3",
+        "revision": "7bf36032e88d4cfba089a6ddb05fa99724742177",
+        "actualCapacity": "16GB",
+        "sessions": [
+          {
+            "model": "models-ax650/da3-base.axmodel",
+            "sha256": "02f0291bb629de91860a17174351c82825a975f4979100882399219f39764ea6",
+            "allFinite": true,
+            "runMilliseconds": [
+              85.07240099970659,
+              81.17055399998208,
+              77.24179000069853,
+              77.42233099997975,
+              77.22983100029523,
+              77.1222060011496,
+              77.30828899912012,
+              77.41095700112055,
+              78.69487800053321,
+              77.1312470005796,
+              77.22545599972364,
+              77.10062200021639,
+              77.21233100164682,
+              77.15516400094202,
+              77.55387400175096,
+              78.01150099840015,
+              77.26833099877695,
+              77.61279099941021,
+              77.05483100107813,
+              77.15574800022296,
+              77.08487200034142,
+              77.19103999988874,
+              78.37316800032568,
+              78.56829400043353,
+              77.21699800094939,
+              77.21670599858044,
+              81.10026200120046,
+              77.21262300037779,
+              77.24033100021188,
+              77.22808100152179,
+              76.91716299996187,
+              77.17178899838473,
+              78.11562599999888,
+              78.38658600121562,
+              77.10849700015387,
+              77.22982999985106,
+              78.65492000019003,
+              78.50850300019374,
+              77.04083000135142,
+              77.41095599885739
+            ]
+          }
+        ],
+        "originalSourceUnchanged": true,
+        "sourceScript": "python/infer.py",
+        "sourceScriptSha256": "6fcca3d7fc0966fd30473792071807c02e2936c104c40f31eff070a930c700fa",
+        "samples": [
+          {
+            "input": "examples/demo01.jpg",
+            "inputSha256": "35ef1bbb63f6540e49aa9b6302b9b938be4fe8b9c08c07c3694b02396b0e87e0",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "depth_conf",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "pose_enc",
+                  "shape": [
+                    1,
+                    1,
+                    9
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "9aef97a715142925bb219e30e18b96c36fb5a592322c8c0509769fff638907fe",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 0.32508817315101624,
+              "max": 3.892204761505127,
+              "mean": 1.3404620885849,
+              "std": 0.7130727171897888,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              85.07240099970659,
+              81.17055399998208
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 10,
+              "totalPixels": 2789376,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo01.jpg",
+              "image": "demo01.png",
+              "imageSha256": "87459435bbd2c42055540dbda5919240383ac3e5218e53ff4c1aaea95ed4d843",
+              "imageShape": [
+                1362,
+                4096,
+                3
+              ]
+            },
+            "ordinalChecks": [
+              {
+                "input": "examples/demo01.jpg",
+                "nearLabel": "右下前景汽车挡风玻璃",
+                "farLabel": "左上远处高楼立面",
+                "nearRect": [
+                  0.9,
+                  0.9,
+                  0.95,
+                  0.95
+                ],
+                "farRect": [
+                  0.12,
+                  0.2,
+                  0.16,
+                  0.34
+                ],
+                "inputSha256": "35ef1bbb63f6540e49aa9b6302b9b938be4fe8b9c08c07c3694b02396b0e87e0",
+                "nearMedian": 0.33621060848236084,
+                "farMedian": 3.0271825790405273,
+                "expectedNearLessThanFar": true
+              }
+            ]
+          },
+          {
+            "input": "examples/demo02.jpg",
+            "inputSha256": "c1f116034aa5abd5b5470226be2bb03bd938c8affe90389c52d10fe8b1ac7e21",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "depth_conf",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "pose_enc",
+                  "shape": [
+                    1,
+                    1,
+                    9
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "212f9f4db0299ec33f8cd5e43861722b3c75cd7a4db14f9227331283f3fddb23",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 0.39103251695632935,
+              "max": 2.340651512145996,
+              "mean": 1.2325726747512817,
+              "std": 0.4766223132610321,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              77.24179000069853,
+              77.42233099997975
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 30,
+              "totalPixels": 2788014,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo02.jpg",
+              "image": "demo02.png",
+              "imageSha256": "274adca763a508f9903553e8fa2ef793814b83053ff83529b6fc8e6f91c04d4f",
+              "imageShape": [
+                1362,
+                4094,
+                3
+              ]
+            },
+            "ordinalChecks": []
+          },
+          {
+            "input": "examples/demo03.jpg",
+            "inputSha256": "764dffd4d97bbacd620bc005fa86837018393ccb5ffd1059c2245a3cacff7782",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "depth_conf",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "pose_enc",
+                  "shape": [
+                    1,
+                    1,
+                    9
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "90a22209e31d13dc2f3dab5a1ec1930fbd3e589ddc1e7f49ae74eab6a3a1e011",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 0.7497961521148682,
+              "max": 1.4812238216400146,
+              "mean": 0.9238206744194031,
+              "std": 0.10213710367679596,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              77.22983100029523,
+              77.1222060011496
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 21,
+              "totalPixels": 2577050,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo03.jpg",
+              "image": "demo03.png",
+              "imageSha256": "bb795a070c9b10c2612604f1498567a09a7eb8fedf0fc2e0c92b973c14c626c1",
+              "imageShape": [
+                1295,
+                3980,
+                3
+              ]
+            },
+            "ordinalChecks": []
+          },
+          {
+            "input": "examples/demo04.jpg",
+            "inputSha256": "3a301f4e0361fe75ca4d256a35062f87eecc3f7655d747c9def3259c86e26a45",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "depth_conf",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "pose_enc",
+                  "shape": [
+                    1,
+                    1,
+                    9
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "05d998acc566fbbc2801131dcd8ca325539c36890903a5190266b1f08fafa03c",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 0.436539888381958,
+              "max": 1.4821339845657349,
+              "mean": 0.9074394106864929,
+              "std": 0.29795387387275696,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              77.30828899912012,
+              77.41095700112055
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 10,
+              "totalPixels": 1665600,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo04.jpg",
+              "image": "demo04.png",
+              "imageSha256": "361580f5de9409972c91517bb9528f4b35e7c498ca4bf8581817932ede61f8ae",
+              "imageShape": [
+                1041,
+                3200,
+                3
+              ]
+            },
+            "ordinalChecks": []
+          },
+          {
+            "input": "examples/demo05.jpg",
+            "inputSha256": "50e7e2f057c5a2d27bb09b0b3e814147966e30139ddaf54362c72746a5320339",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "depth_conf",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "pose_enc",
+                  "shape": [
+                    1,
+                    1,
+                    9
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "b8f01cfff6b39d7c3973a44511301ac11ccae9b6c85f56187f0d0119cbf20d27",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 0.8135892152786255,
+              "max": 1.084482192993164,
+              "mean": 0.9196308255195618,
+              "std": 0.059540361166000366,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              78.69487800053321,
+              77.1312470005796
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 29,
+              "totalPixels": 2727936,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo05.jpg",
+              "image": "demo05.png",
+              "imageSha256": "e8d01f5fddc61fba116be775ecbfde40c0c2fe2ec28c69620c754487a98fbf19",
+              "imageShape": [
+                1332,
+                4096,
+                3
+              ]
+            },
+            "ordinalChecks": []
+          },
+          {
+            "input": "examples/demo06.jpg",
+            "inputSha256": "0fd815bddeab139e7477c948a22fffdf84d9b87f81d77dcf6fd8ef39ebaaafb5",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "depth_conf",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "pose_enc",
+                  "shape": [
+                    1,
+                    1,
+                    9
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "124ad358dcae6a295563bab022916f622b8438bc574476deb8b2a3d9b936335a",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 0.3346861004829407,
+              "max": 1.70933997631073,
+              "mean": 0.8580187559127808,
+              "std": 0.27812886238098145,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              77.22545599972364,
+              77.10062200021639
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 14,
+              "totalPixels": 2789376,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo06.jpg",
+              "image": "demo06.png",
+              "imageSha256": "e8ce4cc1f69990e2bfa73519814c7411908669eebcc22711da56a9f7719451bf",
+              "imageShape": [
+                1362,
+                4096,
+                3
+              ]
+            },
+            "ordinalChecks": [
+              {
+                "input": "examples/demo06.jpg",
+                "nearLabel": "桥上前景人物上衣",
+                "farLabel": "远处门洞内部",
+                "nearRect": [
+                  0.398,
+                  0.802,
+                  0.418,
+                  0.83
+                ],
+                "farRect": [
+                  0.515,
+                  0.83,
+                  0.536,
+                  0.86
+                ],
+                "inputSha256": "0fd815bddeab139e7477c948a22fffdf84d9b87f81d77dcf6fd8ef39ebaaafb5",
+                "nearMedian": 1.179319977760315,
+                "farMedian": 1.6913825273513794,
+                "expectedNearLessThanFar": true
+              }
+            ]
+          },
+          {
+            "input": "examples/demo07.jpg",
+            "inputSha256": "345bec735adc4c238bf14ddf1d182c4881f8ba08814c4f4074c1d79e9e4adc52",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "depth_conf",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "pose_enc",
+                  "shape": [
+                    1,
+                    1,
+                    9
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "97975d78e8bec4ddccf040694991fe025e13aed6b964d23e231016ddf93dcfc7",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 0.6031796336174011,
+              "max": 1.0521305799484253,
+              "mean": 0.9030125737190247,
+              "std": 0.11251509189605713,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              77.21233100164682,
+              77.15516400094202
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 48,
+              "totalPixels": 3373496,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo07.jpg",
+              "image": "demo07.png",
+              "imageSha256": "cde08faff83793f1687ab862ac35298b808f3cbb1133e112fd5a93fa6d88f5a3",
+              "imageShape": [
+                1498,
+                4504,
+                3
+              ]
+            },
+            "ordinalChecks": []
+          },
+          {
+            "input": "examples/demo08.jpg",
+            "inputSha256": "d32b480349013be5f84521b0df1d6590139163aef8457f051076ed03c7371e6f",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "depth_conf",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "pose_enc",
+                  "shape": [
+                    1,
+                    1,
+                    9
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "16e6ad0d9052ac81370dd801448b9c339de1baa122d8ea7aa49e257114757ae9",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 0.7102460861206055,
+              "max": 1.2498809099197388,
+              "mean": 0.9225946664810181,
+              "std": 0.120343878865242,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              77.55387400175096,
+              78.01150099840015
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": true,
+              "differentPixels": 0,
+              "totalPixels": 272000,
+              "maxPaletteIndexDifference": 0,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo08.jpg",
+              "image": "demo08.png",
+              "imageSha256": "32822729fbb31804b24797407316790cfa24fda53302ba7b6c5dd2daef731c3e",
+              "imageShape": [
+                425,
+                1280,
+                3
+              ]
+            },
+            "ordinalChecks": []
+          },
+          {
+            "input": "examples/demo09.jpg",
+            "inputSha256": "6a64033ba69bb408c092dbff811abfbcb0196f1f87541902d03d2a909a0b8ea9",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "depth_conf",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "pose_enc",
+                  "shape": [
+                    1,
+                    1,
+                    9
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "a71c4a822c8b3f90aa946a025219196ece999af4d6d1118bbbeb070a87717af1",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 0.3374992907047272,
+              "max": 2.54626202583313,
+              "mean": 1.2781543731689453,
+              "std": 0.5126875638961792,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              77.26833099877695,
+              77.61279099941021
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 22,
+              "totalPixels": 3324932,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo09.jpg",
+              "image": "demo09.png",
+              "imageSha256": "dc1c428fb130f1417abb4ec8b2c1a3f176990da2005f7ed4914a936460ba2425",
+              "imageShape": [
+                1487,
+                4472,
+                3
+              ]
+            },
+            "ordinalChecks": []
+          },
+          {
+            "input": "examples/demo10.jpg",
+            "inputSha256": "bc77f215081f58de8d079e821e2808f6ee2727dfa729c10a5921c186a32c7638",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "depth_conf",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "pose_enc",
+                  "shape": [
+                    1,
+                    1,
+                    9
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "4726f45a61ba273c806f8f272a3be1106375cb2efab5737401d414df0d88acdd",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 0.47509706020355225,
+              "max": 1.4708812236785889,
+              "mean": 0.9336711168289185,
+              "std": 0.29678887128829956,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              77.05483100107813,
+              77.15574800022296
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 12,
+              "totalPixels": 2727936,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo10.jpg",
+              "image": "demo10.png",
+              "imageSha256": "40de4723bb4ec8465d5b7def28367abd59f04b672278c9b0e4436fc34d255f06",
+              "imageShape": [
+                1332,
+                4096,
+                3
+              ]
+            },
+            "ordinalChecks": []
+          },
+          {
+            "input": "examples/demo11.jpg",
+            "inputSha256": "150ef98e997ee6ff705bd06105c343f76a8f181ef93ff9ceebbd62a3ab6b592b",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "depth_conf",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "pose_enc",
+                  "shape": [
+                    1,
+                    1,
+                    9
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "84790469a36e0fc6cf29bd3e6909f29223a7b28ccb263c320b34338111aebb2b",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 0.6243612766265869,
+              "max": 2.0968973636627197,
+              "mean": 1.3274894952774048,
+              "std": 0.4565778076648712,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              77.08487200034142,
+              77.19103999988874
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 29,
+              "totalPixels": 2545686,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo11.jpg",
+              "image": "demo11.png",
+              "imageSha256": "65d0d640597993788cae2327036283f3418ba25f2a359e3632d39de57b25c479",
+              "imageShape": [
+                1287,
+                3956,
+                3
+              ]
+            },
+            "ordinalChecks": []
+          },
+          {
+            "input": "examples/demo12.jpg",
+            "inputSha256": "264458adcf5af6e3733dfda7ef4628c4a1dc49ed249aa8896256d9534a8377c4",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "depth_conf",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "pose_enc",
+                  "shape": [
+                    1,
+                    1,
+                    9
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "86ce937559dd1d34a85ab7918dbc16351ab293af0c9d35db92541443ed6ab4d4",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 0.7329998016357422,
+              "max": 1.0946593284606934,
+              "mean": 0.9475011229515076,
+              "std": 0.08710777014493942,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              78.37316800032568,
+              78.56829400043353
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 90,
+              "totalPixels": 3299180,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo12.jpg",
+              "image": "demo12.png",
+              "imageSha256": "b05b3538b20113c1098a3f79ea509676f398e0acc4a02520ebba360483e412ee",
+              "imageShape": [
+                1465,
+                4504,
+                3
+              ]
+            },
+            "ordinalChecks": []
+          },
+          {
+            "input": "examples/demo13.jpg",
+            "inputSha256": "9168fc752a002d50138a56621e8de5fab7fed125a978dd293319d28d30993564",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "depth_conf",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "pose_enc",
+                  "shape": [
+                    1,
+                    1,
+                    9
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "6db1590e6033f189e8d29e464dc84222fcf4b863090a5f83468051fe2b96fb29",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 0.6344556212425232,
+              "max": 1.0633833408355713,
+              "mean": 0.8792241811752319,
+              "std": 0.07772031426429749,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              77.21699800094939,
+              77.21670599858044
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 28,
+              "totalPixels": 2727936,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo13.jpg",
+              "image": "demo13.png",
+              "imageSha256": "e52fdf7b824b94ab924107db179359cc098edcb15570ed85a8420ee25d77ae13",
+              "imageShape": [
+                1332,
+                4096,
+                3
+              ]
+            },
+            "ordinalChecks": []
+          },
+          {
+            "input": "examples/demo14.jpg",
+            "inputSha256": "01480d952bc950332f0eea31da0777f66d5f285d8edfe2a5f47508f4b260a99f",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "depth_conf",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "pose_enc",
+                  "shape": [
+                    1,
+                    1,
+                    9
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "bba58cee4333e938ee60753122fa395c857376de1128b3283e0046f5ba7ed8b7",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 0.5114201903343201,
+              "max": 1.4135419130325317,
+              "mean": 0.8931332230567932,
+              "std": 0.16566352546215057,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              81.10026200120046,
+              77.21262300037779
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 39,
+              "totalPixels": 2727936,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo14.jpg",
+              "image": "demo14.png",
+              "imageSha256": "03d9788970e716dae25738709edfd0e51069f435e7ed6b8c16c55197c627c261",
+              "imageShape": [
+                1332,
+                4096,
+                3
+              ]
+            },
+            "ordinalChecks": []
+          },
+          {
+            "input": "examples/demo15.jpg",
+            "inputSha256": "bf60ce3879f627e8886280cc61442174c91908894a5b059681341fed600f7db3",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "depth_conf",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "pose_enc",
+                  "shape": [
+                    1,
+                    1,
+                    9
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "6e5cb9d99253bbc5d4358915664b471e9401401c84a056b084b89c025df3432e",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 0.37332600355148315,
+              "max": 1.3162388801574707,
+              "mean": 0.9332135319709778,
+              "std": 0.26083865761756897,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              77.24033100021188,
+              77.22808100152179
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 16,
+              "totalPixels": 2789376,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo15.jpg",
+              "image": "demo15.png",
+              "imageSha256": "156c222edb07618c6d7b6013abcfba5a5f56f1d2bfc421373f67925191f81393",
+              "imageShape": [
+                1362,
+                4096,
+                3
+              ]
+            },
+            "ordinalChecks": []
+          },
+          {
+            "input": "examples/demo16.jpg",
+            "inputSha256": "a92e51732b38ad8b21b5cbbc6883374bd5ab56bb4907d6c4f1e13307970480ee",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "depth_conf",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "pose_enc",
+                  "shape": [
+                    1,
+                    1,
+                    9
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "9022cbaa33f6816a378bd8e6e8bc19cacf14a821cffdf203b13814f4565dfccd",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 0.3772975504398346,
+              "max": 2.254601001739502,
+              "mean": 1.0001046657562256,
+              "std": 0.36427921056747437,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              76.91716299996187,
+              77.17178899838473
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 14,
+              "totalPixels": 2727936,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo16.jpg",
+              "image": "demo16.png",
+              "imageSha256": "42f91339ff4507b47b88778ba856fbda6b076c08b9593ca9c599244211b4c12a",
+              "imageShape": [
+                1332,
+                4096,
+                3
+              ]
+            },
+            "ordinalChecks": []
+          },
+          {
+            "input": "examples/demo17.jpg",
+            "inputSha256": "7174dcfbbb95a2e581ebf1e14cfbb4bef7a1295ae9cece405c87145223dcb32d",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "depth_conf",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "pose_enc",
+                  "shape": [
+                    1,
+                    1,
+                    9
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "5f9007770e5f41d46643656c337528d9e9effc62cd734604f7de4ec92820a67a",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 0.7348200678825378,
+              "max": 0.9759264588356018,
+              "mean": 0.8609070777893066,
+              "std": 0.055956535041332245,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              78.11562599999888,
+              78.38658600121562
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 82,
+              "totalPixels": 3253380,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo17.jpg",
+              "image": "demo17.png",
+              "imageSha256": "bbabb1e71bd421d24b41361cc3abb4081e46b755806947f1ed7fe558e595026c",
+              "imageShape": [
+                1455,
+                4472,
+                3
+              ]
+            },
+            "ordinalChecks": []
+          },
+          {
+            "input": "examples/demo18.jpg",
+            "inputSha256": "4deeb16dbee40108f194bd87c8621416110427c8ab5fc5ad6a1d9002b2b620c2",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "depth_conf",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "pose_enc",
+                  "shape": [
+                    1,
+                    1,
+                    9
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "25250a40091e33915374c82326fc6f847201aa8ce0785f0084809395b86947b7",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 0.8561179041862488,
+              "max": 1.066113829612732,
+              "mean": 0.9577884674072266,
+              "std": 0.05050085484981537,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              77.10849700015387,
+              77.22982999985106
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 33,
+              "totalPixels": 1665600,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo18.jpg",
+              "image": "demo18.png",
+              "imageSha256": "135e03481ee4818d0900ba67911f0bfa8ce51affb61846f43663492334648d43",
+              "imageShape": [
+                1041,
+                3200,
+                3
+              ]
+            },
+            "ordinalChecks": []
+          },
+          {
+            "input": "examples/demo19.jpg",
+            "inputSha256": "7cdb09c34eb0b4d2ac5f6070aec47c8f983a0b1b2c9ee1fc30decafb64f1bd98",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "depth_conf",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "pose_enc",
+                  "shape": [
+                    1,
+                    1,
+                    9
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "8c0dd5a1ac9080dba3e0dacf0cbcdb57f2b5cef8db94fa8f723f5b22ba305f0c",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 0.43753278255462646,
+              "max": 1.595075011253357,
+              "mean": 0.8805006742477417,
+              "std": 0.35955336689949036,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              78.65492000019003,
+              78.50850300019374
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 12,
+              "totalPixels": 3381240,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo19.jpg",
+              "image": "demo19.png",
+              "imageSha256": "f2a0271eaf1581ada5635c7815b28fdc9cf08260c7ba52e9d1cc26b988a5673b",
+              "imageShape": [
+                1483,
+                4560,
+                3
+              ]
+            },
+            "ordinalChecks": []
+          },
+          {
+            "input": "examples/demo20.jpg",
+            "inputSha256": "2958fd1b7018e40b68ccc8d74ff8e50bf143f5046711d57c54eec2a479550ace",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "depth_conf",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "pose_enc",
+                  "shape": [
+                    1,
+                    1,
+                    9
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "acf83eb27652f0ea1c18e27eabc0e7622fcb9adeff399c913e679c845e8731bd",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 0.5932507514953613,
+              "max": 1.1679675579071045,
+              "mean": 0.8712556958198547,
+              "std": 0.11277735978364944,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              77.04083000135142,
+              77.41095599885739
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 129,
+              "totalPixels": 2602000,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo20.jpg",
+              "image": "demo20.png",
+              "imageSha256": "78cd6d93bceee18053440a1f7327c274ef27ebdd219cf87e59fae5ba240c093d",
+              "imageShape": [
+                1301,
+                4000,
+                3
+              ]
+            },
+            "ordinalChecks": []
+          }
+        ],
+        "independentProcesses": 2,
+        "qualityAccepted": false,
+        "metricScaleValidated": false
+      }
+    },
+    {
+      "label": "da3metric-large",
+      "observation": "这组街景和桥梁样图中，行人、路灯与桥梁栏杆的轮廓比base更清楚；室内桌椅与窗户区域存在层次。透明器皿和反射场景仍有含糊区域，未验证这些输出的真实距离。 20张图均完成两轮，原始输入、输出张量及结果图一致。右侧对每张图单独归一化；颜色表示该图内的输出数值分布，不能跨图比较，也不能从颜色读取米数。",
+      "previews": [
+        {
+          "caption": "da3metric-large / demo01：左为输入，右为深度可视化",
+          "path": "/validation/effects/depth-anything-3-variants-20261005/da3metric-large-demo01.png"
+        },
+        {
+          "caption": "da3metric-large / demo06：左为输入，右为深度可视化",
+          "path": "/validation/effects/depth-anything-3-variants-20261005/da3metric-large-demo06.png"
+        },
+        {
+          "caption": "da3metric-large / demo10：左为输入，右为深度可视化",
+          "path": "/validation/effects/depth-anything-3-variants-20261005/da3metric-large-demo10.png"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "样图",
+            "原始输出最小值",
+            "原始输出最大值",
+            "非正值像素数"
+          ],
+          "rows": [
+            [
+              "demo01",
+              "2.44407",
+              "88.5827",
+              "0"
+            ],
+            [
+              "demo06",
+              "2.21832",
+              "49.2072",
+              "0"
+            ],
+            [
+              "demo10",
+              "0.711051",
+              "5.0828",
+              "0"
+            ]
+          ]
+        },
+        {
+          "headers": [
+            "样图",
+            "近处区域",
+            "远处区域",
+            "近处中位值",
+            "远处中位值",
+            "近值小于远值"
+          ],
+          "rows": [
+            [
+              "demo01",
+              "右下前景汽车挡风玻璃",
+              "左上远处高楼立面",
+              "3.63053",
+              "88.5827",
+              "一致"
+            ],
+            [
+              "demo06",
+              "桥上前景人物上衣",
+              "远处门洞内部",
+              "9.81532",
+              "44.1031",
+              "一致"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "completed": true,
+        "provider": "AXCLRTExecutionProvider",
+        "inferenceEvidence": "original-depth-tensors-and-visualization",
+        "modelId": "Depth-Anything-3",
+        "revision": "7bf36032e88d4cfba089a6ddb05fa99724742177",
+        "actualCapacity": "16GB",
+        "sessions": [
+          {
+            "model": "models-ax650/da3metric-large.axmodel",
+            "sha256": "7f65d9248e36663e989c926653a6f411aecbd822504c4c1364be05f22174e0c9",
+            "allFinite": true,
+            "runMilliseconds": [
+              230.8168219988147,
+              230.9177390015975,
+              230.2559449999535,
+              229.49294299905887,
+              226.70314000060898,
+              226.36393100037822,
+              226.5587649999361,
+              226.54359900116106,
+              226.51326500090363,
+              226.67688999899838,
+              226.92672399898584,
+              226.52609900069365,
+              226.4412229997106,
+              226.6413069992268,
+              227.25876799995604,
+              226.9367669996427,
+              226.39893100131303,
+              227.0615170000383,
+              230.31165400061582,
+              226.54505699938454,
+              226.55088999999862,
+              229.34564999923168,
+              227.36930899918661,
+              227.4086849993182,
+              226.62089100049343,
+              226.78414099937072,
+              226.37093100092898,
+              226.86414099916874,
+              226.54039000008197,
+              226.73026499978732,
+              226.6135990012117,
+              226.74834999997984,
+              227.8101029987738,
+              227.70268600106647,
+              226.399223000044,
+              226.68534900003579,
+              227.6035190006951,
+              227.7694780004822,
+              226.79676599909726,
+              226.72647400031565
+            ]
+          }
+        ],
+        "originalSourceUnchanged": true,
+        "sourceScript": "python/infer.py",
+        "sourceScriptSha256": "6fcca3d7fc0966fd30473792071807c02e2936c104c40f31eff070a930c700fa",
+        "samples": [
+          {
+            "input": "examples/demo01.jpg",
+            "inputSha256": "35ef1bbb63f6540e49aa9b6302b9b938be4fe8b9c08c07c3694b02396b0e87e0",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "sky",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "1d7fa526052ff4a9716c6824b070a0b224e09049f25bff1ca61a358172cac658",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 2.444070339202881,
+              "max": 88.58267974853516,
+              "mean": 24.99493980407715,
+              "std": 18.134883880615234,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              230.8168219988147,
+              230.9177390015975
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 15,
+              "totalPixels": 2789376,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo01.jpg",
+              "image": "demo01.png",
+              "imageSha256": "16896a7a40bf37eac65316d0ec74afa99c7dc3d390aa88f84f4aa71143fe9969",
+              "imageShape": [
+                1362,
+                4096,
+                3
+              ]
+            },
+            "ordinalChecks": [
+              {
+                "input": "examples/demo01.jpg",
+                "nearLabel": "右下前景汽车挡风玻璃",
+                "farLabel": "左上远处高楼立面",
+                "nearRect": [
+                  0.9,
+                  0.9,
+                  0.95,
+                  0.95
+                ],
+                "farRect": [
+                  0.12,
+                  0.2,
+                  0.16,
+                  0.34
+                ],
+                "inputSha256": "35ef1bbb63f6540e49aa9b6302b9b938be4fe8b9c08c07c3694b02396b0e87e0",
+                "nearMedian": 3.630525588989258,
+                "farMedian": 88.58267974853516,
+                "expectedNearLessThanFar": true
+              }
+            ]
+          },
+          {
+            "input": "examples/demo02.jpg",
+            "inputSha256": "c1f116034aa5abd5b5470226be2bb03bd938c8affe90389c52d10fe8b1ac7e21",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "sky",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "25d7f011566c5aa6bff545dfa0885fcd4c491eb0f618576fc078ab65cf827d1b",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 0.47718849778175354,
+              "max": 5.455900192260742,
+              "mean": 2.324533700942993,
+              "std": 1.3445827960968018,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              230.2559449999535,
+              229.49294299905887
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 29,
+              "totalPixels": 2788014,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo02.jpg",
+              "image": "demo02.png",
+              "imageSha256": "5e0224692f38e78bac2a69d8acae8c265811823d1b9cf1aff502f37dac4bb178",
+              "imageShape": [
+                1362,
+                4094,
+                3
+              ]
+            },
+            "ordinalChecks": []
+          },
+          {
+            "input": "examples/demo03.jpg",
+            "inputSha256": "764dffd4d97bbacd620bc005fa86837018393ccb5ffd1059c2245a3cacff7782",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "sky",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "de2df758ff762c2d904b9407ada939135c6664ee3b0a3417f228b463c795435c",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 0.5353162884712219,
+              "max": 0.7475502490997314,
+              "mean": 0.646051824092865,
+              "std": 0.047598376870155334,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              226.70314000060898,
+              226.36393100037822
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 11,
+              "totalPixels": 2577050,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo03.jpg",
+              "image": "demo03.png",
+              "imageSha256": "9ec8ab4145857146bf3e0bc93276d4a93d687bde7a78ba8277471ee97e7cb17f",
+              "imageShape": [
+                1295,
+                3980,
+                3
+              ]
+            },
+            "ordinalChecks": []
+          },
+          {
+            "input": "examples/demo04.jpg",
+            "inputSha256": "3a301f4e0361fe75ca4d256a35062f87eecc3f7655d747c9def3259c86e26a45",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "sky",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "aab3fbe38a6c3294333a355bc356abf6d9a8c8b2c417420dc2689f30c4904618",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 0.47718849778175354,
+              "max": 2.6995620727539062,
+              "mean": 0.9562883973121643,
+              "std": 0.7389792203903198,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              226.5587649999361,
+              226.54359900116106
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 11,
+              "totalPixels": 1665600,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo04.jpg",
+              "image": "demo04.png",
+              "imageSha256": "6cfd41d4fec6e666853cc6b215915ba3381628b7ac499af1d344bfc7a82f7f9f",
+              "imageShape": [
+                1041,
+                3200,
+                3
+              ]
+            },
+            "ordinalChecks": []
+          },
+          {
+            "input": "examples/demo05.jpg",
+            "inputSha256": "50e7e2f057c5a2d27bb09b0b3e814147966e30139ddaf54362c72746a5320339",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "sky",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "419b16e3dcaff0b54d7a3f8f79f2ae219580c2c5cb96d17dd52c27b21f57e462",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 0.9962830543518066,
+              "max": 1.149037480354309,
+              "mean": 1.0952893495559692,
+              "std": 0.03215285763144493,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              226.51326500090363,
+              226.67688999899838
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 20,
+              "totalPixels": 2727936,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo05.jpg",
+              "image": "demo05.png",
+              "imageSha256": "b5965bf46abde89eb45ae8d00fa1f45dea6beb6bddba48b9b7e44595afcf86f2",
+              "imageShape": [
+                1332,
+                4096,
+                3
+              ]
+            },
+            "ordinalChecks": []
+          },
+          {
+            "input": "examples/demo06.jpg",
+            "inputSha256": "0fd815bddeab139e7477c948a22fffdf84d9b87f81d77dcf6fd8ef39ebaaafb5",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "sky",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "84fc11d2a929d939bea92d77cb81534f51004aaad2237dd107aad0f0840d79a5",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 2.218318223953247,
+              "max": 49.207191467285156,
+              "mean": 10.714690208435059,
+              "std": 9.103399276733398,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              226.92672399898584,
+              226.52609900069365
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 17,
+              "totalPixels": 2789376,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo06.jpg",
+              "image": "demo06.png",
+              "imageSha256": "e8c918b4f1d37f7b415520b8f90c51098d3adc178ec6ea185bce80400a9adbcd",
+              "imageShape": [
+                1362,
+                4096,
+                3
+              ]
+            },
+            "ordinalChecks": [
+              {
+                "input": "examples/demo06.jpg",
+                "nearLabel": "桥上前景人物上衣",
+                "farLabel": "远处门洞内部",
+                "nearRect": [
+                  0.398,
+                  0.802,
+                  0.418,
+                  0.83
+                ],
+                "farRect": [
+                  0.515,
+                  0.83,
+                  0.536,
+                  0.86
+                ],
+                "inputSha256": "0fd815bddeab139e7477c948a22fffdf84d9b87f81d77dcf6fd8ef39ebaaafb5",
+                "nearMedian": 9.815319061279297,
+                "farMedian": 44.103050231933594,
+                "expectedNearLessThanFar": true
+              }
+            ]
+          },
+          {
+            "input": "examples/demo07.jpg",
+            "inputSha256": "345bec735adc4c238bf14ddf1d182c4881f8ba08814c4f4074c1d79e9e4adc52",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "sky",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "7986efa10d313fe854b440be5a1fb0733cec8d7e4a9d3fc757709cfd207d94f9",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 0.7191622853279114,
+              "max": 4.729979038238525,
+              "mean": 3.0351526737213135,
+              "std": 1.4350920915603638,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              226.4412229997106,
+              226.6413069992268
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 83,
+              "totalPixels": 3373496,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo07.jpg",
+              "image": "demo07.png",
+              "imageSha256": "b5ba2f8897d187f38837ebf7e83e82f2ff9356bfa2127c506ef60d0cfe100bc4",
+              "imageShape": [
+                1498,
+                4504,
+                3
+              ]
+            },
+            "ordinalChecks": []
+          },
+          {
+            "input": "examples/demo08.jpg",
+            "inputSha256": "d32b480349013be5f84521b0df1d6590139163aef8457f051076ed03c7371e6f",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "sky",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "b13a686d55b28ff56d872b49fdf7ef8a5035da1ab1e1af20f20af849158a0afa",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 0.7516056895256042,
+              "max": 3.625551223754883,
+              "mean": 1.2956109046936035,
+              "std": 0.6789483428001404,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              227.25876799995604,
+              226.9367669996427
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 5,
+              "totalPixels": 272000,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo08.jpg",
+              "image": "demo08.png",
+              "imageSha256": "7a1693f7c8f292ce05971a42a0fc9f6b757ba6b03397d7690d37332e35f53747",
+              "imageShape": [
+                425,
+                1280,
+                3
+              ]
+            },
+            "ordinalChecks": []
+          },
+          {
+            "input": "examples/demo09.jpg",
+            "inputSha256": "6a64033ba69bb408c092dbff811abfbcb0196f1f87541902d03d2a909a0b8ea9",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "sky",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "1ab578e4ad0fb457ff8e1bc3863d477721a225d85bf378a89ee3112659976a16",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 1.8857733011245728,
+              "max": 7.083477973937988,
+              "mean": 4.911497116088867,
+              "std": 1.3599929809570312,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              226.39893100131303,
+              227.0615170000383
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 24,
+              "totalPixels": 3324932,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo09.jpg",
+              "image": "demo09.png",
+              "imageSha256": "eca91a551a075f71dcb807dc00a460694e1cdf7d21cc56d2e15409021114b21f",
+              "imageShape": [
+                1487,
+                4472,
+                3
+              ]
+            },
+            "ordinalChecks": []
+          },
+          {
+            "input": "examples/demo10.jpg",
+            "inputSha256": "bc77f215081f58de8d079e821e2808f6ee2727dfa729c10a5921c186a32c7638",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "sky",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "0f41a7fe12b08e3c903e3b606bc15da78e41ad61e9b1c5efa14e3e34338fb442",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 0.7110514044761658,
+              "max": 5.08280086517334,
+              "mean": 2.9338459968566895,
+              "std": 1.2978988885879517,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              230.31165400061582,
+              226.54505699938454
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 13,
+              "totalPixels": 2727936,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo10.jpg",
+              "image": "demo10.png",
+              "imageSha256": "ba043c8e8fe2a324736c6f208cdb6f64e72b37ec47fdd4c9ee87cce56b75d91d",
+              "imageShape": [
+                1332,
+                4096,
+                3
+              ]
+            },
+            "ordinalChecks": []
+          },
+          {
+            "input": "examples/demo11.jpg",
+            "inputSha256": "150ef98e997ee6ff705bd06105c343f76a8f181ef93ff9ceebbd62a3ab6b592b",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "sky",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "6ca3ef885dbb3f9083995310213c807ec33a80c6b1dbdcf700674ecd59c73dfc",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 0.6542754769325256,
+              "max": 3.113215684890747,
+              "mean": 1.8813458681106567,
+              "std": 0.8043805956840515,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              226.55088999999862,
+              229.34564999923168
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 35,
+              "totalPixels": 2545686,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo11.jpg",
+              "image": "demo11.png",
+              "imageSha256": "e7c6d643139f448a4d90520f2fec4dd5509c40e085edbd2acb8018c032fa5f39",
+              "imageShape": [
+                1287,
+                3956,
+                3
+              ]
+            },
+            "ordinalChecks": []
+          },
+          {
+            "input": "examples/demo12.jpg",
+            "inputSha256": "264458adcf5af6e3733dfda7ef4628c4a1dc49ed249aa8896256d9534a8377c4",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "sky",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "881413e4fc93cf7ae792b8333d1cb42afc3811d871ceb47a81e1a8b477ad6c69",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 0.47718849778175354,
+              "max": 1.1341675519943237,
+              "mean": 0.6932677626609802,
+              "std": 0.1421310007572174,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              227.36930899918661,
+              227.4086849993182
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 71,
+              "totalPixels": 3299180,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo12.jpg",
+              "image": "demo12.png",
+              "imageSha256": "4a7c1df2c55747d3aa7f2ac9a0c1477e50324502fac10202b22b4edf4e2313ec",
+              "imageShape": [
+                1465,
+                4504,
+                3
+              ]
+            },
+            "ordinalChecks": []
+          },
+          {
+            "input": "examples/demo13.jpg",
+            "inputSha256": "9168fc752a002d50138a56621e8de5fab7fed125a978dd293319d28d30993564",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "sky",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "c9c96b9f6cd3320306567b45601cccbb2b2fc8159e84704019fa90a7508b5687",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 0.7124032378196716,
+              "max": 1.431565523147583,
+              "mean": 1.0896140336990356,
+              "std": 0.1376269906759262,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              226.62089100049343,
+              226.78414099937072
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 107,
+              "totalPixels": 2727936,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo13.jpg",
+              "image": "demo13.png",
+              "imageSha256": "220d55a352cbfd48a74ae0c453e08d544d4dde9057e34736ab725d7e7ffe00fc",
+              "imageShape": [
+                1332,
+                4096,
+                3
+              ]
+            },
+            "ordinalChecks": []
+          },
+          {
+            "input": "examples/demo14.jpg",
+            "inputSha256": "01480d952bc950332f0eea31da0777f66d5f285d8edfe2a5f47508f4b260a99f",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "sky",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "8cce44845261eab89799122bc205048930cee9f9b4867df6ad6974671dc5a462",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 0.47718849778175354,
+              "max": 1.1625555753707886,
+              "mean": 0.6509593725204468,
+              "std": 0.1223679855465889,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              226.37093100092898,
+              226.86414099916874
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 4,
+              "totalPixels": 2727936,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo14.jpg",
+              "image": "demo14.png",
+              "imageSha256": "d40e6b6d3781512e3e5f17cf9d2e285a595fb566912e33a060fd20e4d77d112b",
+              "imageShape": [
+                1332,
+                4096,
+                3
+              ]
+            },
+            "ordinalChecks": []
+          },
+          {
+            "input": "examples/demo15.jpg",
+            "inputSha256": "bf60ce3879f627e8886280cc61442174c91908894a5b059681341fed600f7db3",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "sky",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "515280f8c13fd693ffed5190881784a766679fa949e9bf1757f4db42a259e5eb",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 2.6590077877044678,
+              "max": 10.304838180541992,
+              "mean": 6.92142391204834,
+              "std": 1.9714348316192627,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              226.54039000008197,
+              226.73026499978732
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 19,
+              "totalPixels": 2789376,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo15.jpg",
+              "image": "demo15.png",
+              "imageSha256": "3ecca2eaf57ddbfeefdf18e3ea13474eb7132d4a454beb61ed7a568b2c44a6e1",
+              "imageShape": [
+                1362,
+                4096,
+                3
+              ]
+            },
+            "ordinalChecks": []
+          },
+          {
+            "input": "examples/demo16.jpg",
+            "inputSha256": "a92e51732b38ad8b21b5cbbc6883374bd5ab56bb4907d6c4f1e13307970480ee",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "sky",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "4715677a25caee30e7e1021f89cd463adb10662923886d841574fe36d2de4936",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 1.601893424987793,
+              "max": 24.25685691833496,
+              "mean": 9.337839126586914,
+              "std": 6.843206405639648,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              226.6135990012117,
+              226.74834999997984
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 18,
+              "totalPixels": 2727936,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo16.jpg",
+              "image": "demo16.png",
+              "imageSha256": "8cd1d0c2b474021c410aac1e32c9204cfef359a038745cf40078e9eb029af0f8",
+              "imageShape": [
+                1332,
+                4096,
+                3
+              ]
+            },
+            "ordinalChecks": []
+          },
+          {
+            "input": "examples/demo17.jpg",
+            "inputSha256": "7174dcfbbb95a2e581ebf1e14cfbb4bef7a1295ae9cece405c87145223dcb32d",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "sky",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "c6bdfe2fcd7862a6880d857ba8bd5c86a3a72f94bd7089c36936ae829f9febc9",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 0.6475164294242859,
+              "max": 0.7637719511985779,
+              "mean": 0.7166623473167419,
+              "std": 0.016855275258421898,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              227.8101029987738,
+              227.70268600106647
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 10,
+              "totalPixels": 3253380,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo17.jpg",
+              "image": "demo17.png",
+              "imageSha256": "54410ba89fa126b6ac05f44d0267e0d2c4738ca63f224f2deaa3231093a992c8",
+              "imageShape": [
+                1455,
+                4472,
+                3
+              ]
+            },
+            "ordinalChecks": []
+          },
+          {
+            "input": "examples/demo18.jpg",
+            "inputSha256": "4deeb16dbee40108f194bd87c8621416110427c8ab5fc5ad6a1d9002b2b620c2",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "sky",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "554026752512f45995ff47348daebbd9f8669d84c4862c9f06df0a74314671f0",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 1.042244553565979,
+              "max": 1.1990543603897095,
+              "mean": 1.116357445716858,
+              "std": 0.03233169764280319,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              226.399223000044,
+              226.68534900003579
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 4,
+              "totalPixels": 1665600,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo18.jpg",
+              "image": "demo18.png",
+              "imageSha256": "4560fa2d1abb161221e78f16dc3865a5845b1152fe0e1179e4fc272475ceaf03",
+              "imageShape": [
+                1041,
+                3200,
+                3
+              ]
+            },
+            "ordinalChecks": []
+          },
+          {
+            "input": "examples/demo19.jpg",
+            "inputSha256": "7cdb09c34eb0b4d2ac5f6070aec47c8f983a0b1b2c9ee1fc30decafb64f1bd98",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "sky",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "0727cbff3cc65f31c2dc109646db2ce1a07aa5bc31c038ebc2cff0adda245823",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 1.8006093502044678,
+              "max": 13.209875106811523,
+              "mean": 5.365462779998779,
+              "std": 2.952759027481079,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              227.6035190006951,
+              227.7694780004822
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 41,
+              "totalPixels": 3381240,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo19.jpg",
+              "image": "demo19.png",
+              "imageSha256": "6e2df2a7697b927579acb31519fd914c067081feefe096b98f09ae39d59c7f4a",
+              "imageShape": [
+                1483,
+                4560,
+                3
+              ]
+            },
+            "ordinalChecks": []
+          },
+          {
+            "input": "examples/demo20.jpg",
+            "inputSha256": "2958fd1b7018e40b68ccc8d74ff8e50bf143f5046711d57c54eec2a479550ace",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "sky",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "7447376462d01c02c5d10ef6d49ddfc6ab5234d239b20956339afd8ab081e36b",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 0.621832013130188,
+              "max": 0.874620258808136,
+              "mean": 0.7249980568885803,
+              "std": 0.059364743530750275,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              226.79676599909726,
+              226.72647400031565
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 30,
+              "totalPixels": 2602000,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo20.jpg",
+              "image": "demo20.png",
+              "imageSha256": "135b95c2ff680e3fe9ce9a5f22d3524d3517f18e1d363c7f582687ed77c29ccf",
+              "imageShape": [
+                1301,
+                4000,
+                3
+              ]
+            },
+            "ordinalChecks": []
+          }
+        ],
+        "independentProcesses": 2,
+        "qualityAccepted": false,
+        "metricScaleValidated": false
+      }
+    },
+    {
+      "label": "da3mono-large",
+      "observation": "街景车辆、桥梁和室内桌椅的前后层次可见；篮网与自行车轮廓可辨。远处高楼边缘有条纹，线描、绘画和透明器皿的层次需要单独判断，不据此声称深度准确。 20张图均完成两轮，原始输入、输出张量及结果图一致。右侧对每张图单独归一化；颜色表示该图内的输出数值分布，不能跨图比较，也不能从颜色读取米数。",
+      "previews": [
+        {
+          "caption": "da3mono-large / demo01：左为输入，右为深度可视化",
+          "path": "/validation/effects/depth-anything-3-variants-20261005/da3mono-large-demo01.png"
+        },
+        {
+          "caption": "da3mono-large / demo06：左为输入，右为深度可视化",
+          "path": "/validation/effects/depth-anything-3-variants-20261005/da3mono-large-demo06.png"
+        },
+        {
+          "caption": "da3mono-large / demo10：左为输入，右为深度可视化",
+          "path": "/validation/effects/depth-anything-3-variants-20261005/da3mono-large-demo10.png"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "样图",
+            "原始输出最小值",
+            "原始输出最大值",
+            "非正值像素数"
+          ],
+          "rows": [
+            [
+              "demo01",
+              "0.217787",
+              "7.33769",
+              "0"
+            ],
+            [
+              "demo06",
+              "0.232791",
+              "6.46587",
+              "0"
+            ],
+            [
+              "demo10",
+              "0.217787",
+              "3.03793",
+              "0"
+            ]
+          ]
+        },
+        {
+          "headers": [
+            "样图",
+            "近处区域",
+            "远处区域",
+            "近处中位值",
+            "远处中位值",
+            "近值小于远值"
+          ],
+          "rows": [
+            [
+              "demo01",
+              "右下前景汽车挡风玻璃",
+              "左上远处高楼立面",
+              "0.217787",
+              "7.33769",
+              "一致"
+            ],
+            [
+              "demo06",
+              "桥上前景人物上衣",
+              "远处门洞内部",
+              "1.23538",
+              "5.95534",
+              "一致"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "completed": true,
+        "provider": "AXCLRTExecutionProvider",
+        "inferenceEvidence": "original-depth-tensors-and-visualization",
+        "modelId": "Depth-Anything-3",
+        "revision": "7bf36032e88d4cfba089a6ddb05fa99724742177",
+        "actualCapacity": "16GB",
+        "sessions": [
+          {
+            "model": "models-ax650/da3mono-large.axmodel",
+            "sha256": "3d70bb9242c90ad9425733d8aacd27d18d520f2e5f6f15f86efd08d9035a8745",
+            "allFinite": true,
+            "runMilliseconds": [
+              230.6581559987535,
+              230.83315700023377,
+              226.43218099983642,
+              227.0184339995467,
+              226.7115989998274,
+              226.68884899940167,
+              226.75476599943067,
+              226.8235999999888,
+              226.76030799993896,
+              226.828556998953,
+              230.17631999937294,
+              226.99276699859183,
+              226.9545580002159,
+              226.81864100013627,
+              227.14560100030212,
+              227.58281099959277,
+              228.2072710004286,
+              226.83409999990545,
+              226.97643299943593,
+              226.7247239997232,
+              226.97847500057833,
+              227.0560580000165,
+              227.77035299986892,
+              228.01768700082903,
+              226.77693300101964,
+              226.85714099861798,
+              226.76205700008722,
+              226.87872500137019,
+              226.8819330001861,
+              226.78568199989968,
+              226.70314099923417,
+              228.8151070006279,
+              227.81293700063543,
+              228.0879800000548,
+              226.8600580009661,
+              226.92276700036018,
+              228.10897900126292,
+              228.1075199989573,
+              226.94035000131407,
+              226.94201600097585
+            ]
+          }
+        ],
+        "originalSourceUnchanged": true,
+        "sourceScript": "python/infer.py",
+        "sourceScriptSha256": "6fcca3d7fc0966fd30473792071807c02e2936c104c40f31eff070a930c700fa",
+        "samples": [
+          {
+            "input": "examples/demo01.jpg",
+            "inputSha256": "35ef1bbb63f6540e49aa9b6302b9b938be4fe8b9c08c07c3694b02396b0e87e0",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "sky",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "7452ace68b49205af97821ee05ccc7168c36d3434c9f06074f70eafca123de75",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 0.21778714656829834,
+              "max": 7.337691307067871,
+              "mean": 1.8981847763061523,
+              "std": 1.5870349407196045,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              230.6581559987535,
+              230.83315700023377
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 10,
+              "totalPixels": 2789376,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo01.jpg",
+              "image": "demo01.png",
+              "imageSha256": "623c35b609aeb29a752d17aa0ad67dc4626fd15d0a4ccd876b0b75060cde038d",
+              "imageShape": [
+                1362,
+                4096,
+                3
+              ]
+            },
+            "ordinalChecks": [
+              {
+                "input": "examples/demo01.jpg",
+                "nearLabel": "右下前景汽车挡风玻璃",
+                "farLabel": "左上远处高楼立面",
+                "nearRect": [
+                  0.9,
+                  0.9,
+                  0.95,
+                  0.95
+                ],
+                "farRect": [
+                  0.12,
+                  0.2,
+                  0.16,
+                  0.34
+                ],
+                "inputSha256": "35ef1bbb63f6540e49aa9b6302b9b938be4fe8b9c08c07c3694b02396b0e87e0",
+                "nearMedian": 0.21778714656829834,
+                "farMedian": 7.337691307067871,
+                "expectedNearLessThanFar": true
+              }
+            ]
+          },
+          {
+            "input": "examples/demo02.jpg",
+            "inputSha256": "c1f116034aa5abd5b5470226be2bb03bd938c8affe90389c52d10fe8b1ac7e21",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "sky",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "1f42480df99385ee8e4ff35a68e4eae9f2b4e31a0d2005428743cada9889fa38",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 0.21778714656829834,
+              "max": 2.978365182876587,
+              "mean": 0.9027093052864075,
+              "std": 0.412550151348114,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              226.43218099983642,
+              227.0184339995467
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 25,
+              "totalPixels": 2788014,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo02.jpg",
+              "image": "demo02.png",
+              "imageSha256": "f58ab82a357d8d0214a07aa3c0cb1914193ab87dbb07ae754a94cd287a5771ee",
+              "imageShape": [
+                1362,
+                4094,
+                3
+              ]
+            },
+            "ordinalChecks": []
+          },
+          {
+            "input": "examples/demo03.jpg",
+            "inputSha256": "764dffd4d97bbacd620bc005fa86837018393ccb5ffd1059c2245a3cacff7782",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "sky",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "673f23328323605dd3fb9512eca18481847c2dc06d2729875892dee8272cac9e",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 0.5329906344413757,
+              "max": 1.4866632223129272,
+              "mean": 0.9360079169273376,
+              "std": 0.25634464621543884,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              226.7115989998274,
+              226.68884899940167
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 29,
+              "totalPixels": 2577050,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo03.jpg",
+              "image": "demo03.png",
+              "imageSha256": "4bb3e1e7e5f8f437b4a6a904d8e9123ea904b91d7fe5bcf46801843acd118bcc",
+              "imageShape": [
+                1295,
+                3980,
+                3
+              ]
+            },
+            "ordinalChecks": []
+          },
+          {
+            "input": "examples/demo04.jpg",
+            "inputSha256": "3a301f4e0361fe75ca4d256a35062f87eecc3f7655d747c9def3259c86e26a45",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "sky",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "4330b7b77f0a6644061773bd0e2e887110f0e76d5ad31449dc605d163ced4e89",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 0.21778714656829834,
+              "max": 2.9903461933135986,
+              "mean": 0.9116307497024536,
+              "std": 0.7445136904716492,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              226.75476599943067,
+              226.8235999999888
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 11,
+              "totalPixels": 1665600,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo04.jpg",
+              "image": "demo04.png",
+              "imageSha256": "2f251ba1614db5c9b70dcdf4ac8ccbcf78f3fe6f0748993a2ed3d524d2703543",
+              "imageShape": [
+                1041,
+                3200,
+                3
+              ]
+            },
+            "ordinalChecks": []
+          },
+          {
+            "input": "examples/demo05.jpg",
+            "inputSha256": "50e7e2f057c5a2d27bb09b0b3e814147966e30139ddaf54362c72746a5320339",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "sky",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "5546449b282ec57565017d7573d251b011d9607a9f86a6692ad9e39501f12206",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 0.6115955710411072,
+              "max": 1.3390830755233765,
+              "mean": 1.027995228767395,
+              "std": 0.1801433563232422,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              226.76030799993896,
+              226.828556998953
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 93,
+              "totalPixels": 2727936,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo05.jpg",
+              "image": "demo05.png",
+              "imageSha256": "8f5fbfb886fea686355695050236142f1af7ea97738df4cec0a34b07d059de3f",
+              "imageShape": [
+                1332,
+                4096,
+                3
+              ]
+            },
+            "ordinalChecks": []
+          },
+          {
+            "input": "examples/demo06.jpg",
+            "inputSha256": "0fd815bddeab139e7477c948a22fffdf84d9b87f81d77dcf6fd8ef39ebaaafb5",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "sky",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "6265480c3d8d11b81ead2ed13c9f7516b60c8d7568fbbb0fa06f88e25b7ea988",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 0.2327914983034134,
+              "max": 6.4658708572387695,
+              "mean": 1.2704823017120361,
+              "std": 1.1688425540924072,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              230.17631999937294,
+              226.99276699859183
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 12,
+              "totalPixels": 2789376,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo06.jpg",
+              "image": "demo06.png",
+              "imageSha256": "9105af9ebebe46cfa5fbc3e7ba0baee7cb8bc2bd3b0773a5151fe00c77b90fed",
+              "imageShape": [
+                1362,
+                4096,
+                3
+              ]
+            },
+            "ordinalChecks": [
+              {
+                "input": "examples/demo06.jpg",
+                "nearLabel": "桥上前景人物上衣",
+                "farLabel": "远处门洞内部",
+                "nearRect": [
+                  0.398,
+                  0.802,
+                  0.418,
+                  0.83
+                ],
+                "farRect": [
+                  0.515,
+                  0.83,
+                  0.536,
+                  0.86
+                ],
+                "inputSha256": "0fd815bddeab139e7477c948a22fffdf84d9b87f81d77dcf6fd8ef39ebaaafb5",
+                "nearMedian": 1.2353814840316772,
+                "farMedian": 5.9553375244140625,
+                "expectedNearLessThanFar": true
+              }
+            ]
+          },
+          {
+            "input": "examples/demo07.jpg",
+            "inputSha256": "345bec735adc4c238bf14ddf1d182c4881f8ba08814c4f4074c1d79e9e4adc52",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "sky",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "159f35e546ba773e3f4f14c1e4d28aba596f8feaf844d3f569162bb204cc1103",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 0.2464521825313568,
+              "max": 4.136500358581543,
+              "mean": 2.5666282176971436,
+              "std": 1.4767649173736572,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              226.9545580002159,
+              226.81864100013627
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 133,
+              "totalPixels": 3373496,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo07.jpg",
+              "image": "demo07.png",
+              "imageSha256": "b9fcdf3ad8af980805f74804c7318e74a5ad09daccdb6da7107ade1b1e8693ac",
+              "imageShape": [
+                1498,
+                4504,
+                3
+              ]
+            },
+            "ordinalChecks": []
+          },
+          {
+            "input": "examples/demo08.jpg",
+            "inputSha256": "d32b480349013be5f84521b0df1d6590139163aef8457f051076ed03c7371e6f",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "sky",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "9e2962f1bbcaac6cfbd1db63aca8ff87ae04218758e354b0bf99c9e5a559e786",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 0.3804836571216583,
+              "max": 4.327749729156494,
+              "mean": 1.1576273441314697,
+              "std": 0.946882963180542,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              227.14560100030212,
+              227.58281099959277
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 5,
+              "totalPixels": 272000,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo08.jpg",
+              "image": "demo08.png",
+              "imageSha256": "cf138f158826de746074a7869574c64992c49d5ef4765c84f41f122ffa36a5d7",
+              "imageShape": [
+                425,
+                1280,
+                3
+              ]
+            },
+            "ordinalChecks": []
+          },
+          {
+            "input": "examples/demo09.jpg",
+            "inputSha256": "6a64033ba69bb408c092dbff811abfbcb0196f1f87541902d03d2a909a0b8ea9",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "sky",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "6174c76daf44729e1a4cbc622bdfc491da8feafee7c1767bf51b55329d021bd0",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 0.29807165265083313,
+              "max": 6.718817234039307,
+              "mean": 1.7989004850387573,
+              "std": 1.3311799764633179,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              228.2072710004286,
+              226.83409999990545
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 29,
+              "totalPixels": 3324932,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo09.jpg",
+              "image": "demo09.png",
+              "imageSha256": "52d7337814598c35bc289da6e369f135c9cf5cc99267cde7e9330c6fa1e97ccf",
+              "imageShape": [
+                1487,
+                4472,
+                3
+              ]
+            },
+            "ordinalChecks": []
+          },
+          {
+            "input": "examples/demo10.jpg",
+            "inputSha256": "bc77f215081f58de8d079e821e2808f6ee2727dfa729c10a5921c186a32c7638",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "sky",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "937455275bfbd2d2a1a008535202aacdd189388dce60b65cf2a62905e0d755ca",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 0.21778714656829834,
+              "max": 3.0379347801208496,
+              "mean": 1.3499503135681152,
+              "std": 0.6401686668395996,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              226.97643299943593,
+              226.7247239997232
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 12,
+              "totalPixels": 2727936,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo10.jpg",
+              "image": "demo10.png",
+              "imageSha256": "f69cb999ba4b3436015321a802e902428195a0c8bc53868a379d1a87287884d4",
+              "imageShape": [
+                1332,
+                4096,
+                3
+              ]
+            },
+            "ordinalChecks": []
+          },
+          {
+            "input": "examples/demo11.jpg",
+            "inputSha256": "150ef98e997ee6ff705bd06105c343f76a8f181ef93ff9ceebbd62a3ab6b592b",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "sky",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "2ba0061d433693e1da0defdec0135245f5076fe3ae6ee61cbf1e4c77b746b555",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 0.23883803188800812,
+              "max": 4.933187007904053,
+              "mean": 1.5535589456558228,
+              "std": 1.3470494747161865,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              226.97847500057833,
+              227.0560580000165
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 47,
+              "totalPixels": 2545686,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo11.jpg",
+              "image": "demo11.png",
+              "imageSha256": "f837efa004bb1275219a2f231c233ac310df60c71ef2193949ac612f6f623c41",
+              "imageShape": [
+                1287,
+                3956,
+                3
+              ]
+            },
+            "ordinalChecks": []
+          },
+          {
+            "input": "examples/demo12.jpg",
+            "inputSha256": "264458adcf5af6e3733dfda7ef4628c4a1dc49ed249aa8896256d9534a8377c4",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "sky",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "ebad673434dc3920056acaccdcc05703728afb91f6af51a785344f4a89a4c259",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 0.21778714656829834,
+              "max": 2.172496795654297,
+              "mean": 0.826156735420227,
+              "std": 0.42661750316619873,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              227.77035299986892,
+              228.01768700082903
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 79,
+              "totalPixels": 3299180,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo12.jpg",
+              "image": "demo12.png",
+              "imageSha256": "73bd96d489d988d4b5b90cb0bfc223abd5a29f7a8f2d49e2c17b459a6cff60b2",
+              "imageShape": [
+                1465,
+                4504,
+                3
+              ]
+            },
+            "ordinalChecks": []
+          },
+          {
+            "input": "examples/demo13.jpg",
+            "inputSha256": "9168fc752a002d50138a56621e8de5fab7fed125a978dd293319d28d30993564",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "sky",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "e31ef092d8f759f6bd06e5fca303a04b8c7b9a9fafcb308cfd56f6ecf0854529",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 0.4224734604358673,
+              "max": 1.5626927614212036,
+              "mean": 0.9972302913665771,
+              "std": 0.2180156409740448,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              226.77693300101964,
+              226.85714099861798
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 26,
+              "totalPixels": 2727936,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo13.jpg",
+              "image": "demo13.png",
+              "imageSha256": "c96f310a8282a836d96683ea9b1d25760bcf7b13c2f3d8159a45ff90a137daea",
+              "imageShape": [
+                1332,
+                4096,
+                3
+              ]
+            },
+            "ordinalChecks": []
+          },
+          {
+            "input": "examples/demo14.jpg",
+            "inputSha256": "01480d952bc950332f0eea31da0777f66d5f285d8edfe2a5f47508f4b260a99f",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "sky",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "37a64eb1cbbbd9e261eb8d38e2752b60689f2fe34bd1af7f24e48a06a1afa810",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 0.30635765194892883,
+              "max": 1.6445448398590088,
+              "mean": 0.8349011540412903,
+              "std": 0.3586065471172333,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              226.76205700008722,
+              226.87872500137019
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 15,
+              "totalPixels": 2727936,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo14.jpg",
+              "image": "demo14.png",
+              "imageSha256": "44f48c0f0f2f9e5fff6df1584f0a63db9870a12eba02cbbf569fd6dd88490128",
+              "imageShape": [
+                1332,
+                4096,
+                3
+              ]
+            },
+            "ordinalChecks": []
+          },
+          {
+            "input": "examples/demo15.jpg",
+            "inputSha256": "bf60ce3879f627e8886280cc61442174c91908894a5b059681341fed600f7db3",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "sky",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "79993158a091d3605f69c01692a5b3ddc69593648c1b750d5f83a53593b1baed",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 0.2613445818424225,
+              "max": 2.62721848487854,
+              "mean": 1.3051066398620605,
+              "std": 0.5160559415817261,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              226.8819330001861,
+              226.78568199989968
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 51,
+              "totalPixels": 2789376,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo15.jpg",
+              "image": "demo15.png",
+              "imageSha256": "b225cc7f1bf9a4d0dcb8bacd86ed5c33e5943abe85f14b29f5a2a6df11e59c4d",
+              "imageShape": [
+                1362,
+                4096,
+                3
+              ]
+            },
+            "ordinalChecks": []
+          },
+          {
+            "input": "examples/demo16.jpg",
+            "inputSha256": "a92e51732b38ad8b21b5cbbc6883374bd5ab56bb4907d6c4f1e13307970480ee",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "sky",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "709801e2e57a4249e8d62fdc106080b87409635b6600aa41c29e4fcc3d9892d5",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 0.21778714656829834,
+              "max": 5.682956695556641,
+              "mean": 1.9351677894592285,
+              "std": 1.5832703113555908,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              226.70314099923417,
+              228.8151070006279
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 10,
+              "totalPixels": 2727936,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo16.jpg",
+              "image": "demo16.png",
+              "imageSha256": "4709e92612a7a178842daa8139b6a19de9e474c816ad70f01b2cf32b41d7b865",
+              "imageShape": [
+                1332,
+                4096,
+                3
+              ]
+            },
+            "ordinalChecks": []
+          },
+          {
+            "input": "examples/demo17.jpg",
+            "inputSha256": "7174dcfbbb95a2e581ebf1e14cfbb4bef7a1295ae9cece405c87145223dcb32d",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "sky",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "81c676b373482fab2812b4bb1b067fa939d8cf26c3f76202571d1bcf26a6c7de",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 0.6919920444488525,
+              "max": 0.8784267902374268,
+              "mean": 0.7994287014007568,
+              "std": 0.04330369085073471,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              227.81293700063543,
+              228.0879800000548
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 54,
+              "totalPixels": 3253380,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo17.jpg",
+              "image": "demo17.png",
+              "imageSha256": "de0ebf8d02ae292acdf51db152e2cec711f58b02ed8bec4818dee3df04436dce",
+              "imageShape": [
+                1455,
+                4472,
+                3
+              ]
+            },
+            "ordinalChecks": []
+          },
+          {
+            "input": "examples/demo18.jpg",
+            "inputSha256": "4deeb16dbee40108f194bd87c8621416110427c8ab5fc5ad6a1d9002b2b620c2",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "sky",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "63bab14abde7bc8665631c62c4d9f4ddad494bcb68a3b8fea61fff879be52a21",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 0.7136028409004211,
+              "max": 0.9201926589012146,
+              "mean": 0.8145648837089539,
+              "std": 0.053309809416532516,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              226.8600580009661,
+              226.92276700036018
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 31,
+              "totalPixels": 1665600,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo18.jpg",
+              "image": "demo18.png",
+              "imageSha256": "ac937af0c4571c808c02e80b2381cbb66b543a6e629e951a4ebf09c581c392c4",
+              "imageShape": [
+                1041,
+                3200,
+                3
+              ]
+            },
+            "ordinalChecks": []
+          },
+          {
+            "input": "examples/demo19.jpg",
+            "inputSha256": "7cdb09c34eb0b4d2ac5f6070aec47c8f983a0b1b2c9ee1fc30decafb64f1bd98",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "sky",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "80315ed0f70f99f0bc59065d8b21eab841e5322237b4b804f40e262795e33662",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 0.24006973206996918,
+              "max": 5.4370646476745605,
+              "mean": 1.5828620195388794,
+              "std": 1.3602635860443115,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              228.10897900126292,
+              228.1075199989573
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 24,
+              "totalPixels": 3381240,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo19.jpg",
+              "image": "demo19.png",
+              "imageSha256": "e652fca57b7fd92f5dc121c543fdfcd170b06e48334d9f676f1c374a6acc434e",
+              "imageShape": [
+                1483,
+                4560,
+                3
+              ]
+            },
+            "ordinalChecks": []
+          },
+          {
+            "input": "examples/demo20.jpg",
+            "inputSha256": "2958fd1b7018e40b68ccc8d74ff8e50bf143f5046711d57c54eec2a479550ace",
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "img",
+                  "shape": [
+                    1,
+                    280,
+                    504,
+                    3
+                  ],
+                  "dtype": "uint8"
+                }
+              ],
+              "outputs": [
+                {
+                  "name": "depth",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                },
+                {
+                  "name": "sky",
+                  "shape": [
+                    1,
+                    1,
+                    280,
+                    504
+                  ],
+                  "dtype": "float32"
+                }
+              ]
+            },
+            "inputArrayExact": true,
+            "repeatInputsExact": true,
+            "repeatRawOutputsExact": true,
+            "rawOutputSha256": "4080df40d870a5b499364628c83b77692071e7d3a542b6f9c6f803d3e1d4ee16",
+            "allFinite": true,
+            "depthStatistics": {
+              "min": 0.2583213150501251,
+              "max": 1.614200234413147,
+              "mean": 0.7359272837638855,
+              "std": 0.3515089452266693,
+              "nonPositiveCount": 0
+            },
+            "runMilliseconds": [
+              226.94035000131407,
+              226.94201600097585
+            ],
+            "visualizationPixelsExact": true,
+            "visualizationReplayPlatform": "original ARM CPU without NPU execution",
+            "hostVisualizationComparison": {
+              "exact": false,
+              "differentPixels": 48,
+              "totalPixels": 2602000,
+              "maxPaletteIndexDifference": 1,
+              "source": "independent x86 replay; original ARM replay pixel exact"
+            },
+            "image": {
+              "input": "examples/demo20.jpg",
+              "image": "demo20.png",
+              "imageSha256": "4758a72cf61ae1ba59a37260f01e5bbc5bc1df7f135acc59c64f76da95a1e1bd",
+              "imageShape": [
+                1301,
+                4000,
+                3
+              ]
+            },
+            "ordinalChecks": []
+          }
+        ],
+        "independentProcesses": 2,
+        "qualityAccepted": false,
+        "metricScaleValidated": false
+      }
+    }
+  ],
+  "units": "原始模型值，未换算为米；未进行公制尺度标定",
+  "ordinalScope": "两个在读取模型结果前按原图选择的区域比较，仅为定性样例，不是测距精度基准"
+}

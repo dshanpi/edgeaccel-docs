@@ -1,0 +1,84 @@
+{
+  "modelId": "YOLOv8-Seg",
+  "repo": "AXERA-TECH/YOLOv8-Seg",
+  "revision": "c53ebcbf84d783488a878fa462d3b3f28f3b858d",
+  "files": [
+    {
+      "path": "ax_infer.py",
+      "size": 11385,
+      "verifiedHashes": {
+        "sha256": "2cdad25ad15ff8da2dba0a7605b73d8896385f12222dcc6ff43f0137edca0049"
+      }
+    },
+    {
+      "path": "bus.jpg",
+      "size": 487438,
+      "verifiedHashes": {
+        "sha256": "33b198a1d2839bb9ac4c65d61f9e852196793cae9a0781360859425f6022b69c"
+      }
+    },
+    {
+      "path": "AX650/yolov8l-seg_640x640_npu1.axmodel",
+      "size": 47669199,
+      "verifiedHashes": {
+        "sha256": "05706482b3ed405510dd6b69e96987470f1d2806d37dd3fb892ffad92066860f"
+      }
+    },
+    {
+      "path": "AX650/yolov8l-seg_640x640_npu3.axmodel",
+      "size": 48161411,
+      "verifiedHashes": {
+        "sha256": "50417fc2fd1ba22f0ae0712f82b7f0a3628a7ac738f2f9e36262d47044b3cadb"
+      }
+    },
+    {
+      "path": "AX650/yolov8m-seg_640x640_npu1.axmodel",
+      "size": 28345411,
+      "verifiedHashes": {
+        "sha256": "828173a9d6ed8a2baf43d7cf159ca6e93eb2046fc1f06f4f90a50042089c0889"
+      }
+    },
+    {
+      "path": "AX650/yolov8m-seg_640x640_npu3.axmodel",
+      "size": 28728887,
+      "verifiedHashes": {
+        "sha256": "5156fc8d8fa9e162c5170dc8733b4242e7575bc69533bf8abc732665c413ee18"
+      }
+    },
+    {
+      "path": "AX650/yolov8n-seg_640x640_npu1.axmodel",
+      "size": 3759715,
+      "verifiedHashes": {
+        "sha256": "5e37a41ab341d08093318353fbd437008e461110ca13aa2ffb53ef0ff80e24ff"
+      }
+    },
+    {
+      "path": "AX650/yolov8s-seg_640x640_npu1.axmodel",
+      "size": 12353539,
+      "verifiedHashes": {
+        "sha256": "eb836ddbb151993f20790ff7237650d2636476c96e93a22af9fc218265b9b3b5"
+      }
+    },
+    {
+      "path": "AX650/yolov8s-seg_640x640_npu3.axmodel",
+      "size": 12623215,
+      "verifiedHashes": {
+        "sha256": "138499d90eba16e6709a75d7ea667fe99bbdd3526a45a707f4a8905c63614604"
+      }
+    },
+    {
+      "path": "AX650/yolov8x-seg_640x640_npu1.axmodel",
+      "size": 74608263,
+      "verifiedHashes": {
+        "sha256": "cdad607330d0d0416e9498e881fdabc722cd860ccd51a5f9c36a1027bd0dc8b1"
+      }
+    },
+    {
+      "path": "AX650/yolov8x-seg_640x640_npu3.axmodel",
+      "size": 75565791,
+      "verifiedHashes": {
+        "sha256": "8b8df655512c825300845ebe0e28ca99faa78372b4ba475ef68041eebb314a3c"
+      }
+    }
+  ]
+}

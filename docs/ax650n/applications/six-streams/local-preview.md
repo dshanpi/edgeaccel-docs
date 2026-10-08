@@ -1,94 +1,76 @@
 ---
-title: "六路推流：本地预览与输入视频"
-sidebar_label: "本地预览与输入视频"
-slug: /ax650n/applications/six-streams/local-preview
+title: "观看与录制六路 AI 视频"
+sidebar_label: "4. 观看与录制"
+mdx:
+  format: mdx
 pagination_prev: ax650n/applications/six-streams/usage
+pagination_next: ax650n/applications/six-streams/validation
 ---
 
-> **适用部署**：`~/ax-pipeline/six` 开发版；性能数据来自文中注明的原测试环境。两套部署的区别见[项目总览](/docs/projects/six-streams)，演示版启停见[服务管理](/docs/usage/services)。
+# 观看与录制
 
-# 第四路视频与开发板 VLC 本地预览
+确认[推流服务已启动](usage.md)。可以在电脑播放局域网 RTSP，也可以在 RK3576 桌面播放本机预览。
 
-下文 `BOARD_IP` 为地址占位符，请替换为运行推流程序的开发板 IP。
+## 查看部署效果
 
-以下路径与播放方式对应原开发版部署。输入文件变化后需重新核对帧率与模型结果。
+下面为 **在 RK3576 + AX8850 16GB 上实测录制**的六宫格结果，使用本指南指定仓库版本、默认模型和视频。画面包含检测框、分割区域、目标跟踪、相对深度与过线计数。
 
-项目源码与新部署说明见 [GitHub 仓库](https://github.com/dshanpi/ax8850-multistream-demo)；本文中的原部署路径与记录按下述环境使用。
+<video className="model-effect-video" controls playsInline preload="metadata" poster="/projects/six-streams-20261008/overview.jpg" src="/projects/six-streams-20261008/overview.mp4" aria-label="RK3576 与 AX8850 六路 AI 视频推流实测录像"></video>
 
-## 核对输入视频
+本次请求录制 20 秒，生成 19.700 秒、1920×1080 H.264 视频，完整解码 591 帧通过。播放本段录像可先了解预期效果；观看自己的部署结果，请按下方步骤连接开发板。[实测帧率与验收范围](validation.md#查看本次实测结果)另有说明。
 
-第四路使用 `traffic7.mp4` 的 **0.5 倍速版**，使用原有 YOLO26n + ByteTrack 模型。
+## 在电脑观看 RTSP
 
-| 项目 | 内容 |
+在 VLC 中打开“媒体 → 打开网络串流”，将下表的 `BOARD_IP` 替换为开发板实际地址。先打开总览，再按需查看单路结果。
+
+| 画面 | 播放地址 |
 |---|---|
-| 原始视频 | `/home/baiwen/ax-pipeline/video/traffic7.mp4` |
-| 原始参数 | H.264，3840×2160，29.97 FPS，约 46 秒 |
-| 第四路实际输入 | `/home/baiwen/ax-pipeline/video/1080p/traffic7_slow_0p5x.mp4` |
-| 处理后参数 | H.264，1920×1080，29.97 FPS，2760 帧，92.092 秒 |
+| 六宫格总览 | `rtsp://BOARD_IP:8554/overview` |
+| 目标检测 | `rtsp://BOARD_IP:8554/pcd` |
+| 车辆检测 | `rtsp://BOARD_IP:8554/vehicle` |
+| 实例分割 | `rtsp://BOARD_IP:8554/seg` |
+| 检测与跟踪 | `rtsp://BOARD_IP:8554/driving` |
+| 相对深度 | `rtsp://BOARD_IP:8554/depth` |
+| 过线计数 | `rtsp://BOARD_IP:8554/count` |
 
-原始视频及正常速度的 1080p 文件均保留。慢速文件用于第四路推理、单路推流和六宫格显示，不包含音轨。通过重复帧保持输出帧率，画面内容以原来的 0.5 倍速度推进。原部署第四路实测输出约 30 FPS，推理约 10 FPS；推理结果与视频独立更新。
+电脑与开发板应网络互通，防火墙需允许 RTSP 访问。总览分辨率为 1920×1080；网络波动时优先在播放器选择 RTSP over TCP。
 
-第三路同样使用半速文件 `traffic3_slow_0p5x.mp4`，1920×1080、30 FPS，时长由 40.067 秒变为 80.133 秒。两路均通过重复帧保持输出帧率，不表示模型对每帧都进行了推理。
+## 在开发板桌面观看
 
-## 在开发板 VLC 中观看
-
-选择 **媒体 → 打开网络串流**。
-
-六宫格：
-
-```text
-http://127.0.0.1:8850/overview.ts
-```
-
-第四路：
-
-```text
-http://127.0.0.1:8850/driving.ts
-```
-
-也可在开发板桌面终端执行：
+在已登录图形桌面的普通用户终端执行，不要使用 `sudo vlc`：
 
 ```bash
-cd ~/ax-pipeline/six
-./preview-local.sh
+cd ~/ax8850-multistream-demo
+bash preview-local.sh
 ```
 
-只看第四路：
+默认播放总览；查看单路时传入对应名称：
 
 ```bash
-./preview-local.sh driving
+bash preview-local.sh seg
 ```
 
-桌面上的 `AX8850-local-preview.m3u` 包含总览和六条单路视频地址，可直接用 VLC 打开。
+脚本播放 `http://127.0.0.1:8850/overview.ts` 等本机地址，HTTP 服务通过 FFmpeg 复制封装码流，不重新编码。该地址只允许开发板本机访问，电脑端应使用 RTSP。播放器仍需解码，桌面播放会增加主机资源占用。
 
-## 为什么使用 HTTP 地址
+## 录制总览
 
-这台开发板安装的 VLC 3.0.20 构建参数包含 `--disable-live555`，直接播放标准 RTSP 失败。新增的本地服务将算力卡已编码的 H.264 码流转封装为 MPEG-TS，供现有 VLC 播放，不重新编码。
-
-本地预览服务仅监听 `127.0.0.1:8850`，有播放器连接时才启动转封装；播放器关闭后对应进程退出。VLC 显示画面需要在 RK3576 上解码，可能增加主机 CPU 占用。
-
-其他电脑继续使用原来的局域网 RTSP 地址，例如 `rtsp://BOARD_IP:8554/overview`。这里的 `127.0.0.1` 指开发板自身。
-
-## 启动与停止
-
-重启开发板后：
+在开发板终端执行，数字表示请求录制秒数：
 
 ```bash
-cd ~/ax-pipeline/six
-./start.sh
-./preview-local.sh
+cd ~/ax8850-multistream-demo
+bash record-overview.sh 60
 ```
 
-停止推流及本地预览服务：
+文件保存在 `recordings/overview-日期时间.mp4`，终端会显示实际路径。下面将 `FILE` 设置为刚生成的文件，再查看参数并完整解码：
 
 ```bash
-./stop.sh
+FILE="recordings/overview-实际日期时间.mp4"
+ffprobe -v error -select_streams v:0 \
+  -show_entries stream=codec_name,width,height:format=duration \
+  -of default=noprint_wrappers=1 "$FILE"
+ffmpeg -v error -i "$FILE" -map 0:v:0 -f null -
 ```
 
-`start.sh` 同时启动六路程序和本地预览服务。`sudo ./fps.py` 可以查看实际帧率。
+视频应为 H.264、1920×1080，完整解码应正常退出且没有错误输出。复制码流需要等待关键帧，实际文件可能略短于请求时长，应结合关键帧间隔和完整解码结果判断，不以短片必须精确满秒作为唯一标准。
 
-## 原部署验证记录
-
-总览和第四路均通过开发板 VLC 的 HTTP 拉流测试，显示帧计数持续增加，测试中丢失帧、损坏数据计数均为 0；原测试时桌面 VLC 打开总览并返回 `Playing` 状态。
-
-源码为 `local-preview.py`，记录保存在开发板 `six/evidence/traffic7/`。配置与启动脚本备份位于 `six/backups/before-traffic7-20260916-181232/`。
+完成播放与录像后，继续[效果与验收](validation.md)。

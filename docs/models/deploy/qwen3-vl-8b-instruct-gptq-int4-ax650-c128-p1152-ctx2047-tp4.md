@@ -12,9 +12,9 @@ Qwen3-VL-8B-Instruct-GPTQ-Int4-AX650-C128-P1152-CTX2047-TP4 用于图像与文�
 
 ## 准备运行环境
 
-在连接算力卡的 Linux 主机终端执行，RK3576 使用 ARM64 环境。首次部署先完成[驱动与设备检查](../../usage/device-check.md)、[准备主机环境](../../getting-started/prepare.md)和[下载工具安装](../../usage/download-models.md#使用-hugging-face-下载)。已完成这些步骤可直接下载模型。
+该固定版本的启动程序为 **x86-64 Linux** 可执行文件，原始脚本使用 **4 张算力卡**。准备可同时识别这些设备的主机，完成[驱动与设备检查](../../usage/device-check.md)和[下载工具安装](../../usage/download-models.md#使用-hugging-face-下载)。
 
-后文使用设备 0，运行前用 `axcl-smi` 确认设备可用。
+运行前用 `axcl-smi` 核对全部设备及其编号顺序。RK3576 属于 ARM64 主机，不能直接运行此仓库配套的 x86-64 程序；需要另行取得匹配的 ARM64 多卡入口并完成验证。
 
 ## 确认算力卡接入条件
 
@@ -23,6 +23,16 @@ Qwen3-VL-8B-Instruct-GPTQ-Int4-AX650-C128-P1152-CTX2047-TP4 用于图像与文�
 ### 准备本模型的输入
 
 本提交可核对的样本：`image.png`。结合模型卡选择输入，结果图片不作为原始输入。
+
+### 核对多卡启动参数
+
+| 官方启动脚本 | 程序 | 示例设备列表 |
+| --- | --- | --- |
+| [`run_qwen3_vl_8b_tp.sh`](https://huggingface.co/AXERA-TECH/Qwen3-VL-8B-Instruct-GPTQ-Int4-AX650-C128-P1152-CTX2047-TP4/blob/d2e3e2ea2083dc1b73b6b2297c04340740aceda3/run_qwen3_vl_8b_tp.sh) | `main_x86` | `0,1,2,3` |
+
+设备编号是原脚本的示例值。按主机实际编号配置，保留四个设备及分片顺序；每张卡的内存需求仍需按该包实际加载结果确认。
+
+语言层及 post 分片保存在 `.tar` 包中；仅统计顶层 `.axmodel` 文件不能代表完整权重数量。保留同提交的分片、embedding 和分词文件，不能用普通单卡包替换。
 
 核对分片到各卡的分配、主机到设备的数据传输及卡间依赖。先逐卡检查设备状态，不能仅将 devices 字段缩成一个编号。
 ## 下载模型与样例

@@ -36,12 +36,6 @@ export default {
         "models/catalog",
         {
           "type": "category",
-          "label": "模型部署与效果",
-          "collapsed": true,
-          "items": modelSidebar
-        },
-        {
-          "type": "category",
           "label": "选择视觉模型",
           "collapsed": true,
           "items": [
@@ -59,16 +53,7 @@ export default {
           "items": [
             "models/llm-runtime",
             "models/text-generation",
-            "models/vision-language",
-            {
-              "type": "category",
-              "label": "Qwen3-VL-8B：16GB 部署记录",
-              "collapsed": true,
-              "items": [
-                "ax650n/applications/qwen3-vl/usage",
-                "ax650n/applications/qwen3-vl/validation"
-              ]
-            }
+            "models/vision-language"
           ]
         },
         {
@@ -81,6 +66,12 @@ export default {
             "models/extensions",
             "models/custom-model"
           ]
+        },
+        {
+          "type": "category",
+          "label": "模型部署与效果",
+          "collapsed": true,
+          "items": modelSidebar
         }
       ]
     },
@@ -126,13 +117,14 @@ export default {
           "collapsed": true,
           "link": {"type": "doc", "id": "projects/six-streams"},
           "items": [
-            "ax650n/applications/six-streams/usage",
-            "usage/services",
-            "ax650n/applications/six-streams/local-preview",
+            "ax650n/applications/six-streams/prepare",
             "ax650n/applications/six-streams/implementation",
+            "ax650n/applications/six-streams/usage",
+            "ax650n/applications/six-streams/local-preview",
+            "ax650n/applications/six-streams/validation",
+            "usage/services",
             "ax650n/applications/six-streams/frame-rate",
             "ax650n/applications/six-streams/inference",
-            "ax650n/applications/six-streams/validation",
             "ax650n/applications/six-streams/vlc-troubleshooting"
           ]
         },
@@ -147,6 +139,15 @@ export default {
         "reference/validation",
         "reference/glossary",
         "reference/sources",
+        {
+          "type": "category",
+          "label": "历史资料：Qwen3-VL-8B",
+          "collapsed": true,
+          "items": [
+            "ax650n/applications/qwen3-vl/usage",
+            "ax650n/applications/qwen3-vl/validation"
+          ]
+        },
         "downloads"
       ]
     }

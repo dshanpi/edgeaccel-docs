@@ -6,7 +6,7 @@
     {
       "name": "dncnn",
       "label": "DnCNN",
-      "observation": "左为原图，中间为 sigma=25 的加噪图，右为本次降噪输出。噪点减轻，仍有残余颗粒。",
+      "observation": "中间为 sigma=25 的加噪图，右侧输出的彩色噪点减少，飞机轮廓与颜色大体保留；天空仍有明显残余颗粒，不能视为恢复到左侧原图。",
       "input": {
         "file": "DnCNN/pic/3096.png",
         "sha256": "8fd9f62bad0f64a35563689bad9cc9ded51c4d9b6332952fe9f0d57303c6bdd5"
@@ -62,7 +62,7 @@
     {
       "name": "ffdnet",
       "label": "FFDNet",
-      "observation": "左为原图，中间为 sigma=10 的加噪图，右为本次降噪输出。噪点减轻；该样例的加噪强度与 DnCNN 不同。",
+      "observation": "中间为 sigma=10 的加噪图，右侧输出的噪点明显减少，飞机轮廓和云层大体保留；细节略有平滑。加噪强度与 DnCNN 不同，不能据此直接排名。",
       "input": {
         "file": "FFDNet/pic/3096.png",
         "sha256": "8fd9f62bad0f64a35563689bad9cc9ded51c4d9b6332952fe9f0d57303c6bdd5"
@@ -118,7 +118,7 @@
     {
       "name": "nafnet",
       "label": "NAFNet",
-      "observation": "左为官方 noisy.png，右为本次降噪输出。文字轮廓变得可见，但仍然模糊。",
+      "observation": "右侧输出明显减轻彩色噪点，文字行和部分字母变得可见，但文字边缘仍模糊；本样例不证明完整文字内容得到恢复。",
       "input": {
         "file": "NAFNet/pic/noisy.png",
         "sha256": "403034182fa320130dae0d75b92e85e0850771378e674d65455c403a4958e29c"

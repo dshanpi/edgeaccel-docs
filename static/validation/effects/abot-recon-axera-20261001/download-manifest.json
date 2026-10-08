@@ -1,0 +1,126 @@
+{
+  "modelId": "ABot-Recon-Axera",
+  "repo": "AXERA-TECH/ABot-Recon-Axera",
+  "revision": "fbe73fc5686c6c0ed2af5255272cf3ebf248da58",
+  "complete": true,
+  "files": [
+    {
+      "path": "LICENSE",
+      "size": 11358,
+      "url": "https://huggingface.co/AXERA-TECH/ABot-Recon-Axera/resolve/fbe73fc5686c6c0ed2af5255272cf3ebf248da58/LICENSE",
+      "verifiedHashes": {
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "gitBlob": "d645695673349e3947e8e5ae42332d0ac3164cd7"
+      }
+    },
+    {
+      "path": "MODEL_LICENSE.md",
+      "size": 810,
+      "url": "https://huggingface.co/AXERA-TECH/ABot-Recon-Axera/resolve/fbe73fc5686c6c0ed2af5255272cf3ebf248da58/MODEL_LICENSE.md",
+      "verifiedHashes": {
+        "sha256": "e72629af2c122b7842a2d82c8b819c7806dec7b90230569568127f0b5828cb75",
+        "gitBlob": "76518d3ccf3b3e971a740512bb938658bd25045e"
+      }
+    },
+    {
+      "path": "MODEL_USAGE_GUIDELINES.md",
+      "size": 2746,
+      "url": "https://huggingface.co/AXERA-TECH/ABot-Recon-Axera/resolve/fbe73fc5686c6c0ed2af5255272cf3ebf248da58/MODEL_USAGE_GUIDELINES.md",
+      "verifiedHashes": {
+        "sha256": "3ef29d2d645a7756dfcc4cdbf3ebafdf86fede50ef497788dbffe0a656672d12",
+        "gitBlob": "d061fb066efe649dc78e9d679554f7275ae13830"
+      }
+    },
+    {
+      "path": "MODEL_USAGE_GUIDELINES_ZH.md",
+      "size": 2056,
+      "url": "https://huggingface.co/AXERA-TECH/ABot-Recon-Axera/resolve/fbe73fc5686c6c0ed2af5255272cf3ebf248da58/MODEL_USAGE_GUIDELINES_ZH.md",
+      "verifiedHashes": {
+        "sha256": "9d9e55fd69e39effa8fbc9a2e1651894d5f5211a99c0745377434c11937bd8c4",
+        "gitBlob": "5f1a0c9d50f226f3aa0ddc7d2ee0fd2f3f64a64e"
+      }
+    },
+    {
+      "path": "NOTICE",
+      "size": 1502,
+      "url": "https://huggingface.co/AXERA-TECH/ABot-Recon-Axera/resolve/fbe73fc5686c6c0ed2af5255272cf3ebf248da58/NOTICE",
+      "verifiedHashes": {
+        "sha256": "3525b2a72c67ad5596d6afd2c9a97202bf19509b5f259e9284bf7116d6250e94",
+        "gitBlob": "6ca6be7b0481785ef6f0382a7162acdfba7fe263"
+      }
+    },
+    {
+      "path": "README.md",
+      "size": 3629,
+      "url": "https://huggingface.co/AXERA-TECH/ABot-Recon-Axera/resolve/fbe73fc5686c6c0ed2af5255272cf3ebf248da58/README.md",
+      "verifiedHashes": {
+        "sha256": "0c7c9a571e841089fd630a60cd1719be169fe32c255365d6f27f0efd425c719b",
+        "gitBlob": "cb321f586bee188ec9b0f85bc93f92722fc9a9a9"
+      }
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "size": 1832,
+      "url": "https://huggingface.co/AXERA-TECH/ABot-Recon-Axera/resolve/fbe73fc5686c6c0ed2af5255272cf3ebf248da58/THIRD_PARTY_NOTICES.md",
+      "verifiedHashes": {
+        "sha256": "515fe2087bf11d44e97723febdf6a4a1995b4c9ec98988690d2ebaa1bb2e6446",
+        "gitBlob": "f1f291ce0c66a9c79502f449858869b1e684c768"
+      }
+    },
+    {
+      "path": "config.json",
+      "size": 0,
+      "url": "https://huggingface.co/AXERA-TECH/ABot-Recon-Axera/resolve/fbe73fc5686c6c0ed2af5255272cf3ebf248da58/config.json",
+      "verifiedHashes": {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "gitBlob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+      }
+    },
+    {
+      "path": "decoder_step_kitti02.axmodel",
+      "size": 818622134,
+      "url": "https://huggingface.co/AXERA-TECH/ABot-Recon-Axera/resolve/fbe73fc5686c6c0ed2af5255272cf3ebf248da58/decoder_step_kitti02.axmodel",
+      "verifiedHashes": {
+        "sha256": "14e233e0637aaf0446cfe997be99b2cee4b2fee44bd3ac9842b98ae319f4d2fd",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "encoder_kitti02.axmodel",
+      "size": 347778677,
+      "url": "https://huggingface.co/AXERA-TECH/ABot-Recon-Axera/resolve/fbe73fc5686c6c0ed2af5255272cf3ebf248da58/encoder_kitti02.axmodel",
+      "verifiedHashes": {
+        "sha256": "4630d92135d71e01790466f39d9474385ff95ecf678e9a2b4eb180baba192cca",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "heads_kitti02.axmodel",
+      "size": 227055606,
+      "url": "https://huggingface.co/AXERA-TECH/ABot-Recon-Axera/resolve/fbe73fc5686c6c0ed2af5255272cf3ebf248da58/heads_kitti02.axmodel",
+      "verifiedHashes": {
+        "sha256": "a7e1ca075a63cb8ef6c9d1eb4a71e0d39e07346ade691c9438f620181541fcb6",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "host_pose_head/pose_head.safetensors",
+      "size": 26389192,
+      "url": "https://huggingface.co/AXERA-TECH/ABot-Recon-Axera/resolve/fbe73fc5686c6c0ed2af5255272cf3ebf248da58/host_pose_head/pose_head.safetensors",
+      "verifiedHashes": {
+        "sha256": "f6805c677f3890900b07e6e52fd3fe37a102c1536e2ecf6dff4a20cf93d45fb2",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "host_pose_head/pose_head_config.json",
+      "size": 400,
+      "url": "https://huggingface.co/AXERA-TECH/ABot-Recon-Axera/resolve/fbe73fc5686c6c0ed2af5255272cf3ebf248da58/host_pose_head/pose_head_config.json",
+      "verifiedHashes": {
+        "sha256": "3d250db83c02b9f4ea26c8b9b584d8d3292e16c2787efffbc5f814b485a0de38",
+        "gitBlob": "f57dbc0680edab0f6af9adc83e228ac6c277f874"
+      }
+    }
+  ],
+  "runnerSha256": "9913e2426fd9fabd8674b908469f04eec45a2a432a38c28eefb4e83139c92bdb"
+}

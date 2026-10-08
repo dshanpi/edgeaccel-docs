@@ -162,9 +162,9 @@ PY
 
 ## 查看部署效果
 
-**已运行，效果仍需评估** · 2026-09-23 · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
+**已运行，效果仍需评估** · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
 
-HP 版本完成三次图片问答，人数回答为 3。英文描述包含动作意图推测，中文描述含无法核实的表情，仍需评估回答质量。
+三次单图请求均返回文本。中文仍推测面带微笑，英文附庆祝或展示的意图；人数正确，表情与部分姿态描述未通过。
 
 点击图片可查看原尺寸。
 
@@ -229,7 +229,7 @@ They are all wearing white spacesuits and appear to be astronauts or spacewalker
 <details>
 <summary>查看样例环境与运行耗时</summary>
 
-环境：RK3576 + AX8850 16GB M.2。日期：2026-09-23。模型版本：`77df2130de56c3e18bc78d48c5f4cfd03f7e5aeb`。
+环境：RK3576 + AX8850 16GB M.2。模型版本：`77df2130de56c3e18bc78d48c5f4cfd03f7e5aeb`。
 
 | 组件 | 版本或配置 |
 | --- | --- |
@@ -248,8 +248,6 @@ They are all wearing white spacesuits and appear to be astronauts or spacewalker
 
 适用范围：
 
-- 英文回复包含“庆祝、展示、准备动作”等推测；中文回复出现“面带微笑”，未满足不推测表情的要求。
-- HP 与其他版本是不同编译模型包；本页短请求不能作为统一性能或精度排名。
 - 本页结果来自 16GB 卡，不作为 8GB 卡的容量验证。temperature=0、enable_thinking=false、stream=false、max_tokens=128。
 - 仅测试本页固定样例，未覆盖完整数据集、多图、视频、最大上下文或长期连续运行。
 

@@ -1,0 +1,3972 @@
+{
+  "modelId": "ABot-Recon-Axera",
+  "revision": "fbe73fc5686c6c0ed2af5255272cf3ebf248da58",
+  "date": "2026-10-01",
+  "variants": [
+    {
+      "label": "完整视频：相机轨迹与点云重建",
+      "observation": "输入为约 31 秒的城市道路视频。实际重建中可辨认道路延伸、路口及两侧树木和建筑轮廓；俯视图显示连续前进后转弯的相机轨迹。远处结构不完整，点云仍可见条带重影和空洞。以下图片为官方后处理的原始输出，未手工修补；几何精度尚无独立基准核验。",
+      "previews": [
+        {
+          "caption": "实际重建：RGB 点云斜视图",
+          "path": "/validation/effects/abot-recon-axera-20261001/view_ob.png"
+        },
+        {
+          "caption": "实际重建：点云密度与相机轨迹",
+          "path": "/validation/effects/abot-recon-axera-20261001/floorplan.png"
+        },
+        {
+          "caption": "实际重建：按采样时间着色的俯视图",
+          "path": "/validation/effects/abot-recon-axera-20261001/view_top.png"
+        }
+      ],
+      "videos": [
+        {
+          "caption": "本次完整输入视频：上游演示样例",
+          "path": "/validation/effects/abot-recon-axera-20261001/abot-tested-input.mp4"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "输入时长",
+            "采样帧数",
+            "AXCL 调用",
+            "RGB 点云点数",
+            "Gaussian splat 数"
+          ],
+          "rows": [
+            [
+              "31.033 s",
+              "60",
+              "180",
+              "531664",
+              "531664"
+            ]
+          ]
+        },
+        {
+          "headers": [
+            "重建流程耗时",
+            "含校验的总耗时",
+            "视频解码"
+          ],
+          "rows": [
+            [
+              "282.9 s",
+              "440.031 s",
+              "cv2"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "modelId": "ABot-Recon-Axera",
+        "revision": "fbe73fc5686c6c0ed2af5255272cf3ebf248da58",
+        "codeRevision": "30407e2129898050056e996285c110e12144cc9a",
+        "provider": "AXCL C API",
+        "completed": true,
+        "scope": "official native AXCL video-to-pointcloud pipeline",
+        "inputSha256": "9c61771e282d946e0b0e7276034a228dd2fb5a1d1bae602535c0cc58c4f470e9",
+        "inputSource": {
+          "repo": "acvlab/abot-recon-streaming-3d",
+          "revision": "4c7fbedd8f13f724e095858d0d2d0696977be2d9",
+          "files": [
+            {
+              "path": "README.md",
+              "bytes": 1854,
+              "sha256": "c9274881b5fa9635151e02cdecc9191879554b8817114db0b471f9cee8bba50e",
+              "source": "https://huggingface.co/spaces/acvlab/abot-recon-streaming-3d/resolve/4c7fbedd8f13f724e095858d0d2d0696977be2d9/README.md"
+            },
+            {
+              "path": "app.py",
+              "bytes": 46556,
+              "sha256": "e1cfd7defc3cfebad77be01f8a03cb93aec8663ab700bceeb47fc6008540588e",
+              "source": "https://huggingface.co/spaces/acvlab/abot-recon-streaming-3d/resolve/4c7fbedd8f13f724e095858d0d2d0696977be2d9/app.py"
+            },
+            {
+              "path": "demo0.mp4",
+              "bytes": 4761543,
+              "sha256": "9c61771e282d946e0b0e7276034a228dd2fb5a1d1bae602535c0cc58c4f470e9",
+              "source": "https://huggingface.co/spaces/acvlab/abot-recon-streaming-3d/resolve/4c7fbedd8f13f724e095858d0d2d0696977be2d9/demo0.mp4"
+            }
+          ],
+          "purpose": "Input for actual AXCL reconstruction test; not a precomputed model result"
+        },
+        "requestedFps": 2,
+        "video": {
+          "width": 960,
+          "height": 544,
+          "fps": 29.00107411385607,
+          "frames": 900,
+          "durationSeconds": 31.03333333333333,
+          "sampleInterval": 15,
+          "expectedSampledFrames": 60
+        },
+        "filesBefore": [
+          {
+            "path": "LICENSE",
+            "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+          },
+          {
+            "path": "MODEL_LICENSE.md",
+            "sha256": "e72629af2c122b7842a2d82c8b819c7806dec7b90230569568127f0b5828cb75"
+          },
+          {
+            "path": "MODEL_USAGE_GUIDELINES.md",
+            "sha256": "3ef29d2d645a7756dfcc4cdbf3ebafdf86fede50ef497788dbffe0a656672d12"
+          },
+          {
+            "path": "MODEL_USAGE_GUIDELINES_ZH.md",
+            "sha256": "9d9e55fd69e39effa8fbc9a2e1651894d5f5211a99c0745377434c11937bd8c4"
+          },
+          {
+            "path": "NOTICE",
+            "sha256": "3525b2a72c67ad5596d6afd2c9a97202bf19509b5f259e9284bf7116d6250e94"
+          },
+          {
+            "path": "README.md",
+            "sha256": "0c7c9a571e841089fd630a60cd1719be169fe32c255365d6f27f0efd425c719b"
+          },
+          {
+            "path": "THIRD_PARTY_NOTICES.md",
+            "sha256": "515fe2087bf11d44e97723febdf6a4a1995b4c9ec98988690d2ebaa1bb2e6446"
+          },
+          {
+            "path": "config.json",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "decoder_step_kitti02.axmodel",
+            "sha256": "14e233e0637aaf0446cfe997be99b2cee4b2fee44bd3ac9842b98ae319f4d2fd"
+          },
+          {
+            "path": "encoder_kitti02.axmodel",
+            "sha256": "4630d92135d71e01790466f39d9474385ff95ecf678e9a2b4eb180baba192cca"
+          },
+          {
+            "path": "heads_kitti02.axmodel",
+            "sha256": "a7e1ca075a63cb8ef6c9d1eb4a71e0d39e07346ade691c9438f620181541fcb6"
+          },
+          {
+            "path": "host_pose_head/pose_head.safetensors",
+            "sha256": "f6805c677f3890900b07e6e52fd3fe37a102c1536e2ecf6dff4a20cf93d45fb2"
+          },
+          {
+            "path": "host_pose_head/pose_head_config.json",
+            "sha256": "3d250db83c02b9f4ea26c8b9b584d8d3292e16c2787efffbc5f814b485a0de38"
+          }
+        ],
+        "filesAfter": [
+          {
+            "path": "LICENSE",
+            "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+          },
+          {
+            "path": "MODEL_LICENSE.md",
+            "sha256": "e72629af2c122b7842a2d82c8b819c7806dec7b90230569568127f0b5828cb75"
+          },
+          {
+            "path": "MODEL_USAGE_GUIDELINES.md",
+            "sha256": "3ef29d2d645a7756dfcc4cdbf3ebafdf86fede50ef497788dbffe0a656672d12"
+          },
+          {
+            "path": "MODEL_USAGE_GUIDELINES_ZH.md",
+            "sha256": "9d9e55fd69e39effa8fbc9a2e1651894d5f5211a99c0745377434c11937bd8c4"
+          },
+          {
+            "path": "NOTICE",
+            "sha256": "3525b2a72c67ad5596d6afd2c9a97202bf19509b5f259e9284bf7116d6250e94"
+          },
+          {
+            "path": "README.md",
+            "sha256": "0c7c9a571e841089fd630a60cd1719be169fe32c255365d6f27f0efd425c719b"
+          },
+          {
+            "path": "THIRD_PARTY_NOTICES.md",
+            "sha256": "515fe2087bf11d44e97723febdf6a4a1995b4c9ec98988690d2ebaa1bb2e6446"
+          },
+          {
+            "path": "config.json",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "decoder_step_kitti02.axmodel",
+            "sha256": "14e233e0637aaf0446cfe997be99b2cee4b2fee44bd3ac9842b98ae319f4d2fd"
+          },
+          {
+            "path": "encoder_kitti02.axmodel",
+            "sha256": "4630d92135d71e01790466f39d9474385ff95ecf678e9a2b4eb180baba192cca"
+          },
+          {
+            "path": "heads_kitti02.axmodel",
+            "sha256": "a7e1ca075a63cb8ef6c9d1eb4a71e0d39e07346ade691c9438f620181541fcb6"
+          },
+          {
+            "path": "host_pose_head/pose_head.safetensors",
+            "sha256": "f6805c677f3890900b07e6e52fd3fe37a102c1536e2ecf6dff4a20cf93d45fb2"
+          },
+          {
+            "path": "host_pose_head/pose_head_config.json",
+            "sha256": "3d250db83c02b9f4ea26c8b9b584d8d3292e16c2787efffbc5f814b485a0de38"
+          }
+        ],
+        "sourceFiles": [
+          {
+            "path": "abot_axera/__init__.py",
+            "sha256": "2801f1e71885f31f715ad7cb6a4bbeff61a295ab333d6962a8ec70c006a1a85e"
+          },
+          {
+            "path": "abot_axera/backend.py",
+            "sha256": "ade5973a3f0bab64f4849407cbb1edfab0457ceea053e022e1482713ebbcc486"
+          },
+          {
+            "path": "abot_axera/csrc/resize_aa.c",
+            "sha256": "bc91b612217d33a08c437d8ae777de446b0065d294032afdf2ccaa6930692857"
+          },
+          {
+            "path": "abot_axera/native_runner.py",
+            "sha256": "7079eb11355a3a4bd6435a83cb93bf9dcb0c58c5a4145c942bc63e1e5ed0ac12"
+          },
+          {
+            "path": "abot_axera/pointcloud.py",
+            "sha256": "23d9139db8979f791ef8bc0da4a853644d6ce741aaa62904bc8449ea6c976324"
+          },
+          {
+            "path": "abot_axera/pose_head.py",
+            "sha256": "74f712f49fb7cb4189ea8091f723fcbfabb97b09c9dc4f8c579cac922aed8754"
+          },
+          {
+            "path": "abot_axera/preprocess.py",
+            "sha256": "166d2d5a9ecfdb22d614b779b8499227754900349d2bd6933f7ee29d911360fc"
+          },
+          {
+            "path": "abot_axera/progress.py",
+            "sha256": "ec072da29752872e14bd490266ee20c49d8f818760d2bd49d0693e8dbdc04d4e"
+          },
+          {
+            "path": "abot_axera/runners.py",
+            "sha256": "15be5e3b7a8f4fe4dfc5aa7efc6ba2ca930495978b9d2a9954d97379aca9dd0a"
+          },
+          {
+            "path": "abot_axera/splats.py",
+            "sha256": "372956cb0edcab7631203ed4ffaa7611e353bc8536588ecd9b9d8e29e006eb3b"
+          },
+          {
+            "path": "abot_axera/video.py",
+            "sha256": "3d040013ed9fe2d3821a06c9e9693b5c68670f4bbbaeee7cd8fd9cb27144bec7"
+          },
+          {
+            "path": "service/mapping_pipeline.py",
+            "sha256": "3794ea7d357dae08f435d8e40e887a2127287eaa6d1faedbc02a4d7b22162222"
+          }
+        ],
+        "sessions": [
+          {
+            "model": "encoder_kitti02.axmodel",
+            "provider": "AXCL C API",
+            "sha256": "4630d92135d71e01790466f39d9474385ff95ecf678e9a2b4eb180baba192cca",
+            "loadSeconds": 5.745806395003456,
+            "calls": 60,
+            "runMilliseconds": [
+              192.87908199839876,
+              191.77803499769652,
+              191.61995100148488,
+              192.37916299971403,
+              191.9057849991077,
+              191.84774399764137,
+              191.9264940006542,
+              191.95828599913511,
+              191.71590999758337,
+              192.20824600051856,
+              191.64240900136065,
+              191.7351599986432,
+              191.58524299928104,
+              191.610033998586,
+              191.84803600001032,
+              191.8223680004303,
+              191.61907600209815,
+              192.3523289988225,
+              191.7345759975433,
+              192.0443279996107,
+              191.6287009989901,
+              192.29107900173403,
+              191.89936899783788,
+              191.68732600155636,
+              191.86349400115432,
+              191.66749299984076,
+              191.71299300069222,
+              191.70424299954902,
+              191.77336799839395,
+              191.87020200115512,
+              191.73224399855826,
+              191.6779929997574,
+              191.9597439991776,
+              191.8856609991053,
+              191.69082599910325,
+              191.97024399909424,
+              191.6132429978461,
+              191.6966600001615,
+              191.61324300148408,
+              191.59136799862608,
+              191.85241000013775,
+              191.64211799943587,
+              191.6954930020438,
+              191.84336900070775,
+              191.8118690009578,
+              191.66828500237898,
+              191.62395199964521,
+              191.7099940001208,
+              191.74411999847507,
+              191.73245199999656,
+              191.66332700115163,
+              191.8307449996064,
+              191.7274939987692,
+              191.76599500133307,
+              191.59536799998023,
+              191.84707800013712,
+              191.4813259973016,
+              191.67324400041252,
+              191.83336999776657,
+              191.6924939978344
+            ],
+            "allReturnCodesZero": true,
+            "rawOutputTensorsCaptured": false
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "provider": "AXCL C API",
+            "sha256": "14e233e0637aaf0446cfe997be99b2cee4b2fee44bd3ac9842b98ae319f4d2fd",
+            "loadSeconds": 52.46541864400206,
+            "calls": 60,
+            "runMilliseconds": [
+              2614.3164509994676,
+              2615.304331000516,
+              2618.048633001308,
+              2615.1980809991073,
+              2615.7047910019173,
+              2616.355211001064,
+              2615.4937489991426,
+              2614.569618999667,
+              2615.3215400008776,
+              2616.4535019997857,
+              2619.071804001578,
+              2614.4080360027147,
+              2613.8889499998186,
+              2619.1934299968125,
+              2618.9075959991897,
+              2615.2777889983554,
+              2618.3341769974504,
+              2621.663690999412,
+              2616.223667999293,
+              2616.5004600006796,
+              2617.5215900002513,
+              2615.0482459997875,
+              2616.578627999843,
+              2618.9038030024676,
+              2616.236210000352,
+              2616.2814179988345,
+              2616.925711998192,
+              2616.537211000832,
+              2618.4418439988804,
+              2614.402492999943,
+              2616.144042000087,
+              2613.4636150018196,
+              2616.0267920022306,
+              2617.16546399839,
+              2617.6461319992086,
+              2617.68200699953,
+              2615.2541629999178,
+              2616.0676260005857,
+              2616.5576269995654,
+              2617.336963998241,
+              2618.07109199799,
+              2617.1726299980946,
+              2616.0687920018972,
+              2614.3333690015425,
+              2614.584068000113,
+              2618.7860040008673,
+              2615.534769000078,
+              2617.952538999816,
+              2614.3701350010815,
+              2618.4584599977825,
+              2617.029281998839,
+              2616.8064459998277,
+              2615.0838489993475,
+              2617.9325809971488,
+              2617.4825349989987,
+              2615.5651030021545,
+              2616.3482350020786,
+              2617.7672049998364,
+              2616.145231997507,
+              2616.648361999978
+            ],
+            "allReturnCodesZero": true,
+            "rawOutputTensorsCaptured": false
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "provider": "AXCL C API",
+            "sha256": "a7e1ca075a63cb8ef6c9d1eb4a71e0d39e07346ade691c9438f620181541fcb6",
+            "loadSeconds": 3.679970481000055,
+            "calls": 60,
+            "runMilliseconds": [
+              131.21262099957676,
+              130.60945100005483,
+              130.56074300038745,
+              130.79641000149422,
+              130.64036799914902,
+              130.60332600070979,
+              131.39228799991542,
+              130.63482600045973,
+              130.58320100026322,
+              130.64328499967814,
+              130.5458679998992,
+              130.61032599944156,
+              131.39520500044455,
+              130.63103400054388,
+              130.64678500086302,
+              130.55549199998495,
+              130.60974300242378,
+              130.5887429989525,
+              131.41824600097607,
+              130.54295099937008,
+              130.56482700267225,
+              130.61878400185378,
+              130.59399299891084,
+              130.9976619995723,
+              130.63307600168628,
+              131.50983000014094,
+              130.60274300005403,
+              130.55578500279807,
+              131.4453710001544,
+              130.82353500067256,
+              130.750326999987,
+              131.26657899920247,
+              130.68295199991553,
+              131.15807899885112,
+              131.50749600026757,
+              131.24032899941085,
+              130.6482430009055,
+              131.12891199853038,
+              130.51028400150244,
+              131.11928699800046,
+              130.60245199812925,
+              130.62199300111388,
+              130.6427010022162,
+              130.8144939976046,
+              131.3820389987086,
+              131.35345600312576,
+              130.5271580022236,
+              131.14578700333368,
+              130.64120000126422,
+              131.4050809996843,
+              130.5962830010685,
+              130.67736700031674,
+              130.69895000080578,
+              130.63361600143253,
+              130.56448999850545,
+              131.1049539981468,
+              130.5802409988246,
+              130.57790699895122,
+              130.5294909980148,
+              130.57965799816884
+            ],
+            "allReturnCodesZero": true,
+            "rawOutputTensorsCaptured": false
+          }
+        ],
+        "frames": [
+          {
+            "index": 0,
+            "seconds": 3.0359824279985332,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "d004b7b36793f5c38c3541b688126a8de1d2e801d39e950f17d6e903781fed3e",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "1371087ceb2a007c1fd9edf8a170d485a059c1f92aa02a98337fef00c34f18bd",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "35be01fa0cc9da62674a895ebec9cd15d2355c6783d23e3814999a3406579cdc",
+                "allFinite": true
+              }
+            },
+            "presentValid": 1.0000152587890625
+          },
+          {
+            "index": 1,
+            "seconds": 2.9756518059984955,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "64df23d535d0e4554914045d0947257a4a26e714f2947dbe670377bfe014ec5e",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "1a937db955075a9fb351a4a7f9bf45fae5f61793d0e7835b05cce45cc13170dd",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "c579db46c1d92c17deea54567975db23ea4d7b54cfeadd1883a2c3d693382ab4",
+                "allFinite": true
+              }
+            },
+            "presentValid": 2.000030517578125
+          },
+          {
+            "index": 2,
+            "seconds": 2.9776217300022836,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "6feee4d23ac7fc6b5930fc3e6efaa70018693d84952270ec7b790149154e10d3",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "1cdc3a866e7873d185014abb29716850e51e94de9706842f92deab21ce291cf7",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "bea7185ce8464be684fd4cd615fa8996b9fd3d03b5407dc9dd8567fecb63cfaf",
+                "allFinite": true
+              }
+            },
+            "presentValid": 3.0000457763671875
+          },
+          {
+            "index": 3,
+            "seconds": 2.9843635500001255,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "2f7d0b033f65957b02d06f9609da93537fc8ba7153e6f2f1866e1333afb25b7e",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "1a4b2de3aa95e59ef7f05a24655a153f75a256219add0d99374371a4a0a51990",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "af4374ffb9eec3b576e927585f5a2f0b0aa78a3ea58cd95ade92fc772fa3ed5c",
+                "allFinite": true
+              }
+            },
+            "presentValid": 4.00006103515625
+          },
+          {
+            "index": 4,
+            "seconds": 2.9794009039978846,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "0785c8d3ac3af35e43490e01a4d4214f9e6da851f38f52487224f0c49f9b5793",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "bbc3687f72a745e8f6ec0aa8b83b5649915a3d5860f6ac3bc4f7e877d95d9477",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "7ff20d1075617ffd113a81ad252b813be33eb4b56b79b6837b117bc977ad66ae",
+                "allFinite": true
+              }
+            },
+            "presentValid": 5.0000762939453125
+          },
+          {
+            "index": 5,
+            "seconds": 2.9802021169998625,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "2ab49935322ea632744a951294f2968741d139bfa251ea685f0be075d7fb0fb7",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "09a7434d751ae5bcd073afe2aa8706ebdd6a5abf66e3434b0b4417ca92f22bf4",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "a0fdb7a8ddeec14e877abd3093ae4e3c43465843a80c98ccce9aa881e45fcea1",
+                "allFinite": true
+              }
+            },
+            "presentValid": 5.999969482421875
+          },
+          {
+            "index": 6,
+            "seconds": 3.0252004680005484,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "ba47660acb0390d9d2998949451fae603df9bc2e2f1c9a896aea4b295b776295",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "e49ed9049a24652d27ace75bc922b26273556ba00eabfefc2a7b97d4b571beea",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "d2c663c0c655b795b7f4dac08b6fc50471ac5065ac2b4a346ad44942738c4f36",
+                "allFinite": true
+              }
+            },
+            "presentValid": 6.9999847412109375
+          },
+          {
+            "index": 7,
+            "seconds": 2.9756952650022868,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "e05d2e62bcd187e0035c5f80cd0b01c3ec0f2a3b7359c9f147e11418618c34bf",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "3d7539e2f13cfa6af522f8a757bd8fd5d24507589e244ab90e54b2141a2ddd5f",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "7cff09c958d6da6040b6df66a2e48dc585062d026a9500d3ce11a891235f18f0",
+                "allFinite": true
+              }
+            },
+            "presentValid": 8.0
+          },
+          {
+            "index": 8,
+            "seconds": 2.9756838889989012,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "865040111c4234ecef631c67abc9ad63b8ea71d046d65a79b7dbfed1faa22371",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "75fe9d4783d996b552da36ce8607f4b0fcc41353c8cd0799a71ceb3d5d045d97",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "d6522ca4ec84fb4d253555c4b5f7185ed6cceb275ac2761cc93b6a924a35a65f",
+                "allFinite": true
+              }
+            },
+            "presentValid": 8.0
+          },
+          {
+            "index": 9,
+            "seconds": 2.9810047859973565,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "a80fa77756b50703d48f583238837ac7d52fe6d9330325f34e58bfb7804d1b05",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "53055490fc7104560484d011a7a6d44c8bb42ecafd7ee9dcc1903b0dd0de0328",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "02e46409c5ed8f9137c6c1d905191c677138782ad13fc8ca78c732f20efb2dec",
+                "allFinite": true
+              }
+            },
+            "presentValid": 8.0
+          },
+          {
+            "index": 10,
+            "seconds": 2.9789374440006213,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "30c07aa678165aadb303fcc96ebc96615b5ee56671b9687816ddfe4cc1a95445",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "89e56878b571a744a841a5919de4c9ea4ee9bf42b4f2c9ff796d8badb40a7773",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "cb61e61e565a53e999a6440626dd9bc20a82f14a269c70ee1536687499c6df22",
+                "allFinite": true
+              }
+            },
+            "presentValid": 8.0
+          },
+          {
+            "index": 11,
+            "seconds": 2.9766653519982356,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "dba369a423d43d2b65b9540fc90d9cd715ac3a7f96365e54dda7483fe8a5be75",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "51400d3c8e30c6be5cc9441acec9e9ffddcc26f30ba497967d97262ecaa79a43",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "5da9bafaee1d85702d489ef363c73a94cea8bbf1ac62f2480839aacb76faa798",
+                "allFinite": true
+              }
+            },
+            "presentValid": 8.0
+          },
+          {
+            "index": 12,
+            "seconds": 3.0226599989982788,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "6b36c20c6ecc121fe93916aa17969fe1f44ea6570cc66d955a9cf91d58456f1d",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "2f5ddbaf2ab6ef1db4ab9f28fb0a3141cd88dfe0bfb474e09e76f4e66ec108fd",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "347e48e89ef9fa1023d403ca452492e437d181e8cec2f0c86db0bb1797a5262b",
+                "allFinite": true
+              }
+            },
+            "presentValid": 8.0
+          },
+          {
+            "index": 13,
+            "seconds": 2.979493363000074,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "1b4c91f724d05b691c20e461e31977e0872a5a602ae98cc20bb3b8f310c8bb87",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "7325347b4aef85090827dbb6ebee5361f1631979c6ee925a69f1414e6032c69a",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "b3315cd970858b643f8668561d01742488990b75deef20be7540c130a03726ca",
+                "allFinite": true
+              }
+            },
+            "presentValid": 8.0
+          },
+          {
+            "index": 14,
+            "seconds": 2.9796674889985297,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "25f857e236b92d4613f2488579fdeb580debdd0fa8cee5a69ba148a04bbd9247",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "e5ebab997ab416776959112e8f9c39a2d93b5933f33e6fa9b3bf5cb5a4c4c516",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "79fec8fc058e51087885afc212ad9b86927dad95e8226b06ca3b1ae8f9974e29",
+                "allFinite": true
+              }
+            },
+            "presentValid": 8.0
+          },
+          {
+            "index": 15,
+            "seconds": 2.979306403998635,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "8c85239b52fb4f37780d5451160a250d8372bfd7455fe1dee3c7435088ac7dbd",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "d2d957e65cda1053b9a30db822a7cfaeef28b13ca812608461db5ac344f83071",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "33110b342f87f6d845938363608c83485830139856c4f877d46642ad4414b4a8",
+                "allFinite": true
+              }
+            },
+            "presentValid": 8.0
+          },
+          {
+            "index": 16,
+            "seconds": 2.9788514020001458,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "dc96ecae2ac99052cb2ba67efef920cb5178db24a70d62f3c1c1a27d88062b9c",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "efba4d17320f0512e89ebe2b4b35ca4e6eca049d2f5a85f284120fa307a83f55",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "634988a1ac4b2f347a7827c6772aaf83202d6a9ffd7fbae1bd63e30a653630d6",
+                "allFinite": true
+              }
+            },
+            "presentValid": 8.0
+          },
+          {
+            "index": 17,
+            "seconds": 2.98474963499757,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "39306ed858e838e115e1ffaee9684413c3da1ed351bedf539b64739997fe4599",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "f025264e91aeca02f02fed16b1509478ad92a15c4489a5f1eb9598c000c4b91c",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "b1d48f09b6d107dec949806bffe87d95080af0ed7f67f8068c3d2f960df9d58b",
+                "allFinite": true
+              }
+            },
+            "presentValid": 8.0
+          },
+          {
+            "index": 18,
+            "seconds": 3.026032761998067,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "37bbf7eb25d8cf833e770ac082241704a0e430a97aec337fddfb0497088947fc",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "fc54acb76503609215fe98cc428f999932e3800439e8d1abc91adf2d65650bbb",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "913c29e23fa00adceace3055e79b6948e7f6c9d6873b121d3adc0ee22364a7f9",
+                "allFinite": true
+              }
+            },
+            "presentValid": 8.0
+          },
+          {
+            "index": 19,
+            "seconds": 2.977551147003396,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "9679601ace75ab5b7df76938eb6787822edfee04d9cabea05ed10fb0d3bd327a",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "feb02f3dc6913f767bbbaecf35b2e1d156497c901f0d815671fc523253fa08a3",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "c3103203c2eae09891cf94cd08991554e76756f0efad7ffba35e72497abf2621",
+                "allFinite": true
+              }
+            },
+            "presentValid": 8.0
+          },
+          {
+            "index": 20,
+            "seconds": 2.977510896998865,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "f16d1656ac374fda44f77a868079e454af2c0a9124f9a5fe382eca5d98a1ff4d",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "fa8422e21f507b788a99a43a69cced604b6e0886492ba1d23a053cd518d4edf1",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "5464d469a634918b3538fd9629b9e0dbbe97cd6df40049b03ff1909829b4c33b",
+                "allFinite": true
+              }
+            },
+            "presentValid": 8.0
+          },
+          {
+            "index": 21,
+            "seconds": 2.9778460240013374,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "5c5dcc1caaa93390a93fdf0154c33e04b3e0ffc8d4528a259743c41682e3c3d1",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "dcd452afce4708ed8407d8ec6767d0cd9878f3339732dd88666139c013d6f8b8",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "5f86ab66f85c254849fa50646fa322e4c8847cd63c0f05a1ed64ccf830264795",
+                "allFinite": true
+              }
+            },
+            "presentValid": 8.0
+          },
+          {
+            "index": 22,
+            "seconds": 2.9775747720013896,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "58fa5394b8b02a022a5f7d7d1ce786d7a21bb759edebc0fb2cf373e18679f797",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "893629db630faa58824acf6b20e91355d5c617ca892cbe23e090c77e8f9b13b8",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "822b600030b03bde168b0b248e82177e5ddfe614c00f34af97bc5ef2ef30742c",
+                "allFinite": true
+              }
+            },
+            "presentValid": 8.0
+          },
+          {
+            "index": 23,
+            "seconds": 2.9822379580000415,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "b65ddb7f3e7084cef02b2e0575924838e6c5218626d484ff5d86b9f38b0113bf",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "efc0b848cfc102191c8ec88011fc3f2afadc99b4dc4e5995bcebb5bc77d51e29",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "1afb0d5a8d24a8bf5e7344ad2767dcbb17d0f35d3582e0e117f228d11f65ff49",
+                "allFinite": true
+              }
+            },
+            "presentValid": 8.0
+          },
+          {
+            "index": 24,
+            "seconds": 2.9771865619986784,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "bee725502317fb1264dda4a7ff190f5f8955be0ce2caef75098e25beba4e2be8",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "38418411fa03a6cb2cdf04bb462a022e8affa2f9494c64cdad71fce67b697ddf",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "ca6de98294d48f5432dccdb22749deda3780fb29d9ca34f917c019ec6a2af6a8",
+                "allFinite": true
+              }
+            },
+            "presentValid": 8.0
+          },
+          {
+            "index": 25,
+            "seconds": 2.9894427369981713,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "8651a4832543d36c5253abbbfbf509c895b7827becd8c5a123e5355e2e6f4081",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "a3371e4f5e0c05a77c8d064c94282131d5c08e887767477a399905aad4a1534e",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "63c4f292fb3b691ee940d5d75c44358f8c82d81ee53eff3fe07d1e28a7d35f5f",
+                "allFinite": true
+              }
+            },
+            "presentValid": 8.0
+          },
+          {
+            "index": 26,
+            "seconds": 2.9771013949975895,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "90caf7393db4a6652257945e545c6b5941cb3a4aeaacb5e82fe7e5197181138e",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "4911a81f1efa3fc5de288e81f89331a972e34fdd32f861033bd9c106fafbca9a",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "a5c828e2a2edf954bd5cfa03bc8908b1c21c1320282e424376837cbfa4afa920",
+                "allFinite": true
+              }
+            },
+            "presentValid": 8.0
+          },
+          {
+            "index": 27,
+            "seconds": 3.039936694000062,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "1268ebe785631e6e0add01a603dd121743279f0bb53294c5548594857e2cb22a",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "d8fcba442d36a225da93e3c2af1da96024df97de7514cdb53f56cf01cdb759fc",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "05120c558d145072abb93e0c18bc10b25b387729091979fbcd96b425da30f947",
+                "allFinite": true
+              }
+            },
+            "presentValid": 8.0
+          },
+          {
+            "index": 28,
+            "seconds": 3.0290474829998857,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "766e0cdc1a74eb132fa660a0a54ac25fde57a1bb555d96a945cc5b73598b6134",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "bff7a29a63872661316ace20da0897ddcd14376ae6ad2a9304dbf6352c3605e2",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "36d0fab6077b8efff3fc2ef119ee330135f2491b51fa486687654989d471d171",
+                "allFinite": true
+              }
+            },
+            "presentValid": 8.0
+          },
+          {
+            "index": 29,
+            "seconds": 2.978194565999729,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "0cb2c752bc0156ddaa7086d4cfecdfc2ec11c4c64fa071c32196a5390991416a",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "2d060f695c0d3770ede741a3ee29feec94e4cbe85a865d56a2ea2a7497527782",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "b84d15be30697f741bc8915f22218a68d0468014ad9df9400ea571374b18fbef",
+                "allFinite": true
+              }
+            },
+            "presentValid": 8.0
+          },
+          {
+            "index": 30,
+            "seconds": 2.9767843519985036,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "2b6a9337146657f46084a28fe126b93d0344494187e63a1c87b13c4fd78bf628",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "8e29d0ae806e97e5677bae04e8904ca58cf11ebb35ad366d15e2d1199a04c9ee",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "33d9eafe1d01b6bf16f1bdf2d88128cfa780c413b4e241a6970b0a6f9e89258f",
+                "allFinite": true
+              }
+            },
+            "presentValid": 8.0
+          },
+          {
+            "index": 31,
+            "seconds": 3.0233969599976263,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "0abe74416bbdc5d068d28d8c40830e4eccbb55ba6a7666278e20b53fe4c03364",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "745eb1b928ebb3c2058bdeeea2f854ead37afc35bc102396bdf60b1b0d3d7f68",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "b8857880880bf9f75fa20ee85046b86e9c6e666e9dacf13f8d5bf536742fd0ea",
+                "allFinite": true
+              }
+            },
+            "presentValid": 8.0
+          },
+          {
+            "index": 32,
+            "seconds": 2.9785539009972126,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "6d5d924fcd988260180d0d7e839a15419eacfd8e74abbf8789670d5ad7b62ea4",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "a144cdfffb6772812fed6babdd38650581afea92017714f1e5b0ac98ef8f5e69",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "e17e8b6b64f9041cd7a98604fcb788e49077d6a3d605acc0e713eab6a15cae00",
+                "allFinite": true
+              }
+            },
+            "presentValid": 8.0
+          },
+          {
+            "index": 33,
+            "seconds": 3.0255165099988517,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "4d53dfd34fd9f9e70220e0f059abefc7307d2ce97946371b8ab3629a6eee3982",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "c8ac592d5fa3626553729b7347def31763c011df6104b669321cfa728b4a9e95",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "24a1c69259a5684b9f636403f9d72dacbeaabd5811fd049cc1d22a97da341e24",
+                "allFinite": true
+              }
+            },
+            "presentValid": 8.0
+          },
+          {
+            "index": 34,
+            "seconds": 3.0216460779993213,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "dced0d95b5691d7d02043214db5ef361be19ed317f85d1c1403e6b0579012572",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "529686a37f71c2a898cb613168a100a19d9fef23a01b5cf4e6a35667a71877e0",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "5347b09634d9db2a8a74ac95d2427b0539eb00fe69b893ecb99b7e83ac7344b8",
+                "allFinite": true
+              }
+            },
+            "presentValid": 8.0
+          },
+          {
+            "index": 35,
+            "seconds": 3.0332270420003624,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "eba85000f3025091a1f58a014bf7cbac109b7b48f486e663ff875182bbc17e8e",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "244117dfcbe8489caff9ff2125fdab7a4fff9176030a8a19239d3c08b67ed869",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "ad0c25c6401488865b77d71b5043b612fdacd8f616a9b760110e794368744669",
+                "allFinite": true
+              }
+            },
+            "presentValid": 8.0
+          },
+          {
+            "index": 36,
+            "seconds": 2.9748080110002775,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "ee125d0c35ddfcee4f540228fd893e9c320a97e69fdfb9a345cbb98f2d704583",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "c32a7b85f82a9cb4a15ae960367dd7a2165353f832c0833e5110c9926037a71f",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "3ffa5148ae3d265ba1ca49cb1cc16f2380fbdefd133e7bea043e1810bf124eb0",
+                "allFinite": true
+              }
+            },
+            "presentValid": 8.0
+          },
+          {
+            "index": 37,
+            "seconds": 3.0293741099994804,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "21f7ef1b405f7803e9542e9f2ed6388dc69f70ecb0b01d839c42fc47e94fb8d7",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "5dbe27decde42926d41ba65b49fa205914600ce85efd3ea8f35a5921c8c358d5",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "2b9cf35c9c65117e2cb1366039b868939d2ea086788797bb3a398a94fa78cc34",
+                "allFinite": true
+              }
+            },
+            "presentValid": 8.0
+          },
+          {
+            "index": 38,
+            "seconds": 2.9764579760012566,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "d61a79907df915e3658fd9e40c8a94a3640cd035142c647cd1b1eb686d6c5e62",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "e1ea195de51ddb58e0572c13b58bcbd2640396346d51356175016926774c3c93",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "188629d8a4086652c94ce8a8737ff3d62bf8f033220525314ca3e0fda6b6ea44",
+                "allFinite": true
+              }
+            },
+            "presentValid": 8.0
+          },
+          {
+            "index": 39,
+            "seconds": 3.0331631659973937,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "a0d9d97cf061cad898a89ae6050c2490869f0a9c563cc6d5b3c0194bcfbc5b9a",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "ddcf56bba5e652913894b0bbdc616b7b4b218242b1fd4b5e54687e0d93fb9c43",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "54058a3b33344fc59664c301e912242d79099b5c75922555a6dcf704b1011be4",
+                "allFinite": true
+              }
+            },
+            "presentValid": 8.0
+          },
+          {
+            "index": 40,
+            "seconds": 2.9790716120005527,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "ed69e7bdd62a6d1347ef547172d51a45dac1a36ed188b4261692a38e190b41af",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "45927812f06ffc53d029bfb7e3a608355450f06cbe2cbb17cd9c409f1e6cb5e0",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "d0a25f9c39f245a66c6c95e96d72e179b5f2b312d158bb09f92f3147ca6aaaf9",
+                "allFinite": true
+              }
+            },
+            "presentValid": 8.0
+          },
+          {
+            "index": 41,
+            "seconds": 2.9774941470022895,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "fc991e621165638186469526ddd39ad66deaa7890059384707a3903c1e5de2df",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "3f837b7ca9a787c07bf85f49339511e102f2290690945808282369a5283368f7",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "751ce85e7d0e40eb6b7aa892b6a09144d50f11cf19f8d2a1a34a3aa1f1064073",
+                "allFinite": true
+              }
+            },
+            "presentValid": 8.0
+          },
+          {
+            "index": 42,
+            "seconds": 2.9765061010002682,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "c2b8a6c254a2d10e3c02d18eea61a94d07e4c297dbf2d3da0d06fbb0d7439c5f",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "cfe1bb70b44c52e9f771095ef7c742b7194c14d99715e98596ba51df92855e50",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "736b4dafb3c19490ed184f5835ee84ca4d222f4e37279723ab78349b9e9d3383",
+                "allFinite": true
+              }
+            },
+            "presentValid": 8.0
+          },
+          {
+            "index": 43,
+            "seconds": 2.97749193799973,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "93aa464e5887890a7049faa6cb7ca3deb0415a60dc95e10540bcc557d4253b59",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "9e3a78a491cc0b88c70e3d5e95511b246cbde23063e0f0fb20b9da2d68dcbe1c",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "0798cf3b2a4a676576cac827f6c196a218d51c467fda049f2bd77b6444827ba5",
+                "allFinite": true
+              }
+            },
+            "presentValid": 8.0
+          },
+          {
+            "index": 44,
+            "seconds": 3.0202486269990914,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "64fa9962ff105a595f194c94092cf122142991754f6085af7cd2ac656db90648",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "a9d108cbb5bc36ca1540e82cb6c94ed82c7a39e44243bc6e28cc59e4c2eb99e5",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "89435220d8ca17d65e42c84e16169425b7dbef4d9b651a9ec13634bc0d17af6c",
+                "allFinite": true
+              }
+            },
+            "presentValid": 8.0
+          },
+          {
+            "index": 45,
+            "seconds": 3.034283756001969,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "d330fee2a2a30683f6bef50c6047e26b3b515c5309a6def7d5c6cb1cfd941427",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "6f33ff73e87d7a57d614d3265aa05d4ed5e7856daa30dbd4248c77fcb0eef4fc",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "b7376632f8a0b4c0ac982876e55976b91c658437bc9a4b383a15b1c499946484",
+                "allFinite": true
+              }
+            },
+            "presentValid": 8.0
+          },
+          {
+            "index": 46,
+            "seconds": 2.975244104000012,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "d672a850c6f8c99187ff186addea88fa170f40c669897882c069b40147df5117",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "ea54ae96ef788b33e5a2111d176c7bb94efba315e52d3ed773f9b394a407ff17",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "f313b008091518ab38cf6eecf3b5af571bfd4073aa1618f01bf15c080c547df7",
+                "allFinite": true
+              }
+            },
+            "presentValid": 8.0
+          },
+          {
+            "index": 47,
+            "seconds": 3.0362223140000424,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "f4f6955c5b9b34c25a6568615cf15404bc38e0db6a74d50ad9355c824a6e978f",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "51a8f9f13d93f5071aa3bca17e5c9ea59d049f94af2aff0571f3ce74b4965244",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "131f7bd79e2a66975d352c5af39994ec67d161062ab676d6c3560f6c6d41cf54",
+                "allFinite": true
+              }
+            },
+            "presentValid": 8.0
+          },
+          {
+            "index": 48,
+            "seconds": 2.9748690180022095,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "6a0c1c17ac9687a6d38c1d461d637672748d3de41caf18065e71fe381d49a77a",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "490cd3edc2da3009ba17322ca149848f3947db4dab7705d4ea022168ca37ddd7",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "2de65077350d433d681e6bf705a905b6d47b6c4e3f18f2ccdca481d28cdf5942",
+                "allFinite": true
+              }
+            },
+            "presentValid": 8.0
+          },
+          {
+            "index": 49,
+            "seconds": 3.0342096719978144,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "7424c367178856ede74435d6eee195df096fcc51365cda432c294b9c0c292a72",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "e4861f7a664f715d25cb8ebcab47d19bc0b652f8437f5671a76cefda07e1135a",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "2ed24c1f616908bbc6a37cbf3c5bcbe6f658ea77d62b7867c10a690c43481350",
+                "allFinite": true
+              }
+            },
+            "presentValid": 8.0
+          },
+          {
+            "index": 50,
+            "seconds": 2.9767581580017577,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "7b0faecb16839e37bcb28d9facfa7f896835872f63368b4a5900080729b36a29",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "235865744f919961f49c065be21d0f9fcd557064c378317d0a698cd06ee8b8c3",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "cc52fab889a9c8cdd15566016322f132dbf9d7fbd80c7f9f4f2995f016181a0a",
+                "allFinite": true
+              }
+            },
+            "presentValid": 8.0
+          },
+          {
+            "index": 51,
+            "seconds": 2.997262201999547,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "d7acca69b5305bf41842ff8c4720078849055052498ff1d49cb7dfce7e38dc25",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "dcb651a8edb6bf617cf6bfee3a6bf42a6bb2d2a27ea6e34408bfd966ae43a0e9",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "4666fadca80d6e8c74a60637a2a07c5f5c9b4db4bca721867883ddeafb9409df",
+                "allFinite": true
+              }
+            },
+            "presentValid": 8.0
+          },
+          {
+            "index": 52,
+            "seconds": 2.9754062720021466,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "ea1c1d6fa02f0352b7bf4da364994e4ae59bc288159f6b2b2bb21f834ccaabc0",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "51fdb63f605b3d219b5ea4c8a30b670a5ce6caeddc5569ee5abb27e354165dcb",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "ee3a71d6f1c9a6ba6e088d09a3b358ce8d3ca1f145f0483881a8e157c7f6e719",
+                "allFinite": true
+              }
+            },
+            "presentValid": 8.0
+          },
+          {
+            "index": 53,
+            "seconds": 3.018952171998535,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "2c2a7a12b1f0ee64daf104584558f224239e559e38cd1e93351eea30eda607fe",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "089c80825dd817e9276fe451058132bee2b86c361484dc82dea6ad3e65c4c2db",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "ef123c8e6861426ee60ebf834b9c0e398fcd529219f480e34dd4cfd92471cb5d",
+                "allFinite": true
+              }
+            },
+            "presentValid": 8.0
+          },
+          {
+            "index": 54,
+            "seconds": 2.9775958309983253,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "260fd7462d7bf99b9ba554c164ed965d0b3fb039d6450581014073f8a1a26201",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "c0d88c939f4abaf1a81007732917536d524964a8ecd85657b2bd52b81f4dd6a6",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "f81e7de325538767a63b72eb2ecce61447bccb7cb054084027f79c51d0b11255",
+                "allFinite": true
+              }
+            },
+            "presentValid": 8.0
+          },
+          {
+            "index": 55,
+            "seconds": 3.026022229998489,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "2f14a4ecccf49e92d75a8bf6e9fffa64bfd22f7898a853a3d45b2219660c01e6",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "a8042b8aebdb5cc847ef7e4e5e690814d1cd5456189fc6ecccd049cd2fd0566f",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "41b76e972b0d985a81c47cf8bfa030f2a73069b508e29430bf2dc58c47d43233",
+                "allFinite": true
+              }
+            },
+            "presentValid": 8.0
+          },
+          {
+            "index": 56,
+            "seconds": 2.9757939000010083,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "ee041f3d783d511feb5ca4ed4cb01d926cb9ed2d51205f22c5d07ed89d4381bb",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "6354c1137d2acfbb61e46d624454d5f81c7a2780ecf0ad001385bed31a2eb024",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "ba3b7b48c92994eb5eb557c818d9e150440508a9f558ebfa49c3350a684ca120",
+                "allFinite": true
+              }
+            },
+            "presentValid": 8.0
+          },
+          {
+            "index": 57,
+            "seconds": 3.025380557999597,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "3b5bf47ba597b5cca01c78099693fb6b92217d07f1a753eedefccfa671453e0d",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "3c9e8b835cd7043616357cba1030e6d0d56957a92239e91fdbed7fff5a8dca71",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "f5ccf462a8243022e71fbf2adb2536466b3e29ba26dc8d39b75c1c7222cedefb",
+                "allFinite": true
+              }
+            },
+            "presentValid": 8.0
+          },
+          {
+            "index": 58,
+            "seconds": 2.9769947019995016,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "ce2bee5cbc848702e683f9542dff747afc1ec935bfcfbdaab5a5653be692d5af",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "77970b2ad7ae0f5def4294cebd2ca97353fb9f1fe86d2cbfb6f345b7d130b37c",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "61f412e5ab64193093dc8424bac4bd59181164638f69c32ba327186c1470069c",
+                "allFinite": true
+              }
+            },
+            "presentValid": 8.0
+          },
+          {
+            "index": 59,
+            "seconds": 2.9767152830027044,
+            "headsOutputs": {
+              "local_points": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  3
+                ],
+                "dtype": "float32",
+                "sha256": "c77aec42684a6a79903be3a765ba3b9a328e15166f49b6f959e7159f5aa8cbab",
+                "allFinite": true
+              },
+              "camera_features": {
+                "shape": [
+                  1,
+                  725,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "86dc3d291c5399ef39d74c29ce6f0a77c401f637e6f2c925afe334885d115d6c",
+                "allFinite": true
+              },
+              "confidence": {
+                "shape": [
+                  1,
+                  280,
+                  504,
+                  1
+                ],
+                "dtype": "float32",
+                "sha256": "67706566332ffc0d3540343bdcff66044a1f7dc9b46319b571166b2c16a5e161",
+                "allFinite": true
+              }
+            },
+            "presentValid": 8.0
+          }
+        ],
+        "rawOutputChecks": {
+          "allFinite": true,
+          "orthogonalityMaxError": 9.5367431640625e-07,
+          "confidenceMin": 1.4905887155691744e-06,
+          "confidenceMax": 0.9314400553703308,
+          "frames": 60,
+          "independentGroundTruth": false
+        },
+        "pipelineMeta": {
+          "video": "demo0.mp4",
+          "fps": 2,
+          "engine": "ABot-Recon",
+          "decoder": "cv2",
+          "frames": 60,
+          "infer_s": 215.5,
+          "points_raw": 1164269,
+          "walked_area_kept": [
+            1163371,
+            1164269
+          ],
+          "cloud_points": 531664,
+          "splats": 531664,
+          "total_s": 282.9
+        },
+        "totalCalls": 180,
+        "elapsedSeconds": 440.0314429579994,
+        "artifacts": {
+          "raw-reconstruction.npz": {
+            "bytes": 131864803,
+            "sha256": "842b1ffa6a1daae6b8d3f4eb504027e4db4b67704aff5e9f06d32417d0662d23"
+          },
+          "products/cloud.ply": {
+            "bytes": 7975172,
+            "sha256": "7d9abfbc885194e44aaa3671df961f9789e76fdc1ec518b30b4d80a68e3496e3"
+          },
+          "products/cloud_viz.ply": {
+            "bytes": 7975172,
+            "sha256": "988ed934074fcbcadd663b95988b60568088a891c02892e37d99f48c29ca6e28"
+          },
+          "products/floorplan.png": {
+            "bytes": 484708,
+            "sha256": "3b65e92d5d774600dab42bd7f14242a50c9bb4a3701b705c079b767bb3fa254a"
+          },
+          "products/meta.json": {
+            "bytes": 249,
+            "sha256": "fdc643be3ba5d7aa80ede34ea7f97cb59f1a0a6c0f8ff42af1ea2da3253d9ea1"
+          },
+          "products/recon.npz": {
+            "bytes": 3873,
+            "sha256": "c5ba8fcbc470cc9235b8c2463049f0df2332eaf5cad97ef08ebdfad235e040ab"
+          },
+          "products/splats.ply": {
+            "bytes": 36153616,
+            "sha256": "3e87ee20cf5afa7d2ffaafb4ffa0180cadaf1528fb30dfe784dcccd0a55481bd"
+          },
+          "products/view_ob.png": {
+            "bytes": 378388,
+            "sha256": "be68908edc71b952f056d98b568d3761a6ee5a852a207e09a96d54e935803d5f"
+          },
+          "products/view_top.png": {
+            "bytes": 310290,
+            "sha256": "61b7e0a8098bc7e89143da41c6e0b67740284636a240fa3a18dd21614bea399f"
+          }
+        },
+        "inferenceEvidence": "native-return-codes-and-reconstruction-output",
+        "nativeCalls": [
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 0,
+            "milliseconds": 192.87908199839876,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 1,
+            "milliseconds": 2614.3164509994676,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 2,
+            "milliseconds": 131.21262099957676,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 3,
+            "milliseconds": 191.77803499769652,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 4,
+            "milliseconds": 2615.304331000516,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 5,
+            "milliseconds": 130.60945100005483,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 6,
+            "milliseconds": 191.61995100148488,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 7,
+            "milliseconds": 2618.048633001308,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 8,
+            "milliseconds": 130.56074300038745,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 9,
+            "milliseconds": 192.37916299971403,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 10,
+            "milliseconds": 2615.1980809991073,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 11,
+            "milliseconds": 130.79641000149422,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 12,
+            "milliseconds": 191.9057849991077,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 13,
+            "milliseconds": 2615.7047910019173,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 14,
+            "milliseconds": 130.64036799914902,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 15,
+            "milliseconds": 191.84774399764137,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 16,
+            "milliseconds": 2616.355211001064,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 17,
+            "milliseconds": 130.60332600070979,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 18,
+            "milliseconds": 191.9264940006542,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 19,
+            "milliseconds": 2615.4937489991426,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 20,
+            "milliseconds": 131.39228799991542,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 21,
+            "milliseconds": 191.95828599913511,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 22,
+            "milliseconds": 2614.569618999667,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 23,
+            "milliseconds": 130.63482600045973,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 24,
+            "milliseconds": 191.71590999758337,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 25,
+            "milliseconds": 2615.3215400008776,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 26,
+            "milliseconds": 130.58320100026322,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 27,
+            "milliseconds": 192.20824600051856,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 28,
+            "milliseconds": 2616.4535019997857,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 29,
+            "milliseconds": 130.64328499967814,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 30,
+            "milliseconds": 191.64240900136065,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 31,
+            "milliseconds": 2619.071804001578,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 32,
+            "milliseconds": 130.5458679998992,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 33,
+            "milliseconds": 191.7351599986432,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 34,
+            "milliseconds": 2614.4080360027147,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 35,
+            "milliseconds": 130.61032599944156,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 36,
+            "milliseconds": 191.58524299928104,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 37,
+            "milliseconds": 2613.8889499998186,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 38,
+            "milliseconds": 131.39520500044455,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 39,
+            "milliseconds": 191.610033998586,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 40,
+            "milliseconds": 2619.1934299968125,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 41,
+            "milliseconds": 130.63103400054388,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 42,
+            "milliseconds": 191.84803600001032,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 43,
+            "milliseconds": 2618.9075959991897,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 44,
+            "milliseconds": 130.64678500086302,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 45,
+            "milliseconds": 191.8223680004303,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 46,
+            "milliseconds": 2615.2777889983554,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 47,
+            "milliseconds": 130.55549199998495,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 48,
+            "milliseconds": 191.61907600209815,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 49,
+            "milliseconds": 2618.3341769974504,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 50,
+            "milliseconds": 130.60974300242378,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 51,
+            "milliseconds": 192.3523289988225,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 52,
+            "milliseconds": 2621.663690999412,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 53,
+            "milliseconds": 130.5887429989525,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 54,
+            "milliseconds": 191.7345759975433,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 55,
+            "milliseconds": 2616.223667999293,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 56,
+            "milliseconds": 131.41824600097607,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 57,
+            "milliseconds": 192.0443279996107,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 58,
+            "milliseconds": 2616.5004600006796,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 59,
+            "milliseconds": 130.54295099937008,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 60,
+            "milliseconds": 191.6287009989901,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 61,
+            "milliseconds": 2617.5215900002513,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 62,
+            "milliseconds": 130.56482700267225,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 63,
+            "milliseconds": 192.29107900173403,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 64,
+            "milliseconds": 2615.0482459997875,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 65,
+            "milliseconds": 130.61878400185378,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 66,
+            "milliseconds": 191.89936899783788,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 67,
+            "milliseconds": 2616.578627999843,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 68,
+            "milliseconds": 130.59399299891084,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 69,
+            "milliseconds": 191.68732600155636,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 70,
+            "milliseconds": 2618.9038030024676,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 71,
+            "milliseconds": 130.9976619995723,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 72,
+            "milliseconds": 191.86349400115432,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 73,
+            "milliseconds": 2616.236210000352,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 74,
+            "milliseconds": 130.63307600168628,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 75,
+            "milliseconds": 191.66749299984076,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 76,
+            "milliseconds": 2616.2814179988345,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 77,
+            "milliseconds": 131.50983000014094,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 78,
+            "milliseconds": 191.71299300069222,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 79,
+            "milliseconds": 2616.925711998192,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 80,
+            "milliseconds": 130.60274300005403,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 81,
+            "milliseconds": 191.70424299954902,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 82,
+            "milliseconds": 2616.537211000832,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 83,
+            "milliseconds": 130.55578500279807,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 84,
+            "milliseconds": 191.77336799839395,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 85,
+            "milliseconds": 2618.4418439988804,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 86,
+            "milliseconds": 131.4453710001544,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 87,
+            "milliseconds": 191.87020200115512,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 88,
+            "milliseconds": 2614.402492999943,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 89,
+            "milliseconds": 130.82353500067256,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 90,
+            "milliseconds": 191.73224399855826,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 91,
+            "milliseconds": 2616.144042000087,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 92,
+            "milliseconds": 130.750326999987,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 93,
+            "milliseconds": 191.6779929997574,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 94,
+            "milliseconds": 2613.4636150018196,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 95,
+            "milliseconds": 131.26657899920247,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 96,
+            "milliseconds": 191.9597439991776,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 97,
+            "milliseconds": 2616.0267920022306,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 98,
+            "milliseconds": 130.68295199991553,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 99,
+            "milliseconds": 191.8856609991053,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 100,
+            "milliseconds": 2617.16546399839,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 101,
+            "milliseconds": 131.15807899885112,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 102,
+            "milliseconds": 191.69082599910325,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 103,
+            "milliseconds": 2617.6461319992086,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 104,
+            "milliseconds": 131.50749600026757,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 105,
+            "milliseconds": 191.97024399909424,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 106,
+            "milliseconds": 2617.68200699953,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 107,
+            "milliseconds": 131.24032899941085,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 108,
+            "milliseconds": 191.6132429978461,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 109,
+            "milliseconds": 2615.2541629999178,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 110,
+            "milliseconds": 130.6482430009055,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 111,
+            "milliseconds": 191.6966600001615,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 112,
+            "milliseconds": 2616.0676260005857,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 113,
+            "milliseconds": 131.12891199853038,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 114,
+            "milliseconds": 191.61324300148408,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 115,
+            "milliseconds": 2616.5576269995654,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 116,
+            "milliseconds": 130.51028400150244,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 117,
+            "milliseconds": 191.59136799862608,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 118,
+            "milliseconds": 2617.336963998241,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 119,
+            "milliseconds": 131.11928699800046,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 120,
+            "milliseconds": 191.85241000013775,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 121,
+            "milliseconds": 2618.07109199799,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 122,
+            "milliseconds": 130.60245199812925,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 123,
+            "milliseconds": 191.64211799943587,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 124,
+            "milliseconds": 2617.1726299980946,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 125,
+            "milliseconds": 130.62199300111388,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 126,
+            "milliseconds": 191.6954930020438,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 127,
+            "milliseconds": 2616.0687920018972,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 128,
+            "milliseconds": 130.6427010022162,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 129,
+            "milliseconds": 191.84336900070775,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 130,
+            "milliseconds": 2614.3333690015425,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 131,
+            "milliseconds": 130.8144939976046,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 132,
+            "milliseconds": 191.8118690009578,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 133,
+            "milliseconds": 2614.584068000113,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 134,
+            "milliseconds": 131.3820389987086,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 135,
+            "milliseconds": 191.66828500237898,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 136,
+            "milliseconds": 2618.7860040008673,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 137,
+            "milliseconds": 131.35345600312576,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 138,
+            "milliseconds": 191.62395199964521,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 139,
+            "milliseconds": 2615.534769000078,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 140,
+            "milliseconds": 130.5271580022236,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 141,
+            "milliseconds": 191.7099940001208,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 142,
+            "milliseconds": 2617.952538999816,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 143,
+            "milliseconds": 131.14578700333368,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 144,
+            "milliseconds": 191.74411999847507,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 145,
+            "milliseconds": 2614.3701350010815,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 146,
+            "milliseconds": 130.64120000126422,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 147,
+            "milliseconds": 191.73245199999656,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 148,
+            "milliseconds": 2618.4584599977825,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 149,
+            "milliseconds": 131.4050809996843,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 150,
+            "milliseconds": 191.66332700115163,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 151,
+            "milliseconds": 2617.029281998839,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 152,
+            "milliseconds": 130.5962830010685,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 153,
+            "milliseconds": 191.8307449996064,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 154,
+            "milliseconds": 2616.8064459998277,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 155,
+            "milliseconds": 130.67736700031674,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 156,
+            "milliseconds": 191.7274939987692,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 157,
+            "milliseconds": 2615.0838489993475,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 158,
+            "milliseconds": 130.69895000080578,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 159,
+            "milliseconds": 191.76599500133307,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 160,
+            "milliseconds": 2617.9325809971488,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 161,
+            "milliseconds": 130.63361600143253,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 162,
+            "milliseconds": 191.59536799998023,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 163,
+            "milliseconds": 2617.4825349989987,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 164,
+            "milliseconds": 130.56448999850545,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 165,
+            "milliseconds": 191.84707800013712,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 166,
+            "milliseconds": 2615.5651030021545,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 167,
+            "milliseconds": 131.1049539981468,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 168,
+            "milliseconds": 191.4813259973016,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 169,
+            "milliseconds": 2616.3482350020786,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 170,
+            "milliseconds": 130.5802409988246,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 171,
+            "milliseconds": 191.67324400041252,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 172,
+            "milliseconds": 2617.7672049998364,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 173,
+            "milliseconds": 130.57790699895122,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 174,
+            "milliseconds": 191.83336999776657,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 175,
+            "milliseconds": 2616.145231997507,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 176,
+            "milliseconds": 130.5294909980148,
+            "status": 0
+          },
+          {
+            "model": "encoder_kitti02.axmodel",
+            "index": 177,
+            "milliseconds": 191.6924939978344,
+            "status": 0
+          },
+          {
+            "model": "decoder_step_kitti02.axmodel",
+            "index": 178,
+            "milliseconds": 2616.648361999978,
+            "status": 0
+          },
+          {
+            "model": "heads_kitti02.axmodel",
+            "index": 179,
+            "milliseconds": 130.57965799816884,
+            "status": 0
+          }
+        ]
+      },
+      "sourceArchiveSha256": "7d2b402ba04d7767dc3bb4b9b96d455aa4d405235b6c443e54160bcbb8782396"
+    }
+  ]
+}

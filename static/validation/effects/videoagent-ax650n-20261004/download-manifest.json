@@ -1,0 +1,1082 @@
+{
+  "modelId": "VideoAgent-AX650N",
+  "revision": "6a2c8e976059bd3bb945187b49e09651413ed7a8",
+  "runnerSha256": "8bc994adeb8b533f61b6f368333004e3e36f10bd711133572beb316794396010",
+  "repositories": [
+    {
+      "role": "llm",
+      "repository": "AXERA-TECH/Qwen3-1.7B",
+      "revision": "f77a4ab10991c6476dafb111371960d6cdce5e6f",
+      "registeredModel": "AXERA-TECH/Qwen3-1.7B"
+    },
+    {
+      "role": "vlm",
+      "repository": "AXERA-TECH/Qwen3-VL-2B-Instruct-GPTQ-Int4",
+      "revision": "16fe252a65016ba1ad44e92a60cfc879462fac4c",
+      "registeredModel": "AXERA-TECH/Qwen3-VL-2B-Instruct"
+    },
+    {
+      "role": "embedding",
+      "repository": "AXERA-TECH/Qwen3-VL-Embedding-2B-AX650-C128_P1280_CTX1407",
+      "revision": "97ecf827ecfc3b07d35b74b852981d3415d14a1a",
+      "registeredModel": "AXERA-TECH/Qwen3-VL-Embedding-2B"
+    },
+    {
+      "role": "asr",
+      "repository": "M5Stack/SenseVoiceSmall-axmodel",
+      "revision": "7ef77b6d0fc6d578e7fca1d8e06f729794e4a868"
+    }
+  ],
+  "files": [
+    {
+      "path": "llm/config.json",
+      "repository": "AXERA-TECH/Qwen3-1.7B",
+      "revision": "f77a4ab10991c6476dafb111371960d6cdce5e6f",
+      "sourcePath": "config.json",
+      "size": 585,
+      "verifiedHashes": {
+        "sha256": "04bf771c27a9be8471c8e2085f2ee3f09b34d212cb42a4ce0d337bc121236b44"
+      }
+    },
+    {
+      "path": "llm/qwen3_p128_l0_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-1.7B",
+      "revision": "f77a4ab10991c6476dafb111371960d6cdce5e6f",
+      "sourcePath": "qwen3_p128_l0_together.axmodel",
+      "size": 63290164,
+      "verifiedHashes": {
+        "sha256": "565e4d4d3992207541bc721e884beb8438866087e9e102bac8e4e9bf75204ed7"
+      }
+    },
+    {
+      "path": "llm/qwen3_p128_l1_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-1.7B",
+      "revision": "f77a4ab10991c6476dafb111371960d6cdce5e6f",
+      "sourcePath": "qwen3_p128_l1_together.axmodel",
+      "size": 63286676,
+      "verifiedHashes": {
+        "sha256": "cc8ff6c69733384ee925c3020e52ffb321c922eef5d943c460541f5ed7b2486e"
+      }
+    },
+    {
+      "path": "llm/qwen3_p128_l2_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-1.7B",
+      "revision": "f77a4ab10991c6476dafb111371960d6cdce5e6f",
+      "sourcePath": "qwen3_p128_l2_together.axmodel",
+      "size": 63287508,
+      "verifiedHashes": {
+        "sha256": "dac59ba694485f96aafe5870a01821b3f61b6abff3640e060d083fec086375ce"
+      }
+    },
+    {
+      "path": "llm/qwen3_p128_l3_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-1.7B",
+      "revision": "f77a4ab10991c6476dafb111371960d6cdce5e6f",
+      "sourcePath": "qwen3_p128_l3_together.axmodel",
+      "size": 63288276,
+      "verifiedHashes": {
+        "sha256": "75e9f189b51475d35ee890e751dc79aa40533cf807be3f6cd0ee643a00d380c5"
+      }
+    },
+    {
+      "path": "llm/qwen3_p128_l4_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-1.7B",
+      "revision": "f77a4ab10991c6476dafb111371960d6cdce5e6f",
+      "sourcePath": "qwen3_p128_l4_together.axmodel",
+      "size": 63286068,
+      "verifiedHashes": {
+        "sha256": "683668181c64dd014d5578604850ea3df5ebdbe87def5461009a879c159034f2"
+      }
+    },
+    {
+      "path": "llm/qwen3_p128_l5_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-1.7B",
+      "revision": "f77a4ab10991c6476dafb111371960d6cdce5e6f",
+      "sourcePath": "qwen3_p128_l5_together.axmodel",
+      "size": 63288244,
+      "verifiedHashes": {
+        "sha256": "fee38296df1a7a1ff01fa1c65eca7a8804c4b2449d73a3a92d498123c19a5582"
+      }
+    },
+    {
+      "path": "llm/qwen3_p128_l6_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-1.7B",
+      "revision": "f77a4ab10991c6476dafb111371960d6cdce5e6f",
+      "sourcePath": "qwen3_p128_l6_together.axmodel",
+      "size": 63287092,
+      "verifiedHashes": {
+        "sha256": "63fbd3f862e2a6378a012490378f755f8bd4d4034c6d504a0b1d833ae981e6a0"
+      }
+    },
+    {
+      "path": "llm/qwen3_p128_l7_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-1.7B",
+      "revision": "f77a4ab10991c6476dafb111371960d6cdce5e6f",
+      "sourcePath": "qwen3_p128_l7_together.axmodel",
+      "size": 63288468,
+      "verifiedHashes": {
+        "sha256": "91d5e4d0668ac4706e3adbb415f03685a0683dbbf4f2a6ebd3f6b8070c40f3c7"
+      }
+    },
+    {
+      "path": "llm/qwen3_p128_l8_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-1.7B",
+      "revision": "f77a4ab10991c6476dafb111371960d6cdce5e6f",
+      "sourcePath": "qwen3_p128_l8_together.axmodel",
+      "size": 63289204,
+      "verifiedHashes": {
+        "sha256": "851656b9b2df6eda3b0994382286957dac1453980037b035c42a7366665a3348"
+      }
+    },
+    {
+      "path": "llm/qwen3_p128_l9_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-1.7B",
+      "revision": "f77a4ab10991c6476dafb111371960d6cdce5e6f",
+      "sourcePath": "qwen3_p128_l9_together.axmodel",
+      "size": 63287412,
+      "verifiedHashes": {
+        "sha256": "59dfc2122afd7f43c0cf21efeaf9e9f2cf7fa1089065b8daba5158f3ab9ec683"
+      }
+    },
+    {
+      "path": "llm/qwen3_p128_l10_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-1.7B",
+      "revision": "f77a4ab10991c6476dafb111371960d6cdce5e6f",
+      "sourcePath": "qwen3_p128_l10_together.axmodel",
+      "size": 63292212,
+      "verifiedHashes": {
+        "sha256": "76bf9423115ad1207daf41f0e88d9efc0ec601f6066e79558d8ee82ccdc2cfde"
+      }
+    },
+    {
+      "path": "llm/qwen3_p128_l11_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-1.7B",
+      "revision": "f77a4ab10991c6476dafb111371960d6cdce5e6f",
+      "sourcePath": "qwen3_p128_l11_together.axmodel",
+      "size": 63285588,
+      "verifiedHashes": {
+        "sha256": "8ac6264d29a413181ce133a77ec5ef078b1f5b0976c277e9b9306fb9c7f51466"
+      }
+    },
+    {
+      "path": "llm/qwen3_p128_l12_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-1.7B",
+      "revision": "f77a4ab10991c6476dafb111371960d6cdce5e6f",
+      "sourcePath": "qwen3_p128_l12_together.axmodel",
+      "size": 63288372,
+      "verifiedHashes": {
+        "sha256": "87dc47d5c982e5b7bb5fac1d3d4d938e3309ed09c0fdd8a64e9221cca40ec5bd"
+      }
+    },
+    {
+      "path": "llm/qwen3_p128_l13_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-1.7B",
+      "revision": "f77a4ab10991c6476dafb111371960d6cdce5e6f",
+      "sourcePath": "qwen3_p128_l13_together.axmodel",
+      "size": 63288212,
+      "verifiedHashes": {
+        "sha256": "023e7c94db04c215ffee7777aad728052ca498d852d9b44d2e5a61880192320b"
+      }
+    },
+    {
+      "path": "llm/qwen3_p128_l14_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-1.7B",
+      "revision": "f77a4ab10991c6476dafb111371960d6cdce5e6f",
+      "sourcePath": "qwen3_p128_l14_together.axmodel",
+      "size": 63283892,
+      "verifiedHashes": {
+        "sha256": "ef7104317790a42a9e1108bfc249545a452e0766f7bc38c5ac1d9949fdad9203"
+      }
+    },
+    {
+      "path": "llm/qwen3_p128_l15_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-1.7B",
+      "revision": "f77a4ab10991c6476dafb111371960d6cdce5e6f",
+      "sourcePath": "qwen3_p128_l15_together.axmodel",
+      "size": 63285204,
+      "verifiedHashes": {
+        "sha256": "bb04715661826588ac11ff75fa9da3f532cd6b25a5f2354de7fcf1966fda90b9"
+      }
+    },
+    {
+      "path": "llm/qwen3_p128_l16_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-1.7B",
+      "revision": "f77a4ab10991c6476dafb111371960d6cdce5e6f",
+      "sourcePath": "qwen3_p128_l16_together.axmodel",
+      "size": 63276468,
+      "verifiedHashes": {
+        "sha256": "5f124163a912bf48daea126ff625a44ad2f921b61916c12918921ef3089a3dc0"
+      }
+    },
+    {
+      "path": "llm/qwen3_p128_l17_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-1.7B",
+      "revision": "f77a4ab10991c6476dafb111371960d6cdce5e6f",
+      "sourcePath": "qwen3_p128_l17_together.axmodel",
+      "size": 63282356,
+      "verifiedHashes": {
+        "sha256": "ee6c581f2a81678d4479f2569db61fb4cecc006ef852e6358b729b8f404a2922"
+      }
+    },
+    {
+      "path": "llm/qwen3_p128_l18_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-1.7B",
+      "revision": "f77a4ab10991c6476dafb111371960d6cdce5e6f",
+      "sourcePath": "qwen3_p128_l18_together.axmodel",
+      "size": 63283444,
+      "verifiedHashes": {
+        "sha256": "bbb6b872ac9d5bd1f2c1fdaf17c3a65f10c2d92f57ad2d27144e9de2bc13a12a"
+      }
+    },
+    {
+      "path": "llm/qwen3_p128_l19_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-1.7B",
+      "revision": "f77a4ab10991c6476dafb111371960d6cdce5e6f",
+      "sourcePath": "qwen3_p128_l19_together.axmodel",
+      "size": 63282804,
+      "verifiedHashes": {
+        "sha256": "5cc65a712823e78e5a72694d2db8c7ac0f263de41ec0fe7fb43b348d2632f7df"
+      }
+    },
+    {
+      "path": "llm/qwen3_p128_l20_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-1.7B",
+      "revision": "f77a4ab10991c6476dafb111371960d6cdce5e6f",
+      "sourcePath": "qwen3_p128_l20_together.axmodel",
+      "size": 63282772,
+      "verifiedHashes": {
+        "sha256": "99e24fa57a4f89294fa1cd7b1fd889860d7d21793acce44e4990cae8c6da1587"
+      }
+    },
+    {
+      "path": "llm/qwen3_p128_l21_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-1.7B",
+      "revision": "f77a4ab10991c6476dafb111371960d6cdce5e6f",
+      "sourcePath": "qwen3_p128_l21_together.axmodel",
+      "size": 63284756,
+      "verifiedHashes": {
+        "sha256": "69b0c49baa0dd5e64eb72b28815381d4952d92df3024cea55d8b334e16fff071"
+      }
+    },
+    {
+      "path": "llm/qwen3_p128_l22_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-1.7B",
+      "revision": "f77a4ab10991c6476dafb111371960d6cdce5e6f",
+      "sourcePath": "qwen3_p128_l22_together.axmodel",
+      "size": 63285364,
+      "verifiedHashes": {
+        "sha256": "9c8cb03bc1276eeca45b02ecb61b5baeb7df0a558f7d5b2f75a1b55a48180f34"
+      }
+    },
+    {
+      "path": "llm/qwen3_p128_l23_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-1.7B",
+      "revision": "f77a4ab10991c6476dafb111371960d6cdce5e6f",
+      "sourcePath": "qwen3_p128_l23_together.axmodel",
+      "size": 63285972,
+      "verifiedHashes": {
+        "sha256": "e6c013d056ab6dc4d79290fe62a96292880fab8ca0508d784bc1b13c99d54c5b"
+      }
+    },
+    {
+      "path": "llm/qwen3_p128_l24_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-1.7B",
+      "revision": "f77a4ab10991c6476dafb111371960d6cdce5e6f",
+      "sourcePath": "qwen3_p128_l24_together.axmodel",
+      "size": 63290676,
+      "verifiedHashes": {
+        "sha256": "7d82b6a4a2dfb1f0c115b1d8262b20c638f31e559ca600985c302c88633445b3"
+      }
+    },
+    {
+      "path": "llm/qwen3_p128_l25_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-1.7B",
+      "revision": "f77a4ab10991c6476dafb111371960d6cdce5e6f",
+      "sourcePath": "qwen3_p128_l25_together.axmodel",
+      "size": 63286516,
+      "verifiedHashes": {
+        "sha256": "c272de4503d1acfc402f9bfe4b782f134a5a2ca97bc73e3d48b5d75ab7868e15"
+      }
+    },
+    {
+      "path": "llm/qwen3_p128_l26_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-1.7B",
+      "revision": "f77a4ab10991c6476dafb111371960d6cdce5e6f",
+      "sourcePath": "qwen3_p128_l26_together.axmodel",
+      "size": 63286612,
+      "verifiedHashes": {
+        "sha256": "11f9960b3d342b0e45b2b447d79aea81641664fb0b97811a1de8186307250160"
+      }
+    },
+    {
+      "path": "llm/qwen3_p128_l27_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-1.7B",
+      "revision": "f77a4ab10991c6476dafb111371960d6cdce5e6f",
+      "sourcePath": "qwen3_p128_l27_together.axmodel",
+      "size": 63291572,
+      "verifiedHashes": {
+        "sha256": "6e8c75b28b63e8d2424ec8a1829db04d0cc87623762ca84c5bfddfda900aad36"
+      }
+    },
+    {
+      "path": "llm/qwen3_post.axmodel",
+      "repository": "AXERA-TECH/Qwen3-1.7B",
+      "revision": "f77a4ab10991c6476dafb111371960d6cdce5e6f",
+      "sourcePath": "qwen3_post.axmodel",
+      "size": 339811900,
+      "verifiedHashes": {
+        "sha256": "d6eb02a42d647ceeab5ef0fcf349dcac990448058a9a581677824637b5e6defa"
+      }
+    },
+    {
+      "path": "llm/model.embed_tokens.weight.bfloat16.bin",
+      "repository": "AXERA-TECH/Qwen3-1.7B",
+      "revision": "f77a4ab10991c6476dafb111371960d6cdce5e6f",
+      "sourcePath": "model.embed_tokens.weight.bfloat16.bin",
+      "size": 622329856,
+      "verifiedHashes": {
+        "sha256": "f56b71b6939a944afce2902799810e2acfaefbf0dbcacd8cda1add4eb710f05d"
+      }
+    },
+    {
+      "path": "llm/qwen3_tokenizer.txt",
+      "repository": "AXERA-TECH/Qwen3-1.7B",
+      "revision": "f77a4ab10991c6476dafb111371960d6cdce5e6f",
+      "sourcePath": "qwen3_tokenizer.txt",
+      "size": 1611555,
+      "verifiedHashes": {
+        "sha256": "46fafa42f69d10f67677adffd3ca6285e0c97b7deddfebaa98ceeac3557f04a3"
+      }
+    },
+    {
+      "path": "llm/post_config.json",
+      "repository": "AXERA-TECH/Qwen3-1.7B",
+      "revision": "f77a4ab10991c6476dafb111371960d6cdce5e6f",
+      "sourcePath": "post_config.json",
+      "size": 279,
+      "verifiedHashes": {
+        "sha256": "21ecd0699e5ba6a1b53e0811fd74ca4e11a31382ea22c05f7175f6bc56191305"
+      }
+    },
+    {
+      "path": "vlm/config.json",
+      "repository": "AXERA-TECH/Qwen3-VL-2B-Instruct-GPTQ-Int4",
+      "revision": "16fe252a65016ba1ad44e92a60cfc879462fac4c",
+      "sourcePath": "config.json",
+      "size": 880,
+      "verifiedHashes": {
+        "sha256": "c95c0b98a241069ce9f599967730206b4f21c5d0bdd47cda2e90ebd77f804f03"
+      }
+    },
+    {
+      "path": "vlm/qwen3_vl_text_p128_l0_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-2B-Instruct-GPTQ-Int4",
+      "revision": "16fe252a65016ba1ad44e92a60cfc879462fac4c",
+      "sourcePath": "qwen3_vl_text_p128_l0_together.axmodel",
+      "size": 46539431,
+      "verifiedHashes": {
+        "sha256": "b42363b13c67753e20e80a90d51dacc6f04280a3da992b601ab09547f308c3f5"
+      }
+    },
+    {
+      "path": "vlm/qwen3_vl_text_p128_l1_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-2B-Instruct-GPTQ-Int4",
+      "revision": "16fe252a65016ba1ad44e92a60cfc879462fac4c",
+      "sourcePath": "qwen3_vl_text_p128_l1_together.axmodel",
+      "size": 46539431,
+      "verifiedHashes": {
+        "sha256": "07823cd8b49a8b33bc006ae750782e317580494575bc317babd7abff55441eba"
+      }
+    },
+    {
+      "path": "vlm/qwen3_vl_text_p128_l2_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-2B-Instruct-GPTQ-Int4",
+      "revision": "16fe252a65016ba1ad44e92a60cfc879462fac4c",
+      "sourcePath": "qwen3_vl_text_p128_l2_together.axmodel",
+      "size": 46539431,
+      "verifiedHashes": {
+        "sha256": "84b296fb9b14d24aa740c2fbfa54b2bd3ae7973a161ac9cb24c45b2372143892"
+      }
+    },
+    {
+      "path": "vlm/qwen3_vl_text_p128_l3_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-2B-Instruct-GPTQ-Int4",
+      "revision": "16fe252a65016ba1ad44e92a60cfc879462fac4c",
+      "sourcePath": "qwen3_vl_text_p128_l3_together.axmodel",
+      "size": 46539431,
+      "verifiedHashes": {
+        "sha256": "a5033f1fe491462b8f44f5e117c261955b63535e3272b0cd784a59c97d073319"
+      }
+    },
+    {
+      "path": "vlm/qwen3_vl_text_p128_l4_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-2B-Instruct-GPTQ-Int4",
+      "revision": "16fe252a65016ba1ad44e92a60cfc879462fac4c",
+      "sourcePath": "qwen3_vl_text_p128_l4_together.axmodel",
+      "size": 46539431,
+      "verifiedHashes": {
+        "sha256": "5b67c490399d843fa68821a0f38180c300f32333113c0a1c8cd5729bcefd8a56"
+      }
+    },
+    {
+      "path": "vlm/qwen3_vl_text_p128_l5_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-2B-Instruct-GPTQ-Int4",
+      "revision": "16fe252a65016ba1ad44e92a60cfc879462fac4c",
+      "sourcePath": "qwen3_vl_text_p128_l5_together.axmodel",
+      "size": 46539431,
+      "verifiedHashes": {
+        "sha256": "4c9096f4599c4ad21ac49217561531da9b0223bf6f3e3741f21f2f4d68924b9d"
+      }
+    },
+    {
+      "path": "vlm/qwen3_vl_text_p128_l6_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-2B-Instruct-GPTQ-Int4",
+      "revision": "16fe252a65016ba1ad44e92a60cfc879462fac4c",
+      "sourcePath": "qwen3_vl_text_p128_l6_together.axmodel",
+      "size": 46539431,
+      "verifiedHashes": {
+        "sha256": "81d1777fcbb676b3ef12fc2130286c24552a1f8d36a0cd14c66850e31210f33b"
+      }
+    },
+    {
+      "path": "vlm/qwen3_vl_text_p128_l7_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-2B-Instruct-GPTQ-Int4",
+      "revision": "16fe252a65016ba1ad44e92a60cfc879462fac4c",
+      "sourcePath": "qwen3_vl_text_p128_l7_together.axmodel",
+      "size": 46539431,
+      "verifiedHashes": {
+        "sha256": "fd355f229ca1c151df8166b46d800d9047924453a4b982c0c838d456c0aec468"
+      }
+    },
+    {
+      "path": "vlm/qwen3_vl_text_p128_l8_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-2B-Instruct-GPTQ-Int4",
+      "revision": "16fe252a65016ba1ad44e92a60cfc879462fac4c",
+      "sourcePath": "qwen3_vl_text_p128_l8_together.axmodel",
+      "size": 46539431,
+      "verifiedHashes": {
+        "sha256": "88fe84332f276947775040d38ba46ed7f735ebd498b248c44c37b41f0f89ab2a"
+      }
+    },
+    {
+      "path": "vlm/qwen3_vl_text_p128_l9_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-2B-Instruct-GPTQ-Int4",
+      "revision": "16fe252a65016ba1ad44e92a60cfc879462fac4c",
+      "sourcePath": "qwen3_vl_text_p128_l9_together.axmodel",
+      "size": 46539431,
+      "verifiedHashes": {
+        "sha256": "1d991e4b23bd66421f0f39e7b3c02a4adace0b9434176c8deb24ece1c6a66600"
+      }
+    },
+    {
+      "path": "vlm/qwen3_vl_text_p128_l10_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-2B-Instruct-GPTQ-Int4",
+      "revision": "16fe252a65016ba1ad44e92a60cfc879462fac4c",
+      "sourcePath": "qwen3_vl_text_p128_l10_together.axmodel",
+      "size": 46539431,
+      "verifiedHashes": {
+        "sha256": "f0133beae7b5d7b109557df15c6f5d6a738eded2ae1feef1f94c983699f74623"
+      }
+    },
+    {
+      "path": "vlm/qwen3_vl_text_p128_l11_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-2B-Instruct-GPTQ-Int4",
+      "revision": "16fe252a65016ba1ad44e92a60cfc879462fac4c",
+      "sourcePath": "qwen3_vl_text_p128_l11_together.axmodel",
+      "size": 46539431,
+      "verifiedHashes": {
+        "sha256": "2faf54778f2e20ea363e189f0a0a9f9acaa1337cf30109092ffb48418c485072"
+      }
+    },
+    {
+      "path": "vlm/qwen3_vl_text_p128_l12_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-2B-Instruct-GPTQ-Int4",
+      "revision": "16fe252a65016ba1ad44e92a60cfc879462fac4c",
+      "sourcePath": "qwen3_vl_text_p128_l12_together.axmodel",
+      "size": 46539431,
+      "verifiedHashes": {
+        "sha256": "073dab1c7c2c91f2a0fd23cc3b1553df6c6f35f1841c1358265f56be5659c53f"
+      }
+    },
+    {
+      "path": "vlm/qwen3_vl_text_p128_l13_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-2B-Instruct-GPTQ-Int4",
+      "revision": "16fe252a65016ba1ad44e92a60cfc879462fac4c",
+      "sourcePath": "qwen3_vl_text_p128_l13_together.axmodel",
+      "size": 46539431,
+      "verifiedHashes": {
+        "sha256": "7b76578926bb45565be1bdc55f36fc074528e2835185195c69a3099f088e78c1"
+      }
+    },
+    {
+      "path": "vlm/qwen3_vl_text_p128_l14_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-2B-Instruct-GPTQ-Int4",
+      "revision": "16fe252a65016ba1ad44e92a60cfc879462fac4c",
+      "sourcePath": "qwen3_vl_text_p128_l14_together.axmodel",
+      "size": 46539431,
+      "verifiedHashes": {
+        "sha256": "a12b5b73debb37c8c2ad8a2ea16b39bfc7b3000d0323be8e8c9cb89fb214ba54"
+      }
+    },
+    {
+      "path": "vlm/qwen3_vl_text_p128_l15_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-2B-Instruct-GPTQ-Int4",
+      "revision": "16fe252a65016ba1ad44e92a60cfc879462fac4c",
+      "sourcePath": "qwen3_vl_text_p128_l15_together.axmodel",
+      "size": 46539431,
+      "verifiedHashes": {
+        "sha256": "20c7ff4026d78f6e6dd7f3075283aeba63d5ea81aca1eedfa0f7210fe20f9e9b"
+      }
+    },
+    {
+      "path": "vlm/qwen3_vl_text_p128_l16_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-2B-Instruct-GPTQ-Int4",
+      "revision": "16fe252a65016ba1ad44e92a60cfc879462fac4c",
+      "sourcePath": "qwen3_vl_text_p128_l16_together.axmodel",
+      "size": 46539431,
+      "verifiedHashes": {
+        "sha256": "93519605f2bbb6c2e9558cacfc4655e6c2d93ae33c50f1f7e0d4d41b448a1649"
+      }
+    },
+    {
+      "path": "vlm/qwen3_vl_text_p128_l17_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-2B-Instruct-GPTQ-Int4",
+      "revision": "16fe252a65016ba1ad44e92a60cfc879462fac4c",
+      "sourcePath": "qwen3_vl_text_p128_l17_together.axmodel",
+      "size": 46539431,
+      "verifiedHashes": {
+        "sha256": "4dbe9d98f015d52fa8e3083d666ce4438a7ed3160e9f1eac3fde94bc7fcfa30e"
+      }
+    },
+    {
+      "path": "vlm/qwen3_vl_text_p128_l18_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-2B-Instruct-GPTQ-Int4",
+      "revision": "16fe252a65016ba1ad44e92a60cfc879462fac4c",
+      "sourcePath": "qwen3_vl_text_p128_l18_together.axmodel",
+      "size": 46539431,
+      "verifiedHashes": {
+        "sha256": "05c421f9457cb19cf3e4bc7c8b503f5f6e50358a664d1865a78640dd1fad8835"
+      }
+    },
+    {
+      "path": "vlm/qwen3_vl_text_p128_l19_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-2B-Instruct-GPTQ-Int4",
+      "revision": "16fe252a65016ba1ad44e92a60cfc879462fac4c",
+      "sourcePath": "qwen3_vl_text_p128_l19_together.axmodel",
+      "size": 46539431,
+      "verifiedHashes": {
+        "sha256": "0e1d98fa8ac199f64471f7535ab64de18ad99bf4cdfdc08e79d83635cda7cebb"
+      }
+    },
+    {
+      "path": "vlm/qwen3_vl_text_p128_l20_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-2B-Instruct-GPTQ-Int4",
+      "revision": "16fe252a65016ba1ad44e92a60cfc879462fac4c",
+      "sourcePath": "qwen3_vl_text_p128_l20_together.axmodel",
+      "size": 46539431,
+      "verifiedHashes": {
+        "sha256": "62512c13b3509d6d77595616fe64804927d15e3738dd768ac6e88581c6235146"
+      }
+    },
+    {
+      "path": "vlm/qwen3_vl_text_p128_l21_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-2B-Instruct-GPTQ-Int4",
+      "revision": "16fe252a65016ba1ad44e92a60cfc879462fac4c",
+      "sourcePath": "qwen3_vl_text_p128_l21_together.axmodel",
+      "size": 46539431,
+      "verifiedHashes": {
+        "sha256": "fb01c185abe5eadf91f07829db2cd05121b8b05624bf9bdb145a770e2e55620a"
+      }
+    },
+    {
+      "path": "vlm/qwen3_vl_text_p128_l22_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-2B-Instruct-GPTQ-Int4",
+      "revision": "16fe252a65016ba1ad44e92a60cfc879462fac4c",
+      "sourcePath": "qwen3_vl_text_p128_l22_together.axmodel",
+      "size": 46539431,
+      "verifiedHashes": {
+        "sha256": "84a8454d97e489645b33144f88cdd56ffbad8362f1300f72d6f1b7f3cf3d75b2"
+      }
+    },
+    {
+      "path": "vlm/qwen3_vl_text_p128_l23_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-2B-Instruct-GPTQ-Int4",
+      "revision": "16fe252a65016ba1ad44e92a60cfc879462fac4c",
+      "sourcePath": "qwen3_vl_text_p128_l23_together.axmodel",
+      "size": 46539431,
+      "verifiedHashes": {
+        "sha256": "9ce9e3219f96c8f7615fdb799141d1045620ea69fb77489248200c6bb3b2a2c6"
+      }
+    },
+    {
+      "path": "vlm/qwen3_vl_text_p128_l24_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-2B-Instruct-GPTQ-Int4",
+      "revision": "16fe252a65016ba1ad44e92a60cfc879462fac4c",
+      "sourcePath": "qwen3_vl_text_p128_l24_together.axmodel",
+      "size": 46539431,
+      "verifiedHashes": {
+        "sha256": "0e47988815b6b3b330584a934bb2cd889da3ed5a57ae0e75ed34dba31d676471"
+      }
+    },
+    {
+      "path": "vlm/qwen3_vl_text_p128_l25_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-2B-Instruct-GPTQ-Int4",
+      "revision": "16fe252a65016ba1ad44e92a60cfc879462fac4c",
+      "sourcePath": "qwen3_vl_text_p128_l25_together.axmodel",
+      "size": 46539431,
+      "verifiedHashes": {
+        "sha256": "d0d03c2cb43adb58329ce66d45f8abe579d55c6dc0c551f67ef2e6821520bd1a"
+      }
+    },
+    {
+      "path": "vlm/qwen3_vl_text_p128_l26_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-2B-Instruct-GPTQ-Int4",
+      "revision": "16fe252a65016ba1ad44e92a60cfc879462fac4c",
+      "sourcePath": "qwen3_vl_text_p128_l26_together.axmodel",
+      "size": 46539431,
+      "verifiedHashes": {
+        "sha256": "cccaa3a03ba1a2902834ef825f06ca2b1a5f0326a5e0544b98fba4454f9c8b1b"
+      }
+    },
+    {
+      "path": "vlm/qwen3_vl_text_p128_l27_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-2B-Instruct-GPTQ-Int4",
+      "revision": "16fe252a65016ba1ad44e92a60cfc879462fac4c",
+      "sourcePath": "qwen3_vl_text_p128_l27_together.axmodel",
+      "size": 46539431,
+      "verifiedHashes": {
+        "sha256": "a12ad8c0cf98016faf93cd5d4fdf99d0c563d2a922b1f1d78baae56387ccf010"
+      }
+    },
+    {
+      "path": "vlm/qwen3_vl_text_post.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-2B-Instruct-GPTQ-Int4",
+      "revision": "16fe252a65016ba1ad44e92a60cfc879462fac4c",
+      "sourcePath": "qwen3_vl_text_post.axmodel",
+      "size": 339277488,
+      "verifiedHashes": {
+        "sha256": "02607a1702a7ad2111b607b94a219fc08901a1974963c74638719ab4ce853e17"
+      }
+    },
+    {
+      "path": "vlm/model.embed_tokens.weight.bfloat16.bin",
+      "repository": "AXERA-TECH/Qwen3-VL-2B-Instruct-GPTQ-Int4",
+      "revision": "16fe252a65016ba1ad44e92a60cfc879462fac4c",
+      "sourcePath": "model.embed_tokens.weight.bfloat16.bin",
+      "size": 622329856,
+      "verifiedHashes": {
+        "sha256": "91c45bb2b9d8b678ceba1e3f0da785e47e5e6316384be544aa71b3c5d68ed733"
+      }
+    },
+    {
+      "path": "vlm/qwen3_tokenizer.txt",
+      "repository": "AXERA-TECH/Qwen3-VL-2B-Instruct-GPTQ-Int4",
+      "revision": "16fe252a65016ba1ad44e92a60cfc879462fac4c",
+      "sourcePath": "qwen3_tokenizer.txt",
+      "size": 1611555,
+      "verifiedHashes": {
+        "sha256": "46fafa42f69d10f67677adffd3ca6285e0c97b7deddfebaa98ceeac3557f04a3"
+      }
+    },
+    {
+      "path": "vlm/Qwen3-VL-2B-Instruct_vision.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-2B-Instruct-GPTQ-Int4",
+      "revision": "16fe252a65016ba1ad44e92a60cfc879462fac4c",
+      "sourcePath": "Qwen3-VL-2B-Instruct_vision.axmodel",
+      "size": 452430541,
+      "verifiedHashes": {
+        "sha256": "f8bd7c1864e378ebccd7c50b006586360dea7f0302db8662cfe93773603ae749"
+      }
+    },
+    {
+      "path": "vlm/post_config.json",
+      "repository": "AXERA-TECH/Qwen3-VL-2B-Instruct-GPTQ-Int4",
+      "revision": "16fe252a65016ba1ad44e92a60cfc879462fac4c",
+      "sourcePath": "post_config.json",
+      "size": 279,
+      "verifiedHashes": {
+        "sha256": "21ecd0699e5ba6a1b53e0811fd74ca4e11a31382ea22c05f7175f6bc56191305"
+      }
+    },
+    {
+      "path": "vlm/image.png",
+      "repository": "AXERA-TECH/Qwen3-VL-2B-Instruct-GPTQ-Int4",
+      "revision": "16fe252a65016ba1ad44e92a60cfc879462fac4c",
+      "sourcePath": "image.png",
+      "size": 355241,
+      "verifiedHashes": {
+        "sha256": "622ae2d01ff4467fa69a7888728d776650117a0f4887e96ba0fb9a8a6d77b3c3"
+      }
+    },
+    {
+      "path": "embedding/Qwen3-VL-Embedding-2B_vision_384x384.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-Embedding-2B-AX650-C128_P1280_CTX1407",
+      "revision": "97ecf827ecfc3b07d35b74b852981d3415d14a1a",
+      "sourcePath": "Qwen3-VL-Embedding-2B_vision_384x384.axmodel",
+      "size": 452218535,
+      "verifiedHashes": {
+        "sha256": "7fd71e309d43e2ab4be08da5e2ec78c6ff66a6a9b1487421f71abb91c90ef6c3"
+      }
+    },
+    {
+      "path": "embedding/config.json",
+      "repository": "AXERA-TECH/Qwen3-VL-Embedding-2B-AX650-C128_P1280_CTX1407",
+      "revision": "97ecf827ecfc3b07d35b74b852981d3415d14a1a",
+      "sourcePath": "config.json",
+      "size": 836,
+      "verifiedHashes": {
+        "sha256": "778fc9d5ba6577222c5384bf373e78e326c29f9e3ac5d262d954fe1b2d9d7a51"
+      }
+    },
+    {
+      "path": "embedding/model.embed_tokens.weight.bfloat16.bin",
+      "repository": "AXERA-TECH/Qwen3-VL-Embedding-2B-AX650-C128_P1280_CTX1407",
+      "revision": "97ecf827ecfc3b07d35b74b852981d3415d14a1a",
+      "sourcePath": "model.embed_tokens.weight.bfloat16.bin",
+      "size": 622329856,
+      "verifiedHashes": {
+        "sha256": "91c45bb2b9d8b678ceba1e3f0da785e47e5e6316384be544aa71b3c5d68ed733"
+      }
+    },
+    {
+      "path": "embedding/qwen3_tokenizer.txt",
+      "repository": "AXERA-TECH/Qwen3-VL-Embedding-2B-AX650-C128_P1280_CTX1407",
+      "revision": "97ecf827ecfc3b07d35b74b852981d3415d14a1a",
+      "sourcePath": "qwen3_tokenizer.txt",
+      "size": 1611555,
+      "verifiedHashes": {
+        "sha256": "46fafa42f69d10f67677adffd3ca6285e0c97b7deddfebaa98ceeac3557f04a3"
+      }
+    },
+    {
+      "path": "embedding/qwen3_vl_text_p128_l0_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-Embedding-2B-AX650-C128_P1280_CTX1407",
+      "revision": "97ecf827ecfc3b07d35b74b852981d3415d14a1a",
+      "sourcePath": "qwen3_vl_text_p128_l0_together.axmodel",
+      "size": 66882302,
+      "verifiedHashes": {
+        "sha256": "e3e4a8f55ae4f9ac16fcbf3a2e2d79f8b250095cad206875680288d86b49afce"
+      }
+    },
+    {
+      "path": "embedding/qwen3_vl_text_p128_l10_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-Embedding-2B-AX650-C128_P1280_CTX1407",
+      "revision": "97ecf827ecfc3b07d35b74b852981d3415d14a1a",
+      "sourcePath": "qwen3_vl_text_p128_l10_together.axmodel",
+      "size": 66882430,
+      "verifiedHashes": {
+        "sha256": "9de14248986a420f13da5151bd80b1c5c049a7b42fa47c48d155ba4a9560e503"
+      }
+    },
+    {
+      "path": "embedding/qwen3_vl_text_p128_l11_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-Embedding-2B-AX650-C128_P1280_CTX1407",
+      "revision": "97ecf827ecfc3b07d35b74b852981d3415d14a1a",
+      "sourcePath": "qwen3_vl_text_p128_l11_together.axmodel",
+      "size": 66876222,
+      "verifiedHashes": {
+        "sha256": "29c8f35f0acc2d6d4b78031b4810a95022f0ad0d8d8da8834a86fc6c50b4ae60"
+      }
+    },
+    {
+      "path": "embedding/qwen3_vl_text_p128_l12_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-Embedding-2B-AX650-C128_P1280_CTX1407",
+      "revision": "97ecf827ecfc3b07d35b74b852981d3415d14a1a",
+      "sourcePath": "qwen3_vl_text_p128_l12_together.axmodel",
+      "size": 66882750,
+      "verifiedHashes": {
+        "sha256": "618a9bc8e3a9f67f4e8121cc0b7a74883a175952702ea8b968d5c4a5bc857b24"
+      }
+    },
+    {
+      "path": "embedding/qwen3_vl_text_p128_l13_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-Embedding-2B-AX650-C128_P1280_CTX1407",
+      "revision": "97ecf827ecfc3b07d35b74b852981d3415d14a1a",
+      "sourcePath": "qwen3_vl_text_p128_l13_together.axmodel",
+      "size": 66880990,
+      "verifiedHashes": {
+        "sha256": "4b012426b4a1b72888eecd227e69f3ed0e4dd575da14574d52f41b50efe689b5"
+      }
+    },
+    {
+      "path": "embedding/qwen3_vl_text_p128_l14_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-Embedding-2B-AX650-C128_P1280_CTX1407",
+      "revision": "97ecf827ecfc3b07d35b74b852981d3415d14a1a",
+      "sourcePath": "qwen3_vl_text_p128_l14_together.axmodel",
+      "size": 66877662,
+      "verifiedHashes": {
+        "sha256": "ebe4c29e5f89a24261b5b443113d552e9c18eaf59cb4a4a0052140403046d419"
+      }
+    },
+    {
+      "path": "embedding/qwen3_vl_text_p128_l15_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-Embedding-2B-AX650-C128_P1280_CTX1407",
+      "revision": "97ecf827ecfc3b07d35b74b852981d3415d14a1a",
+      "sourcePath": "qwen3_vl_text_p128_l15_together.axmodel",
+      "size": 66876446,
+      "verifiedHashes": {
+        "sha256": "0034ee6ec13fa800e6493852e7485a2ed4aefca177f9385abb8dc3794921b88d"
+      }
+    },
+    {
+      "path": "embedding/qwen3_vl_text_p128_l16_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-Embedding-2B-AX650-C128_P1280_CTX1407",
+      "revision": "97ecf827ecfc3b07d35b74b852981d3415d14a1a",
+      "sourcePath": "qwen3_vl_text_p128_l16_together.axmodel",
+      "size": 66862974,
+      "verifiedHashes": {
+        "sha256": "e68c2540711b189bc3c9b00072ef230e1c79e0e821fd274b5e921bd6a2cbfb89"
+      }
+    },
+    {
+      "path": "embedding/qwen3_vl_text_p128_l17_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-Embedding-2B-AX650-C128_P1280_CTX1407",
+      "revision": "97ecf827ecfc3b07d35b74b852981d3415d14a1a",
+      "sourcePath": "qwen3_vl_text_p128_l17_together.axmodel",
+      "size": 66871998,
+      "verifiedHashes": {
+        "sha256": "5b0891aba6ba818db1a8aeda0265ea017acce80c9fbdd87a27d46b9dcc992977"
+      }
+    },
+    {
+      "path": "embedding/qwen3_vl_text_p128_l18_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-Embedding-2B-AX650-C128_P1280_CTX1407",
+      "revision": "97ecf827ecfc3b07d35b74b852981d3415d14a1a",
+      "sourcePath": "qwen3_vl_text_p128_l18_together.axmodel",
+      "size": 66876638,
+      "verifiedHashes": {
+        "sha256": "905012ffdc4d815ffe06ac0511842d65c2ccf397b6e32aa961b961f5b354572e"
+      }
+    },
+    {
+      "path": "embedding/qwen3_vl_text_p128_l19_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-Embedding-2B-AX650-C128_P1280_CTX1407",
+      "revision": "97ecf827ecfc3b07d35b74b852981d3415d14a1a",
+      "sourcePath": "qwen3_vl_text_p128_l19_together.axmodel",
+      "size": 66877246,
+      "verifiedHashes": {
+        "sha256": "5f42910d2d4bded9f65e99210b11c4be77d0c4fafa6bad8a40a384c88637cb89"
+      }
+    },
+    {
+      "path": "embedding/qwen3_vl_text_p128_l1_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-Embedding-2B-AX650-C128_P1280_CTX1407",
+      "revision": "97ecf827ecfc3b07d35b74b852981d3415d14a1a",
+      "sourcePath": "qwen3_vl_text_p128_l1_together.axmodel",
+      "size": 66879902,
+      "verifiedHashes": {
+        "sha256": "6e74619ad5eec9ef131a2ac97e6b87cb45039f6d372403bf5d1294102371c3c2"
+      }
+    },
+    {
+      "path": "embedding/qwen3_vl_text_p128_l20_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-Embedding-2B-AX650-C128_P1280_CTX1407",
+      "revision": "97ecf827ecfc3b07d35b74b852981d3415d14a1a",
+      "sourcePath": "qwen3_vl_text_p128_l20_together.axmodel",
+      "size": 66873022,
+      "verifiedHashes": {
+        "sha256": "92a29d2c5d1aecf754af0775f26dec92c23f724d4ae607e1e00bc886f462b67f"
+      }
+    },
+    {
+      "path": "embedding/qwen3_vl_text_p128_l21_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-Embedding-2B-AX650-C128_P1280_CTX1407",
+      "revision": "97ecf827ecfc3b07d35b74b852981d3415d14a1a",
+      "sourcePath": "qwen3_vl_text_p128_l21_together.axmodel",
+      "size": 66874718,
+      "verifiedHashes": {
+        "sha256": "f5bfefeb733b2e21aa67b1063b20bca9ae791fe63fb18c26cc310258f05db1bf"
+      }
+    },
+    {
+      "path": "embedding/qwen3_vl_text_p128_l22_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-Embedding-2B-AX650-C128_P1280_CTX1407",
+      "revision": "97ecf827ecfc3b07d35b74b852981d3415d14a1a",
+      "sourcePath": "qwen3_vl_text_p128_l22_together.axmodel",
+      "size": 66876350,
+      "verifiedHashes": {
+        "sha256": "d2859b7f3a42058ca205580a4122243ab744282fb16e6c997c7fa48136936068"
+      }
+    },
+    {
+      "path": "embedding/qwen3_vl_text_p128_l23_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-Embedding-2B-AX650-C128_P1280_CTX1407",
+      "revision": "97ecf827ecfc3b07d35b74b852981d3415d14a1a",
+      "sourcePath": "qwen3_vl_text_p128_l23_together.axmodel",
+      "size": 66875230,
+      "verifiedHashes": {
+        "sha256": "5df1fde42ac84e3af62ca665944edc0465ec2afe54a523b493e625813d6a13e9"
+      }
+    },
+    {
+      "path": "embedding/qwen3_vl_text_p128_l24_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-Embedding-2B-AX650-C128_P1280_CTX1407",
+      "revision": "97ecf827ecfc3b07d35b74b852981d3415d14a1a",
+      "sourcePath": "qwen3_vl_text_p128_l24_together.axmodel",
+      "size": 66882334,
+      "verifiedHashes": {
+        "sha256": "fa880d95a734c3c4b18bb9d6403f963beb776ab99cdd344165eea43679f300ca"
+      }
+    },
+    {
+      "path": "embedding/qwen3_vl_text_p128_l25_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-Embedding-2B-AX650-C128_P1280_CTX1407",
+      "revision": "97ecf827ecfc3b07d35b74b852981d3415d14a1a",
+      "sourcePath": "qwen3_vl_text_p128_l25_together.axmodel",
+      "size": 66882014,
+      "verifiedHashes": {
+        "sha256": "c609d4be52ae6be56a2e700f2da0add3b3126d161337ce11be62e1da4166e782"
+      }
+    },
+    {
+      "path": "embedding/qwen3_vl_text_p128_l26_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-Embedding-2B-AX650-C128_P1280_CTX1407",
+      "revision": "97ecf827ecfc3b07d35b74b852981d3415d14a1a",
+      "sourcePath": "qwen3_vl_text_p128_l26_together.axmodel",
+      "size": 66877630,
+      "verifiedHashes": {
+        "sha256": "0e8e72d625cf3b066a4cbd568df7547daeb3a86dab739976dde587fe9c2f0deb"
+      }
+    },
+    {
+      "path": "embedding/qwen3_vl_text_p128_l27_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-Embedding-2B-AX650-C128_P1280_CTX1407",
+      "revision": "97ecf827ecfc3b07d35b74b852981d3415d14a1a",
+      "sourcePath": "qwen3_vl_text_p128_l27_together.axmodel",
+      "size": 66882302,
+      "verifiedHashes": {
+        "sha256": "c471df7c3da703d4c51473ea0df968b04849a56809539b8dc3229b330c1e583c"
+      }
+    },
+    {
+      "path": "embedding/qwen3_vl_text_p128_l2_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-Embedding-2B-AX650-C128_P1280_CTX1407",
+      "revision": "97ecf827ecfc3b07d35b74b852981d3415d14a1a",
+      "sourcePath": "qwen3_vl_text_p128_l2_together.axmodel",
+      "size": 66882878,
+      "verifiedHashes": {
+        "sha256": "6744ffe51cc7a906876c9ea2baec315398b4532f42ae5dd171559a3a091c561a"
+      }
+    },
+    {
+      "path": "embedding/qwen3_vl_text_p128_l3_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-Embedding-2B-AX650-C128_P1280_CTX1407",
+      "revision": "97ecf827ecfc3b07d35b74b852981d3415d14a1a",
+      "sourcePath": "qwen3_vl_text_p128_l3_together.axmodel",
+      "size": 66880606,
+      "verifiedHashes": {
+        "sha256": "8f4b39bd5041481aeab0ae1d2b4135895f0d046a13d564576e7edbdcdc968074"
+      }
+    },
+    {
+      "path": "embedding/qwen3_vl_text_p128_l4_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-Embedding-2B-AX650-C128_P1280_CTX1407",
+      "revision": "97ecf827ecfc3b07d35b74b852981d3415d14a1a",
+      "sourcePath": "qwen3_vl_text_p128_l4_together.axmodel",
+      "size": 66879614,
+      "verifiedHashes": {
+        "sha256": "b777b2db3e5d75e080fe689880217d0e9bd5b629bac955ff7394704d9f58d724"
+      }
+    },
+    {
+      "path": "embedding/qwen3_vl_text_p128_l5_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-Embedding-2B-AX650-C128_P1280_CTX1407",
+      "revision": "97ecf827ecfc3b07d35b74b852981d3415d14a1a",
+      "sourcePath": "qwen3_vl_text_p128_l5_together.axmodel",
+      "size": 66879486,
+      "verifiedHashes": {
+        "sha256": "c24f6822d8f15c30377c99fc15e1c7a9edd0a950ccdadc7e1ba77f72c5d1f6d9"
+      }
+    },
+    {
+      "path": "embedding/qwen3_vl_text_p128_l6_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-Embedding-2B-AX650-C128_P1280_CTX1407",
+      "revision": "97ecf827ecfc3b07d35b74b852981d3415d14a1a",
+      "sourcePath": "qwen3_vl_text_p128_l6_together.axmodel",
+      "size": 66875518,
+      "verifiedHashes": {
+        "sha256": "c98b07115eebe3ad6fb482d8c9e8f18680d31fd8206c896eac44b6937c9bb395"
+      }
+    },
+    {
+      "path": "embedding/qwen3_vl_text_p128_l7_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-Embedding-2B-AX650-C128_P1280_CTX1407",
+      "revision": "97ecf827ecfc3b07d35b74b852981d3415d14a1a",
+      "sourcePath": "qwen3_vl_text_p128_l7_together.axmodel",
+      "size": 66881662,
+      "verifiedHashes": {
+        "sha256": "36d716d73201a81512e1d01b24b274481744b7ce51a22acf9276999c1ae9254e"
+      }
+    },
+    {
+      "path": "embedding/qwen3_vl_text_p128_l8_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-Embedding-2B-AX650-C128_P1280_CTX1407",
+      "revision": "97ecf827ecfc3b07d35b74b852981d3415d14a1a",
+      "sourcePath": "qwen3_vl_text_p128_l8_together.axmodel",
+      "size": 66879710,
+      "verifiedHashes": {
+        "sha256": "08ce1b4ed574341227d6c9aad49a9cab993a3ffd41263287286f60aed3292099"
+      }
+    },
+    {
+      "path": "embedding/qwen3_vl_text_p128_l9_together.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-Embedding-2B-AX650-C128_P1280_CTX1407",
+      "revision": "97ecf827ecfc3b07d35b74b852981d3415d14a1a",
+      "sourcePath": "qwen3_vl_text_p128_l9_together.axmodel",
+      "size": 66874142,
+      "verifiedHashes": {
+        "sha256": "69a0c2264a1b2d2ef2b973a724ffba82e12d545b53cd8b9ffe4d59fa9a540cc4"
+      }
+    },
+    {
+      "path": "embedding/qwen3_vl_text_post.axmodel",
+      "repository": "AXERA-TECH/Qwen3-VL-Embedding-2B-AX650-C128_P1280_CTX1407",
+      "revision": "97ecf827ecfc3b07d35b74b852981d3415d14a1a",
+      "sourcePath": "qwen3_vl_text_post.axmodel",
+      "size": 339281145,
+      "verifiedHashes": {
+        "sha256": "b52d014b058ea1a78d43619b5fabc346a57105deb6f7f36ac14eed817b578bd0"
+      }
+    },
+    {
+      "path": "asr/tokens.txt",
+      "repository": "M5Stack/SenseVoiceSmall-axmodel",
+      "revision": "7ef77b6d0fc6d578e7fca1d8e06f729794e4a868",
+      "sourcePath": "tokens.txt",
+      "size": 315894,
+      "verifiedHashes": {
+        "sha256": "f449eb28dc567533d7fa59be34e2abca8784f771850c78a47fb731a31429a1dc"
+      }
+    },
+    {
+      "path": "asr/test_wavs/zh.wav",
+      "repository": "M5Stack/SenseVoiceSmall-axmodel",
+      "revision": "7ef77b6d0fc6d578e7fca1d8e06f729794e4a868",
+      "sourcePath": "test_wavs/zh.wav",
+      "size": 178988,
+      "verifiedHashes": {
+        "sha256": "b77f1794fe374a0ba1ee1dc458bfaf9349496cbbfc32780c50ba3c5a7ad8e373"
+      }
+    },
+    {
+      "path": "asr/test_wavs/en.wav",
+      "repository": "M5Stack/SenseVoiceSmall-axmodel",
+      "revision": "7ef77b6d0fc6d578e7fca1d8e06f729794e4a868",
+      "sourcePath": "test_wavs/en.wav",
+      "size": 228908,
+      "verifiedHashes": {
+        "sha256": "eb1eb008904465b74c304aad8342e8c7d3c6e61ffe9f66adcaca9cf0f76a93f4"
+      }
+    },
+    {
+      "path": "asr/ax650/model-10-seconds.axmodel",
+      "repository": "M5Stack/SenseVoiceSmall-axmodel",
+      "revision": "7ef77b6d0fc6d578e7fca1d8e06f729794e4a868",
+      "sourcePath": "ax650/model-10-seconds.axmodel",
+      "size": 259255608,
+      "verifiedHashes": {
+        "sha256": "582efbf104fa1aad63cc0390ac36436617d8acaa138c3707ea21a7404bd040b1"
+      }
+    }
+  ]
+}

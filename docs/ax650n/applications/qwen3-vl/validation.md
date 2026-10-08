@@ -1,20 +1,33 @@
 ---
-title: "Qwen3-VL-8B 验证记录"
-sidebar_label: "Qwen3-VL-8B 验证记录"
+title: "Qwen3-VL-8B 样例结果与版本"
+sidebar_label: "Qwen3-VL-8B 样例结果与版本"
 slug: /ax650n/applications/qwen3-vl/validation
+description: "查看历史 16GB 部署样例、计时范围与固定版本，复现原交付配置。"
+mdx:
+  format: mdx
 ---
 
-> **历史项目 · 16GB**：本页记录旧版 Qwen3-VL-8B 部署，不作为 8GB 卡的容量依据。新运行时见[图片与视频问答](/docs/models/vision-language)。
+import {GuideHero, GuideNext} from '@site/src/components/ModelGuideLayout';
 
-# AX8850 16GB + Qwen3-VL-8B 部署验证记录
+# Qwen3-VL-8B 样例结果与版本
 
-验证日期：2026-09-18。主机：RK3576 / aarch64，系统内存约 3.8GiB。算力卡：AX8850 16GB，AXCL 3.16.0。
+<GuideHero label="历史结果 · 16GB 单卡" title="对照固定样例，复现原交付配置" description="本页保留旧版部署的实际输出、耗时和版本信息，便于已有项目核对环境与结果。" facts={[["样例类型", "历史部署记录"], ["环境", "RK3576 + AX8850 16GB"], ["检查范围", "文字、单图与 8 帧问答"]]} />
 
-## 部署结果
+主机为 RK3576 / aarch64，系统内存约 3.8GiB；算力卡为 AX8850 16GB，AXCL 3.16.0。记录仅适用于下列模型与运行程序，不作为 8GB 卡或其他上下文配置的容量依据。启动方法见[旧版部署与使用](usage.md)，新部署入口见[独立模型指南](/docs/models/deploy/qwen3-vl-8b-instruct-gptq-int4)。
+
+## 查看样例输出
 
 已完成原厂模型校验、单卡运行程序编译、启动脚本配置，以及文字、图像、视频帧和道路交通视频帧的本地推理测试。图像模式、视频模式各启动一次，均正常退出；退出后 CMM 恢复到约 18MiB。
 
-| 用例 | 输入 | 图像编码 | 程序报告 TTFT | 程序报告生成速度 | 完整进程耗时 |
+文字测试输出 `2`。图片输出：
+
+> 一位女士站在伦敦街头，身后是一辆经典的红色双层巴士。
+
+交通视频输出包含“宽阔的多车道城市主干道”“车流密集”等描述。模型文字输出用于展示推理链路，未对车道用途、车辆数量等细节做准确率验收。
+
+## 阅读耗时与资源记录
+
+| 用例 | 输入 | 图像编码 | 程序报告 TTFT | 程序报告生成速度 | 单轮总耗时 |
 |---|---|---:|---:|---:|---:|
 | 文字 | 1+1，29 token | — | 0.85 秒 | 3.11 token/s | 1.80 秒 |
 | 单图 | `images/ssd_car.jpg`，174 token | 0.40 秒 | 1.74 秒 | 3.09 token/s | 7.77 秒 |
@@ -25,13 +38,7 @@ TTFT 来自运行程序日志中的语言模型阶段计时，不包含之前的
 
 模型加载到可输入问题约需 2～3 分钟。推理时 `axcl-smi` 显示 CMM 为 6585MiB，约 6.43GiB；交通推理期间一次采样记录到 NPU 71%、芯片 46°C，该采样不代表全程最大值。
 
-文字测试输出 `2`。图片输出：
-
-> 一位女士站在伦敦街头，身后是一辆经典的红色双层巴士。
-
-交通视频输出包含“宽阔的多车道城市主干道”“车流密集”等描述。模型文字输出用于展示推理链路，未对车道用途、车辆数量等细节做准确率验收。
-
-## 当前使用的版本
+## 核对固定版本
 
 - 模型来源：`AXERA-TECH/Qwen3-VL-8B-Instruct-GPTQ-Int4`。
 - 模型提交：`e9e73ad656bd299aedd92c9dad85cf0b308c77fd`。
@@ -43,16 +50,15 @@ TTFT 来自运行程序日志中的语言模型阶段计时，不包含之前的
 
 模型仓库的所有 Git LFS 文件均与仓库记录的 SHA256 一致。C++ 分词器在中文、英文、混合文本、图像标记和视频标记 5 组输入上，与模型自带 Hugging Face 分词器的 token ID 序列一致。
 
-## 解决的环境问题
+## 匹配程序与主机环境
 
 原模型包的预编译程序要求 `libopencv_*.so.410`，主机提供的是 OpenCV 4.6。使用原厂单卡源码在主机重编后，程序正确链接 `.so.406`，没有伪造动态库版本软链接。
 
 当前源码使用本地 C++ 分词器，因此 `run_local.sh` 传入配套词表文件，不再使用旧脚本中的 HTTP tokenizer 地址。测试阶段安装的独立 `.venv` 包含 PyTorch CPU 2.9.1 与 Transformers 4.57.1，仅用于分词对照和自动测试，正常推理不依赖 Python 服务。
 
-部署目录中另外保留了早期检查使用的 `deployment/src/ax-llm-tp`。它是多卡实验分支，本次单卡启动脚本不使用它。`deployment/logs/` 中早期启动失败记录属于环境匹配过程，最终通过记录见下方。
+本页单卡配置使用上表注明的源码和配套词表。其他源码目录、旧入口或 HTTP tokenizer 脚本不属于本次组合。
 
-
-## 定位最终验证日志
+## 查找复现材料
 
 以下路径均相对于模型根目录：
 
@@ -79,4 +85,6 @@ cmake --build deployment/src/ax-llm/build-local --target main -j2
 install -m 0755 deployment/src/ax-llm/build-local/main deployment/bin/main_axcl_aarch64
 ```
 
-运行方式见模型根目录的 `README_LOCAL.md`（电脑端副本为《部署与使用.md》）。本次交付的用户入口为命令行；API/WebUI 可在此基础上继续部署。
+编译后先按[部署与使用](usage.md)复现固定输入，对比原始输出、依赖与资源释放情况，再替换为业务数据。
+
+<GuideNext items={[{to: '/docs/ax650n/applications/qwen3-vl/usage', title: '复现旧版使用流程', text: '使用已交付的图文与视频帧入口。'}, {to: '/docs/models/vision-language', title: '选择其他图像问答模型', text: '比较输入方式、实测范围和容量要求。'}]} />

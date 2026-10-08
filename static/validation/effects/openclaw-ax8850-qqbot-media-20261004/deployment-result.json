@@ -1,0 +1,2060 @@
+{
+  "modelId": "openclaw-ax8850-qqbot-media",
+  "revision": "45cbc485b03f48064e67c47839022c448f0391e1",
+  "variants": [
+    {
+      "label": "语音识别：中文录音",
+      "observation": "输入为仓库随附的 zh.wav（5.592 秒）；下方是部署包的实际转写。识别结果中“开饭时间”存在文字偏差，未做人工修正。",
+      "record": {
+        "completed": true,
+        "provider": "AXCL C API",
+        "inferenceEvidence": "openclaw-local-media-and-native-axcl",
+        "sessions": [],
+        "customerPackageTested": true,
+        "packageSha256": "a5a8661ebd222caeee5a5713247a974911de5544646ff697ca508770b1e8ba63",
+        "verifiedModelFiles": 874,
+        "pipelineSessions": [
+          {
+            "model": "SenseVoiceSmall-axmodel/ax650/model-10-seconds.axmodel",
+            "sha256": "582efbf104fa1aad63cc0390ac36436617d8acaa138c3707ea21a7404bd040b1",
+            "calls": 1,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "582efbf104fa1aad63cc0390ac36436617d8acaa138c3707ea21a7404bd040b1"
+          },
+          {
+            "model": "kokoro/kokoro-multi-lang-v1_0-axmodel/encoder_token_128.axmodel",
+            "sha256": "504ca6e48c6df3520a437bcd62ce18856043160832d1903c88769203a3965b2e",
+            "calls": 2,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "504ca6e48c6df3520a437bcd62ce18856043160832d1903c88769203a3965b2e"
+          },
+          {
+            "model": "kokoro/kokoro-multi-lang-v1_0-axmodel/text_encoder_token_128_frame_198.axmodel",
+            "sha256": "34b33f2281a965362e1accbf9ef57c98e429394022fcf2a98058388ad832ee95",
+            "calls": 2,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "34b33f2281a965362e1accbf9ef57c98e429394022fcf2a98058388ad832ee95"
+          },
+          {
+            "model": "kokoro/kokoro-multi-lang-v1_0-axmodel/f0n_shared_frame_198.axmodel",
+            "sha256": "205dc161f366c0b44cce2b4bf2434bade46f18b1065c80e7a178baa0d5f3c8c9",
+            "calls": 2,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "205dc161f366c0b44cce2b4bf2434bade46f18b1065c80e7a178baa0d5f3c8c9"
+          },
+          {
+            "model": "kokoro/kokoro-multi-lang-v1_0-axmodel/f0n_head_frame_198.axmodel",
+            "sha256": "daa153637639686f8f217135e6189304e5f27b090e3609a3d5f545ec95fcde83",
+            "calls": 2,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "daa153637639686f8f217135e6189304e5f27b090e3609a3d5f545ec95fcde83"
+          },
+          {
+            "model": "kokoro/kokoro-multi-lang-v1_0-axmodel/decoder_front_198.axmodel",
+            "sha256": "ef36e9a8c71a3f48571250d882c9ac7b52ae3695219e0481cb6ec91d5f0f79f5",
+            "calls": 2,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "ef36e9a8c71a3f48571250d882c9ac7b52ae3695219e0481cb6ec91d5f0f79f5"
+          },
+          {
+            "model": "kokoro/kokoro-multi-lang-v1_0-axmodel/vocoder_core_396.axmodel",
+            "sha256": "2cd6478c6b1bd45f4ed9c86ab5897cb819b7a6ffec83dfd3a4f2e7fe40ccba8c",
+            "calls": 2,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "2cd6478c6b1bd45f4ed9c86ab5897cb819b7a6ffec83dfd3a4f2e7fe40ccba8c"
+          },
+          {
+            "model": "kokoro/kokoro-multi-lang-v1_1-axmodel/encoder_token_128.axmodel",
+            "sha256": "b327477418de306e404190288f1c4555e7f060dfb476eb3f9f5e9925efaee2f7",
+            "calls": 2,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "b327477418de306e404190288f1c4555e7f060dfb476eb3f9f5e9925efaee2f7"
+          },
+          {
+            "model": "kokoro/kokoro-multi-lang-v1_1-axmodel/text_encoder_token_128_frame_198.axmodel",
+            "sha256": "2f6625ec32ed6aa8eeef5cfdbc7a61da7f45b00e8dd1005864b259aed1a1efcc",
+            "calls": 2,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "2f6625ec32ed6aa8eeef5cfdbc7a61da7f45b00e8dd1005864b259aed1a1efcc"
+          },
+          {
+            "model": "kokoro/kokoro-multi-lang-v1_1-axmodel/f0n_shared_frame_198.axmodel",
+            "sha256": "26038d434cfb929ada47e86b872ddeb5cacecb6eeb47bdde1a623d7630eb9641",
+            "calls": 2,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "26038d434cfb929ada47e86b872ddeb5cacecb6eeb47bdde1a623d7630eb9641"
+          },
+          {
+            "model": "kokoro/kokoro-multi-lang-v1_1-axmodel/f0n_head_frame_198.axmodel",
+            "sha256": "912dd36b2b7f19a9ed9dda7d1382beb25492bd37ee3bfc25d2e275adba4b2b87",
+            "calls": 2,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "912dd36b2b7f19a9ed9dda7d1382beb25492bd37ee3bfc25d2e275adba4b2b87"
+          },
+          {
+            "model": "kokoro/kokoro-multi-lang-v1_1-axmodel/decoder_front_198.axmodel",
+            "sha256": "767a1e352159af60d801db7e6493bbe239251a2a2b981d5ee7d9138cc823c126",
+            "calls": 2,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "767a1e352159af60d801db7e6493bbe239251a2a2b981d5ee7d9138cc823c126"
+          },
+          {
+            "model": "kokoro/kokoro-multi-lang-v1_1-axmodel/vocoder_core_396.axmodel",
+            "sha256": "a1a8e9ee2aa00210bcd82652c23a86d71433fb6cdadbd6efdd9f889f2ccf6fc1",
+            "calls": 2,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "a1a8e9ee2aa00210bcd82652c23a86d71433fb6cdadbd6efdd9f889f2ccf6fc1"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l0_together.axmodel",
+            "sha256": "b42363b13c67753e20e80a90d51dacc6f04280a3da992b601ab09547f308c3f5",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "b42363b13c67753e20e80a90d51dacc6f04280a3da992b601ab09547f308c3f5"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l1_together.axmodel",
+            "sha256": "07823cd8b49a8b33bc006ae750782e317580494575bc317babd7abff55441eba",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "07823cd8b49a8b33bc006ae750782e317580494575bc317babd7abff55441eba"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l2_together.axmodel",
+            "sha256": "84b296fb9b14d24aa740c2fbfa54b2bd3ae7973a161ac9cb24c45b2372143892",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "84b296fb9b14d24aa740c2fbfa54b2bd3ae7973a161ac9cb24c45b2372143892"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l3_together.axmodel",
+            "sha256": "a5033f1fe491462b8f44f5e117c261955b63535e3272b0cd784a59c97d073319",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "a5033f1fe491462b8f44f5e117c261955b63535e3272b0cd784a59c97d073319"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l4_together.axmodel",
+            "sha256": "5b67c490399d843fa68821a0f38180c300f32333113c0a1c8cd5729bcefd8a56",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "5b67c490399d843fa68821a0f38180c300f32333113c0a1c8cd5729bcefd8a56"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l5_together.axmodel",
+            "sha256": "4c9096f4599c4ad21ac49217561531da9b0223bf6f3e3741f21f2f4d68924b9d",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "4c9096f4599c4ad21ac49217561531da9b0223bf6f3e3741f21f2f4d68924b9d"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l6_together.axmodel",
+            "sha256": "81d1777fcbb676b3ef12fc2130286c24552a1f8d36a0cd14c66850e31210f33b",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "81d1777fcbb676b3ef12fc2130286c24552a1f8d36a0cd14c66850e31210f33b"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l7_together.axmodel",
+            "sha256": "fd355f229ca1c151df8166b46d800d9047924453a4b982c0c838d456c0aec468",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "fd355f229ca1c151df8166b46d800d9047924453a4b982c0c838d456c0aec468"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l8_together.axmodel",
+            "sha256": "88fe84332f276947775040d38ba46ed7f735ebd498b248c44c37b41f0f89ab2a",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "88fe84332f276947775040d38ba46ed7f735ebd498b248c44c37b41f0f89ab2a"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l9_together.axmodel",
+            "sha256": "1d991e4b23bd66421f0f39e7b3c02a4adace0b9434176c8deb24ece1c6a66600",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "1d991e4b23bd66421f0f39e7b3c02a4adace0b9434176c8deb24ece1c6a66600"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l10_together.axmodel",
+            "sha256": "f0133beae7b5d7b109557df15c6f5d6a738eded2ae1feef1f94c983699f74623",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "f0133beae7b5d7b109557df15c6f5d6a738eded2ae1feef1f94c983699f74623"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l11_together.axmodel",
+            "sha256": "2faf54778f2e20ea363e189f0a0a9f9acaa1337cf30109092ffb48418c485072",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "2faf54778f2e20ea363e189f0a0a9f9acaa1337cf30109092ffb48418c485072"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l12_together.axmodel",
+            "sha256": "073dab1c7c2c91f2a0fd23cc3b1553df6c6f35f1841c1358265f56be5659c53f",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "073dab1c7c2c91f2a0fd23cc3b1553df6c6f35f1841c1358265f56be5659c53f"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l13_together.axmodel",
+            "sha256": "7b76578926bb45565be1bdc55f36fc074528e2835185195c69a3099f088e78c1",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "7b76578926bb45565be1bdc55f36fc074528e2835185195c69a3099f088e78c1"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l14_together.axmodel",
+            "sha256": "a12b5b73debb37c8c2ad8a2ea16b39bfc7b3000d0323be8e8c9cb89fb214ba54",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "a12b5b73debb37c8c2ad8a2ea16b39bfc7b3000d0323be8e8c9cb89fb214ba54"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l15_together.axmodel",
+            "sha256": "20c7ff4026d78f6e6dd7f3075283aeba63d5ea81aca1eedfa0f7210fe20f9e9b",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "20c7ff4026d78f6e6dd7f3075283aeba63d5ea81aca1eedfa0f7210fe20f9e9b"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l16_together.axmodel",
+            "sha256": "93519605f2bbb6c2e9558cacfc4655e6c2d93ae33c50f1f7e0d4d41b448a1649",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "93519605f2bbb6c2e9558cacfc4655e6c2d93ae33c50f1f7e0d4d41b448a1649"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l17_together.axmodel",
+            "sha256": "4dbe9d98f015d52fa8e3083d666ce4438a7ed3160e9f1eac3fde94bc7fcfa30e",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "4dbe9d98f015d52fa8e3083d666ce4438a7ed3160e9f1eac3fde94bc7fcfa30e"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l18_together.axmodel",
+            "sha256": "05c421f9457cb19cf3e4bc7c8b503f5f6e50358a664d1865a78640dd1fad8835",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "05c421f9457cb19cf3e4bc7c8b503f5f6e50358a664d1865a78640dd1fad8835"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l19_together.axmodel",
+            "sha256": "0e1d98fa8ac199f64471f7535ab64de18ad99bf4cdfdc08e79d83635cda7cebb",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "0e1d98fa8ac199f64471f7535ab64de18ad99bf4cdfdc08e79d83635cda7cebb"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l20_together.axmodel",
+            "sha256": "62512c13b3509d6d77595616fe64804927d15e3738dd768ac6e88581c6235146",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "62512c13b3509d6d77595616fe64804927d15e3738dd768ac6e88581c6235146"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l21_together.axmodel",
+            "sha256": "fb01c185abe5eadf91f07829db2cd05121b8b05624bf9bdb145a770e2e55620a",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "fb01c185abe5eadf91f07829db2cd05121b8b05624bf9bdb145a770e2e55620a"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l22_together.axmodel",
+            "sha256": "84a8454d97e489645b33144f88cdd56ffbad8362f1300f72d6f1b7f3cf3d75b2",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "84a8454d97e489645b33144f88cdd56ffbad8362f1300f72d6f1b7f3cf3d75b2"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l23_together.axmodel",
+            "sha256": "9ce9e3219f96c8f7615fdb799141d1045620ea69fb77489248200c6bb3b2a2c6",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "9ce9e3219f96c8f7615fdb799141d1045620ea69fb77489248200c6bb3b2a2c6"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l24_together.axmodel",
+            "sha256": "0e47988815b6b3b330584a934bb2cd889da3ed5a57ae0e75ed34dba31d676471",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "0e47988815b6b3b330584a934bb2cd889da3ed5a57ae0e75ed34dba31d676471"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l25_together.axmodel",
+            "sha256": "d0d03c2cb43adb58329ce66d45f8abe579d55c6dc0c551f67ef2e6821520bd1a",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "d0d03c2cb43adb58329ce66d45f8abe579d55c6dc0c551f67ef2e6821520bd1a"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l26_together.axmodel",
+            "sha256": "cccaa3a03ba1a2902834ef825f06ca2b1a5f0326a5e0544b98fba4454f9c8b1b",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "cccaa3a03ba1a2902834ef825f06ca2b1a5f0326a5e0544b98fba4454f9c8b1b"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l27_together.axmodel",
+            "sha256": "a12ad8c0cf98016faf93cd5d4fdf99d0c563d2a922b1f1d78baae56387ccf010",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "a12ad8c0cf98016faf93cd5d4fdf99d0c563d2a922b1f1d78baae56387ccf010"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_post.axmodel",
+            "sha256": "02607a1702a7ad2111b607b94a219fc08901a1974963c74638719ab4ce853e17",
+            "calls": 188,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "02607a1702a7ad2111b607b94a219fc08901a1974963c74638719ab4ce853e17"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/Qwen3-VL-2B-Instruct_vision.axmodel",
+            "sha256": "f8bd7c1864e378ebccd7c50b006586360dea7f0302db8662cfe93773603ae749",
+            "calls": 3,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "f8bd7c1864e378ebccd7c50b006586360dea7f0302db8662cfe93773603ae749"
+          }
+        ],
+        "totalCalls": 5564,
+        "cleanShutdown": true,
+        "wholeApplicationAccepted": false,
+        "qualityAccepted": false,
+        "actual8GBTested": false,
+        "mediaFiles": [
+          {
+            "path": "/validation/effects/openclaw-ax8850-qqbot-media-20261004/asr-zh.wav",
+            "sha256": "b77f1794fe374a0ba1ee1dc458bfaf9349496cbbfc32780c50ba3c5a7ad8e373"
+          },
+          {
+            "path": "/validation/effects/openclaw-ax8850-qqbot-media-20261004/astronauts.png",
+            "sha256": "622ae2d01ff4467fa69a7888728d776650117a0f4887e96ba0fb9a8a6d77b3c3"
+          },
+          {
+            "path": "/validation/effects/openclaw-ax8850-qqbot-media-20261004/stone-mill-10s.mp4",
+            "sha256": "7305393e584a9396ecd12e906b2cff513295f2bf123a72a63c1144e7cecee857"
+          },
+          {
+            "path": "/validation/effects/openclaw-ax8850-qqbot-media-20261004/video-frame-0.jpg",
+            "sha256": "adbf00257a45a7f90976bf98a7cdbbaa45942ff0337296bb15c8899e255dfffe"
+          },
+          {
+            "path": "/validation/effects/openclaw-ax8850-qqbot-media-20261004/video-frame-1.jpg",
+            "sha256": "691e2d06b3ec5e20278986b450e13aa03817add26d4505d426d7b4210a423459"
+          },
+          {
+            "path": "/validation/effects/openclaw-ax8850-qqbot-media-20261004/video-frame-2.jpg",
+            "sha256": "77269c52672e9cebbb2a86b746180dd9068c73366ddb25d898fea3494ef5ff9a"
+          },
+          {
+            "path": "/validation/effects/openclaw-ax8850-qqbot-media-20261004/video-frame-3.jpg",
+            "sha256": "314705633b4d01f01b34c19a4b5ea8327ddaf0e86b037b1d7146fbde8f64cd5f"
+          },
+          {
+            "path": "/validation/effects/openclaw-ax8850-qqbot-media-20261004/tts-1_0.wav",
+            "sha256": "bf61f75a6a5620d9c379eb45296ee91565790cf9a5d26f910a1c5e989631c042"
+          },
+          {
+            "path": "/validation/effects/openclaw-ax8850-qqbot-media-20261004/tts-1_1.wav",
+            "sha256": "fe357d1f505089ba82aaeaee9ebce28b4f18c35b8d76bcd5c3a7955e4a194592"
+          }
+        ],
+        "requests": [
+          {
+            "mode": "image",
+            "exitCode": 0,
+            "httpStatus": 200,
+            "visionExecutions": 1,
+            "postExecutions": 21,
+            "maxTokens": 256,
+            "finishReason": "stop",
+            "inputType": "image_url",
+            "processSeconds": 7.550071539000783
+          },
+          {
+            "mode": "base64",
+            "exitCode": 0,
+            "httpStatus": 200,
+            "visionExecutions": 2,
+            "postExecutions": 167,
+            "maxTokens": 512,
+            "finishReason": "stop",
+            "inputType": "video_url",
+            "processSeconds": 38.023444787999324
+          }
+        ],
+        "audioOutputs": [
+          {
+            "path": "/validation/effects/openclaw-ax8850-qqbot-media-20261004/tts-1_0.wav",
+            "sha256": "bf61f75a6a5620d9c379eb45296ee91565790cf9a5d26f910a1c5e989631c042",
+            "sampleRate": 24000,
+            "channels": 1,
+            "frames": 59507,
+            "seconds": 2.4794583333333335
+          },
+          {
+            "path": "/validation/effects/openclaw-ax8850-qqbot-media-20261004/tts-1_1.wav",
+            "sha256": "fe357d1f505089ba82aaeaee9ebce28b4f18c35b8d76bcd5c3a7955e4a194592",
+            "sampleRate": 24000,
+            "channels": 1,
+            "frames": 60915,
+            "seconds": 2.538125
+          }
+        ],
+        "outputs": [
+          "开饭时间早上九点至下午五点",
+          "- 三名宇航员\n- 森林环境\n- 无可见文字",
+          "这是一段电视剧《三国演义》的视频截图，画面中主要展示了一位身穿古代服饰的男子，他身着浅色长袍，头戴黑色帽子，留着长须，站在人群之中。他正用右手抚摸着自己的长须，表情严肃，似乎在思考或等待着什么。他周围有许多人，他们穿着不同颜色的服饰，有的穿着红色或黑色的服装，有的则穿着浅色的衣物。背景中可以看到一些古代建筑的结构，如木柱和墙壁，以及一些其他的建筑元素。画面下方有“蜀中”、“蜀中”、“蜀中”等字样，这些可能是剧中人物的对话或旁白。整个场景发生在一个古代的街道或广场上，周围有许多人，气氛显得紧张而严肃。"
+        ],
+        "component": "asr"
+      },
+      "previews": [],
+      "audio": [
+        {
+          "path": "/validation/effects/openclaw-ax8850-qqbot-media-20261004/asr-zh.wav",
+          "caption": "输入录音：zh.wav"
+        }
+      ],
+      "textSamples": [
+        {
+          "input": "识别 zh.wav，语言 zh",
+          "output": "开饭时间早上九点至下午五点",
+          "observation": "完整命令约 11.52 秒，包含模型文件校验、加载与识别。"
+        }
+      ]
+    },
+    {
+      "label": "语音合成：比较 Kokoro 两个版本",
+      "observation": "两个版本使用相同文本“你好，欢迎使用算力卡。”，音色编号 1，正常语速。音频文件来自本次部署包运行；发音质量仍需试听评估。",
+      "record": {
+        "completed": true,
+        "provider": "AXCL C API",
+        "inferenceEvidence": "openclaw-local-media-and-native-axcl",
+        "sessions": [],
+        "customerPackageTested": true,
+        "packageSha256": "a5a8661ebd222caeee5a5713247a974911de5544646ff697ca508770b1e8ba63",
+        "verifiedModelFiles": 874,
+        "pipelineSessions": [
+          {
+            "model": "SenseVoiceSmall-axmodel/ax650/model-10-seconds.axmodel",
+            "sha256": "582efbf104fa1aad63cc0390ac36436617d8acaa138c3707ea21a7404bd040b1",
+            "calls": 1,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "582efbf104fa1aad63cc0390ac36436617d8acaa138c3707ea21a7404bd040b1"
+          },
+          {
+            "model": "kokoro/kokoro-multi-lang-v1_0-axmodel/encoder_token_128.axmodel",
+            "sha256": "504ca6e48c6df3520a437bcd62ce18856043160832d1903c88769203a3965b2e",
+            "calls": 2,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "504ca6e48c6df3520a437bcd62ce18856043160832d1903c88769203a3965b2e"
+          },
+          {
+            "model": "kokoro/kokoro-multi-lang-v1_0-axmodel/text_encoder_token_128_frame_198.axmodel",
+            "sha256": "34b33f2281a965362e1accbf9ef57c98e429394022fcf2a98058388ad832ee95",
+            "calls": 2,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "34b33f2281a965362e1accbf9ef57c98e429394022fcf2a98058388ad832ee95"
+          },
+          {
+            "model": "kokoro/kokoro-multi-lang-v1_0-axmodel/f0n_shared_frame_198.axmodel",
+            "sha256": "205dc161f366c0b44cce2b4bf2434bade46f18b1065c80e7a178baa0d5f3c8c9",
+            "calls": 2,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "205dc161f366c0b44cce2b4bf2434bade46f18b1065c80e7a178baa0d5f3c8c9"
+          },
+          {
+            "model": "kokoro/kokoro-multi-lang-v1_0-axmodel/f0n_head_frame_198.axmodel",
+            "sha256": "daa153637639686f8f217135e6189304e5f27b090e3609a3d5f545ec95fcde83",
+            "calls": 2,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "daa153637639686f8f217135e6189304e5f27b090e3609a3d5f545ec95fcde83"
+          },
+          {
+            "model": "kokoro/kokoro-multi-lang-v1_0-axmodel/decoder_front_198.axmodel",
+            "sha256": "ef36e9a8c71a3f48571250d882c9ac7b52ae3695219e0481cb6ec91d5f0f79f5",
+            "calls": 2,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "ef36e9a8c71a3f48571250d882c9ac7b52ae3695219e0481cb6ec91d5f0f79f5"
+          },
+          {
+            "model": "kokoro/kokoro-multi-lang-v1_0-axmodel/vocoder_core_396.axmodel",
+            "sha256": "2cd6478c6b1bd45f4ed9c86ab5897cb819b7a6ffec83dfd3a4f2e7fe40ccba8c",
+            "calls": 2,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "2cd6478c6b1bd45f4ed9c86ab5897cb819b7a6ffec83dfd3a4f2e7fe40ccba8c"
+          },
+          {
+            "model": "kokoro/kokoro-multi-lang-v1_1-axmodel/encoder_token_128.axmodel",
+            "sha256": "b327477418de306e404190288f1c4555e7f060dfb476eb3f9f5e9925efaee2f7",
+            "calls": 2,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "b327477418de306e404190288f1c4555e7f060dfb476eb3f9f5e9925efaee2f7"
+          },
+          {
+            "model": "kokoro/kokoro-multi-lang-v1_1-axmodel/text_encoder_token_128_frame_198.axmodel",
+            "sha256": "2f6625ec32ed6aa8eeef5cfdbc7a61da7f45b00e8dd1005864b259aed1a1efcc",
+            "calls": 2,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "2f6625ec32ed6aa8eeef5cfdbc7a61da7f45b00e8dd1005864b259aed1a1efcc"
+          },
+          {
+            "model": "kokoro/kokoro-multi-lang-v1_1-axmodel/f0n_shared_frame_198.axmodel",
+            "sha256": "26038d434cfb929ada47e86b872ddeb5cacecb6eeb47bdde1a623d7630eb9641",
+            "calls": 2,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "26038d434cfb929ada47e86b872ddeb5cacecb6eeb47bdde1a623d7630eb9641"
+          },
+          {
+            "model": "kokoro/kokoro-multi-lang-v1_1-axmodel/f0n_head_frame_198.axmodel",
+            "sha256": "912dd36b2b7f19a9ed9dda7d1382beb25492bd37ee3bfc25d2e275adba4b2b87",
+            "calls": 2,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "912dd36b2b7f19a9ed9dda7d1382beb25492bd37ee3bfc25d2e275adba4b2b87"
+          },
+          {
+            "model": "kokoro/kokoro-multi-lang-v1_1-axmodel/decoder_front_198.axmodel",
+            "sha256": "767a1e352159af60d801db7e6493bbe239251a2a2b981d5ee7d9138cc823c126",
+            "calls": 2,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "767a1e352159af60d801db7e6493bbe239251a2a2b981d5ee7d9138cc823c126"
+          },
+          {
+            "model": "kokoro/kokoro-multi-lang-v1_1-axmodel/vocoder_core_396.axmodel",
+            "sha256": "a1a8e9ee2aa00210bcd82652c23a86d71433fb6cdadbd6efdd9f889f2ccf6fc1",
+            "calls": 2,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "a1a8e9ee2aa00210bcd82652c23a86d71433fb6cdadbd6efdd9f889f2ccf6fc1"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l0_together.axmodel",
+            "sha256": "b42363b13c67753e20e80a90d51dacc6f04280a3da992b601ab09547f308c3f5",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "b42363b13c67753e20e80a90d51dacc6f04280a3da992b601ab09547f308c3f5"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l1_together.axmodel",
+            "sha256": "07823cd8b49a8b33bc006ae750782e317580494575bc317babd7abff55441eba",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "07823cd8b49a8b33bc006ae750782e317580494575bc317babd7abff55441eba"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l2_together.axmodel",
+            "sha256": "84b296fb9b14d24aa740c2fbfa54b2bd3ae7973a161ac9cb24c45b2372143892",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "84b296fb9b14d24aa740c2fbfa54b2bd3ae7973a161ac9cb24c45b2372143892"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l3_together.axmodel",
+            "sha256": "a5033f1fe491462b8f44f5e117c261955b63535e3272b0cd784a59c97d073319",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "a5033f1fe491462b8f44f5e117c261955b63535e3272b0cd784a59c97d073319"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l4_together.axmodel",
+            "sha256": "5b67c490399d843fa68821a0f38180c300f32333113c0a1c8cd5729bcefd8a56",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "5b67c490399d843fa68821a0f38180c300f32333113c0a1c8cd5729bcefd8a56"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l5_together.axmodel",
+            "sha256": "4c9096f4599c4ad21ac49217561531da9b0223bf6f3e3741f21f2f4d68924b9d",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "4c9096f4599c4ad21ac49217561531da9b0223bf6f3e3741f21f2f4d68924b9d"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l6_together.axmodel",
+            "sha256": "81d1777fcbb676b3ef12fc2130286c24552a1f8d36a0cd14c66850e31210f33b",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "81d1777fcbb676b3ef12fc2130286c24552a1f8d36a0cd14c66850e31210f33b"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l7_together.axmodel",
+            "sha256": "fd355f229ca1c151df8166b46d800d9047924453a4b982c0c838d456c0aec468",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "fd355f229ca1c151df8166b46d800d9047924453a4b982c0c838d456c0aec468"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l8_together.axmodel",
+            "sha256": "88fe84332f276947775040d38ba46ed7f735ebd498b248c44c37b41f0f89ab2a",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "88fe84332f276947775040d38ba46ed7f735ebd498b248c44c37b41f0f89ab2a"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l9_together.axmodel",
+            "sha256": "1d991e4b23bd66421f0f39e7b3c02a4adace0b9434176c8deb24ece1c6a66600",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "1d991e4b23bd66421f0f39e7b3c02a4adace0b9434176c8deb24ece1c6a66600"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l10_together.axmodel",
+            "sha256": "f0133beae7b5d7b109557df15c6f5d6a738eded2ae1feef1f94c983699f74623",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "f0133beae7b5d7b109557df15c6f5d6a738eded2ae1feef1f94c983699f74623"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l11_together.axmodel",
+            "sha256": "2faf54778f2e20ea363e189f0a0a9f9acaa1337cf30109092ffb48418c485072",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "2faf54778f2e20ea363e189f0a0a9f9acaa1337cf30109092ffb48418c485072"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l12_together.axmodel",
+            "sha256": "073dab1c7c2c91f2a0fd23cc3b1553df6c6f35f1841c1358265f56be5659c53f",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "073dab1c7c2c91f2a0fd23cc3b1553df6c6f35f1841c1358265f56be5659c53f"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l13_together.axmodel",
+            "sha256": "7b76578926bb45565be1bdc55f36fc074528e2835185195c69a3099f088e78c1",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "7b76578926bb45565be1bdc55f36fc074528e2835185195c69a3099f088e78c1"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l14_together.axmodel",
+            "sha256": "a12b5b73debb37c8c2ad8a2ea16b39bfc7b3000d0323be8e8c9cb89fb214ba54",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "a12b5b73debb37c8c2ad8a2ea16b39bfc7b3000d0323be8e8c9cb89fb214ba54"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l15_together.axmodel",
+            "sha256": "20c7ff4026d78f6e6dd7f3075283aeba63d5ea81aca1eedfa0f7210fe20f9e9b",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "20c7ff4026d78f6e6dd7f3075283aeba63d5ea81aca1eedfa0f7210fe20f9e9b"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l16_together.axmodel",
+            "sha256": "93519605f2bbb6c2e9558cacfc4655e6c2d93ae33c50f1f7e0d4d41b448a1649",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "93519605f2bbb6c2e9558cacfc4655e6c2d93ae33c50f1f7e0d4d41b448a1649"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l17_together.axmodel",
+            "sha256": "4dbe9d98f015d52fa8e3083d666ce4438a7ed3160e9f1eac3fde94bc7fcfa30e",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "4dbe9d98f015d52fa8e3083d666ce4438a7ed3160e9f1eac3fde94bc7fcfa30e"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l18_together.axmodel",
+            "sha256": "05c421f9457cb19cf3e4bc7c8b503f5f6e50358a664d1865a78640dd1fad8835",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "05c421f9457cb19cf3e4bc7c8b503f5f6e50358a664d1865a78640dd1fad8835"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l19_together.axmodel",
+            "sha256": "0e1d98fa8ac199f64471f7535ab64de18ad99bf4cdfdc08e79d83635cda7cebb",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "0e1d98fa8ac199f64471f7535ab64de18ad99bf4cdfdc08e79d83635cda7cebb"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l20_together.axmodel",
+            "sha256": "62512c13b3509d6d77595616fe64804927d15e3738dd768ac6e88581c6235146",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "62512c13b3509d6d77595616fe64804927d15e3738dd768ac6e88581c6235146"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l21_together.axmodel",
+            "sha256": "fb01c185abe5eadf91f07829db2cd05121b8b05624bf9bdb145a770e2e55620a",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "fb01c185abe5eadf91f07829db2cd05121b8b05624bf9bdb145a770e2e55620a"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l22_together.axmodel",
+            "sha256": "84a8454d97e489645b33144f88cdd56ffbad8362f1300f72d6f1b7f3cf3d75b2",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "84a8454d97e489645b33144f88cdd56ffbad8362f1300f72d6f1b7f3cf3d75b2"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l23_together.axmodel",
+            "sha256": "9ce9e3219f96c8f7615fdb799141d1045620ea69fb77489248200c6bb3b2a2c6",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "9ce9e3219f96c8f7615fdb799141d1045620ea69fb77489248200c6bb3b2a2c6"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l24_together.axmodel",
+            "sha256": "0e47988815b6b3b330584a934bb2cd889da3ed5a57ae0e75ed34dba31d676471",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "0e47988815b6b3b330584a934bb2cd889da3ed5a57ae0e75ed34dba31d676471"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l25_together.axmodel",
+            "sha256": "d0d03c2cb43adb58329ce66d45f8abe579d55c6dc0c551f67ef2e6821520bd1a",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "d0d03c2cb43adb58329ce66d45f8abe579d55c6dc0c551f67ef2e6821520bd1a"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l26_together.axmodel",
+            "sha256": "cccaa3a03ba1a2902834ef825f06ca2b1a5f0326a5e0544b98fba4454f9c8b1b",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "cccaa3a03ba1a2902834ef825f06ca2b1a5f0326a5e0544b98fba4454f9c8b1b"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l27_together.axmodel",
+            "sha256": "a12ad8c0cf98016faf93cd5d4fdf99d0c563d2a922b1f1d78baae56387ccf010",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "a12ad8c0cf98016faf93cd5d4fdf99d0c563d2a922b1f1d78baae56387ccf010"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_post.axmodel",
+            "sha256": "02607a1702a7ad2111b607b94a219fc08901a1974963c74638719ab4ce853e17",
+            "calls": 188,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "02607a1702a7ad2111b607b94a219fc08901a1974963c74638719ab4ce853e17"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/Qwen3-VL-2B-Instruct_vision.axmodel",
+            "sha256": "f8bd7c1864e378ebccd7c50b006586360dea7f0302db8662cfe93773603ae749",
+            "calls": 3,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "f8bd7c1864e378ebccd7c50b006586360dea7f0302db8662cfe93773603ae749"
+          }
+        ],
+        "totalCalls": 5564,
+        "cleanShutdown": true,
+        "wholeApplicationAccepted": false,
+        "qualityAccepted": false,
+        "actual8GBTested": false,
+        "mediaFiles": [
+          {
+            "path": "/validation/effects/openclaw-ax8850-qqbot-media-20261004/asr-zh.wav",
+            "sha256": "b77f1794fe374a0ba1ee1dc458bfaf9349496cbbfc32780c50ba3c5a7ad8e373"
+          },
+          {
+            "path": "/validation/effects/openclaw-ax8850-qqbot-media-20261004/astronauts.png",
+            "sha256": "622ae2d01ff4467fa69a7888728d776650117a0f4887e96ba0fb9a8a6d77b3c3"
+          },
+          {
+            "path": "/validation/effects/openclaw-ax8850-qqbot-media-20261004/stone-mill-10s.mp4",
+            "sha256": "7305393e584a9396ecd12e906b2cff513295f2bf123a72a63c1144e7cecee857"
+          },
+          {
+            "path": "/validation/effects/openclaw-ax8850-qqbot-media-20261004/video-frame-0.jpg",
+            "sha256": "adbf00257a45a7f90976bf98a7cdbbaa45942ff0337296bb15c8899e255dfffe"
+          },
+          {
+            "path": "/validation/effects/openclaw-ax8850-qqbot-media-20261004/video-frame-1.jpg",
+            "sha256": "691e2d06b3ec5e20278986b450e13aa03817add26d4505d426d7b4210a423459"
+          },
+          {
+            "path": "/validation/effects/openclaw-ax8850-qqbot-media-20261004/video-frame-2.jpg",
+            "sha256": "77269c52672e9cebbb2a86b746180dd9068c73366ddb25d898fea3494ef5ff9a"
+          },
+          {
+            "path": "/validation/effects/openclaw-ax8850-qqbot-media-20261004/video-frame-3.jpg",
+            "sha256": "314705633b4d01f01b34c19a4b5ea8327ddaf0e86b037b1d7146fbde8f64cd5f"
+          },
+          {
+            "path": "/validation/effects/openclaw-ax8850-qqbot-media-20261004/tts-1_0.wav",
+            "sha256": "bf61f75a6a5620d9c379eb45296ee91565790cf9a5d26f910a1c5e989631c042"
+          },
+          {
+            "path": "/validation/effects/openclaw-ax8850-qqbot-media-20261004/tts-1_1.wav",
+            "sha256": "fe357d1f505089ba82aaeaee9ebce28b4f18c35b8d76bcd5c3a7955e4a194592"
+          }
+        ],
+        "requests": [
+          {
+            "mode": "image",
+            "exitCode": 0,
+            "httpStatus": 200,
+            "visionExecutions": 1,
+            "postExecutions": 21,
+            "maxTokens": 256,
+            "finishReason": "stop",
+            "inputType": "image_url",
+            "processSeconds": 7.550071539000783
+          },
+          {
+            "mode": "base64",
+            "exitCode": 0,
+            "httpStatus": 200,
+            "visionExecutions": 2,
+            "postExecutions": 167,
+            "maxTokens": 512,
+            "finishReason": "stop",
+            "inputType": "video_url",
+            "processSeconds": 38.023444787999324
+          }
+        ],
+        "audioOutputs": [
+          {
+            "path": "/validation/effects/openclaw-ax8850-qqbot-media-20261004/tts-1_0.wav",
+            "sha256": "bf61f75a6a5620d9c379eb45296ee91565790cf9a5d26f910a1c5e989631c042",
+            "sampleRate": 24000,
+            "channels": 1,
+            "frames": 59507,
+            "seconds": 2.4794583333333335
+          },
+          {
+            "path": "/validation/effects/openclaw-ax8850-qqbot-media-20261004/tts-1_1.wav",
+            "sha256": "fe357d1f505089ba82aaeaee9ebce28b4f18c35b8d76bcd5c3a7955e4a194592",
+            "sampleRate": 24000,
+            "channels": 1,
+            "frames": 60915,
+            "seconds": 2.538125
+          }
+        ],
+        "outputs": [
+          "开饭时间早上九点至下午五点",
+          "- 三名宇航员\n- 森林环境\n- 无可见文字",
+          "这是一段电视剧《三国演义》的视频截图，画面中主要展示了一位身穿古代服饰的男子，他身着浅色长袍，头戴黑色帽子，留着长须，站在人群之中。他正用右手抚摸着自己的长须，表情严肃，似乎在思考或等待着什么。他周围有许多人，他们穿着不同颜色的服饰，有的穿着红色或黑色的服装，有的则穿着浅色的衣物。背景中可以看到一些古代建筑的结构，如木柱和墙壁，以及一些其他的建筑元素。画面下方有“蜀中”、“蜀中”、“蜀中”等字样，这些可能是剧中人物的对话或旁白。整个场景发生在一个古代的街道或广场上，周围有许多人，气氛显得紧张而严肃。"
+        ],
+        "component": "tts"
+      },
+      "previews": [],
+      "audio": [
+        {
+          "path": "/validation/effects/openclaw-ax8850-qqbot-media-20261004/tts-1_0.wav",
+          "caption": "Kokoro 1.0：2.479 秒，24 kHz 单声道"
+        },
+        {
+          "path": "/validation/effects/openclaw-ax8850-qqbot-media-20261004/tts-1_1.wav",
+          "caption": "Kokoro 1.1：2.538 秒，24 kHz 单声道"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "版本",
+            "音频长度",
+            "完整命令耗时"
+          ],
+          "rows": [
+            [
+              "1.0",
+              "2.479 秒",
+              "22.34 秒"
+            ],
+            [
+              "1.1",
+              "2.538 秒",
+              "22.91 秒"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "label": "图片问答：宇航员图片",
+      "observation": "使用模型仓库随附的图片，询问主体、环境与可见文字。输出与画面中的三名宇航员及森林背景相符。",
+      "record": {
+        "completed": true,
+        "provider": "AXCL C API",
+        "inferenceEvidence": "openclaw-local-media-and-native-axcl",
+        "sessions": [],
+        "customerPackageTested": true,
+        "packageSha256": "a5a8661ebd222caeee5a5713247a974911de5544646ff697ca508770b1e8ba63",
+        "verifiedModelFiles": 874,
+        "pipelineSessions": [
+          {
+            "model": "SenseVoiceSmall-axmodel/ax650/model-10-seconds.axmodel",
+            "sha256": "582efbf104fa1aad63cc0390ac36436617d8acaa138c3707ea21a7404bd040b1",
+            "calls": 1,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "582efbf104fa1aad63cc0390ac36436617d8acaa138c3707ea21a7404bd040b1"
+          },
+          {
+            "model": "kokoro/kokoro-multi-lang-v1_0-axmodel/encoder_token_128.axmodel",
+            "sha256": "504ca6e48c6df3520a437bcd62ce18856043160832d1903c88769203a3965b2e",
+            "calls": 2,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "504ca6e48c6df3520a437bcd62ce18856043160832d1903c88769203a3965b2e"
+          },
+          {
+            "model": "kokoro/kokoro-multi-lang-v1_0-axmodel/text_encoder_token_128_frame_198.axmodel",
+            "sha256": "34b33f2281a965362e1accbf9ef57c98e429394022fcf2a98058388ad832ee95",
+            "calls": 2,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "34b33f2281a965362e1accbf9ef57c98e429394022fcf2a98058388ad832ee95"
+          },
+          {
+            "model": "kokoro/kokoro-multi-lang-v1_0-axmodel/f0n_shared_frame_198.axmodel",
+            "sha256": "205dc161f366c0b44cce2b4bf2434bade46f18b1065c80e7a178baa0d5f3c8c9",
+            "calls": 2,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "205dc161f366c0b44cce2b4bf2434bade46f18b1065c80e7a178baa0d5f3c8c9"
+          },
+          {
+            "model": "kokoro/kokoro-multi-lang-v1_0-axmodel/f0n_head_frame_198.axmodel",
+            "sha256": "daa153637639686f8f217135e6189304e5f27b090e3609a3d5f545ec95fcde83",
+            "calls": 2,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "daa153637639686f8f217135e6189304e5f27b090e3609a3d5f545ec95fcde83"
+          },
+          {
+            "model": "kokoro/kokoro-multi-lang-v1_0-axmodel/decoder_front_198.axmodel",
+            "sha256": "ef36e9a8c71a3f48571250d882c9ac7b52ae3695219e0481cb6ec91d5f0f79f5",
+            "calls": 2,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "ef36e9a8c71a3f48571250d882c9ac7b52ae3695219e0481cb6ec91d5f0f79f5"
+          },
+          {
+            "model": "kokoro/kokoro-multi-lang-v1_0-axmodel/vocoder_core_396.axmodel",
+            "sha256": "2cd6478c6b1bd45f4ed9c86ab5897cb819b7a6ffec83dfd3a4f2e7fe40ccba8c",
+            "calls": 2,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "2cd6478c6b1bd45f4ed9c86ab5897cb819b7a6ffec83dfd3a4f2e7fe40ccba8c"
+          },
+          {
+            "model": "kokoro/kokoro-multi-lang-v1_1-axmodel/encoder_token_128.axmodel",
+            "sha256": "b327477418de306e404190288f1c4555e7f060dfb476eb3f9f5e9925efaee2f7",
+            "calls": 2,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "b327477418de306e404190288f1c4555e7f060dfb476eb3f9f5e9925efaee2f7"
+          },
+          {
+            "model": "kokoro/kokoro-multi-lang-v1_1-axmodel/text_encoder_token_128_frame_198.axmodel",
+            "sha256": "2f6625ec32ed6aa8eeef5cfdbc7a61da7f45b00e8dd1005864b259aed1a1efcc",
+            "calls": 2,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "2f6625ec32ed6aa8eeef5cfdbc7a61da7f45b00e8dd1005864b259aed1a1efcc"
+          },
+          {
+            "model": "kokoro/kokoro-multi-lang-v1_1-axmodel/f0n_shared_frame_198.axmodel",
+            "sha256": "26038d434cfb929ada47e86b872ddeb5cacecb6eeb47bdde1a623d7630eb9641",
+            "calls": 2,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "26038d434cfb929ada47e86b872ddeb5cacecb6eeb47bdde1a623d7630eb9641"
+          },
+          {
+            "model": "kokoro/kokoro-multi-lang-v1_1-axmodel/f0n_head_frame_198.axmodel",
+            "sha256": "912dd36b2b7f19a9ed9dda7d1382beb25492bd37ee3bfc25d2e275adba4b2b87",
+            "calls": 2,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "912dd36b2b7f19a9ed9dda7d1382beb25492bd37ee3bfc25d2e275adba4b2b87"
+          },
+          {
+            "model": "kokoro/kokoro-multi-lang-v1_1-axmodel/decoder_front_198.axmodel",
+            "sha256": "767a1e352159af60d801db7e6493bbe239251a2a2b981d5ee7d9138cc823c126",
+            "calls": 2,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "767a1e352159af60d801db7e6493bbe239251a2a2b981d5ee7d9138cc823c126"
+          },
+          {
+            "model": "kokoro/kokoro-multi-lang-v1_1-axmodel/vocoder_core_396.axmodel",
+            "sha256": "a1a8e9ee2aa00210bcd82652c23a86d71433fb6cdadbd6efdd9f889f2ccf6fc1",
+            "calls": 2,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "a1a8e9ee2aa00210bcd82652c23a86d71433fb6cdadbd6efdd9f889f2ccf6fc1"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l0_together.axmodel",
+            "sha256": "b42363b13c67753e20e80a90d51dacc6f04280a3da992b601ab09547f308c3f5",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "b42363b13c67753e20e80a90d51dacc6f04280a3da992b601ab09547f308c3f5"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l1_together.axmodel",
+            "sha256": "07823cd8b49a8b33bc006ae750782e317580494575bc317babd7abff55441eba",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "07823cd8b49a8b33bc006ae750782e317580494575bc317babd7abff55441eba"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l2_together.axmodel",
+            "sha256": "84b296fb9b14d24aa740c2fbfa54b2bd3ae7973a161ac9cb24c45b2372143892",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "84b296fb9b14d24aa740c2fbfa54b2bd3ae7973a161ac9cb24c45b2372143892"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l3_together.axmodel",
+            "sha256": "a5033f1fe491462b8f44f5e117c261955b63535e3272b0cd784a59c97d073319",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "a5033f1fe491462b8f44f5e117c261955b63535e3272b0cd784a59c97d073319"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l4_together.axmodel",
+            "sha256": "5b67c490399d843fa68821a0f38180c300f32333113c0a1c8cd5729bcefd8a56",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "5b67c490399d843fa68821a0f38180c300f32333113c0a1c8cd5729bcefd8a56"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l5_together.axmodel",
+            "sha256": "4c9096f4599c4ad21ac49217561531da9b0223bf6f3e3741f21f2f4d68924b9d",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "4c9096f4599c4ad21ac49217561531da9b0223bf6f3e3741f21f2f4d68924b9d"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l6_together.axmodel",
+            "sha256": "81d1777fcbb676b3ef12fc2130286c24552a1f8d36a0cd14c66850e31210f33b",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "81d1777fcbb676b3ef12fc2130286c24552a1f8d36a0cd14c66850e31210f33b"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l7_together.axmodel",
+            "sha256": "fd355f229ca1c151df8166b46d800d9047924453a4b982c0c838d456c0aec468",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "fd355f229ca1c151df8166b46d800d9047924453a4b982c0c838d456c0aec468"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l8_together.axmodel",
+            "sha256": "88fe84332f276947775040d38ba46ed7f735ebd498b248c44c37b41f0f89ab2a",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "88fe84332f276947775040d38ba46ed7f735ebd498b248c44c37b41f0f89ab2a"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l9_together.axmodel",
+            "sha256": "1d991e4b23bd66421f0f39e7b3c02a4adace0b9434176c8deb24ece1c6a66600",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "1d991e4b23bd66421f0f39e7b3c02a4adace0b9434176c8deb24ece1c6a66600"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l10_together.axmodel",
+            "sha256": "f0133beae7b5d7b109557df15c6f5d6a738eded2ae1feef1f94c983699f74623",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "f0133beae7b5d7b109557df15c6f5d6a738eded2ae1feef1f94c983699f74623"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l11_together.axmodel",
+            "sha256": "2faf54778f2e20ea363e189f0a0a9f9acaa1337cf30109092ffb48418c485072",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "2faf54778f2e20ea363e189f0a0a9f9acaa1337cf30109092ffb48418c485072"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l12_together.axmodel",
+            "sha256": "073dab1c7c2c91f2a0fd23cc3b1553df6c6f35f1841c1358265f56be5659c53f",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "073dab1c7c2c91f2a0fd23cc3b1553df6c6f35f1841c1358265f56be5659c53f"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l13_together.axmodel",
+            "sha256": "7b76578926bb45565be1bdc55f36fc074528e2835185195c69a3099f088e78c1",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "7b76578926bb45565be1bdc55f36fc074528e2835185195c69a3099f088e78c1"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l14_together.axmodel",
+            "sha256": "a12b5b73debb37c8c2ad8a2ea16b39bfc7b3000d0323be8e8c9cb89fb214ba54",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "a12b5b73debb37c8c2ad8a2ea16b39bfc7b3000d0323be8e8c9cb89fb214ba54"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l15_together.axmodel",
+            "sha256": "20c7ff4026d78f6e6dd7f3075283aeba63d5ea81aca1eedfa0f7210fe20f9e9b",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "20c7ff4026d78f6e6dd7f3075283aeba63d5ea81aca1eedfa0f7210fe20f9e9b"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l16_together.axmodel",
+            "sha256": "93519605f2bbb6c2e9558cacfc4655e6c2d93ae33c50f1f7e0d4d41b448a1649",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "93519605f2bbb6c2e9558cacfc4655e6c2d93ae33c50f1f7e0d4d41b448a1649"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l17_together.axmodel",
+            "sha256": "4dbe9d98f015d52fa8e3083d666ce4438a7ed3160e9f1eac3fde94bc7fcfa30e",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "4dbe9d98f015d52fa8e3083d666ce4438a7ed3160e9f1eac3fde94bc7fcfa30e"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l18_together.axmodel",
+            "sha256": "05c421f9457cb19cf3e4bc7c8b503f5f6e50358a664d1865a78640dd1fad8835",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "05c421f9457cb19cf3e4bc7c8b503f5f6e50358a664d1865a78640dd1fad8835"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l19_together.axmodel",
+            "sha256": "0e1d98fa8ac199f64471f7535ab64de18ad99bf4cdfdc08e79d83635cda7cebb",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "0e1d98fa8ac199f64471f7535ab64de18ad99bf4cdfdc08e79d83635cda7cebb"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l20_together.axmodel",
+            "sha256": "62512c13b3509d6d77595616fe64804927d15e3738dd768ac6e88581c6235146",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "62512c13b3509d6d77595616fe64804927d15e3738dd768ac6e88581c6235146"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l21_together.axmodel",
+            "sha256": "fb01c185abe5eadf91f07829db2cd05121b8b05624bf9bdb145a770e2e55620a",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "fb01c185abe5eadf91f07829db2cd05121b8b05624bf9bdb145a770e2e55620a"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l22_together.axmodel",
+            "sha256": "84a8454d97e489645b33144f88cdd56ffbad8362f1300f72d6f1b7f3cf3d75b2",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "84a8454d97e489645b33144f88cdd56ffbad8362f1300f72d6f1b7f3cf3d75b2"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l23_together.axmodel",
+            "sha256": "9ce9e3219f96c8f7615fdb799141d1045620ea69fb77489248200c6bb3b2a2c6",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "9ce9e3219f96c8f7615fdb799141d1045620ea69fb77489248200c6bb3b2a2c6"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l24_together.axmodel",
+            "sha256": "0e47988815b6b3b330584a934bb2cd889da3ed5a57ae0e75ed34dba31d676471",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "0e47988815b6b3b330584a934bb2cd889da3ed5a57ae0e75ed34dba31d676471"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l25_together.axmodel",
+            "sha256": "d0d03c2cb43adb58329ce66d45f8abe579d55c6dc0c551f67ef2e6821520bd1a",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "d0d03c2cb43adb58329ce66d45f8abe579d55c6dc0c551f67ef2e6821520bd1a"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l26_together.axmodel",
+            "sha256": "cccaa3a03ba1a2902834ef825f06ca2b1a5f0326a5e0544b98fba4454f9c8b1b",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "cccaa3a03ba1a2902834ef825f06ca2b1a5f0326a5e0544b98fba4454f9c8b1b"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l27_together.axmodel",
+            "sha256": "a12ad8c0cf98016faf93cd5d4fdf99d0c563d2a922b1f1d78baae56387ccf010",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "a12ad8c0cf98016faf93cd5d4fdf99d0c563d2a922b1f1d78baae56387ccf010"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_post.axmodel",
+            "sha256": "02607a1702a7ad2111b607b94a219fc08901a1974963c74638719ab4ce853e17",
+            "calls": 188,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "02607a1702a7ad2111b607b94a219fc08901a1974963c74638719ab4ce853e17"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/Qwen3-VL-2B-Instruct_vision.axmodel",
+            "sha256": "f8bd7c1864e378ebccd7c50b006586360dea7f0302db8662cfe93773603ae749",
+            "calls": 3,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "f8bd7c1864e378ebccd7c50b006586360dea7f0302db8662cfe93773603ae749"
+          }
+        ],
+        "totalCalls": 5564,
+        "cleanShutdown": true,
+        "wholeApplicationAccepted": false,
+        "qualityAccepted": false,
+        "actual8GBTested": false,
+        "mediaFiles": [
+          {
+            "path": "/validation/effects/openclaw-ax8850-qqbot-media-20261004/asr-zh.wav",
+            "sha256": "b77f1794fe374a0ba1ee1dc458bfaf9349496cbbfc32780c50ba3c5a7ad8e373"
+          },
+          {
+            "path": "/validation/effects/openclaw-ax8850-qqbot-media-20261004/astronauts.png",
+            "sha256": "622ae2d01ff4467fa69a7888728d776650117a0f4887e96ba0fb9a8a6d77b3c3"
+          },
+          {
+            "path": "/validation/effects/openclaw-ax8850-qqbot-media-20261004/stone-mill-10s.mp4",
+            "sha256": "7305393e584a9396ecd12e906b2cff513295f2bf123a72a63c1144e7cecee857"
+          },
+          {
+            "path": "/validation/effects/openclaw-ax8850-qqbot-media-20261004/video-frame-0.jpg",
+            "sha256": "adbf00257a45a7f90976bf98a7cdbbaa45942ff0337296bb15c8899e255dfffe"
+          },
+          {
+            "path": "/validation/effects/openclaw-ax8850-qqbot-media-20261004/video-frame-1.jpg",
+            "sha256": "691e2d06b3ec5e20278986b450e13aa03817add26d4505d426d7b4210a423459"
+          },
+          {
+            "path": "/validation/effects/openclaw-ax8850-qqbot-media-20261004/video-frame-2.jpg",
+            "sha256": "77269c52672e9cebbb2a86b746180dd9068c73366ddb25d898fea3494ef5ff9a"
+          },
+          {
+            "path": "/validation/effects/openclaw-ax8850-qqbot-media-20261004/video-frame-3.jpg",
+            "sha256": "314705633b4d01f01b34c19a4b5ea8327ddaf0e86b037b1d7146fbde8f64cd5f"
+          },
+          {
+            "path": "/validation/effects/openclaw-ax8850-qqbot-media-20261004/tts-1_0.wav",
+            "sha256": "bf61f75a6a5620d9c379eb45296ee91565790cf9a5d26f910a1c5e989631c042"
+          },
+          {
+            "path": "/validation/effects/openclaw-ax8850-qqbot-media-20261004/tts-1_1.wav",
+            "sha256": "fe357d1f505089ba82aaeaee9ebce28b4f18c35b8d76bcd5c3a7955e4a194592"
+          }
+        ],
+        "requests": [
+          {
+            "mode": "image",
+            "exitCode": 0,
+            "httpStatus": 200,
+            "visionExecutions": 1,
+            "postExecutions": 21,
+            "maxTokens": 256,
+            "finishReason": "stop",
+            "inputType": "image_url",
+            "processSeconds": 7.550071539000783
+          },
+          {
+            "mode": "base64",
+            "exitCode": 0,
+            "httpStatus": 200,
+            "visionExecutions": 2,
+            "postExecutions": 167,
+            "maxTokens": 512,
+            "finishReason": "stop",
+            "inputType": "video_url",
+            "processSeconds": 38.023444787999324
+          }
+        ],
+        "audioOutputs": [
+          {
+            "path": "/validation/effects/openclaw-ax8850-qqbot-media-20261004/tts-1_0.wav",
+            "sha256": "bf61f75a6a5620d9c379eb45296ee91565790cf9a5d26f910a1c5e989631c042",
+            "sampleRate": 24000,
+            "channels": 1,
+            "frames": 59507,
+            "seconds": 2.4794583333333335
+          },
+          {
+            "path": "/validation/effects/openclaw-ax8850-qqbot-media-20261004/tts-1_1.wav",
+            "sha256": "fe357d1f505089ba82aaeaee9ebce28b4f18c35b8d76bcd5c3a7955e4a194592",
+            "sampleRate": 24000,
+            "channels": 1,
+            "frames": 60915,
+            "seconds": 2.538125
+          }
+        ],
+        "outputs": [
+          "开饭时间早上九点至下午五点",
+          "- 三名宇航员\n- 森林环境\n- 无可见文字",
+          "这是一段电视剧《三国演义》的视频截图，画面中主要展示了一位身穿古代服饰的男子，他身着浅色长袍，头戴黑色帽子，留着长须，站在人群之中。他正用右手抚摸着自己的长须，表情严肃，似乎在思考或等待着什么。他周围有许多人，他们穿着不同颜色的服饰，有的穿着红色或黑色的服装，有的则穿着浅色的衣物。背景中可以看到一些古代建筑的结构，如木柱和墙壁，以及一些其他的建筑元素。画面下方有“蜀中”、“蜀中”、“蜀中”等字样，这些可能是剧中人物的对话或旁白。整个场景发生在一个古代的街道或广场上，周围有许多人，气氛显得紧张而严肃。"
+        ],
+        "component": "image"
+      },
+      "previews": [
+        {
+          "path": "/validation/effects/openclaw-ax8850-qqbot-media-20261004/astronauts.png",
+          "caption": "实际输入：三名宇航员站在森林中"
+        }
+      ],
+      "textSamples": [
+        {
+          "input": "请用中文极简要列出图中主体、环境、可见文字（如有）。",
+          "output": "- 三名宇航员\n- 森林环境\n- 无可见文字",
+          "observation": "本次命令约 7.55 秒，不含常驻视觉语言服务的加载时间。"
+        }
+      ]
+    },
+    {
+      "label": "视频问答：十秒场景描述",
+      "observation": "输入取自官方 VideoAgent 样例的 2:30–2:40。原生视频分支接收 4 帧，模型返回完整回复；字幕和部分动作描述不准确。",
+      "record": {
+        "completed": true,
+        "provider": "AXCL C API",
+        "inferenceEvidence": "openclaw-local-media-and-native-axcl",
+        "sessions": [],
+        "customerPackageTested": true,
+        "packageSha256": "a5a8661ebd222caeee5a5713247a974911de5544646ff697ca508770b1e8ba63",
+        "verifiedModelFiles": 874,
+        "pipelineSessions": [
+          {
+            "model": "SenseVoiceSmall-axmodel/ax650/model-10-seconds.axmodel",
+            "sha256": "582efbf104fa1aad63cc0390ac36436617d8acaa138c3707ea21a7404bd040b1",
+            "calls": 1,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "582efbf104fa1aad63cc0390ac36436617d8acaa138c3707ea21a7404bd040b1"
+          },
+          {
+            "model": "kokoro/kokoro-multi-lang-v1_0-axmodel/encoder_token_128.axmodel",
+            "sha256": "504ca6e48c6df3520a437bcd62ce18856043160832d1903c88769203a3965b2e",
+            "calls": 2,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "504ca6e48c6df3520a437bcd62ce18856043160832d1903c88769203a3965b2e"
+          },
+          {
+            "model": "kokoro/kokoro-multi-lang-v1_0-axmodel/text_encoder_token_128_frame_198.axmodel",
+            "sha256": "34b33f2281a965362e1accbf9ef57c98e429394022fcf2a98058388ad832ee95",
+            "calls": 2,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "34b33f2281a965362e1accbf9ef57c98e429394022fcf2a98058388ad832ee95"
+          },
+          {
+            "model": "kokoro/kokoro-multi-lang-v1_0-axmodel/f0n_shared_frame_198.axmodel",
+            "sha256": "205dc161f366c0b44cce2b4bf2434bade46f18b1065c80e7a178baa0d5f3c8c9",
+            "calls": 2,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "205dc161f366c0b44cce2b4bf2434bade46f18b1065c80e7a178baa0d5f3c8c9"
+          },
+          {
+            "model": "kokoro/kokoro-multi-lang-v1_0-axmodel/f0n_head_frame_198.axmodel",
+            "sha256": "daa153637639686f8f217135e6189304e5f27b090e3609a3d5f545ec95fcde83",
+            "calls": 2,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "daa153637639686f8f217135e6189304e5f27b090e3609a3d5f545ec95fcde83"
+          },
+          {
+            "model": "kokoro/kokoro-multi-lang-v1_0-axmodel/decoder_front_198.axmodel",
+            "sha256": "ef36e9a8c71a3f48571250d882c9ac7b52ae3695219e0481cb6ec91d5f0f79f5",
+            "calls": 2,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "ef36e9a8c71a3f48571250d882c9ac7b52ae3695219e0481cb6ec91d5f0f79f5"
+          },
+          {
+            "model": "kokoro/kokoro-multi-lang-v1_0-axmodel/vocoder_core_396.axmodel",
+            "sha256": "2cd6478c6b1bd45f4ed9c86ab5897cb819b7a6ffec83dfd3a4f2e7fe40ccba8c",
+            "calls": 2,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "2cd6478c6b1bd45f4ed9c86ab5897cb819b7a6ffec83dfd3a4f2e7fe40ccba8c"
+          },
+          {
+            "model": "kokoro/kokoro-multi-lang-v1_1-axmodel/encoder_token_128.axmodel",
+            "sha256": "b327477418de306e404190288f1c4555e7f060dfb476eb3f9f5e9925efaee2f7",
+            "calls": 2,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "b327477418de306e404190288f1c4555e7f060dfb476eb3f9f5e9925efaee2f7"
+          },
+          {
+            "model": "kokoro/kokoro-multi-lang-v1_1-axmodel/text_encoder_token_128_frame_198.axmodel",
+            "sha256": "2f6625ec32ed6aa8eeef5cfdbc7a61da7f45b00e8dd1005864b259aed1a1efcc",
+            "calls": 2,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "2f6625ec32ed6aa8eeef5cfdbc7a61da7f45b00e8dd1005864b259aed1a1efcc"
+          },
+          {
+            "model": "kokoro/kokoro-multi-lang-v1_1-axmodel/f0n_shared_frame_198.axmodel",
+            "sha256": "26038d434cfb929ada47e86b872ddeb5cacecb6eeb47bdde1a623d7630eb9641",
+            "calls": 2,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "26038d434cfb929ada47e86b872ddeb5cacecb6eeb47bdde1a623d7630eb9641"
+          },
+          {
+            "model": "kokoro/kokoro-multi-lang-v1_1-axmodel/f0n_head_frame_198.axmodel",
+            "sha256": "912dd36b2b7f19a9ed9dda7d1382beb25492bd37ee3bfc25d2e275adba4b2b87",
+            "calls": 2,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "912dd36b2b7f19a9ed9dda7d1382beb25492bd37ee3bfc25d2e275adba4b2b87"
+          },
+          {
+            "model": "kokoro/kokoro-multi-lang-v1_1-axmodel/decoder_front_198.axmodel",
+            "sha256": "767a1e352159af60d801db7e6493bbe239251a2a2b981d5ee7d9138cc823c126",
+            "calls": 2,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "767a1e352159af60d801db7e6493bbe239251a2a2b981d5ee7d9138cc823c126"
+          },
+          {
+            "model": "kokoro/kokoro-multi-lang-v1_1-axmodel/vocoder_core_396.axmodel",
+            "sha256": "a1a8e9ee2aa00210bcd82652c23a86d71433fb6cdadbd6efdd9f889f2ccf6fc1",
+            "calls": 2,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "a1a8e9ee2aa00210bcd82652c23a86d71433fb6cdadbd6efdd9f889f2ccf6fc1"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l0_together.axmodel",
+            "sha256": "b42363b13c67753e20e80a90d51dacc6f04280a3da992b601ab09547f308c3f5",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "b42363b13c67753e20e80a90d51dacc6f04280a3da992b601ab09547f308c3f5"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l1_together.axmodel",
+            "sha256": "07823cd8b49a8b33bc006ae750782e317580494575bc317babd7abff55441eba",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "07823cd8b49a8b33bc006ae750782e317580494575bc317babd7abff55441eba"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l2_together.axmodel",
+            "sha256": "84b296fb9b14d24aa740c2fbfa54b2bd3ae7973a161ac9cb24c45b2372143892",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "84b296fb9b14d24aa740c2fbfa54b2bd3ae7973a161ac9cb24c45b2372143892"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l3_together.axmodel",
+            "sha256": "a5033f1fe491462b8f44f5e117c261955b63535e3272b0cd784a59c97d073319",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "a5033f1fe491462b8f44f5e117c261955b63535e3272b0cd784a59c97d073319"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l4_together.axmodel",
+            "sha256": "5b67c490399d843fa68821a0f38180c300f32333113c0a1c8cd5729bcefd8a56",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "5b67c490399d843fa68821a0f38180c300f32333113c0a1c8cd5729bcefd8a56"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l5_together.axmodel",
+            "sha256": "4c9096f4599c4ad21ac49217561531da9b0223bf6f3e3741f21f2f4d68924b9d",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "4c9096f4599c4ad21ac49217561531da9b0223bf6f3e3741f21f2f4d68924b9d"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l6_together.axmodel",
+            "sha256": "81d1777fcbb676b3ef12fc2130286c24552a1f8d36a0cd14c66850e31210f33b",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "81d1777fcbb676b3ef12fc2130286c24552a1f8d36a0cd14c66850e31210f33b"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l7_together.axmodel",
+            "sha256": "fd355f229ca1c151df8166b46d800d9047924453a4b982c0c838d456c0aec468",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "fd355f229ca1c151df8166b46d800d9047924453a4b982c0c838d456c0aec468"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l8_together.axmodel",
+            "sha256": "88fe84332f276947775040d38ba46ed7f735ebd498b248c44c37b41f0f89ab2a",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "88fe84332f276947775040d38ba46ed7f735ebd498b248c44c37b41f0f89ab2a"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l9_together.axmodel",
+            "sha256": "1d991e4b23bd66421f0f39e7b3c02a4adace0b9434176c8deb24ece1c6a66600",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "1d991e4b23bd66421f0f39e7b3c02a4adace0b9434176c8deb24ece1c6a66600"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l10_together.axmodel",
+            "sha256": "f0133beae7b5d7b109557df15c6f5d6a738eded2ae1feef1f94c983699f74623",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "f0133beae7b5d7b109557df15c6f5d6a738eded2ae1feef1f94c983699f74623"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l11_together.axmodel",
+            "sha256": "2faf54778f2e20ea363e189f0a0a9f9acaa1337cf30109092ffb48418c485072",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "2faf54778f2e20ea363e189f0a0a9f9acaa1337cf30109092ffb48418c485072"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l12_together.axmodel",
+            "sha256": "073dab1c7c2c91f2a0fd23cc3b1553df6c6f35f1841c1358265f56be5659c53f",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "073dab1c7c2c91f2a0fd23cc3b1553df6c6f35f1841c1358265f56be5659c53f"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l13_together.axmodel",
+            "sha256": "7b76578926bb45565be1bdc55f36fc074528e2835185195c69a3099f088e78c1",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "7b76578926bb45565be1bdc55f36fc074528e2835185195c69a3099f088e78c1"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l14_together.axmodel",
+            "sha256": "a12b5b73debb37c8c2ad8a2ea16b39bfc7b3000d0323be8e8c9cb89fb214ba54",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "a12b5b73debb37c8c2ad8a2ea16b39bfc7b3000d0323be8e8c9cb89fb214ba54"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l15_together.axmodel",
+            "sha256": "20c7ff4026d78f6e6dd7f3075283aeba63d5ea81aca1eedfa0f7210fe20f9e9b",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "20c7ff4026d78f6e6dd7f3075283aeba63d5ea81aca1eedfa0f7210fe20f9e9b"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l16_together.axmodel",
+            "sha256": "93519605f2bbb6c2e9558cacfc4655e6c2d93ae33c50f1f7e0d4d41b448a1649",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "93519605f2bbb6c2e9558cacfc4655e6c2d93ae33c50f1f7e0d4d41b448a1649"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l17_together.axmodel",
+            "sha256": "4dbe9d98f015d52fa8e3083d666ce4438a7ed3160e9f1eac3fde94bc7fcfa30e",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "4dbe9d98f015d52fa8e3083d666ce4438a7ed3160e9f1eac3fde94bc7fcfa30e"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l18_together.axmodel",
+            "sha256": "05c421f9457cb19cf3e4bc7c8b503f5f6e50358a664d1865a78640dd1fad8835",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "05c421f9457cb19cf3e4bc7c8b503f5f6e50358a664d1865a78640dd1fad8835"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l19_together.axmodel",
+            "sha256": "0e1d98fa8ac199f64471f7535ab64de18ad99bf4cdfdc08e79d83635cda7cebb",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "0e1d98fa8ac199f64471f7535ab64de18ad99bf4cdfdc08e79d83635cda7cebb"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l20_together.axmodel",
+            "sha256": "62512c13b3509d6d77595616fe64804927d15e3738dd768ac6e88581c6235146",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "62512c13b3509d6d77595616fe64804927d15e3738dd768ac6e88581c6235146"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l21_together.axmodel",
+            "sha256": "fb01c185abe5eadf91f07829db2cd05121b8b05624bf9bdb145a770e2e55620a",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "fb01c185abe5eadf91f07829db2cd05121b8b05624bf9bdb145a770e2e55620a"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l22_together.axmodel",
+            "sha256": "84a8454d97e489645b33144f88cdd56ffbad8362f1300f72d6f1b7f3cf3d75b2",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "84a8454d97e489645b33144f88cdd56ffbad8362f1300f72d6f1b7f3cf3d75b2"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l23_together.axmodel",
+            "sha256": "9ce9e3219f96c8f7615fdb799141d1045620ea69fb77489248200c6bb3b2a2c6",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "9ce9e3219f96c8f7615fdb799141d1045620ea69fb77489248200c6bb3b2a2c6"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l24_together.axmodel",
+            "sha256": "0e47988815b6b3b330584a934bb2cd889da3ed5a57ae0e75ed34dba31d676471",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "0e47988815b6b3b330584a934bb2cd889da3ed5a57ae0e75ed34dba31d676471"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l25_together.axmodel",
+            "sha256": "d0d03c2cb43adb58329ce66d45f8abe579d55c6dc0c551f67ef2e6821520bd1a",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "d0d03c2cb43adb58329ce66d45f8abe579d55c6dc0c551f67ef2e6821520bd1a"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l26_together.axmodel",
+            "sha256": "cccaa3a03ba1a2902834ef825f06ca2b1a5f0326a5e0544b98fba4454f9c8b1b",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "cccaa3a03ba1a2902834ef825f06ca2b1a5f0326a5e0544b98fba4454f9c8b1b"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_p128_l27_together.axmodel",
+            "sha256": "a12ad8c0cf98016faf93cd5d4fdf99d0c563d2a922b1f1d78baae56387ccf010",
+            "calls": 191,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "a12ad8c0cf98016faf93cd5d4fdf99d0c563d2a922b1f1d78baae56387ccf010"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/qwen3_vl_text_post.axmodel",
+            "sha256": "02607a1702a7ad2111b607b94a219fc08901a1974963c74638719ab4ce853e17",
+            "calls": 188,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "02607a1702a7ad2111b607b94a219fc08901a1974963c74638719ab4ce853e17"
+          },
+          {
+            "model": "vlm/Qwen3-VL-2B-Instruct-GPTQ-Int4/Qwen3-VL-2B-Instruct_vision.axmodel",
+            "sha256": "f8bd7c1864e378ebccd7c50b006586360dea7f0302db8662cfe93773603ae749",
+            "calls": 3,
+            "loads": 1,
+            "unloads": 1,
+            "allReturnCodesZero": true,
+            "hostTransferSha256": "f8bd7c1864e378ebccd7c50b006586360dea7f0302db8662cfe93773603ae749"
+          }
+        ],
+        "totalCalls": 5564,
+        "cleanShutdown": true,
+        "wholeApplicationAccepted": false,
+        "qualityAccepted": false,
+        "actual8GBTested": false,
+        "mediaFiles": [
+          {
+            "path": "/validation/effects/openclaw-ax8850-qqbot-media-20261004/asr-zh.wav",
+            "sha256": "b77f1794fe374a0ba1ee1dc458bfaf9349496cbbfc32780c50ba3c5a7ad8e373"
+          },
+          {
+            "path": "/validation/effects/openclaw-ax8850-qqbot-media-20261004/astronauts.png",
+            "sha256": "622ae2d01ff4467fa69a7888728d776650117a0f4887e96ba0fb9a8a6d77b3c3"
+          },
+          {
+            "path": "/validation/effects/openclaw-ax8850-qqbot-media-20261004/stone-mill-10s.mp4",
+            "sha256": "7305393e584a9396ecd12e906b2cff513295f2bf123a72a63c1144e7cecee857"
+          },
+          {
+            "path": "/validation/effects/openclaw-ax8850-qqbot-media-20261004/video-frame-0.jpg",
+            "sha256": "adbf00257a45a7f90976bf98a7cdbbaa45942ff0337296bb15c8899e255dfffe"
+          },
+          {
+            "path": "/validation/effects/openclaw-ax8850-qqbot-media-20261004/video-frame-1.jpg",
+            "sha256": "691e2d06b3ec5e20278986b450e13aa03817add26d4505d426d7b4210a423459"
+          },
+          {
+            "path": "/validation/effects/openclaw-ax8850-qqbot-media-20261004/video-frame-2.jpg",
+            "sha256": "77269c52672e9cebbb2a86b746180dd9068c73366ddb25d898fea3494ef5ff9a"
+          },
+          {
+            "path": "/validation/effects/openclaw-ax8850-qqbot-media-20261004/video-frame-3.jpg",
+            "sha256": "314705633b4d01f01b34c19a4b5ea8327ddaf0e86b037b1d7146fbde8f64cd5f"
+          },
+          {
+            "path": "/validation/effects/openclaw-ax8850-qqbot-media-20261004/tts-1_0.wav",
+            "sha256": "bf61f75a6a5620d9c379eb45296ee91565790cf9a5d26f910a1c5e989631c042"
+          },
+          {
+            "path": "/validation/effects/openclaw-ax8850-qqbot-media-20261004/tts-1_1.wav",
+            "sha256": "fe357d1f505089ba82aaeaee9ebce28b4f18c35b8d76bcd5c3a7955e4a194592"
+          }
+        ],
+        "requests": [
+          {
+            "mode": "image",
+            "exitCode": 0,
+            "httpStatus": 200,
+            "visionExecutions": 1,
+            "postExecutions": 21,
+            "maxTokens": 256,
+            "finishReason": "stop",
+            "inputType": "image_url",
+            "processSeconds": 7.550071539000783
+          },
+          {
+            "mode": "base64",
+            "exitCode": 0,
+            "httpStatus": 200,
+            "visionExecutions": 2,
+            "postExecutions": 167,
+            "maxTokens": 512,
+            "finishReason": "stop",
+            "inputType": "video_url",
+            "processSeconds": 38.023444787999324
+          }
+        ],
+        "audioOutputs": [
+          {
+            "path": "/validation/effects/openclaw-ax8850-qqbot-media-20261004/tts-1_0.wav",
+            "sha256": "bf61f75a6a5620d9c379eb45296ee91565790cf9a5d26f910a1c5e989631c042",
+            "sampleRate": 24000,
+            "channels": 1,
+            "frames": 59507,
+            "seconds": 2.4794583333333335
+          },
+          {
+            "path": "/validation/effects/openclaw-ax8850-qqbot-media-20261004/tts-1_1.wav",
+            "sha256": "fe357d1f505089ba82aaeaee9ebce28b4f18c35b8d76bcd5c3a7955e4a194592",
+            "sampleRate": 24000,
+            "channels": 1,
+            "frames": 60915,
+            "seconds": 2.538125
+          }
+        ],
+        "outputs": [
+          "开饭时间早上九点至下午五点",
+          "- 三名宇航员\n- 森林环境\n- 无可见文字",
+          "这是一段电视剧《三国演义》的视频截图，画面中主要展示了一位身穿古代服饰的男子，他身着浅色长袍，头戴黑色帽子，留着长须，站在人群之中。他正用右手抚摸着自己的长须，表情严肃，似乎在思考或等待着什么。他周围有许多人，他们穿着不同颜色的服饰，有的穿着红色或黑色的服装，有的则穿着浅色的衣物。背景中可以看到一些古代建筑的结构，如木柱和墙壁，以及一些其他的建筑元素。画面下方有“蜀中”、“蜀中”、“蜀中”等字样，这些可能是剧中人物的对话或旁白。整个场景发生在一个古代的街道或广场上，周围有许多人，气氛显得紧张而严肃。"
+        ],
+        "component": "native-video"
+      },
+      "previews": [
+        {
+          "path": "/validation/effects/openclaw-ax8850-qqbot-media-20261004/video-frame-0.jpg",
+          "caption": "实际采样帧 1"
+        },
+        {
+          "path": "/validation/effects/openclaw-ax8850-qqbot-media-20261004/video-frame-2.jpg",
+          "caption": "实际采样帧 3"
+        }
+      ],
+      "videos": [
+        {
+          "path": "/validation/effects/openclaw-ax8850-qqbot-media-20261004/stone-mill-10s.mp4",
+          "caption": "实际输入：10 秒视频片段"
+        }
+      ],
+      "textSamples": [
+        {
+          "input": "请用中文概括整段视频在讲什么、关键物体与场景变化；若有可见文字请列出。",
+          "output": "这是一段电视剧《三国演义》的视频截图，画面中主要展示了一位身穿古代服饰的男子，他身着浅色长袍，头戴黑色帽子，留着长须，站在人群之中。他正用右手抚摸着自己的长须，表情严肃，似乎在思考或等待着什么。他周围有许多人，他们穿着不同颜色的服饰，有的穿着红色或黑色的服装，有的则穿着浅色的衣物。背景中可以看到一些古代建筑的结构，如木柱和墙壁，以及一些其他的建筑元素。画面下方有“蜀中”、“蜀中”、“蜀中”等字样，这些可能是剧中人物的对话或旁白。整个场景发生在一个古代的街道或广场上，周围有许多人，气氛显得紧张而严肃。",
+          "observation": "画面字幕包含“挪磨盘啦”，回复却写成重复的“蜀中”，并加入未确认的动作细节。本次约 38.02 秒，包含抽帧和请求，不含服务加载；仅确认基本运行。"
+        }
+      ]
+    }
+  ]
+}

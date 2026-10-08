@@ -1,0 +1,428 @@
+{
+  "kind": "http-multimodal",
+  "provider": "AXCL C++",
+  "modelId": "Qwen3.5-4B-AX650-GPTQ-Int4-C512-P30k-CTX32k",
+  "revision": "4222f23a3459751d20239a51621df62538cfd409",
+  "date": "2026-10-03",
+  "completed": true,
+  "runtimeBinarySha256": "92782f5ed224874af455c04478c6ff06faa081ee0a85bc3da09bf2ad71e732aa",
+  "customerClientSha256": "115c3dd70f64a04e0b9142edcafdb9d03f6008097287dd74f72e63e843a607f8",
+  "startupSeconds": 347.18909944700135,
+  "requestSettings": {
+    "max_tokens": 128,
+    "temperature": 0,
+    "enable_thinking": false,
+    "stream": false,
+    "system": "you are a helpful assistant."
+  },
+  "testedWeightFiles": [
+    "qwen3_5_text_p512_l0_together.axmodel",
+    "qwen3_5_text_p512_l10_together.axmodel",
+    "qwen3_5_text_p512_l11_together.axmodel",
+    "qwen3_5_text_p512_l12_together.axmodel",
+    "qwen3_5_text_p512_l13_together.axmodel",
+    "qwen3_5_text_p512_l14_together.axmodel",
+    "qwen3_5_text_p512_l15_together.axmodel",
+    "qwen3_5_text_p512_l16_together.axmodel",
+    "qwen3_5_text_p512_l17_together.axmodel",
+    "qwen3_5_text_p512_l18_together.axmodel",
+    "qwen3_5_text_p512_l19_together.axmodel",
+    "qwen3_5_text_p512_l1_together.axmodel",
+    "qwen3_5_text_p512_l20_together.axmodel",
+    "qwen3_5_text_p512_l21_together.axmodel",
+    "qwen3_5_text_p512_l22_together.axmodel",
+    "qwen3_5_text_p512_l23_together.axmodel",
+    "qwen3_5_text_p512_l24_together.axmodel",
+    "qwen3_5_text_p512_l25_together.axmodel",
+    "qwen3_5_text_p512_l26_together.axmodel",
+    "qwen3_5_text_p512_l27_together.axmodel",
+    "qwen3_5_text_p512_l28_together.axmodel",
+    "qwen3_5_text_p512_l29_together.axmodel",
+    "qwen3_5_text_p512_l2_together.axmodel",
+    "qwen3_5_text_p512_l30_together.axmodel",
+    "qwen3_5_text_p512_l31_together.axmodel",
+    "qwen3_5_text_p512_l3_together.axmodel",
+    "qwen3_5_text_p512_l4_together.axmodel",
+    "qwen3_5_text_p512_l5_together.axmodel",
+    "qwen3_5_text_p512_l6_together.axmodel",
+    "qwen3_5_text_p512_l7_together.axmodel",
+    "qwen3_5_text_p512_l8_together.axmodel",
+    "qwen3_5_text_p512_l9_together.axmodel",
+    "qwen3_5_text_post.axmodel",
+    "qwen3_5_vision.axmodel"
+  ],
+  "independentEosTokenIdCaptured": false,
+  "samples": [
+    {
+      "label": "arithmetic",
+      "input": "What is 2 + 3? Reply with only the number.",
+      "output": "5",
+      "observation": "结果为 5，仅输出所要求的数字；完整测试末尾再次提问得到相同答案。",
+      "exitCode": 0,
+      "processSeconds": 16.05599929199525,
+      "requestSeconds": 16.05599929199525,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "content": "5",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1790978747,
+        "id": "chatcmpl-9a1486c7c828ac7b516e5c55",
+        "model": "AXERA-TECH/Qwen3.5-4B-AX650-GPTQ-Int4-C512-P30k-CTX32k",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 1,
+          "prefill_tokens": 37,
+          "prefill_tps": 10.662609100341797,
+          "prompt_tokens": 37,
+          "total_tokens": 38,
+          "ttft_ms": 15391.94921875
+        }
+      },
+      "nativePostCalls": 2
+    },
+    {
+      "label": "chinese",
+      "input": "用一句中文解释 PCIe 的作用。",
+      "output": "PCIe 是一种高速计算机内部总线标准，用于连接中央处理器与各种硬件设备（如显卡、硬盘和网卡），以提供比传统标准（如 SATA 或 USB）更高的数据传输速率。",
+      "observation": "说明了 PCIe 连接硬件设备的用途；与 SATA、USB 的速度比较缺少版本、通道数和负载条件，不能作为通用性能结论。",
+      "exitCode": 0,
+      "processSeconds": 38.319358856999315,
+      "requestSeconds": 38.319358856999315,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "content": "PCIe 是一种高速计算机内部总线标准，用于连接中央处理器与各种硬件设备（如显卡、硬盘和网卡），以提供比传统标准（如 SATA 或 USB）更高的数据传输速率。",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1790978785,
+        "id": "chatcmpl-c6cf19259e295e53c861947c",
+        "model": "AXERA-TECH/Qwen3.5-4B-AX650-GPTQ-Int4-C512-P30k-CTX32k",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 42,
+          "decode_tps": 3.2253077030181885,
+          "prefill_tokens": 31,
+          "prefill_tps": 9.161958694458008,
+          "prompt_tokens": 31,
+          "total_tokens": 73,
+          "ttft_ms": 25251.3046875
+        }
+      },
+      "nativePostCalls": 43
+    },
+    {
+      "label": "strict-json",
+      "input": "Return only a JSON object with keys apple and pear. There are 3 apples and 2 pears. Do not use Markdown.",
+      "output": "{\"apple\": 3, \"pear\": 2}",
+      "observation": "返回可直接解析的 JSON 对象，apple=3、pear=2，没有 Markdown 或附加说明。",
+      "exitCode": 0,
+      "processSeconds": 29.443225408002036,
+      "requestSeconds": 29.443225408002036,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "content": "{\"apple\": 3, \"pear\": 2}",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1790978815,
+        "id": "chatcmpl-e3970175a8392f66117ff14d",
+        "model": "AXERA-TECH/Qwen3.5-4B-AX650-GPTQ-Int4-C512-P30k-CTX32k",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 12,
+          "decode_tps": 3.1172077655792236,
+          "prefill_tokens": 50,
+          "prefill_tps": 14.894472122192383,
+          "prompt_tokens": 50,
+          "total_tokens": 62,
+          "ttft_ms": 25572.4765625
+        }
+      },
+      "nativePostCalls": 13
+    },
+    {
+      "label": "animals",
+      "input": "Name the two animals in the foreground. Reply in one sentence.",
+      "output": "A horse and a dog.",
+      "observation": "正确识别前景中的马和狗。后续重复同一图片与问题，回答一致。",
+      "exitCode": 0,
+      "processSeconds": 27.443111679996946,
+      "requestSeconds": 27.443111679996946,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "content": "A horse and a dog.",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1790978843,
+        "id": "chatcmpl-799665bcd6eecd911ead1cf4",
+        "model": "AXERA-TECH/Qwen3.5-4B-AX650-GPTQ-Int4-C512-P30k-CTX32k",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 6,
+          "decode_tps": 2.625671148300171,
+          "prefill_tokens": 182,
+          "prefill_tps": 54.7949333190918,
+          "prompt_tokens": 182,
+          "total_tokens": 188,
+          "ttft_ms": 25192.015625
+        }
+      },
+      "nativePostCalls": 7,
+      "imageFile": "images/horse-dog.jpg",
+      "imagePath": "/validation/effects/qwen3-5-4b-ax650-gptq-int4-c512-p30k-ctx32k-20261003/inputs/images/horse-dog.jpg"
+    },
+    {
+      "label": "bus",
+      "input": "请用一句中文描述图片中的主要内容。",
+      "output": "一名女子站在伦敦街头，背景是一辆红色的双层巴士和古典建筑。",
+      "observation": "描述了前景人物、红色双层巴士和街道建筑；回答中的具体城市是模型推断，本轮未核实。",
+      "exitCode": 0,
+      "processSeconds": 30.352460225003597,
+      "requestSeconds": 30.352460225003597,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "content": "一名女子站在伦敦街头，背景是一辆红色的双层巴士和古典建筑。",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1790978873,
+        "id": "chatcmpl-3886309c9771b8b287abebc1",
+        "model": "AXERA-TECH/Qwen3.5-4B-AX650-GPTQ-Int4-C512-P30k-CTX32k",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 16,
+          "decode_tps": 3.1155519485473633,
+          "prefill_tokens": 177,
+          "prefill_tps": 52.90476989746094,
+          "prompt_tokens": 177,
+          "total_tokens": 193,
+          "ttft_ms": 25188.935546875
+        }
+      },
+      "nativePostCalls": 17,
+      "imageFile": "images/bus.jpg",
+      "imagePath": "/validation/effects/qwen3-5-4b-ax650-gptq-int4-c512-p30k-ctx32k-20261003/inputs/images/bus.jpg"
+    },
+    {
+      "label": "room-count",
+      "input": "画面中有几个人清晰可见？只回答人数。",
+      "output": "1",
+      "observation": "清晰可见的人数为 1，与输入图片一致。",
+      "exitCode": 0,
+      "processSeconds": 26.064103010001418,
+      "requestSeconds": 26.064103010001418,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "content": "1",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1790978899,
+        "id": "chatcmpl-e393ab3bc2ebeada89596dc3",
+        "model": "AXERA-TECH/Qwen3.5-4B-AX650-GPTQ-Int4-C512-P30k-CTX32k",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 1,
+          "prefill_tokens": 179,
+          "prefill_tps": 53.41653823852539,
+          "prompt_tokens": 179,
+          "total_tokens": 180,
+          "ttft_ms": 25412.4765625
+        }
+      },
+      "nativePostCalls": 2,
+      "imageFile": "images/room.jpg",
+      "imagePath": "/validation/effects/qwen3-5-4b-ax650-gptq-int4-c512-p30k-ctx32k-20261003/inputs/images/room.jpg"
+    },
+    {
+      "label": "room",
+      "input": "请用一句中文描述图片中的主要内容。",
+      "output": "这是一张展示现代家居内部的照片，画面中可见客厅和餐厅区域，有电视、餐桌、冰箱等家具，以及一位站在厨房区域的人。",
+      "observation": "电视、餐桌和站立人物与图片相符；“冰箱”不能从该图片可靠确认，应核对后再用于物件清单。",
+      "exitCode": 0,
+      "processSeconds": 34.77040866700554,
+      "requestSeconds": 34.77040866700554,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "content": "这是一张展示现代家居内部的照片，画面中可见客厅和餐厅区域，有电视、餐桌、冰箱等家具，以及一位站在厨房区域的人。",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1790978934,
+        "id": "chatcmpl-fda0c8ddd461ba12cc36edff",
+        "model": "AXERA-TECH/Qwen3.5-4B-AX650-GPTQ-Int4-C512-P30k-CTX32k",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 32,
+          "decode_tps": 3.298643112182617,
+          "prefill_tokens": 177,
+          "prefill_tps": 51.42300796508789,
+          "prompt_tokens": 177,
+          "total_tokens": 209,
+          "ttft_ms": 24868.103515625
+        }
+      },
+      "nativePostCalls": 33,
+      "imageFile": "images/room.jpg",
+      "imagePath": "/validation/effects/qwen3-5-4b-ax650-gptq-int4-c512-p30k-ctx32k-20261003/inputs/images/room.jpg"
+    },
+    {
+      "label": "video8",
+      "input": "Describe the main action across these video frames in one short sentence.",
+      "output": "A group of meerkats are standing on their hind legs and interacting with each other in a mountainous landscape.",
+      "observation": "回答概括了山地背景和动物互动，但未具体说明前爪相触、推挤等动作；画面中主要是两只动物，“meerkats”物种判断未经确认。",
+      "exitCode": 0,
+      "processSeconds": 36.96785373100283,
+      "requestSeconds": 36.96785373100283,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "content": "A group of meerkats are standing on their hind legs and interacting with each other in a mountainous landscape.",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1790978971,
+        "id": "chatcmpl-db1466bb1f4aa5b2c64a78e8",
+        "model": "AXERA-TECH/Qwen3.5-4B-AX650-GPTQ-Int4-C512-P30k-CTX32k",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 23,
+          "decode_tps": 3.16249942779541,
+          "prefill_tokens": 614,
+          "prefill_tps": 87.34165954589844,
+          "prompt_tokens": 614,
+          "total_tokens": 637,
+          "ttft_ms": 29657.078125
+        }
+      },
+      "nativePostCalls": 24,
+      "framePaths": [
+        "/validation/effects/qwen3-5-4b-ax650-gptq-int4-c512-p30k-ctx32k-20261003/inputs/video8/frame_0000.jpg",
+        "/validation/effects/qwen3-5-4b-ax650-gptq-int4-c512-p30k-ctx32k-20261003/inputs/video8/frame_0008.jpg",
+        "/validation/effects/qwen3-5-4b-ax650-gptq-int4-c512-p30k-ctx32k-20261003/inputs/video8/frame_0016.jpg",
+        "/validation/effects/qwen3-5-4b-ax650-gptq-int4-c512-p30k-ctx32k-20261003/inputs/video8/frame_0024.jpg",
+        "/validation/effects/qwen3-5-4b-ax650-gptq-int4-c512-p30k-ctx32k-20261003/inputs/video8/frame_0032.jpg",
+        "/validation/effects/qwen3-5-4b-ax650-gptq-int4-c512-p30k-ctx32k-20261003/inputs/video8/frame_0040.jpg",
+        "/validation/effects/qwen3-5-4b-ax650-gptq-int4-c512-p30k-ctx32k-20261003/inputs/video8/frame_0048.jpg",
+        "/validation/effects/qwen3-5-4b-ax650-gptq-int4-c512-p30k-ctx32k-20261003/inputs/video8/frame_0056.jpg"
+      ],
+      "frameInterpretation": "Ordered eight-frame directory, configured 1 fps; original capture timing not established."
+    }
+  ],
+  "repeatChecks": [
+    {
+      "label": "animals-repeat",
+      "input": "Name the two animals in the foreground. Reply in one sentence.",
+      "output": "A horse and a dog.",
+      "observation": "与首次马犬问答完全一致；本次使用同一服务进程，可命中视觉缓存。",
+      "exitCode": 0,
+      "processSeconds": 26.835482268004853,
+      "requestSeconds": 26.835482268004853,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "content": "A horse and a dog.",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1790978998,
+        "id": "chatcmpl-150b18027e0fbb77dc0f3829",
+        "model": "AXERA-TECH/Qwen3.5-4B-AX650-GPTQ-Int4-C512-P30k-CTX32k",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 6,
+          "decode_tps": 2.9745917320251465,
+          "prefill_tokens": 182,
+          "prefill_tps": 54.61088180541992,
+          "prompt_tokens": 182,
+          "total_tokens": 188,
+          "ttft_ms": 24791.9609375
+        }
+      },
+      "nativePostCalls": 7,
+      "imageFile": "images/horse-dog.jpg",
+      "imagePath": "/validation/effects/qwen3-5-4b-ax650-gptq-int4-c512-p30k-ctx32k-20261003/inputs/images/horse-dog.jpg"
+    },
+    {
+      "label": "arithmetic-repeat",
+      "input": "What is 2 + 3? Reply with only the number.",
+      "output": "5",
+      "observation": "与首次算术问答完全一致。",
+      "exitCode": 0,
+      "processSeconds": 25.54551001299842,
+      "requestSeconds": 25.54551001299842,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "content": "5",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1790979024,
+        "id": "chatcmpl-64b9885c9c6b228ecc66cf2c",
+        "model": "AXERA-TECH/Qwen3.5-4B-AX650-GPTQ-Int4-C512-P30k-CTX32k",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 1,
+          "prefill_tokens": 37,
+          "prefill_tps": 10.79016399383545,
+          "prompt_tokens": 37,
+          "total_tokens": 38,
+          "ttft_ms": 24895.134765625
+        }
+      },
+      "nativePostCalls": 2
+    }
+  ],
+  "timingNote": "以下请求均在模型加载完成后发出。耗时包含客户端启动、请求处理与响应传输，不含模型加载；重复图片可能命中缓存，不能将这些数值视为纯 NPU 性能。"
+}

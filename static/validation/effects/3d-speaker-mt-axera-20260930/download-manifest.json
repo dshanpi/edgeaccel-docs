@@ -1,0 +1,522 @@
+{
+  "modelId": "3D-Speaker-MT.Axera",
+  "repo": "AXERA-TECH/3D-Speaker-MT.Axera",
+  "revision": "3592794622a5627aca47c81fdc2569e632ffc910",
+  "complete": true,
+  "files": [
+    {
+      "path": "README.md",
+      "size": 5230,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/README.md",
+      "verifiedHashes": {
+        "sha256": "6d039f2aa644b7b773eb43837d50fbf2c07be80cba6f2c381284f82059ff8b45",
+        "gitBlob": "ca001d9475b963ec31e38284aa8b2340417b4b4a"
+      }
+    },
+    {
+      "path": "ax_meeting/__init__.py",
+      "size": 801,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/ax_meeting/__init__.py",
+      "verifiedHashes": {
+        "sha256": "5a03509ec06b415534670c2798cebe136ffddde8d3d875ba1cb73cebb44d414a",
+        "gitBlob": "0883fa830f11245daf1da1f10641595de94543d5"
+      }
+    },
+    {
+      "path": "ax_meeting/ax_model/auto.npy",
+      "size": 2368,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/ax_meeting/ax_model/auto.npy",
+      "verifiedHashes": {
+        "sha256": "8d0997706b30274f7ff3b157ca90df50b7ed8ced35091a0231700355d5ee1374",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "ax_meeting/ax_model/campplus.axmodel",
+      "size": 10744358,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/ax_meeting/ax_model/campplus.axmodel",
+      "verifiedHashes": {
+        "sha256": "3e85b4d59a94488caa727ca76c7fe2ba408de02587cd8c9a6680b83488338b16",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "ax_meeting/ax_model/chn_jpn_yue_eng_ko_spectok.bpe.model",
+      "size": 377341,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/ax_meeting/ax_model/chn_jpn_yue_eng_ko_spectok.bpe.model",
+      "verifiedHashes": {
+        "sha256": "aa87f86064c3730d799ddf7af3c04659151102cba548bce325cf06ba4da4e6a8",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "ax_meeting/ax_model/en.npy",
+      "size": 2368,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/ax_meeting/ax_model/en.npy",
+      "verifiedHashes": {
+        "sha256": "1f21c6d5a0b876c696b15ee80317ee558b6a19a084c1147a13a2871900f6c72e",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "ax_meeting/ax_model/event_emo.npy",
+      "size": 4608,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/ax_meeting/ax_model/event_emo.npy",
+      "verifiedHashes": {
+        "sha256": "1d22e3df5d192fdc3e73e368a2cb576975a5a43a114a8432a91c036adf8e2263",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "ax_meeting/ax_model/ja.npy",
+      "size": 2368,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/ax_meeting/ax_model/ja.npy",
+      "verifiedHashes": {
+        "sha256": "75a83ded838de7d02a56de32b774a50d2f02b5ec69880e7acdce600666f77517",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "ax_meeting/ax_model/ko.npy",
+      "size": 2368,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/ax_meeting/ax_model/ko.npy",
+      "verifiedHashes": {
+        "sha256": "f371fffcecd75c1268e2ef8043c276ec9b231177b5138b39e5732c65401749db",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "ax_meeting/ax_model/sensevoice.axmodel",
+      "size": 262170623,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/ax_meeting/ax_model/sensevoice.axmodel",
+      "verifiedHashes": {
+        "sha256": "7b64a36fa15e75ab5e3b75f18ae87a058970cff76219407e503b54fb53dd8e38",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "ax_meeting/ax_model/sensevoice/am.mvn",
+      "size": 11203,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/ax_meeting/ax_model/sensevoice/am.mvn",
+      "verifiedHashes": {
+        "sha256": "29b3c740a2c0cfc6b308126d31d7f265fa2be74f3bb095cd2f143ea970896ae5",
+        "gitBlob": "681910cd1ab6458b61474cdbf0d1ac5e810f7b0d"
+      }
+    },
+    {
+      "path": "ax_meeting/ax_model/sensevoice/config.yaml",
+      "size": 1855,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/ax_meeting/ax_model/sensevoice/config.yaml",
+      "verifiedHashes": {
+        "sha256": "f71e239ba36705564b5bf2d2ffd07eece07b8e3f2bbf6d2c99d8df856339ac19",
+        "gitBlob": "26bb9d3d20a09ff389c1ddb24865771d2312fc0f"
+      }
+    },
+    {
+      "path": "ax_meeting/ax_model/vad.axmodel",
+      "size": 1150874,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/ax_meeting/ax_model/vad.axmodel",
+      "verifiedHashes": {
+        "sha256": "7d89d1087f14597bc93ae5cf89e1c60d8ee76d7bdffbe679ef6dc002635e6f6b",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "ax_meeting/ax_model/vad/am.mvn",
+      "size": 8040,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/ax_meeting/ax_model/vad/am.mvn",
+      "verifiedHashes": {
+        "sha256": "6820fef9687708c4fc3fab2530179c8fcea6262daa25514380056cd8f6eb1754",
+        "gitBlob": "59f64ee6d485714bb5f9eb91842b9fa8fdb2d6f2"
+      }
+    },
+    {
+      "path": "ax_meeting/ax_model/vad/config.yaml",
+      "size": 1215,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/ax_meeting/ax_model/vad/config.yaml",
+      "verifiedHashes": {
+        "sha256": "486861ca26ddb79081663b6179cb204c6bfae71c52f04aafc48a9e9d8dde1e93",
+        "gitBlob": "4664aef9579e7aeea8a6081045a84dcbd354ce3e"
+      }
+    },
+    {
+      "path": "ax_meeting/ax_model/withitn.npy",
+      "size": 2368,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/ax_meeting/ax_model/withitn.npy",
+      "verifiedHashes": {
+        "sha256": "39bf02586f59237894fc2918ab2db4f12ec3c084c41465718832fbd7646ea729",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "ax_meeting/ax_model/yue.npy",
+      "size": 2368,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/ax_meeting/ax_model/yue.npy",
+      "verifiedHashes": {
+        "sha256": "319c3d30e6b176338a6d8871f81ec57af5c3c112cecbdce4a0bf36bec51f3ceb",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "ax_meeting/ax_model/zh.npy",
+      "size": 2368,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/ax_meeting/ax_model/zh.npy",
+      "verifiedHashes": {
+        "sha256": "0c952f976ae70642c8f682c88711abce3a2b64ba20a6d8ca0b706f227de816eb",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "ax_meeting/axengine_loader.py",
+      "size": 864,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/ax_meeting/axengine_loader.py",
+      "verifiedHashes": {
+        "sha256": "cf83bcd0ea7b0ec794f0a2d087c6e1f79d33de0381f32f82786547d818a2369b",
+        "gitBlob": "fa2550f59560dd271b8de1ee452c09118d6d9ef5"
+      }
+    },
+    {
+      "path": "ax_meeting/config.py",
+      "size": 734,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/ax_meeting/config.py",
+      "verifiedHashes": {
+        "sha256": "87d30493f20cd2a91b55ca435a076e43d366631bfe489cae9378dfd169b2d333",
+        "gitBlob": "584d6d5a4a47aa169802c17e074e4a3aa060cfb6"
+      }
+    },
+    {
+      "path": "ax_meeting/diar_asr_cli.py",
+      "size": 7467,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/ax_meeting/diar_asr_cli.py",
+      "verifiedHashes": {
+        "sha256": "c39df0bd98333edbe081175852a19e059dd578e3e70405a876ba875bf08d0259",
+        "gitBlob": "5ee220436257ed089d62ca2eec2490feb3ac427e"
+      }
+    },
+    {
+      "path": "ax_meeting/diar_utils.py",
+      "size": 420,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/ax_meeting/diar_utils.py",
+      "verifiedHashes": {
+        "sha256": "a71b0e8f7b216f9ff64d245f6e9389fe2773dfb7f819962cd77729684378487f",
+        "gitBlob": "98af4358d2af36df9e8af75360a844b50fad622b"
+      }
+    },
+    {
+      "path": "ax_meeting/engines.py",
+      "size": 7919,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/ax_meeting/engines.py",
+      "verifiedHashes": {
+        "sha256": "33e3eab7314a230460f3d82430cf7268475f436ea8bbf1b8ae072e20b6038590",
+        "gitBlob": "55bba398d3ac01eeea861e70f804a88d4de64554"
+      }
+    },
+    {
+      "path": "ax_meeting/model_bundle.py",
+      "size": 2973,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/ax_meeting/model_bundle.py",
+      "verifiedHashes": {
+        "sha256": "58ec5f322830fe830b9beb36c5287042cd9d18d054b62eb84b734b35c3c4d570",
+        "gitBlob": "a2ce004907ec12109d75f6d7ba396919ba3897b3"
+      }
+    },
+    {
+      "path": "ax_meeting/pipeline.py",
+      "size": 5439,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/ax_meeting/pipeline.py",
+      "verifiedHashes": {
+        "sha256": "6ea174452036704b89101b0d01e56f48606d12dd6d4304feafdccaf97e9da281",
+        "gitBlob": "9026e45af839e507bb30a76e9d65f96fddc7bada"
+      }
+    },
+    {
+      "path": "ax_meeting/positional.py",
+      "size": 664,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/ax_meeting/positional.py",
+      "verifiedHashes": {
+        "sha256": "eb26fc3ac8d0f9266dbd3393afaba8769fcc2427c2211f852f9dc31f8a569330",
+        "gitBlob": "8ba90b650830a9cc01a65c1ae5b6c201055aa663"
+      }
+    },
+    {
+      "path": "ax_meeting/server.py",
+      "size": 11474,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/ax_meeting/server.py",
+      "verifiedHashes": {
+        "sha256": "0f6fd3b80718706539e69b0c8caafcc1ae0de7e7390ab3be61f840120eea5bd0",
+        "gitBlob": "df6f82773478f7872214f4714061ea379250c84d"
+      }
+    },
+    {
+      "path": "ax_meeting/static/app.js",
+      "size": 11070,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/ax_meeting/static/app.js",
+      "verifiedHashes": {
+        "sha256": "84890dfa6ef3e6bdde09f89a5721deb4fc7cd65c4519ba80438134722cb0529e",
+        "gitBlob": "97b0d1244a54b509a55007e9030ba1023331a1a5"
+      }
+    },
+    {
+      "path": "ax_meeting/static/index.html",
+      "size": 4106,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/ax_meeting/static/index.html",
+      "verifiedHashes": {
+        "sha256": "79351ce7f06da14fd1398206f1225126847209f6889fd8ab534c2ee7140723c2",
+        "gitBlob": "3e02d2325b826a7b29aeeb7a7392315806786f02"
+      }
+    },
+    {
+      "path": "ax_meeting/static/style.css",
+      "size": 5699,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/ax_meeting/static/style.css",
+      "verifiedHashes": {
+        "sha256": "65bc898d7a1b73c416d051d58948b42170d86958102ee025caffeac893d7ac12",
+        "gitBlob": "10104da4d81a469c75f4ebfbe46cff0c26deff5d"
+      }
+    },
+    {
+      "path": "ax_meeting/summarize_cli.py",
+      "size": 1062,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/ax_meeting/summarize_cli.py",
+      "verifiedHashes": {
+        "sha256": "fa7e06df38ddb2493f02014485734ceaf6dd12530ee767c162c241e7a03bd6a8",
+        "gitBlob": "3643ce8b0f0807dc8266b01901e0c95d1df5b31b"
+      }
+    },
+    {
+      "path": "ax_meeting/summarizer.py",
+      "size": 4706,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/ax_meeting/summarizer.py",
+      "verifiedHashes": {
+        "sha256": "43822005ccb7a0ac180945ad509a9629610b351e4e6ee3aa830f7609b951ff06",
+        "gitBlob": "e3a5fda8bb07b5122027ae173287870b1f332cd1"
+      }
+    },
+    {
+      "path": "ax_meeting/text_cleaner.py",
+      "size": 1439,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/ax_meeting/text_cleaner.py",
+      "verifiedHashes": {
+        "sha256": "244e2262b0c762f50fbb093d07d1cae71aafe0a745bd7832a88ec275044a71a5",
+        "gitBlob": "852b19243e86bdf2a9b81cfc5330439e1640909f"
+      }
+    },
+    {
+      "path": "ax_meeting/utils/__init__.py",
+      "size": 0,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/ax_meeting/utils/__init__.py",
+      "verifiedHashes": {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "gitBlob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+      }
+    },
+    {
+      "path": "ax_meeting/utils/ax_cam_bin.py",
+      "size": 9582,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/ax_meeting/utils/ax_cam_bin.py",
+      "verifiedHashes": {
+        "sha256": "c6439cb2a250846e1304131b7d99d563d29526b2b36cb5e85235957fff6f0557",
+        "gitBlob": "9cdf2dae65b994d7cb5aeb4399a431a22366ac7f"
+      }
+    },
+    {
+      "path": "ax_meeting/utils/ax_model_bin.py",
+      "size": 18974,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/ax_meeting/utils/ax_model_bin.py",
+      "verifiedHashes": {
+        "sha256": "495975a8b580bf2804a3bd35dcc37adf633a089bef0fd4f6547e01f7131ff90a",
+        "gitBlob": "26b64f39fed67d5ef37e9ea50f1955aa1108e670"
+      }
+    },
+    {
+      "path": "ax_meeting/utils/ax_vad_bin.py",
+      "size": 6552,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/ax_meeting/utils/ax_vad_bin.py",
+      "verifiedHashes": {
+        "sha256": "a032024208a75de16ad011609ba232a5ca5da67bfe353f967472a99dccfca1ef",
+        "gitBlob": "f78f8984e13fe5a0fcd498198f81eae84bc27509"
+      }
+    },
+    {
+      "path": "ax_meeting/utils/cluster_utils.py",
+      "size": 8342,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/ax_meeting/utils/cluster_utils.py",
+      "verifiedHashes": {
+        "sha256": "a9c35572d702576838e7aa481325dce208e2712792f6e30ad6bc7b2e77fad611",
+        "gitBlob": "728d7356477ea9f045aaf005365b4c5537df9faf"
+      }
+    },
+    {
+      "path": "ax_meeting/utils/ctc_alignment.py",
+      "size": 3272,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/ax_meeting/utils/ctc_alignment.py",
+      "verifiedHashes": {
+        "sha256": "46fb3d921d23fa0f7f0c068fc4ec2338ac8930fb82272444845f59f5a9d7d7ab",
+        "gitBlob": "f10fcf27e9ce421d858913006fd4d13089f3e993"
+      }
+    },
+    {
+      "path": "ax_meeting/utils/frontend.py",
+      "size": 17510,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/ax_meeting/utils/frontend.py",
+      "verifiedHashes": {
+        "sha256": "685e19bcdb76a6277f48416e0e9b2f67ee1a9fce03d7456fdd8ecb3f51f11f7d",
+        "gitBlob": "ac1c0ef7b55ab487c8eba28dfac8e89111c2c4d8"
+      }
+    },
+    {
+      "path": "ax_meeting/utils/infer_func.py",
+      "size": 11384,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/ax_meeting/utils/infer_func.py",
+      "verifiedHashes": {
+        "sha256": "266ed33cdfd036c1c2515cc0be3a932b6f5957e239aef6bbd25971e96b3513e6",
+        "gitBlob": "c2cc94955684f747a1456260cef7ff1d0fc8e9c6"
+      }
+    },
+    {
+      "path": "ax_meeting/utils/infer_utils.py",
+      "size": 9184,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/ax_meeting/utils/infer_utils.py",
+      "verifiedHashes": {
+        "sha256": "74b04ba2d37e21ca9b03bcde7c7eea681dbf5e758e44031de93fd22debeb4817",
+        "gitBlob": "4e4f5edc7736d7adc628868c95aa46b338471cb5"
+      }
+    },
+    {
+      "path": "ax_meeting/utils/sentencepiece_tokenizer.py",
+      "size": 1259,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/ax_meeting/utils/sentencepiece_tokenizer.py",
+      "verifiedHashes": {
+        "sha256": "0f1f6250fda106d3d7c9693d1519ebd8f972c7c75d022a6cc149132b03a0e58d",
+        "gitBlob": "4705de5d483494041d07aa72bead09f24546a9e0"
+      }
+    },
+    {
+      "path": "ax_meeting/utils/speaker_fbank.py",
+      "size": 825,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/ax_meeting/utils/speaker_fbank.py",
+      "verifiedHashes": {
+        "sha256": "4d181caccbb7298297c1433601a609844276d1d310dc18758048458ff4a3793a",
+        "gitBlob": "470ec609f313bb3e2d2dd6c95abba253df1a529e"
+      }
+    },
+    {
+      "path": "ax_meeting/utils/speakerlab/process/augmentation.py",
+      "size": 3246,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/ax_meeting/utils/speakerlab/process/augmentation.py",
+      "verifiedHashes": {
+        "sha256": "28ddff0b88c2cec886c7aa1a78ab1d1f4ff0ebdb826118ef2bef17aba7f59143",
+        "gitBlob": "63130f74b8fcca26893feadf6b04fce79cf673b7"
+      }
+    },
+    {
+      "path": "ax_meeting/utils/speakerlab/process/processor.py",
+      "size": 4709,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/ax_meeting/utils/speakerlab/process/processor.py",
+      "verifiedHashes": {
+        "sha256": "c6145c34ff2d3889d3bcf3d75564f354e1f85bd83f2c8edb1d22cf9163ef87fa",
+        "gitBlob": "64c092533314007f2c7ee8161e9eda7161c9a4c6"
+      }
+    },
+    {
+      "path": "ax_meeting/utils/speakerlab/utils/fileio.py",
+      "size": 4218,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/ax_meeting/utils/speakerlab/utils/fileio.py",
+      "verifiedHashes": {
+        "sha256": "83c66a90d2fd819e259a5904e84460e1472d7e914a0462ea3a477e44f89a260d",
+        "gitBlob": "e1fca30e1bb2c03c0153997a76f2e9def34e41fe"
+      }
+    },
+    {
+      "path": "ax_meeting/utils/speakerlab/utils/utils.py",
+      "size": 7298,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/ax_meeting/utils/speakerlab/utils/utils.py",
+      "verifiedHashes": {
+        "sha256": "9624c0d3f40efa75c6365e4e0fcdb75a8225b234700f7b97571a70e9ba264190",
+        "gitBlob": "79ffd9f5090e09747707438051482405c5839eae"
+      }
+    },
+    {
+      "path": "ax_meeting/utils/utils/__init__.py",
+      "size": 0,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/ax_meeting/utils/utils/__init__.py",
+      "verifiedHashes": {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "gitBlob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+      }
+    },
+    {
+      "path": "ax_meeting/utils/utils/e2e_vad.py",
+      "size": 30231,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/ax_meeting/utils/utils/e2e_vad.py",
+      "verifiedHashes": {
+        "sha256": "3b13734a2995ef9c544be66a4edb95c150afb17484388c594ab70ef7436e7345",
+        "gitBlob": "740c375962f01d4ab85bd53a52c1353daadd15bc"
+      }
+    },
+    {
+      "path": "ax_meeting/utils/utils/frontend.py",
+      "size": 17863,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/ax_meeting/utils/utils/frontend.py",
+      "verifiedHashes": {
+        "sha256": "1fe1e7115efc2e20c11eb4ae50b0b421de5f40d2a9546b9cf7003184e0003be6",
+        "gitBlob": "2a08a6c88e6323ac0211303e11620ff3ba3ef8c0"
+      }
+    },
+    {
+      "path": "ax_meeting/utils/utils/utils.py",
+      "size": 9183,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/ax_meeting/utils/utils/utils.py",
+      "verifiedHashes": {
+        "sha256": "7a69bc3d7f30b8d224cefdcd034d01de54a0e6847fa345f17eade25cd3fc3386",
+        "gitBlob": "66defc9635396bfcfa500a5ba07bd7bf5c92c4f3"
+      }
+    },
+    {
+      "path": "ax_meeting/utils/vad_utils.py",
+      "size": 2385,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/ax_meeting/utils/vad_utils.py",
+      "verifiedHashes": {
+        "sha256": "2c24b223d223bdceff79fd9d8e92c14c7fd1e41d6a3f3bf236788335ab4ae47b",
+        "gitBlob": "822c8c754ef8ce978c8ca732f40dd8a13f4ce79a"
+      }
+    },
+    {
+      "path": "ax_meeting/vad_asr_cli.py",
+      "size": 1307,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/ax_meeting/vad_asr_cli.py",
+      "verifiedHashes": {
+        "sha256": "f84d778110be13c681ddc073f1bda08bff76e2795265c8c1332d672a87b74892",
+        "gitBlob": "51fce606c39cee9472f8ff0339cdd170cc657820"
+      }
+    },
+    {
+      "path": "requirements.txt",
+      "size": 169,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/requirements.txt",
+      "verifiedHashes": {
+        "sha256": "788136d8d516d68cfa7e31b68a80fe1a9355aa7d5311768c4c503592fc9ed916",
+        "gitBlob": "8236a203ae626edcdce9b05ae0805a986c1f1456"
+      }
+    },
+    {
+      "path": "wav/002.mp3",
+      "size": 89856,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/wav/002.mp3",
+      "verifiedHashes": {
+        "sha256": "4bdd7d1fb5723e253083820c659d65449e43abff0fbf7b5ac52fea3c1d7572fc",
+        "gitBlob": "dce74e511c7720ba9a7d9cec84ac59e41cec610f"
+      }
+    },
+    {
+      "path": "wav/vad_example.wav",
+      "size": 2261722,
+      "url": "https://huggingface.co/AXERA-TECH/3D-Speaker-MT.Axera/resolve/3592794622a5627aca47c81fdc2569e632ffc910/wav/vad_example.wav",
+      "verifiedHashes": {
+        "sha256": "a7431f0169ef76ef630c945a1d2c3675d8c8c2df2ae4a6b16f8a88ba1bccfbbb",
+        "gitBlob": null
+      }
+    }
+  ],
+  "runnerSha256": "f2e7b945451dbf801ab4c7b5fcc1abfd96f20c482601d45df1558990471ab8d2"
+}

@@ -1,0 +1,1789 @@
+{
+  "modelId": "lcm-lora-sdv1-5",
+  "revision": "4ba40db7f8fddbf3e4f86edacf7fb255bb45d339",
+  "date": "2026-09-30",
+  "variants": [
+    {
+      "label": "512×512 文生图：戴墨镜的猫",
+      "observation": "提示词：`a cat wearing sunglasses`。随机种子为 0，4 步。画面为佩戴深色圆形墨镜的灰白猫，主体与提示词一致。",
+      "previews": [
+        {
+          "caption": "本次算力卡生成结果",
+          "path": "/validation/effects/lcm-lora-sdv1-5-20260930/lcm-cat512-a.png"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "实际输出",
+            "算力卡调用合计",
+            "生成流程（含校验与加载）"
+          ],
+          "rows": [
+            [
+              "512×512",
+              "2.685 s",
+              "25.333 s"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "modelId": "lcm-lora-sdv1-5",
+        "revision": "4ba40db7f8fddbf3e4f86edacf7fb255bb45d339",
+        "provider": "AXCLRTExecutionProvider",
+        "completed": true,
+        "mode": "txt2img",
+        "prompt": "a cat wearing sunglasses",
+        "seed": 0,
+        "width": 512,
+        "height": 512,
+        "timesteps": [
+          999,
+          759,
+          499,
+          259
+        ],
+        "tokenIdsUnpadded": [
+          49406,
+          320,
+          2368,
+          3309,
+          12906,
+          49407
+        ],
+        "sessions": [
+          {
+            "model": "models/text_encoder/sd15_text_encoder_sim.axmodel",
+            "sha256": "fa731c99588086044fef8e6b34445b63402a0d996b9080f0ab1a5e8dd0284ef6",
+            "runMilliseconds": [
+              13.741044999733276
+            ],
+            "allFinite": true,
+            "providerActual": "AXCLRTExecutionProvider",
+            "loadMilliseconds": 3107.6575930001127,
+            "inputs": [
+              {
+                "name": "input_ids",
+                "shape": [
+                  1,
+                  77
+                ],
+                "dtype": "int32"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "last_hidden_state",
+                "shape": [
+                  1,
+                  77,
+                  768
+                ],
+                "dtype": "float32"
+              }
+            ]
+          },
+          {
+            "model": "models/unet.axmodel",
+            "sha256": "86265c320a7a11e610024a0ef80638377dd839ec4bf429e924422603ac64ff8c",
+            "runMilliseconds": [
+              436.5331019998848,
+              436.7267690004155,
+              436.6628940006194,
+              438.5887750004258
+            ],
+            "allFinite": true,
+            "providerActual": "AXCLRTExecutionProvider",
+            "loadMilliseconds": 14440.656564000165,
+            "inputs": [
+              {
+                "name": "sample",
+                "shape": [
+                  1,
+                  4,
+                  64,
+                  64
+                ],
+                "dtype": "float32"
+              },
+              {
+                "name": "encoder_hidden_states",
+                "shape": [
+                  1,
+                  77,
+                  768
+                ],
+                "dtype": "float32"
+              },
+              {
+                "name": "/down_blocks.0/resnets.0/act_1/Mul_output_0",
+                "shape": [
+                  1,
+                  1280
+                ],
+                "dtype": "float32"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "5771",
+                "shape": [
+                  1,
+                  4,
+                  64,
+                  64
+                ],
+                "dtype": "float32"
+              }
+            ]
+          },
+          {
+            "model": "models/vae_decoder.axmodel",
+            "sha256": "ee4201ce7cc8e470c301ed5880ac6dc41f347f330da2a353b23b54545c56b276",
+            "runMilliseconds": [
+              922.307574000115
+            ],
+            "allFinite": true,
+            "providerActual": "AXCLRTExecutionProvider",
+            "loadMilliseconds": 1098.3800290005092,
+            "inputs": [
+              {
+                "name": "x",
+                "shape": [
+                  1,
+                  4,
+                  64,
+                  64
+                ],
+                "dtype": "float32"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "784",
+                "shape": [
+                  1,
+                  3,
+                  512,
+                  512
+                ],
+                "dtype": "float32"
+              }
+            ]
+          }
+        ],
+        "calls": [
+          {
+            "model": "models/text_encoder/sd15_text_encoder_sim.axmodel",
+            "inputs": [
+              {
+                "name": "input_ids",
+                "shape": [
+                  1,
+                  77
+                ],
+                "dtype": "int32",
+                "sha256": "b943f472c7720b32208b24b93b79e9c564fb3ee32b87eca8377bbcb4b8d5aa54"
+              }
+            ],
+            "completed": true,
+            "runMilliseconds": 13.741044999733276,
+            "outputs": [
+              {
+                "name": "last_hidden_state",
+                "shape": [
+                  1,
+                  77,
+                  768
+                ],
+                "dtype": "float32",
+                "sha256": "376f4ee472e88d773594feef7f5eb27aa088e83c490fed5482e2f2700d379aa5"
+              }
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "models/unet.axmodel",
+            "inputs": [
+              {
+                "name": "sample",
+                "shape": [
+                  1,
+                  4,
+                  64,
+                  64
+                ],
+                "dtype": "float32",
+                "sha256": "b2ac06f34558f4088edaa66c5dcb7d4ec7810b5ffa70079869cc6e85acb969ce"
+              },
+              {
+                "name": "encoder_hidden_states",
+                "shape": [
+                  1,
+                  77,
+                  768
+                ],
+                "dtype": "float32",
+                "sha256": "376f4ee472e88d773594feef7f5eb27aa088e83c490fed5482e2f2700d379aa5"
+              },
+              {
+                "name": "/down_blocks.0/resnets.0/act_1/Mul_output_0",
+                "shape": [
+                  1,
+                  1280
+                ],
+                "dtype": "float32",
+                "sha256": "c779f4dd3da6b5e2afad6f08cf75784dbc49afdf6b19629d34f76e2f4ae84868"
+              }
+            ],
+            "completed": true,
+            "runMilliseconds": 436.5331019998848,
+            "outputs": [
+              {
+                "name": "5771",
+                "shape": [
+                  1,
+                  4,
+                  64,
+                  64
+                ],
+                "dtype": "float32",
+                "sha256": "db752b916a707963384f806abbe66fbbc9b8ff35521ee060bf655f241248490c"
+              }
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "models/unet.axmodel",
+            "inputs": [
+              {
+                "name": "sample",
+                "shape": [
+                  1,
+                  4,
+                  64,
+                  64
+                ],
+                "dtype": "float32",
+                "sha256": "46bb64911788ad912d458532cd1fb6de212732f0b00212f829ab705128d498f5"
+              },
+              {
+                "name": "encoder_hidden_states",
+                "shape": [
+                  1,
+                  77,
+                  768
+                ],
+                "dtype": "float32",
+                "sha256": "376f4ee472e88d773594feef7f5eb27aa088e83c490fed5482e2f2700d379aa5"
+              },
+              {
+                "name": "/down_blocks.0/resnets.0/act_1/Mul_output_0",
+                "shape": [
+                  1,
+                  1280
+                ],
+                "dtype": "float32",
+                "sha256": "53d5716161ec657ed4c64716da2e2353549a99ecc05bb9bc9b6c5c8565cd7c42"
+              }
+            ],
+            "completed": true,
+            "runMilliseconds": 436.7267690004155,
+            "outputs": [
+              {
+                "name": "5771",
+                "shape": [
+                  1,
+                  4,
+                  64,
+                  64
+                ],
+                "dtype": "float32",
+                "sha256": "fb51f5c3ee846502977a32b0b7d7ec96d76b5657e0bf07aa3e6c835d7c3a4d2a"
+              }
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "models/unet.axmodel",
+            "inputs": [
+              {
+                "name": "sample",
+                "shape": [
+                  1,
+                  4,
+                  64,
+                  64
+                ],
+                "dtype": "float32",
+                "sha256": "d610c3bf03af1461dce7d8271348c70001623a0e2968b0430c12d2522a8133f9"
+              },
+              {
+                "name": "encoder_hidden_states",
+                "shape": [
+                  1,
+                  77,
+                  768
+                ],
+                "dtype": "float32",
+                "sha256": "376f4ee472e88d773594feef7f5eb27aa088e83c490fed5482e2f2700d379aa5"
+              },
+              {
+                "name": "/down_blocks.0/resnets.0/act_1/Mul_output_0",
+                "shape": [
+                  1,
+                  1280
+                ],
+                "dtype": "float32",
+                "sha256": "a1b100afab4f1bec04a42433b4ac20cea122c94fecd61786319adbce7c07126d"
+              }
+            ],
+            "completed": true,
+            "runMilliseconds": 436.6628940006194,
+            "outputs": [
+              {
+                "name": "5771",
+                "shape": [
+                  1,
+                  4,
+                  64,
+                  64
+                ],
+                "dtype": "float32",
+                "sha256": "4837cd12d7abaffa4d043a3fff28ac44b42e01c3c096590290a4dd159c3160a4"
+              }
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "models/unet.axmodel",
+            "inputs": [
+              {
+                "name": "sample",
+                "shape": [
+                  1,
+                  4,
+                  64,
+                  64
+                ],
+                "dtype": "float32",
+                "sha256": "ba8772325feb211e696fe9682383628882c468bb3f349f7e1cbc330b2d56d40c"
+              },
+              {
+                "name": "encoder_hidden_states",
+                "shape": [
+                  1,
+                  77,
+                  768
+                ],
+                "dtype": "float32",
+                "sha256": "376f4ee472e88d773594feef7f5eb27aa088e83c490fed5482e2f2700d379aa5"
+              },
+              {
+                "name": "/down_blocks.0/resnets.0/act_1/Mul_output_0",
+                "shape": [
+                  1,
+                  1280
+                ],
+                "dtype": "float32",
+                "sha256": "ca8454c77754b15234bf4c14b1af98518bbd8beb3d3179c2bb23858faa4d5373"
+              }
+            ],
+            "completed": true,
+            "runMilliseconds": 438.5887750004258,
+            "outputs": [
+              {
+                "name": "5771",
+                "shape": [
+                  1,
+                  4,
+                  64,
+                  64
+                ],
+                "dtype": "float32",
+                "sha256": "7cc626f7bbc4428d2393f83c56b041c137b3e7adabd8566e8a968c16320f684d"
+              }
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "models/vae_decoder.axmodel",
+            "inputs": [
+              {
+                "name": "x",
+                "shape": [
+                  1,
+                  4,
+                  64,
+                  64
+                ],
+                "dtype": "float32",
+                "sha256": "ba81fa6cf121a04b5e18a8c74665444cf62d7ed1bdc86c95c9860e88df3abf90"
+              }
+            ],
+            "completed": true,
+            "runMilliseconds": 922.307574000115,
+            "outputs": [
+              {
+                "name": "784",
+                "shape": [
+                  1,
+                  3,
+                  512,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "c0528ba5e05af70af266b004be90a4a640680f603e9d50880e7b54addbd12fbd"
+              }
+            ],
+            "allFinite": true
+          }
+        ],
+        "launcherSha256": "4e26de641096cb7bd08d477dc2c22bbf7f013240ef4d360e1125e5437d149eb6",
+        "runnerSha256": "67ad20b954ffd5d5e03a95b79b2a1a13f2444ede084e601e5f53da7cfc1c669f",
+        "versions": {
+          "torch": "2.5.1",
+          "transformers": "4.51.3",
+          "diffusers": "0.35.2",
+          "numpy": "1.26.4",
+          "Pillow": "11.3.0"
+        },
+        "pipelineSecondsIncludingLoadAndHash": 25.33273612799985,
+        "imageSha256": "b972936e9a92d19587f597fa4f577192271d9a13b21f1d73f3d9f8fa3493ad8f",
+        "pixelSha256": "1a2d60592dcaac2ada3ae7255ca82e1be679f54d841d4b1311483ffd9de8843b",
+        "imageStandardDeviation": 61.92756965475542,
+        "npuCallTotalMilliseconds": 2684.560159001194
+      }
+    },
+    {
+      "label": "512×512 文生图：山湖风景",
+      "observation": "提示词：`a peaceful mountain lake at sunrise, pine trees, reflection in the water, landscape photography`。随机种子为 0，4 步。可见山峰、松林、晨光和水面倒影。",
+      "previews": [
+        {
+          "caption": "本次算力卡生成结果",
+          "path": "/validation/effects/lcm-lora-sdv1-5-20260930/lcm-lake512-a.png"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "实际输出",
+            "算力卡调用合计",
+            "生成流程（含校验与加载）"
+          ],
+          "rows": [
+            [
+              "512×512",
+              "2.703 s",
+              "25.218 s"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "modelId": "lcm-lora-sdv1-5",
+        "revision": "4ba40db7f8fddbf3e4f86edacf7fb255bb45d339",
+        "provider": "AXCLRTExecutionProvider",
+        "completed": true,
+        "mode": "txt2img",
+        "prompt": "a peaceful mountain lake at sunrise, pine trees, reflection in the water, landscape photography",
+        "seed": 0,
+        "width": 512,
+        "height": 512,
+        "timesteps": [
+          999,
+          759,
+          499,
+          259
+        ],
+        "tokenIdsUnpadded": [
+          49406,
+          320,
+          9461,
+          3965,
+          2553,
+          536,
+          5610,
+          267,
+          7374,
+          4682,
+          267,
+          11884,
+          530,
+          518,
+          1573,
+          267,
+          5727,
+          2108,
+          49407
+        ],
+        "sessions": [
+          {
+            "model": "models/text_encoder/sd15_text_encoder_sim.axmodel",
+            "sha256": "fa731c99588086044fef8e6b34445b63402a0d996b9080f0ab1a5e8dd0284ef6",
+            "runMilliseconds": [
+              30.41876699990098
+            ],
+            "allFinite": true,
+            "providerActual": "AXCLRTExecutionProvider",
+            "loadMilliseconds": 3202.3419460001605,
+            "inputs": [
+              {
+                "name": "input_ids",
+                "shape": [
+                  1,
+                  77
+                ],
+                "dtype": "int32"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "last_hidden_state",
+                "shape": [
+                  1,
+                  77,
+                  768
+                ],
+                "dtype": "float32"
+              }
+            ]
+          },
+          {
+            "model": "models/unet.axmodel",
+            "sha256": "86265c320a7a11e610024a0ef80638377dd839ec4bf429e924422603ac64ff8c",
+            "runMilliseconds": [
+              437.56560500060004,
+              436.71072800043476,
+              438.8438590003716,
+              436.5401019995261
+            ],
+            "allFinite": true,
+            "providerActual": "AXCLRTExecutionProvider",
+            "loadMilliseconds": 14385.820510000485,
+            "inputs": [
+              {
+                "name": "sample",
+                "shape": [
+                  1,
+                  4,
+                  64,
+                  64
+                ],
+                "dtype": "float32"
+              },
+              {
+                "name": "encoder_hidden_states",
+                "shape": [
+                  1,
+                  77,
+                  768
+                ],
+                "dtype": "float32"
+              },
+              {
+                "name": "/down_blocks.0/resnets.0/act_1/Mul_output_0",
+                "shape": [
+                  1,
+                  1280
+                ],
+                "dtype": "float32"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "5771",
+                "shape": [
+                  1,
+                  4,
+                  64,
+                  64
+                ],
+                "dtype": "float32"
+              }
+            ]
+          },
+          {
+            "model": "models/vae_decoder.axmodel",
+            "sha256": "ee4201ce7cc8e470c301ed5880ac6dc41f347f330da2a353b23b54545c56b276",
+            "runMilliseconds": [
+              922.7001589997599
+            ],
+            "allFinite": true,
+            "providerActual": "AXCLRTExecutionProvider",
+            "loadMilliseconds": 1131.0733439995602,
+            "inputs": [
+              {
+                "name": "x",
+                "shape": [
+                  1,
+                  4,
+                  64,
+                  64
+                ],
+                "dtype": "float32"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "784",
+                "shape": [
+                  1,
+                  3,
+                  512,
+                  512
+                ],
+                "dtype": "float32"
+              }
+            ]
+          }
+        ],
+        "calls": [
+          {
+            "model": "models/text_encoder/sd15_text_encoder_sim.axmodel",
+            "inputs": [
+              {
+                "name": "input_ids",
+                "shape": [
+                  1,
+                  77
+                ],
+                "dtype": "int32",
+                "sha256": "60180f148bf8b46158ab9f303edb3d67393769f9ac8451fb2f707ccf512e2179"
+              }
+            ],
+            "completed": true,
+            "runMilliseconds": 30.41876699990098,
+            "outputs": [
+              {
+                "name": "last_hidden_state",
+                "shape": [
+                  1,
+                  77,
+                  768
+                ],
+                "dtype": "float32",
+                "sha256": "5ebe93aa939bce658bbbdab9fbb505ff2517ce580d3cb782b335c95d065ee452"
+              }
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "models/unet.axmodel",
+            "inputs": [
+              {
+                "name": "sample",
+                "shape": [
+                  1,
+                  4,
+                  64,
+                  64
+                ],
+                "dtype": "float32",
+                "sha256": "b2ac06f34558f4088edaa66c5dcb7d4ec7810b5ffa70079869cc6e85acb969ce"
+              },
+              {
+                "name": "encoder_hidden_states",
+                "shape": [
+                  1,
+                  77,
+                  768
+                ],
+                "dtype": "float32",
+                "sha256": "5ebe93aa939bce658bbbdab9fbb505ff2517ce580d3cb782b335c95d065ee452"
+              },
+              {
+                "name": "/down_blocks.0/resnets.0/act_1/Mul_output_0",
+                "shape": [
+                  1,
+                  1280
+                ],
+                "dtype": "float32",
+                "sha256": "c779f4dd3da6b5e2afad6f08cf75784dbc49afdf6b19629d34f76e2f4ae84868"
+              }
+            ],
+            "completed": true,
+            "runMilliseconds": 437.56560500060004,
+            "outputs": [
+              {
+                "name": "5771",
+                "shape": [
+                  1,
+                  4,
+                  64,
+                  64
+                ],
+                "dtype": "float32",
+                "sha256": "2c7d663916425ccdaee5eb6a6a7d2b18cad3bd8b9d071dbb4725c3427c4317fc"
+              }
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "models/unet.axmodel",
+            "inputs": [
+              {
+                "name": "sample",
+                "shape": [
+                  1,
+                  4,
+                  64,
+                  64
+                ],
+                "dtype": "float32",
+                "sha256": "a7213c8ce73342a890e36456723bb026392a51c6256982631dd25d51acbeffb8"
+              },
+              {
+                "name": "encoder_hidden_states",
+                "shape": [
+                  1,
+                  77,
+                  768
+                ],
+                "dtype": "float32",
+                "sha256": "5ebe93aa939bce658bbbdab9fbb505ff2517ce580d3cb782b335c95d065ee452"
+              },
+              {
+                "name": "/down_blocks.0/resnets.0/act_1/Mul_output_0",
+                "shape": [
+                  1,
+                  1280
+                ],
+                "dtype": "float32",
+                "sha256": "53d5716161ec657ed4c64716da2e2353549a99ecc05bb9bc9b6c5c8565cd7c42"
+              }
+            ],
+            "completed": true,
+            "runMilliseconds": 436.71072800043476,
+            "outputs": [
+              {
+                "name": "5771",
+                "shape": [
+                  1,
+                  4,
+                  64,
+                  64
+                ],
+                "dtype": "float32",
+                "sha256": "7ed645483a6ec0cf06c8589dc3721b739b4c39a9179818ae911a1278af413df4"
+              }
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "models/unet.axmodel",
+            "inputs": [
+              {
+                "name": "sample",
+                "shape": [
+                  1,
+                  4,
+                  64,
+                  64
+                ],
+                "dtype": "float32",
+                "sha256": "cc8e2627bdf8fd2bfcc890d90ab56a2b369a348fc943da1c38bdac2eb6cd35eb"
+              },
+              {
+                "name": "encoder_hidden_states",
+                "shape": [
+                  1,
+                  77,
+                  768
+                ],
+                "dtype": "float32",
+                "sha256": "5ebe93aa939bce658bbbdab9fbb505ff2517ce580d3cb782b335c95d065ee452"
+              },
+              {
+                "name": "/down_blocks.0/resnets.0/act_1/Mul_output_0",
+                "shape": [
+                  1,
+                  1280
+                ],
+                "dtype": "float32",
+                "sha256": "a1b100afab4f1bec04a42433b4ac20cea122c94fecd61786319adbce7c07126d"
+              }
+            ],
+            "completed": true,
+            "runMilliseconds": 438.8438590003716,
+            "outputs": [
+              {
+                "name": "5771",
+                "shape": [
+                  1,
+                  4,
+                  64,
+                  64
+                ],
+                "dtype": "float32",
+                "sha256": "f11ed6f8a08487a7ee4a8c5880fd31930f10f6f33e95ded9a6de99f5de21c0cb"
+              }
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "models/unet.axmodel",
+            "inputs": [
+              {
+                "name": "sample",
+                "shape": [
+                  1,
+                  4,
+                  64,
+                  64
+                ],
+                "dtype": "float32",
+                "sha256": "c4ede542e81e0b04e55298f714455c652b7a7deba2574935975e380ad8a402fc"
+              },
+              {
+                "name": "encoder_hidden_states",
+                "shape": [
+                  1,
+                  77,
+                  768
+                ],
+                "dtype": "float32",
+                "sha256": "5ebe93aa939bce658bbbdab9fbb505ff2517ce580d3cb782b335c95d065ee452"
+              },
+              {
+                "name": "/down_blocks.0/resnets.0/act_1/Mul_output_0",
+                "shape": [
+                  1,
+                  1280
+                ],
+                "dtype": "float32",
+                "sha256": "ca8454c77754b15234bf4c14b1af98518bbd8beb3d3179c2bb23858faa4d5373"
+              }
+            ],
+            "completed": true,
+            "runMilliseconds": 436.5401019995261,
+            "outputs": [
+              {
+                "name": "5771",
+                "shape": [
+                  1,
+                  4,
+                  64,
+                  64
+                ],
+                "dtype": "float32",
+                "sha256": "14113a04038f15c905f87c0e8838df6df6871f4f9eaf6569e516d5a1fe5b653a"
+              }
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "models/vae_decoder.axmodel",
+            "inputs": [
+              {
+                "name": "x",
+                "shape": [
+                  1,
+                  4,
+                  64,
+                  64
+                ],
+                "dtype": "float32",
+                "sha256": "dd630d65e4e29cebfbad4b44c7a93b8b5849a7a290362e3b6e5319a82ebedd62"
+              }
+            ],
+            "completed": true,
+            "runMilliseconds": 922.7001589997599,
+            "outputs": [
+              {
+                "name": "784",
+                "shape": [
+                  1,
+                  3,
+                  512,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "eb5d4b999995e002d6ceae192e1503db3153871d5e8585a0cb60eb4948d9d566"
+              }
+            ],
+            "allFinite": true
+          }
+        ],
+        "launcherSha256": "4e26de641096cb7bd08d477dc2c22bbf7f013240ef4d360e1125e5437d149eb6",
+        "runnerSha256": "67ad20b954ffd5d5e03a95b79b2a1a13f2444ede084e601e5f53da7cfc1c669f",
+        "versions": {
+          "torch": "2.5.1",
+          "transformers": "4.51.3",
+          "diffusers": "0.35.2",
+          "numpy": "1.26.4",
+          "Pillow": "11.3.0"
+        },
+        "pipelineSecondsIncludingLoadAndHash": 25.217611791999843,
+        "imageSha256": "325423a5351d1cc6db046e4ee00ecbe37a859d5d130908a4e54677251ce26bdf",
+        "pixelSha256": "5f700deb957f51e2b41fd3f669a36e1ef9ebc8d6c4d7626dc36ced004437f301",
+        "imageStandardDeviation": 65.12759927613962,
+        "npuCallTotalMilliseconds": 2702.7792200005933
+      }
+    },
+    {
+      "label": "512×512 图生图：宇航员与丛林",
+      "observation": "提示词：`Astronauts in a jungle, cold color palette, muted colors, detailed, 8k`。随机种子为 0，2 步。保留三个宇航员的大致布局，加入丛林植被；手部和服装细节仍带有生成画面的变形。",
+      "previews": [
+        {
+          "caption": "输入：官方宇航员摆件样例",
+          "path": "/validation/effects/lcm-lora-sdv1-5-20260930/lcm-img512-a-input.png"
+        },
+        {
+          "caption": "本次算力卡生成结果",
+          "path": "/validation/effects/lcm-lora-sdv1-5-20260930/lcm-img512-a.png"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "实际输出",
+            "算力卡调用合计",
+            "生成流程（含校验与加载）"
+          ],
+          "rows": [
+            [
+              "512×512",
+              "2.275 s",
+              "26.225 s"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "modelId": "lcm-lora-sdv1-5",
+        "revision": "4ba40db7f8fddbf3e4f86edacf7fb255bb45d339",
+        "provider": "AXCLRTExecutionProvider",
+        "completed": true,
+        "mode": "img2img",
+        "prompt": "Astronauts in a jungle, cold color palette, muted colors, detailed, 8k",
+        "seed": 0,
+        "width": 512,
+        "height": 512,
+        "timesteps": [
+          499,
+          259
+        ],
+        "tokenIdsUnpadded": [
+          49406,
+          29733,
+          530,
+          320,
+          10865,
+          267,
+          3153,
+          3140,
+          13901,
+          267,
+          48028,
+          5389,
+          267,
+          12609,
+          267,
+          279,
+          330,
+          49407
+        ],
+        "sessions": [
+          {
+            "model": "models/text_encoder/sd15_text_encoder_sim.axmodel",
+            "sha256": "fa731c99588086044fef8e6b34445b63402a0d996b9080f0ab1a5e8dd0284ef6",
+            "runMilliseconds": [
+              13.214584999332146
+            ],
+            "allFinite": true,
+            "providerActual": "AXCLRTExecutionProvider",
+            "loadMilliseconds": 3192.4579129999984,
+            "inputs": [
+              {
+                "name": "input_ids",
+                "shape": [
+                  1,
+                  77
+                ],
+                "dtype": "int32"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "last_hidden_state",
+                "shape": [
+                  1,
+                  77,
+                  768
+                ],
+                "dtype": "float32"
+              }
+            ]
+          },
+          {
+            "model": "models/vae_encoder.axmodel",
+            "sha256": "03105304de551d8f2a369c448cf4b83115599a0350022a410a6bb698b3571ab2",
+            "runMilliseconds": [
+              458.34050699977524
+            ],
+            "allFinite": true,
+            "providerActual": "AXCLRTExecutionProvider",
+            "loadMilliseconds": 750.053341000239,
+            "inputs": [
+              {
+                "name": "image_sample",
+                "shape": [
+                  1,
+                  3,
+                  512,
+                  512
+                ],
+                "dtype": "float32"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "latent_sample",
+                "shape": [
+                  1,
+                  8,
+                  64,
+                  64
+                ],
+                "dtype": "float32"
+              }
+            ]
+          },
+          {
+            "model": "models/unet.axmodel",
+            "sha256": "86265c320a7a11e610024a0ef80638377dd839ec4bf429e924422603ac64ff8c",
+            "runMilliseconds": [
+              438.17781600046146,
+              442.9072069997346
+            ],
+            "allFinite": true,
+            "providerActual": "AXCLRTExecutionProvider",
+            "loadMilliseconds": 14442.86769700011,
+            "inputs": [
+              {
+                "name": "sample",
+                "shape": [
+                  1,
+                  4,
+                  64,
+                  64
+                ],
+                "dtype": "float32"
+              },
+              {
+                "name": "encoder_hidden_states",
+                "shape": [
+                  1,
+                  77,
+                  768
+                ],
+                "dtype": "float32"
+              },
+              {
+                "name": "/down_blocks.0/resnets.0/act_1/Mul_output_0",
+                "shape": [
+                  1,
+                  1280
+                ],
+                "dtype": "float32"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "5771",
+                "shape": [
+                  1,
+                  4,
+                  64,
+                  64
+                ],
+                "dtype": "float32"
+              }
+            ]
+          },
+          {
+            "model": "models/vae_decoder.axmodel",
+            "sha256": "ee4201ce7cc8e470c301ed5880ac6dc41f347f330da2a353b23b54545c56b276",
+            "runMilliseconds": [
+              921.961365000243
+            ],
+            "allFinite": true,
+            "providerActual": "AXCLRTExecutionProvider",
+            "loadMilliseconds": 1100.5383680003433,
+            "inputs": [
+              {
+                "name": "x",
+                "shape": [
+                  1,
+                  4,
+                  64,
+                  64
+                ],
+                "dtype": "float32"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "784",
+                "shape": [
+                  1,
+                  3,
+                  512,
+                  512
+                ],
+                "dtype": "float32"
+              }
+            ]
+          }
+        ],
+        "calls": [
+          {
+            "model": "models/text_encoder/sd15_text_encoder_sim.axmodel",
+            "inputs": [
+              {
+                "name": "input_ids",
+                "shape": [
+                  1,
+                  77
+                ],
+                "dtype": "int32",
+                "sha256": "3f83818092995c40a567e857a4dee3e10aea53d14a74c1a77861b2929e8a96fd"
+              }
+            ],
+            "completed": true,
+            "runMilliseconds": 13.214584999332146,
+            "outputs": [
+              {
+                "name": "last_hidden_state",
+                "shape": [
+                  1,
+                  77,
+                  768
+                ],
+                "dtype": "float32",
+                "sha256": "713ba082e3935cf48360ded6aed2477df911e485f61d1f18e876331456f8b6ea"
+              }
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "models/vae_encoder.axmodel",
+            "inputs": [
+              {
+                "name": "image_sample",
+                "shape": [
+                  1,
+                  3,
+                  512,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "8fdf4bdf440443bc68949e9aabcea0d888d07d30fb50f97f453557678056581d"
+              }
+            ],
+            "completed": true,
+            "runMilliseconds": 458.34050699977524,
+            "outputs": [
+              {
+                "name": "latent_sample",
+                "shape": [
+                  1,
+                  8,
+                  64,
+                  64
+                ],
+                "dtype": "float32",
+                "sha256": "4ffe48baf39dbfdfa93a6e3ff6b82ba18e10912660c0e14359237973cddcd3e7"
+              }
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "models/unet.axmodel",
+            "inputs": [
+              {
+                "name": "sample",
+                "shape": [
+                  1,
+                  4,
+                  64,
+                  64
+                ],
+                "dtype": "float32",
+                "sha256": "e7e36bbdc9f24b007a0cffcee6579e1ece677cc6ed0c1ba5cbe8f758a92a36e9"
+              },
+              {
+                "name": "encoder_hidden_states",
+                "shape": [
+                  1,
+                  77,
+                  768
+                ],
+                "dtype": "float32",
+                "sha256": "713ba082e3935cf48360ded6aed2477df911e485f61d1f18e876331456f8b6ea"
+              },
+              {
+                "name": "/down_blocks.0/resnets.0/act_1/Mul_output_0",
+                "shape": [
+                  1,
+                  1280
+                ],
+                "dtype": "float32",
+                "sha256": "7036b2f3c650d46f18197c53a1967124cc06f41aeedd698e21cc57a320613b5d"
+              }
+            ],
+            "completed": true,
+            "runMilliseconds": 438.17781600046146,
+            "outputs": [
+              {
+                "name": "5771",
+                "shape": [
+                  1,
+                  4,
+                  64,
+                  64
+                ],
+                "dtype": "float32",
+                "sha256": "f3454c31a71be3d0da4c7dfb5808673cbd293fcd00cb8551d4dc59840189c2e9"
+              }
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "models/unet.axmodel",
+            "inputs": [
+              {
+                "name": "sample",
+                "shape": [
+                  1,
+                  4,
+                  64,
+                  64
+                ],
+                "dtype": "float32",
+                "sha256": "40dbebf6cf611656194fe2e504954e04c93cb08cc8d1849df7b4353a8247e8df"
+              },
+              {
+                "name": "encoder_hidden_states",
+                "shape": [
+                  1,
+                  77,
+                  768
+                ],
+                "dtype": "float32",
+                "sha256": "713ba082e3935cf48360ded6aed2477df911e485f61d1f18e876331456f8b6ea"
+              },
+              {
+                "name": "/down_blocks.0/resnets.0/act_1/Mul_output_0",
+                "shape": [
+                  1,
+                  1280
+                ],
+                "dtype": "float32",
+                "sha256": "731adcda14bafa4f64369ae69528ce051e2efe127052d213626f8f30a67cf4ae"
+              }
+            ],
+            "completed": true,
+            "runMilliseconds": 442.9072069997346,
+            "outputs": [
+              {
+                "name": "5771",
+                "shape": [
+                  1,
+                  4,
+                  64,
+                  64
+                ],
+                "dtype": "float32",
+                "sha256": "43ebb96afc0fa68144fbb03c297f1f155ce80a81339773a5b13d23dad9957fa5"
+              }
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "models/vae_decoder.axmodel",
+            "inputs": [
+              {
+                "name": "x",
+                "shape": [
+                  1,
+                  4,
+                  64,
+                  64
+                ],
+                "dtype": "float32",
+                "sha256": "17b5194ca8fba04dfcd5dcfd42c276965b5770ff4aeb5a418b529b33a0d873f0"
+              }
+            ],
+            "completed": true,
+            "runMilliseconds": 921.961365000243,
+            "outputs": [
+              {
+                "name": "784",
+                "shape": [
+                  1,
+                  3,
+                  512,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "3d4e668906dfde4b94870bb2c8997063885244e94c89dbff11286e4c4aee41a2"
+              }
+            ],
+            "allFinite": true
+          }
+        ],
+        "launcherSha256": "4e26de641096cb7bd08d477dc2c22bbf7f013240ef4d360e1125e5437d149eb6",
+        "runnerSha256": "67ad20b954ffd5d5e03a95b79b2a1a13f2444ede084e601e5f53da7cfc1c669f",
+        "versions": {
+          "torch": "2.5.1",
+          "transformers": "4.51.3",
+          "diffusers": "0.35.2",
+          "numpy": "1.26.4",
+          "Pillow": "11.3.0"
+        },
+        "inputImageSha256": "42f0ee242d8caaee1aea5506c8318c6a920d559a63c6db8d79f993eebaf7d790",
+        "pipelineSecondsIncludingLoadAndHash": 26.224691311000242,
+        "imageSha256": "1a930cd41757a4454b37193c910001763b75231e791e2a37feda6f7b997b70a3",
+        "pixelSha256": "42c7f3b8fda1bebfd0dbb9a3cfa506293394a128cbe15f7f4d097bd0a2d0f0bc",
+        "imageStandardDeviation": 54.764504832843706,
+        "npuCallTotalMilliseconds": 2274.6014799995464
+      }
+    },
+    {
+      "label": "固定种子复现",
+      "observation": "512×512 的猫图片以相同提示词和种子 0 在两个独立进程中生成，6 次模型调用的输出张量和最终图片像素均逐字节一致。保持种子 0、改为山湖提示词后，初始噪声相同，生成结果随提示词变化。此检查仅覆盖当前版本与样例。",
+      "previews": [],
+      "tables": [],
+      "record": {
+        "modelId": "lcm-lora-sdv1-5",
+        "revision": "4ba40db7f8fddbf3e4f86edacf7fb255bb45d339",
+        "provider": "AXCLRTExecutionProvider",
+        "completed": true,
+        "mode": "txt2img",
+        "prompt": "a cat wearing sunglasses",
+        "seed": 0,
+        "width": 512,
+        "height": 512,
+        "timesteps": [
+          999,
+          759,
+          499,
+          259
+        ],
+        "tokenIdsUnpadded": [
+          49406,
+          320,
+          2368,
+          3309,
+          12906,
+          49407
+        ],
+        "sessions": [
+          {
+            "model": "models/text_encoder/sd15_text_encoder_sim.axmodel",
+            "sha256": "fa731c99588086044fef8e6b34445b63402a0d996b9080f0ab1a5e8dd0284ef6",
+            "runMilliseconds": [
+              13.16383500034135
+            ],
+            "allFinite": true,
+            "providerActual": "AXCLRTExecutionProvider",
+            "loadMilliseconds": 3062.3648190003223,
+            "inputs": [
+              {
+                "name": "input_ids",
+                "shape": [
+                  1,
+                  77
+                ],
+                "dtype": "int32"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "last_hidden_state",
+                "shape": [
+                  1,
+                  77,
+                  768
+                ],
+                "dtype": "float32"
+              }
+            ]
+          },
+          {
+            "model": "models/unet.axmodel",
+            "sha256": "86265c320a7a11e610024a0ef80638377dd839ec4bf429e924422603ac64ff8c",
+            "runMilliseconds": [
+              437.3786469996048,
+              436.99481200019363,
+              436.7258940001193,
+              436.9994779999615
+            ],
+            "allFinite": true,
+            "providerActual": "AXCLRTExecutionProvider",
+            "loadMilliseconds": 14476.274681000177,
+            "inputs": [
+              {
+                "name": "sample",
+                "shape": [
+                  1,
+                  4,
+                  64,
+                  64
+                ],
+                "dtype": "float32"
+              },
+              {
+                "name": "encoder_hidden_states",
+                "shape": [
+                  1,
+                  77,
+                  768
+                ],
+                "dtype": "float32"
+              },
+              {
+                "name": "/down_blocks.0/resnets.0/act_1/Mul_output_0",
+                "shape": [
+                  1,
+                  1280
+                ],
+                "dtype": "float32"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "5771",
+                "shape": [
+                  1,
+                  4,
+                  64,
+                  64
+                ],
+                "dtype": "float32"
+              }
+            ]
+          },
+          {
+            "model": "models/vae_decoder.axmodel",
+            "sha256": "ee4201ce7cc8e470c301ed5880ac6dc41f347f330da2a353b23b54545c56b276",
+            "runMilliseconds": [
+              922.7856179995797
+            ],
+            "allFinite": true,
+            "providerActual": "AXCLRTExecutionProvider",
+            "loadMilliseconds": 1100.7477860002837,
+            "inputs": [
+              {
+                "name": "x",
+                "shape": [
+                  1,
+                  4,
+                  64,
+                  64
+                ],
+                "dtype": "float32"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "784",
+                "shape": [
+                  1,
+                  3,
+                  512,
+                  512
+                ],
+                "dtype": "float32"
+              }
+            ]
+          }
+        ],
+        "calls": [
+          {
+            "model": "models/text_encoder/sd15_text_encoder_sim.axmodel",
+            "inputs": [
+              {
+                "name": "input_ids",
+                "shape": [
+                  1,
+                  77
+                ],
+                "dtype": "int32",
+                "sha256": "b943f472c7720b32208b24b93b79e9c564fb3ee32b87eca8377bbcb4b8d5aa54"
+              }
+            ],
+            "completed": true,
+            "runMilliseconds": 13.16383500034135,
+            "outputs": [
+              {
+                "name": "last_hidden_state",
+                "shape": [
+                  1,
+                  77,
+                  768
+                ],
+                "dtype": "float32",
+                "sha256": "376f4ee472e88d773594feef7f5eb27aa088e83c490fed5482e2f2700d379aa5"
+              }
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "models/unet.axmodel",
+            "inputs": [
+              {
+                "name": "sample",
+                "shape": [
+                  1,
+                  4,
+                  64,
+                  64
+                ],
+                "dtype": "float32",
+                "sha256": "b2ac06f34558f4088edaa66c5dcb7d4ec7810b5ffa70079869cc6e85acb969ce"
+              },
+              {
+                "name": "encoder_hidden_states",
+                "shape": [
+                  1,
+                  77,
+                  768
+                ],
+                "dtype": "float32",
+                "sha256": "376f4ee472e88d773594feef7f5eb27aa088e83c490fed5482e2f2700d379aa5"
+              },
+              {
+                "name": "/down_blocks.0/resnets.0/act_1/Mul_output_0",
+                "shape": [
+                  1,
+                  1280
+                ],
+                "dtype": "float32",
+                "sha256": "c779f4dd3da6b5e2afad6f08cf75784dbc49afdf6b19629d34f76e2f4ae84868"
+              }
+            ],
+            "completed": true,
+            "runMilliseconds": 437.3786469996048,
+            "outputs": [
+              {
+                "name": "5771",
+                "shape": [
+                  1,
+                  4,
+                  64,
+                  64
+                ],
+                "dtype": "float32",
+                "sha256": "db752b916a707963384f806abbe66fbbc9b8ff35521ee060bf655f241248490c"
+              }
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "models/unet.axmodel",
+            "inputs": [
+              {
+                "name": "sample",
+                "shape": [
+                  1,
+                  4,
+                  64,
+                  64
+                ],
+                "dtype": "float32",
+                "sha256": "46bb64911788ad912d458532cd1fb6de212732f0b00212f829ab705128d498f5"
+              },
+              {
+                "name": "encoder_hidden_states",
+                "shape": [
+                  1,
+                  77,
+                  768
+                ],
+                "dtype": "float32",
+                "sha256": "376f4ee472e88d773594feef7f5eb27aa088e83c490fed5482e2f2700d379aa5"
+              },
+              {
+                "name": "/down_blocks.0/resnets.0/act_1/Mul_output_0",
+                "shape": [
+                  1,
+                  1280
+                ],
+                "dtype": "float32",
+                "sha256": "53d5716161ec657ed4c64716da2e2353549a99ecc05bb9bc9b6c5c8565cd7c42"
+              }
+            ],
+            "completed": true,
+            "runMilliseconds": 436.99481200019363,
+            "outputs": [
+              {
+                "name": "5771",
+                "shape": [
+                  1,
+                  4,
+                  64,
+                  64
+                ],
+                "dtype": "float32",
+                "sha256": "fb51f5c3ee846502977a32b0b7d7ec96d76b5657e0bf07aa3e6c835d7c3a4d2a"
+              }
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "models/unet.axmodel",
+            "inputs": [
+              {
+                "name": "sample",
+                "shape": [
+                  1,
+                  4,
+                  64,
+                  64
+                ],
+                "dtype": "float32",
+                "sha256": "d610c3bf03af1461dce7d8271348c70001623a0e2968b0430c12d2522a8133f9"
+              },
+              {
+                "name": "encoder_hidden_states",
+                "shape": [
+                  1,
+                  77,
+                  768
+                ],
+                "dtype": "float32",
+                "sha256": "376f4ee472e88d773594feef7f5eb27aa088e83c490fed5482e2f2700d379aa5"
+              },
+              {
+                "name": "/down_blocks.0/resnets.0/act_1/Mul_output_0",
+                "shape": [
+                  1,
+                  1280
+                ],
+                "dtype": "float32",
+                "sha256": "a1b100afab4f1bec04a42433b4ac20cea122c94fecd61786319adbce7c07126d"
+              }
+            ],
+            "completed": true,
+            "runMilliseconds": 436.7258940001193,
+            "outputs": [
+              {
+                "name": "5771",
+                "shape": [
+                  1,
+                  4,
+                  64,
+                  64
+                ],
+                "dtype": "float32",
+                "sha256": "4837cd12d7abaffa4d043a3fff28ac44b42e01c3c096590290a4dd159c3160a4"
+              }
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "models/unet.axmodel",
+            "inputs": [
+              {
+                "name": "sample",
+                "shape": [
+                  1,
+                  4,
+                  64,
+                  64
+                ],
+                "dtype": "float32",
+                "sha256": "ba8772325feb211e696fe9682383628882c468bb3f349f7e1cbc330b2d56d40c"
+              },
+              {
+                "name": "encoder_hidden_states",
+                "shape": [
+                  1,
+                  77,
+                  768
+                ],
+                "dtype": "float32",
+                "sha256": "376f4ee472e88d773594feef7f5eb27aa088e83c490fed5482e2f2700d379aa5"
+              },
+              {
+                "name": "/down_blocks.0/resnets.0/act_1/Mul_output_0",
+                "shape": [
+                  1,
+                  1280
+                ],
+                "dtype": "float32",
+                "sha256": "ca8454c77754b15234bf4c14b1af98518bbd8beb3d3179c2bb23858faa4d5373"
+              }
+            ],
+            "completed": true,
+            "runMilliseconds": 436.9994779999615,
+            "outputs": [
+              {
+                "name": "5771",
+                "shape": [
+                  1,
+                  4,
+                  64,
+                  64
+                ],
+                "dtype": "float32",
+                "sha256": "7cc626f7bbc4428d2393f83c56b041c137b3e7adabd8566e8a968c16320f684d"
+              }
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "models/vae_decoder.axmodel",
+            "inputs": [
+              {
+                "name": "x",
+                "shape": [
+                  1,
+                  4,
+                  64,
+                  64
+                ],
+                "dtype": "float32",
+                "sha256": "ba81fa6cf121a04b5e18a8c74665444cf62d7ed1bdc86c95c9860e88df3abf90"
+              }
+            ],
+            "completed": true,
+            "runMilliseconds": 922.7856179995797,
+            "outputs": [
+              {
+                "name": "784",
+                "shape": [
+                  1,
+                  3,
+                  512,
+                  512
+                ],
+                "dtype": "float32",
+                "sha256": "c0528ba5e05af70af266b004be90a4a640680f603e9d50880e7b54addbd12fbd"
+              }
+            ],
+            "allFinite": true
+          }
+        ],
+        "launcherSha256": "4e26de641096cb7bd08d477dc2c22bbf7f013240ef4d360e1125e5437d149eb6",
+        "runnerSha256": "67ad20b954ffd5d5e03a95b79b2a1a13f2444ede084e601e5f53da7cfc1c669f",
+        "versions": {
+          "torch": "2.5.1",
+          "transformers": "4.51.3",
+          "diffusers": "0.35.2",
+          "numpy": "1.26.4",
+          "Pillow": "11.3.0"
+        },
+        "pipelineSecondsIncludingLoadAndHash": 25.401114061000044,
+        "imageSha256": "b972936e9a92d19587f597fa4f577192271d9a13b21f1d73f3d9f8fa3493ad8f",
+        "pixelSha256": "1a2d60592dcaac2ada3ae7255ca82e1be679f54d841d4b1311483ffd9de8843b",
+        "imageStandardDeviation": 61.92756965475542,
+        "npuCallTotalMilliseconds": 2684.0482839998003
+      }
+    }
+  ]
+}

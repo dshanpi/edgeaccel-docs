@@ -1,0 +1,477 @@
+{
+  "modelId": "MiniCPM-V-4",
+  "repo": "AXERA-TECH/MiniCPM-V-4",
+  "revision": "b7e4aaefa66d21dbc4aa0c59d618f79f3eae44c3",
+  "complete": true,
+  "files": [
+    {
+      "path": "embed_tokens.pth",
+      "size": 752109557,
+      "url": "https://huggingface.co/AXERA-TECH/MiniCPM-V-4/resolve/b7e4aaefa66d21dbc4aa0c59d618f79f3eae44c3/embed_tokens.pth",
+      "verifiedHashes": {
+        "sha256": "8a0a9ac170ee39704b5bd21309d1c744cd99fc0f49049e629f0b52fab5049acc",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "minicpm-v-4_axmodel/llama_p320_l0_together.axmodel",
+      "size": 113077656,
+      "url": "https://huggingface.co/AXERA-TECH/MiniCPM-V-4/resolve/b7e4aaefa66d21dbc4aa0c59d618f79f3eae44c3/minicpm-v-4_axmodel/llama_p320_l0_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "fce479c8165af95a6ed22d3db780fef5944df7a9fbaa69ae18b5446c6e016535",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "minicpm-v-4_axmodel/llama_p320_l10_together.axmodel",
+      "size": 113076280,
+      "url": "https://huggingface.co/AXERA-TECH/MiniCPM-V-4/resolve/b7e4aaefa66d21dbc4aa0c59d618f79f3eae44c3/minicpm-v-4_axmodel/llama_p320_l10_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "b25deb581f1bc7f91580918dfee5ae46549add3e3f21c058111c99becafaa34c",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "minicpm-v-4_axmodel/llama_p320_l11_together.axmodel",
+      "size": 113076280,
+      "url": "https://huggingface.co/AXERA-TECH/MiniCPM-V-4/resolve/b7e4aaefa66d21dbc4aa0c59d618f79f3eae44c3/minicpm-v-4_axmodel/llama_p320_l11_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "7aeacf6402287675176a249bf35fa4e385da8bff20aa0159b47ea782e5e373c3",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "minicpm-v-4_axmodel/llama_p320_l12_together.axmodel",
+      "size": 113076280,
+      "url": "https://huggingface.co/AXERA-TECH/MiniCPM-V-4/resolve/b7e4aaefa66d21dbc4aa0c59d618f79f3eae44c3/minicpm-v-4_axmodel/llama_p320_l12_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "19e0b5ff82af61e6c61016eb58bb7fd7c61dd73e13cc3eef3e38d8fc06a41593",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "minicpm-v-4_axmodel/llama_p320_l13_together.axmodel",
+      "size": 113076280,
+      "url": "https://huggingface.co/AXERA-TECH/MiniCPM-V-4/resolve/b7e4aaefa66d21dbc4aa0c59d618f79f3eae44c3/minicpm-v-4_axmodel/llama_p320_l13_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "cee8f2be186e0ee766c2c60152bacb86a7727ad306ebaa50c54d6819f8b9a8b7",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "minicpm-v-4_axmodel/llama_p320_l14_together.axmodel",
+      "size": 113076280,
+      "url": "https://huggingface.co/AXERA-TECH/MiniCPM-V-4/resolve/b7e4aaefa66d21dbc4aa0c59d618f79f3eae44c3/minicpm-v-4_axmodel/llama_p320_l14_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "95d0f25920bb45fb426b1bce6e1e7d884b933d947553bd0e03f8a91619149640",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "minicpm-v-4_axmodel/llama_p320_l15_together.axmodel",
+      "size": 113076280,
+      "url": "https://huggingface.co/AXERA-TECH/MiniCPM-V-4/resolve/b7e4aaefa66d21dbc4aa0c59d618f79f3eae44c3/minicpm-v-4_axmodel/llama_p320_l15_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "1a611da04229fcb1b5a837fd9ee8df777ec512c48a6e30e5818b805fa02db24f",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "minicpm-v-4_axmodel/llama_p320_l16_together.axmodel",
+      "size": 113076280,
+      "url": "https://huggingface.co/AXERA-TECH/MiniCPM-V-4/resolve/b7e4aaefa66d21dbc4aa0c59d618f79f3eae44c3/minicpm-v-4_axmodel/llama_p320_l16_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "85364b343768095622495bcdc14ac6298884217f9b63d27ee1a65163ea403af6",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "minicpm-v-4_axmodel/llama_p320_l17_together.axmodel",
+      "size": 113076280,
+      "url": "https://huggingface.co/AXERA-TECH/MiniCPM-V-4/resolve/b7e4aaefa66d21dbc4aa0c59d618f79f3eae44c3/minicpm-v-4_axmodel/llama_p320_l17_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "c6864ed07b4590da5b36816440098e6b1bafb342370c0e6aeb0c899de6d35fe8",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "minicpm-v-4_axmodel/llama_p320_l18_together.axmodel",
+      "size": 113076280,
+      "url": "https://huggingface.co/AXERA-TECH/MiniCPM-V-4/resolve/b7e4aaefa66d21dbc4aa0c59d618f79f3eae44c3/minicpm-v-4_axmodel/llama_p320_l18_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "908e09f4e7104b1320d6f37fa7f2f61f6212dbf54f0588d48ad643052fb12a72",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "minicpm-v-4_axmodel/llama_p320_l19_together.axmodel",
+      "size": 113076280,
+      "url": "https://huggingface.co/AXERA-TECH/MiniCPM-V-4/resolve/b7e4aaefa66d21dbc4aa0c59d618f79f3eae44c3/minicpm-v-4_axmodel/llama_p320_l19_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "c2a05b77855ccc0361b1630d745694c9e6bed1660706f85a3d7f7fdc9aebc872",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "minicpm-v-4_axmodel/llama_p320_l1_together.axmodel",
+      "size": 113076280,
+      "url": "https://huggingface.co/AXERA-TECH/MiniCPM-V-4/resolve/b7e4aaefa66d21dbc4aa0c59d618f79f3eae44c3/minicpm-v-4_axmodel/llama_p320_l1_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "65719d84bd3a27f7cc2c4cf2a66d8e05aeb788603dba2119d8cbf39ef25158b7",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "minicpm-v-4_axmodel/llama_p320_l20_together.axmodel",
+      "size": 113076280,
+      "url": "https://huggingface.co/AXERA-TECH/MiniCPM-V-4/resolve/b7e4aaefa66d21dbc4aa0c59d618f79f3eae44c3/minicpm-v-4_axmodel/llama_p320_l20_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "778dc6ac0645fc90691c60eca216df26d714471489f5d740ee33dfb291fd4885",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "minicpm-v-4_axmodel/llama_p320_l21_together.axmodel",
+      "size": 113076280,
+      "url": "https://huggingface.co/AXERA-TECH/MiniCPM-V-4/resolve/b7e4aaefa66d21dbc4aa0c59d618f79f3eae44c3/minicpm-v-4_axmodel/llama_p320_l21_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "c926dcd211fee5c85d01fb3bdc93ce5710cee20bb357c7566abe2da6ab3c4689",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "minicpm-v-4_axmodel/llama_p320_l22_together.axmodel",
+      "size": 113076280,
+      "url": "https://huggingface.co/AXERA-TECH/MiniCPM-V-4/resolve/b7e4aaefa66d21dbc4aa0c59d618f79f3eae44c3/minicpm-v-4_axmodel/llama_p320_l22_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "3aa58a9c9dbd551a3acdcd026236a223c2b4dd892481c551484e4684f8db3c45",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "minicpm-v-4_axmodel/llama_p320_l23_together.axmodel",
+      "size": 113076280,
+      "url": "https://huggingface.co/AXERA-TECH/MiniCPM-V-4/resolve/b7e4aaefa66d21dbc4aa0c59d618f79f3eae44c3/minicpm-v-4_axmodel/llama_p320_l23_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "2a8f02009d6b8b69a144d7d70911837b5e3fba7a94509771d8c9aaa6aff139da",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "minicpm-v-4_axmodel/llama_p320_l24_together.axmodel",
+      "size": 113076280,
+      "url": "https://huggingface.co/AXERA-TECH/MiniCPM-V-4/resolve/b7e4aaefa66d21dbc4aa0c59d618f79f3eae44c3/minicpm-v-4_axmodel/llama_p320_l24_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "da41b7dfa32579e1da776071a7be730c4a3b004ca7fb766bf566ab8195eb3bc8",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "minicpm-v-4_axmodel/llama_p320_l25_together.axmodel",
+      "size": 113076280,
+      "url": "https://huggingface.co/AXERA-TECH/MiniCPM-V-4/resolve/b7e4aaefa66d21dbc4aa0c59d618f79f3eae44c3/minicpm-v-4_axmodel/llama_p320_l25_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "7192c83c54f36efab030bb539965a86e64b24d538786af2095f6e6af817a5a35",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "minicpm-v-4_axmodel/llama_p320_l26_together.axmodel",
+      "size": 113076280,
+      "url": "https://huggingface.co/AXERA-TECH/MiniCPM-V-4/resolve/b7e4aaefa66d21dbc4aa0c59d618f79f3eae44c3/minicpm-v-4_axmodel/llama_p320_l26_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "b410cc34956d85bfc5d9886c135cb527d81c90e5a3a653bfc935833fd5b02739",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "minicpm-v-4_axmodel/llama_p320_l27_together.axmodel",
+      "size": 113076280,
+      "url": "https://huggingface.co/AXERA-TECH/MiniCPM-V-4/resolve/b7e4aaefa66d21dbc4aa0c59d618f79f3eae44c3/minicpm-v-4_axmodel/llama_p320_l27_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "ddcc6bfe4bd9ad7d35ed6dce9837ae59d6bef27bb5baad7cff14491f1c96d0db",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "minicpm-v-4_axmodel/llama_p320_l28_together.axmodel",
+      "size": 113076280,
+      "url": "https://huggingface.co/AXERA-TECH/MiniCPM-V-4/resolve/b7e4aaefa66d21dbc4aa0c59d618f79f3eae44c3/minicpm-v-4_axmodel/llama_p320_l28_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "fe609f25f9f0754bd99b16879c05b6b3f2ba101910a58ce17644fcc8e9be0284",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "minicpm-v-4_axmodel/llama_p320_l29_together.axmodel",
+      "size": 113076280,
+      "url": "https://huggingface.co/AXERA-TECH/MiniCPM-V-4/resolve/b7e4aaefa66d21dbc4aa0c59d618f79f3eae44c3/minicpm-v-4_axmodel/llama_p320_l29_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "f199de4eacd7e22d153abb6728220825b780e1c5efea0df3263d22fd8991f188",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "minicpm-v-4_axmodel/llama_p320_l2_together.axmodel",
+      "size": 113076280,
+      "url": "https://huggingface.co/AXERA-TECH/MiniCPM-V-4/resolve/b7e4aaefa66d21dbc4aa0c59d618f79f3eae44c3/minicpm-v-4_axmodel/llama_p320_l2_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "190bc2fd5d25b3e24d9e39731498e5236231232a0490fb352e7dde855d8c75f7",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "minicpm-v-4_axmodel/llama_p320_l30_together.axmodel",
+      "size": 113076280,
+      "url": "https://huggingface.co/AXERA-TECH/MiniCPM-V-4/resolve/b7e4aaefa66d21dbc4aa0c59d618f79f3eae44c3/minicpm-v-4_axmodel/llama_p320_l30_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "f621d8829c815be2341950205b23a77527dcf020dd147bdec8372ceead670b57",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "minicpm-v-4_axmodel/llama_p320_l31_together.axmodel",
+      "size": 113076280,
+      "url": "https://huggingface.co/AXERA-TECH/MiniCPM-V-4/resolve/b7e4aaefa66d21dbc4aa0c59d618f79f3eae44c3/minicpm-v-4_axmodel/llama_p320_l31_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "2a7360d5195a34bf643b5a06962d727ebe5de552a8a7ea72bbc6346529481591",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "minicpm-v-4_axmodel/llama_p320_l3_together.axmodel",
+      "size": 113076280,
+      "url": "https://huggingface.co/AXERA-TECH/MiniCPM-V-4/resolve/b7e4aaefa66d21dbc4aa0c59d618f79f3eae44c3/minicpm-v-4_axmodel/llama_p320_l3_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "baad71924b6b99c416f0d61517512bd357175aeb6b88beafea20869d3cbf7c27",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "minicpm-v-4_axmodel/llama_p320_l4_together.axmodel",
+      "size": 113076280,
+      "url": "https://huggingface.co/AXERA-TECH/MiniCPM-V-4/resolve/b7e4aaefa66d21dbc4aa0c59d618f79f3eae44c3/minicpm-v-4_axmodel/llama_p320_l4_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "eaee19341637358710909a2b49a98218ac891894b3dbd412eec1ea82de39846a",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "minicpm-v-4_axmodel/llama_p320_l5_together.axmodel",
+      "size": 113076280,
+      "url": "https://huggingface.co/AXERA-TECH/MiniCPM-V-4/resolve/b7e4aaefa66d21dbc4aa0c59d618f79f3eae44c3/minicpm-v-4_axmodel/llama_p320_l5_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "6446bbfb1fb4f0497e7406c92a59602ddbc40101ce926fc6c3a405db283cb86e",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "minicpm-v-4_axmodel/llama_p320_l6_together.axmodel",
+      "size": 113076280,
+      "url": "https://huggingface.co/AXERA-TECH/MiniCPM-V-4/resolve/b7e4aaefa66d21dbc4aa0c59d618f79f3eae44c3/minicpm-v-4_axmodel/llama_p320_l6_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "eb9fe58303bbf751b46941a2638ef6b2a8b8f7e01246a3bfff6746d9f95dc505",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "minicpm-v-4_axmodel/llama_p320_l7_together.axmodel",
+      "size": 113076280,
+      "url": "https://huggingface.co/AXERA-TECH/MiniCPM-V-4/resolve/b7e4aaefa66d21dbc4aa0c59d618f79f3eae44c3/minicpm-v-4_axmodel/llama_p320_l7_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "763182a63070ed2afd5ca4717e6b2eb23e02b129e11202a44e5c800a7273c1b9",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "minicpm-v-4_axmodel/llama_p320_l8_together.axmodel",
+      "size": 113076280,
+      "url": "https://huggingface.co/AXERA-TECH/MiniCPM-V-4/resolve/b7e4aaefa66d21dbc4aa0c59d618f79f3eae44c3/minicpm-v-4_axmodel/llama_p320_l8_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "11ccc8912e65b050266920af762a61254a77778bd0558336a9597c542953aabf",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "minicpm-v-4_axmodel/llama_p320_l9_together.axmodel",
+      "size": 113076280,
+      "url": "https://huggingface.co/AXERA-TECH/MiniCPM-V-4/resolve/b7e4aaefa66d21dbc4aa0c59d618f79f3eae44c3/minicpm-v-4_axmodel/llama_p320_l9_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "cb68e62d64d152bc0c2e1bfb2c5fb5943a193145ef523159bba9ba9fadfc5c6f",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "minicpm-v-4_axmodel/llama_post.axmodel",
+      "size": 205348258,
+      "url": "https://huggingface.co/AXERA-TECH/MiniCPM-V-4/resolve/b7e4aaefa66d21dbc4aa0c59d618f79f3eae44c3/minicpm-v-4_axmodel/llama_post.axmodel",
+      "verifiedHashes": {
+        "sha256": "dabc83d55e485d1f7fcacfb07ceff12a6da22724e9ec6a19c570fc71085704df",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "minicpmv4_tokenizer/config.json",
+      "size": 5057,
+      "url": "https://huggingface.co/AXERA-TECH/MiniCPM-V-4/resolve/b7e4aaefa66d21dbc4aa0c59d618f79f3eae44c3/minicpmv4_tokenizer/config.json",
+      "verifiedHashes": {
+        "sha256": "a83a83259378c2684a96ce3a6cb96d418a1d97f46118af3aff2ac1222fc783b8",
+        "gitBlob": "be2bdfedbbe7b66bea9e91ce1963d2bc78bf600f"
+      }
+    },
+    {
+      "path": "minicpmv4_tokenizer/configuration_minicpm.py",
+      "size": 4238,
+      "url": "https://huggingface.co/AXERA-TECH/MiniCPM-V-4/resolve/b7e4aaefa66d21dbc4aa0c59d618f79f3eae44c3/minicpmv4_tokenizer/configuration_minicpm.py",
+      "verifiedHashes": {
+        "sha256": "ff493a387dbac8bcde4bad93574f74238d4f715808189630c6d1f7ed207e9dfc",
+        "gitBlob": "2d4752b4efe85786f137340dc5912bbf9d8ffe26"
+      }
+    },
+    {
+      "path": "minicpmv4_tokenizer/generation_config.json",
+      "size": 153,
+      "url": "https://huggingface.co/AXERA-TECH/MiniCPM-V-4/resolve/b7e4aaefa66d21dbc4aa0c59d618f79f3eae44c3/minicpmv4_tokenizer/generation_config.json",
+      "verifiedHashes": {
+        "sha256": "b3604fc95ad97535c8efa08711e939743fb57cc004fc36ef358684dd2083087f",
+        "gitBlob": "fb6a92ca912734f18bce7582e63792f456fc3343"
+      }
+    },
+    {
+      "path": "minicpmv4_tokenizer/image_processing_minicpmv.py",
+      "size": 16600,
+      "url": "https://huggingface.co/AXERA-TECH/MiniCPM-V-4/resolve/b7e4aaefa66d21dbc4aa0c59d618f79f3eae44c3/minicpmv4_tokenizer/image_processing_minicpmv.py",
+      "verifiedHashes": {
+        "sha256": "070fbe746243ce3fd666b48bbf415d9b9b3bf4cddaad15ab3f243733e40a6201",
+        "gitBlob": "67ff552fbd59b6142f0969dfe00e19edfb1127bf"
+      }
+    },
+    {
+      "path": "minicpmv4_tokenizer/model.safetensors.index.json",
+      "size": 62812,
+      "url": "https://huggingface.co/AXERA-TECH/MiniCPM-V-4/resolve/b7e4aaefa66d21dbc4aa0c59d618f79f3eae44c3/minicpmv4_tokenizer/model.safetensors.index.json",
+      "verifiedHashes": {
+        "sha256": "803b4c6605fd33df8ba4386c787f914e75d4d382f937e4e2c3f640d47e1f6d5c",
+        "gitBlob": "c57dec39f67009792c1cdfd39452184d809b0e6c"
+      }
+    },
+    {
+      "path": "minicpmv4_tokenizer/modeling_minicpmv.py",
+      "size": 17268,
+      "url": "https://huggingface.co/AXERA-TECH/MiniCPM-V-4/resolve/b7e4aaefa66d21dbc4aa0c59d618f79f3eae44c3/minicpmv4_tokenizer/modeling_minicpmv.py",
+      "verifiedHashes": {
+        "sha256": "c59f539caf3bab55b4d491cb56449d6267ae07fe1ff25f63a859ea4a3e7f69e2",
+        "gitBlob": "945f913cc89e91ed78179251908c0f492dfbb1ae"
+      }
+    },
+    {
+      "path": "minicpmv4_tokenizer/modeling_navit_siglip.py",
+      "size": 41835,
+      "url": "https://huggingface.co/AXERA-TECH/MiniCPM-V-4/resolve/b7e4aaefa66d21dbc4aa0c59d618f79f3eae44c3/minicpmv4_tokenizer/modeling_navit_siglip.py",
+      "verifiedHashes": {
+        "sha256": "c71ca316fe7405325b7097364f98f71c317fff8c9f5c8820f30d3362b1ed5bfa",
+        "gitBlob": "6fe732cf0d5884613003c00bccea0c5ae64a1905"
+      }
+    },
+    {
+      "path": "minicpmv4_tokenizer/preprocessor_config.json",
+      "size": 714,
+      "url": "https://huggingface.co/AXERA-TECH/MiniCPM-V-4/resolve/b7e4aaefa66d21dbc4aa0c59d618f79f3eae44c3/minicpmv4_tokenizer/preprocessor_config.json",
+      "verifiedHashes": {
+        "sha256": "1d9513a6613e3919dda231a4ea935073122fd92107ab5342abd8ab3c212ca8f5",
+        "gitBlob": "951fd9164475e0c264b68745132c3bc53919a976"
+      }
+    },
+    {
+      "path": "minicpmv4_tokenizer/processing_minicpmv.py",
+      "size": 9920,
+      "url": "https://huggingface.co/AXERA-TECH/MiniCPM-V-4/resolve/b7e4aaefa66d21dbc4aa0c59d618f79f3eae44c3/minicpmv4_tokenizer/processing_minicpmv.py",
+      "verifiedHashes": {
+        "sha256": "8af1702cc70167e94cb77f0d3a7c387d0923755a22679c7313a8380b72e5a3b2",
+        "gitBlob": "8d89205da5513f0a49bc3d8e2b38d7fc9ebddf68"
+      }
+    },
+    {
+      "path": "minicpmv4_tokenizer/resampler.py",
+      "size": 34709,
+      "url": "https://huggingface.co/AXERA-TECH/MiniCPM-V-4/resolve/b7e4aaefa66d21dbc4aa0c59d618f79f3eae44c3/minicpmv4_tokenizer/resampler.py",
+      "verifiedHashes": {
+        "sha256": "6f4f91977fd409b15fe7d2e7ab2ee3f88b544e71a1209026a937eece6c6c582e",
+        "gitBlob": "cdec5f777789a190e5ba6a6727f24e13ba1129cb"
+      }
+    },
+    {
+      "path": "minicpmv4_tokenizer/special_tokens_map.json",
+      "size": 1632,
+      "url": "https://huggingface.co/AXERA-TECH/MiniCPM-V-4/resolve/b7e4aaefa66d21dbc4aa0c59d618f79f3eae44c3/minicpmv4_tokenizer/special_tokens_map.json",
+      "verifiedHashes": {
+        "sha256": "068594063e37662c02b21acf42ebb334ef6a74fb810e68a2368f88f08351de76",
+        "gitBlob": "8619dda6f3eb6d60d0a1bb274820054e46f41699"
+      }
+    },
+    {
+      "path": "minicpmv4_tokenizer/tokenization_minicpmv_fast.py",
+      "size": 1647,
+      "url": "https://huggingface.co/AXERA-TECH/MiniCPM-V-4/resolve/b7e4aaefa66d21dbc4aa0c59d618f79f3eae44c3/minicpmv4_tokenizer/tokenization_minicpmv_fast.py",
+      "verifiedHashes": {
+        "sha256": "4512e985d4af814747a5c9d81d5f911fcb95c1d714b547282b01dd06639c08d0",
+        "gitBlob": "b863f1b9b6ffc6c071dc8516957dcfb491ca88e5"
+      }
+    },
+    {
+      "path": "minicpmv4_tokenizer/tokenizer.json",
+      "size": 3691593,
+      "url": "https://huggingface.co/AXERA-TECH/MiniCPM-V-4/resolve/b7e4aaefa66d21dbc4aa0c59d618f79f3eae44c3/minicpmv4_tokenizer/tokenizer.json",
+      "verifiedHashes": {
+        "sha256": "028e74a0efb7bbe99dc7e8b5c216c5fe54da231f80f41bb658e21326883503f3",
+        "gitBlob": "a79a8753aa25a89b615f521361b356f63188e48b"
+      }
+    },
+    {
+      "path": "minicpmv4_tokenizer/tokenizer_config.json",
+      "size": 2883,
+      "url": "https://huggingface.co/AXERA-TECH/MiniCPM-V-4/resolve/b7e4aaefa66d21dbc4aa0c59d618f79f3eae44c3/minicpmv4_tokenizer/tokenizer_config.json",
+      "verifiedHashes": {
+        "sha256": "c13da6ff468cfed3d14eeccd4198cc304305660281cb91dc280aeb332e4d67e4",
+        "gitBlob": "1e84284c9f7d2b760ef1d0c4a4975e8c78f7d21a"
+      }
+    },
+    {
+      "path": "resampler.axmodel",
+      "size": 38266671,
+      "url": "https://huggingface.co/AXERA-TECH/MiniCPM-V-4/resolve/b7e4aaefa66d21dbc4aa0c59d618f79f3eae44c3/resampler.axmodel",
+      "verifiedHashes": {
+        "sha256": "f0358b540903030d02e0f872e8b041afe21b380757bb50351f13f8a0a8e71f75",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "run_axmodel.py",
+      "size": 20988,
+      "url": "https://huggingface.co/AXERA-TECH/MiniCPM-V-4/resolve/b7e4aaefa66d21dbc4aa0c59d618f79f3eae44c3/run_axmodel.py",
+      "verifiedHashes": {
+        "sha256": "abaf391aa731bea9ed9f58dd41e11caae66a323cadd0d605ee41ea3ede5ee041",
+        "gitBlob": "f7715b62f80f0fa340fe5fd9f493892e1defb8e8"
+      }
+    },
+    {
+      "path": "show_demo.jpg",
+      "size": 102222,
+      "url": "https://huggingface.co/AXERA-TECH/MiniCPM-V-4/resolve/b7e4aaefa66d21dbc4aa0c59d618f79f3eae44c3/show_demo.jpg",
+      "verifiedHashes": {
+        "sha256": "54766c1bc64ea0b21aeb38bca40d0f92fa9fea8187acfd0ce4a24d72554150c0",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "siglip.axmodel",
+      "size": 532546288,
+      "url": "https://huggingface.co/AXERA-TECH/MiniCPM-V-4/resolve/b7e4aaefa66d21dbc4aa0c59d618f79f3eae44c3/siglip.axmodel",
+      "verifiedHashes": {
+        "sha256": "2cb3d4de0be11f90ac343473e93fe8d1d9c5573c10b3ace1ec2b36c5d3886d8c",
+        "gitBlob": null
+      }
+    }
+  ],
+  "runnerSha256": "83f48fc9e984c0e82d5acb8d69558c0b12c54d3c7993eed700177041b6aaaec4"
+}

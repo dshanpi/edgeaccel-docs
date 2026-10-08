@@ -142,13 +142,13 @@ python ~/edgeaccel/zipvoice_card.py \
 
 ## 查看部署效果
 
-**已运行，效果仍需评估** · 2026-09-28 · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
+**已运行，效果仍需评估** · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
 
-普通版和蒸馏版均完成中英文短句及中文重复测试，11个独立权重实际运行，下方可对照参考录音与生成音频。
+普通版与蒸馏版四段实际音频已做主机 ASR 辅助对照。英文词语对应，中文主要句子对应但句尾有识别偏差；未据此判定发音或音色克隆质量通过。
 
 **普通版：10步 · 中文**
 
-今天午后天气很好，我打开窗户，听见远处有人聊天，水杯也轻轻晃了一下。
+今天午后天气很好，我打开窗户，听见远处有人聊天，水杯也轻轻晃了一下。 下面使用独立 Whisper-base 在主机 CPU 上识别本页实际生成的 WAV，不向识别器提供目标文字。转写可能包含同音字、繁简体和识别器自身误差，用于定位复听位置，不是人工听审或语音合成准确率。
 
 | 项目 | 本次结果 |
 | --- | --- |
@@ -159,6 +159,10 @@ python ~/edgeaccel/zipvoice_card.py \
 | 完整处理耗时 | 24.095168 s（含加载与证据写入） |
 | 保存前浮点峰值 | 1.123989 |
 | PCM16 截断采样 | 8 / 153856 |
+
+| 合成输入文字 | 实际音频的 ASR 辅助转写 | 核对说明 |
+| --- | --- | --- |
+| 今天午后天气很好，我打开窗户，听见远处有人聊天，水杯也轻轻晃了一下。 | 今天午后天气很好我打开窗户听见远处有人聊天水杯也轻轻缌了一下 | 主要句子对应，句尾“晃”出现识别偏差。 |
 
 中文：官方参考录音
 
@@ -174,7 +178,7 @@ python ~/edgeaccel/zipvoice_card.py \
 
 **普通版：10步 · 英文**
 
-This morning, a small train left the station, carrying sleepy passengers toward a bright coastal town.
+This morning, a small train left the station, carrying sleepy passengers toward a bright coastal town. 下面使用独立 Whisper-base 在主机 CPU 上识别本页实际生成的 WAV，不向识别器提供目标文字。转写可能包含同音字、繁简体和识别器自身误差，用于定位复听位置，不是人工听审或语音合成准确率。
 
 | 项目 | 本次结果 |
 | --- | --- |
@@ -185,6 +189,10 @@ This morning, a small train left the station, carrying sleepy passengers toward 
 | 完整处理耗时 | 21.147011 s（含加载与证据写入） |
 | 保存前浮点峰值 | 0.909234 |
 | PCM16 截断采样 | 0 / 153856 |
+
+| 合成输入文字 | 实际音频的 ASR 辅助转写 | 核对说明 |
+| --- | --- | --- |
+| This morning, a small train left the station, carrying sleepy passengers toward a bright coastal town. | This morning, a small train left the station carrying sleepy passengers toward a bright coastal town. | 英文词语对应，未据此评价音色相似度或自然度。 |
 
 英文：官方参考录音
 
@@ -200,7 +208,7 @@ This morning, a small train left the station, carrying sleepy passengers toward 
 
 **蒸馏版：4步 · 中文**
 
-今天午后天气很好，我打开窗户，听见远处有人聊天，水杯也轻轻晃了一下。
+今天午后天气很好，我打开窗户，听见远处有人聊天，水杯也轻轻晃了一下。 下面使用独立 Whisper-base 在主机 CPU 上识别本页实际生成的 WAV，不向识别器提供目标文字。转写可能包含同音字、繁简体和识别器自身误差，用于定位复听位置，不是人工听审或语音合成准确率。
 
 | 项目 | 本次结果 |
 | --- | --- |
@@ -211,6 +219,10 @@ This morning, a small train left the station, carrying sleepy passengers toward 
 | 完整处理耗时 | 16.752182 s（含加载与证据写入） |
 | 保存前浮点峰值 | 1.202389 |
 | PCM16 截断采样 | 26 / 153856 |
+
+| 合成输入文字 | 实际音频的 ASR 辅助转写 | 核对说明 |
+| --- | --- | --- |
+| 今天午后天气很好，我打开窗户，听见远处有人聊天，水杯也轻轻晃了一下。 | 今天午后天气很好我打开窗户听见远处有人聊天水杯也轻轻缌了一下 | 与普通版的辅助转写相同，句尾“晃”仍有识别偏差；不能据此认定两版音质相同。 |
 
 中文：官方参考录音
 
@@ -226,7 +238,7 @@ This morning, a small train left the station, carrying sleepy passengers toward 
 
 **蒸馏版：4步 · 英文**
 
-This morning, a small train left the station, carrying sleepy passengers toward a bright coastal town.
+This morning, a small train left the station, carrying sleepy passengers toward a bright coastal town. 下面使用独立 Whisper-base 在主机 CPU 上识别本页实际生成的 WAV，不向识别器提供目标文字。转写可能包含同音字、繁简体和识别器自身误差，用于定位复听位置，不是人工听审或语音合成准确率。
 
 | 项目 | 本次结果 |
 | --- | --- |
@@ -237,6 +249,10 @@ This morning, a small train left the station, carrying sleepy passengers toward 
 | 完整处理耗时 | 13.447597 s（含加载与证据写入） |
 | 保存前浮点峰值 | 0.804717 |
 | PCM16 截断采样 | 0 / 153856 |
+
+| 合成输入文字 | 实际音频的 ASR 辅助转写 | 核对说明 |
+| --- | --- | --- |
+| This morning, a small train left the station, carrying sleepy passengers toward a bright coastal town. | This morning, a small train left the station carrying sleepy passengers toward a bright coastal town. | 英文词语对应，未据此评价音色相似度或自然度。 |
 
 英文：官方参考录音
 
@@ -275,7 +291,7 @@ This morning, a small train left the station, carrying sleepy passengers toward 
 <details>
 <summary>查看样例环境与运行耗时</summary>
 
-环境：RK3576 + AX8850 16GB M.2。日期：2026-09-28。模型版本：`aa48d14426f528a63ccb0720edb79651597e5316`。
+环境：RK3576 + AX8850 16GB M.2。模型版本：`aa48d14426f528a63ccb0720edb79651597e5316`。
 
 | 组件 | 版本或配置 |
 | --- | --- |
@@ -293,9 +309,8 @@ This morning, a small train left the station, carrying sleepy passengers toward 
 
 适用范围：
 
-- 中文普通版/蒸馏版分别有8/26个采样点保存为PCM16时截断；展示文件沿用官方保存方式。
-- 未完成听感、文字准确率、音色相似度或浮点参考模型对照；仅两个短句，长文本与更多语言待验证。
 - 本次16GB卡结果，不能替代真实8GB容量回归。AX630C及CPU声码器备选路径不在本次范围。
+- 本次 Whisper-base 主机转写仅辅助核对内容，不代替人工听审、发音与自然度评测。
 
 </details>
 

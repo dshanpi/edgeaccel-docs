@@ -20,6 +20,7 @@
       "models/deploy/qwen3-asr-0-6b-ax650-c64-p448-ctx2047",
       "models/deploy/rnnoise",
       "models/deploy/sensevoice",
+      "models/deploy/sensevoice-agenticrag",
       "models/deploy/sherpa-onnx-kws-axera",
       "models/deploy/silerovad",
       "models/deploy/ten-vad",
@@ -39,7 +40,6 @@
       "models/deploy/ax-meeting-studio",
       "models/deploy/openclaw-ax8850-qqbot-media",
       "models/deploy/rag-axera",
-      "models/deploy/sensevoice-agenticrag",
       "models/deploy/speech-translation-axera",
       "models/deploy/spoken-communication-axera",
       "models/deploy/videoagent-ax650n",
@@ -100,7 +100,6 @@
       "models/deploy/gesture-axera",
       "models/deploy/helmet-axera",
       "models/deploy/libdet-axera",
-      "models/deploy/locateanything-3b",
       "models/deploy/mixformerv2",
       "models/deploy/mobilesam",
       "models/deploy/owlvit2",
@@ -211,8 +210,7 @@
       "models/deploy/real-esrgan",
       "models/deploy/real-esrgan-axera",
       "models/deploy/rife-axera",
-      "models/deploy/superresolution",
-      "models/deploy/z-image-turbo"
+      "models/deploy/superresolution"
     ]
   },
   {
@@ -262,7 +260,6 @@
       "models/deploy/qwen3-4b-gptq-int4",
       "models/deploy/qwen3-4b-instruct-2507-gptq-int4",
       "models/deploy/qwen3-4b-instruct-2507-gptq-int8",
-      "models/deploy/qwenpaw-flash-2b-gptq-int4-ax650-c256-p14336-ctx17408",
       "models/deploy/smollm2-360m-instruct",
       "models/deploy/smollm3-3b"
     ]
@@ -287,6 +284,7 @@
       "models/deploy/internvl3-5-2b",
       "models/deploy/internvl3-5-2b-gptq-int4",
       "models/deploy/janus-pro-1b",
+      "models/deploy/locateanything-3b",
       "models/deploy/minicpm-v-4",
       "models/deploy/minicpm-v-4-6",
       "models/deploy/minicpm-v-4-6-ax637",
@@ -326,11 +324,20 @@
       "models/deploy/qwen3-5-4b-ax650-gptq-int4-c512-p30k-ctx32k",
       "models/deploy/qwen3-5-4b-gptq-int4",
       "models/deploy/qwenpaw-2b-flash-gptq-int4",
+      "models/deploy/qwenpaw-flash-2b-gptq-int4-ax650-c256-p14336-ctx17408",
       "models/deploy/smolvlm-256m-instruct",
       "models/deploy/smolvlm2-256m-video-instruct-ax650",
       "models/deploy/smolvlm2-500m-video-instruct",
       "models/deploy/smolvlm2-500m-video-instruct-python",
       "models/deploy/xiaomi-mimo-vl-miloco-7b-ax650-gptq-int4"
+    ]
+  },
+  {
+    "type": "category",
+    "label": "图像生成",
+    "collapsed": true,
+    "items": [
+      "models/deploy/z-image-turbo"
     ]
   }
 ]

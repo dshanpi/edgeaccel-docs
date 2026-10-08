@@ -7,7 +7,10 @@
       "sampleRate": 44100,
       "channels": 1,
       "seconds": 2.4541496598639454,
-      "sha256": "d477a421245eed58300626e3c8663be1d3c738810179c28d33ccc8200e3914d1"
+      "sha256": "d477a421245eed58300626e3c8663be1d3c738810179c28d33ccc8200e3914d1",
+      "asrText": "你好,欢迎使用算栗塔",
+      "asrModel": "Whisper-base（主机 CPU）",
+      "asrObservation": "“算力卡”被识别为近音文字，需结合原音频复听。"
     },
     {
       "file": "sample-2.wav",
@@ -15,7 +18,10 @@
       "sampleRate": 44100,
       "channels": 1,
       "seconds": 3.5570975056689345,
-      "sha256": "68f1e8e34e427616750f768e2a26c8db20e0e76f95ff8e2fc9b9cdba92f0c013"
+      "sha256": "68f1e8e34e427616750f768e2a26c8db20e0e76f95ff8e2fc9b9cdba92f0c013",
+      "asrText": "模型已經加在完成,可以開始推離",
+      "asrModel": "Whisper-base（主机 CPU）",
+      "asrObservation": "“加载”“推理”出现同音或近音识别差异。"
     },
     {
       "file": "sample-3.wav",
@@ -23,7 +29,47 @@
       "sampleRate": 44100,
       "channels": 1,
       "seconds": 3.7196371882086168,
-      "sha256": "806be3f23d12f350c9c232ee27029a5af2a37c2ffaf51f4f0c81f8c9f9fa4ec4"
+      "sha256": "806be3f23d12f350c9c232ee27029a5af2a37c2ffaf51f4f0c81f8c9f9fa4ec4",
+      "asrText": "新剪查店原鏈間然後啟動程序",
+      "asrModel": "Whisper-base（主机 CPU）",
+      "asrObservation": "“请检查电源连接”等词出现识别偏差。"
     }
-  ]
+  ],
+  "auxiliarySpeechReview": {
+    "reviewedAt": "2026-10-01T18:13:14.127522+00:00",
+    "asrRepo": "openai/whisper-base",
+    "asrRevision": "e37978b90ca9030d5170a5c07aadb050351a65bb",
+    "device": "host CPU",
+    "initialPrompt": null,
+    "newNpuRuns": 0,
+    "scope": "下面使用独立 Whisper-base 在主机 CPU 上识别本页实际生成的 WAV，不向识别器提供目标文字。转写可能包含同音字、繁简体和识别器自身误差，用于定位复听位置，不是人工听审或语音合成准确率。",
+    "originalSynthesisCapacity": "8GB",
+    "originalSynthesisDate": "2026-09-23",
+    "results": [
+      {
+        "audioPath": "/validation/effects/melotts/outputs/sample-1.wav",
+        "sha256": "d477a421245eed58300626e3c8663be1d3c738810179c28d33ccc8200e3914d1",
+        "targetText": "你好，欢迎使用算力卡。",
+        "asrTranscript": "你好,欢迎使用算栗塔",
+        "language": "zh",
+        "observation": "“算力卡”被识别为近音文字，需结合原音频复听。"
+      },
+      {
+        "audioPath": "/validation/effects/melotts/outputs/sample-2.wav",
+        "sha256": "68f1e8e34e427616750f768e2a26c8db20e0e76f95ff8e2fc9b9cdba92f0c013",
+        "targetText": "模型已经加载完成，可以开始推理。",
+        "asrTranscript": "模型已經加在完成,可以開始推離",
+        "language": "zh",
+        "observation": "“加载”“推理”出现同音或近音识别差异。"
+      },
+      {
+        "audioPath": "/validation/effects/melotts/outputs/sample-3.wav",
+        "sha256": "806be3f23d12f350c9c232ee27029a5af2a37c2ffaf51f4f0c81f8c9f9fa4ec4",
+        "targetText": "请检查电源连接，然后启动程序。",
+        "asrTranscript": "新剪查店原鏈間然後啟動程序",
+        "language": "zh",
+        "observation": "“请检查电源连接”等词出现识别偏差。"
+      }
+    ]
+  }
 }

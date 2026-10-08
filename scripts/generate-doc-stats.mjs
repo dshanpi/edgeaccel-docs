@@ -30,7 +30,8 @@ for (const run of runs) {
     };
   }
 }
-fs.writeFileSync(path.join(root, 'src/data/siteStats.json'), JSON.stringify({
+const output = path.join(root, 'src/data/siteStats.json');
+const content = JSON.stringify({
   documents: documents.length,
   models: models.filter(model => model.kind !== 'resource').length,
   resources: models.filter(model => model.kind === 'resource').length,
@@ -42,4 +43,13 @@ fs.writeFileSync(path.join(root, 'src/data/siteStats.json'), JSON.stringify({
   modelsWithValidationRecords: new Set(runs.map(run => run.modelId)).size,
   validationRuns: runs.length,
   modelValidationSummaries: summaries,
-}, null, 2) + '\n');
+}, null, 2) + '\n';
+if (!fs.existsSync(output) || fs.readFileSync(output, 'utf8') !== content) {
+  const temporary = `${output}.${process.pid}.tmp`;
+  fs.writeFileSync(temporary, content, {flag: 'wx'});
+  try {
+    fs.renameSync(temporary, output);
+  } finally {
+    if (fs.existsSync(temporary)) fs.unlinkSync(temporary);
+  }
+}

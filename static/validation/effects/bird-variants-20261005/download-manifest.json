@@ -1,0 +1,140 @@
+{
+  "modelId": "Bird-Species-Classification",
+  "repo": "AXERA-TECH/Bird-Species-Classification",
+  "revision": "b81b4cb3be067a85ba730c5b2a67c566d3d9af68",
+  "files": [
+    {
+      "path": "README.md",
+      "size": 10790,
+      "verifiedHashes": {
+        "sha256": "b51acfabe03571712186d0da3cb95671f21412fda0bf4b62ef2cbbeabbdb1630"
+      }
+    },
+    {
+      "path": "axmodel_infer.py",
+      "size": 11741,
+      "verifiedHashes": {
+        "sha256": "0ff920923d8edbffa0ea13f2cae98d611e1718ddbf03ebae71049657d7d3ac35"
+      }
+    },
+    {
+      "path": "axmodel_infer_end2end.py",
+      "size": 31824,
+      "verifiedHashes": {
+        "sha256": "eadb1558a78c7d294cc693bc90d1521cb31855f562e6d6aaf7966571bda55778"
+      }
+    },
+    {
+      "path": "class_name.txt",
+      "size": 109688,
+      "verifiedHashes": {
+        "sha256": "c39ee878a82b8dd45d69725c9d504a046effdeb01f6d05ac5c6a22c70506ddd4"
+      }
+    },
+    {
+      "path": "config.json",
+      "size": 0,
+      "verifiedHashes": {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "path": "onnx_infer.py",
+      "size": 11896,
+      "verifiedHashes": {
+        "sha256": "bf70b7a98e4d46debbc90f2dc13ad2b99aa82197ecf7aaefde047bfbf9fc3cd1"
+      }
+    },
+    {
+      "path": "onnx_infer_end2end.py",
+      "size": 31672,
+      "verifiedHashes": {
+        "sha256": "24e55e0b85a49592fa42961114b326acf0c08db9841644e1ffec0570573d3f10"
+      }
+    },
+    {
+      "path": "quant_model_eval.py",
+      "size": 15931,
+      "verifiedHashes": {
+        "sha256": "b93e30b77373e57d1ca41b0f3e95071a25047af0ca6d228eda7f57d7a5b653d4"
+      }
+    },
+    {
+      "path": "test_images/03111_2c0dfa5a-c4a0-47f8-ac89-6a289208050f.jpg",
+      "size": 105946,
+      "verifiedHashes": {
+        "sha256": "1ae2bc22d3f8cd5d59822b0faf99deaadc4bde4cfc9be262524697214f3d6fe5"
+      }
+    },
+    {
+      "path": "test_images/03332_01b365c3-a741-4f45-bac2-4345bc901ec6.jpg",
+      "size": 89893,
+      "verifiedHashes": {
+        "sha256": "83f927f95e9d8724cff65421ec25627415c00ede4298705c3f0a39b3d0d77bd9"
+      }
+    },
+    {
+      "path": "test_images/03412_0ffc115b-43b4-4474-a373-24233f391de3.jpg",
+      "size": 45677,
+      "verifiedHashes": {
+        "sha256": "4625ca6ee197480977fad86f38a04571adb517d04b42975d390c1f2e5af4ce5d"
+      }
+    },
+    {
+      "path": "test_images/03615_0dfbf6ae-434d-4648-b5d2-08412546ea64.jpg",
+      "size": 86105,
+      "verifiedHashes": {
+        "sha256": "1f1dbd4119a39d3969ac9f34b59f9407bbb59fc7c32cc3c27f7aa93a490dbeef"
+      }
+    },
+    {
+      "path": "test_images/04251_3a52191e-be71-4539-98ea-14a8f2347330.jpg",
+      "size": 34086,
+      "verifiedHashes": {
+        "sha256": "4049b07ff83ae7ff9085d4dcc0b8a867cece51423a45790a102d5aae584dbba5"
+      }
+    },
+    {
+      "path": "test_images/04405_0c5a6785-0bc2-49d9-9702-b9e94ba9b686.jpg",
+      "size": 80034,
+      "verifiedHashes": {
+        "sha256": "e1de3d2581befe850dfadb4963945f227e1dc51548a18a552272774b5ec6dfb7"
+      }
+    },
+    {
+      "path": "test_images/04593_3d74d5a7-15b1-4bb9-af6f-1bcd78485787.jpg",
+      "size": 98021,
+      "verifiedHashes": {
+        "sha256": "e92aee2984391a9a9fea5599525ea5aafda1bd37ad97e46973576ebe47c9cca7"
+      }
+    },
+    {
+      "path": "model/bird-end2end/AX650/bird_det_650_npu1.axmodel",
+      "size": 1979445,
+      "verifiedHashes": {
+        "sha256": "33dba33991e259e974e97d24689bfc5fc6469ffcc3d3eb97890e2d50b5a8de8a"
+      }
+    },
+    {
+      "path": "model/bird-end2end/AX650/bird_rec_650_npu1.axmodel",
+      "size": 22987180,
+      "verifiedHashes": {
+        "sha256": "5a32ad4d86f141602734d8ea19e81c8ae3b8d5bd636cf1382c2320ac2fa54bed"
+      }
+    },
+    {
+      "path": "model/bird-l/AX650/bird_650_npu3.axmodel",
+      "size": 23236891,
+      "verifiedHashes": {
+        "sha256": "bfdb20082d3972977699a6fdf1c97100016cdcccbd9591462cc2095e63ad1c04"
+      }
+    },
+    {
+      "path": "model/bird-m/AX650/bird_650_npu3.axmodel",
+      "size": 12209712,
+      "verifiedHashes": {
+        "sha256": "e544a71cb3ca619c8f064f8952193453c33e816467e03d2b5e7bed75aec99038"
+      }
+    }
+  ]
+}

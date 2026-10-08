@@ -1,0 +1,63 @@
+{
+  "modelId": "RTMPose",
+  "repo": "AXERA-TECH/RTMPose",
+  "revision": "726c3acf17cff3a13958bc30da0aa6bf125312b1",
+  "files": [
+    {
+      "path": "README.md",
+      "size": 3807,
+      "verifiedHashes": {
+        "sha256": "f8a01feaaf1a151831a1f101a14285ba10dbd59523444d29e35e73a10210f2c0"
+      }
+    },
+    {
+      "path": "ax_infer.py",
+      "size": 5575,
+      "verifiedHashes": {
+        "sha256": "cd31445b2135a2e4bc9f53d94059e7aca89581f1b5912e329c560e13712a92d8"
+      }
+    },
+    {
+      "path": "config.json",
+      "size": 5704,
+      "verifiedHashes": {
+        "sha256": "a5b25892a2843bae4ae5f7a2b45c3b677b440a2785c04757021c8feff4cd3d94"
+      }
+    },
+    {
+      "path": "export_onnx.py",
+      "size": 3597,
+      "verifiedHashes": {
+        "sha256": "7e37c2f6a98a91f9f8b2dd78199d78e764dc44d08419d120660bff084562351c"
+      }
+    },
+    {
+      "path": "onnx_infer.py",
+      "size": 5380,
+      "verifiedHashes": {
+        "sha256": "0a781fc3231b3bcdbf02933e1e4c1bca13838cce08f5497d371be76acab5baff"
+      }
+    },
+    {
+      "path": "replace_hardsigmoid.py",
+      "size": 3466,
+      "verifiedHashes": {
+        "sha256": "0755e175c91b6a95c55de14e3eca7077b88636ac7a0b296256504ee87d958beb"
+      }
+    },
+    {
+      "path": "test.jpg",
+      "size": 133674,
+      "verifiedHashes": {
+        "sha256": "83981537a7baeafbeb9c8cb67b3484dc26433f574b3685d021fa537e277e4726"
+      }
+    },
+    {
+      "path": "AX650/rtmpose_m_npu1.axmodel",
+      "size": 18848816,
+      "verifiedHashes": {
+        "sha256": "c4ebc503bdf788009706c60876b3ecd6ed12a833888286868f4cf4208a1eb91e"
+      }
+    }
+  ]
+}

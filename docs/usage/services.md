@@ -1,101 +1,68 @@
 ---
-title: "六路推流：演示版服务管理"
-sidebar_label: "演示版：服务与开机自启"
-pagination_prev: projects/six-streams
-pagination_next: null
+title: "管理六路推流服务"
+sidebar_label: "6. 停止与重启"
+pagination_prev: ax650n/applications/six-streams/validation
+pagination_next: ax650n/applications/six-streams/frame-rate
 ---
 
-# 管理演示版服务与开机自启
+# 停止与重启六路推流
 
-项目源码见 [GitHub 仓库](https://github.com/dshanpi/ax8850-multistream-demo)。从仓库新部署时，按仓库 README 管理服务；本页的开机自启与桌面服务说明仅对应下述预装环境。
+本页对应 `dshanpi/ax8850-multistream-demo` 仓库根目录脚本，服务名称为 `ax8850-multistream` 和 `ax8850-local-preview`。
 
-本节适用于已安装 `~/ax8850-multistream-demo` 的 RK3576 演示环境。其他部署应先核对本机路径与服务名。切换到单模型测试前停止占用卡资源的演示任务。
+## 停止服务并释放算力卡
 
-## 确认部署说明
-
-在该主机的 Linux 终端执行：
+先关闭播放器，在 RK3576 上执行：
 
 ```bash
-test -d ~/ax8850-multistream-demo
-cat ~/ax8850-multistream-demo/deploy/8GB-开机自启说明.md
-systemctl status ax8850-multistream ax8850-local-preview --no-pager
+cd ~/ax8850-multistream-demo
+bash stop.sh
+systemctl is-active ax8850-multistream ax8850-local-preview
+sudo ss -ltnp | grep -E ':(8554|8850)\b' || true
+```
+
+两个服务应不再为 `active`，对应端口不再由本项目监听。临时服务停止后可能被 systemd 回收，因此显示未找到也正常。若仍有监听进程，检查所属应用，不要直接终止其他业务。
+
+查看退出记录：
+
+```bash
+sudo journalctl -u ax8850-multistream -n 30 --no-pager
+```
+
+正常结束记录包含 `event` 为 `exit` 且 `errors` 为 `0`；异常退出时保留日志并排查，不能仅以端口消失判定处理流程正常。
+
+## 重新加载配置
+
+修改 `configs/six.json` 后，先停止再启动：
+
+```bash
+cd ~/ax8850-multistream-demo
+bash stop.sh
+bash start.sh
+systemctl is-active ax8850-multistream ax8850-local-preview
+```
+
+两个服务恢复 `active` 后，重新检查六路统计和播放效果。运行中再次执行 `start.sh` 不会加载新的配置。
+
+## 区分临时服务与开机自启
+
+仓库的 `start.sh` 使用 `systemd-run --collect` 创建临时服务。关闭 SSH 不影响运行，但系统重启后需要再次执行 `bash start.sh`。无需对这些临时服务执行 `systemctl enable`。
+
+若重启后演示自动出现，说明系统另有预装服务或桌面自启动项。先检查配置来源：
+
+```bash
+systemctl cat ax8850-multistream ax8850-local-preview
+systemctl is-enabled ax8850-multistream ax8850-local-preview
 systemctl --user status ax8850-vlc-preview --no-pager
+ls ~/.config/autostart/
 ```
 
-本页对应演示版；`~/ax-pipeline/six` 开发版的服务名与启停命令见[启动与观看](../ax650n/applications/six-streams/usage.md)。尚未确定部署版本时，先查阅[项目总览](../projects/six-streams.md)。
-
-## 临时停止演示
+只有确认是需要取消的持久化演示服务后，才执行对应命令：
 
 ```bash
-systemctl --user stop ax8850-vlc-preview
-sudo systemctl stop ax8850-local-preview ax8850-multistream
-systemctl show ax8850-multistream ax8850-local-preview \
-  -p Id -p ActiveState -p SubState -p MainPID -p Result
-pgrep -af 'six_app|local_preview|vlc'
+sudo systemctl disable --now ax8850-multistream ax8850-local-preview
+systemctl --user disable --now ax8850-vlc-preview
 ```
 
-目标服务应无运行中的主进程，演示程序不再占用设备。`pgrep` 可能列出其他无关 VLC 进程，应核对命令路径，不能直接全部终止。停止超时会使服务显示 `failed`；检查 `MainPID`、相关进程和日志后再判断是否确实退出。
+用户服务命令在原桌面用户下执行；系统不存在该服务时跳过。若自启动来自 `.desktop` 文件，按实际文件处理，不要删除整个自启动目录。
 
-这一步只停止当前运行，保留开机自启。再次启动主机后演示可能重新运行。
-
-## 按需关闭开机自启
-
-需要长期保留设备给其他模型时，确认该部署的启停关系后执行：
-
-```bash
-systemctl --user stop ax8850-vlc-preview
-sudo systemctl disable --now ax8850-local-preview ax8850-multistream
-
-mkdir -p ~/.config/autostart-disabled
-for name in ax8850-preview.desktop ax8850-preview.desktop.disabled; do
-  if [ -f "$HOME/.config/autostart/$name" ]; then
-    mv --backup=numbered -- "$HOME/.config/autostart/$name" \
-      "$HOME/.config/autostart-disabled/$name"
-  fi
-done
-systemctl --user daemon-reload
-```
-
-桌面启动文件必须移出 `~/.config/autostart/`。本机的 `systemd-xdg-autostart-generator` 仍会读取目录内改名为 `.desktop.disabled` 的文件，并生成登录启动任务。上面的循环兼容原文件名和已经改名的文件；目标位置存在同名文件时保留编号备份。
-
-`ax8850-vlc-preview.service` 是由桌面入口触发的 `static` 用户服务，没有独立的启用配置。停止该服务并移走桌面入口即可，不用对它执行 `enable` 或 `disable`。
-
-完成后检查：
-
-```bash
-systemctl show ax8850-multistream ax8850-local-preview \
-  -p Id -p UnitFileState -p ActiveState -p MainPID
-systemctl --user show ax8850-vlc-preview -p ActiveState -p MainPID
-systemctl --user list-unit-files --no-pager | grep -F 'app-ax8850'
-ps -eo pid,args | grep -E '[s]ix_app|[a]x8850-multistream-demo|[a]x8850-vlc'
-ss -ltnp | grep -E ':8554|:8850'
-```
-
-两项系统服务应为 `disabled`、`inactive`、`MainPID=0`，VLC 用户服务应为 `inactive`、`MainPID=0`。后面三项检查应无匹配输出；有输出时先核对具体服务、进程或端口用途。重新登录或重启后可重复检查，确认没有再次启动。
-
-恢复自启时按设备上的部署说明恢复服务和桌面文件，避免同时启用多个预览入口。首次恢复后检查模型配置、端口及进程数量。
-
-## 保留停机日志
-
-```bash
-journalctl -u ax8850-multistream -u ax8850-local-preview \
-  -n 100 --no-pager
-```
-
-释放资源后再按[设备检查](device-check.md)确认空闲状态。需要重新观看时，按本机 `deploy/8GB-开机自启说明.md` 恢复对应服务与预览，不套用开发版的 `start.sh`。
-
-<details>
-<summary>参考配置的重启检查记录（2026-09-23）</summary>
-
-原测试主机重启后的状态如下：
-
-| 检查项 | 重启后实测状态 |
-|---|---|
-| `ax8850-multistream.service` | `disabled`、`inactive`、`MainPID=0` |
-| `ax8850-local-preview.service` | `disabled`、`inactive`、`MainPID=0` |
-| 用户服务 `ax8850-vlc-preview.service` | `inactive`、`MainPID=0` |
-| 用户启动单元 `app-ax8850*` | 无匹配单元 |
-
-六路推流和预览服务没有随此次重启重新启动。该记录仅验证演示服务的停用配置，不代表模型部署或长期稳定性验证通过。
-
-</details>
+旧开发环境可能使用 `ax-six-rtsp` 和 `ax-six-local-preview`。它们与新仓库服务不同；迁移时先确认旧服务占用情况，再停止旧部署。历史 `deploy/8GB-开机自启说明.md` 属于预装环境，不是本指南所用仓库的安装步骤。

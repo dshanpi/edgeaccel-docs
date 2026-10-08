@@ -8,116 +8,189 @@ description: "Qwen3-VL-Embedding-2B-AX650-C128_P1280_CTX1407 的 M.2 算力卡�
 
 Qwen3-VL-Embedding-2B-AX650-C128_P1280_CTX1407 用于文本或图像向量。本页说明 M.2 算力卡的接入条件、部署步骤与结果检查方法。
 
-> 本机尚未实测。有 AXCL 部署步骤。
+> 已实测，效果仍需评估。[查看部署效果](#查看部署效果)。
 
 ## 准备运行环境
 
-在连接算力卡的 Linux 主机终端执行，RK3576 使用 ARM64 环境。首次部署先完成[驱动与设备检查](../../usage/device-check.md)、[编译 AXCL 大模型运行时](../llm-runtime.md)和[下载工具安装](../../usage/download-models.md#使用-hugging-face-下载)。已完成这些步骤可直接下载模型。
+本页效果展示使用 **RK3576 + AX8850 16GB M.2**；其他容量或平台需重新确认模型能否加载并正确运行。
+
+在连接算力卡的 Linux 主机终端执行，RK3576 使用 ARM64 环境。首次部署先完成[驱动与设备检查](../../usage/device-check.md)、[准备主机环境](../../getting-started/prepare.md)和[下载工具安装](../../usage/download-models.md#使用-hugging-face-下载)。已完成这些步骤可直接下载模型。
 
 后文使用设备 0，运行前用 `axcl-smi` 确认设备可用。
 
 ## 下载模型与样例
 
-本页使用 `AXERA-TECH/Qwen3-VL-Embedding-2B-AX650-C128_P1280_CTX1407` 的固定版本。仓库可能包含多个芯片或模型规格，下载前检查磁盘空间。
+本页使用 `AXERA-TECH/Qwen3-VL-Embedding-2B-AX650-C128_P1280_CTX1407` 的固定版本。下面下载本页选用的 33 个文件。
 
 ```bash
 MODEL_DIR=~/edgeaccel/models/qwen3-vl-embedding-2b-ax650-c128-p1280-ctx1407/97ecf827ecfc
 mkdir -p "$MODEL_DIR"
 ~/edgeaccel/hf-env/bin/hf download AXERA-TECH/Qwen3-VL-Embedding-2B-AX650-C128_P1280_CTX1407 \
+  --include "*.axmodel" "config.json" "model.embed_tokens.weight.bfloat16.bin" "qwen3_tokenizer.txt" \
   --revision 97ecf827ecfc3b07d35b74b852981d3415d14a1a \
   --local-dir "$MODEL_DIR"
 cd "$MODEL_DIR"
 ```
 
 保留当前终端中的 `MODEL_DIR` 变量，后续命令沿用此目录。下载受阻或需要离线复制时，见[下载方式与文件校验](../../usage/download-models.md)。
-## 核对运行配置
 
-配置文件：`config.json`。
+## 准备图文检索运行程序
 
-| 项目 | 当前配置 |
-| --- | --- |
-| 运行时模型名称 | `AXERA-TECH/Qwen3-VL-Embedding-2B` |
-| 分词器类型（tokenizer_type） | `Qwen3VL` |
-| 多模态类型（vlm_type） | `Qwen3VL` |
-| Transformer 层数 | 28 |
-| 分片命名模板 | `qwen3_vl_text_p128_l%d_together.axmodel` |
-| Embedding 模式 | 是，使用 /v1/embeddings |
+本例在 RK3576 主机通过 AXCL 使用 AX8850 16GB M.2 算力卡，将图片和文本转换成 2048 维向量，再用余弦相似度检索图片。使用 Linux ARM64、AXCL 3.16.0，以及本页固定版本的 2B 权重。
 
-| 配置字段 | 文件路径 | 同提交文件表 |
-| --- | --- | --- |
-| `filename_post_axmodel` | `qwen3_vl_text_post.axmodel` | 已找到 |
-| `filename_tokens_embed` | `model.embed_tokens.weight.bfloat16.bin` | 已找到 |
-| `url_tokenizer_model` | `qwen3_tokenizer.txt` | 已找到 |
-| `filename_image_encoder_axmodel` | `Qwen3-VL-Embedding-2B_vision_384x384.axmodel` | 已找到 |
-
-逐层核对 28 个分片，不能用同系列其他版本补缺。文件名检查只能证明文件布局一致，实际张量和后端兼容性仍需加载验证。
-
-## 检查完整模型包
-
-在模型根目录执行文件检查：
+下载[配套运行包](/examples/qwen3-vl-embedding-20261001.tar.gz)，保存到主机的 `~/edgeaccel`。包内包含运行程序、固定源码与适配文件、三张样图、检索示例和模型校验工具。保留前文下载模型后设置的 `MODEL_DIR`，在同一终端执行：
 
 ```bash
-cd "$MODEL_DIR"
-python3 - <<'PY'
-import json
-from pathlib import Path
-p = Path(".")
-c = json.loads((p / "config.json").read_text())
-files = [c["template_filename_axmodel"] % i for i in range(c["axmodel_num"])]
-files += [c[k] for k in ["filename_post_axmodel","filename_tokens_embed","url_tokenizer_model","filename_image_encoder_axmodel"] if c.get(k)]
-missing = [str(p / f) for f in files if not (p / f).is_file()]
-assert not missing, missing
-print("模型配套文件齐全")
-PY
+cd ~/edgeaccel
+tar -xzf qwen3-vl-embedding-20261001.tar.gz
+sudo apt-get install -y libopencv-dev
+chmod +x qwen3-vl-embedding/bin/axllm
+ldd qwen3-vl-embedding/bin/axllm
+python3 qwen3-vl-embedding/verify_models.py --model-dir "$MODEL_DIR"
 ```
 
-此包按新 `axllm` 配置接口核对。使用[本站编译的 AXCL 程序](../llm-runtime.md)，包内 `bin/axllm` 可能是 AX650 板端程序，不能仅因同为 ARM64 就直接使用。
+`ldd` 应找到全部动态库，模型校验应输出 `Verified 33 model files`。模型及配套文件约 3.3 GB，可把 `MODEL_DIR` 指向已挂载的存储卡。运行程序基于官方 AX-LLM 提交 `a51df2d43b3ec1c49b30792bbe4fad5a964231ea`，包含 AXCL 设备与两组形状 K/V 缓冲区适配。
 
-## 启动单卡服务
-
-终端 1 执行，保持服务前台运行：
+## 启动图文向量服务
 
 ```bash
-AXLLM=~/edgeaccel/src/ax-llm/build-axcl/install/bin/axllm
-"$AXLLM" version
-AXLLM_DEVICES=0 "$AXLLM" serve "$MODEL_DIR" --port 8000
+cd ~/edgeaccel
+OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2 \
+  ./qwen3-vl-embedding/bin/axllm serve "$MODEL_DIR" --port 3611
 ```
 
-版本输出必须显示 AXCL 后端。保留内存预检；若提示 CMM 不足，先缩小模型或使用较短上下文的独立编译包，不关闭内存预检强制运行。
-
-## 发送向量提取请求
-
-在同一主机终端 2 执行。先从 `/v1/models` 获取实际模型名称。先把一张内容已知的图片保存到 `~/edgeaccel/inputs/test.jpg`，再运行客户端。
+保持该终端运行。在 RK3576 的另一个终端检查接口：
 
 ```bash
-python3 - <<'PY'
-import json, urllib.request, base64
-from pathlib import Path
-base = "http://127.0.0.1:8000"
-with urllib.request.urlopen(base + "/v1/models", timeout=30) as r:
-    model = json.load(r)["data"][0]["id"]
-payload = {"model": model, "input": ["A cat is sitting on the mat.", "A cat is sitting on the mat.", "There is a cat on the floor.", "The capital of France is Paris."], "encoding_format": "float"}
-endpoint = "/v1/embeddings"
-request = urllib.request.Request(base + endpoint,
-    data=json.dumps(payload).encode(), headers={"Content-Type": "application/json"})
-with urllib.request.urlopen(request, timeout=300) as r:
-    result = json.load(r)
-vectors = [item["embedding"] for item in result["data"]]
-print("向量数量：", len(vectors))
-print("各向量维度：", [len(vector) for vector in vectors])
-PY
+curl --noproxy '*' --fail http://127.0.0.1:3611/health
+curl --noproxy '*' --fail http://127.0.0.1:3611/v1/models
 ```
 
-检查 data 中向量数量与输入条数一致、维度固定，并且数值有限。Embedding 模型不使用交互式 run 或聊天接口。
+模型列表应包含 `AXERA-TECH/Qwen3-VL-Embedding-2B`。首次启动需要加载模型；出现服务就绪信息后再发送请求。使用结束后，在服务终端按 `Ctrl+C` 释放模型。
 
-运行时依据：[固定源码版本](https://github.com/AXERA-TECH/ax-llm/tree/8501c22b940f8c5804cb35044c5ffc136918b8f1)、[配置接口](https://github.com/AXERA-TECH/ax-llm/blob/8501c22b940f8c5804cb35044c5ffc136918b8f1/docs/configuration.md)。
+## 运行中英文图片检索
+
+以下命令在运行服务的同一台 RK3576 上执行。图片路径由服务端读取，应使用主机上存在的文件。
+
+```bash
+cd ~/edgeaccel
+python3 qwen3-vl-embedding/retrieval_demo.py \
+  --images "$HOME/edgeaccel/qwen3-vl-embedding/images" \
+  --api http://127.0.0.1:3611 \
+  --output "$HOME/edgeaccel/results/qwen3-vl-embedding/retrieval-result.json"
+```
+
+程序依次编码鸟、猫、狗三张图片，再发送 `a bird`、`a cat`、`a dog`、`一只鸟`、`一只猫`、`一只狗` 六个查询。终端按相似度从高到低列出图片，JSON 保存原始输入、2048 维向量、请求耗时和排序。
+
+该示例使用 `messages` 接口，每次编码一个输入，统一指令为 `Represent the user's input.`。分词器使用仓库内的 `qwen3_tokenizer.txt`；运行程序在序列末尾添加 EOS，取最后一个位置的特征并作 L2 归一化。余弦相似度用于比较相关性，不是分类概率。
+
+使用自己的图片时，修改示例中的图片文件名与查询文本，保持图片和文本的指令一致。图文联合输入可在同一条用户消息的 `content` 中同时放入 `image_url` 和 `text`。同一图片的后续请求可能使用视觉特征缓存，不能直接与首次编码耗时比较。
+
+<details>
+<summary>重新编译运行程序</summary>
+
+若系统动态库与预编译程序不匹配，使用包内固定源码重新编译：
+
+```bash
+sudo apt-get install -y build-essential cmake libopencv-dev
+cd ~/edgeaccel/qwen3-vl-embedding
+mkdir source
+tar -xzf official-source.tar.gz -C source
+cp -r adapted/src/. source/src/
+cmake -S source -B build -DCMAKE_BUILD_TYPE=Release \
+  -DBUILD_AX650=OFF -DBUILD_AXCL=ON
+cmake --build build --target axllm -j1
+```
+
+后续命令改用 `build/axllm`。固定源码包已包含对应版本子模块。
+
+</details>
+
 
 ## 查看部署效果
 
-**本机尚未实测。** 部署后请按以下项目检查输出。
+**已运行，效果仍需评估** · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
 
-- 检查向量维度、有限数值及是否需要归一化；文本与图片使用配套编码器。
-- 用匹配对、不匹配对比较相似度排序，再建立小型索引；更换模型后重建索引。
+已在 16GB M.2 算力卡运行 Qwen3-VL-Embedding 2B 图文向量服务，完成中英文图片检索。
+
+**中英文图文检索**
+
+六个中英文查询均将对应图片排在第一位，图片反查文本的首选也匹配。图片和文本各重复两次，返回向量逐元素一致。分数为余弦相似度，不是分类概率。
+
+<div className="model-effect-gallery">
+
+<figure>
+
+[![输入图片：鸟](../../../static/validation/effects/qwen3-vl-embedding-2b-ax650-c128-p1280-ctx1407-20261001/bird.jpg)](../../../static/validation/effects/qwen3-vl-embedding-2b-ax650-c128-p1280-ctx1407-20261001/bird.jpg)
+
+<figcaption>输入图片：鸟</figcaption>
+</figure>
+
+<figure>
+
+[![输入图片：猫](../../../static/validation/effects/qwen3-vl-embedding-2b-ax650-c128-p1280-ctx1407-20261001/cat.jpg)](../../../static/validation/effects/qwen3-vl-embedding-2b-ax650-c128-p1280-ctx1407-20261001/cat.jpg)
+
+<figcaption>输入图片：猫</figcaption>
+</figure>
+
+<figure>
+
+[![输入图片：狗](../../../static/validation/effects/qwen3-vl-embedding-2b-ax650-c128-p1280-ctx1407-20261001/dog-chai.jpeg)](../../../static/validation/effects/qwen3-vl-embedding-2b-ax650-c128-p1280-ctx1407-20261001/dog-chai.jpeg)
+
+<figcaption>输入图片：狗</figcaption>
+</figure>
+
+</div>
+
+| 语言 | 查询 | 鸟图片 | 猫图片 | 狗图片 | 首选图片 |
+| --- | --- | --- | --- | --- | --- |
+| en | a bird | 0.3660 | 0.2537 | 0.1711 | 鸟 |
+| en | a cat | 0.2070 | 0.3996 | 0.2427 | 猫 |
+| en | a dog | 0.2076 | 0.2863 | 0.3621 | 狗 |
+| zh | 一只鸟 | 0.3242 | 0.2558 | 0.1601 | 鸟 |
+| zh | 一只猫 | 0.1943 | 0.3770 | 0.2272 | 猫 |
+| zh | 一只狗 | 0.1919 | 0.2781 | 0.3068 | 狗 |
+
+| 检查项 | 本次结果 |
+| --- | --- |
+| 接口请求 | 21 次成功，含 3 次图文联合输入 |
+| 向量输出 | 2048 维，有限数值，L2 范数约 1 |
+| 算力卡执行 | 30 个 AXModel / 864 次调用 |
+| 服务启动 | 120.827 s |
+| 完整流程 | 359.175 s（含文件校验） |
+
+**使用时注意：**
+
+- 本次仅验证固定 2B 权重在 16GB 卡上的基本运行；真实 8GB、多用户并发和长期稳定性尚未验证。
+- 三张样图用于演示检索流程，不能代表大规模数据集精度；图文联合输入仅核对输出，未做人工相关性评估。
+
+这些结果用于对照部署后的输出，未覆盖完整数据集精度或长期连续运行。
+
+<details>
+<summary>查看样例环境与运行耗时</summary>
+
+环境：RK3576 + AX8850 16GB M.2。模型版本：`97ecf827ecfc3b07d35b74b852981d3415d14a1a`。
+
+| 组件 | 版本或配置 |
+| --- | --- |
+| 主机 / 内核 | RK3576，约 4GB RAM，6.1.115-vendor-rk35xx |
+| AXCL / 驱动 | V3.16.0_20260729180218 |
+| 固件 / CMM | V3.16.0 / 15232 MiB |
+| 运行方式 | AX-LLM a51df2d + AXCL 设备与 K/V 缓冲区适配 / 原生 HTTP 图文向量接口 / AXCL C API |
+
+| 指标 | 实测值 | 计时或统计范围 |
+| --- | --- | --- |
+| 输出向量 | 2048 维 | 图片、文本和图文联合输入均返回有限且归一化的向量。 |
+| 实测接口 | 21 次请求 | 三张图片、中英文描述与图文联合输入；图片和文本各重复两次。 |
+| 算力卡执行 | 30 个 AXModel | 视觉编码器、28 个文本层和输出层均有实际调用记录。 |
+
+适用范围：
+
+- 请求统一使用单输入 messages 接口；批量 input、视频和长文本未验证。
+- 重复图片可命中视觉特征缓存；完整耗时包含加载、校验和记录，不代表在线单次延迟。
+- 已核对最终向量及原生调用返回码，未捕获全部中间张量，未与浮点参考模型比较精度。
+
+</details>
 
 遇到加载、内存或后端错误时，按[常见问题](../../usage/troubleshooting.md)处理。需要更换输入或接入业务时，按[检查输出与记录结果](../../reference/validation.md)保留自己的结果。
 

@@ -1,0 +1,323 @@
+{
+  "modelId": "AX-Meeting-Studio",
+  "repo": "AXERA-TECH/AX-Meeting-Studio",
+  "revision": "5ff3c960c78a6726c9e4968b1deb090c4beb1764",
+  "complete": true,
+  "files": [
+    {
+      "path": "README.md",
+      "size": 5718,
+      "url": "https://huggingface.co/AXERA-TECH/AX-Meeting-Studio/resolve/5ff3c960c78a6726c9e4968b1deb090c4beb1764/README.md",
+      "verifiedHashes": {
+        "sha256": "1b33294618eed8fd32a5cecb0273099e6d6bc2fd24e59a890320d229cd238766",
+        "gitBlob": "7f3b13e2d503f2d8bc7729f6563172200d515085"
+      }
+    },
+    {
+      "path": "models/README.md",
+      "size": 1601,
+      "url": "https://huggingface.co/AXERA-TECH/AX-Meeting-Studio/resolve/5ff3c960c78a6726c9e4968b1deb090c4beb1764/models/README.md",
+      "verifiedHashes": {
+        "sha256": "cccaeeed460ce611379714216c9ef2550a8d78dbd2a43db1a817ece66c77fb40",
+        "gitBlob": "2a52793b07cfff427c605c8dd2f7a9ccecd914eb"
+      }
+    },
+    {
+      "path": "models/cam++/campplus.axmodel",
+      "size": 10744358,
+      "url": "https://huggingface.co/AXERA-TECH/AX-Meeting-Studio/resolve/5ff3c960c78a6726c9e4968b1deb090c4beb1764/models/cam%2B%2B/campplus.axmodel",
+      "verifiedHashes": {
+        "sha256": "3e85b4d59a94488caa727ca76c7fe2ba408de02587cd8c9a6680b83488338b16",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/fireredasr/cmvn.ark",
+      "size": 1311,
+      "url": "https://huggingface.co/AXERA-TECH/AX-Meeting-Studio/resolve/5ff3c960c78a6726c9e4968b1deb090c4beb1764/models/fireredasr/cmvn.ark",
+      "verifiedHashes": {
+        "sha256": "6efba6105429d1630c05d818d956bfe4edfad37a04b3b27bb5a029b9adb37945",
+        "gitBlob": "e26b4a310132492d05bfdd506ab3f6bbf89d9059"
+      }
+    },
+    {
+      "path": "models/fireredasr/decoder_loop.axmodel",
+      "size": 416269694,
+      "url": "https://huggingface.co/AXERA-TECH/AX-Meeting-Studio/resolve/5ff3c960c78a6726c9e4968b1deb090c4beb1764/models/fireredasr/decoder_loop.axmodel",
+      "verifiedHashes": {
+        "sha256": "a2912496e6804027f2dc77c903f6b2f76678603dd616e662b78e3f226bcaa91a",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/fireredasr/dict.txt",
+      "size": 71448,
+      "url": "https://huggingface.co/AXERA-TECH/AX-Meeting-Studio/resolve/5ff3c960c78a6726c9e4968b1deb090c4beb1764/models/fireredasr/dict.txt",
+      "verifiedHashes": {
+        "sha256": "6907215aeb034f6926b26bf8abfd650f756781622480a2342ec1f29b2072cafe",
+        "gitBlob": "afd1d79290c76a05e9eb653d76984434c18bb371"
+      }
+    },
+    {
+      "path": "models/fireredasr/encoder.axmodel",
+      "size": 851656147,
+      "url": "https://huggingface.co/AXERA-TECH/AX-Meeting-Studio/resolve/5ff3c960c78a6726c9e4968b1deb090c4beb1764/models/fireredasr/encoder.axmodel",
+      "verifiedHashes": {
+        "sha256": "6cc674ba54cf0e57f3c7dffa3824cd53700e4e7709827893f8708c4958e116c1",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/fireredasr/pe.npy",
+      "size": 25600128,
+      "url": "https://huggingface.co/AXERA-TECH/AX-Meeting-Studio/resolve/5ff3c960c78a6726c9e4968b1deb090c4beb1764/models/fireredasr/pe.npy",
+      "verifiedHashes": {
+        "sha256": "1d0b03c72e71c8e01e36b390154520cc4bb28cf18aed448d6a0c1b93b8603042",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/fireredasr/train_bpe1000.model",
+      "size": 251707,
+      "url": "https://huggingface.co/AXERA-TECH/AX-Meeting-Studio/resolve/5ff3c960c78a6726c9e4968b1deb090c4beb1764/models/fireredasr/train_bpe1000.model",
+      "verifiedHashes": {
+        "sha256": "473bbc157cb4eade2059b30a3c877a1c29bd50cadbfbed869ae36eeade7fee07",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/punc/model.axmodel",
+      "size": 283103944,
+      "url": "https://huggingface.co/AXERA-TECH/AX-Meeting-Studio/resolve/5ff3c960c78a6726c9e4968b1deb090c4beb1764/models/punc/model.axmodel",
+      "verifiedHashes": {
+        "sha256": "bdc5e8051c89961b4212929ddf129b9e8976c04ec55000a7c9b72c66678e4886",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/punc/tokens.json",
+      "size": 4207480,
+      "url": "https://huggingface.co/AXERA-TECH/AX-Meeting-Studio/resolve/5ff3c960c78a6726c9e4968b1deb090c4beb1764/models/punc/tokens.json",
+      "verifiedHashes": {
+        "sha256": "c960ab87bccea4aa15cf49a59f71973c2c330b46668048cd8da253749ec71ee3",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/sensevoice/am.mvn",
+      "size": 11203,
+      "url": "https://huggingface.co/AXERA-TECH/AX-Meeting-Studio/resolve/5ff3c960c78a6726c9e4968b1deb090c4beb1764/models/sensevoice/am.mvn",
+      "verifiedHashes": {
+        "sha256": "29b3c740a2c0cfc6b308126d31d7f265fa2be74f3bb095cd2f143ea970896ae5",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/sensevoice/auto.npy",
+      "size": 2368,
+      "url": "https://huggingface.co/AXERA-TECH/AX-Meeting-Studio/resolve/5ff3c960c78a6726c9e4968b1deb090c4beb1764/models/sensevoice/auto.npy",
+      "verifiedHashes": {
+        "sha256": "8d0997706b30274f7ff3b157ca90df50b7ed8ced35091a0231700355d5ee1374",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/sensevoice/chn_jpn_yue_eng_ko_spectok.bpe.model",
+      "size": 377341,
+      "url": "https://huggingface.co/AXERA-TECH/AX-Meeting-Studio/resolve/5ff3c960c78a6726c9e4968b1deb090c4beb1764/models/sensevoice/chn_jpn_yue_eng_ko_spectok.bpe.model",
+      "verifiedHashes": {
+        "sha256": "aa87f86064c3730d799ddf7af3c04659151102cba548bce325cf06ba4da4e6a8",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/sensevoice/config.yaml",
+      "size": 1855,
+      "url": "https://huggingface.co/AXERA-TECH/AX-Meeting-Studio/resolve/5ff3c960c78a6726c9e4968b1deb090c4beb1764/models/sensevoice/config.yaml",
+      "verifiedHashes": {
+        "sha256": "f71e239ba36705564b5bf2d2ffd07eece07b8e3f2bbf6d2c99d8df856339ac19",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/sensevoice/en.npy",
+      "size": 2368,
+      "url": "https://huggingface.co/AXERA-TECH/AX-Meeting-Studio/resolve/5ff3c960c78a6726c9e4968b1deb090c4beb1764/models/sensevoice/en.npy",
+      "verifiedHashes": {
+        "sha256": "1f21c6d5a0b876c696b15ee80317ee558b6a19a084c1147a13a2871900f6c72e",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/sensevoice/event_emo.npy",
+      "size": 4608,
+      "url": "https://huggingface.co/AXERA-TECH/AX-Meeting-Studio/resolve/5ff3c960c78a6726c9e4968b1deb090c4beb1764/models/sensevoice/event_emo.npy",
+      "verifiedHashes": {
+        "sha256": "1d22e3df5d192fdc3e73e368a2cb576975a5a43a114a8432a91c036adf8e2263",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/sensevoice/ja.npy",
+      "size": 2368,
+      "url": "https://huggingface.co/AXERA-TECH/AX-Meeting-Studio/resolve/5ff3c960c78a6726c9e4968b1deb090c4beb1764/models/sensevoice/ja.npy",
+      "verifiedHashes": {
+        "sha256": "75a83ded838de7d02a56de32b774a50d2f02b5ec69880e7acdce600666f77517",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/sensevoice/ko.npy",
+      "size": 2368,
+      "url": "https://huggingface.co/AXERA-TECH/AX-Meeting-Studio/resolve/5ff3c960c78a6726c9e4968b1deb090c4beb1764/models/sensevoice/ko.npy",
+      "verifiedHashes": {
+        "sha256": "f371fffcecd75c1268e2ef8043c276ec9b231177b5138b39e5732c65401749db",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/sensevoice/sensevoice.axmodel",
+      "size": 262170623,
+      "url": "https://huggingface.co/AXERA-TECH/AX-Meeting-Studio/resolve/5ff3c960c78a6726c9e4968b1deb090c4beb1764/models/sensevoice/sensevoice.axmodel",
+      "verifiedHashes": {
+        "sha256": "7b64a36fa15e75ab5e3b75f18ae87a058970cff76219407e503b54fb53dd8e38",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/sensevoice/withitn.npy",
+      "size": 2368,
+      "url": "https://huggingface.co/AXERA-TECH/AX-Meeting-Studio/resolve/5ff3c960c78a6726c9e4968b1deb090c4beb1764/models/sensevoice/withitn.npy",
+      "verifiedHashes": {
+        "sha256": "39bf02586f59237894fc2918ab2db4f12ec3c084c41465718832fbd7646ea729",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/sensevoice/yue.npy",
+      "size": 2368,
+      "url": "https://huggingface.co/AXERA-TECH/AX-Meeting-Studio/resolve/5ff3c960c78a6726c9e4968b1deb090c4beb1764/models/sensevoice/yue.npy",
+      "verifiedHashes": {
+        "sha256": "319c3d30e6b176338a6d8871f81ec57af5c3c112cecbdce4a0bf36bec51f3ceb",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/sensevoice/zh.npy",
+      "size": 2368,
+      "url": "https://huggingface.co/AXERA-TECH/AX-Meeting-Studio/resolve/5ff3c960c78a6726c9e4968b1deb090c4beb1764/models/sensevoice/zh.npy",
+      "verifiedHashes": {
+        "sha256": "0c952f976ae70642c8f682c88711abce3a2b64ba20a6d8ca0b706f227de816eb",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/vad/am.mvn",
+      "size": 8040,
+      "url": "https://huggingface.co/AXERA-TECH/AX-Meeting-Studio/resolve/5ff3c960c78a6726c9e4968b1deb090c4beb1764/models/vad/am.mvn",
+      "verifiedHashes": {
+        "sha256": "6820fef9687708c4fc3fab2530179c8fcea6262daa25514380056cd8f6eb1754",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/vad/config.yaml",
+      "size": 1215,
+      "url": "https://huggingface.co/AXERA-TECH/AX-Meeting-Studio/resolve/5ff3c960c78a6726c9e4968b1deb090c4beb1764/models/vad/config.yaml",
+      "verifiedHashes": {
+        "sha256": "486861ca26ddb79081663b6179cb204c6bfae71c52f04aafc48a9e9d8dde1e93",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "models/vad/vad.axmodel",
+      "size": 1150874,
+      "url": "https://huggingface.co/AXERA-TECH/AX-Meeting-Studio/resolve/5ff3c960c78a6726c9e4968b1deb090c4beb1764/models/vad/vad.axmodel",
+      "verifiedHashes": {
+        "sha256": "7d89d1087f14597bc93ae5cf89e1c60d8ee76d7bdffbe679ef6dc002635e6f6b",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "requirements-runtime.txt",
+      "size": 360,
+      "url": "https://huggingface.co/AXERA-TECH/AX-Meeting-Studio/resolve/5ff3c960c78a6726c9e4968b1deb090c4beb1764/requirements-runtime.txt",
+      "verifiedHashes": {
+        "sha256": "c5742e66b429f18f09112344bce093b60696c71322c8e553503e1a1d2921c72d",
+        "gitBlob": "0a98698f138c3713eb48a2d3db144182ba243180"
+      }
+    },
+    {
+      "path": "run_web_studio.sh",
+      "size": 18369,
+      "url": "https://huggingface.co/AXERA-TECH/AX-Meeting-Studio/resolve/5ff3c960c78a6726c9e4968b1deb090c4beb1764/run_web_studio.sh",
+      "verifiedHashes": {
+        "sha256": "9e2126ba6d634838242039106e3742233957c798c7df362abd650956d804c115",
+        "gitBlob": "72d34605eec055038b0a66dc813c31cb35943cbd"
+      }
+    },
+    {
+      "path": "src/ax_meeting_cpp/resources/model_assets.json",
+      "size": 4593,
+      "url": "https://huggingface.co/AXERA-TECH/AX-Meeting-Studio/resolve/5ff3c960c78a6726c9e4968b1deb090c4beb1764/src/ax_meeting_cpp/resources/model_assets.json",
+      "verifiedHashes": {
+        "sha256": "0389a6d785bde3951d9c212318ab8eec47ec9793412439fdd0e8bc5c6db0da83",
+        "gitBlob": "c9fa2a6a195d0ae949eb6015e2c628cebb0ac1ec"
+      }
+    },
+    {
+      "path": "tools/verify_assets.py",
+      "size": 3169,
+      "url": "https://huggingface.co/AXERA-TECH/AX-Meeting-Studio/resolve/5ff3c960c78a6726c9e4968b1deb090c4beb1764/tools/verify_assets.py",
+      "verifiedHashes": {
+        "sha256": "df7b0dceab33958a29eafc61c7a9c35357614bd832f10ea776712544b56b268b",
+        "gitBlob": "2ba452c025d87f3a287ad5a72f1e55a8836a65b9"
+      }
+    },
+    {
+      "path": "wav/002.mp3",
+      "size": 89856,
+      "url": "https://huggingface.co/AXERA-TECH/AX-Meeting-Studio/resolve/5ff3c960c78a6726c9e4968b1deb090c4beb1764/wav/002.mp3",
+      "verifiedHashes": {
+        "sha256": "4bdd7d1fb5723e253083820c659d65449e43abff0fbf7b5ac52fea3c1d7572fc",
+        "gitBlob": "dce74e511c7720ba9a7d9cec84ac59e41cec610f"
+      }
+    },
+    {
+      "path": "wav/20200327_2P.wav",
+      "size": 31283820,
+      "url": "https://huggingface.co/AXERA-TECH/AX-Meeting-Studio/resolve/5ff3c960c78a6726c9e4968b1deb090c4beb1764/wav/20200327_2P.wav",
+      "verifiedHashes": {
+        "sha256": "3bd799992bb9327844b78547d3c91b444376cf359b5fdc03f26c14c1c921f0c0",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "wav/2speakers_example.wav",
+      "size": 1658752,
+      "url": "https://huggingface.co/AXERA-TECH/AX-Meeting-Studio/resolve/5ff3c960c78a6726c9e4968b1deb090c4beb1764/wav/2speakers_example.wav",
+      "verifiedHashes": {
+        "sha256": "8dd999996bfc3dfbef07d71401dd9043096ffbff576bcccdd8f8ddce33563b14",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "wav/vad_example.wav",
+      "size": 2261722,
+      "url": "https://huggingface.co/AXERA-TECH/AX-Meeting-Studio/resolve/5ff3c960c78a6726c9e4968b1deb090c4beb1764/wav/vad_example.wav",
+      "verifiedHashes": {
+        "sha256": "a7431f0169ef76ef630c945a1d2c3675d8c8c2df2ae4a6b16f8a88ba1bccfbbb",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "wheel/ax_meeting_studio-0.3.0+axcl-py3-none-linux_aarch64.whl",
+      "size": 208133,
+      "url": "https://huggingface.co/AXERA-TECH/AX-Meeting-Studio/resolve/5ff3c960c78a6726c9e4968b1deb090c4beb1764/wheel/ax_meeting_studio-0.3.0%2Baxcl-py3-none-linux_aarch64.whl",
+      "verifiedHashes": {
+        "sha256": "c2b9c8866a7eace265c72cfd8f6b84841bbe323379725eee44fbcff65738280f",
+        "gitBlob": null
+      }
+    }
+  ]
+}

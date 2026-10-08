@@ -36,7 +36,7 @@ export default function ModelCatalog() {
         <tbody>{shown.map(m=>{const result=validations[m.id];const key=validationKey(m);return <tr key={m.id}>
           <td><Link className={styles.model} to={`${base}${m.guide}`}>{m.id}</Link><div className={styles.links}><Link to={`${base}${m.guide}`}>{m.kind==='resource'?'资源使用说明':'独立部署文档'} →</Link><a href={m.huggingface} target="_blank" rel="noopener noreferrer">Hugging Face ↗</a></div></td>
           <td>{m.task}</td><td><span className={styles.badge} data-ready={['cv','axllm','python','legacy'].includes(m.kind)}>{m.status}</span></td>
-          <td><span className={styles.validationBadge} data-status={result?.status ?? key}>{validationLabels[key]}</span>{result&&<><div className={styles.validation}>{result.date}<br />{result.environment}<br />{result.level==='correctness'?'固定样例':'基本运行'}检查</div><Link className={styles.evidenceLink} to={`${base}${m.guide}#查看部署效果`}>查看部署效果 →</Link></>}</td>
+          <td><span className={styles.validationBadge} data-status={result?.status ?? key}>{validationLabels[key]}</span>{result&&<><div className={styles.validation}>{result.environment}<br />{result.level==='correctness'?'固定样例':'基本运行'}检查</div><Link className={styles.evidenceLink} to={`${base}${m.guide}#查看部署效果`}>查看部署效果 →</Link></>}</td>
         </tr>;})}</tbody>
       </table>
       {!shown.length&&<p className={styles.empty}>没有匹配的条目。可缩短型号关键词，或清除任务和状态筛选。</p>}

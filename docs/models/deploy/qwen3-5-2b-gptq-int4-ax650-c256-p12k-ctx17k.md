@@ -162,9 +162,9 @@ PY
 
 ## 查看部署效果
 
-**已运行，效果仍需评估** · 2026-09-23 · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
+**已运行，效果仍需评估** · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
 
-在 16GB 卡上完成三次图片问答，识别出三名宇航员；描述中仍包含图片无法确认的意图推测。
+三次单图请求均返回文本。人数正确，但中文在要求不推测意图时仍写仪式或表演；意图约束未通过，17K配置也未进行长上下文验证。
 
 点击图片可查看原尺寸。
 
@@ -229,7 +229,7 @@ All three individuals are wearing white space suits (astronauts) and appear to b
 <details>
 <summary>查看样例环境与运行耗时</summary>
 
-环境：RK3576 + AX8850 16GB M.2。日期：2026-09-23。模型版本：`4876360c20e713a030f2c0afa0e802bd6aa32f50`。
+环境：RK3576 + AX8850 16GB M.2。模型版本：`4876360c20e713a030f2c0afa0e802bd6aa32f50`。
 
 | 组件 | 版本或配置 |
 | --- | --- |
@@ -248,8 +248,6 @@ All three individuals are wearing white space suits (astronauts) and appear to b
 
 适用范围：
 
-- 人数回答正确。英文描述将图片称为 monochromatic，并推测人物惊讶或胜利；中文回复加入了仪式或表演的描述，没有遵守不推测意图的要求。
-- 本次只测试短图片问答，没有验证此 17K 编译包的最大上下文；描述准确性需结合业务样本评估。
 - 本页结果来自 16GB 卡，不作为 8GB 卡的容量验证。temperature=0、enable_thinking=false、stream=false、max_tokens=128。
 - 仅测试本页短请求，未覆盖完整数据集、最大上下文、多轮对话、并发或长期连续运行。
 

@@ -107,9 +107,9 @@ Return only a JSON object with apple equal to 3 and pear equal to 2.
 
 ## 查看部署效果
 
-**已运行，效果仍需评估** · 2026-09-29 · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
+**已运行，效果仍需评估** · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
 
-在 RK3576 + AX8850 16GB 上完成三条独立短输入，展示算术回答、中文用途说明和带代码围栏的 JSON 回复。
+固定问答已返回文本，但JSON 回复含代码围栏或额外文字，不能直接解析为指定对象；本次格式要求未通过。
 
 **示例 1：输入**
 
@@ -168,7 +168,7 @@ Return only a JSON object with apple equal to 3 and pear equal to 2.
 <details>
 <summary>查看样例环境与运行耗时</summary>
 
-环境：RK3576 + AX8850 16GB M.2。日期：2026-09-29。模型版本：`a882598b8893f0baec13189cac7f62f57109c835`。
+环境：RK3576 + AX8850 16GB M.2。模型版本：`a882598b8893f0baec13189cac7f62f57109c835`。
 
 | 组件 | 版本或配置 |
 | --- | --- |
@@ -185,8 +185,6 @@ Return only a JSON object with apple equal to 3 and pear equal to 2.
 
 适用范围：
 
-- 算术示例结果正确，中文用途说明可读；JSON 示例含 Markdown 代码围栏，不能直接作为严格 JSON 解析。三条示例不代表完整问答质量评测通过。
-- 本次仅实测16GB卡上的三条独立短输入；实际8GB容量、长文本、并发和持续运行需单独验证。
 - 该版本程序未输出首token耗时；保留原生生成速率及含模型加载的完整进程耗时。
 
 </details>

@@ -6,6 +6,8 @@
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
     "build": "docusaurus build",
+    "prebuild:low-memory": "npm run prebuild",
+    "build:low-memory": "node scripts/run-low-memory-build.cjs",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
@@ -16,7 +18,7 @@
     "docs:catalog": "node scripts/generate-model-catalog.mjs",
     "docs:models": "node scripts/generate-model-guides.mjs && node scripts/generate-model-catalog.mjs && node scripts/generate-task-guides.mjs",
     "docs:stats": "node scripts/generate-doc-stats.mjs",
-    "docs:check": "node scripts/check-model-guides.mjs",
+    "docs:check": "node scripts/check-model-guides.mjs && node scripts/check-customer-docs.mjs",
     "prebuild": "npm run docs:models && npm run docs:resources && npm run docs:stats && npm run docs:check",
     "docs:resources": "node scripts/generate-original-files.mjs"
   },

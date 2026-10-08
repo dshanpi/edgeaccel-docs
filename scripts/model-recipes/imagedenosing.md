@@ -1,6 +1,6 @@
 ## 安装图像处理依赖
 
-本页先运行已取得输出的 DnCNN、FFDNet 与 NAFNet。Restormer 尚未取得有效输出，FastDVDnet 视频推理尚未实测，不包含在以下运行命令中。
+本页运行已取得输出的 DnCNN、FFDNet 与 NAFNet。Restormer 与 FastDVDnet 尚未取得有效部署结果，不包含在以下运行命令中。
 
 在 RK3576 主机激活已安装 PyAXEngine 的环境：
 

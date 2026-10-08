@@ -1,0 +1,40 @@
+.intro {margin: 1.4rem 0 2.4rem; padding: 1.8rem; border: 1px solid var(--course-border); border-radius: 16px; background: linear-gradient(135deg, rgba(7,136,61,.09), transparent 75%), var(--ifm-background-surface-color);}
+.eyebrow {display: block; color: var(--ifm-color-primary); font-size: .78rem; font-weight: 700; letter-spacing: .06em;}
+.intro .lead {font-size: clamp(1.5rem, 3vw, 2rem); line-height: 1.55; font-weight: 750; letter-spacing: -.025em; margin: .7rem 0; color: var(--ifm-heading-color);}
+.intro .introText {font-size: .92rem; color: var(--ifm-color-emphasis-700); margin-bottom: 1.4rem;}
+.intro .steps {display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); list-style: none; padding: 1rem 0 0; margin: 0; border-top: 1px solid var(--course-border); gap: .7rem;}
+.intro .steps li {margin: 0; font-size: .85rem; font-weight: 600;}
+.steps span {display: block; color: var(--ifm-color-primary); font: 500 .75rem var(--ifm-font-family-monospace); margin-bottom: .3rem;}
+.tasks {display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1rem; margin: 1.2rem 0 1.5rem;}
+.task {display: flex; flex-direction: column; padding: 1.3rem; border: 1px solid var(--course-border); border-radius: 12px; background: var(--ifm-background-color); min-width: 0;}
+.tag {color: var(--ifm-color-primary); font-size: .74rem; font-weight: 650; letter-spacing: .06em;}
+.task h3 {font-size: 1.12rem; margin: .45rem 0 .6rem; line-height: 1.5;}
+.task > p {font-size: .87rem; color: var(--ifm-color-emphasis-700); line-height: 1.75; margin: 0 0 1rem;}
+.modelLink {font-size: .91rem; font-weight: 650; overflow-wrap: anywhere; margin-top: auto;}
+.evidence {font-size: .77rem; margin: .5rem 0 1rem; line-height: 1.65;}
+.evidence > a {color: var(--ifm-color-emphasis-800); text-decoration: underline; text-underline-offset: 3px;}
+.evidence small {display: block; margin-top: .25rem; color: var(--ifm-color-emphasis-700); font-size: .72rem;}
+.more {font-size: .82rem; border-top: 1px solid var(--course-border); padding-top: .75rem;}
+.task a:focus-visible {outline: 2px solid var(--ifm-color-primary); outline-offset: 4px; border-radius: 2px;}
+.capacity {margin: 1.2rem 0 1.6rem; border: 1px solid var(--course-border); border-radius: 14px; overflow: hidden; background: var(--ifm-background-surface-color);}
+.switcher {margin: 0; padding: 1.3rem 1.4rem .5rem; border: 0; min-width: 0;}
+.switcher legend {float: left; width: 100%; font-size: .82rem; font-weight: 650; padding: 0; margin: 0 0 .65rem;}
+.options {clear: both; display: flex; gap: .7rem;}
+.options label {display: flex; align-items: center; gap: .5rem; padding: .65rem 1.1rem; border: 1px solid var(--ifm-color-emphasis-400); border-radius: 8px; font-weight: 650; font-size: .92rem; cursor: pointer; background: var(--ifm-background-color);}
+.options .selected {border-color: var(--ifm-color-primary); box-shadow: inset 0 0 0 1px var(--ifm-color-primary); color: var(--ifm-color-primary);}
+.options input {accent-color: var(--ifm-color-primary); width: 16px; height: 16px; margin: 0;}
+.options label:focus-within {outline: 2px solid var(--ifm-color-primary); outline-offset: 3px;}
+.capacityBody {padding: .6rem 1.4rem 1rem;}
+.capacityBody h3 {font-size: 1.18rem; margin: .5rem 0; line-height: 1.6;}
+.capacityBody p {font-size: .9rem; margin-bottom: 1rem;}
+.capacityBody dl {margin: 0;}
+.capacityBody dl > div {display: grid; grid-template-columns: 5.5rem minmax(0,1fr); gap: .8rem; border-top: 1px solid var(--course-border); padding: .75rem 0; font-size: .87rem;}
+.capacityBody dt {font-weight: 650;}
+.capacityBody dd {margin: 0; color: var(--ifm-color-emphasis-800);}
+.capacity .capacityNote {margin: 0; padding: .9rem 1.4rem; border-top: 1px solid var(--course-border); color: var(--ifm-color-emphasis-700); font-size: .78rem; background: var(--ifm-background-color);}
+@media (max-width: 600px) {
+  .tasks {grid-template-columns: 1fr;}
+  .intro {padding: 1.2rem;}
+  .intro .steps {grid-template-columns: repeat(2,minmax(0,1fr)); row-gap: 1rem;}
+  .capacityBody dl > div {grid-template-columns: 1fr; gap: .2rem;}
+}

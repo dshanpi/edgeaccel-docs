@@ -162,7 +162,7 @@ PY
 
 ## 查看部署效果
 
-**固定样例已核对** · 2026-09-23 · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
+**固定样例已核对** · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
 
 在 16GB 卡上完成三次图片问答，人数、白色宇航服和森林场景与输入图相符，回复完整。
 
@@ -225,7 +225,7 @@ There are three people in the image, all wearing astronaut suits. They appear to
 <details>
 <summary>查看样例环境与运行耗时</summary>
 
-环境：RK3576 + AX8850 16GB M.2。日期：2026-09-23。模型版本：`6406450afa77e44727724cd017f35f142f620143`。
+环境：RK3576 + AX8850 16GB M.2。模型版本：`6406450afa77e44727724cd017f35f142f620143`。
 
 | 组件 | 版本或配置 |
 | --- | --- |
@@ -244,8 +244,6 @@ There are three people in the image, all wearing astronaut suits. They appear to
 
 适用范围：
 
-- 仅人工核对本页一张图片的三次问答；英文描述中的氛围修饰不作为客观识别标签，结果不代表其他图片、OCR 或视频的准确率。
-- 本次使用短提示词，没有验证此 8K 编译包的最大上下文容量。
 - 本页结果来自 16GB 卡，不作为 8GB 卡的容量验证。temperature=0、enable_thinking=false、stream=false、max_tokens=128。
 - 仅测试本页短请求，未覆盖完整数据集、最大上下文、多轮对话、并发或长期连续运行。
 

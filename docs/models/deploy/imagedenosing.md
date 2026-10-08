@@ -44,7 +44,7 @@ cd "$MODEL_DIR"
 
 ## 安装图像处理依赖
 
-本页先运行已取得输出的 DnCNN、FFDNet 与 NAFNet。Restormer 尚未取得有效输出，FastDVDnet 视频推理尚未实测，不包含在以下运行命令中。
+本页运行已取得输出的 DnCNN、FFDNet 与 NAFNet。Restormer 与 FastDVDnet 尚未取得有效部署结果，不包含在以下运行命令中。
 
 在 RK3576 主机激活已安装 PyAXEngine 的环境：
 
@@ -85,15 +85,15 @@ DnCNN 与 FFDNet 分别向官方图片添加 sigma=25、sigma=10 的高斯噪声
 
 ## 查看部署效果
 
-**已运行，效果仍需评估** · 2026-09-23 · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
+**已运行，效果仍需评估** · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
 
-DnCNN、FFDNet、NAFNet 三个权重完成图像降噪推理，下面展示各自实际输入与输出。Restormer 与 FastDVDnet 尚未取得有效输出，本页暂不提供这两个权重的部署效果。
+DnCNN、FFDNet 和 NAFNet 均减轻了样例噪点；DnCNN 仍有残余颗粒，FFDNet 略有平滑，NAFNet 的文字仍模糊。Restormer 与 FastDVDnet 尚未取得有效输出，仍需补测。
 
 以下图片由本次运行生成，点击可查看原尺寸。各算法的输入、模型分辨率和后处理不同，不能直接根据这些样例比较算法优劣。
 
 **DnCNN**
 
-左为原图，中间为 sigma=25 的加噪图，右为本次降噪输出。噪点减轻，仍有残余颗粒。
+中间为 sigma=25 的加噪图，右侧输出的彩色噪点减少，飞机轮廓与颜色大体保留；天空仍有明显残余颗粒，不能视为恢复到左侧原图。
 
 <div className="model-effect-gallery">
 
@@ -108,7 +108,7 @@ DnCNN、FFDNet、NAFNet 三个权重完成图像降噪推理，下面展示各�
 
 **FFDNet**
 
-左为原图，中间为 sigma=10 的加噪图，右为本次降噪输出。噪点减轻；该样例的加噪强度与 DnCNN 不同。
+中间为 sigma=10 的加噪图，右侧输出的噪点明显减少，飞机轮廓和云层大体保留；细节略有平滑。加噪强度与 DnCNN 不同，不能据此直接排名。
 
 <div className="model-effect-gallery">
 
@@ -123,7 +123,7 @@ DnCNN、FFDNet、NAFNet 三个权重完成图像降噪推理，下面展示各�
 
 **NAFNet**
 
-左为官方 noisy.png，右为本次降噪输出。文字轮廓变得可见，但仍然模糊。
+右侧输出明显减轻彩色噪点，文字行和部分字母变得可见，但文字边缘仍模糊；本样例不证明完整文字内容得到恢复。
 
 <div className="model-effect-gallery">
 
@@ -138,15 +138,15 @@ DnCNN、FFDNet、NAFNet 三个权重完成图像降噪推理，下面展示各�
 
 **使用时注意：**
 
+- 三个已展示样例存在残余颗粒或细节平滑；NAFNet 的文字仍模糊，不能作为完整文字恢复的依据。
 - 本次只覆盖仓库五个权重中的 DnCNN、FFDNet、NAFNet，不代表 Restormer 或 FastDVDnet 已验证。
-- DnCNN/FFDNet 按官方脚本添加高斯噪声，sigma 分别为 25/10，随机种子 20260923；三种模型并非相同测试条件。
 
 这些结果用于对照部署后的输出，未覆盖完整数据集精度或长期连续运行。
 
 <details>
 <summary>查看样例环境与运行耗时</summary>
 
-环境：RK3576 + AX8850 16GB M.2。日期：2026-09-23。模型版本：`2bd3be823a15cf79862a9dfaa21979028457f10f`。
+环境：RK3576 + AX8850 16GB M.2。模型版本：`2bd3be823a15cf79862a9dfaa21979028457f10f`。
 
 | 组件 | 版本或配置 |
 | --- | --- |
@@ -166,7 +166,6 @@ DnCNN、FFDNet、NAFNet 三个权重完成图像降噪推理，下面展示各�
 
 适用范围：
 
-- 本次只覆盖仓库五个权重中的 DnCNN、FFDNet、NAFNet，不代表 Restormer 或 FastDVDnet 已验证。
 - DnCNN/FFDNet 按官方脚本添加高斯噪声，sigma 分别为 25/10，随机种子 20260923；三种模型并非相同测试条件。
 - 每种算法仅测试一张图片，未计算 PSNR、SSIM 或完整数据集指标；未验证视频、8GB 容量或长期运行。
 

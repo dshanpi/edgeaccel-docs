@@ -1,0 +1,288 @@
+{
+  "modelId": "QwenPaw-Flash-2B-GPTQ-Int4-AX650-C256-P14336-CTX17408",
+  "repo": "AXERA-TECH/QwenPaw-Flash-2B-GPTQ-Int4-AX650-C256-P14336-CTX17408",
+  "revision": "cf9b102777b59d552bd9820afeb996224f36732c",
+  "complete": true,
+  "files": [
+    {
+      "path": "config.json",
+      "size": 942,
+      "url": "https://huggingface.co/AXERA-TECH/QwenPaw-Flash-2B-GPTQ-Int4-AX650-C256-P14336-CTX17408/resolve/cf9b102777b59d552bd9820afeb996224f36732c/config.json",
+      "verifiedHashes": {
+        "sha256": "4a6bdb963e32919a07eea9aaf408a84f29ba81a95c0a073f76fe1758bbe5962f",
+        "gitBlob": "ed661951341cc2040a30836bea3256978489ba45"
+      }
+    },
+    {
+      "path": "model.embed_tokens.weight.bfloat16.bin",
+      "size": 1017118720,
+      "url": "https://huggingface.co/AXERA-TECH/QwenPaw-Flash-2B-GPTQ-Int4-AX650-C256-P14336-CTX17408/resolve/cf9b102777b59d552bd9820afeb996224f36732c/model.embed_tokens.weight.bfloat16.bin",
+      "verifiedHashes": {
+        "sha256": "6e84c14b820dcf304283cd35c20e40bd181d3a561e3640b793b1ce89600480dd",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "post_config.json",
+      "size": 276,
+      "url": "https://huggingface.co/AXERA-TECH/QwenPaw-Flash-2B-GPTQ-Int4-AX650-C256-P14336-CTX17408/resolve/cf9b102777b59d552bd9820afeb996224f36732c/post_config.json",
+      "verifiedHashes": {
+        "sha256": "376c32fcc35be379a13f9a45a0b24dec995c3c31cce85aa9891718c0872afcfe",
+        "gitBlob": "32f4b7f812cc6c0c5617c589de8725fbc97227f6"
+      }
+    },
+    {
+      "path": "qwen3_5_text_p256_l0_together.axmodel",
+      "size": 38728701,
+      "url": "https://huggingface.co/AXERA-TECH/QwenPaw-Flash-2B-GPTQ-Int4-AX650-C256-P14336-CTX17408/resolve/cf9b102777b59d552bd9820afeb996224f36732c/qwen3_5_text_p256_l0_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "14d2343f293d3da34ea3b55dcea141a4449ea7aa0a8bd5a9c251aeee88e387a0",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "qwen3_5_text_p256_l10_together.axmodel",
+      "size": 38728717,
+      "url": "https://huggingface.co/AXERA-TECH/QwenPaw-Flash-2B-GPTQ-Int4-AX650-C256-P14336-CTX17408/resolve/cf9b102777b59d552bd9820afeb996224f36732c/qwen3_5_text_p256_l10_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "0a9df35b6c73fd8ad5b1e5b51526f8d413b779c6a3f5984888ef7ba0e3c067f3",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "qwen3_5_text_p256_l11_together.axmodel",
+      "size": 182143805,
+      "url": "https://huggingface.co/AXERA-TECH/QwenPaw-Flash-2B-GPTQ-Int4-AX650-C256-P14336-CTX17408/resolve/cf9b102777b59d552bd9820afeb996224f36732c/qwen3_5_text_p256_l11_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "27460570f14073a14a6ca9ed680a6ccb6e4c43abe0c933c1b2956d45f0e6afc6",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "qwen3_5_text_p256_l12_together.axmodel",
+      "size": 38728717,
+      "url": "https://huggingface.co/AXERA-TECH/QwenPaw-Flash-2B-GPTQ-Int4-AX650-C256-P14336-CTX17408/resolve/cf9b102777b59d552bd9820afeb996224f36732c/qwen3_5_text_p256_l12_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "938e6379979019c47b76b2971f37c9471ff12232752518d04d2830e291f19d1b",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "qwen3_5_text_p256_l13_together.axmodel",
+      "size": 38728717,
+      "url": "https://huggingface.co/AXERA-TECH/QwenPaw-Flash-2B-GPTQ-Int4-AX650-C256-P14336-CTX17408/resolve/cf9b102777b59d552bd9820afeb996224f36732c/qwen3_5_text_p256_l13_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "67d36572bca17ec5cc0b13083049694036c7cc5afd77e8840e6750e1764115b7",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "qwen3_5_text_p256_l14_together.axmodel",
+      "size": 38728717,
+      "url": "https://huggingface.co/AXERA-TECH/QwenPaw-Flash-2B-GPTQ-Int4-AX650-C256-P14336-CTX17408/resolve/cf9b102777b59d552bd9820afeb996224f36732c/qwen3_5_text_p256_l14_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "f662879e8aa24f440cb6e08df71eacf64cd7292f8e7ddb329509511fce2774f9",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "qwen3_5_text_p256_l15_together.axmodel",
+      "size": 182143805,
+      "url": "https://huggingface.co/AXERA-TECH/QwenPaw-Flash-2B-GPTQ-Int4-AX650-C256-P14336-CTX17408/resolve/cf9b102777b59d552bd9820afeb996224f36732c/qwen3_5_text_p256_l15_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "710995730b11e9bbdcf285423dccbe07461b01e93f595749bb9f30f5dafb76c1",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "qwen3_5_text_p256_l16_together.axmodel",
+      "size": 38728717,
+      "url": "https://huggingface.co/AXERA-TECH/QwenPaw-Flash-2B-GPTQ-Int4-AX650-C256-P14336-CTX17408/resolve/cf9b102777b59d552bd9820afeb996224f36732c/qwen3_5_text_p256_l16_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "6f2a535aacb317cf19a2fd12c6652cab5b0595c7c7a1bb40fd3d82d7b30b6d41",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "qwen3_5_text_p256_l17_together.axmodel",
+      "size": 38728717,
+      "url": "https://huggingface.co/AXERA-TECH/QwenPaw-Flash-2B-GPTQ-Int4-AX650-C256-P14336-CTX17408/resolve/cf9b102777b59d552bd9820afeb996224f36732c/qwen3_5_text_p256_l17_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "f9b3fd0ce96edea0d511ee960574366fef557d276f4ac6254f5a53e1078a9fb2",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "qwen3_5_text_p256_l18_together.axmodel",
+      "size": 38728717,
+      "url": "https://huggingface.co/AXERA-TECH/QwenPaw-Flash-2B-GPTQ-Int4-AX650-C256-P14336-CTX17408/resolve/cf9b102777b59d552bd9820afeb996224f36732c/qwen3_5_text_p256_l18_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "b85a8b940dbf8d378791babde2b2626df8cc61b09f4e59d86eeb5a6db4ba628c",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "qwen3_5_text_p256_l19_together.axmodel",
+      "size": 182143805,
+      "url": "https://huggingface.co/AXERA-TECH/QwenPaw-Flash-2B-GPTQ-Int4-AX650-C256-P14336-CTX17408/resolve/cf9b102777b59d552bd9820afeb996224f36732c/qwen3_5_text_p256_l19_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "1d4dd35e61fb269fdaca31be72285122d6357dd31dd34d3660de8bed2dbb94e3",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "qwen3_5_text_p256_l1_together.axmodel",
+      "size": 38728701,
+      "url": "https://huggingface.co/AXERA-TECH/QwenPaw-Flash-2B-GPTQ-Int4-AX650-C256-P14336-CTX17408/resolve/cf9b102777b59d552bd9820afeb996224f36732c/qwen3_5_text_p256_l1_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "d5340f7245810539c515ca8becb4efbdb9d1718ed0efbeb15a62df050fec48cb",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "qwen3_5_text_p256_l20_together.axmodel",
+      "size": 38728717,
+      "url": "https://huggingface.co/AXERA-TECH/QwenPaw-Flash-2B-GPTQ-Int4-AX650-C256-P14336-CTX17408/resolve/cf9b102777b59d552bd9820afeb996224f36732c/qwen3_5_text_p256_l20_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "a2064707122319fdc9f647495c1c5be5f4512cdefc0de1e3332537680e8063bc",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "qwen3_5_text_p256_l21_together.axmodel",
+      "size": 38728717,
+      "url": "https://huggingface.co/AXERA-TECH/QwenPaw-Flash-2B-GPTQ-Int4-AX650-C256-P14336-CTX17408/resolve/cf9b102777b59d552bd9820afeb996224f36732c/qwen3_5_text_p256_l21_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "277a611250174482e2e80f350a67f704dd4b40239fc08f46ced4b420aa0c1d10",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "qwen3_5_text_p256_l22_together.axmodel",
+      "size": 38728717,
+      "url": "https://huggingface.co/AXERA-TECH/QwenPaw-Flash-2B-GPTQ-Int4-AX650-C256-P14336-CTX17408/resolve/cf9b102777b59d552bd9820afeb996224f36732c/qwen3_5_text_p256_l22_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "4828185747b81ed89154c4e632d4cae6782b2685723ce08cc01dfa23e2646c0b",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "qwen3_5_text_p256_l23_together.axmodel",
+      "size": 182143805,
+      "url": "https://huggingface.co/AXERA-TECH/QwenPaw-Flash-2B-GPTQ-Int4-AX650-C256-P14336-CTX17408/resolve/cf9b102777b59d552bd9820afeb996224f36732c/qwen3_5_text_p256_l23_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "95d686a56195ea5b357561fb051f3b246b1596b60c19f4cda779abe8407b959d",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "qwen3_5_text_p256_l2_together.axmodel",
+      "size": 38728701,
+      "url": "https://huggingface.co/AXERA-TECH/QwenPaw-Flash-2B-GPTQ-Int4-AX650-C256-P14336-CTX17408/resolve/cf9b102777b59d552bd9820afeb996224f36732c/qwen3_5_text_p256_l2_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "14c1d2c770f6faa19d0f5ceedd990eadaf7a046f9dcc48bc7372f897f913958a",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "qwen3_5_text_p256_l3_together.axmodel",
+      "size": 182143789,
+      "url": "https://huggingface.co/AXERA-TECH/QwenPaw-Flash-2B-GPTQ-Int4-AX650-C256-P14336-CTX17408/resolve/cf9b102777b59d552bd9820afeb996224f36732c/qwen3_5_text_p256_l3_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "6492aba010d37ee4454317395898a84d63763948333a59b39f2af8be96c0434b",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "qwen3_5_text_p256_l4_together.axmodel",
+      "size": 38728701,
+      "url": "https://huggingface.co/AXERA-TECH/QwenPaw-Flash-2B-GPTQ-Int4-AX650-C256-P14336-CTX17408/resolve/cf9b102777b59d552bd9820afeb996224f36732c/qwen3_5_text_p256_l4_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "15a263c92c4b678ef0da1840dca63df5d22545b2bf9c8b914face9817c1ba3e3",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "qwen3_5_text_p256_l5_together.axmodel",
+      "size": 38728701,
+      "url": "https://huggingface.co/AXERA-TECH/QwenPaw-Flash-2B-GPTQ-Int4-AX650-C256-P14336-CTX17408/resolve/cf9b102777b59d552bd9820afeb996224f36732c/qwen3_5_text_p256_l5_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "50272939d09d182a2fd633cfe02571d5424f8aba3e441b84f82740f6fb8195f5",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "qwen3_5_text_p256_l6_together.axmodel",
+      "size": 38728701,
+      "url": "https://huggingface.co/AXERA-TECH/QwenPaw-Flash-2B-GPTQ-Int4-AX650-C256-P14336-CTX17408/resolve/cf9b102777b59d552bd9820afeb996224f36732c/qwen3_5_text_p256_l6_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "bdb26ca38bae22ba6512ddf184e23ea430a11263b409f4b1bf07e91bb97881f7",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "qwen3_5_text_p256_l7_together.axmodel",
+      "size": 182143789,
+      "url": "https://huggingface.co/AXERA-TECH/QwenPaw-Flash-2B-GPTQ-Int4-AX650-C256-P14336-CTX17408/resolve/cf9b102777b59d552bd9820afeb996224f36732c/qwen3_5_text_p256_l7_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "00f4b4606a8a4c2b527308b85a84e528e8fa39d670d530967668cc0278760fb1",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "qwen3_5_text_p256_l8_together.axmodel",
+      "size": 38728701,
+      "url": "https://huggingface.co/AXERA-TECH/QwenPaw-Flash-2B-GPTQ-Int4-AX650-C256-P14336-CTX17408/resolve/cf9b102777b59d552bd9820afeb996224f36732c/qwen3_5_text_p256_l8_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "bd347430bf3a1405f3ecde31026da6f9bfe1b2c4b621f31b4e1b01f19dc209d2",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "qwen3_5_text_p256_l9_together.axmodel",
+      "size": 38728701,
+      "url": "https://huggingface.co/AXERA-TECH/QwenPaw-Flash-2B-GPTQ-Int4-AX650-C256-P14336-CTX17408/resolve/cf9b102777b59d552bd9820afeb996224f36732c/qwen3_5_text_p256_l9_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "cc97bf8e87147a5a6fd8d378baefa6ad8d973e8b136e7071a46dc44a65a66ac9",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "qwen3_5_text_post.axmodel",
+      "size": 555249608,
+      "url": "https://huggingface.co/AXERA-TECH/QwenPaw-Flash-2B-GPTQ-Int4-AX650-C256-P14336-CTX17408/resolve/cf9b102777b59d552bd9820afeb996224f36732c/qwen3_5_text_post.axmodel",
+      "verifiedHashes": {
+        "sha256": "27471cc7091eaf45d8044dde40734f90398165fa642d42d1df92c5ff9cedcca0",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "qwen3_5_tokenizer.txt",
+      "size": 6465727,
+      "url": "https://huggingface.co/AXERA-TECH/QwenPaw-Flash-2B-GPTQ-Int4-AX650-C256-P14336-CTX17408/resolve/cf9b102777b59d552bd9820afeb996224f36732c/qwen3_5_tokenizer.txt",
+      "verifiedHashes": {
+        "sha256": "7e75de1f279a10b65bd9dc1a5207205cb8993823861c4c42bbbd74e48e1c23a4",
+        "gitBlob": "30439befe2e402a6965da5e91bb14886e3939a90"
+      }
+    },
+    {
+      "path": "qwen3_5_vision.axmodel",
+      "size": 370716289,
+      "url": "https://huggingface.co/AXERA-TECH/QwenPaw-Flash-2B-GPTQ-Int4-AX650-C256-P14336-CTX17408/resolve/cf9b102777b59d552bd9820afeb996224f36732c/qwen3_5_vision.axmodel",
+      "verifiedHashes": {
+        "sha256": "bf5ee9b5a9331be9ee223326496a9817abb483ab404078f1d75c484550bda6b4",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "qwen3_tokenizer.txt",
+      "size": 6465729,
+      "url": "https://huggingface.co/AXERA-TECH/QwenPaw-Flash-2B-GPTQ-Int4-AX650-C256-P14336-CTX17408/resolve/cf9b102777b59d552bd9820afeb996224f36732c/qwen3_tokenizer.txt",
+      "verifiedHashes": {
+        "sha256": "3ff5518beed6ba98e3d7a71b412fcd48893a3ddcbc3420903ed73249eea52469",
+        "gitBlob": "164aff65a4829e978b585531fd00438bc154fe7e"
+      }
+    }
+  ],
+  "runnerSha256": "7a8f1f112f5726215c457e2b7be6597b43d60355414e3105e493cac7c4e0495b"
+}

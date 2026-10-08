@@ -2,15 +2,26 @@
 title: "Qwen3-VL-8B 部署与使用"
 sidebar_label: "Qwen3-VL-8B 部署与使用"
 slug: /ax650n/applications/qwen3-vl/usage
+description: "复现 RK3576 与 AX8850 16GB 的旧版 Qwen3-VL-8B 本地图文和视频帧问答。"
+mdx:
+  format: mdx
 ---
 
-> **历史项目 · 16GB**：本页记录旧版 Qwen3-VL-8B 部署，不作为 8GB 卡的容量依据。新运行时见[图片与视频问答](/docs/models/vision-language)。
+import {GuideHero, GuideNext} from '@site/src/components/ModelGuideLayout';
 
 # AX8850 16GB：Qwen3-VL-8B 本地使用
 
-适用于 原测试环境中的 RK3576 主机与 16GB AX8850。模型为爱芯已转换的 `Qwen3-VL-8B-Instruct-GPTQ-Int4`，通过 AXCL 在算力卡上执行推理。
+<GuideHero label="历史部署 · Qwen3-VL-8B" title="复现已交付的本地图文问答入口" description="使用原测试环境中的专用程序与配套文件，运行单图、文字和视频帧问答。" facts={[["主机", "RK3576 · aarch64"], ["算力卡", "AX8850 16GB"], ["适用范围", "原交付配置"]]} />
 
-## 1 启动图像与文字问答
+本页适用于已准备好旧版交付目录的环境，模型为 `Qwen3-VL-8B-Instruct-GPTQ-Int4`。历史结果不作为 8GB 卡的容量依据，也不替代其他版本的检查。
+
+**首次下载和重新部署**请使用[该模型独立部署指南](/docs/models/deploy/qwen3-vl-8b-instruct-gptq-int4)；比较其他型号见[图像问答选型](/docs/models/vision-language)。本页的 `run_local.sh` 是旧交付入口，与统一 `axllm` 的命令、配置分别使用。
+
+## 确认现有目录
+
+在 RK3576 主机核对下方“部署文件”表中的启动脚本、运行程序、分词器和权重目录，并完成[设备检查](/docs/usage/device-check)。缺少文件时先按独立指南准备，不将本页的启动命令作为完整安装流程。
+
+## 启动图像与文字问答
 
 通过 SSH 登录开发板，执行：
 
@@ -32,7 +43,7 @@ image >> images/ssd_car.jpg
 
 启动脚本已配置模型路径、设备 0 和本地分词器。正常运行无需联网、无需启动 Python 分词服务，也无需使用 `sudo`。
 
-## 2 运行视频理解示例
+## 运行视频理解示例
 
 先退出图像模式，再运行：
 
@@ -57,11 +68,13 @@ video >> video
 
 脚本按每秒 1 帧抽取最多 8 帧，用于观察视频开头约 8 秒的内容。随后在 `video >>` 输入输出目录的绝对路径。目录中只放本次抽取的图片。
 
-本次已提前准备道路交通示例，在 `video >>` 输入 `deployment/traffic_frames` 即可测试。
+旧交付目录中还包含道路交通示例 `deployment/traffic_frames`。该目录存在时可直接输入；重新部署环境需自行准备相应帧文件。
 
 这是抽帧后的多模态问答，不是逐帧实时检测，也没有读取视频音频。
 
-## 3 查看运行状态
+## 检查回复与运行状态
+
+先用页面提供的图片和短问题复现输出，再替换自己的输入。回答后检查对象、数量和场景细节，并确认回复完整。历史样例、计时范围和文件版本见[样例结果与版本](validation.md)。
 
 另开一个 SSH 终端：
 
@@ -73,7 +86,7 @@ watch -n 1 /usr/bin/axcl/axcl-smi
 
 测试日志保存在模型目录的 `deployment/logs/`，部署版本信息在 `deployment/manifest.json`，模型 SHA256 校验结果在 `deployment/model-integrity.json`。
 
-## 4 了解部署文件
+## 核对部署文件
 
 | 文件／目录 | 用途 |
 |---|---|
@@ -89,7 +102,7 @@ watch -n 1 /usr/bin/axcl/axcl-smi
 
 根目录原始 `main_axcl_aarch64` 及官方脚本保留原样。该预编译文件要求 OpenCV 4.10，本机安装的是 4.6，因此请使用本次提供的 `run_local.sh`。
 
-## 5 处理常见情况
+## 处理常见情况
 
 - **提示已有会话运行**：返回旧终端，在问题提示处输入 `q`；再开启新会话。
 - **找不到图片**：使用已存在的 JPG/PNG 文件绝对路径。不要将 MP4 文件填入图片路径。
@@ -98,6 +111,8 @@ watch -n 1 /usr/bin/axcl/axcl-smi
 - **重启后使用**：重新执行 `./run_local.sh image` 即可，无需重新下载模型或安装环境。
 
 当前交付是本地命令行推理入口；未设置常驻服务或开机自启。
+
+<GuideNext items={[{to: '/docs/ax650n/applications/qwen3-vl/validation', title: '对照历史样例结果', text: '核对 16GB 环境、输入与计时范围。'}, {to: '/docs/models/deploy/qwen3-vl-8b-instruct-gptq-int4', title: '进入独立部署指南', text: '重新下载、部署时使用完整操作步骤。'}]} />
 
 ## 参考资料
 

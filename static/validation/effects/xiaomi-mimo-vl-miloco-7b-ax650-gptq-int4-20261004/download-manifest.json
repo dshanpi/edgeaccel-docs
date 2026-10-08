@@ -1,0 +1,684 @@
+{
+  "modelId": "Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4",
+  "repo": "AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4",
+  "revision": "839273460d343a02f2e88a0cfe059f8ec78a50ea",
+  "complete": true,
+  "files": [
+    {
+      "path": ".gitattributes",
+      "size": 8164,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/.gitattributes",
+      "verifiedHashes": {
+        "sha256": "9a7587ad03657f95b390d69b86177d920b56542cf36b87f27f4b454bfddefd2d",
+        "gitBlob": "aa58a9c575254415570f9849966989f7a50006aa"
+      }
+    },
+    {
+      "path": "README.md",
+      "size": 11773,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/README.md",
+      "verifiedHashes": {
+        "sha256": "e8d47b2984efc92564aed7f14e6bb5b1c554f7ec6c770827d18d57e48af440d1",
+        "gitBlob": "23a4118e8c3f531294a86fd3960e1fefa1917a1e"
+      }
+    },
+    {
+      "path": "Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/Xiaomi-MiMo-VL-Miloco-7B_vision.axmodel",
+      "size": 788691763,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/Xiaomi-MiMo-VL-Miloco-7B_vision.axmodel",
+      "verifiedHashes": {
+        "sha256": "d8e6d15f617f7c7f677bf6cc8b0b516c3e59c85dd48393041b7dafe2fef410b6",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/model.embed_tokens.weight.bfloat16.bin",
+      "size": 1242562560,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/model.embed_tokens.weight.bfloat16.bin",
+      "verifiedHashes": {
+        "sha256": "b168c6cc108acf4c20907f9f0254dbe85ab91d6482a36e934c719842ae7740f9",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l0_together.axmodel",
+      "size": 118219145,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l0_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "49523f85c62c626f227077830eead69bf794fa382134ca2cbc1082e37b183fe9",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l10_together.axmodel",
+      "size": 118219153,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l10_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "ef84fa1ce42ac6a6361a2de1f004855dbfe86a2710be1eb75157e824fed61de5",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l11_together.axmodel",
+      "size": 118219153,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l11_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "39bdc62dc5f95c61098d7f2c06b3ca36157d7370b6b291c39f8d0455c7834e3c",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l12_together.axmodel",
+      "size": 118219153,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l12_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "b65ef219f8f86f5251e6f3c41c965954ab722a2decbaed4be1e7b1d11233cbbf",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l13_together.axmodel",
+      "size": 118219153,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l13_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "70ffc1195bcde2d503a8ee1650b4923f3d1ee38cd8b955b6a3a44534418696a4",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l14_together.axmodel",
+      "size": 118219153,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l14_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "3c6bc6ddc35de631a4dacfc7aeb834ea94cae7c24b38ef5a8b79e25fc545da71",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l15_together.axmodel",
+      "size": 118219153,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l15_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "f563539a51cb15fb3de4f44195e974b53874af0e6b197f9156132de53e0ff814",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l16_together.axmodel",
+      "size": 118219153,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l16_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "d61a13db2da25b697335d52632a42f45e1603078d2a3902985bbd0d504c4df36",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l17_together.axmodel",
+      "size": 118219153,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l17_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "fda8a1cbc60a2c2b75eb16b3768460973b70bf848567d8813ae0b31aadc0dd28",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l18_together.axmodel",
+      "size": 118219153,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l18_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "69025faf9c40043afd97c0f67cda0781bbb14cdb6438320aec4e1d32f8a2da54",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l19_together.axmodel",
+      "size": 118219153,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l19_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "5926632552672a334d0123cb61245da4c0d305a3cb6400255e79d20ce9e48dd7",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l1_together.axmodel",
+      "size": 118219145,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l1_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "740dabc1bcdf1c0e86a8317d06e17469b67c361082be93f2791b2a81bec19f2c",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l20_together.axmodel",
+      "size": 118219153,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l20_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "5415b0fd235bfdf92148c48d2e095ef9c1b70105b471c6c9648af7e08be31220",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l21_together.axmodel",
+      "size": 118219153,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l21_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "dc10277c19e3c19544b76608e79fe64002437eb3133d1c469e2192f375a0fcce",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l22_together.axmodel",
+      "size": 118219153,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l22_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "f382cf7f9f094b6ccc1a7b653e2350b23522083c5776c0af9105aad0b7a865b3",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l23_together.axmodel",
+      "size": 118219153,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l23_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "a4b436f431fd70be6d463be3e7bf747356fb44a9aa0520b1c2ce41831c3ed374",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l24_together.axmodel",
+      "size": 118219153,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l24_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "3ad76e139c9feeb9b8f90a4b3d3d2b99117f29e4045709c665c759a4781989d6",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l25_together.axmodel",
+      "size": 118219153,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l25_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "3bb1093c9d8e6ad4b86c00ed9a754930525824be09712ba44f88836a95dfc45a",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l26_together.axmodel",
+      "size": 118219153,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l26_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "26f9bc516aaf295d6c5b262d624d89066f534851c1f16d61bd34c89e4db8a925",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l27_together.axmodel",
+      "size": 118219153,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l27_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "0492531606b87927fe7ac5f421a8b0fb175d8baf97a95f22a7e13bd7fa116411",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l28_together.axmodel",
+      "size": 118219153,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l28_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "f66a1657b2decf1bbe5c89338a2b9051cace266520698486d4e6a99adab723c8",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l29_together.axmodel",
+      "size": 118219153,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l29_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "b63aee1431ed53bd2ee1a5b9995eea275496b564c4608f70a198058fafbba1e3",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l2_together.axmodel",
+      "size": 118219145,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l2_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "aac8f35e4d2d070363fe47c222f6fbfb2ef14aaa3887e8fe2190ae779aac41b0",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l30_together.axmodel",
+      "size": 118219153,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l30_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "7aba4764ec563e2b5e06b01e29fefdf184495883f0d0713d35805d2dc35189ca",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l31_together.axmodel",
+      "size": 118219153,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l31_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "efa96581b4b8ef46efed030708772e2ec9e5a09c27a47c19734753e84861ea14",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l32_together.axmodel",
+      "size": 118219153,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l32_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "b2f439a85841132680e0d178d98007dff0b29acdb75b2ab124963b2adc768f46",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l33_together.axmodel",
+      "size": 118219153,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l33_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "e2b77ce47883c680b1e94aaf6cb29602a953f768e30c439b91e7e0f7a24985d9",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l34_together.axmodel",
+      "size": 118219153,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l34_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "b702abfc39e16e79ab1fba82b40d2cd226029cfbdec8ad104bc035bffc599fcf",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l35_together.axmodel",
+      "size": 118219153,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l35_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "28df908f430d317dce02cca174eeb1ec485ba0a502e35da10f8304774c71f9b8",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l3_together.axmodel",
+      "size": 118219145,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l3_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "6266fe069713fb27d52a0e38789d02cabe46b337c880a8031caf81e92ef5afc9",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l4_together.axmodel",
+      "size": 118219145,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l4_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "6189637ec4801b8a7b88c26db002c8f5dd33905a69e4ac8869081f2fecc2a43c",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l5_together.axmodel",
+      "size": 118219145,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l5_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "66edd1492ec3c39210002f6760cd06f3c566c9c7430bba13f9f305e17dbff27a",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l6_together.axmodel",
+      "size": 118219145,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l6_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "afd403f91df593a79ae474b876a3377cbe1e6dc75f5398fe799d830f6af94bfe",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l7_together.axmodel",
+      "size": 118219145,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l7_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "224ba678e79f08be4b4a193ecf0629f7a531304b2c4d482402b62b0f4a2275ad",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l8_together.axmodel",
+      "size": 118219145,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l8_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "ae137e50503b42797822577d90bed2342b3dac20795d4fd1a90dea118f1f382e",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l9_together.axmodel",
+      "size": 118219145,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_p128_l9_together.axmodel",
+      "verifiedHashes": {
+        "sha256": "6d7af97be6457a746280b64dc22ae8f6cb39fa041ad78e2579f5924566b543c3",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_post.axmodel",
+      "size": 678849083,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/Xiaomi-MiMo-VL-Miloco-7B-AX650-c128-p1280-ctx2047-Int4/qwen2_5_vl_text_post.axmodel",
+      "verifiedHashes": {
+        "sha256": "7f84729131bb4a593ac5fc93d2d7a769d04353039f1509d7fad89e84de366a82",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "config.json",
+      "size": 0,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/config.json",
+      "verifiedHashes": {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "gitBlob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+      }
+    },
+    {
+      "path": "image/ssd_car.jpg",
+      "size": 50535,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/image/ssd_car.jpg",
+      "verifiedHashes": {
+        "sha256": "92d459a39a9eef03956257cf9fec84114d9e5df8fb9c0662fb257488cdd4f365",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "image/ssd_horse.jpg",
+      "size": 123072,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/image/ssd_horse.jpg",
+      "verifiedHashes": {
+        "sha256": "ed22f6b4c8c33e50e391e089ede14e8fa9402c623b09dbcf010e804770698fbb",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "main_ax650",
+      "size": 6593472,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/main_ax650",
+      "verifiedHashes": {
+        "sha256": "bdbd72d706b584081c103af2fe6a59426140f0ed0b79d9baf4282a601e2e014c",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "main_axcl_aarch64",
+      "size": 1856144,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/main_axcl_aarch64",
+      "verifiedHashes": {
+        "sha256": "14a18915cc18ed06c58265a3ca78a04430ae5538bced459531cd58866eb1cfa3",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "main_axcl_x86",
+      "size": 1877896,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/main_axcl_x86",
+      "verifiedHashes": {
+        "sha256": "0a4f1a04832d682d61279742cefb5d2e9d7509df0aec69d0f3bdaa45d8f5efac",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "run_image_ax650.sh",
+      "size": 708,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/run_image_ax650.sh",
+      "verifiedHashes": {
+        "sha256": "b2085a9cc44c2c8632de55511accdc7b49afe865bdc0ecb6631684e146c35310",
+        "gitBlob": "22071a68de477459230f23257e7fd11d1615d3b7"
+      }
+    },
+    {
+      "path": "run_image_axcl_aarch64.sh",
+      "size": 728,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/run_image_axcl_aarch64.sh",
+      "verifiedHashes": {
+        "sha256": "0d17e50ad8a72f1a611ff02fa55ca8cb3a391cc918ad9548a1b0eb6d228481a6",
+        "gitBlob": "32a3189879d724db9e255ad7c96769a517a3e976"
+      }
+    },
+    {
+      "path": "run_image_axcl_x86.sh",
+      "size": 738,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/run_image_axcl_x86.sh",
+      "verifiedHashes": {
+        "sha256": "06463d05c8ca2ab248b9bf785a17611d7519e89d60c95cd6e28435e64e5c1a75",
+        "gitBlob": "92cf4e31e662d2b5e85df0058a27552e48ff4729"
+      }
+    },
+    {
+      "path": "run_video_ax650.sh",
+      "size": 708,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/run_video_ax650.sh",
+      "verifiedHashes": {
+        "sha256": "0409a44db1fce360b9c3f9027c906877fbc511f07276f509492301c8e1dbc517",
+        "gitBlob": "2542a0ece364a28b0b335de7ea649cc66672e0f7"
+      }
+    },
+    {
+      "path": "run_video_axcl_aarch64.sh",
+      "size": 729,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/run_video_axcl_aarch64.sh",
+      "verifiedHashes": {
+        "sha256": "980f24a711122c5b7b7fe5c1e399e9622598c4b64a6db0494b1f54b064153ab2",
+        "gitBlob": "522cf189a9877deca44fcb8b51e50cdabb1580cb"
+      }
+    },
+    {
+      "path": "run_video_axcl_x86.sh",
+      "size": 738,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/run_video_axcl_x86.sh",
+      "verifiedHashes": {
+        "sha256": "5f39cae1b264b299e5756131060d3c404e913c9e4efe6d264b328d052bda355e",
+        "gitBlob": "a2b72d84c922d0b641d2ae222697118069365e21"
+      }
+    },
+    {
+      "path": "tokenizer/LICENSE",
+      "size": 5249,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/tokenizer/LICENSE",
+      "verifiedHashes": {
+        "sha256": "8f6d1cebea41bf533e6b085ea611aa7daf3f706ada23f833b3f417e7d551bad0",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "tokenizer/added_tokens.json",
+      "size": 605,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/tokenizer/added_tokens.json",
+      "verifiedHashes": {
+        "sha256": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "tokenizer/chat_template.json",
+      "size": 1071,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/tokenizer/chat_template.json",
+      "verifiedHashes": {
+        "sha256": "ce8877c507d4cbda247630a69b833356d6ddbe92d4e828bf0c4d4c33058313f0",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "tokenizer/config.json",
+      "size": 1580,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/tokenizer/config.json",
+      "verifiedHashes": {
+        "sha256": "ce4f69685ba8c0abb23c3a073c4890a2fa37531788801494a3219f2902fe1964",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "tokenizer/generation_config.json",
+      "size": 143,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/tokenizer/generation_config.json",
+      "verifiedHashes": {
+        "sha256": "712d78593f2bcaa96ca1d1005e4d6739b149f5b4a54ee24d645452f8f585a208",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "tokenizer/merges.txt",
+      "size": 1671853,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/tokenizer/merges.txt",
+      "verifiedHashes": {
+        "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "tokenizer/model.safetensors.index.json",
+      "size": 65507,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/tokenizer/model.safetensors.index.json",
+      "verifiedHashes": {
+        "sha256": "fa1974157e8bed3129d39042e76c28e2c2b53bdda8ae8039843adcc8e71fa55f",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "tokenizer/preprocessor_config.json",
+      "size": 575,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/tokenizer/preprocessor_config.json",
+      "verifiedHashes": {
+        "sha256": "549c158011407dfb750d9ec578047cf76f5bfe365cd0aa069a50137d3f98d9dd",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "tokenizer/special_tokens_map.json",
+      "size": 613,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/tokenizer/special_tokens_map.json",
+      "verifiedHashes": {
+        "sha256": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "tokenizer/tokenizer.json",
+      "size": 11421896,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/tokenizer/tokenizer.json",
+      "verifiedHashes": {
+        "sha256": "9c5ae00e602b8860cbd784ba82a8aa14e8feecec692e7076590d014d7b7fdafa",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "tokenizer/tokenizer_config.json",
+      "size": 7344,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/tokenizer/tokenizer_config.json",
+      "verifiedHashes": {
+        "sha256": "82dabc93cd67e96502d5bb33d9c2a7fdf980097f78b6f3d502e43d9949249c18",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "tokenizer/vocab.json",
+      "size": 2776833,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/tokenizer/vocab.json",
+      "verifiedHashes": {
+        "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "tokenizer_image.py",
+      "size": 10310,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/tokenizer_image.py",
+      "verifiedHashes": {
+        "sha256": "ca1023d7a529425808f99d2245d6d11a0e7add2e1a607f8382321c3cff0c1441",
+        "gitBlob": "54ab6691b30dd54df866bac77a5870190b28e85a"
+      }
+    },
+    {
+      "path": "tokenizer_video.py",
+      "size": 10301,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/tokenizer_video.py",
+      "verifiedHashes": {
+        "sha256": "8ad87f64ea1b26c37d125bc65a4c22320bd9e3eee746c28df84e128410a788d2",
+        "gitBlob": "f979a34247eb63046c818f567ce463ad19ee68ad"
+      }
+    },
+    {
+      "path": "video/frame_0000.jpg",
+      "size": 54099,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/video/frame_0000.jpg",
+      "verifiedHashes": {
+        "sha256": "d0cea2769fd052ce3b24c3982a17135dbffd600cd612014c3cffe014c0224ffa",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "video/frame_0008.jpg",
+      "size": 52705,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/video/frame_0008.jpg",
+      "verifiedHashes": {
+        "sha256": "c812aed3407b41d474d859fedd4d9eaab971482e1dd0e22c5da16a627a740394",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "video/frame_0016.jpg",
+      "size": 48877,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/video/frame_0016.jpg",
+      "verifiedHashes": {
+        "sha256": "3cc72377820bd9c47a41ebcae744acd8b3952b54e02854a9cf0b4a70e49def60",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "video/frame_0024.jpg",
+      "size": 49217,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/video/frame_0024.jpg",
+      "verifiedHashes": {
+        "sha256": "afee75df68ffda9f5ae59b0ba3badf29e56a60acce64554ecc9e49f20854c47c",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "video/frame_0032.jpg",
+      "size": 49057,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/video/frame_0032.jpg",
+      "verifiedHashes": {
+        "sha256": "1cea98a54747fb32c1bf7375aae020b3703ee70da6eb967d1a7d590d9f997038",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "video/frame_0040.jpg",
+      "size": 45534,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/video/frame_0040.jpg",
+      "verifiedHashes": {
+        "sha256": "dc03d027d92549acc1164f01b8450623093b76e3945b9c2eaaa7f0073b827cf5",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "video/frame_0048.jpg",
+      "size": 44930,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/video/frame_0048.jpg",
+      "verifiedHashes": {
+        "sha256": "f1832ad904c7d25423b1389c769a2287815d1b62acee9474403caa18069d7c52",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "video/frame_0056.jpg",
+      "size": 42752,
+      "url": "https://huggingface.co/AXERA-TECH/Xiaomi-MiMo-VL-Miloco-7B-AX650-GPTQ-Int4/resolve/839273460d343a02f2e88a0cfe059f8ec78a50ea/video/frame_0056.jpg",
+      "verifiedHashes": {
+        "sha256": "2a000328952b1f092c438f687a55dfaeb822d763b68eb3685ee403c9859d5ebd",
+        "gitBlob": null
+      }
+    }
+  ],
+  "runnerSha256": "38990441ac608c2c32dcd6eb5f26315f17c9b22f166f3b0c81d4a31489ee9197"
+}

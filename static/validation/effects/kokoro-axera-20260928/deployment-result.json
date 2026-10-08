@@ -5,7 +5,7 @@
   "variants": [
     {
       "label": "合成中文短句与官方样例",
-      "observation": "以下音频由本次 RK3576 + AX8850 16GB 算力卡运行生成。中文使用 zf_xiaoyi 声纹；短句的20个token先重复为40个再裁剪，官方样例含首尾标记共96个token，按一段合成。",
+      "observation": "以下音频由本次 RK3576 + AX8850 16GB 算力卡运行生成。中文使用 zf_xiaoyi 声纹；短句的20个token先重复为40个再裁剪，官方样例含首尾标记共96个token，按一段合成。 下面使用独立 Whisper-base 在主机 CPU 上识别本页实际生成的 WAV，不向识别器提供目标文字。转写可能包含同音字、繁简体和识别器自身误差，用于定位复听位置，不是人工听审或语音合成准确率。",
       "previews": [],
       "audio": [
         {
@@ -37,6 +37,25 @@
               "1",
               "4.800",
               "zf_xiaoyi"
+            ]
+          ]
+        },
+        {
+          "headers": [
+            "合成输入文字",
+            "实际音频的 ASR 辅助转写",
+            "核对说明"
+          ],
+          "rows": [
+            [
+              "你好，世界。",
+              "你好,世间",
+              "“世界”被识别为“世间”，需复听短句尾音。"
+            ],
+            [
+              "致力于打造世界领先的人工智能感知与边缘计算芯片。",
+              "治理於打造世界領先的人工智能感知與邊緣計算芯片。",
+              "“致力于”出现同音或近音文字差异。"
             ]
           ]
         }
@@ -2307,7 +2326,7 @@
     },
     {
       "label": "合成英语与日语",
-      "observation": "英语使用仓库示例句和 af_heart 声纹，日语输入两句话并使用 jm_kumo 声纹。音素转换和音频还原在主机 CPU 上执行，三个 AXMODEL 在算力卡上执行。",
+      "observation": "英语使用仓库示例句和 af_heart 声纹，日语输入两句话并使用 jm_kumo 声纹。音素转换和音频还原在主机 CPU 上执行，三个 AXMODEL 在算力卡上执行。 下面使用独立 Whisper-base 在主机 CPU 上识别本页实际生成的 WAV，不向识别器提供目标文字。转写可能包含同音字、繁简体和识别器自身误差，用于定位复听位置，不是人工听审或语音合成准确率。",
       "previews": [],
       "audio": [
         {
@@ -2339,6 +2358,25 @@
               "1",
               "3.225",
               "jm_kumo"
+            ]
+          ]
+        },
+        {
+          "headers": [
+            "合成输入文字",
+            "实际音频的 ASR 辅助转写",
+            "核对说明"
+          ],
+          "rows": [
+            [
+              "The sky above the port was the color of television, tuned to a dead channel.",
+              "The sky above the port was the color of television, tuned to a dead channel.",
+              "英文词语对应，未评价音色或自然度。"
+            ],
+            [
+              "今日はいい天気です。一緒に公園へ行きましょう。",
+              "今日はイテンキです。一緒に声ね行きましょう。",
+              "日语两句中存在识别偏差，需要日语听审确认发音。"
             ]
           ]
         }
@@ -4609,7 +4647,7 @@
     },
     {
       "label": "重复合成与音频核对",
-      "observation": "在其他语言输入之后重复官方中文句。CPU 谐波模型包含随机算子，本例逐样例重置种子并重建 CPU 会话；重复结果按实际文件核对。所有样例的跨网络输入、时长对齐、裁剪和 PCM16 保存均经过独立复核。",
+      "observation": "在其他语言输入之后重复官方中文句。CPU 谐波模型包含随机算子，本例逐样例重置种子并重建 CPU 会话；重复结果按实际文件核对。所有样例的跨网络输入、时长对齐、裁剪和 PCM16 保存均经过独立复核。 下面使用独立 Whisper-base 在主机 CPU 上识别本页实际生成的 WAV，不向识别器提供目标文字。转写可能包含同音字、繁简体和识别器自身误差，用于定位复听位置，不是人工听审或语音合成准确率。",
       "previews": [],
       "audio": [
         {
@@ -4643,6 +4681,20 @@
             [
               "空文本",
               "在 NPU 调用前拒绝"
+            ]
+          ]
+        },
+        {
+          "headers": [
+            "合成输入文字",
+            "实际音频的 ASR 辅助转写",
+            "核对说明"
+          ],
+          "rows": [
+            [
+              "致力于打造世界领先的人工智能感知与边缘计算芯片。",
+              "治理於打造世界領先的人工智能感知與邊緣計算芯片。",
+              "重复音频与首次 SHA 一致，辅助转写也相同，不算新的独立文本样本。"
             ]
           ]
         }
@@ -11503,5 +11555,58 @@
         ]
       }
     }
-  ]
+  ],
+  "auxiliarySpeechReview": {
+    "reviewedAt": "2026-10-01T18:13:14.127522+00:00",
+    "asrRepo": "openai/whisper-base",
+    "asrRevision": "e37978b90ca9030d5170a5c07aadb050351a65bb",
+    "device": "host CPU",
+    "initialPrompt": null,
+    "newNpuRuns": 0,
+    "scope": "下面使用独立 Whisper-base 在主机 CPU 上识别本页实际生成的 WAV，不向识别器提供目标文字。转写可能包含同音字、繁简体和识别器自身误差，用于定位复听位置，不是人工听审或语音合成准确率。",
+    "originalSynthesisCapacity": "16GB",
+    "originalSynthesisDate": "2026-09-28",
+    "results": [
+      {
+        "audioPath": "/validation/effects/kokoro-axera-20260928/zh-short.wav",
+        "sha256": "f530794035526e0c9de77dc86d4d97f5f4503e1fc5c7d2e8d3682a1b01729285",
+        "targetText": "你好，世界。",
+        "asrTranscript": "你好,世间",
+        "language": "zh",
+        "observation": "“世界”被识别为“世间”，需复听短句尾音。"
+      },
+      {
+        "audioPath": "/validation/effects/kokoro-axera-20260928/zh-official.wav",
+        "sha256": "d97bae9cd1d8d3d43f260310392cf084cc331b2b012cd2670154d2c0b49af64d",
+        "targetText": "致力于打造世界领先的人工智能感知与边缘计算芯片。",
+        "asrTranscript": "治理於打造世界領先的人工智能感知與邊緣計算芯片。",
+        "language": "zh",
+        "observation": "“致力于”出现同音或近音文字差异。"
+      },
+      {
+        "audioPath": "/validation/effects/kokoro-axera-20260928/en-official.wav",
+        "sha256": "c0f95a77cacbe9f86a477faffd3560492142f70f2c68ffae4b380b3a973cf659",
+        "targetText": "The sky above the port was the color of television, tuned to a dead channel.",
+        "asrTranscript": " The sky above the port was the color of television, tuned to a dead channel.",
+        "language": "en",
+        "observation": "英文词语对应，未评价音色或自然度。"
+      },
+      {
+        "audioPath": "/validation/effects/kokoro-axera-20260928/ja-sentences.wav",
+        "sha256": "01e5133be88d0e17e9fb29c4f781081094e054ea23d44d08f7afd78cacf3d28a",
+        "targetText": "今日はいい天気です。一緒に公園へ行きましょう。",
+        "asrTranscript": "今日はイテンキです。一緒に声ね行きましょう。",
+        "language": "ja",
+        "observation": "日语两句中存在识别偏差，需要日语听审确认发音。"
+      },
+      {
+        "audioPath": "/validation/effects/kokoro-axera-20260928/zh-official-repeat.wav",
+        "sha256": "d97bae9cd1d8d3d43f260310392cf084cc331b2b012cd2670154d2c0b49af64d",
+        "targetText": "致力于打造世界领先的人工智能感知与边缘计算芯片。",
+        "asrTranscript": "治理於打造世界領先的人工智能感知與邊緣計算芯片。",
+        "language": "zh",
+        "observation": "重复音频与首次 SHA 一致，辅助转写也相同，不算新的独立文本样本。"
+      }
+    ]
+  }
 }

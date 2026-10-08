@@ -1,0 +1,74 @@
+{
+  "kind": "native-text",
+  "provider": "AXCL C++",
+  "modelId": "Qwen2.5-7B-Instruct-GPTQ-Int4",
+  "revision": "5b09894da95a2cdfb3cfd542441b8c0cd8c92d7c",
+  "date": "2026-10-04",
+  "completed": true,
+  "runtimeBinarySha256": "bb111fc00c54abb6142a8f44df087bf104c8150a1cefa6be55c6b174b932c4ec",
+  "requestSettings": {
+    "continueConversation": false,
+    "top_k": 1,
+    "mmap_embed": 0,
+    "live_print": 0,
+    "device": "0",
+    "tokenizerPort": 8521,
+    "tokenizerProtocol": "original non-UID",
+    "systemPrompt": "You are Qwen, created by Alibaba Cloud. You are a helpful assistant."
+  },
+  "testedWeightFiles": [
+    "qwen2_p128_l0_together.axmodel",
+    "qwen2_p128_l10_together.axmodel",
+    "qwen2_p128_l11_together.axmodel",
+    "qwen2_p128_l12_together.axmodel",
+    "qwen2_p128_l13_together.axmodel",
+    "qwen2_p128_l14_together.axmodel",
+    "qwen2_p128_l15_together.axmodel",
+    "qwen2_p128_l16_together.axmodel",
+    "qwen2_p128_l17_together.axmodel",
+    "qwen2_p128_l18_together.axmodel",
+    "qwen2_p128_l19_together.axmodel",
+    "qwen2_p128_l1_together.axmodel",
+    "qwen2_p128_l20_together.axmodel",
+    "qwen2_p128_l21_together.axmodel",
+    "qwen2_p128_l22_together.axmodel",
+    "qwen2_p128_l23_together.axmodel",
+    "qwen2_p128_l24_together.axmodel",
+    "qwen2_p128_l25_together.axmodel",
+    "qwen2_p128_l26_together.axmodel",
+    "qwen2_p128_l27_together.axmodel",
+    "qwen2_p128_l2_together.axmodel",
+    "qwen2_p128_l3_together.axmodel",
+    "qwen2_p128_l4_together.axmodel",
+    "qwen2_p128_l5_together.axmodel",
+    "qwen2_p128_l6_together.axmodel",
+    "qwen2_p128_l7_together.axmodel",
+    "qwen2_p128_l8_together.axmodel",
+    "qwen2_p128_l9_together.axmodel",
+    "qwen2_post.axmodel"
+  ],
+  "independentEosTokenIdCaptured": false,
+  "samples": [
+    {
+      "input": "What is 2 + 3? Reply with only the number.",
+      "output": "5",
+      "observation": "正确返回5，满足只返回数字的要求。",
+      "exitCode": 0,
+      "processSeconds": 162.4676141179989
+    },
+    {
+      "input": "请用一句中文说明 PCIe 的用途。",
+      "output": "PCIe 用于高速连接和通信，实现计算机组件之间的快速数据传输。",
+      "observation": "用一句中文说明PCIe用于计算机组件之间的高速数据传输。",
+      "exitCode": 0,
+      "processSeconds": 163.75995549599975
+    },
+    {
+      "input": "Return only a JSON object with apple equal to 3 and pear equal to 2.",
+      "output": "```json\n{\n  \"apple\": 3,\n  \"pear\": 2\n}\n``` \n\nNote: The value for \"pear\" seems to be missing a digit. I assume it should be `2` (two), but if you meant something else, please let me know.",
+      "observation": "apple=3、pear=2正确，但附带Markdown代码围栏及无依据的“pear缺少数字”说明，未满足只返回JSON对象的要求。",
+      "exitCode": 0,
+      "processSeconds": 184.17116893600178
+    }
+  ]
+}

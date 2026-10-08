@@ -1,0 +1,1414 @@
+{
+  "modelId": "yolo11-obb",
+  "revision": "c4b6bb36c9de0f874d3bf5dfaaacda3d1ed2092c",
+  "date": "2026-10-05",
+  "variants": [
+    {
+      "label": "yolo11l · NPU1 / NPU3",
+      "observation": "码头中多列船只被旋转框覆盖，框的方向与船身大致一致；同时给出港口区域。右上较暗、遮挡位置存在未框出的船只。 NPU1与NPU3输出图的文件内容相同，因此合并展示。",
+      "previews": [
+        {
+          "caption": "固定输入：boats.jpg",
+          "path": "/validation/effects/yolo11-obb-variants-20261005/inputs/boats.jpg"
+        },
+        {
+          "caption": "实际旋转框输出：yolo11l",
+          "path": "/validation/effects/yolo11-obb-variants-20261005/outputs/yolo11l.jpg"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "权重",
+            "程序输出ship框数",
+            "程序输出harbor框数"
+          ],
+          "rows": [
+            [
+              "yolo11l-obb_640x640_npu1.axmodel",
+              173,
+              3
+            ],
+            [
+              "yolo11l-obb_640x640_npu3.axmodel",
+              173,
+              3
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "completed": true,
+        "provider": "AXCLRTExecutionProvider",
+        "inferenceEvidence": "original-cv-variant-samples",
+        "modelId": "yolo11-obb",
+        "revision": "c4b6bb36c9de0f874d3bf5dfaaacda3d1ed2092c",
+        "actualCapacity": "16GB",
+        "sessions": [
+          {
+            "model": "650/yolo11l-obb_640x640_npu1.axmodel",
+            "sha256": "caaf00a67c40b994e3b79bcdbdfd7dd7484ddd4ef4d432cae84837e928b76825",
+            "allFinite": true,
+            "runMilliseconds": [
+              61.645457000395254,
+              62.946003999968525
+            ]
+          },
+          {
+            "model": "650/yolo11l-obb_640x640_npu3.axmodel",
+            "sha256": "12cf3661d8cfd172bafcf001dd8c1e0711b48a84021411807fb189dd546f44e2",
+            "allFinite": true,
+            "runMilliseconds": [
+              39.499699999851146,
+              40.16907799996261
+            ]
+          }
+        ],
+        "weightResults": [
+          {
+            "weight": "650/yolo11l-obb_640x640_npu1.axmodel",
+            "independentProcesses": 2,
+            "rawOutputsExact": true,
+            "imageSha256": "7666838c38d0f5de7a62abf6e3522e4ea589beae48317813604b45c755ce764d",
+            "metadata": [
+              {
+                "inputs": [
+                  {
+                    "name": "images",
+                    "shape": [
+                      1,
+                      640,
+                      640,
+                      3
+                    ],
+                    "dtype": "uint8"
+                  }
+                ],
+                "outputs": [
+                  {
+                    "name": "box_scale0_stride8",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      64
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "cls_scale0_stride8",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      15
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "ang_scale0_stride8",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      1
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "box_scale1_stride16",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      64
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "cls_scale1_stride16",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      15
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "ang_scale1_stride16",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      1
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "box_scale2_stride32",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      64
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "cls_scale2_stride32",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      15
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "ang_scale2_stride32",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      1
+                    ],
+                    "dtype": "float32"
+                  }
+                ]
+              }
+            ],
+            "detectedBoxes": {
+              "ship": 173,
+              "harbor": 3
+            }
+          },
+          {
+            "weight": "650/yolo11l-obb_640x640_npu3.axmodel",
+            "independentProcesses": 2,
+            "rawOutputsExact": true,
+            "imageSha256": "7666838c38d0f5de7a62abf6e3522e4ea589beae48317813604b45c755ce764d",
+            "metadata": [
+              {
+                "inputs": [
+                  {
+                    "name": "images",
+                    "shape": [
+                      1,
+                      640,
+                      640,
+                      3
+                    ],
+                    "dtype": "uint8"
+                  }
+                ],
+                "outputs": [
+                  {
+                    "name": "box_scale0_stride8",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      64
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "cls_scale0_stride8",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      15
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "ang_scale0_stride8",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      1
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "box_scale1_stride16",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      64
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "cls_scale1_stride16",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      15
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "ang_scale1_stride16",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      1
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "box_scale2_stride32",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      64
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "cls_scale2_stride32",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      15
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "ang_scale2_stride32",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      1
+                    ],
+                    "dtype": "float32"
+                  }
+                ]
+              }
+            ],
+            "detectedBoxes": {
+              "ship": 173,
+              "harbor": 3
+            }
+          }
+        ],
+        "originalFilesUnchanged": true,
+        "sourceScript": "ax_infer.py",
+        "sourceScriptSha256": "8fccc3ba5e7619982c227f52a272c5a85bd73a65d206ff68608ef158ee11ba3a",
+        "inputFile": "boats.jpg",
+        "inputSha256": "8c5ada657cf8110a9f8aaac954c1dd96cde0187315b581276c32b0d1863e756f",
+        "inputPath": "/validation/effects/yolo11-obb-variants-20261005/inputs/boats.jpg",
+        "outputPath": "/validation/effects/yolo11-obb-variants-20261005/outputs/yolo11l.jpg",
+        "outputSha256": "7666838c38d0f5de7a62abf6e3522e4ea589beae48317813604b45c755ce764d",
+        "runsPerWeight": 2,
+        "qualityAccepted": false
+      }
+    },
+    {
+      "label": "yolo11m · NPU1 / NPU3",
+      "observation": "多数可见船只与朝向被标出，码头区域另有大框；右侧局部暗处、小船和遮挡处仍有漏检或低分框。 NPU1与NPU3输出图的文件内容相同，因此合并展示。",
+      "previews": [
+        {
+          "caption": "实际旋转框输出：yolo11m",
+          "path": "/validation/effects/yolo11-obb-variants-20261005/outputs/yolo11m.jpg"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "权重",
+            "程序输出ship框数",
+            "程序输出harbor框数"
+          ],
+          "rows": [
+            [
+              "yolo11m-obb_640x640_npu1.axmodel",
+              177,
+              2
+            ],
+            [
+              "yolo11m-obb_640x640_npu3.axmodel",
+              177,
+              2
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "completed": true,
+        "provider": "AXCLRTExecutionProvider",
+        "inferenceEvidence": "original-cv-variant-samples",
+        "modelId": "yolo11-obb",
+        "revision": "c4b6bb36c9de0f874d3bf5dfaaacda3d1ed2092c",
+        "actualCapacity": "16GB",
+        "sessions": [
+          {
+            "model": "650/yolo11m-obb_640x640_npu1.axmodel",
+            "sha256": "6c481087ff5ae20463aa0198edca9aa73d9bea38766313c500dab8024acdb8c6",
+            "allFinite": true,
+            "runMilliseconds": [
+              53.78763299995626,
+              47.01073100022768
+            ]
+          },
+          {
+            "model": "650/yolo11m-obb_640x640_npu3.axmodel",
+            "sha256": "6b1f8d872f512cc360b40c352770ff93c826ed47f156d0f368c6388c4a929f95",
+            "allFinite": true,
+            "runMilliseconds": [
+              30.870995999976003,
+              37.95735699986835
+            ]
+          }
+        ],
+        "weightResults": [
+          {
+            "weight": "650/yolo11m-obb_640x640_npu1.axmodel",
+            "independentProcesses": 2,
+            "rawOutputsExact": true,
+            "imageSha256": "ae18d8e54e2c3af1276db36a91ee1814804e9a4ef7b34026b3c7616a726d8135",
+            "metadata": [
+              {
+                "inputs": [
+                  {
+                    "name": "images",
+                    "shape": [
+                      1,
+                      640,
+                      640,
+                      3
+                    ],
+                    "dtype": "uint8"
+                  }
+                ],
+                "outputs": [
+                  {
+                    "name": "box_scale0_stride8",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      64
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "cls_scale0_stride8",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      15
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "ang_scale0_stride8",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      1
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "box_scale1_stride16",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      64
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "cls_scale1_stride16",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      15
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "ang_scale1_stride16",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      1
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "box_scale2_stride32",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      64
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "cls_scale2_stride32",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      15
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "ang_scale2_stride32",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      1
+                    ],
+                    "dtype": "float32"
+                  }
+                ]
+              }
+            ],
+            "detectedBoxes": {
+              "ship": 177,
+              "harbor": 2
+            }
+          },
+          {
+            "weight": "650/yolo11m-obb_640x640_npu3.axmodel",
+            "independentProcesses": 2,
+            "rawOutputsExact": true,
+            "imageSha256": "ae18d8e54e2c3af1276db36a91ee1814804e9a4ef7b34026b3c7616a726d8135",
+            "metadata": [
+              {
+                "inputs": [
+                  {
+                    "name": "images",
+                    "shape": [
+                      1,
+                      640,
+                      640,
+                      3
+                    ],
+                    "dtype": "uint8"
+                  }
+                ],
+                "outputs": [
+                  {
+                    "name": "box_scale0_stride8",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      64
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "cls_scale0_stride8",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      15
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "ang_scale0_stride8",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      1
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "box_scale1_stride16",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      64
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "cls_scale1_stride16",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      15
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "ang_scale1_stride16",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      1
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "box_scale2_stride32",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      64
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "cls_scale2_stride32",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      15
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "ang_scale2_stride32",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      1
+                    ],
+                    "dtype": "float32"
+                  }
+                ]
+              }
+            ],
+            "detectedBoxes": {
+              "ship": 177,
+              "harbor": 2
+            }
+          }
+        ],
+        "originalFilesUnchanged": true,
+        "sourceScript": "ax_infer.py",
+        "sourceScriptSha256": "8fccc3ba5e7619982c227f52a272c5a85bd73a65d206ff68608ef158ee11ba3a",
+        "inputFile": "boats.jpg",
+        "inputSha256": "8c5ada657cf8110a9f8aaac954c1dd96cde0187315b581276c32b0d1863e756f",
+        "inputPath": "/validation/effects/yolo11-obb-variants-20261005/inputs/boats.jpg",
+        "outputPath": "/validation/effects/yolo11-obb-variants-20261005/outputs/yolo11m.jpg",
+        "outputSha256": "ae18d8e54e2c3af1276db36a91ee1814804e9a4ef7b34026b3c7616a726d8135",
+        "runsPerWeight": 2,
+        "qualityAccepted": false
+      }
+    },
+    {
+      "label": "yolo11n · NPU1",
+      "observation": "船只与港口区域可识别，旋转框大体沿船身方向；右上方多艘船只未检出。固定样例不等于完整检测精度。",
+      "previews": [
+        {
+          "caption": "实际旋转框输出：yolo11n",
+          "path": "/validation/effects/yolo11-obb-variants-20261005/outputs/yolo11n.jpg"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "权重",
+            "程序输出ship框数",
+            "程序输出harbor框数"
+          ],
+          "rows": [
+            [
+              "yolo11n-obb_640x640_npu1.axmodel",
+              160,
+              6
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "completed": true,
+        "provider": "AXCLRTExecutionProvider",
+        "inferenceEvidence": "original-cv-variant-samples",
+        "modelId": "yolo11-obb",
+        "revision": "c4b6bb36c9de0f874d3bf5dfaaacda3d1ed2092c",
+        "actualCapacity": "16GB",
+        "sessions": [
+          {
+            "model": "650/yolo11n-obb_640x640_npu1.axmodel",
+            "sha256": "e0d469d033a1c0a6f0af2fd87af02cabe6f42af5467a433c78d111a318b39b62",
+            "allFinite": true,
+            "runMilliseconds": [
+              32.603794999886304,
+              31.250164000084624
+            ]
+          }
+        ],
+        "weightResults": [
+          {
+            "weight": "650/yolo11n-obb_640x640_npu1.axmodel",
+            "independentProcesses": 2,
+            "rawOutputsExact": true,
+            "imageSha256": "bed3a582dc32cffd9fbddbec98906db5d2909a60cdb77830f17d0c68670f8afd",
+            "metadata": [
+              {
+                "inputs": [
+                  {
+                    "name": "images",
+                    "shape": [
+                      1,
+                      640,
+                      640,
+                      3
+                    ],
+                    "dtype": "uint8"
+                  }
+                ],
+                "outputs": [
+                  {
+                    "name": "box_scale0_stride8",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      64
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "cls_scale0_stride8",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      15
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "ang_scale0_stride8",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      1
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "box_scale1_stride16",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      64
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "cls_scale1_stride16",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      15
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "ang_scale1_stride16",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      1
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "box_scale2_stride32",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      64
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "cls_scale2_stride32",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      15
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "ang_scale2_stride32",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      1
+                    ],
+                    "dtype": "float32"
+                  }
+                ]
+              }
+            ],
+            "detectedBoxes": {
+              "ship": 160,
+              "harbor": 6
+            }
+          }
+        ],
+        "originalFilesUnchanged": true,
+        "sourceScript": "ax_infer.py",
+        "sourceScriptSha256": "8fccc3ba5e7619982c227f52a272c5a85bd73a65d206ff68608ef158ee11ba3a",
+        "inputFile": "boats.jpg",
+        "inputSha256": "8c5ada657cf8110a9f8aaac954c1dd96cde0187315b581276c32b0d1863e756f",
+        "inputPath": "/validation/effects/yolo11-obb-variants-20261005/inputs/boats.jpg",
+        "outputPath": "/validation/effects/yolo11-obb-variants-20261005/outputs/yolo11n.jpg",
+        "outputSha256": "bed3a582dc32cffd9fbddbec98906db5d2909a60cdb77830f17d0c68670f8afd",
+        "runsPerWeight": 2,
+        "qualityAccepted": false
+      }
+    },
+    {
+      "label": "yolo11s · NPU1 / NPU3",
+      "observation": "多数可见船只被标出，框方向与停泊方向一致；右上方暗处仍有漏检，港口大框覆盖范围与其他规模有差异。 NPU1与NPU3输出图的文件内容相同，因此合并展示。",
+      "previews": [
+        {
+          "caption": "实际旋转框输出：yolo11s",
+          "path": "/validation/effects/yolo11-obb-variants-20261005/outputs/yolo11s.jpg"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "权重",
+            "程序输出ship框数",
+            "程序输出harbor框数"
+          ],
+          "rows": [
+            [
+              "yolo11s-obb_640x640_npu1.axmodel",
+              164,
+              1
+            ],
+            [
+              "yolo11s-obb_640x640_npu3.axmodel",
+              164,
+              1
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "completed": true,
+        "provider": "AXCLRTExecutionProvider",
+        "inferenceEvidence": "original-cv-variant-samples",
+        "modelId": "yolo11-obb",
+        "revision": "c4b6bb36c9de0f874d3bf5dfaaacda3d1ed2092c",
+        "actualCapacity": "16GB",
+        "sessions": [
+          {
+            "model": "650/yolo11s-obb_640x640_npu1.axmodel",
+            "sha256": "575d02031441f645e18eecadcb97bdaffbefdc87c95bae16e5c30f30c4c8c134",
+            "allFinite": true,
+            "runMilliseconds": [
+              38.06527400047344,
+              31.854791000114346
+            ]
+          },
+          {
+            "model": "650/yolo11s-obb_640x640_npu3.axmodel",
+            "sha256": "e14176192888652f2ec74114d68eda88ac6176dab63f4df192e78c188af8bd4a",
+            "allFinite": true,
+            "runMilliseconds": [
+              32.16454199991858,
+              27.346482000211836
+            ]
+          }
+        ],
+        "weightResults": [
+          {
+            "weight": "650/yolo11s-obb_640x640_npu1.axmodel",
+            "independentProcesses": 2,
+            "rawOutputsExact": true,
+            "imageSha256": "7eafca342010cdf5bad19cff3dc449afab7339a9fe35411fda5a1e951fae40b7",
+            "metadata": [
+              {
+                "inputs": [
+                  {
+                    "name": "images",
+                    "shape": [
+                      1,
+                      640,
+                      640,
+                      3
+                    ],
+                    "dtype": "uint8"
+                  }
+                ],
+                "outputs": [
+                  {
+                    "name": "box_scale0_stride8",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      64
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "cls_scale0_stride8",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      15
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "ang_scale0_stride8",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      1
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "box_scale1_stride16",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      64
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "cls_scale1_stride16",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      15
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "ang_scale1_stride16",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      1
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "box_scale2_stride32",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      64
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "cls_scale2_stride32",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      15
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "ang_scale2_stride32",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      1
+                    ],
+                    "dtype": "float32"
+                  }
+                ]
+              }
+            ],
+            "detectedBoxes": {
+              "ship": 164,
+              "harbor": 1
+            }
+          },
+          {
+            "weight": "650/yolo11s-obb_640x640_npu3.axmodel",
+            "independentProcesses": 2,
+            "rawOutputsExact": true,
+            "imageSha256": "7eafca342010cdf5bad19cff3dc449afab7339a9fe35411fda5a1e951fae40b7",
+            "metadata": [
+              {
+                "inputs": [
+                  {
+                    "name": "images",
+                    "shape": [
+                      1,
+                      640,
+                      640,
+                      3
+                    ],
+                    "dtype": "uint8"
+                  }
+                ],
+                "outputs": [
+                  {
+                    "name": "box_scale0_stride8",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      64
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "cls_scale0_stride8",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      15
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "ang_scale0_stride8",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      1
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "box_scale1_stride16",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      64
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "cls_scale1_stride16",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      15
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "ang_scale1_stride16",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      1
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "box_scale2_stride32",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      64
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "cls_scale2_stride32",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      15
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "ang_scale2_stride32",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      1
+                    ],
+                    "dtype": "float32"
+                  }
+                ]
+              }
+            ],
+            "detectedBoxes": {
+              "ship": 164,
+              "harbor": 1
+            }
+          }
+        ],
+        "originalFilesUnchanged": true,
+        "sourceScript": "ax_infer.py",
+        "sourceScriptSha256": "8fccc3ba5e7619982c227f52a272c5a85bd73a65d206ff68608ef158ee11ba3a",
+        "inputFile": "boats.jpg",
+        "inputSha256": "8c5ada657cf8110a9f8aaac954c1dd96cde0187315b581276c32b0d1863e756f",
+        "inputPath": "/validation/effects/yolo11-obb-variants-20261005/inputs/boats.jpg",
+        "outputPath": "/validation/effects/yolo11-obb-variants-20261005/outputs/yolo11s.jpg",
+        "outputSha256": "7eafca342010cdf5bad19cff3dc449afab7339a9fe35411fda5a1e951fae40b7",
+        "runsPerWeight": 2,
+        "qualityAccepted": false
+      }
+    },
+    {
+      "label": "yolo11x · NPU1 / NPU3",
+      "observation": "船只框大体沿船身长轴方向，码头区域另有旋转大框；右上方暗处和遮挡处仍有可见船只未被框出。 NPU1与NPU3输出图的文件内容相同，因此合并展示。",
+      "previews": [
+        {
+          "caption": "实际旋转框输出：yolo11x",
+          "path": "/validation/effects/yolo11-obb-variants-20261005/outputs/yolo11x.jpg"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "权重",
+            "程序输出ship框数",
+            "程序输出harbor框数"
+          ],
+          "rows": [
+            [
+              "yolo11x-obb_640x640_npu1.axmodel",
+              174,
+              5
+            ],
+            [
+              "yolo11x-obb_640x640_npu3.axmodel",
+              174,
+              5
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "completed": true,
+        "provider": "AXCLRTExecutionProvider",
+        "inferenceEvidence": "original-cv-variant-samples",
+        "modelId": "yolo11-obb",
+        "revision": "c4b6bb36c9de0f874d3bf5dfaaacda3d1ed2092c",
+        "actualCapacity": "16GB",
+        "sessions": [
+          {
+            "model": "650/yolo11x-obb_640x640_npu1.axmodel",
+            "sha256": "686df166c9eb0561ede82c97fb9b6d00a371625db9eca2314f05dcae655dd71f",
+            "allFinite": true,
+            "runMilliseconds": [
+              103.34519599928171,
+              102.80502700061334
+            ]
+          },
+          {
+            "model": "650/yolo11x-obb_640x640_npu3.axmodel",
+            "sha256": "57b8aac5c34c62162d8044b5665860f0a8a7bcb2a0efb07ad811f6a422b05885",
+            "allFinite": true,
+            "runMilliseconds": [
+              54.07842000022356,
+              47.29597699952137
+            ]
+          }
+        ],
+        "weightResults": [
+          {
+            "weight": "650/yolo11x-obb_640x640_npu1.axmodel",
+            "independentProcesses": 2,
+            "rawOutputsExact": true,
+            "imageSha256": "fe402d887dcc5bcd2005c29a257c86883a5d1e62c35a3feafb812ef123c1b075",
+            "metadata": [
+              {
+                "inputs": [
+                  {
+                    "name": "images",
+                    "shape": [
+                      1,
+                      640,
+                      640,
+                      3
+                    ],
+                    "dtype": "uint8"
+                  }
+                ],
+                "outputs": [
+                  {
+                    "name": "box_scale0_stride8",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      64
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "cls_scale0_stride8",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      15
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "ang_scale0_stride8",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      1
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "box_scale1_stride16",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      64
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "cls_scale1_stride16",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      15
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "ang_scale1_stride16",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      1
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "box_scale2_stride32",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      64
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "cls_scale2_stride32",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      15
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "ang_scale2_stride32",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      1
+                    ],
+                    "dtype": "float32"
+                  }
+                ]
+              }
+            ],
+            "detectedBoxes": {
+              "ship": 174,
+              "harbor": 5
+            }
+          },
+          {
+            "weight": "650/yolo11x-obb_640x640_npu3.axmodel",
+            "independentProcesses": 2,
+            "rawOutputsExact": true,
+            "imageSha256": "fe402d887dcc5bcd2005c29a257c86883a5d1e62c35a3feafb812ef123c1b075",
+            "metadata": [
+              {
+                "inputs": [
+                  {
+                    "name": "images",
+                    "shape": [
+                      1,
+                      640,
+                      640,
+                      3
+                    ],
+                    "dtype": "uint8"
+                  }
+                ],
+                "outputs": [
+                  {
+                    "name": "box_scale0_stride8",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      64
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "cls_scale0_stride8",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      15
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "ang_scale0_stride8",
+                    "shape": [
+                      1,
+                      80,
+                      80,
+                      1
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "box_scale1_stride16",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      64
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "cls_scale1_stride16",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      15
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "ang_scale1_stride16",
+                    "shape": [
+                      1,
+                      40,
+                      40,
+                      1
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "box_scale2_stride32",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      64
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "cls_scale2_stride32",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      15
+                    ],
+                    "dtype": "float32"
+                  },
+                  {
+                    "name": "ang_scale2_stride32",
+                    "shape": [
+                      1,
+                      20,
+                      20,
+                      1
+                    ],
+                    "dtype": "float32"
+                  }
+                ]
+              }
+            ],
+            "detectedBoxes": {
+              "ship": 174,
+              "harbor": 5
+            }
+          }
+        ],
+        "originalFilesUnchanged": true,
+        "sourceScript": "ax_infer.py",
+        "sourceScriptSha256": "8fccc3ba5e7619982c227f52a272c5a85bd73a65d206ff68608ef158ee11ba3a",
+        "inputFile": "boats.jpg",
+        "inputSha256": "8c5ada657cf8110a9f8aaac954c1dd96cde0187315b581276c32b0d1863e756f",
+        "inputPath": "/validation/effects/yolo11-obb-variants-20261005/inputs/boats.jpg",
+        "outputPath": "/validation/effects/yolo11-obb-variants-20261005/outputs/yolo11x.jpg",
+        "outputSha256": "fe402d887dcc5bcd2005c29a257c86883a5d1e62c35a3feafb812ef123c1b075",
+        "runsPerWeight": 2,
+        "qualityAccepted": false
+      }
+    }
+  ]
+}

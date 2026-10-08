@@ -5,7 +5,7 @@
   "variants": [
     {
       "label": "MobileCLIP2-S2",
-      "observation": "以下数值为真实图片与候选描述的匹配分数；不是准确率。",
+      "observation": "图中两只斑马与 two zebras 对应，余弦相似度 0.330743 高于 a zebra 和 a dog。0.879615 是这三条候选内的 softmax 分数，不是整体分类准确率。",
       "previews": [
         {
           "caption": "官方图文匹配输入",

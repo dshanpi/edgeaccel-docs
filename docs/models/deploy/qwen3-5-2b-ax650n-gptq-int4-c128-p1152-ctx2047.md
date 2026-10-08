@@ -163,9 +163,9 @@ PY
 
 ## 查看部署效果
 
-**已运行，效果仍需评估** · 2026-09-23 · RK3576 DshanPi A1 + AX8850 8GB M.2。以下输入与输出来自本页固定版本的实际运行。
+**已运行，效果仍需评估** · RK3576 DshanPi A1 + AX8850 8GB M.2。以下输入与输出来自本页固定版本的实际运行。
 
-完成三组单图请求，人数回答为三人，能够描述白色宇航服、树林与中间人物举手。中文回复附带“表情惊讶”“庆祝”等无法确认的解释，并在 128 token 上限处停止。当前确认基本运行，保留完整原始回复供核对。
+三次单图请求均返回文本。中文误述左侧双手交叉胸前及惊讶表情，并在128 token处未完整结束；细节和完整回复未通过。
 
 点击图片可查看原尺寸。
 
@@ -236,7 +236,7 @@ All three individuals are wearing white space suits (astronauts) and appear to b
 <details>
 <summary>查看样例环境与运行耗时</summary>
 
-环境：RK3576 DshanPi A1 + AX8850 8GB M.2。日期：2026-09-23。模型版本：`14aafe22f5b269c200fe3affd6f5d031a5ef93a6`。
+环境：RK3576 DshanPi A1 + AX8850 8GB M.2。模型版本：`14aafe22f5b269c200fe3affd6f5d031a5ef93a6`。
 
 | 组件 | 版本或配置 |
 | --- | --- |
@@ -249,7 +249,7 @@ All three individuals are wearing white space suits (astronauts) and appear to b
 
 | 指标 | 实测值 | 计时或统计范围 |
 | --- | --- | --- |
-| 完整生成请求 | 3 | 仅 /v1/chat/completions；另有 health 与模型列表两项接口检查 |
+| 返回文本的图文请求 | 3 | 三次接口响应；中文达到128 token上限而未完整结束，不以stop标志代替完整回答。 |
 | 三次 HTTP 耗时 | 10.413 / 21.702 / 33.237 s | 按本页展示顺序；客户端从请求到完整回复，不包含服务启动 |
 | 三次首 token 延迟 | 1915.332 / 1621.695 / 1758.450 ms | 运行时返回的 usage 字段；单 token 回复可能没有 decode_tps，不估算缺失值。TTFT 非客户端流式到达时间 |
 | 三次生成速率 | 4.023 / 4.241 / 4.044 token/s | 运行时返回的 usage 字段；单 token 回复可能没有 decode_tps，不估算缺失值。TTFT 非客户端流式到达时间 |
@@ -257,8 +257,6 @@ All three individuals are wearing white space suits (astronauts) and appear to b
 
 适用范围：
 
-- 人物表情、动机和部分动作细节无法从本图确认，不能只按人数正确判定整段描述正确。
-- 中文回复达到 max_tokens=128，句子未写完；测试范围仅为单图三次请求。
 - 仅执行本页列出的短请求，未测试长期稳定性、并发或最大上下文；上游板端性能不作为本机结果。
 
 </details>

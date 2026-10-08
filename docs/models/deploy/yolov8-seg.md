@@ -8,11 +8,11 @@ description: "YOLOv8-Seg 的 M.2 算力卡部署步骤、配套文件与效果�
 
 YOLOv8-Seg 用于图像分割。本页说明 M.2 算力卡的接入条件、部署步骤与结果检查方法。本页选择 `AX650/yolov8n-seg_640x640_npu3.axmodel`。
 
-> 已实测，固定样例已核对。[查看部署效果](#查看部署效果)。
+> 已实测，效果仍需评估。[查看部署效果](#查看部署效果)。
 
 ## 准备运行环境
 
-本页效果展示使用 **RK3576 DshanPi A1 + AX8850 8GB M.2**；其他容量或平台需重新确认模型能否加载并正确运行。
+本页包含 **RK3576 DshanPi A1 + AX8850 16GB M.2** 与 **RK3576 DshanPi A1 + AX8850 8GB M.2** 的样例。按效果展示中的权重和容量对应使用，不同环境的结果不能互相替代。
 
 在连接算力卡的 Linux 主机终端执行，RK3576 使用 ARM64 环境。首次部署先完成[驱动与设备检查](../../usage/device-check.md)、[安装 PyAXEngine](../../usage/python.md)和[下载工具安装](../../usage/download-models.md#使用-hugging-face-下载)。已完成这些步骤可直接下载模型。
 
@@ -20,15 +20,24 @@ YOLOv8-Seg 用于图像分割。本页说明 M.2 算力卡的接入条件、部�
 
 ## 下载模型与样例
 
-本页使用 `AXERA-TECH/YOLOv8-Seg` 的固定版本。下面下载本页选用的 3 个文件。
+本页使用 `AXERA-TECH/YOLOv8-Seg` 的固定版本。下面下载本页选用的 12 个文件。
 
 ```bash
 MODEL_DIR=~/edgeaccel/models/yolov8-seg/c53ebcbf84d7
 mkdir -p "$MODEL_DIR"
 ~/edgeaccel/hf-env/bin/hf download AXERA-TECH/YOLOv8-Seg \
   "ax_infer.py" \
-  "AX650/yolov8n-seg_640x640_npu3.axmodel" \
   "bus.jpg" \
+  "AX650/yolov8l-seg_640x640_npu1.axmodel" \
+  "AX650/yolov8l-seg_640x640_npu3.axmodel" \
+  "AX650/yolov8m-seg_640x640_npu1.axmodel" \
+  "AX650/yolov8m-seg_640x640_npu3.axmodel" \
+  "AX650/yolov8n-seg_640x640_npu1.axmodel" \
+  "AX650/yolov8s-seg_640x640_npu1.axmodel" \
+  "AX650/yolov8s-seg_640x640_npu3.axmodel" \
+  "AX650/yolov8x-seg_640x640_npu1.axmodel" \
+  "AX650/yolov8x-seg_640x640_npu3.axmodel" \
+  "AX650/yolov8n-seg_640x640_npu3.axmodel" \
   --revision c53ebcbf84d783488a878fa462d3b3f28f3b858d \
   --local-dir "$MODEL_DIR"
 cd "$MODEL_DIR"
@@ -72,9 +81,161 @@ python ax_infer.py --model-path AX650/yolov8n-seg_640x640_npu3.axmodel --test-im
 
 参数依据：[`ax_infer.py` 源码](https://huggingface.co/AXERA-TECH/YOLOv8-Seg/blob/c53ebcbf84d783488a878fa462d3b3f28f3b858d/ax_infer.py)。
 
+## 选择其他 AX650 权重
+
+前面的下载命令包含本页实测的十个AX650权重。默认入口使用n规格NPU3；需要切换规模时，选择下表中的文件。仓库内其他芯片目录面向对应芯片，不用于本页AX8850算力卡。
+
+| 权重（位于AX650目录） | 本组实测容量 |
+| --- | --- |
+| `yolov8l-seg_640x640_npu1.axmodel` | 16GB |
+| `yolov8l-seg_640x640_npu3.axmodel` | 16GB |
+| `yolov8m-seg_640x640_npu1.axmodel` | 16GB |
+| `yolov8m-seg_640x640_npu3.axmodel` | 16GB |
+| `yolov8n-seg_640x640_npu1.axmodel` | 16GB |
+| `yolov8s-seg_640x640_npu1.axmodel` | 16GB |
+| `yolov8s-seg_640x640_npu3.axmodel` | 16GB |
+| `yolov8x-seg_640x640_npu1.axmodel` | 16GB |
+| `yolov8x-seg_640x640_npu3.axmodel` | 16GB |
+
+在同一模型目录执行，修改`WEIGHT`选择一个文件：
+
+```bash
+cd "$MODEL_DIR"
+WEIGHT=AX650/yolov8l-seg_640x640_npu1.axmodel
+OUT=~/edgeaccel/results/yolov8-seg
+mkdir -p "$OUT"
+python ax_infer.py --model-path "$WEIGHT" --test-img bus.jpg \
+  --providers AXCLRTExecutionProvider \
+  --img-save-path "$OUT/$(basename "$WEIGHT" .axmodel).jpg"
+```
+
+打开`OUT`目录中的输出图，与下方同规模、同NPU配置的实测结果对照。NPU1与NPU3是编译配置；不表示需要连接一张或三张算力卡。保持默认置信度阈值0.25和NMS阈值0.7，以便复现下方样例。
+
+
 ## 查看部署效果
 
-**固定样例已核对** · 2026-09-23 · RK3576 DshanPi A1 + AX8850 8GB M.2。以下输入与输出来自本页固定版本的实际运行。
+### 其余9个AX650权重：16GB卡样例
+
+**已运行，效果仍需评估** · RK3576 DshanPi A1 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
+
+9个AX650权重各独立运行两次，原始输出及效果图可重复。下方展示五种规模的实例分割结果；同规模NPU1/NPU3输出图完全相同时合并展示。
+
+**yolov8l · NPU1 / NPU3**
+
+公交车和人物区域均有掩码输出，左侧截断人物出现两个重叠实例，其中一个框延伸到路面；边界有偏差，未做像素标注精度评估。 NPU1与NPU3输出图的文件内容相同，因此合并展示。
+
+<div className="model-effect-gallery">
+
+<figure>
+
+[![固定输入：bus.jpg](../../../static/validation/effects/yolov8-seg-variants-20261005/inputs/bus.jpg)](../../../static/validation/effects/yolov8-seg-variants-20261005/inputs/bus.jpg)
+
+<figcaption>固定输入：bus.jpg</figcaption>
+</figure>
+
+<figure>
+
+[![实际实例分割输出：yolov8l](../../../static/validation/effects/yolov8-seg-variants-20261005/outputs/yolov8l.jpg)](../../../static/validation/effects/yolov8-seg-variants-20261005/outputs/yolov8l.jpg)
+
+<figcaption>实际实例分割输出：yolov8l</figcaption>
+</figure>
+
+</div>
+
+| 权重 | 程序输出实例总数 | 各类别实例数 |
+| --- | --- | --- |
+| yolov8l-seg_640x640_npu1.axmodel | 6 | person: 5；bus: 1 |
+| yolov8l-seg_640x640_npu3.axmodel | 6 | person: 5；bus: 1 |
+
+**yolov8m · NPU1 / NPU3**
+
+公交车及四个人物有掩码输出；中央左侧人物领口附近额外标出tie，原图不能确认存在领带，应视为疑似误检，不能按实例总数推断准确率。 NPU1与NPU3输出图的文件内容相同，因此合并展示。
+
+<div className="model-effect-gallery">
+
+<figure>
+
+[![实际实例分割输出：yolov8m](../../../static/validation/effects/yolov8-seg-variants-20261005/outputs/yolov8m.jpg)](../../../static/validation/effects/yolov8-seg-variants-20261005/outputs/yolov8m.jpg)
+
+<figcaption>实际实例分割输出：yolov8m</figcaption>
+</figure>
+
+</div>
+
+| 权重 | 程序输出实例总数 | 各类别实例数 |
+| --- | --- | --- |
+| yolov8m-seg_640x640_npu1.axmodel | 6 | person: 4；bus: 1；tie: 1 |
+| yolov8m-seg_640x640_npu3.axmodel | 6 | person: 4；bus: 1；tie: 1 |
+
+**yolov8n · NPU1**
+
+公交车与四个人物均有实例掩码；人物与车身交界和轮胎附近仍有边界偏差，单张图片未验证分割精度。
+
+<div className="model-effect-gallery">
+
+<figure>
+
+[![实际实例分割输出：yolov8n](../../../static/validation/effects/yolov8-seg-variants-20261005/outputs/yolov8n.jpg)](../../../static/validation/effects/yolov8-seg-variants-20261005/outputs/yolov8n.jpg)
+
+<figcaption>实际实例分割输出：yolov8n</figcaption>
+</figure>
+
+</div>
+
+| 权重 | 程序输出实例总数 | 各类别实例数 |
+| --- | --- | --- |
+| yolov8n-seg_640x640_npu1.axmodel | 5 | person: 4；bus: 1 |
+
+**yolov8s · NPU1 / NPU3**
+
+公交车与四个人物有掩码输出；中央右侧人物领口额外标出tie，原图不能确认存在领带，保留为疑似误检；掩码边界也有偏差。 NPU1与NPU3输出图的文件内容相同，因此合并展示。
+
+<div className="model-effect-gallery">
+
+<figure>
+
+[![实际实例分割输出：yolov8s](../../../static/validation/effects/yolov8-seg-variants-20261005/outputs/yolov8s.jpg)](../../../static/validation/effects/yolov8-seg-variants-20261005/outputs/yolov8s.jpg)
+
+<figcaption>实际实例分割输出：yolov8s</figcaption>
+</figure>
+
+</div>
+
+| 权重 | 程序输出实例总数 | 各类别实例数 |
+| --- | --- | --- |
+| yolov8s-seg_640x640_npu1.axmodel | 6 | person: 4；bus: 1；tie: 1 |
+| yolov8s-seg_640x640_npu3.axmodel | 6 | person: 4；bus: 1；tie: 1 |
+
+**yolov8x · NPU1 / NPU3**
+
+公交车与人物掩码均可见；左侧截断人物出现两个重叠实例和延伸至路面的框，中央左侧人物领口另有疑似领带误检。未做人工像素标注精度评估。 NPU1与NPU3输出图的文件内容相同，因此合并展示。
+
+<div className="model-effect-gallery">
+
+<figure>
+
+[![实际实例分割输出：yolov8x](../../../static/validation/effects/yolov8-seg-variants-20261005/outputs/yolov8x.jpg)](../../../static/validation/effects/yolov8-seg-variants-20261005/outputs/yolov8x.jpg)
+
+<figcaption>实际实例分割输出：yolov8x</figcaption>
+</figure>
+
+</div>
+
+| 权重 | 程序输出实例总数 | 各类别实例数 |
+| --- | --- | --- |
+| yolov8x-seg_640x640_npu1.axmodel | 7 | person: 5；bus: 1；tie: 1 |
+| yolov8x-seg_640x640_npu3.axmodel | 7 | person: 5；bus: 1；tie: 1 |
+
+**使用时注意：**
+
+- 固定单张街景图，部分规模在左侧截断人物处输出重复实例，个别框延伸到路面；m/s/x规格在领口附近有疑似领带误检，掩码边界仍有偏差，未用人工像素标注计算IoU或掩码AP。
+- 程序输出实例数不等于真实目标数。本组使用16GB卡，不替代这些权重的8GB容量回归；仓库内其他芯片目录面向对应芯片，不在本组AX8850验证范围。
+
+这些结果用于对照部署后的输出，未覆盖完整数据集精度或长期连续运行。
+
+### n · NPU3：8GB卡样例
+
+**固定样例已核对** · RK3576 DshanPi A1 + AX8850 8GB M.2。以下输入与输出来自本页固定版本的实际运行。
 
 bus.jpg 输出 1 个公交车与 4 个人物实例；公交车与主要行人的掩码覆盖对应物体区域，完成单样本实例分割核对。
 
@@ -105,10 +266,41 @@ bus.jpg 输出 1 个公交车与 4 个人物实例；公交车与主要行人的
 
 这些结果用于对照部署后的输出，未覆盖完整数据集精度或长期连续运行。
 
+**其余9个AX650权重：16GB卡样例**
+
 <details>
 <summary>查看样例环境与运行耗时</summary>
 
-环境：RK3576 DshanPi A1 + AX8850 8GB M.2。日期：2026-09-23。模型版本：`c53ebcbf84d783488a878fa462d3b3f28f3b858d`。
+环境：RK3576 DshanPi A1 + AX8850 16GB M.2。模型版本：`c53ebcbf84d783488a878fa462d3b3f28f3b858d`。
+
+| 组件 | 版本或配置 |
+| --- | --- |
+| 主机系统 / 内核 | Ubuntu 24.04 / Armbian；aarch64；6.1.115-vendor-rk35xx |
+| AXCL / 驱动 | V3.16.0_20260729180218 |
+| 固件 / CMM | V3.16.0；总量15232 MiB，空闲占用18 MiB |
+| Python后端 | AXCLRTExecutionProvider；NumPy 1.26.4；OpenCV 4.11.0 |
+| 前后处理 | 固定版本原始ax_infer.py，RGB uint8输入，置信度阈值0.25、NMS阈值0.7，640×640 NHWC输入，原始process_mask阈值0.5 |
+
+| 指标 | 实测值 | 计时或统计范围 |
+| --- | --- | --- |
+| yolov8l-seg_640x640_npu1.axmodel | 119.943 / 126.452 ms | 两个独立进程各一次session.run墙钟；含传输，不含加载、输出存盘和后处理，无预热，不代表持续吞吐。 |
+| yolov8l-seg_640x640_npu3.axmodel | 77.266 / 83.615 ms | 两个独立进程各一次session.run墙钟；含传输，不含加载、输出存盘和后处理，无预热，不代表持续吞吐。 |
+| yolov8m-seg_640x640_npu1.axmodel | 89.827 / 94.830 ms | 两个独立进程各一次session.run墙钟；含传输，不含加载、输出存盘和后处理，无预热，不代表持续吞吐。 |
+| yolov8m-seg_640x640_npu3.axmodel | 71.571 / 72.093 ms | 两个独立进程各一次session.run墙钟；含传输，不含加载、输出存盘和后处理，无预热，不代表持续吞吐。 |
+| yolov8n-seg_640x640_npu1.axmodel | 60.299 / 65.243 ms | 两个独立进程各一次session.run墙钟；含传输，不含加载、输出存盘和后处理，无预热，不代表持续吞吐。 |
+| yolov8s-seg_640x640_npu1.axmodel | 71.551 / 74.497 ms | 两个独立进程各一次session.run墙钟；含传输，不含加载、输出存盘和后处理，无预热，不代表持续吞吐。 |
+| yolov8s-seg_640x640_npu3.axmodel | 65.004 / 59.539 ms | 两个独立进程各一次session.run墙钟；含传输，不含加载、输出存盘和后处理，无预热，不代表持续吞吐。 |
+| yolov8x-seg_640x640_npu1.axmodel | 170.611 / 168.345 ms | 两个独立进程各一次session.run墙钟；含传输，不含加载、输出存盘和后处理，无预热，不代表持续吞吐。 |
+| yolov8x-seg_640x640_npu3.axmodel | 91.133 / 91.496 ms | 两个独立进程各一次session.run墙钟；含传输，不含加载、输出存盘和后处理，无预热，不代表持续吞吐。 |
+
+</details>
+
+**n · NPU3：8GB卡样例**
+
+<details>
+<summary>查看样例环境与运行耗时</summary>
+
+环境：RK3576 DshanPi A1 + AX8850 8GB M.2。模型版本：`c53ebcbf84d783488a878fa462d3b3f28f3b858d`。
 
 | 组件 | 版本或配置 |
 | --- | --- |
@@ -126,8 +318,6 @@ bus.jpg 输出 1 个公交车与 4 个人物实例；公交车与主要行人的
 
 适用范围：
 
-- 局部人物边缘、遮挡和公交车与行人重叠区域只能定性核对；没有像素真值，不能报告 IoU 或 mAP。
-- 仅一个样例、一次程序启动；没有独立数据集精度评测或长时间稳定性测试。
 - 只采集到 1 次 session.run 调用，不能视为预热后的平均性能。
 
 </details>

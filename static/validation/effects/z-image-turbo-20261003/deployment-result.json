@@ -1,0 +1,2115 @@
+{
+  "modelId": "Z-Image-Turbo",
+  "revision": "117d8586d5c50de6f4c6e0a7058e934c207407be",
+  "date": "2026-10-03",
+  "variants": [
+    {
+      "label": "英文提示词出图",
+      "observation": "提示词：A small red robot watering green plants in a bright greenhouse, sunlight through glass, detailed illustration.\n\n画面出现一大一小两个红色机器人，温室窗格和绿植清晰。红色机器人、温室和植物符合提示词，但额外出现第二个机器人，且未表现出明确的浇水动作。",
+      "previews": [
+        {
+          "caption": "实际生成图片 1 · 512×512",
+          "path": "/validation/effects/z-image-turbo-20261003/sample-1.png"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "本次图像阶段",
+            "实测值"
+          ],
+          "rows": [
+            [
+              "去噪与解码总耗时（含读取、加载）",
+              "1598.737 s"
+            ],
+            [
+              "其中模型加载",
+              "1367.881 s"
+            ],
+            [
+              "其中 AXCL run 调用（含传输）",
+              "92.546 s"
+            ],
+            [
+              "参数",
+              "512×512 / 9 步 / seed 42 固定噪声"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "modelId": "Z-Image-Turbo",
+        "revision": "117d8586d5c50de6f4c6e0a7058e934c207407be",
+        "completed": true,
+        "provider": "AXCLRTExecutionProvider",
+        "prompt": "A small red robot watering green plants in a bright greenhouse, sunlight through glass, detailed illustration.",
+        "width": 512,
+        "height": 512,
+        "steps": 9,
+        "seed": 42,
+        "initialLatentFileSha256": "46a4b032d19a1182e98caf131bf6e841b0c01e044f2dd0ad1281a44c7e17d850",
+        "textFeatureSha256": "b301afb18c6f2c9eb0074d9b562a30068339d3e4083f4b8cba0de487b34a2fc2",
+        "imageSha256": "f162cef58b82d1b8a1cc28f8e7115ee075860e038f4efbaa5a5225519c3c291a",
+        "sessions": [
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l0_together.axmodel",
+            "sha256": "015b26cbbbcc59544d502f7f275029454085f3698e4ad7e2436486dcc7b3ad14",
+            "calls": 1,
+            "loadSeconds": 3.01122040700011,
+            "runMilliseconds": [
+              35.07503099990572
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l1_together.axmodel",
+            "sha256": "ffef0fe95513ec5e1a1c982fe0005be11f513e191a161761eaf74a46301b1462",
+            "calls": 1,
+            "loadSeconds": 2.5445616130000417,
+            "runMilliseconds": [
+              30.818731000181288
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l2_together.axmodel",
+            "sha256": "c4e90130a51bfb4f074921d0ff2a0496239feb40ba268a773c335e854ba56a45",
+            "calls": 1,
+            "loadSeconds": 2.528358247000142,
+            "runMilliseconds": [
+              29.87664499960374
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l3_together.axmodel",
+            "sha256": "e1d47d2b1af69d8648d809adf3643f5fe3599f346f921e86e97a4edbbd058862",
+            "calls": 1,
+            "loadSeconds": 2.5418011900001147,
+            "runMilliseconds": [
+              30.239187000006496
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l4_together.axmodel",
+            "sha256": "82ea99922331fe2e333acdbd93f44d3d35a0621fc7eacfc8f3b3f189606932a8",
+            "calls": 1,
+            "loadSeconds": 2.595758759999626,
+            "runMilliseconds": [
+              30.224312000427744
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l5_together.axmodel",
+            "sha256": "8d823b21b6a048e1f714bf769f6bbcc513563717192516c32fa529b58c3413a2",
+            "calls": 1,
+            "loadSeconds": 2.6484539940001923,
+            "runMilliseconds": [
+              30.00177000012627
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l6_together.axmodel",
+            "sha256": "63e6d100f322d74a74cec4951999dae8683e59b07a88409effa2bdbd61c83d44",
+            "calls": 1,
+            "loadSeconds": 2.617848597000375,
+            "runMilliseconds": [
+              31.255939000402577
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l7_together.axmodel",
+            "sha256": "0337890a0ebdd65a6028df6038d6eb173630f0913d82e859d22f9f970bc681b4",
+            "calls": 1,
+            "loadSeconds": 2.4522432980002122,
+            "runMilliseconds": [
+              30.50635500039789
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l8_together.axmodel",
+            "sha256": "45d1bc52508c5d5fd1789b7866dcaf2d5e511248c262f6f3223cc7e2360f9dc6",
+            "calls": 1,
+            "loadSeconds": 2.593537089000165,
+            "runMilliseconds": [
+              30.06331200049317
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l9_together.axmodel",
+            "sha256": "055979ef0a4293ed3bd29ab027cbe41454e119d61b14d68fdf4f4ee616953adc",
+            "calls": 1,
+            "loadSeconds": 2.638009597000746,
+            "runMilliseconds": [
+              28.65280899914069
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l10_together.axmodel",
+            "sha256": "2b2f2fcf3c191bf02af884ff78a01494e2a33987afe234a498e23a950259e6d2",
+            "calls": 1,
+            "loadSeconds": 2.556554304999736,
+            "runMilliseconds": [
+              29.196184999818797
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l11_together.axmodel",
+            "sha256": "db3c47e0999062f99cc9ad9967793c5fb3b2f229c0a0d184b5c1f0802903a8f5",
+            "calls": 1,
+            "loadSeconds": 2.6518213760000435,
+            "runMilliseconds": [
+              29.696978000174568
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l12_together.axmodel",
+            "sha256": "ad3cf494241357617379b34de312839905b124afdf9b843635207abf7955fd84",
+            "calls": 1,
+            "loadSeconds": 2.6188506410007903,
+            "runMilliseconds": [
+              31.81506500004616
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l13_together.axmodel",
+            "sha256": "e8a9e1797c46316c05bfe0b3bdce0d360bc318073061a52ae66de2d2a7e86303",
+            "calls": 1,
+            "loadSeconds": 2.543560236000303,
+            "runMilliseconds": [
+              29.684436000025016
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l14_together.axmodel",
+            "sha256": "da738314ea4725b23d2282836af173ab94aac121c2efed3d1d18bb87d06d49d1",
+            "calls": 1,
+            "loadSeconds": 2.615051384000253,
+            "runMilliseconds": [
+              30.366646000402397
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l15_together.axmodel",
+            "sha256": "65489d36d9940e37a490961f67849cf0ef421a2770ee29ed4bb9faed2477c645",
+            "calls": 1,
+            "loadSeconds": 2.6638333589999093,
+            "runMilliseconds": [
+              28.973350999876857
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l16_together.axmodel",
+            "sha256": "7106c322af685e404eee9bdf9e02f30b6540350e3da45c6d5c7c084a7338e60c",
+            "calls": 1,
+            "loadSeconds": 2.5583209330006866,
+            "runMilliseconds": [
+              30.491186999825004
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l17_together.axmodel",
+            "sha256": "3c930e344e0c88a008d22865c7d6bcff04d37d487dcbe7b5607d30377982ceb4",
+            "calls": 1,
+            "loadSeconds": 2.453820052000083,
+            "runMilliseconds": [
+              26.80305500052782
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l18_together.axmodel",
+            "sha256": "43e4d2b5bd7f2dd81538a57ad42f2d9bdad6a6a02ebad88bd67184795700557d",
+            "calls": 1,
+            "loadSeconds": 2.6493968710001354,
+            "runMilliseconds": [
+              31.465355999898748
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l19_together.axmodel",
+            "sha256": "36f63f8618a15950d4d36241d2d5a580d64247b13580c3a0b260b88a6f0a86a1",
+            "calls": 1,
+            "loadSeconds": 2.766643986999952,
+            "runMilliseconds": [
+              30.23101999951905
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l20_together.axmodel",
+            "sha256": "b133dba645ddadb0d9b7e0d465dd6892064542287f897de7061b5d4e054ca707",
+            "calls": 1,
+            "loadSeconds": 2.5779343899994274,
+            "runMilliseconds": [
+              31.883898999694793
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l21_together.axmodel",
+            "sha256": "edb50372189cfedc616024bfd1707b7c736e383a67a1ddea83d91377168093cf",
+            "calls": 1,
+            "loadSeconds": 2.60970281399932,
+            "runMilliseconds": [
+              32.00582200042845
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l22_together.axmodel",
+            "sha256": "59d1e0c9ef05c27c505333430bd924aafc1370ceb3f3a41f00a94855544ec918",
+            "calls": 1,
+            "loadSeconds": 2.54896351699972,
+            "runMilliseconds": [
+              30.8204860002661
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l23_together.axmodel",
+            "sha256": "222a6aae70db8a2b599665df91cf62e75d83bb9d6f59494c88fa94605c250a56",
+            "calls": 1,
+            "loadSeconds": 2.5689439779998793,
+            "runMilliseconds": [
+              30.886985999131866
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l24_together.axmodel",
+            "sha256": "726e2ad2fd64be1e4fcdf6ee63dd2d849f98d9dd65183716736215ad622f2ea4",
+            "calls": 1,
+            "loadSeconds": 2.549887810000655,
+            "runMilliseconds": [
+              30.10969299975841
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l25_together.axmodel",
+            "sha256": "c88da927270ec22f563e9c94012c2c16a64de480fd6e25c8919d7550dbe3b708",
+            "calls": 1,
+            "loadSeconds": 2.634146585000053,
+            "runMilliseconds": [
+              30.85257000020647
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l26_together.axmodel",
+            "sha256": "33107e3b4334ed0a8baecbbd352cc70ce290fcbb649e162a7ae93bdafa42774d",
+            "calls": 1,
+            "loadSeconds": 2.629584239999531,
+            "runMilliseconds": [
+              30.914111000129196
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l27_together.axmodel",
+            "sha256": "42716b80a9248b5e37a7e1a55b51d95c044649c59fed7fbac4a4012ecb26a84f",
+            "calls": 1,
+            "loadSeconds": 2.4836350770001445,
+            "runMilliseconds": [
+              29.70077499958279
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l28_together.axmodel",
+            "sha256": "a25389c51fd1f52d46f0475610262eb15eaf087096f39522dd27b9efffc00653",
+            "calls": 1,
+            "loadSeconds": 2.5553175730001385,
+            "runMilliseconds": [
+              30.497611000100733
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l29_together.axmodel",
+            "sha256": "56417341b4f97ac3d4d71c92137c55fcb4502f23cf11e107716313c67bc1627b",
+            "calls": 1,
+            "loadSeconds": 2.570507314999304,
+            "runMilliseconds": [
+              30.576360999475583
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l30_together.axmodel",
+            "sha256": "bb6dc8db5597bccdec7767fa71c99035e60d5a0ffa6fcaaa8fc5c9e970c39aff",
+            "calls": 1,
+            "loadSeconds": 2.59177569700023,
+            "runMilliseconds": [
+              29.942568000478786
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l31_together.axmodel",
+            "sha256": "8be5e89099bd82cd6d64f832336124188de912a35dc3e4b9797c26dcd659733a",
+            "calls": 1,
+            "loadSeconds": 2.7436626240005353,
+            "runMilliseconds": [
+              29.667232999599946
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l32_together.axmodel",
+            "sha256": "9cb4272b001ff95fc6acb364724ad3b77bce4e82ed229aa7fa55ffc44bae371f",
+            "calls": 1,
+            "loadSeconds": 2.5582858710004075,
+            "runMilliseconds": [
+              31.015611999464454
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l33_together.axmodel",
+            "sha256": "a2d81ab8016d5a4e46a2bfa6b6dc95ca8eda70fdb81ca7ad3dccd02bed5fdc92",
+            "calls": 1,
+            "loadSeconds": 2.6220749740004976,
+            "runMilliseconds": [
+              30.850236999867775
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l34_together.axmodel",
+            "sha256": "d8c7a53f2665ccb389048f9f4c488f14d402000d461421d81b46bbb21d443efd",
+            "calls": 1,
+            "loadSeconds": 2.6866720790003455,
+            "runMilliseconds": [
+              29.21339899967279
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l35_together.axmodel",
+            "sha256": "0e84f6127a4823c419650e539acdabea27cdf8736f20c1c63695c76e486585c6",
+            "calls": 1,
+            "loadSeconds": 2.1205772149996847,
+            "runMilliseconds": [
+              30.738235999706376
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_post.axmodel",
+            "sha256": "d88728ff98d9d20633619d0d94a9959694cdd12e4400d1f48f9a3a0e0a903ecf",
+            "calls": 1,
+            "loadSeconds": 9.175227591000294,
+            "runMilliseconds": [
+              24.041262000537245
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_00_timestep_to_model_t_embedder_mlp_mlp_2_Gemm_output_0_config.axmodel",
+            "sha256": "63b3caa2599f82c1069551e911efb327cb4a66b37f5566a491095f429f64c511",
+            "calls": 9,
+            "loadSeconds": 0.9988537519984675,
+            "runMilliseconds": [
+              6.454307000240078,
+              2.2085050004534423,
+              2.5996309996116906,
+              1.9871299991791602,
+              1.9372529986867448,
+              2.248169999802485,
+              2.2254209998209262,
+              2.404796001428622,
+              2.2222120005608303
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_01_prompt_embeds_to_model_Slice_1_output_0_config.axmodel",
+            "sha256": "2c7cf54bc49b24637c8c60735dfd0944ec4dbde9ef9b677fde45344fcf88d572",
+            "calls": 9,
+            "loadSeconds": 75.3673190440004,
+            "runMilliseconds": [
+              47.466523999901256,
+              45.73285299920826,
+              47.147147999567096,
+              54.277248000289546,
+              45.73370200159843,
+              45.232327000121586,
+              48.27820799982874,
+              45.430076999764424,
+              45.59370300012233
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_02_latent_model_input_to_model_Slice_output_0_config.axmodel",
+            "sha256": "24938cd2848c5309660550ef307ce7ade2ef699d1e482ce03dd9d2e3667fdbd0",
+            "calls": 9,
+            "loadSeconds": 80.35931629099832,
+            "runMilliseconds": [
+              401.29253300074197,
+              450.4422690006322,
+              400.76928100097575,
+              400.82411599905754,
+              400.87434999986726,
+              397.23988600053417,
+              400.50480700119806,
+              402.06581100028416,
+              388.3927449987823
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_03_model_Slice_1_output_0_to_model_layers_0_Add_4_output_0_config.axmodel",
+            "sha256": "4046d49ee08ac391f2d7826bfe94e6376aac788c2deb0d7a3c4010dad5572e49",
+            "calls": 9,
+            "loadSeconds": 40.13876041900039,
+            "runMilliseconds": [
+              318.0885949986987,
+              310.1867429995764,
+              329.9066630006564,
+              388.4081289997994,
+              329.84668700009934,
+              329.6842279996781,
+              403.52647899999283,
+              329.707271001098,
+              419.3981309999799
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_04_model_layers_0_Add_4_output_0_to_model_layers_1_Add_4_output_0_config.axmodel",
+            "sha256": "9eab0c6b21fa4c14c538b93a55863806ffbc37f71a2879413ca548483a254053",
+            "calls": 9,
+            "loadSeconds": 40.35556657900088,
+            "runMilliseconds": [
+              311.22099599997455,
+              382.1856980011944,
+              302.67135100075393,
+              304.668397999194,
+              309.999028000675,
+              309.6329859999969,
+              324.9665120001737,
+              309.79865299923404,
+              315.1813710010174
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_05_model_layers_1_Add_4_output_0_to_model_layers_2_Add_4_output_0_config.axmodel",
+            "sha256": "00ed4555dc8d92e39c40854c15935d08bd326a350c933ff04c25781dbf53fbad",
+            "calls": 9,
+            "loadSeconds": 40.320098563999636,
+            "runMilliseconds": [
+              329.1815780012257,
+              305.2237319989217,
+              321.32756000100926,
+              326.85465600116004,
+              321.22267299928353,
+              330.4367300006561,
+              330.07535400065535,
+              329.78952000121353,
+              311.8753229991853
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_06_model_layers_2_Add_4_output_0_to_model_layers_3_Add_4_output_0_config.axmodel",
+            "sha256": "3f424834ac1254b6789c39beb2e29360264b62a4400cb80d46981c2f7f108f11",
+            "calls": 9,
+            "loadSeconds": 40.75531880699964,
+            "runMilliseconds": [
+              299.41430300095817,
+              329.56716299850086,
+              320.89501799964637,
+              326.5559880001092,
+              329.94206200055487,
+              306.45748100141645,
+              329.43835299920465,
+              325.3675549985928,
+              309.1429860014614
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_07_model_layers_3_Add_4_output_0_to_model_layers_4_Add_4_output_0_config.axmodel",
+            "sha256": "23dd63f9d15165c369f584d9282a86b5e877172d2846dc2c6b59d39eb8ebd809",
+            "calls": 9,
+            "loadSeconds": 40.38304267099738,
+            "runMilliseconds": [
+              329.49803700103075,
+              310.1578679998056,
+              302.1084339998197,
+              303.5078530010651,
+              328.3136840000225,
+              330.2363540005899,
+              330.6723969999439,
+              311.71607299984316,
+              320.5395879995194
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_08_model_layers_4_Add_4_output_0_to_model_layers_5_Add_4_output_0_config.axmodel",
+            "sha256": "b6c28c3b05ed6abe0078f34e47be2662101e97eebdcde68a195384764c021259",
+            "calls": 9,
+            "loadSeconds": 40.85870986800364,
+            "runMilliseconds": [
+              320.8638090000022,
+              326.39323900002637,
+              329.19907799987413,
+              328.2600340007775,
+              325.8006799987925,
+              330.31306299926655,
+              327.7936419999605,
+              330.2077709995501,
+              330.0549369996588
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_09_model_layers_5_Add_4_output_0_to_model_layers_6_Add_4_output_0_config.axmodel",
+            "sha256": "caf0d1157a8ebdf700fed66c954b39b4deb6a77ad20dea9dc7d3f6964f3e12e8",
+            "calls": 9,
+            "loadSeconds": 40.482452291997106,
+            "runMilliseconds": [
+              309.95136800083856,
+              309.36307500087423,
+              332.04925099926186,
+              329.39245400120853,
+              304.17385200053104,
+              329.3946030007646,
+              307.3498150006344,
+              329.83910300026764,
+              309.3302349989244
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_10_model_layers_6_Add_4_output_0_to_model_layers_7_Add_4_output_0_config.axmodel",
+            "sha256": "5656739760428e392b990c7bdba495308cf7a1dea42b1491ec902c6057e08230",
+            "calls": 9,
+            "loadSeconds": 40.552961558998504,
+            "runMilliseconds": [
+              302.23647599996184,
+              308.09373800002504,
+              313.1599999996979,
+              347.1345769994514,
+              329.80468700043275,
+              309.7385700002633,
+              326.59751500068523,
+              319.9524619994918,
+              331.0296889994788
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_11_model_layers_7_Add_4_output_0_to_model_layers_8_Add_4_output_0_config.axmodel",
+            "sha256": "333f38d67c51fbd8bc245e44e3356f83417771330012d9b4b9eed08dead52d12",
+            "calls": 9,
+            "loadSeconds": 39.97661642300227,
+            "runMilliseconds": [
+              309.5701589991222,
+              318.4549279994826,
+              330.26482999957807,
+              325.9429039990209,
+              319.84075299988035,
+              309.03185999886773,
+              326.4289309991,
+              314.2132020002464,
+              329.7778539999854
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_12_model_layers_8_Add_4_output_0_to_model_layers_9_Add_4_output_0_config.axmodel",
+            "sha256": "0204743b711a5b08f7831ead79957c6a2ba6690eb3e01257b5863cca0a883c9f",
+            "calls": 9,
+            "loadSeconds": 40.30630416599524,
+            "runMilliseconds": [
+              392.5760550009727,
+              317.5755520005623,
+              389.9501739997504,
+              311.02178699984506,
+              330.3407719995448,
+              306.17089699990174,
+              310.0739869987592,
+              310.4184460007673,
+              329.7542290001729
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_13_model_layers_9_Add_4_output_0_to_model_layers_10_Add_4_output_0_config.axmodel",
+            "sha256": "547744c6070588a8ab48f36c3d377cea11b60deac36367052cee5ed908483584",
+            "calls": 9,
+            "loadSeconds": 40.06849500899807,
+            "runMilliseconds": [
+              311.5205379999679,
+              302.5788930008275,
+              319.3897229994036,
+              329.6526209996955,
+              329.83326999965357,
+              327.0746819998749,
+              308.9408599989838,
+              298.75963400081673,
+              320.50225400053023
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_14_model_layers_10_Add_4_output_0_to_model_layers_11_Add_4_output_0_config.axmodel",
+            "sha256": "6d63eb7938fc5d3be9e607fd38090dfc01a71050553167cc10a6434023d48b8f",
+            "calls": 9,
+            "loadSeconds": 40.492637102996014,
+            "runMilliseconds": [
+              375.83318299948587,
+              303.5548120005842,
+              293.09241299961286,
+              309.3633669996052,
+              310.4204869996465,
+              331.04252299926884,
+              329.87089500056754,
+              298.42392499995185,
+              311.78753200038045
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_15_model_layers_11_Add_4_output_0_to_model_layers_12_Add_4_output_0_config.axmodel",
+            "sha256": "195699f44c2d9d01289fc1ff56b4308c9d7d437fbcdb43f9a951c4953b5fc9c0",
+            "calls": 9,
+            "loadSeconds": 40.17780645400126,
+            "runMilliseconds": [
+              329.4259949998377,
+              311.5834550008003,
+              329.26032800060057,
+              331.1048320010741,
+              309.9561529998027,
+              328.54818499981775,
+              323.5230509999383,
+              374.4446380005684,
+              299.394884999856
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_16_model_layers_12_Add_4_output_0_to_model_layers_13_Add_4_output_0_config.axmodel",
+            "sha256": "a368250f9b205e434832dfe527c00734f173517bbd1e85e8bb21db77f9c719fb",
+            "calls": 9,
+            "loadSeconds": 40.06592562000151,
+            "runMilliseconds": [
+              326.40986399928806,
+              308.9474490006978,
+              329.8372469998867,
+              324.892610000461,
+              323.1902589996025,
+              379.923606000375,
+              307.98856599903957,
+              296.0036709991982,
+              332.8170249988034
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_17_model_layers_13_Add_4_output_0_to_model_layers_14_Add_4_output_0_config.axmodel",
+            "sha256": "4ef0fa1c1efc23d27b373341b37bc120f4fa57634931f850106bd7a14d9a8042",
+            "calls": 9,
+            "loadSeconds": 40.17131603800044,
+            "runMilliseconds": [
+              351.44992000095954,
+              383.6148669997783,
+              309.21215799935453,
+              303.9928960006364,
+              309.23865200020373,
+              310.01186200046504,
+              288.5912420006207,
+              307.3582739998528,
+              329.5882700003858
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_18_model_layers_14_Add_4_output_0_to_model_layers_15_Add_4_output_0_config.axmodel",
+            "sha256": "1cd4e9378df6c7422e48fbb8cd288e377014970c5b20636a24f3045c8baf3cf4",
+            "calls": 9,
+            "loadSeconds": 40.269252676002,
+            "runMilliseconds": [
+              299.4635940012813,
+              324.08790000044974,
+              312.0356230010657,
+              329.86582900048234,
+              368.9318369997636,
+              330.95648099879327,
+              390.9871249998105,
+              330.3929800003971,
+              328.3772680006223
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_19_model_layers_15_Add_4_output_0_to_model_layers_16_Add_4_output_0_config.axmodel",
+            "sha256": "025d4b08ebd6d3c08fec03874487ef15d409ebc44a0b5df4234349ad61d0a1d3",
+            "calls": 9,
+            "loadSeconds": 40.539370086004055,
+            "runMilliseconds": [
+              317.67180200040457,
+              354.9238449995755,
+              347.16695200040704,
+              327.23849099966174,
+              310.0818619986967,
+              299.96859400125686,
+              301.9875139998476,
+              300.413386999935,
+              324.1991359991516
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_20_model_layers_16_Add_4_output_0_to_model_layers_17_Add_4_output_0_config.axmodel",
+            "sha256": "409fed725e1e86abbaad76478d3efc934583d133760dddf01eb935551a2bf6f0",
+            "calls": 9,
+            "loadSeconds": 40.19098293499883,
+            "runMilliseconds": [
+              309.41674200039415,
+              309.72269999983837,
+              304.1323130000819,
+              329.594578999604,
+              329.73118699919723,
+              319.65729500007,
+              326.08476400127984,
+              310.89328000052774,
+              309.69306899896765
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_21_model_layers_17_Add_4_output_0_to_model_layers_18_Add_4_output_0_config.axmodel",
+            "sha256": "30610e7306e69ec16bdeba9e361beb395ef4ec46c864764c1b02bb0da0226a53",
+            "calls": 9,
+            "loadSeconds": 40.23846505200163,
+            "runMilliseconds": [
+              309.4182000004366,
+              308.57644800016715,
+              329.829663000055,
+              309.3032830001903,
+              329.74868600103946,
+              309.12373600040155,
+              307.4431490003917,
+              326.40238999920257,
+              315.09707900113426
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_22_model_layers_18_Add_4_output_0_to_model_layers_19_Add_4_output_0_config.axmodel",
+            "sha256": "3b7d58cd848de4bb4a6ffd12e815c4700a2ea9f00cfaaf09f2b7cfb18e350c79",
+            "calls": 9,
+            "loadSeconds": 40.127195143999415,
+            "runMilliseconds": [
+              329.14162000088254,
+              316.2779239992233,
+              318.58822100002726,
+              329.5830200004275,
+              289.62286800015136,
+              329.4870620011352,
+              307.6099819991214,
+              379.33122899994487,
+              318.6638760016649
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_23_model_layers_19_Add_4_output_0_to_model_layers_20_Add_4_output_0_config.axmodel",
+            "sha256": "4cadbe7a49ac276a9da470640f8333d1ace969d6269932b018ae894639721968",
+            "calls": 9,
+            "loadSeconds": 40.51877096499993,
+            "runMilliseconds": [
+              330.18870600062655,
+              329.28774500032887,
+              329.02611900135526,
+              327.67201700153237,
+              338.49141000064265,
+              332.0155239998712,
+              310.5141119995096,
+              308.1521910007723,
+              305.75031300031696
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_24_model_layers_20_Add_4_output_0_to_model_layers_21_Add_4_output_0_config.axmodel",
+            "sha256": "8fca01a83080b1bd529580956e3ee21e29b18fa135e7d603c752badbbf296c3b",
+            "calls": 9,
+            "loadSeconds": 40.20541369000057,
+            "runMilliseconds": [
+              293.8939150008082,
+              325.8740700002818,
+              323.27298099880863,
+              309.82811200010474,
+              309.3707779989927,
+              329.3298530006723,
+              306.482979998691,
+              316.99553999897034,
+              309.45856899961655
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_25_model_layers_21_Add_4_output_0_to_model_layers_22_Add_4_output_0_config.axmodel",
+            "sha256": "84724b42679ef092009b91120f311da271cbd1a62efafb7fa48c8aa690407f77",
+            "calls": 9,
+            "loadSeconds": 40.20232385300005,
+            "runMilliseconds": [
+              309.2490330000146,
+              309.0778240002692,
+              330.1916220007115,
+              328.8288929998089,
+              329.11839400003373,
+              330.3355210009613,
+              330.5755630008207,
+              320.64137999986997,
+              309.0826100014965
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_26_model_layers_22_Add_4_output_0_to_model_layers_23_Add_4_output_0_config.axmodel",
+            "sha256": "9b97034e89c0bc93dc9f22637dbb1158721795a4c7e0d439c58ed9c8ae1643a3",
+            "calls": 9,
+            "loadSeconds": 40.31325246200322,
+            "runMilliseconds": [
+              309.9817009988328,
+              330.34737299931294,
+              309.32486599886033,
+              317.6331239992578,
+              293.09283300062816,
+              311.0408640004607,
+              317.2562910003762,
+              293.4696669999539,
+              329.86739500120166
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_27_model_layers_23_Add_4_output_0_to_model_layers_24_Add_4_output_0_config.axmodel",
+            "sha256": "36570e771d1763eb5b39ea9d6b39a28461eb1a8a3156321c801328f4b7067cfc",
+            "calls": 9,
+            "loadSeconds": 40.120087880004576,
+            "runMilliseconds": [
+              330.8726659997774,
+              314.1642110003886,
+              309.36511700019764,
+              304.31939299887745,
+              310.89007099944865,
+              327.7035170012823,
+              326.7471409999416,
+              328.38105900009396,
+              306.78514700048254
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_28_model_layers_24_Add_4_output_0_to_model_layers_25_Add_4_output_0_config.axmodel",
+            "sha256": "e88dac81a2be4c746d150254e5fcab82f2862e7072ab35f7a9c69a7eb3d50f45",
+            "calls": 9,
+            "loadSeconds": 40.29098452600374,
+            "runMilliseconds": [
+              331.40437499969266,
+              300.7793050001055,
+              329.757329000131,
+              288.5352419998526,
+              325.59067900001537,
+              309.6429029992578,
+              305.6304370002181,
+              288.69857599966053,
+              299.22367700055474
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_29_model_layers_25_Add_4_output_0_to_model_layers_26_Add_4_output_0_config.axmodel",
+            "sha256": "50718b3b2a1f420f99478eda30b4cab306e8ecae799f147e25a3ba75665e6fd0",
+            "calls": 9,
+            "loadSeconds": 40.03808109499914,
+            "runMilliseconds": [
+              329.50241300022753,
+              295.63604400027543,
+              299.5172610008012,
+              308.60135900002206,
+              326.80634800090047,
+              330.17977099916607,
+              398.8078880011017,
+              327.1957239994663,
+              318.8385850007762
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_30_model_layers_26_Add_4_output_0_to_model_layers_27_Add_4_output_0_config.axmodel",
+            "sha256": "c2b7a795213d3d309c2c8d1cd73bd78202e2abca5738241128df26ff11319240",
+            "calls": 9,
+            "loadSeconds": 40.410841248,
+            "runMilliseconds": [
+              290.3373230001307,
+              357.63226699964434,
+              299.2500939999445,
+              307.3124820002704,
+              330.4256470000837,
+              325.62684700133104,
+              321.3320470003964,
+              326.9314739991387,
+              343.39054399970337
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_31_model_layers_27_Add_4_output_0_to_model_layers_28_Add_4_output_0_config.axmodel",
+            "sha256": "a494e8c857875ee0af328d7e146dd6c255d97aa0f7295afe495abccfcb59aad8",
+            "calls": 9,
+            "loadSeconds": 40.14202236899655,
+            "runMilliseconds": [
+              331.0642910000752,
+              326.02515399958065,
+              309.8609509997914,
+              327.0921820003423,
+              326.53451499936637,
+              351.97530799996457,
+              330.6239799985633,
+              312.3232399993867,
+              329.48006200058444
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_32_model_layers_28_Add_4_output_0_to_model_layers_29_Add_4_output_0_config.axmodel",
+            "sha256": "e3119c5b9dcb136a4919e4d5a9626c5ed76f57400a1fd1006af70fd4b11053b1",
+            "calls": 9,
+            "loadSeconds": 40.22751432100449,
+            "runMilliseconds": [
+              308.6032809987955,
+              328.2960760006972,
+              332.8437529999064,
+              307.8415660002065,
+              329.5882700003858,
+              303.19443400003365,
+              361.54624200025864,
+              325.97363899913034,
+              319.2457530003594
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/auto_00_model_layers_29_Add_4_output_0_to_sample_auto.axmodel",
+            "sha256": "e30218016cd3015f713e219e8ace67539c646b378ae5b79e9e450b0622b88ff5",
+            "calls": 9,
+            "loadSeconds": 0.4189650839980459,
+            "runMilliseconds": [
+              59.649176999300835,
+              60.67905400050222,
+              56.946003998746164,
+              62.20764799945755,
+              60.60347799939336,
+              62.347064000277896,
+              58.72805900071398,
+              55.87963700054388,
+              55.86826200124051
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "vae_model/vae_decoder.axmodel",
+            "sha256": "0798299fccdffae63be19d73323279e0f4b83883f634faaa88a44a9fe09ccc19",
+            "calls": 1,
+            "loadSeconds": 1.7962970610005868,
+            "runMilliseconds": [
+              898.7808229994698
+            ],
+            "allFinite": true
+          }
+        ],
+        "textCalls": 37,
+        "imageCalls": 307,
+        "totalCalls": 344,
+        "imageStageSeconds": 1598.7374760209987,
+        "imageStageLoadSeconds": 1367.881321106006,
+        "imageStageAxclRunSecondsIncludingTransfers": 92.54627921001884,
+        "outputObservation": "画面出现一大一小两个红色机器人，温室窗格和绿植清晰。红色机器人、温室和植物符合提示词，但额外出现第二个机器人，且未表现出明确的浇水动作。",
+        "semanticQualityAccepted": false,
+        "scope": "Two fixed prompts on an AX8850 16GB card; nine denoising steps; file loading through a read-only network mount. Image-stage time excludes text encoding."
+      },
+      "sourceArchiveSha256": "5881b8f18c031c73ef66f5aed2776a40f0e6c830f4f447f5eead5c2379af5896"
+    },
+    {
+      "label": "中文提示词出图",
+      "observation": "提示词：一只橙色小猫坐在蓝色花盆旁，背景是明亮的温室，柔和的自然光。\n\n画面是一只坐着的橙色猫，左侧为蓝色花盆，背景可见温室中的植物与柔和光线。这组的主体、颜色、相邻位置及场景与提示词基本一致。",
+      "previews": [
+        {
+          "caption": "实际生成图片 2 · 512×512",
+          "path": "/validation/effects/z-image-turbo-20261003/sample-2.png"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "本次图像阶段",
+            "实测值"
+          ],
+          "rows": [
+            [
+              "去噪与解码总耗时（含读取、加载）",
+              "1600.728 s"
+            ],
+            [
+              "其中模型加载",
+              "1370.265 s"
+            ],
+            [
+              "其中 AXCL run 调用（含传输）",
+              "92.435 s"
+            ],
+            [
+              "参数",
+              "512×512 / 9 步 / seed 42 固定噪声"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "modelId": "Z-Image-Turbo",
+        "revision": "117d8586d5c50de6f4c6e0a7058e934c207407be",
+        "completed": true,
+        "provider": "AXCLRTExecutionProvider",
+        "prompt": "一只橙色小猫坐在蓝色花盆旁，背景是明亮的温室，柔和的自然光。",
+        "width": 512,
+        "height": 512,
+        "steps": 9,
+        "seed": 42,
+        "initialLatentFileSha256": "46a4b032d19a1182e98caf131bf6e841b0c01e044f2dd0ad1281a44c7e17d850",
+        "textFeatureSha256": "0b1d023974518413d70f44dbde1ef7dbdb8c07f30fad0ab622057b1ade597f9b",
+        "imageSha256": "60016dc6d5212b03021f8144f258ee0e3cb8ea3ea58fbe9caef6a89745b46990",
+        "sessions": [
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l0_together.axmodel",
+            "sha256": "015b26cbbbcc59544d502f7f275029454085f3698e4ad7e2436486dcc7b3ad14",
+            "calls": 1,
+            "loadSeconds": 2.582156801000565,
+            "runMilliseconds": [
+              30.098901000201295
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l1_together.axmodel",
+            "sha256": "ffef0fe95513ec5e1a1c982fe0005be11f513e191a161761eaf74a46301b1462",
+            "calls": 1,
+            "loadSeconds": 2.786113053000008,
+            "runMilliseconds": [
+              29.203774000052363
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l2_together.axmodel",
+            "sha256": "c4e90130a51bfb4f074921d0ff2a0496239feb40ba268a773c335e854ba56a45",
+            "calls": 1,
+            "loadSeconds": 2.615861292999398,
+            "runMilliseconds": [
+              29.753859000265948
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l3_together.axmodel",
+            "sha256": "e1d47d2b1af69d8648d809adf3643f5fe3599f346f921e86e97a4edbbd058862",
+            "calls": 1,
+            "loadSeconds": 2.583804429000338,
+            "runMilliseconds": [
+              30.536693999238196
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l4_together.axmodel",
+            "sha256": "82ea99922331fe2e333acdbd93f44d3d35a0621fc7eacfc8f3b3f189606932a8",
+            "calls": 1,
+            "loadSeconds": 2.699495148999631,
+            "runMilliseconds": [
+              31.662821999816515
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l5_together.axmodel",
+            "sha256": "8d823b21b6a048e1f714bf769f6bbcc513563717192516c32fa529b58c3413a2",
+            "calls": 1,
+            "loadSeconds": 2.5748216580004737,
+            "runMilliseconds": [
+              30.18610999970406
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l6_together.axmodel",
+            "sha256": "63e6d100f322d74a74cec4951999dae8683e59b07a88409effa2bdbd61c83d44",
+            "calls": 1,
+            "loadSeconds": 2.6204772199998843,
+            "runMilliseconds": [
+              30.7752779999646
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l7_together.axmodel",
+            "sha256": "0337890a0ebdd65a6028df6038d6eb173630f0913d82e859d22f9f970bc681b4",
+            "calls": 1,
+            "loadSeconds": 2.5584040800004004,
+            "runMilliseconds": [
+              30.364318000465573
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l8_together.axmodel",
+            "sha256": "45d1bc52508c5d5fd1789b7866dcaf2d5e511248c262f6f3223cc7e2360f9dc6",
+            "calls": 1,
+            "loadSeconds": 2.5844446390001394,
+            "runMilliseconds": [
+              31.118570000217005
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l9_together.axmodel",
+            "sha256": "055979ef0a4293ed3bd29ab027cbe41454e119d61b14d68fdf4f4ee616953adc",
+            "calls": 1,
+            "loadSeconds": 2.5504196030005915,
+            "runMilliseconds": [
+              30.496735000269837
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l10_together.axmodel",
+            "sha256": "2b2f2fcf3c191bf02af884ff78a01494e2a33987afe234a498e23a950259e6d2",
+            "calls": 1,
+            "loadSeconds": 2.5152959400002146,
+            "runMilliseconds": [
+              29.892985000515182
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l11_together.axmodel",
+            "sha256": "db3c47e0999062f99cc9ad9967793c5fb3b2f229c0a0d184b5c1f0802903a8f5",
+            "calls": 1,
+            "loadSeconds": 2.5636286330000075,
+            "runMilliseconds": [
+              29.923318000328436
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l12_together.axmodel",
+            "sha256": "ad3cf494241357617379b34de312839905b124afdf9b843635207abf7955fd84",
+            "calls": 1,
+            "loadSeconds": 2.5374351570008002,
+            "runMilliseconds": [
+              29.48202500010666
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l13_together.axmodel",
+            "sha256": "e8a9e1797c46316c05bfe0b3bdce0d360bc318073061a52ae66de2d2a7e86303",
+            "calls": 1,
+            "loadSeconds": 2.6539968380002392,
+            "runMilliseconds": [
+              32.99574099946767
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l14_together.axmodel",
+            "sha256": "da738314ea4725b23d2282836af173ab94aac121c2efed3d1d18bb87d06d49d1",
+            "calls": 1,
+            "loadSeconds": 2.5453081340001518,
+            "runMilliseconds": [
+              30.286151999462163
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l15_together.axmodel",
+            "sha256": "65489d36d9940e37a490961f67849cf0ef421a2770ee29ed4bb9faed2477c645",
+            "calls": 1,
+            "loadSeconds": 2.605127643999367,
+            "runMilliseconds": [
+              29.54152499933116
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l16_together.axmodel",
+            "sha256": "7106c322af685e404eee9bdf9e02f30b6540350e3da45c6d5c7c084a7338e60c",
+            "calls": 1,
+            "loadSeconds": 2.5001402400002917,
+            "runMilliseconds": [
+              30.735610999727214
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l17_together.axmodel",
+            "sha256": "3c930e344e0c88a008d22865c7d6bcff04d37d487dcbe7b5607d30377982ceb4",
+            "calls": 1,
+            "loadSeconds": 2.540512538999792,
+            "runMilliseconds": [
+              30.286444000012125
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l18_together.axmodel",
+            "sha256": "43e4d2b5bd7f2dd81538a57ad42f2d9bdad6a6a02ebad88bd67184795700557d",
+            "calls": 1,
+            "loadSeconds": 2.5036950809999325,
+            "runMilliseconds": [
+              30.21440199972858
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l19_together.axmodel",
+            "sha256": "36f63f8618a15950d4d36241d2d5a580d64247b13580c3a0b260b88a6f0a86a1",
+            "calls": 1,
+            "loadSeconds": 2.610169405999841,
+            "runMilliseconds": [
+              29.706899999837333
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l20_together.axmodel",
+            "sha256": "b133dba645ddadb0d9b7e0d465dd6892064542287f897de7061b5d4e054ca707",
+            "calls": 1,
+            "loadSeconds": 2.6033412649994716,
+            "runMilliseconds": [
+              29.049482999653264
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l21_together.axmodel",
+            "sha256": "edb50372189cfedc616024bfd1707b7c736e383a67a1ddea83d91377168093cf",
+            "calls": 1,
+            "loadSeconds": 3.604378945999997,
+            "runMilliseconds": [
+              29.970984000101453
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l22_together.axmodel",
+            "sha256": "59d1e0c9ef05c27c505333430bd924aafc1370ceb3f3a41f00a94855544ec918",
+            "calls": 1,
+            "loadSeconds": 3.671209930999794,
+            "runMilliseconds": [
+              30.442485000094166
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l23_together.axmodel",
+            "sha256": "222a6aae70db8a2b599665df91cf62e75d83bb9d6f59494c88fa94605c250a56",
+            "calls": 1,
+            "loadSeconds": 3.5183228770001733,
+            "runMilliseconds": [
+              29.540067000198178
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l24_together.axmodel",
+            "sha256": "726e2ad2fd64be1e4fcdf6ee63dd2d849f98d9dd65183716736215ad622f2ea4",
+            "calls": 1,
+            "loadSeconds": 3.5370271689998845,
+            "runMilliseconds": [
+              30.70673600086593
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l25_together.axmodel",
+            "sha256": "c88da927270ec22f563e9c94012c2c16a64de480fd6e25c8919d7550dbe3b708",
+            "calls": 1,
+            "loadSeconds": 3.6235046980000334,
+            "runMilliseconds": [
+              30.2879020000546
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l26_together.axmodel",
+            "sha256": "33107e3b4334ed0a8baecbbd352cc70ce290fcbb649e162a7ae93bdafa42774d",
+            "calls": 1,
+            "loadSeconds": 3.409510839000177,
+            "runMilliseconds": [
+              29.868192999856547
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l27_together.axmodel",
+            "sha256": "42716b80a9248b5e37a7e1a55b51d95c044649c59fed7fbac4a4012ecb26a84f",
+            "calls": 1,
+            "loadSeconds": 3.4215059489997657,
+            "runMilliseconds": [
+              30.256985000050918
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l28_together.axmodel",
+            "sha256": "a25389c51fd1f52d46f0475610262eb15eaf087096f39522dd27b9efffc00653",
+            "calls": 1,
+            "loadSeconds": 3.529593776999718,
+            "runMilliseconds": [
+              29.687942000236944
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l29_together.axmodel",
+            "sha256": "56417341b4f97ac3d4d71c92137c55fcb4502f23cf11e107716313c67bc1627b",
+            "calls": 1,
+            "loadSeconds": 2.5628991730000052,
+            "runMilliseconds": [
+              29.568358000688022
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l30_together.axmodel",
+            "sha256": "bb6dc8db5597bccdec7767fa71c99035e60d5a0ffa6fcaaa8fc5c9e970c39aff",
+            "calls": 1,
+            "loadSeconds": 2.521529370999815,
+            "runMilliseconds": [
+              29.245190999972692
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l31_together.axmodel",
+            "sha256": "8be5e89099bd82cd6d64f832336124188de912a35dc3e4b9797c26dcd659733a",
+            "calls": 1,
+            "loadSeconds": 2.587085477999608,
+            "runMilliseconds": [
+              30.06477700000687
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l32_together.axmodel",
+            "sha256": "9cb4272b001ff95fc6acb364724ad3b77bce4e82ed229aa7fa55ffc44bae371f",
+            "calls": 1,
+            "loadSeconds": 2.504399583000122,
+            "runMilliseconds": [
+              29.73664999990433
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l33_together.axmodel",
+            "sha256": "a2d81ab8016d5a4e46a2bfa6b6dc95ca8eda70fdb81ca7ad3dccd02bed5fdc92",
+            "calls": 1,
+            "loadSeconds": 2.527762884999902,
+            "runMilliseconds": [
+              29.847192000488576
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l34_together.axmodel",
+            "sha256": "d8c7a53f2665ccb389048f9f4c488f14d402000d461421d81b46bbb21d443efd",
+            "calls": 1,
+            "loadSeconds": 2.5394452869995803,
+            "runMilliseconds": [
+              30.88757000023179
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_p128_l35_together.axmodel",
+            "sha256": "0e84f6127a4823c419650e539acdabea27cdf8736f20c1c63695c76e486585c6",
+            "calls": 1,
+            "loadSeconds": 2.0959243250008512,
+            "runMilliseconds": [
+              30.262817999755498
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "text_encoder_axmodel/qwen3_post.axmodel",
+            "sha256": "d88728ff98d9d20633619d0d94a9959694cdd12e4400d1f48f9a3a0e0a903ecf",
+            "calls": 1,
+            "loadSeconds": 8.8660707250001,
+            "runMilliseconds": [
+              23.90884600026766
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_00_timestep_to_model_t_embedder_mlp_mlp_2_Gemm_output_0_config.axmodel",
+            "sha256": "63b3caa2599f82c1069551e911efb327cb4a66b37f5566a491095f429f64c511",
+            "calls": 9,
+            "loadSeconds": 0.3070412480010418,
+            "runMilliseconds": [
+              2.507461998902727,
+              1.5974609996192157,
+              2.488505000656005,
+              2.3613370012753876,
+              2.260712000861531,
+              2.5214629986294312,
+              2.2055870012991363,
+              2.342962001421256,
+              1.922962001117412
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_01_prompt_embeds_to_model_Slice_1_output_0_config.axmodel",
+            "sha256": "2c7cf54bc49b24637c8c60735dfd0944ec4dbde9ef9b677fde45344fcf88d572",
+            "calls": 9,
+            "loadSeconds": 75.21606775499822,
+            "runMilliseconds": [
+              46.82307999974,
+              46.93391699947824,
+              45.565705999251804,
+              45.27345600035915,
+              46.693874999618856,
+              48.058003001642646,
+              47.925003000273136,
+              45.22561599878827,
+              45.490157999665826
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_02_latent_model_input_to_model_Slice_output_0_config.axmodel",
+            "sha256": "24938cd2848c5309660550ef307ce7ade2ef699d1e482ce03dd9d2e3667fdbd0",
+            "calls": 9,
+            "loadSeconds": 80.84856083799968,
+            "runMilliseconds": [
+              388.5213699995802,
+              401.6610110011243,
+              444.37946299876785,
+              401.9730950003577,
+              392.25436900051136,
+              404.56601699952444,
+              401.25121800156194,
+              401.0332859998016,
+              388.1013479985995
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_03_model_Slice_1_output_0_to_model_layers_0_Add_4_output_0_config.axmodel",
+            "sha256": "4046d49ee08ac391f2d7826bfe94e6376aac788c2deb0d7a3c4010dad5572e49",
+            "calls": 9,
+            "loadSeconds": 40.20481575000122,
+            "runMilliseconds": [
+              316.8065400004707,
+              301.4453310006502,
+              309.0919700007362,
+              306.2330490010936,
+              329.13679700141074,
+              314.13022900051146,
+              290.1855190011702,
+              309.3693020000501,
+              307.9004649989656
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_04_model_layers_0_Add_4_output_0_to_model_layers_1_Add_4_output_0_config.axmodel",
+            "sha256": "9eab0c6b21fa4c14c538b93a55863806ffbc37f71a2879413ca548483a254053",
+            "calls": 9,
+            "loadSeconds": 40.38077459899978,
+            "runMilliseconds": [
+              316.4722889996483,
+              305.30525500034855,
+              316.43848400017305,
+              329.7072989989829,
+              388.5566959997959,
+              419.03737599932356,
+              329.6769659991696,
+              321.31744700018317,
+              330.5221700011316
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_05_model_layers_1_Add_4_output_0_to_model_layers_2_Add_4_output_0_config.axmodel",
+            "sha256": "00ed4555dc8d92e39c40854c15935d08bd326a350c933ff04c25781dbf53fbad",
+            "calls": 9,
+            "loadSeconds": 40.59770411199679,
+            "runMilliseconds": [
+              329.9901869995665,
+              330.08705000065675,
+              319.09586300025694,
+              302.10333300055936,
+              310.57305700051074,
+              316.1961080004403,
+              331.96771899929445,
+              308.88775899984466,
+              310.1270530005422
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_06_model_layers_2_Add_4_output_0_to_model_layers_3_Add_4_output_0_config.axmodel",
+            "sha256": "3f424834ac1254b6789c39beb2e29360264b62a4400cb80d46981c2f7f108f11",
+            "calls": 9,
+            "loadSeconds": 40.378716681001606,
+            "runMilliseconds": [
+              311.0347379988525,
+              332.60717899975134,
+              322.52324399996724,
+              329.9896330008778,
+              366.7534070009424,
+              328.1171290000202,
+              315.783398998974,
+              309.24767600117775,
+              330.6717949999438
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_07_model_layers_3_Add_4_output_0_to_model_layers_4_Add_4_output_0_config.axmodel",
+            "sha256": "23dd63f9d15165c369f584d9282a86b5e877172d2846dc2c6b59d39eb8ebd809",
+            "calls": 9,
+            "loadSeconds": 40.52532636799879,
+            "runMilliseconds": [
+              307.41077400125505,
+              320.08811500054435,
+              329.94063299884147,
+              310.85830699885264,
+              305.3904220014374,
+              327.49821200013685,
+              309.5017630002985,
+              315.9843120010919,
+              330.5988789998082
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_08_model_layers_4_Add_4_output_0_to_model_layers_5_Add_4_output_0_config.axmodel",
+            "sha256": "b6c28c3b05ed6abe0078f34e47be2662101e97eebdcde68a195384764c021259",
+            "calls": 9,
+            "loadSeconds": 40.640553101997284,
+            "runMilliseconds": [
+              331.9828570001846,
+              357.810599000004,
+              329.5454229992174,
+              329.9152569998114,
+              317.526111000916,
+              326.2953759985976,
+              292.94994099836913,
+              330.09721099915623,
+              311.49118000030285
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_09_model_layers_5_Add_4_output_0_to_model_layers_6_Add_4_output_0_config.axmodel",
+            "sha256": "caf0d1157a8ebdf700fed66c954b39b4deb6a77ad20dea9dc7d3f6964f3e12e8",
+            "calls": 9,
+            "loadSeconds": 40.58038780199604,
+            "runMilliseconds": [
+              298.7797589994443,
+              330.55255100043723,
+              330.36034100041434,
+              329.8548820002907,
+              299.4220359996689,
+              316.3148160001583,
+              308.32196899973496,
+              328.95183300024655,
+              329.7314600004029
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_10_model_layers_6_Add_4_output_0_to_model_layers_7_Add_4_output_0_config.axmodel",
+            "sha256": "5656739760428e392b990c7bdba495308cf7a1dea42b1491ec902c6057e08230",
+            "calls": 9,
+            "loadSeconds": 40.41762225399907,
+            "runMilliseconds": [
+              309.19227699996554,
+              352.92517400012,
+              316.87511000018276,
+              329.0233400002762,
+              311.6201419998106,
+              313.34476899974106,
+              330.4209609996178,
+              318.06477399914,
+              331.0387120000087
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_11_model_layers_7_Add_4_output_0_to_model_layers_8_Add_4_output_0_config.axmodel",
+            "sha256": "333f38d67c51fbd8bc245e44e3356f83417771330012d9b4b9eed08dead52d12",
+            "calls": 9,
+            "loadSeconds": 40.48885740600235,
+            "runMilliseconds": [
+              307.8395249995083,
+              327.40808599919546,
+              330.8795100001589,
+              331.16417700148304,
+              332.8943460001028,
+              365.3606959996978,
+              322.3881559988513,
+              309.5189270006813,
+              309.38942700049665
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_12_model_layers_8_Add_4_output_0_to_model_layers_9_Add_4_output_0_config.axmodel",
+            "sha256": "0204743b711a5b08f7831ead79957c6a2ba6690eb3e01257b5863cca0a883c9f",
+            "calls": 9,
+            "loadSeconds": 39.8602565580004,
+            "runMilliseconds": [
+              326.1786809998739,
+              329.8324240004149,
+              308.7690949996613,
+              329.8554659995716,
+              329.3246309985989,
+              304.391753001255,
+              316.03972899938526,
+              309.35530200076755,
+              420.18648399971426
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_13_model_layers_9_Add_4_output_0_to_model_layers_10_Add_4_output_0_config.axmodel",
+            "sha256": "547744c6070588a8ab48f36c3d377cea11b60deac36367052cee5ed908483584",
+            "calls": 9,
+            "loadSeconds": 40.91623146100028,
+            "runMilliseconds": [
+              330.07768700008455,
+              320.41303199912363,
+              308.70609500016144,
+              330.29734100091446,
+              310.5427230002533,
+              326.2749599998642,
+              308.9014680008404,
+              329.8399609993794,
+              307.999632001156
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_14_model_layers_10_Add_4_output_0_to_model_layers_11_Add_4_output_0_config.axmodel",
+            "sha256": "6d63eb7938fc5d3be9e607fd38090dfc01a71050553167cc10a6434023d48b8f",
+            "calls": 9,
+            "loadSeconds": 40.18934471099783,
+            "runMilliseconds": [
+              309.30661000093096,
+              316.25794199862867,
+              329.6113409996906,
+              302.4142499998561,
+              329.6372990007512,
+              326.85654400120256,
+              317.494856999474,
+              329.6445430005406,
+              300.0861199998326
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_15_model_layers_11_Add_4_output_0_to_model_layers_12_Add_4_output_0_config.axmodel",
+            "sha256": "195699f44c2d9d01289fc1ff56b4308c9d7d437fbcdb43f9a951c4953b5fc9c0",
+            "calls": 9,
+            "loadSeconds": 40.55715280299955,
+            "runMilliseconds": [
+              311.2097659995925,
+              330.6963429986354,
+              330.0182160000986,
+              309.2973040002107,
+              330.6523000010202,
+              326.35166799991566,
+              294.1279429996939,
+              330.6782119998388,
+              310.8675959992979
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_16_model_layers_12_Add_4_output_0_to_model_layers_13_Add_4_output_0_config.axmodel",
+            "sha256": "a368250f9b205e434832dfe527c00734f173517bbd1e85e8bb21db77f9c719fb",
+            "calls": 9,
+            "loadSeconds": 40.33620404499925,
+            "runMilliseconds": [
+              304.9937539999519,
+              309.0356779994181,
+              312.72185199850355,
+              308.33100999916496,
+              304.76187900057994,
+              327.7505040005053,
+              325.82107899906987,
+              329.1962509993027,
+              309.46000999938406
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_17_model_layers_13_Add_4_output_0_to_model_layers_14_Add_4_output_0_config.axmodel",
+            "sha256": "4ef0fa1c1efc23d27b373341b37bc120f4fa57634931f850106bd7a14d9a8042",
+            "calls": 9,
+            "loadSeconds": 40.509810261000894,
+            "runMilliseconds": [
+              309.90659700000833,
+              301.72970700004953,
+              329.7872160001134,
+              329.9129240003822,
+              332.02330300082394,
+              307.861426999807,
+              312.5414740006818,
+              309.84967699987465,
+              308.6649249999027
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_18_model_layers_14_Add_4_output_0_to_model_layers_15_Add_4_output_0_config.axmodel",
+            "sha256": "1cd4e9378df6c7422e48fbb8cd288e377014970c5b20636a24f3045c8baf3cf4",
+            "calls": 9,
+            "loadSeconds": 40.269064292999246,
+            "runMilliseconds": [
+              329.8003410000092,
+              311.0093909999705,
+              329.86946500022896,
+              292.16710699984105,
+              329.52296499934164,
+              326.75358500091534,
+              308.78538400065736,
+              309.4684689986025,
+              317.09935599974415
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_19_model_layers_15_Add_4_output_0_to_model_layers_16_Add_4_output_0_config.axmodel",
+            "sha256": "025d4b08ebd6d3c08fec03874487ef15d409ebc44a0b5df4234349ad61d0a1d3",
+            "calls": 9,
+            "loadSeconds": 40.11984273600319,
+            "runMilliseconds": [
+              329.7431739993044,
+              329.4106740013376,
+              323.1217459997424,
+              312.4639350007783,
+              329.95521599877975,
+              328.34142100000463,
+              309.37513400022,
+              330.20162700086075,
+              316.48277199929
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_20_model_layers_16_Add_4_output_0_to_model_layers_17_Add_4_output_0_config.axmodel",
+            "sha256": "409fed725e1e86abbaad76478d3efc934583d133760dddf01eb935551a2bf6f0",
+            "calls": 9,
+            "loadSeconds": 40.441730190999806,
+            "runMilliseconds": [
+              309.76017899956787,
+              308.87234500005434,
+              310.6701819997397,
+              340.4476509986125,
+              309.1459280003619,
+              317.77111100018374,
+              329.2426259995409,
+              318.1073579999065,
+              330.0330429992755
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_21_model_layers_17_Add_4_output_0_to_model_layers_18_Add_4_output_0_config.axmodel",
+            "sha256": "30610e7306e69ec16bdeba9e361beb395ef4ec46c864764c1b02bb0da0226a53",
+            "calls": 9,
+            "loadSeconds": 40.19789893199959,
+            "runMilliseconds": [
+              330.06517399917357,
+              329.44917299937515,
+              329.2514240001765,
+              309.2905960002099,
+              299.08341099871905,
+              308.1904270002269,
+              300.15420299969264,
+              387.6758059996064,
+              324.3779099993844
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_22_model_layers_18_Add_4_output_0_to_model_layers_19_Add_4_output_0_config.axmodel",
+            "sha256": "3b7d58cd848de4bb4a6ffd12e815c4700a2ea9f00cfaaf09f2b7cfb18e350c79",
+            "calls": 9,
+            "loadSeconds": 40.33398579700042,
+            "runMilliseconds": [
+              329.4200069994986,
+              329.98496599975624,
+              309.3270540011872,
+              330.36909099973855,
+              309.07913699957135,
+              363.3721090009203,
+              311.6647219994775,
+              323.8954919997923,
+              320.47277799938456
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_23_model_layers_19_Add_4_output_0_to_model_layers_20_Add_4_output_0_config.axmodel",
+            "sha256": "4cadbe7a49ac276a9da470640f8333d1ace969d6269932b018ae894639721968",
+            "calls": 9,
+            "loadSeconds": 40.055692434001685,
+            "runMilliseconds": [
+              308.5911769994709,
+              310.277598000539,
+              308.7451780011179,
+              304.9552539996512,
+              329.5191729994258,
+              307.98334300015995,
+              311.2878880001517,
+              301.6538310002943,
+              321.28477900005237
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_24_model_layers_20_Add_4_output_0_to_model_layers_21_Add_4_output_0_config.axmodel",
+            "sha256": "8fca01a83080b1bd529580956e3ee21e29b18fa135e7d603c752badbbf296c3b",
+            "calls": 9,
+            "loadSeconds": 40.40652549499828,
+            "runMilliseconds": [
+              329.2779650000739,
+              331.23126000100456,
+              331.1283019993425,
+              307.6044669996918,
+              330.3058000001329,
+              308.0483859994274,
+              301.53920500015374,
+              329.87116900039837,
+              386.08738599941717
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_25_model_layers_21_Add_4_output_0_to_model_layers_22_Add_4_output_0_config.axmodel",
+            "sha256": "84724b42679ef092009b91120f311da271cbd1a62efafb7fa48c8aa690407f77",
+            "calls": 9,
+            "loadSeconds": 40.98281238499658,
+            "runMilliseconds": [
+              308.9070539990644,
+              329.38092299991695,
+              329.6410910006671,
+              388.47036300103355,
+              329.6396320001804,
+              308.381177001138,
+              309.01959299990267,
+              309.55713499861304,
+              329.66466799916816
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_26_model_layers_22_Add_4_output_0_to_model_layers_23_Add_4_output_0_config.axmodel",
+            "sha256": "9b97034e89c0bc93dc9f22637dbb1158721795a4c7e0d439c58ed9c8ae1643a3",
+            "calls": 9,
+            "loadSeconds": 40.5628589550015,
+            "runMilliseconds": [
+              331.0203849996469,
+              330.92530100111617,
+              290.2111870007502,
+              309.76018000001204,
+              295.9109470011754,
+              326.2236259997735,
+              326.06666299943754,
+              314.95589400037716,
+              329.5818349997717
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_27_model_layers_23_Add_4_output_0_to_model_layers_24_Add_4_output_0_config.axmodel",
+            "sha256": "36570e771d1763eb5b39ea9d6b39a28461eb1a8a3156321c801328f4b7067cfc",
+            "calls": 9,
+            "loadSeconds": 40.06862410500071,
+            "runMilliseconds": [
+              310.3604300013103,
+              317.5214439997944,
+              309.6650959996623,
+              308.8822620011342,
+              310.20438900122826,
+              307.36938399968494,
+              310.0704690004932,
+              309.2120929995872,
+              304.9429610000516
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_28_model_layers_24_Add_4_output_0_to_model_layers_25_Add_4_output_0_config.axmodel",
+            "sha256": "e88dac81a2be4c746d150254e5fcab82f2862e7072ab35f7a9c69a7eb3d50f45",
+            "calls": 9,
+            "loadSeconds": 40.33326285699877,
+            "runMilliseconds": [
+              301.9493319989124,
+              321.546450999449,
+              388.98777999929735,
+              329.1429220007558,
+              386.62323399876186,
+              330.1360500008741,
+              325.4457029997866,
+              330.90221200109227,
+              330.73712900113605
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_29_model_layers_25_Add_4_output_0_to_model_layers_26_Add_4_output_0_config.axmodel",
+            "sha256": "50718b3b2a1f420f99478eda30b4cab306e8ecae799f147e25a3ba75665e6fd0",
+            "calls": 9,
+            "loadSeconds": 40.49817255599919,
+            "runMilliseconds": [
+              316.81969199962623,
+              306.6921330009791,
+              329.50517400058743,
+              320.2149900007498,
+              323.9022470006603,
+              329.9269250001089,
+              311.83468000017456,
+              329.91229300023406,
+              323.0668659998628
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_30_model_layers_26_Add_4_output_0_to_model_layers_27_Add_4_output_0_config.axmodel",
+            "sha256": "c2b7a795213d3d309c2c8d1cd73bd78202e2abca5738241128df26ff11319240",
+            "calls": 9,
+            "loadSeconds": 40.504058925997015,
+            "runMilliseconds": [
+              310.603389998505,
+              419.19166799925733,
+              368.7259529997391,
+              330.6084670002747,
+              329.4077569989895,
+              313.42643599964504,
+              329.7445850002987,
+              329.62500199937494,
+              329.439792998528
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_31_model_layers_27_Add_4_output_0_to_model_layers_28_Add_4_output_0_config.axmodel",
+            "sha256": "a494e8c857875ee0af328d7e146dd6c255d97aa0f7295afe495abccfcb59aad8",
+            "calls": 9,
+            "loadSeconds": 40.427990803000284,
+            "runMilliseconds": [
+              300.20662099923356,
+              329.37013099945034,
+              309.0776779990847,
+              317.3009430011007,
+              311.8260579994967,
+              310.2105139987543,
+              308.9236340001662,
+              309.43230199954996,
+              329.38729300076375
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/cfg_32_model_layers_28_Add_4_output_0_to_model_layers_29_Add_4_output_0_config.axmodel",
+            "sha256": "e3119c5b9dcb136a4919e4d5a9626c5ed76f57400a1fd1006af70fd4b11053b1",
+            "calls": 9,
+            "loadSeconds": 39.977461272001165,
+            "runMilliseconds": [
+              310.64130699996895,
+              322.1913269990182,
+              308.8443449996703,
+              384.75948099949164,
+              310.1930140001059,
+              306.3727579992701,
+              299.9178270001721,
+              309.61867699988943,
+              319.07452599989483
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "transformer_axmodel/auto_00_model_layers_29_Add_4_output_0_to_sample_auto.axmodel",
+            "sha256": "e30218016cd3015f713e219e8ace67539c646b378ae5b79e9e450b0622b88ff5",
+            "calls": 9,
+            "loadSeconds": 0.41847910299838986,
+            "runMilliseconds": [
+              56.86897600025986,
+              55.88605900084076,
+              59.30060699938622,
+              59.561066000242135,
+              77.49626399890985,
+              55.83064099846524,
+              55.86563399992883,
+              59.64272399978654,
+              58.738847001222894
+            ],
+            "allFinite": true
+          },
+          {
+            "model": "VideoX-Fun/vae_decoder.axmodel",
+            "sha256": "0798299fccdffae63be19d73323279e0f4b83883f634faaa88a44a9fe09ccc19",
+            "calls": 1,
+            "loadSeconds": 1.7106887769987225,
+            "runMilliseconds": [
+              900.4785670003912
+            ],
+            "allFinite": true
+          }
+        ],
+        "textCalls": 37,
+        "imageCalls": 307,
+        "totalCalls": 344,
+        "imageStageSeconds": 1600.7281777179996,
+        "imageStageLoadSeconds": 1370.2645773709846,
+        "imageStageAxclRunSecondsIncludingTransfers": 92.43491636099498,
+        "outputObservation": "画面是一只坐着的橙色猫，左侧为蓝色花盆，背景可见温室中的植物与柔和光线。这组的主体、颜色、相邻位置及场景与提示词基本一致。",
+        "semanticQualityAccepted": true,
+        "scope": "Two fixed prompts on an AX8850 16GB card; nine denoising steps; file loading through a read-only network mount. Image-stage time excludes text encoding."
+      },
+      "sourceArchiveSha256": "5881b8f18c031c73ef66f5aed2776a40f0e6c830f4f447f5eead5c2379af5896"
+    }
+  ]
+}

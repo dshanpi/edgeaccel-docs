@@ -1,0 +1,28 @@
+{
+  "modelId": "E_bike-axera",
+  "repo": "AXERA-TECH/E_bike-axera",
+  "revision": "72ffc10a3f5802e280e4ed0ad4ee74d62869cf31",
+  "files": [
+    {
+      "path": "ax_emd_infer.py",
+      "bytes": 10245,
+      "verifiedHashes": {
+        "sha256": "e4b4ace7440274917c0abee4d25baad35497e6f114be5b4d45274fadf804a644"
+      }
+    },
+    {
+      "path": "test.jpg",
+      "bytes": 113055,
+      "verifiedHashes": {
+        "sha256": "25f83fb507bb0731fa470d7ae9f97657d9180db29f42c61bb87abeda794823e4"
+      }
+    },
+    {
+      "path": "AX650/ax_ax650_emd_algo_rgb_nhwc_V1.0.0.axmodel",
+      "bytes": 1266176,
+      "verifiedHashes": {
+        "sha256": "f55828372648ca082afe100aed0b0161b13fd9de53a3ae117e50194a70dad470"
+      }
+    }
+  ]
+}

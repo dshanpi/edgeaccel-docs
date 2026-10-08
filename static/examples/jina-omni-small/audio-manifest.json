@@ -1,0 +1,22 @@
+{
+  "files": [
+    {
+      "file": "english-short.wav",
+      "text": "Hello, this is a demo.",
+      "sha256": "a03bdeebda024f03f324a9995403e5618ac43a6d95d82961b2b223afc79ee538",
+      "source": "static/validation/effects/hojo-tts-light-20260928/english-short.wav",
+      "origin": "Previously generated on RK3576 + AX8850 with Hojo-TTS-Light fixed cee17e0534ba216649d82055a326b995b6cf35c4; not an upstream Jina test sample",
+      "sourceOriginal": {
+        "file": "english-short.wav",
+        "text": "Hello, this is a demo.",
+        "sha256": "a9467e04369640fb010375eb100da29ab0ef2b30816fa3c2f5a8e83cc68e37f2",
+        "source": "static/validation/effects/hojo-tts-light-20260928/english-short.wav",
+        "origin": "Previously generated on RK3576 + AX8850 with Hojo-TTS-Light fixed cee17e0534ba216649d82055a326b995b6cf35c4; not an upstream Jina test sample"
+      },
+      "sourceSampleRate": 24000,
+      "sampleRate": 16000,
+      "samples": 48000,
+      "conversion": "scipy.signal.resample_poly up=2 down=3 then PCM16 WAV"
+    }
+  ]
+}

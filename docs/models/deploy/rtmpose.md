@@ -12,7 +12,7 @@ RTMPose 用于人体姿态估计。本页说明 M.2 算力卡的接入条件、�
 
 ## 准备运行环境
 
-本页效果展示使用 **RK3576 DshanPi A1 + AX8850 8GB M.2**；其他容量或平台需重新确认模型能否加载并正确运行。
+本页包含 **RK3576 DshanPi A1 + AX8850 16GB M.2** 与 **RK3576 DshanPi A1 + AX8850 8GB M.2** 的样例。按效果展示中的权重和容量对应使用，不同环境的结果不能互相替代。
 
 在连接算力卡的 Linux 主机终端执行，RK3576 使用 ARM64 环境。首次部署先完成[驱动与设备检查](../../usage/device-check.md)、[安装 PyAXEngine](../../usage/python.md)和[下载工具安装](../../usage/download-models.md#使用-hugging-face-下载)。已完成这些步骤可直接下载模型。
 
@@ -95,11 +95,80 @@ python ax_infer.py --model AX650/rtmpose_m_npu3.axmodel --image test.jpg 2>&1 | 
 
 参数依据：[`ax_infer.py` 源码](https://huggingface.co/AXERA-TECH/RTMPose/blob/726c3acf17cff3a13958bc30da0aa6bf125312b1/ax_infer.py)。
 
+## 运行 rtmpose-npu1 变体
+
+### 准备运行包
+
+在 RK3576 主机激活前文安装的 PyAXEngine 环境，下载[视觉变体运行包](../../../static/examples/vision-variant-deployment-20261005.zip)，保存到`~/edgeaccel`并解压到 `~/edgeaccel`。
+
+```bash
+source ~/edgeaccel/python-env/bin/activate
+python -m zipfile -e ~/edgeaccel/vision-variant-deployment-20261005.zip ~/edgeaccel
+```
+
+### 下载权重和样例
+
+```bash
+VARIANT_MODELS=~/edgeaccel/models-variants
+~/edgeaccel/hf-env/bin/hf download AXERA-TECH/RTMPose \
+  --revision 726c3acf17cff3a13958bc30da0aa6bf125312b1 \
+  --include "README.md" "ax_infer.py" "config.json" "export_onnx.py" "onnx_infer.py" "replace_hardsigmoid.py" "test.jpg" "AX650/rtmpose_m_npu1.axmodel" \
+  --local-dir "$VARIANT_MODELS/RTMPose"
+```
+
+### 运行模型
+
+```bash
+python ~/edgeaccel/vision-variant/vision_variant.py \
+  --models-root "$VARIANT_MODELS" --case rtmpose-npu1 \
+  --output ~/edgeaccel/results/rtmpose-npu1
+```
+
+使用尚不存在的结果目录。终端应显示 `AXCLRTExecutionProvider`，结果目录中应生成输出图。
+
+
 ## 查看部署效果
 
-**已运行，效果仍需评估** · 2026-09-23 · RK3576 DshanPi A1 + AX8850 8GB M.2。以下输入与输出来自本页固定版本的实际运行。
+### RTMPose NPU1：16GB卡样例
 
-滑雪者样图输出 17 个人体关键点，骨架大体沿头部、肩肘腕、髋膝踝连接，与画面中单人的姿态一致。面部关键点集中于较小区域；右侧画面中的手腕点接近阈值，不能据置信度宣称所有关节定位精确。
+**已运行，效果仍需评估** · RK3576 DshanPi A1 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
+
+同一固定样例完成三次独立运行，其中一次使用下方配套运行包入口，原始输出与效果图一致。
+
+**RTMPose NPU1**
+
+单人滑雪样例的17个关键点均超过0.3，骨架覆盖头部、躯干与四肢，位置与人物姿态相符；未覆盖多人或视频。
+
+<div className="model-effect-gallery">
+
+<figure>
+
+[![实际输入：test.jpg](../../../static/validation/effects/rtmpose-variant-20261005/inputs/test.jpg)](../../../static/validation/effects/rtmpose-variant-20261005/inputs/test.jpg)
+
+<figcaption>实际输入：test.jpg</figcaption>
+</figure>
+
+<figure>
+
+[![实际输出：RTMPose NPU1](../../../static/validation/effects/rtmpose-variant-20261005/outputs/pose.jpg)](../../../static/validation/effects/rtmpose-variant-20261005/outputs/pose.jpg)
+
+<figcaption>实际输出：RTMPose NPU1</figcaption>
+</figure>
+
+</div>
+
+**使用时注意：**
+
+- 仅验证固定官方样例，未完成独立数据集精度、多场景和长期连续运行测试。
+- 本组使用16GB卡；8GB卡样例使用不同权重，不能据此推断该变体已通过8GB容量回归。
+
+这些结果用于对照部署后的输出，未覆盖完整数据集精度或长期连续运行。
+
+### 原默认权重：8GB卡样例
+
+**已运行，效果仍需评估** · RK3576 DshanPi A1 + AX8850 8GB M.2。以下输入与输出来自本页固定版本的实际运行。
+
+8GB 滑雪者样图输出 17 个关键点，骨架大体沿单人的头部和四肢分布。kp09 分数 0.3021，仅略高于 0.3 阈值；没有关键点真值，仍待定位精度核对。13 次模型调用包含计时，不能视为 13 个独立姿态样本。
 
 点击图片可查看原尺寸。
 
@@ -128,10 +197,33 @@ python ax_infer.py --model AX650/rtmpose_m_npu3.axmodel --image test.jpg 2>&1 | 
 
 这些结果用于对照部署后的输出，未覆盖完整数据集精度或长期连续运行。
 
+**RTMPose NPU1：16GB卡样例**
+
 <details>
 <summary>查看样例环境与运行耗时</summary>
 
-环境：RK3576 DshanPi A1 + AX8850 8GB M.2。日期：2026-09-23。模型版本：`726c3acf17cff3a13958bc30da0aa6bf125312b1`。
+环境：RK3576 DshanPi A1 + AX8850 16GB M.2。模型版本：`726c3acf17cff3a13958bc30da0aa6bf125312b1`。
+
+| 组件 | 版本或配置 |
+| --- | --- |
+| 主机系统 / 内核 | Ubuntu 24.04 / Armbian；aarch64；6.1.115-vendor-rk35xx |
+| AXCL / 驱动 | V3.16.0_20260729180218 |
+| 固件 / CMM | V3.16.0；总量15232 MiB，空闲占用18 MiB |
+| Python后端 | AXCLRTExecutionProvider；NumPy 1.26.4；OpenCV 4.11.0 |
+| 前后处理 | 固定仓库原始脚本；运行包显式选择AXCL，保留原始色序、尺寸处理和后处理 |
+
+| 指标 | 实测值 | 计时或统计范围 |
+| --- | --- | --- |
+| 单次推理平均墙钟 | 11.435 / 11.550 / 11.618 ms | 三个独立进程；各3次预热后10次session.run的均值，含传输，不含张量存盘和后处理。 |
+
+</details>
+
+**原默认权重：8GB卡样例**
+
+<details>
+<summary>查看样例环境与运行耗时</summary>
+
+环境：RK3576 DshanPi A1 + AX8850 8GB M.2。模型版本：`726c3acf17cff3a13958bc30da0aa6bf125312b1`。
 
 | 组件 | 版本或配置 |
 | --- | --- |
@@ -153,8 +245,6 @@ python ax_infer.py --model AX650/rtmpose_m_npu3.axmodel --image test.jpg 2>&1 | 
 
 适用范围：
 
-- 没有人工关键点真值，未计算 PCK、OKS 或 mAP；只确认单人样图的骨架在视觉上基本合理。
-- kp09 分数约 0.3021，刚超过 0.3 阈值；17/17 超阈值不是 17/17 定位正确。
 - 本次为整图单人姿态推理，未验证多人检测加逐人姿态流水线。
 - 运行源码包含显式 AXCL 后端或本页说明的适配修改；result.json 保存逐项替换及修改后 SHA256。
 

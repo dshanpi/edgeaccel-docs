@@ -8,11 +8,11 @@ description: "YOLO11-Seg 的 M.2 算力卡部署步骤、配套文件与效果�
 
 YOLO11-Seg 用于图像分割。本页说明 M.2 算力卡的接入条件、部署步骤与结果检查方法。本页选择 `ax650/yolo11x-seg.axmodel`。
 
-> 已实测，固定样例已核对。[查看部署效果](#查看部署效果)。
+> 已实测，效果仍需评估。[查看部署效果](#查看部署效果)。
 
 ## 准备运行环境
 
-本页效果展示使用 **RK3576 DshanPi A1 + AX8850 8GB M.2**；其他容量或平台需重新确认模型能否加载并正确运行。
+本页包含 **RK3576 DshanPi A1 + AX8850 16GB M.2** 与 **RK3576 DshanPi A1 + AX8850 8GB M.2** 的样例。按效果展示中的权重和容量对应使用，不同环境的结果不能互相替代。
 
 在连接算力卡的 Linux 主机终端执行，RK3576 使用 ARM64 环境。首次部署先完成[驱动与设备检查](../../usage/device-check.md)、[编译 AXCL 视觉示例](../../usage/build-samples.md)和[下载工具安装](../../usage/download-models.md#使用-hugging-face-下载)。已完成这些步骤可直接下载模型。
 
@@ -20,14 +20,15 @@ YOLO11-Seg 用于图像分割。本页说明 M.2 算力卡的接入条件、部�
 
 ## 下载模型与样例
 
-本页使用 `AXERA-TECH/YOLO11-Seg` 的固定版本。下面下载本页选用的 2 个文件。
+本页使用 `AXERA-TECH/YOLO11-Seg` 的固定版本。下面下载本页选用的 3 个文件。
 
 ```bash
 MODEL_DIR=~/edgeaccel/models/yolo11-seg/5ed6c6e95199
 mkdir -p "$MODEL_DIR"
 ~/edgeaccel/hf-env/bin/hf download AXERA-TECH/YOLO11-Seg \
-  "ax650/yolo11x-seg.axmodel" \
   "football.jpg" \
+  "ax650/yolo11s-seg.axmodel" \
+  "ax650/yolo11x-seg.axmodel" \
   --revision 5ed6c6e9519930a4a94dd9839d4777399c83fec1 \
   --local-dir "$MODEL_DIR"
 cd "$MODEL_DIR"
@@ -54,9 +55,87 @@ set -o pipefail
 
 示例源码：[axcl-samples 固定版本](https://github.com/AXERA-TECH/axcl-samples/tree/cbfa4c76891758983ca2b0c99c11d6621d59af39)。
 
+## 运行其他 AX650 权重
+
+前面的下载命令同时包含下表权重。默认入口保留原8GB样例；以下权重在16GB卡上实测。
+
+| 权重 | 本组实测容量 |
+| --- | --- |
+| `ax650/yolo11s-seg.axmodel` | 16GB |
+
+已按[编译视觉示例](../../usage/build-samples.md)取得固定版本源码后，可单独构建本页程序：
+
+```bash
+SRC=~/edgeaccel/src/axcl-samples
+git -C "$SRC" rev-parse HEAD
+# 确认提交为 cbfa4c76891758983ca2b0c99c11d6621d59af39
+cmake -S "$SRC" -B "$SRC/build-variants" \
+  -DCMAKE_BUILD_TYPE=Release \
+  -DCMAKE_RUNTIME_OUTPUT_DIRECTORY="$SRC/build-variants/bin"
+cmake --build "$SRC/build-variants" --target axcl_yolo11_seg --parallel 1
+SAMPLE="$SRC/build-variants/bin/axcl_yolo11_seg"
+ldd "$SAMPLE"
+```
+
+在同一终端选择上表中的一个权重运行。程序将结果写入当前目录，用不同目录保存每个权重的图片：
+
+```bash
+WEIGHT=ax650/yolo11s-seg.axmodel
+OUT=~/edgeaccel/results/yolo11-seg/$(basename "$WEIGHT" .axmodel)
+mkdir -p "$OUT"
+cd "$OUT"
+set -o pipefail
+"$SAMPLE" -m "$MODEL_DIR/$WEIGHT" \
+  -i "$MODEL_DIR/football.jpg" -g 640,640 -r 10 2>&1 | tee run.log
+```
+
+打开新生成的`yolo11_seg_out.jpg`，与下面同一权重的结果对照。原始程序使用置信度阈值0.45、NMS阈值0.45，`-r 10`之外还执行5次预热。运行结束后同时核对日志、图片和设备状态，不能只看退出码。
+
+
 ## 查看部署效果
 
-**固定样例已核对** · 2026-09-23 · RK3576 DshanPi A1 + AX8850 8GB M.2。以下输入与输出来自本页固定版本的实际运行。
+### 新增AX650权重：16GB卡样例
+
+**已运行，效果仍需评估** · RK3576 DshanPi A1 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
+
+1个新增权重各独立启动两次，每次5次预热和10次推理，原始C++示例生成的图片重复一致。下方展示实际输出及程序记录的目标数量。
+
+**yolo11s-seg**
+
+四个主要人物与两处足球有实例掩码；部分小球、边缘及被遮挡人物未覆盖，掩码边界仍有偏差。
+
+<div className="model-effect-gallery">
+
+<figure>
+
+[![实际输入：football.jpg](../../../static/validation/effects/yolo11-seg-native-variants-20261005/inputs/football.jpg)](../../../static/validation/effects/yolo11-seg-native-variants-20261005/inputs/football.jpg)
+
+<figcaption>实际输入：football.jpg</figcaption>
+</figure>
+
+<figure>
+
+[![实际输出：yolo11s-seg](../../../static/validation/effects/yolo11-seg-native-variants-20261005/outputs/yolo11s-seg.jpg)](../../../static/validation/effects/yolo11-seg-native-variants-20261005/outputs/yolo11s-seg.jpg)
+
+<figcaption>实际输出：yolo11s-seg</figcaption>
+</figure>
+
+</div>
+
+| 权重 | 程序输出目标数 | 各类别数量 |
+| --- | --- | --- |
+| yolo11s-seg.axmodel | 6 | person: 4；sports ball: 2 |
+
+**使用时注意：**
+
+- 仅固定单张图片，边缘、遮挡或小目标仍有漏检，目标数量不等于真实目标数量。未计算检测mAP或分割IoU。
+- 本组使用16GB卡，不替代这些权重的8GB回归；未采集原始输出张量，不能据此判断逐元素数值精度。
+
+这些结果用于对照部署后的输出，未覆盖完整数据集精度或长期连续运行。
+
+### yolo11x-seg：8GB卡样例
+
+**固定样例已核对** · RK3576 DshanPi A1 + AX8850 8GB M.2。以下输入与输出来自本页固定版本的实际运行。
 
 单张 football.jpg 输出 6 个人物实例、3 个足球实例。主要球员的彩色掩码覆盖头部、躯干和四肢，足球掩码位于对应小球区域，完成实例分割的定性核对。
 
@@ -87,10 +166,34 @@ set -o pipefail
 
 这些结果用于对照部署后的输出，未覆盖完整数据集精度或长期连续运行。
 
+**新增AX650权重：16GB卡样例**
+
 <details>
 <summary>查看样例环境与运行耗时</summary>
 
-环境：RK3576 DshanPi A1 + AX8850 8GB M.2。日期：2026-09-23。模型版本：`5ed6c6e9519930a4a94dd9839d4777399c83fec1`。
+环境：RK3576 DshanPi A1 + AX8850 16GB M.2。模型版本：`5ed6c6e9519930a4a94dd9839d4777399c83fec1`。
+
+| 组件 | 版本或配置 |
+| --- | --- |
+| 主机系统 / 内核 | Ubuntu 24.04 / Armbian；aarch64；6.1.115-vendor-rk35xx |
+| AXCL / 驱动 | V3.16.0_20260729180218 |
+| 固件 / CMM | V3.16.0；总量15232 MiB，空闲占用18 MiB |
+| C++ 示例 | cbfa4c76891758983ca2b0c99c11d6621d59af39；Release；g++13；OpenCV4.6 |
+| 前后处理 | 原始C++示例，640×640输入；置信度阈值0.45、NMS阈值0.45。 |
+| 重复范围 | 每个权重独立启动两次；每次5次预热、10次计时；同一固定图片。 |
+
+| 指标 | 实测值 | 计时或统计范围 |
+| --- | --- | --- |
+| yolo11s-seg.axmodel · Execute均值 | 5.009 / 5.035 ms | 两次独立启动，各5次预热后10次axclrtEngineExecute调用；启用API记录，不含显式输入输出复制、预后处理，不代表无插桩吞吐或端到端延迟。 |
+
+</details>
+
+**yolo11x-seg：8GB卡样例**
+
+<details>
+<summary>查看样例环境与运行耗时</summary>
+
+环境：RK3576 DshanPi A1 + AX8850 8GB M.2。模型版本：`5ed6c6e9519930a4a94dd9839d4777399c83fec1`。
 
 | 组件 | 版本或配置 |
 | --- | --- |
@@ -109,8 +212,6 @@ set -o pipefail
 
 适用范围：
 
-- 远处小目标和左侧遮挡人物未全部覆盖；局部边缘、细长肢体与遮挡区域存在粗糙或不完整现象。
-- 未使用像素级真值标注，不能报告 IoU、mAP 或边界精度。
 - 仅一次启动、同一张样例图的 5 次预热和 10 次计时调用；未进行独立数据集精度评测或长时间稳定性测试。
 
 </details>

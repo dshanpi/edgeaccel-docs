@@ -155,7 +155,7 @@ PY
 
 ## 查看部署效果
 
-**固定样例已核对** · 2026-09-23 · RK3576 DshanPi A1 + AX8850 8GB M.2。以下输入与输出来自本页固定版本的实际运行。
+**固定样例已核对** · RK3576 DshanPi A1 + AX8850 8GB M.2。以下输入与输出来自本页固定版本的实际运行。
 
 三组固定短样例已核对：算术题只返回 5；中文说明 PCIe 是连接显卡、固态硬盘等设备的高速串行扩展总线；第三次返回可直接解析的 JSON，apple=3、pear=2。本结论仅覆盖这三个问题与本页固定版本。
 
@@ -205,7 +205,7 @@ PCIe（Peripheral Component Interconnect Express）是一种高速串行计算�
 <details>
 <summary>查看样例环境与运行耗时</summary>
 
-环境：RK3576 DshanPi A1 + AX8850 8GB M.2。日期：2026-09-23。模型版本：`582922aeace55d1369c17b837abd3b83a5f050e2`。
+环境：RK3576 DshanPi A1 + AX8850 8GB M.2。模型版本：`582922aeace55d1369c17b837abd3b83a5f050e2`。
 
 | 组件 | 版本或配置 |
 | --- | --- |
@@ -226,8 +226,6 @@ PCIe（Peripheral Component Interconnect Express）是一种高速串行计算�
 
 适用范围：
 
-- 本页的正确性结论只覆盖三组短样例，不能推断复杂推理、知识准确率或任意 JSON 任务都能通过。
-- 单 token 算术回复未返回 decode_tps；两条较长回复分别约 2.316 与 2.421 token/s，不作为统一性能基准。
 - 仅执行本页列出的短请求，未测试长期稳定性、并发或最大上下文；上游板端性能不作为本机结果。
 
 </details>

@@ -1,0 +1,48 @@
+{
+  "kind": "bird-classification",
+  "modelId": "Bird-Species-Classification",
+  "revision": "b81b4cb3be067a85ba730c5b2a67c566d3d9af68",
+  "date": "2026-09-23",
+  "inputSha256": "1ae2bc22d3f8cd5d59822b0faf99deaadc4bde4cfc9be262524697214f3d6fe5",
+  "labelSource": "https://huggingface.co/AXERA-TECH/Bird-Species-Classification/blob/b81b4cb3be067a85ba730c5b2a67c566d3d9af68/class_name.txt",
+  "labelSourceSha256": "c39ee878a82b8dd45d69725c9d504a046effdeb01f6d05ac5c6a22c70506ddd4",
+  "classCount": 1486,
+  "scorePrecision": "Four decimal places copied from the original log; full logits and probabilities were not saved.",
+  "top5": [
+    {
+      "rank": 1,
+      "classIndex": 1439,
+      "className": "04550_Animalia_Chordata_Aves_Strigiformes_Strigidae_Ciccaba_virgata",
+      "reportedScore": "0.0727"
+    },
+    {
+      "rank": 2,
+      "classIndex": 1270,
+      "className": "04381_Animalia_Chordata_Aves_Pelecaniformes_Ardeidae_Ixobrychus_exilis",
+      "reportedScore": "0.0537"
+    },
+    {
+      "rank": 3,
+      "classIndex": 692,
+      "className": "03803_Animalia_Chordata_Aves_Passeriformes_Estrildidae_Spermestes_cucullata",
+      "reportedScore": "0.0537"
+    },
+    {
+      "rank": 4,
+      "classIndex": 1408,
+      "className": "04519_Animalia_Chordata_Aves_Psittaciformes_Psittacidae_Psittacara_leucophthalmus",
+      "reportedScore": "0.0292"
+    },
+    {
+      "rank": 5,
+      "classIndex": 1398,
+      "className": "04509_Animalia_Chordata_Aves_Psittaciformes_Psittacidae_Brotogeris_chiriri",
+      "reportedScore": "0.0292"
+    }
+  ],
+  "preprocessing": "RGB，双三次缩放到 224×224，uint8 NCHW；本例程不在主机上另做 mean/std 归一化。",
+  "limitations": [
+    "原始记录没有保存完整的 1486 维输出，无法重新计算 Softmax 或复核全部类别排序。",
+    "文件名编号 03111 与类别表首项相符，但不是独立核验的样本标注，不能据此计算准确率。"
+  ]
+}

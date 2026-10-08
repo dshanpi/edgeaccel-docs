@@ -17,6 +17,24 @@ const validationStatus = {passed: '通过', failed: '未通过', blocked: '受�
 const validationLevel = {basic: '基本运行', correctness: '结果正确性'};
 const dest = path.join(root, 'docs/models/deploy');
 fs.mkdirSync(dest, {recursive: true});
+function writeGeneratedFile(destination, content) {
+  if (fs.existsSync(destination) && fs.readFileSync(destination, 'utf8') === content) return;
+  const temporary = `${destination}.${process.pid}.tmp`;
+  try {
+    fs.writeFileSync(temporary, content);
+    for (let attempt = 0; ; attempt++) {
+      try {
+        fs.renameSync(temporary, destination);
+        return;
+      } catch (error) {
+        if (attempt >= 3 || !['UNKNOWN', 'EBUSY', 'EPERM', 'EACCES'].includes(error.code)) throw error;
+        Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 100 * (attempt + 1));
+      }
+    }
+  } finally {
+    if (fs.existsSync(temporary)) fs.unlinkSync(temporary);
+  }
+}
 const code = (text, lang = 'bash') => `\n\`\`\`${lang}\n${text.trim()}\n\`\`\`\n`;
 const inline = (text) => `\`${String(text).replaceAll('`', '')}\``;
 // Emit readable Python literals instead of double-escaped JSON inside shell examples.
@@ -54,15 +72,22 @@ const checks = {
 };
 
 function prerequisites(m) {
+  if (m.kind === 'multicard' && m.multiCardRuntime) {
+    const runtime = m.multiCardRuntime;
+    return `\n## 准备运行环境\n\n该固定版本的启动程序为 **${runtime.hostArchitecture} Linux** 可执行文件，原始脚本使用 **${runtime.deviceCount} 张算力卡**。准备可同时识别这些设备的主机，完成[驱动与设备检查](../../usage/device-check.md)和[下载工具安装](../../usage/download-models.md#使用-hugging-face-下载)。\n\n运行前用 ${inline('axcl-smi')} 核对全部设备及其编号顺序。RK3576 属于 ARM64 主机，不能直接运行此仓库配套的 x86-64 程序；需要另行取得匹配的 ARM64 多卡入口并完成验证。\n\n`;
+  }
   const runtime = m.kind === 'cv' ? '[编译 AXCL 视觉示例](../../usage/build-samples.md)' : m.kind === 'axllm' ? '[编译 AXCL 大模型运行时](../llm-runtime.md)' : m.kind === 'legacy' ? '[准备主机环境](../../getting-started/prepare.md)' : ['python','python-review'].includes(m.kind) || m.id === '3D-Speaker' || m.localGuide ? '[安装 PyAXEngine](../../usage/python.md)' : '[准备主机环境](../../getting-started/prepare.md)';
   const latest = validationRuns(m.id)[0];
   const sampleEnvironment = latest?.status === 'passed' ? environments.get(latest.environmentId) : null;
-  const sampleNote = sampleEnvironment ? `本页效果展示使用 **${sampleEnvironment.label}**；其他容量或平台需重新确认模型能否加载并正确运行。\n\n` : '';
+  const sampleLabels = [...new Set(displayedRuns(validationRuns(m.id)).filter(run => run.status === 'passed').map(run => environments.get(run.environmentId).label))];
+  const sampleNote = sampleLabels.length > 1
+    ? `本页包含 ${sampleLabels.map(label => `**${label}**`).join(' 与 ')} 的样例。按效果展示中的权重和容量对应使用，不同环境的结果不能互相替代。\n\n`
+    : sampleEnvironment ? `本页效果展示使用 **${sampleEnvironment.label}**；其他容量或平台需重新确认模型能否加载并正确运行。\n\n` : '';
   return `\n## 准备运行环境\n\n${sampleNote}在连接算力卡的 Linux 主机终端执行，RK3576 使用 ARM64 环境。首次部署先完成[驱动与设备检查](../../usage/device-check.md)、${runtime}和[下载工具安装](../../usage/download-models.md#使用-hugging-face-下载)。已完成这些步骤可直接下载模型。\n\n后文使用设备 0，运行前用 ${inline('axcl-smi')} 确认设备可用。\n\n`;
 }
 
 function download(m) {
-  const candidates = validationRuns(m.id).filter(run => run.evidence.some(item => item.path.endsWith('/download-manifest.json')));
+  const candidates = validationRuns(m.id).filter(run => run.downloadScope !== 'supplement' && run.evidence.some(item => item.path.endsWith('/download-manifest.json')));
   const manifests = displayedRuns(candidates).map(run => run.evidence.find(item => item.path.endsWith('/download-manifest.json')));
   const selected = manifests.length ? [...new Set(manifests.flatMap(manifest => JSON.parse(fs.readFileSync(path.join(root, 'static', manifest.path), 'utf8')).files.map(file => file.path)))] : (m.downloadFiles ?? []);
   if (m.downloadVariants?.length) {
@@ -91,7 +116,8 @@ function download(m) {
   if (m.downloadPatterns?.length) {
     // Compact fixed-revision downloads only when patterns select the exact
     // reviewed manifest. An upstream file addition cannot silently widen scope.
-    const matches = (file, pattern) => pattern.endsWith('/*') ? file.startsWith(pattern.slice(0, -1)) : file === pattern;
+    const matches = (file, pattern) => new RegExp('^' + pattern.split('*')
+      .map(part => part.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('.*') + '$').test(file);
     const expanded = m.files.filter(file => m.downloadPatterns.some(pattern => matches(file, pattern)));
     if (expanded.length !== selected.length || expanded.some(file => !selected.includes(file))) throw new Error(`Download patterns differ from reviewed files: ${m.id}`);
     filenames = '\\\n  --include ' + m.downloadPatterns.map(file => JSON.stringify(file)).join(' ') + ' ';
@@ -102,8 +128,8 @@ function download(m) {
 function files(m) {
   const selected = m.keyFiles.length ? m.keyFiles : m.files.filter(f => f !== '.gitattributes').slice(0,8);
   return '\n<details>\n<summary>查看文件用途与版本信息</summary>\n\n' +
-    table(['文件 / 目录内路径','用途'],selected.map(f=>[`[${inline(f)}](${link(m,f)})`,role(f)])) +
-    `\n仓库提交：${inline(m.sha)}。仓库中的 ${m.weightCount} 个 ${inline('.axmodel')} 文件可能包括多个芯片、规格和分片。运行时使用本页指定的配套文件，完整列表见[固定版本目录](${m.huggingface}/tree/${m.sha})。\n\n</details>\n`;
+    table(['文件 / 目录内路径','用途'],selected.map(f=>[`[${inline(f)}](${link(m,f)})`,m.multiCardRuntime?.emptyRootConfig && f === 'config.json' ? '该提交为空文件；运行参数见启动脚本' : role(f)])) +
+    `\n仓库提交：${inline(m.sha)}。${m.weightCount ? `仓库中的 ${m.weightCount} 个 ${inline('.axmodel')} 文件可能包括多个芯片、规格和分片。` : `该提交没有预编译 ${inline('.axmodel')} 文件。`}运行时使用本页指定的配套文件，完整列表见[固定版本目录](${m.huggingface}/tree/${m.sha})。\n\n</details>\n`;
 }
 
 function cv(m) {
@@ -221,7 +247,17 @@ function adaptation(m) {
     text+='\n修改前备份程序；只切换执行后端，保留本模型的输入处理、输出解码和资源释放。修改后保存源码版本或补丁。\n';
   }
   if(m.sampleInputs.length)text+=`\n### 准备本模型的输入\n\n本提交可核对的样本：${m.sampleInputs.map(inline).join('、')}。结合模型卡选择输入，结果图片不作为原始输入。\n`;
-  if(m.kind==='multicard')text+='\n核对分片到各卡的分配、主机到设备的数据传输及卡间依赖。先逐卡检查设备状态，不能仅将 devices 字段缩成一个编号。\n';
+  if(m.kind==='multicard') {
+    if (m.multiCardRuntime) {
+      text+='\n### 核对多卡启动参数\n\n'+table(['官方启动脚本','程序','示例设备列表'],m.multiCardRuntime.launchers.map(s=>[
+        `[${inline(s.path)}](${link(m,s.path)})`,inline(s.binary),inline(s.devices.join(',')),
+      ]));
+      text+='\n设备编号是原脚本的示例值。按主机实际编号配置，保留四个设备及分片顺序；每张卡的内存需求仍需按该包实际加载结果确认。\n';
+      if (m.multiCardRuntime.emptyRootConfig) text+='\n此提交的 `config.json` 为 0 字节，不能作为有效 JSON 配置使用。原脚本通过命令行传入模型、分词器和设备参数。\n';
+      text+=`\n语言层及 post 分片保存在 ${inline('.tar')} 包中；仅统计顶层 ${inline('.axmodel')} 文件不能代表完整权重数量。保留同提交的分片、embedding 和分词文件，不能用普通单卡包替换。\n`;
+    }
+    text+='\n核对分片到各卡的分配、主机到设备的数据传输及卡间依赖。先逐卡检查设备状态，不能仅将 devices 字段缩成一个编号。\n';
+  }
   else if(m.kind!=='blocked')text+=`\n### 完成接入后再运行\n\n1. 确认实际权重编译目标为本卡，检查输入输出的 shape、dtype、布局与批次。${m.targetWeights.length?`本页列出的目标路径包括 ${m.targetWeights.slice(0,2).map(inline).join('、')}。`:''}\n2. Python 路径使用 ${inline('AXCLRTExecutionProvider')}；C++ 路径使用 AXCL 设备初始化和内存接口。依赖 ${inline('/soc/lib')} 或芯片板端 runtime 的程序需移植或另行编译。\n3. 先用固定输入打通模型加载、执行与输出解码，再检查下节所列效果。${m.profile==='pipeline'?'分别完成各子模型后，才能连接完整应用。':''}\n\n共用步骤见[Python 接口](../../usage/python.md)与[自定义模型接入](../custom-model.md)。配套入口确认后，再使用对应程序的参数运行。\n`;
   return text;
 }
@@ -246,19 +282,38 @@ for(const m of records){
   const isResource=m.kind==='resource';
   const runs = validationRuns(m.id);
   const latest = runs[0];
-  const verifiedLabel = latest ? (latest.status === 'passed' ? latest.level === 'correctness' ? '已实测，固定样例已核对' : '已实测，效果仍需评估' : '实测未完成') : '本机尚未实测';
+  const verifiedLabel = latest?.scope === 'local-components' ? '本地媒体功能已实测，完整应用尚未验证' : latest ? (latest.status === 'passed' ? latest.level === 'correctness' ? '已实测，固定样例已核对' : '已实测，效果仍需评估' : '实测未完成') : m.pendingValidationNote ? '尚未通过本机部署验证' : '本机尚未实测';
   let body=`---\ntitle: ${JSON.stringify(m.id+(isResource?' 资源使用':' 部署指南'))}\nsidebar_label: ${JSON.stringify(m.id)}\ndescription: ${JSON.stringify(`${m.id} 的 M.2 算力卡部署步骤、配套文件与效果展示。`)}\n---\n\n# ${m.id}${isResource?' 资源使用':' 部署指南'}\n\n${isResource?'本仓库提供工具或配套资源。':`${m.id} 用于${m.task}。本页说明 M.2 算力卡的接入条件、部署步骤与结果检查方法。${m.recipe?.model ? `本页选择 ${inline(m.recipe.model)}。` : ''}`}\n\n> ${isResource?m.status:`${verifiedLabel}。${latest ? '[查看部署效果](#查看部署效果)。' : m.status+'。'}`}\n`;
   if(isResource){
     body+=`\n## 选择适用资源\n\n${resourceActions[m.id]}\n\n继续阅读[对应操作指南](../../${m.relatedGuide}.md)。本仓库固定参考提交为 ${inline(m.sha)}。\n\n`+files(m);
     body+='\n## 检查使用结果\n\n记录下载文件名、提交号、主机架构与安装组件版本。安装类资源先检查依赖和设备识别，模型类资源继续验证真实输入输出；界面和工具的启动结果分别记录。\n';
+  }else if(m.compiledVariants){
+    body+='\n## 准备运行环境\n\n本仓库提供 GPTQ 量化源权重，固定版本不含 `.axmodel`。在 M.2 算力卡上运行时，选择下表中的官方编译版本，并完成[驱动与设备检查](../../usage/device-check.md)和[AXCL 大模型运行时安装](../llm-runtime.md)。\n';
+    body+='\n## 选择并下载编译版本\n\n进入所选版本的独立部署页，按其中的固定提交下载模型、分词器和配置。不同规格使用各自的完整文件，不混用目录。\n\n';
+    const variants=m.compiledVariants.map(id=>{
+      const variant=records.find(record=>record.id===id);
+      if(!variant || !variant.weightCount)throw new Error(`Missing compiled variant: ${m.id}: ${id}`);
+      return {model:variant,run:validationRuns(id)[0]};
+    });
+    body+=table(['编译版本 / 部署入口','固定提交','该版本实测范围'],variants.map(({model,run})=>[
+      `[${model.id}](./${model.slug}.md)`,inline(model.sha),
+      run?`${environments.get(run.environmentId).label}；${validationStatus[run.status]}（${validationLevel[run.level]}）`:'尚无实测记录',
+    ]));
+    body+='\n## 运行文本生成\n\n在所选部署页完成下载后，沿用该页的模型目录、运行时版本和配置启动服务，再执行页面给出的文本请求。收到完整回复后，核对回答内容及结束状态。\n\n量化源权重不能直接交给 `axcl_run_model`。需要自行转换模型时，另按[自定义模型接入](../custom-model.md)准备工具链，转换产物需单独验证。\n';
+    body+='\n## 查看部署效果\n\n以下入口展示对应编译版本的实际请求、完整回复和耗时。源权重仓库本身尚无独立的算力卡运行记录，编译版本的结果仅适用于各页列出的硬件、模型提交和测试输入。\n\n';
+    body+=variants.map(({model,run})=>`- [${model.id} 的部署效果](./${model.slug}.md#查看部署效果)：${run?.summary??'尚无实测结果。'}`).join('\n')+'\n';
+    body+=`\n## 核对版本来源\n\n量化源权重固定提交为 ${inline(m.sha)}。两个编译仓库的模型卡均将本仓库列为转换来源；编译版本的提交与源权重提交独立管理。\n\n`;
+    body+=variants.map(({model})=>`- [${model.id} 的固定版本模型卡](${link(model,model.readme)})。`).join('\n')+'\n';
   }else{
-    body+=prerequisites(m);
+    if (!m.prerequisitesHandledByRecipe) body+=prerequisites(m);
     const hasSteps = ['cv','python','axllm','legacy'].includes(m.kind);
     if (!hasSteps && m.id !== '3D-Speaker' && !m.localGuide) body+=adaptation(m);
-    if(!['otherchip','blocked'].includes(m.kind))body+=download(m);
+    if (m.downloadHandledByRecipe && !m.localGuide) throw new Error(`Missing download recipe: ${m.id}`);
+    if(!['otherchip','blocked'].includes(m.kind) && !m.downloadHandledByRecipe)body+=download(m);
     if (m.localGuide) body+='\n'+fs.readFileSync(path.join(root,'scripts/model-recipes',m.localGuide),'utf8')+'\n';
     else if (m.id === '3D-Speaker') body+=speaker(m);
     else if (hasSteps) body+=m.kind==='cv'?cv(m):m.kind==='python'?python(m):m.kind==='axllm'?axllm(m):legacy(m);
+    if (m.supplementGuide) body+='\n'+fs.readFileSync(path.join(root,'scripts/model-recipes',m.supplementGuide),'utf8')+'\n';
     body+=effectSection({root, model:m, runs, environments, checks:checks[m.profile]??checks.custom});
     body+=technicalDetails({model:m, runs, environments, code, table, inline});
     body+='\n遇到加载、内存或后端错误时，按[常见问题](../../usage/troubleshooting.md)处理。需要更换输入或接入业务时，按[检查输出与记录结果](../../reference/validation.md)保留自己的结果。\n';
@@ -271,7 +326,10 @@ for(const m of records){
   if(!['cv','axllm','python','resource'].includes(m.kind)&&m.projects.length)body+=m.projects.slice(0,3).map(url=>`- [配套项目：${new URL(url).pathname.split('/').slice(1,3).join('/')}](${url})。\n`).join('');
   if(m.modelscope)body+=`- [ModelScope 对应资源](${m.modelscope})。不同平台的 revision 不通用，另行记录版本。\n`;
   body+=`\n返回[完整模型目录](../catalog.mdx)。\n`;
-  fs.writeFileSync(path.join(dest,m.slug+'.md'),body);
+  const destination = path.join(dest,m.slug+'.md');
+  writeGeneratedFile(destination, body);
 }
-fs.writeFileSync(path.join(root,'src/data/modelSidebar.json'),JSON.stringify([...new Set(records.map(m=>m.group))].map(group=>({type:'category',label:group,collapsed:true,items:records.filter(m=>m.group===group).map(m=>m.guide)})),null,2)+'\n');
+const sidebarPath = path.join(root, 'src/data/modelSidebar.json');
+const sidebarContent = JSON.stringify([...new Set(records.map(m=>m.group))].map(group=>({type:'category',label:group,collapsed:true,items:records.filter(m=>m.group===group).map(m=>m.guide)})),null,2)+'\n';
+writeGeneratedFile(sidebarPath, sidebarContent);
 console.log(`Generated ${records.length} individual guides.`);

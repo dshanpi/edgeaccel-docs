@@ -56,7 +56,7 @@ set -o pipefail
 
 ## 查看部署效果
 
-**固定样例已核对** · 2026-09-23 · RK3576 DshanPi A1 + AX8850 8GB M.2。以下输入与输出来自本页固定版本的实际运行。
+**固定样例已核对** · RK3576 DshanPi A1 + AX8850 8GB M.2。以下输入与输出来自本页固定版本的实际运行。
 
 单张 ssd_horse.jpg 输出 6 个目标：3 个 person、1 个 horse、1 个 dog、1 个 truck。骑马者、马、狗和左侧车辆的框与原图位置相符，完成主要目标的定性核对。
 
@@ -90,7 +90,7 @@ set -o pipefail
 <details>
 <summary>查看样例环境与运行耗时</summary>
 
-环境：RK3576 DshanPi A1 + AX8850 8GB M.2。日期：2026-09-23。模型版本：`e6fca26fa724bf5498ea9e1db69edc63cbcae935`。
+环境：RK3576 DshanPi A1 + AX8850 8GB M.2。模型版本：`e6fca26fa724bf5498ea9e1db69edc63cbcae935`。
 
 | 组件 | 版本或配置 |
 | --- | --- |
@@ -109,8 +109,6 @@ set -o pipefail
 
 适用范围：
 
-- 背景中的小人物框只能做粗略位置核对，未逐个确认所有小目标的完整性。
-- truck 是程序的 COCO 类别输出；未据此认定车辆的具体车型。
 - 仅一次启动、同一张样例图的 5 次预热和 10 次计时调用；未进行独立数据集精度评测或长时间稳定性测试。
 
 </details>

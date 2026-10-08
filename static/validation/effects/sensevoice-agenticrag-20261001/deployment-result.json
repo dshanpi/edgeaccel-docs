@@ -1,0 +1,4520 @@
+{
+  "modelId": "SenseVoice_AgenticRAG",
+  "revision": "748b06f6b0e43660f2092dbcf158189f543ab88c",
+  "date": "2026-10-01",
+  "variants": [
+    {
+      "label": "英语识别结果",
+      "observation": "整段结果表达酋长召见男孩并赠予 50 枚金币，与仓库示例文字对应；分块结果出现粘连、重复及 code 等差异。",
+      "previews": [],
+      "audio": [
+        {
+          "caption": "英语：本次输入音频",
+          "path": "/validation/effects/sensevoice-agenticrag-20261001/en.mp3"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "模式",
+            "实际转写",
+            "音频时长 / s",
+            "处理耗时 / s",
+            "实时率"
+          ],
+          "rows": [
+            [
+              "整段识别",
+              "The tribal chieftain called for the boy and presented him with 50 pieces of gold.",
+              "7.176",
+              "2.694",
+              "0.375"
+            ],
+            [
+              "100ms 分块识别",
+              "thetribalheef thencalled for thethe boyand presentedlened himwith 50pieces of code",
+              "7.176",
+              "3.691",
+              "0.514"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "modelId": "SenseVoice_AgenticRAG",
+        "revision": "748b06f6b0e43660f2092dbcf158189f543ab88c",
+        "provider": "AXCLRTExecutionProvider",
+        "completed": true,
+        "plan": {
+          "modelId": "SenseVoice_AgenticRAG",
+          "revision": "748b06f6b0e43660f2092dbcf158189f543ab88c",
+          "inferenceAttempted": false,
+          "source": [
+            {
+              "path": "python/main.py",
+              "sha256": "13f306890427b43efb0f3cddd9ba3bb48927ee4ef951fb1e6db8df89cd8ee4cf"
+            },
+            {
+              "path": "python/SenseVoiceAx.py",
+              "sha256": "0458eb193e9cf803de0ff86c51e3a75d96c87aa47daf058137d96a450afc47e3"
+            },
+            {
+              "path": "python/frontend.py",
+              "sha256": "2797cec8586fe6194215a636adcc4674348e6ea4b9d4c9fb093b43a037b8dba7"
+            },
+            {
+              "path": "python/requirements.txt",
+              "sha256": "11b9eb10198c873215811d02a377694e2ce0e0baec7e47c7424f78230fc9afab"
+            }
+          ],
+          "aliases": [
+            {
+              "primary": "sensevoice_ax650/sensevoice.axmodel",
+              "duplicate": "sensevoice_ax650/sensevoice/sensevoice.axmodel",
+              "sha256": "c8895199fe0e6b9af1d64f0292a8fccb6ef2167284cb4bd40ae1491ce086797a",
+              "basis": "Full official download SHA256; one physical weight payload with two repository paths."
+            },
+            {
+              "primary": "sensevoice_ax650/streaming_sensevoice.axmodel",
+              "duplicate": "sensevoice_ax650/sensevoice/streaming_sensevoice.axmodel",
+              "sha256": "d90522c47088c50a7dfe7f8827b8c7ca9a9594785b7c22963615d8ef6742a89c",
+              "basis": "Full official download SHA256; one physical weight payload with two repository paths."
+            }
+          ],
+          "unsupportedOnCurrentCard": [
+            "sensevoice_ax630c/sensevoice.axmodel",
+            "sensevoice_ax630c/streaming_sensevoice.axmodel"
+          ],
+          "plannedProvider": "AXCLRTExecutionProvider",
+          "cases": [
+            {
+              "id": "file-en",
+              "mode": "file",
+              "language": "en",
+              "input": "example/en.mp3",
+              "inputSha256": "f10378336a4e584f3f63799e62f99d5add3c2a401b51d3abe7d3a3a82f255ada"
+            },
+            {
+              "id": "file-zh",
+              "mode": "file",
+              "language": "zh",
+              "input": "example/zh.mp3",
+              "inputSha256": "0e64de19e4ff9a02e682955c9112f32d2317cfdbb5bc2f3504664044c993f195"
+            },
+            {
+              "id": "file-yue",
+              "mode": "file",
+              "language": "yue",
+              "input": "example/yue.mp3",
+              "inputSha256": "5098eebc13530a66e4eac1f30d3246e65c9cfc4e096665f9d395aca8eff0d181"
+            },
+            {
+              "id": "file-ja",
+              "mode": "file",
+              "language": "ja",
+              "input": "example/ja.mp3",
+              "inputSha256": "496dbc43b289e1d0d0cb916df9737450bca56acd8aaca046a7a2472363b1be53"
+            },
+            {
+              "id": "file-ko",
+              "mode": "file",
+              "language": "ko",
+              "input": "example/ko.mp3",
+              "inputSha256": "8612f62db8319a6cb4ab4b1d2039bfc32f174f89611889ddafdeb5c0a6070b5f"
+            },
+            {
+              "id": "streaming-en",
+              "mode": "streaming",
+              "language": "en",
+              "input": "example/en.mp3",
+              "inputSha256": "f10378336a4e584f3f63799e62f99d5add3c2a401b51d3abe7d3a3a82f255ada"
+            },
+            {
+              "id": "streaming-zh",
+              "mode": "streaming",
+              "language": "zh",
+              "input": "example/zh.mp3",
+              "inputSha256": "0e64de19e4ff9a02e682955c9112f32d2317cfdbb5bc2f3504664044c993f195"
+            },
+            {
+              "id": "streaming-yue",
+              "mode": "streaming",
+              "language": "yue",
+              "input": "example/yue.mp3",
+              "inputSha256": "5098eebc13530a66e4eac1f30d3246e65c9cfc4e096665f9d395aca8eff0d181"
+            },
+            {
+              "id": "streaming-ja",
+              "mode": "streaming",
+              "language": "ja",
+              "input": "example/ja.mp3",
+              "inputSha256": "496dbc43b289e1d0d0cb916df9737450bca56acd8aaca046a7a2472363b1be53"
+            },
+            {
+              "id": "streaming-ko",
+              "mode": "streaming",
+              "language": "ko",
+              "input": "example/ko.mp3",
+              "inputSha256": "8612f62db8319a6cb4ab4b1d2039bfc32f174f89611889ddafdeb5c0a6070b5f"
+            }
+          ],
+          "notes": [
+            "Use fixed original Python frontend and CTC decoder; explicitly select AXCL instead of its SoC default.",
+            "Reset streaming state between inputs; emulate 100ms chunks as the original CLI, not real microphone streaming.",
+            "No hot words; the original constructor chooses greedy CTC when hot_words=None.",
+            "Compare actual transcripts with separately attributed references; do not use repository example outputs as local results.",
+            "A repository title containing AgenticRAG is not evidence of a RAG pipeline; the supplied workflow is speech recognition.",
+            "The AX630C files are outside the current AX8850 card test; duplicate AX650 paths are byte-identical aliases, not independent runs."
+          ]
+        },
+        "filesBefore": [
+          {
+            "path": "README.md",
+            "sha256": "497d5d87022a29beacea96a8ded42ae5120f15187496d3fa6cbbb7fa10c028ec",
+            "matched": true
+          },
+          {
+            "path": "example/en.mp3",
+            "sha256": "f10378336a4e584f3f63799e62f99d5add3c2a401b51d3abe7d3a3a82f255ada",
+            "matched": true
+          },
+          {
+            "path": "example/ja.mp3",
+            "sha256": "496dbc43b289e1d0d0cb916df9737450bca56acd8aaca046a7a2472363b1be53",
+            "matched": true
+          },
+          {
+            "path": "example/ko.mp3",
+            "sha256": "8612f62db8319a6cb4ab4b1d2039bfc32f174f89611889ddafdeb5c0a6070b5f",
+            "matched": true
+          },
+          {
+            "path": "example/yue.mp3",
+            "sha256": "5098eebc13530a66e4eac1f30d3246e65c9cfc4e096665f9d395aca8eff0d181",
+            "matched": true
+          },
+          {
+            "path": "example/zh.mp3",
+            "sha256": "0e64de19e4ff9a02e682955c9112f32d2317cfdbb5bc2f3504664044c993f195",
+            "matched": true
+          },
+          {
+            "path": "python/SenseVoiceAx.py",
+            "sha256": "0458eb193e9cf803de0ff86c51e3a75d96c87aa47daf058137d96a450afc47e3",
+            "matched": true
+          },
+          {
+            "path": "python/frontend.py",
+            "sha256": "2797cec8586fe6194215a636adcc4674348e6ea4b9d4c9fb093b43a037b8dba7",
+            "matched": true
+          },
+          {
+            "path": "python/main.py",
+            "sha256": "13f306890427b43efb0f3cddd9ba3bb48927ee4ef951fb1e6db8df89cd8ee4cf",
+            "matched": true
+          },
+          {
+            "path": "sensevoice_ax650/am.mvn",
+            "sha256": "29b3c740a2c0cfc6b308126d31d7f265fa2be74f3bb095cd2f143ea970896ae5",
+            "matched": true
+          },
+          {
+            "path": "sensevoice_ax650/chn_jpn_yue_eng_ko_spectok.bpe.model",
+            "sha256": "aa87f86064c3730d799ddf7af3c04659151102cba548bce325cf06ba4da4e6a8",
+            "matched": true
+          },
+          {
+            "path": "sensevoice_ax650/sensevoice.axmodel",
+            "sha256": "c8895199fe0e6b9af1d64f0292a8fccb6ef2167284cb4bd40ae1491ce086797a",
+            "matched": true
+          },
+          {
+            "path": "sensevoice_ax650/streaming_sensevoice.axmodel",
+            "sha256": "d90522c47088c50a7dfe7f8827b8c7ca9a9594785b7c22963615d8ef6742a89c",
+            "matched": true
+          },
+          {
+            "path": "sensevoice_ax650/tokens.txt",
+            "sha256": "71ea48635d18bb2c9528e3a84f32cbfc8efe40bde25d1f89d8b81389694c7b16",
+            "matched": true
+          }
+        ],
+        "filesAfter": [
+          {
+            "path": "README.md",
+            "sha256": "497d5d87022a29beacea96a8ded42ae5120f15187496d3fa6cbbb7fa10c028ec",
+            "matched": true
+          },
+          {
+            "path": "example/en.mp3",
+            "sha256": "f10378336a4e584f3f63799e62f99d5add3c2a401b51d3abe7d3a3a82f255ada",
+            "matched": true
+          },
+          {
+            "path": "example/ja.mp3",
+            "sha256": "496dbc43b289e1d0d0cb916df9737450bca56acd8aaca046a7a2472363b1be53",
+            "matched": true
+          },
+          {
+            "path": "example/ko.mp3",
+            "sha256": "8612f62db8319a6cb4ab4b1d2039bfc32f174f89611889ddafdeb5c0a6070b5f",
+            "matched": true
+          },
+          {
+            "path": "example/yue.mp3",
+            "sha256": "5098eebc13530a66e4eac1f30d3246e65c9cfc4e096665f9d395aca8eff0d181",
+            "matched": true
+          },
+          {
+            "path": "example/zh.mp3",
+            "sha256": "0e64de19e4ff9a02e682955c9112f32d2317cfdbb5bc2f3504664044c993f195",
+            "matched": true
+          },
+          {
+            "path": "python/SenseVoiceAx.py",
+            "sha256": "0458eb193e9cf803de0ff86c51e3a75d96c87aa47daf058137d96a450afc47e3",
+            "matched": true
+          },
+          {
+            "path": "python/frontend.py",
+            "sha256": "2797cec8586fe6194215a636adcc4674348e6ea4b9d4c9fb093b43a037b8dba7",
+            "matched": true
+          },
+          {
+            "path": "python/main.py",
+            "sha256": "13f306890427b43efb0f3cddd9ba3bb48927ee4ef951fb1e6db8df89cd8ee4cf",
+            "matched": true
+          },
+          {
+            "path": "sensevoice_ax650/am.mvn",
+            "sha256": "29b3c740a2c0cfc6b308126d31d7f265fa2be74f3bb095cd2f143ea970896ae5",
+            "matched": true
+          },
+          {
+            "path": "sensevoice_ax650/chn_jpn_yue_eng_ko_spectok.bpe.model",
+            "sha256": "aa87f86064c3730d799ddf7af3c04659151102cba548bce325cf06ba4da4e6a8",
+            "matched": true
+          },
+          {
+            "path": "sensevoice_ax650/sensevoice.axmodel",
+            "sha256": "c8895199fe0e6b9af1d64f0292a8fccb6ef2167284cb4bd40ae1491ce086797a",
+            "matched": true
+          },
+          {
+            "path": "sensevoice_ax650/streaming_sensevoice.axmodel",
+            "sha256": "d90522c47088c50a7dfe7f8827b8c7ca9a9594785b7c22963615d8ef6742a89c",
+            "matched": true
+          },
+          {
+            "path": "sensevoice_ax650/tokens.txt",
+            "sha256": "71ea48635d18bb2c9528e3a84f32cbfc8efe40bde25d1f89d8b81389694c7b16",
+            "matched": true
+          }
+        ],
+        "limitations": [
+          "File chunks are processed without realtime pacing; no microphone/UI/RAG application tested.",
+          "Two distinct AX650 weights; byte-identical nested aliases are not separate executions. AX630C variants excluded."
+        ],
+        "versions": {
+          "numpy": "1.26.4",
+          "librosa": "0.11.0",
+          "kaldi-native-fbank": "1.22.3",
+          "online-fbank": "0.0.4"
+        },
+        "inferenceCompleted": true,
+        "elapsedSeconds": 76.92558883000311,
+        "traceSha256": "5ba4a1db3211591f08cf1cd128889c8265fdb92e0a64e000ae6c1cb86c30bf41",
+        "distinctExecutedWeights": 2,
+        "samples": [
+          {
+            "id": "file-en",
+            "mode": "file",
+            "language": "en",
+            "input": "example/en.mp3",
+            "inputSha256": "f10378336a4e584f3f63799e62f99d5add3c2a401b51d3abe7d3a3a82f255ada",
+            "sampleRate": 16000,
+            "audioSamples": 114816,
+            "durationSeconds": 7.176,
+            "seconds": 2.69409571900178,
+            "rtf": 0.3754313989690328,
+            "transcript": "The tribal chieftain called for the boy and presented him with 50 pieces of gold.",
+            "tokenIds": [
+              68,
+              3045,
+              3862,
+              4871,
+              2687,
+              664,
+              17,
+              3,
+              1701,
+              6,
+              2071,
+              92,
+              20,
+              124,
+              9695,
+              9690,
+              2257,
+              7,
+              2527,
+              9688
+            ],
+            "streamUpdates": [],
+            "ctcDecodeEvents": [],
+            "calls": 1,
+            "audioDecodeExcluded": true
+          },
+          {
+            "id": "streaming-en",
+            "mode": "streaming",
+            "language": "en",
+            "input": "example/en.mp3",
+            "inputSha256": "f10378336a4e584f3f63799e62f99d5add3c2a401b51d3abe7d3a3a82f255ada",
+            "sampleRate": 16000,
+            "audioSamples": 114816,
+            "durationSeconds": 7.176,
+            "seconds": 3.6905779469962,
+            "rtf": 0.5142945857018115,
+            "transcript": "thetribalheef thencalled for thethe boyand presentedlened himwith 50pieces of code",
+            "tokenIds": [],
+            "streamUpdates": [
+              {
+                "offsetSamples": 24000,
+                "elapsedSeconds": 0.34747001100186026,
+                "timestamps": [],
+                "text": ""
+              },
+              {
+                "offsetSamples": 33600,
+                "elapsedSeconds": 0.6811461639954359,
+                "timestamps": [
+                  1020
+                ],
+                "text": "the"
+              },
+              {
+                "offsetSamples": 43200,
+                "elapsedSeconds": 1.0164614919995074,
+                "timestamps": [
+                  1020,
+                  1380,
+                  1620
+                ],
+                "text": "thetribal"
+              },
+              {
+                "offsetSamples": 52800,
+                "elapsedSeconds": 1.3501834369963035,
+                "timestamps": [
+                  1020,
+                  1380,
+                  1620,
+                  1920,
+                  2100,
+                  2220
+                ],
+                "text": "thetribalheef then"
+              },
+              {
+                "offsetSamples": 62400,
+                "elapsedSeconds": 1.691497501997219,
+                "timestamps": [
+                  1020,
+                  1380,
+                  1620,
+                  1920,
+                  2100,
+                  2220,
+                  2520,
+                  2640,
+                  2820,
+                  3000
+                ],
+                "text": "thetribalheef thencalled for the"
+              },
+              {
+                "offsetSamples": 72000,
+                "elapsedSeconds": 2.027450706998934,
+                "timestamps": [
+                  1020,
+                  1380,
+                  1620,
+                  1920,
+                  2100,
+                  2220,
+                  2520,
+                  2640,
+                  2820,
+                  3000,
+                  3060,
+                  3240
+                ],
+                "text": "thetribalheef thencalled for thethe boy"
+              },
+              {
+                "offsetSamples": 81600,
+                "elapsedSeconds": 2.3554994169971906,
+                "timestamps": [
+                  1020,
+                  1380,
+                  1620,
+                  1920,
+                  2100,
+                  2220,
+                  2520,
+                  2640,
+                  2820,
+                  3000,
+                  3060,
+                  3240,
+                  3780,
+                  4020
+                ],
+                "text": "thetribalheef thencalled for thethe boyand presented"
+              },
+              {
+                "offsetSamples": 91200,
+                "elapsedSeconds": 2.687307726999279,
+                "timestamps": [
+                  1020,
+                  1380,
+                  1620,
+                  1920,
+                  2100,
+                  2220,
+                  2520,
+                  2640,
+                  2820,
+                  3000,
+                  3060,
+                  3240,
+                  3780,
+                  4020,
+                  4260,
+                  4500,
+                  4620
+                ],
+                "text": "thetribalheef thencalled for thethe boyand presentedlened him"
+              },
+              {
+                "offsetSamples": 100800,
+                "elapsedSeconds": 3.0208937549978145,
+                "timestamps": [
+                  1020,
+                  1380,
+                  1620,
+                  1920,
+                  2100,
+                  2220,
+                  2520,
+                  2640,
+                  2820,
+                  3000,
+                  3060,
+                  3240,
+                  3780,
+                  4020,
+                  4260,
+                  4500,
+                  4620,
+                  4860,
+                  5220,
+                  5400
+                ],
+                "text": "thetribalheef thencalled for thethe boyand presentedlened himwith 50"
+              },
+              {
+                "offsetSamples": 110400,
+                "elapsedSeconds": 3.355857331000152,
+                "timestamps": [
+                  1020,
+                  1380,
+                  1620,
+                  1920,
+                  2100,
+                  2220,
+                  2520,
+                  2640,
+                  2820,
+                  3000,
+                  3060,
+                  3240,
+                  3780,
+                  4020,
+                  4260,
+                  4500,
+                  4620,
+                  4860,
+                  5220,
+                  5400,
+                  5580,
+                  5820,
+                  5940
+                ],
+                "text": "thetribalheef thencalled for thethe boyand presentedlened himwith 50pieces of"
+              },
+              {
+                "offsetSamples": 113600,
+                "elapsedSeconds": 3.690029027995479,
+                "timestamps": [
+                  1020,
+                  1380,
+                  1620,
+                  1920,
+                  2100,
+                  2220,
+                  2520,
+                  2640,
+                  2820,
+                  3000,
+                  3060,
+                  3240,
+                  3780,
+                  4020,
+                  4260,
+                  4500,
+                  4620,
+                  4860,
+                  5220,
+                  5400,
+                  5580,
+                  5820,
+                  5940,
+                  6240
+                ],
+                "text": "thetribalheef thencalled for thethe boyand presentedlened himwith 50pieces of code"
+              }
+            ],
+            "ctcDecodeEvents": [
+              {
+                "shape": [
+                  10,
+                  25055
+                ],
+                "sha256": "a5252a5fba718f6d93d415a2b4c6152e74e9d6bb9925e8d66052485c2d828572",
+                "isLast": false,
+                "tokens": [],
+                "times": []
+              },
+              {
+                "shape": [
+                  10,
+                  25055
+                ],
+                "sha256": "a1a1bb490484d52476fc73728aadc41a43e3744eb9ba957a428cc200b04c97d3",
+                "isLast": false,
+                "tokens": [
+                  676
+                ],
+                "times": [
+                  17
+                ]
+              },
+              {
+                "shape": [
+                  10,
+                  25055
+                ],
+                "sha256": "a4ca7c7d3db7b779f221833e66033213f34f0f05eef1206a470a0710e5dbaee3",
+                "isLast": false,
+                "tokens": [
+                  676,
+                  1452,
+                  3862
+                ],
+                "times": [
+                  17,
+                  23,
+                  27
+                ]
+              },
+              {
+                "shape": [
+                  10,
+                  25055
+                ],
+                "sha256": "75d48daf6d0973d13aead5669926f70abc7ccfc3693835be5474a6b5718cf01e",
+                "isLast": false,
+                "tokens": [
+                  676,
+                  1452,
+                  3862,
+                  1069,
+                  3386,
+                  118
+                ],
+                "times": [
+                  17,
+                  23,
+                  27,
+                  32,
+                  35,
+                  37
+                ]
+              },
+              {
+                "shape": [
+                  10,
+                  25055
+                ],
+                "sha256": "a3f527ab1bd55e3327d03babc75a95de7110ca08c46312d3b2a63d2df15eeb20",
+                "isLast": false,
+                "tokens": [
+                  676,
+                  1452,
+                  3862,
+                  1069,
+                  3386,
+                  118,
+                  3279,
+                  709,
+                  17,
+                  3
+                ],
+                "times": [
+                  17,
+                  23,
+                  27,
+                  32,
+                  35,
+                  37,
+                  42,
+                  44,
+                  47,
+                  50
+                ]
+              },
+              {
+                "shape": [
+                  10,
+                  25055
+                ],
+                "sha256": "9ec18cf280ef58cdf0d9e5e178732270fc447fe133d565341d98ccb5c1b736cc",
+                "isLast": false,
+                "tokens": [
+                  676,
+                  1452,
+                  3862,
+                  1069,
+                  3386,
+                  118,
+                  3279,
+                  709,
+                  17,
+                  3,
+                  676,
+                  1701
+                ],
+                "times": [
+                  17,
+                  23,
+                  27,
+                  32,
+                  35,
+                  37,
+                  42,
+                  44,
+                  47,
+                  50,
+                  51,
+                  54
+                ]
+              },
+              {
+                "shape": [
+                  10,
+                  25055
+                ],
+                "sha256": "0701c330072c2d4ad48dee5a523402b54b11a2e83d42290ba7e91efb9c8c42bb",
+                "isLast": false,
+                "tokens": [
+                  676,
+                  1452,
+                  3862,
+                  1069,
+                  3386,
+                  118,
+                  3279,
+                  709,
+                  17,
+                  3,
+                  676,
+                  1701,
+                  311,
+                  2071
+                ],
+                "times": [
+                  17,
+                  23,
+                  27,
+                  32,
+                  35,
+                  37,
+                  42,
+                  44,
+                  47,
+                  50,
+                  51,
+                  54,
+                  63,
+                  67
+                ]
+              },
+              {
+                "shape": [
+                  10,
+                  25055
+                ],
+                "sha256": "a628c2a1af42a81c6e0cc78f87f2fd3c9a322d6176610142d6efdeb632bf5ef9",
+                "isLast": false,
+                "tokens": [
+                  676,
+                  1452,
+                  3862,
+                  1069,
+                  3386,
+                  118,
+                  3279,
+                  709,
+                  17,
+                  3,
+                  676,
+                  1701,
+                  311,
+                  2071,
+                  3466,
+                  26,
+                  92
+                ],
+                "times": [
+                  17,
+                  23,
+                  27,
+                  32,
+                  35,
+                  37,
+                  42,
+                  44,
+                  47,
+                  50,
+                  51,
+                  54,
+                  63,
+                  67,
+                  71,
+                  75,
+                  77
+                ]
+              },
+              {
+                "shape": [
+                  10,
+                  25055
+                ],
+                "sha256": "faaa6c0373df45b216521ca83119b6cb0d45f36c25cce377696d88222157c754",
+                "isLast": false,
+                "tokens": [
+                  676,
+                  1452,
+                  3862,
+                  1069,
+                  3386,
+                  118,
+                  3279,
+                  709,
+                  17,
+                  3,
+                  676,
+                  1701,
+                  311,
+                  2071,
+                  3466,
+                  26,
+                  92,
+                  3357,
+                  124,
+                  9695,
+                  9690
+                ],
+                "times": [
+                  17,
+                  23,
+                  27,
+                  32,
+                  35,
+                  37,
+                  42,
+                  44,
+                  47,
+                  50,
+                  51,
+                  54,
+                  63,
+                  67,
+                  71,
+                  75,
+                  77,
+                  81,
+                  85,
+                  87,
+                  90
+                ]
+              },
+              {
+                "shape": [
+                  10,
+                  25055
+                ],
+                "sha256": "e82429351515c9e5f41365cc6e90459842705a2b446f9bb4369615cc15ebee39",
+                "isLast": false,
+                "tokens": [
+                  676,
+                  1452,
+                  3862,
+                  1069,
+                  3386,
+                  118,
+                  3279,
+                  709,
+                  17,
+                  3,
+                  676,
+                  1701,
+                  311,
+                  2071,
+                  3466,
+                  26,
+                  92,
+                  3357,
+                  124,
+                  9695,
+                  9690,
+                  7464,
+                  4,
+                  7
+                ],
+                "times": [
+                  17,
+                  23,
+                  27,
+                  32,
+                  35,
+                  37,
+                  42,
+                  44,
+                  47,
+                  50,
+                  51,
+                  54,
+                  63,
+                  67,
+                  71,
+                  75,
+                  77,
+                  81,
+                  85,
+                  87,
+                  90,
+                  93,
+                  97,
+                  99
+                ]
+              },
+              {
+                "shape": [
+                  19,
+                  25055
+                ],
+                "sha256": "dcafb2ed9662a9ce01871622bb93d7c9c11ecc030914e926e21ef252f6e7bed9",
+                "isLast": true,
+                "tokens": [
+                  676,
+                  1452,
+                  3862,
+                  1069,
+                  3386,
+                  118,
+                  3279,
+                  709,
+                  17,
+                  3,
+                  676,
+                  1701,
+                  311,
+                  2071,
+                  3466,
+                  26,
+                  92,
+                  3357,
+                  124,
+                  9695,
+                  9690,
+                  7464,
+                  4,
+                  7,
+                  1065
+                ],
+                "times": [
+                  17,
+                  23,
+                  27,
+                  32,
+                  35,
+                  37,
+                  42,
+                  44,
+                  47,
+                  50,
+                  51,
+                  54,
+                  63,
+                  67,
+                  71,
+                  75,
+                  77,
+                  81,
+                  85,
+                  87,
+                  90,
+                  93,
+                  97,
+                  99,
+                  104
+                ]
+              }
+            ],
+            "calls": 11,
+            "audioDecodeExcluded": true
+          }
+        ],
+        "sessions": [
+          {
+            "sampleId": "file-en",
+            "model": "sensevoice_ax650/sensevoice.axmodel",
+            "sha256": "c8895199fe0e6b9af1d64f0292a8fccb6ef2167284cb4bd40ae1491ce086797a",
+            "provider": "AXCLRTExecutionProvider",
+            "loadSeconds": 4.668880214005185,
+            "calls": 1,
+            "runMilliseconds": [
+              170.263863998116
+            ],
+            "allFinite": true,
+            "closed": true
+          },
+          {
+            "sampleId": "streaming-en",
+            "model": "sensevoice_ax650/streaming_sensevoice.axmodel",
+            "sha256": "d90522c47088c50a7dfe7f8827b8c7ca9a9594785b7c22963615d8ef6742a89c",
+            "provider": "AXCLRTExecutionProvider",
+            "loadSeconds": 3.331088002996694,
+            "calls": 11,
+            "runMilliseconds": [
+              29.506017999665346,
+              29.97035299631534,
+              29.98639400175307,
+              30.121729003440123,
+              29.744018997007515,
+              29.904144001193345,
+              29.838519003533293,
+              29.950227995868772,
+              29.683644002943765,
+              29.721268998400774,
+              29.849894002836663
+            ],
+            "allFinite": true,
+            "closed": true
+          }
+        ]
+      },
+      "sourceArchiveSha256": "ee9bfdbb5e7313584796f586376d37dff2fdde11b9d8783542a2f51d009b04ed"
+    },
+    {
+      "label": "普通话识别结果",
+      "observation": "整段转写为“开饭时间”，分块转写为“开放时间”但重复“点”。请对照音频核对，不能将两种输出视为相同。",
+      "previews": [],
+      "audio": [
+        {
+          "caption": "普通话：本次输入音频",
+          "path": "/validation/effects/sensevoice-agenticrag-20261001/zh.mp3"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "模式",
+            "实际转写",
+            "音频时长 / s",
+            "处理耗时 / s",
+            "实时率"
+          ],
+          "rows": [
+            [
+              "整段识别",
+              "开饭时间早上9点至下午5点。",
+              "5.616",
+              "2.845",
+              "0.507"
+            ],
+            [
+              "100ms 分块识别",
+              "开放时间早上九点点至下午五点",
+              "5.616",
+              "2.681",
+              "0.477"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "modelId": "SenseVoice_AgenticRAG",
+        "revision": "748b06f6b0e43660f2092dbcf158189f543ab88c",
+        "provider": "AXCLRTExecutionProvider",
+        "completed": true,
+        "plan": {
+          "modelId": "SenseVoice_AgenticRAG",
+          "revision": "748b06f6b0e43660f2092dbcf158189f543ab88c",
+          "inferenceAttempted": false,
+          "source": [
+            {
+              "path": "python/main.py",
+              "sha256": "13f306890427b43efb0f3cddd9ba3bb48927ee4ef951fb1e6db8df89cd8ee4cf"
+            },
+            {
+              "path": "python/SenseVoiceAx.py",
+              "sha256": "0458eb193e9cf803de0ff86c51e3a75d96c87aa47daf058137d96a450afc47e3"
+            },
+            {
+              "path": "python/frontend.py",
+              "sha256": "2797cec8586fe6194215a636adcc4674348e6ea4b9d4c9fb093b43a037b8dba7"
+            },
+            {
+              "path": "python/requirements.txt",
+              "sha256": "11b9eb10198c873215811d02a377694e2ce0e0baec7e47c7424f78230fc9afab"
+            }
+          ],
+          "aliases": [
+            {
+              "primary": "sensevoice_ax650/sensevoice.axmodel",
+              "duplicate": "sensevoice_ax650/sensevoice/sensevoice.axmodel",
+              "sha256": "c8895199fe0e6b9af1d64f0292a8fccb6ef2167284cb4bd40ae1491ce086797a",
+              "basis": "Full official download SHA256; one physical weight payload with two repository paths."
+            },
+            {
+              "primary": "sensevoice_ax650/streaming_sensevoice.axmodel",
+              "duplicate": "sensevoice_ax650/sensevoice/streaming_sensevoice.axmodel",
+              "sha256": "d90522c47088c50a7dfe7f8827b8c7ca9a9594785b7c22963615d8ef6742a89c",
+              "basis": "Full official download SHA256; one physical weight payload with two repository paths."
+            }
+          ],
+          "unsupportedOnCurrentCard": [
+            "sensevoice_ax630c/sensevoice.axmodel",
+            "sensevoice_ax630c/streaming_sensevoice.axmodel"
+          ],
+          "plannedProvider": "AXCLRTExecutionProvider",
+          "cases": [
+            {
+              "id": "file-en",
+              "mode": "file",
+              "language": "en",
+              "input": "example/en.mp3",
+              "inputSha256": "f10378336a4e584f3f63799e62f99d5add3c2a401b51d3abe7d3a3a82f255ada"
+            },
+            {
+              "id": "file-zh",
+              "mode": "file",
+              "language": "zh",
+              "input": "example/zh.mp3",
+              "inputSha256": "0e64de19e4ff9a02e682955c9112f32d2317cfdbb5bc2f3504664044c993f195"
+            },
+            {
+              "id": "file-yue",
+              "mode": "file",
+              "language": "yue",
+              "input": "example/yue.mp3",
+              "inputSha256": "5098eebc13530a66e4eac1f30d3246e65c9cfc4e096665f9d395aca8eff0d181"
+            },
+            {
+              "id": "file-ja",
+              "mode": "file",
+              "language": "ja",
+              "input": "example/ja.mp3",
+              "inputSha256": "496dbc43b289e1d0d0cb916df9737450bca56acd8aaca046a7a2472363b1be53"
+            },
+            {
+              "id": "file-ko",
+              "mode": "file",
+              "language": "ko",
+              "input": "example/ko.mp3",
+              "inputSha256": "8612f62db8319a6cb4ab4b1d2039bfc32f174f89611889ddafdeb5c0a6070b5f"
+            },
+            {
+              "id": "streaming-en",
+              "mode": "streaming",
+              "language": "en",
+              "input": "example/en.mp3",
+              "inputSha256": "f10378336a4e584f3f63799e62f99d5add3c2a401b51d3abe7d3a3a82f255ada"
+            },
+            {
+              "id": "streaming-zh",
+              "mode": "streaming",
+              "language": "zh",
+              "input": "example/zh.mp3",
+              "inputSha256": "0e64de19e4ff9a02e682955c9112f32d2317cfdbb5bc2f3504664044c993f195"
+            },
+            {
+              "id": "streaming-yue",
+              "mode": "streaming",
+              "language": "yue",
+              "input": "example/yue.mp3",
+              "inputSha256": "5098eebc13530a66e4eac1f30d3246e65c9cfc4e096665f9d395aca8eff0d181"
+            },
+            {
+              "id": "streaming-ja",
+              "mode": "streaming",
+              "language": "ja",
+              "input": "example/ja.mp3",
+              "inputSha256": "496dbc43b289e1d0d0cb916df9737450bca56acd8aaca046a7a2472363b1be53"
+            },
+            {
+              "id": "streaming-ko",
+              "mode": "streaming",
+              "language": "ko",
+              "input": "example/ko.mp3",
+              "inputSha256": "8612f62db8319a6cb4ab4b1d2039bfc32f174f89611889ddafdeb5c0a6070b5f"
+            }
+          ],
+          "notes": [
+            "Use fixed original Python frontend and CTC decoder; explicitly select AXCL instead of its SoC default.",
+            "Reset streaming state between inputs; emulate 100ms chunks as the original CLI, not real microphone streaming.",
+            "No hot words; the original constructor chooses greedy CTC when hot_words=None.",
+            "Compare actual transcripts with separately attributed references; do not use repository example outputs as local results.",
+            "A repository title containing AgenticRAG is not evidence of a RAG pipeline; the supplied workflow is speech recognition.",
+            "The AX630C files are outside the current AX8850 card test; duplicate AX650 paths are byte-identical aliases, not independent runs."
+          ]
+        },
+        "filesBefore": [
+          {
+            "path": "README.md",
+            "sha256": "497d5d87022a29beacea96a8ded42ae5120f15187496d3fa6cbbb7fa10c028ec",
+            "matched": true
+          },
+          {
+            "path": "example/en.mp3",
+            "sha256": "f10378336a4e584f3f63799e62f99d5add3c2a401b51d3abe7d3a3a82f255ada",
+            "matched": true
+          },
+          {
+            "path": "example/ja.mp3",
+            "sha256": "496dbc43b289e1d0d0cb916df9737450bca56acd8aaca046a7a2472363b1be53",
+            "matched": true
+          },
+          {
+            "path": "example/ko.mp3",
+            "sha256": "8612f62db8319a6cb4ab4b1d2039bfc32f174f89611889ddafdeb5c0a6070b5f",
+            "matched": true
+          },
+          {
+            "path": "example/yue.mp3",
+            "sha256": "5098eebc13530a66e4eac1f30d3246e65c9cfc4e096665f9d395aca8eff0d181",
+            "matched": true
+          },
+          {
+            "path": "example/zh.mp3",
+            "sha256": "0e64de19e4ff9a02e682955c9112f32d2317cfdbb5bc2f3504664044c993f195",
+            "matched": true
+          },
+          {
+            "path": "python/SenseVoiceAx.py",
+            "sha256": "0458eb193e9cf803de0ff86c51e3a75d96c87aa47daf058137d96a450afc47e3",
+            "matched": true
+          },
+          {
+            "path": "python/frontend.py",
+            "sha256": "2797cec8586fe6194215a636adcc4674348e6ea4b9d4c9fb093b43a037b8dba7",
+            "matched": true
+          },
+          {
+            "path": "python/main.py",
+            "sha256": "13f306890427b43efb0f3cddd9ba3bb48927ee4ef951fb1e6db8df89cd8ee4cf",
+            "matched": true
+          },
+          {
+            "path": "sensevoice_ax650/am.mvn",
+            "sha256": "29b3c740a2c0cfc6b308126d31d7f265fa2be74f3bb095cd2f143ea970896ae5",
+            "matched": true
+          },
+          {
+            "path": "sensevoice_ax650/chn_jpn_yue_eng_ko_spectok.bpe.model",
+            "sha256": "aa87f86064c3730d799ddf7af3c04659151102cba548bce325cf06ba4da4e6a8",
+            "matched": true
+          },
+          {
+            "path": "sensevoice_ax650/sensevoice.axmodel",
+            "sha256": "c8895199fe0e6b9af1d64f0292a8fccb6ef2167284cb4bd40ae1491ce086797a",
+            "matched": true
+          },
+          {
+            "path": "sensevoice_ax650/streaming_sensevoice.axmodel",
+            "sha256": "d90522c47088c50a7dfe7f8827b8c7ca9a9594785b7c22963615d8ef6742a89c",
+            "matched": true
+          },
+          {
+            "path": "sensevoice_ax650/tokens.txt",
+            "sha256": "71ea48635d18bb2c9528e3a84f32cbfc8efe40bde25d1f89d8b81389694c7b16",
+            "matched": true
+          }
+        ],
+        "filesAfter": [
+          {
+            "path": "README.md",
+            "sha256": "497d5d87022a29beacea96a8ded42ae5120f15187496d3fa6cbbb7fa10c028ec",
+            "matched": true
+          },
+          {
+            "path": "example/en.mp3",
+            "sha256": "f10378336a4e584f3f63799e62f99d5add3c2a401b51d3abe7d3a3a82f255ada",
+            "matched": true
+          },
+          {
+            "path": "example/ja.mp3",
+            "sha256": "496dbc43b289e1d0d0cb916df9737450bca56acd8aaca046a7a2472363b1be53",
+            "matched": true
+          },
+          {
+            "path": "example/ko.mp3",
+            "sha256": "8612f62db8319a6cb4ab4b1d2039bfc32f174f89611889ddafdeb5c0a6070b5f",
+            "matched": true
+          },
+          {
+            "path": "example/yue.mp3",
+            "sha256": "5098eebc13530a66e4eac1f30d3246e65c9cfc4e096665f9d395aca8eff0d181",
+            "matched": true
+          },
+          {
+            "path": "example/zh.mp3",
+            "sha256": "0e64de19e4ff9a02e682955c9112f32d2317cfdbb5bc2f3504664044c993f195",
+            "matched": true
+          },
+          {
+            "path": "python/SenseVoiceAx.py",
+            "sha256": "0458eb193e9cf803de0ff86c51e3a75d96c87aa47daf058137d96a450afc47e3",
+            "matched": true
+          },
+          {
+            "path": "python/frontend.py",
+            "sha256": "2797cec8586fe6194215a636adcc4674348e6ea4b9d4c9fb093b43a037b8dba7",
+            "matched": true
+          },
+          {
+            "path": "python/main.py",
+            "sha256": "13f306890427b43efb0f3cddd9ba3bb48927ee4ef951fb1e6db8df89cd8ee4cf",
+            "matched": true
+          },
+          {
+            "path": "sensevoice_ax650/am.mvn",
+            "sha256": "29b3c740a2c0cfc6b308126d31d7f265fa2be74f3bb095cd2f143ea970896ae5",
+            "matched": true
+          },
+          {
+            "path": "sensevoice_ax650/chn_jpn_yue_eng_ko_spectok.bpe.model",
+            "sha256": "aa87f86064c3730d799ddf7af3c04659151102cba548bce325cf06ba4da4e6a8",
+            "matched": true
+          },
+          {
+            "path": "sensevoice_ax650/sensevoice.axmodel",
+            "sha256": "c8895199fe0e6b9af1d64f0292a8fccb6ef2167284cb4bd40ae1491ce086797a",
+            "matched": true
+          },
+          {
+            "path": "sensevoice_ax650/streaming_sensevoice.axmodel",
+            "sha256": "d90522c47088c50a7dfe7f8827b8c7ca9a9594785b7c22963615d8ef6742a89c",
+            "matched": true
+          },
+          {
+            "path": "sensevoice_ax650/tokens.txt",
+            "sha256": "71ea48635d18bb2c9528e3a84f32cbfc8efe40bde25d1f89d8b81389694c7b16",
+            "matched": true
+          }
+        ],
+        "limitations": [
+          "File chunks are processed without realtime pacing; no microphone/UI/RAG application tested.",
+          "Two distinct AX650 weights; byte-identical nested aliases are not separate executions. AX630C variants excluded."
+        ],
+        "versions": {
+          "numpy": "1.26.4",
+          "librosa": "0.11.0",
+          "kaldi-native-fbank": "1.22.3",
+          "online-fbank": "0.0.4"
+        },
+        "inferenceCompleted": true,
+        "elapsedSeconds": 76.92558883000311,
+        "traceSha256": "5ba4a1db3211591f08cf1cd128889c8265fdb92e0a64e000ae6c1cb86c30bf41",
+        "distinctExecutedWeights": 2,
+        "samples": [
+          {
+            "id": "file-zh",
+            "mode": "file",
+            "language": "zh",
+            "input": "example/zh.mp3",
+            "inputSha256": "0e64de19e4ff9a02e682955c9112f32d2317cfdbb5bc2f3504664044c993f195",
+            "sampleRate": 16000,
+            "audioSamples": 89856,
+            "durationSeconds": 5.616,
+            "seconds": 2.8448799469988444,
+            "rtf": 0.5065669421294239,
+            "transcript": "开饭时间早上9点至下午5点。",
+            "tokenIds": [
+              12227,
+              19359,
+              13161,
+              18926,
+              13153,
+              9931,
+              9699,
+              14487,
+              16535,
+              9932,
+              10686,
+              9695,
+              14487,
+              9729
+            ],
+            "streamUpdates": [],
+            "ctcDecodeEvents": [],
+            "calls": 1,
+            "audioDecodeExcluded": true
+          },
+          {
+            "id": "streaming-zh",
+            "mode": "streaming",
+            "language": "zh",
+            "input": "example/zh.mp3",
+            "inputSha256": "0e64de19e4ff9a02e682955c9112f32d2317cfdbb5bc2f3504664044c993f195",
+            "sampleRate": 16000,
+            "audioSamples": 89856,
+            "durationSeconds": 5.616,
+            "seconds": 2.6807422790006967,
+            "rtf": 0.477340149394711,
+            "transcript": "开放时间早上九点点至下午五点",
+            "tokenIds": [],
+            "streamUpdates": [
+              {
+                "offsetSamples": 24000,
+                "elapsedSeconds": 0.33733279499574564,
+                "timestamps": [],
+                "text": ""
+              },
+              {
+                "offsetSamples": 33600,
+                "elapsedSeconds": 0.6748216339983628,
+                "timestamps": [
+                  840,
+                  1020
+                ],
+                "text": "开放"
+              },
+              {
+                "offsetSamples": 43200,
+                "elapsedSeconds": 1.0064887769985944,
+                "timestamps": [
+                  840,
+                  1020,
+                  1380,
+                  1560
+                ],
+                "text": "开放时间"
+              },
+              {
+                "offsetSamples": 52800,
+                "elapsedSeconds": 1.3419534389977343,
+                "timestamps": [
+                  840,
+                  1020,
+                  1380,
+                  1560,
+                  1980,
+                  2160
+                ],
+                "text": "开放时间早上"
+              },
+              {
+                "offsetSamples": 62400,
+                "elapsedSeconds": 1.6739052499979152,
+                "timestamps": [
+                  840,
+                  1020,
+                  1380,
+                  1560,
+                  1980,
+                  2160,
+                  2700,
+                  2880
+                ],
+                "text": "开放时间早上九点"
+              },
+              {
+                "offsetSamples": 72000,
+                "elapsedSeconds": 2.0074670689937193,
+                "timestamps": [
+                  840,
+                  1020,
+                  1380,
+                  1560,
+                  1980,
+                  2160,
+                  2700,
+                  2880,
+                  3120,
+                  3360
+                ],
+                "text": "开放时间早上九点点至"
+              },
+              {
+                "offsetSamples": 81600,
+                "elapsedSeconds": 2.3408492210000986,
+                "timestamps": [
+                  840,
+                  1020,
+                  1380,
+                  1560,
+                  1980,
+                  2160,
+                  2700,
+                  2880,
+                  3120,
+                  3360,
+                  3960
+                ],
+                "text": "开放时间早上九点点至下"
+              },
+              {
+                "offsetSamples": 89600,
+                "elapsedSeconds": 2.6801344429986784,
+                "timestamps": [
+                  840,
+                  1020,
+                  1380,
+                  1560,
+                  1980,
+                  2160,
+                  2700,
+                  2880,
+                  3120,
+                  3360,
+                  3960,
+                  4320,
+                  4620,
+                  4800
+                ],
+                "text": "开放时间早上九点点至下午五点"
+              }
+            ],
+            "ctcDecodeEvents": [
+              {
+                "shape": [
+                  10,
+                  25055
+                ],
+                "sha256": "48b760af99bd9a4c4aef23581b6ad74d186e7e459794f276fda1810fe490dddd",
+                "isLast": false,
+                "tokens": [],
+                "times": []
+              },
+              {
+                "shape": [
+                  10,
+                  25055
+                ],
+                "sha256": "e3cdb82c2fd039cc85883ea23e2bbfeb21472a58b30b4c7ca24a03ff5656b28e",
+                "isLast": false,
+                "tokens": [
+                  12227,
+                  13072
+                ],
+                "times": [
+                  14,
+                  17
+                ]
+              },
+              {
+                "shape": [
+                  10,
+                  25055
+                ],
+                "sha256": "2664d1b1bde367ec3a7c1cf99d1ecea457e31eafba6bdb8f5a02b59ea3788706",
+                "isLast": false,
+                "tokens": [
+                  12227,
+                  13072,
+                  13161,
+                  18926
+                ],
+                "times": [
+                  14,
+                  17,
+                  23,
+                  26
+                ]
+              },
+              {
+                "shape": [
+                  10,
+                  25055
+                ],
+                "sha256": "e34a2f4e79e6a97bf05fc1e2d71ec6f1275c9250559447622a9f3abfddf731eb",
+                "isLast": false,
+                "tokens": [
+                  12227,
+                  13072,
+                  13161,
+                  18926,
+                  13153,
+                  9931
+                ],
+                "times": [
+                  14,
+                  17,
+                  23,
+                  26,
+                  33,
+                  36
+                ]
+              },
+              {
+                "shape": [
+                  10,
+                  25055
+                ],
+                "sha256": "cd391923a4b504d1cc760088ef06947a89643272bf9314bf00eb44e6cbdc8af7",
+                "isLast": false,
+                "tokens": [
+                  12227,
+                  13072,
+                  13161,
+                  18926,
+                  13153,
+                  9931,
+                  9991,
+                  14487
+                ],
+                "times": [
+                  14,
+                  17,
+                  23,
+                  26,
+                  33,
+                  36,
+                  45,
+                  48
+                ]
+              },
+              {
+                "shape": [
+                  10,
+                  25055
+                ],
+                "sha256": "14228fb536212045810036c76f5c730f140203e69e260b307291b8f507cb9d1b",
+                "isLast": false,
+                "tokens": [
+                  12227,
+                  13072,
+                  13161,
+                  18926,
+                  13153,
+                  9931,
+                  9991,
+                  14487,
+                  14487,
+                  16535
+                ],
+                "times": [
+                  14,
+                  17,
+                  23,
+                  26,
+                  33,
+                  36,
+                  45,
+                  48,
+                  52,
+                  56
+                ]
+              },
+              {
+                "shape": [
+                  10,
+                  25055
+                ],
+                "sha256": "2a893c2b73ef5ab9289741d5f0b02e73c06f48b9e804cc10fc55450ca3573a8d",
+                "isLast": false,
+                "tokens": [
+                  12227,
+                  13072,
+                  13161,
+                  18926,
+                  13153,
+                  9931,
+                  9991,
+                  14487,
+                  14487,
+                  16535,
+                  9932
+                ],
+                "times": [
+                  14,
+                  17,
+                  23,
+                  26,
+                  33,
+                  36,
+                  45,
+                  48,
+                  52,
+                  56,
+                  66
+                ]
+              },
+              {
+                "shape": [
+                  24,
+                  25055
+                ],
+                "sha256": "b420c1c22f983c266e75893ef5bb2b0c864cd98e82eda856cbedfe67810dd7bc",
+                "isLast": true,
+                "tokens": [
+                  12227,
+                  13072,
+                  13161,
+                  18926,
+                  13153,
+                  9931,
+                  9991,
+                  14487,
+                  14487,
+                  16535,
+                  9932,
+                  10686,
+                  10019,
+                  14487
+                ],
+                "times": [
+                  14,
+                  17,
+                  23,
+                  26,
+                  33,
+                  36,
+                  45,
+                  48,
+                  52,
+                  56,
+                  66,
+                  72,
+                  77,
+                  80
+                ]
+              }
+            ],
+            "calls": 8,
+            "audioDecodeExcluded": true
+          }
+        ],
+        "sessions": [
+          {
+            "sampleId": "file-zh",
+            "model": "sensevoice_ax650/sensevoice.axmodel",
+            "sha256": "c8895199fe0e6b9af1d64f0292a8fccb6ef2167284cb4bd40ae1491ce086797a",
+            "provider": "AXCLRTExecutionProvider",
+            "loadSeconds": 3.887251981002919,
+            "calls": 1,
+            "runMilliseconds": [
+              166.02855200471822
+            ],
+            "allFinite": true,
+            "closed": true
+          },
+          {
+            "sampleId": "streaming-zh",
+            "model": "sensevoice_ax650/streaming_sensevoice.axmodel",
+            "sha256": "d90522c47088c50a7dfe7f8827b8c7ca9a9594785b7c22963615d8ef6742a89c",
+            "provider": "AXCLRTExecutionProvider",
+            "loadSeconds": 3.1850830480034347,
+            "calls": 8,
+            "runMilliseconds": [
+              30.016436001460534,
+              30.05143700283952,
+              29.26014099648455,
+              30.273396994743962,
+              30.095770001935307,
+              30.019060999620706,
+              30.032186994503718,
+              29.857769004593138
+            ],
+            "allFinite": true,
+            "closed": true
+          }
+        ]
+      },
+      "sourceArchiveSha256": "ee9bfdbb5e7313584796f586376d37dff2fdde11b9d8783542a2f51d009b04ed"
+    },
+    {
+      "label": "粤语识别结果",
+      "observation": "整段输出为“呢几个字都表达唔到我想讲嘅意思。”；分块输出重复“几”“想”“意”。",
+      "previews": [],
+      "audio": [
+        {
+          "caption": "粤语：本次输入音频",
+          "path": "/validation/effects/sensevoice-agenticrag-20261001/yue.mp3"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "模式",
+            "实际转写",
+            "音频时长 / s",
+            "处理耗时 / s",
+            "实时率"
+          ],
+          "rows": [
+            [
+              "整段识别",
+              "呢几个字都表达唔到我想讲嘅意思。",
+              "5.184",
+              "2.679",
+              "0.517"
+            ],
+            [
+              "100ms 分块识别",
+              "呢几几个字都表达唔到我想想讲嘅意意思",
+              "5.184",
+              "2.332",
+              "0.450"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "modelId": "SenseVoice_AgenticRAG",
+        "revision": "748b06f6b0e43660f2092dbcf158189f543ab88c",
+        "provider": "AXCLRTExecutionProvider",
+        "completed": true,
+        "plan": {
+          "modelId": "SenseVoice_AgenticRAG",
+          "revision": "748b06f6b0e43660f2092dbcf158189f543ab88c",
+          "inferenceAttempted": false,
+          "source": [
+            {
+              "path": "python/main.py",
+              "sha256": "13f306890427b43efb0f3cddd9ba3bb48927ee4ef951fb1e6db8df89cd8ee4cf"
+            },
+            {
+              "path": "python/SenseVoiceAx.py",
+              "sha256": "0458eb193e9cf803de0ff86c51e3a75d96c87aa47daf058137d96a450afc47e3"
+            },
+            {
+              "path": "python/frontend.py",
+              "sha256": "2797cec8586fe6194215a636adcc4674348e6ea4b9d4c9fb093b43a037b8dba7"
+            },
+            {
+              "path": "python/requirements.txt",
+              "sha256": "11b9eb10198c873215811d02a377694e2ce0e0baec7e47c7424f78230fc9afab"
+            }
+          ],
+          "aliases": [
+            {
+              "primary": "sensevoice_ax650/sensevoice.axmodel",
+              "duplicate": "sensevoice_ax650/sensevoice/sensevoice.axmodel",
+              "sha256": "c8895199fe0e6b9af1d64f0292a8fccb6ef2167284cb4bd40ae1491ce086797a",
+              "basis": "Full official download SHA256; one physical weight payload with two repository paths."
+            },
+            {
+              "primary": "sensevoice_ax650/streaming_sensevoice.axmodel",
+              "duplicate": "sensevoice_ax650/sensevoice/streaming_sensevoice.axmodel",
+              "sha256": "d90522c47088c50a7dfe7f8827b8c7ca9a9594785b7c22963615d8ef6742a89c",
+              "basis": "Full official download SHA256; one physical weight payload with two repository paths."
+            }
+          ],
+          "unsupportedOnCurrentCard": [
+            "sensevoice_ax630c/sensevoice.axmodel",
+            "sensevoice_ax630c/streaming_sensevoice.axmodel"
+          ],
+          "plannedProvider": "AXCLRTExecutionProvider",
+          "cases": [
+            {
+              "id": "file-en",
+              "mode": "file",
+              "language": "en",
+              "input": "example/en.mp3",
+              "inputSha256": "f10378336a4e584f3f63799e62f99d5add3c2a401b51d3abe7d3a3a82f255ada"
+            },
+            {
+              "id": "file-zh",
+              "mode": "file",
+              "language": "zh",
+              "input": "example/zh.mp3",
+              "inputSha256": "0e64de19e4ff9a02e682955c9112f32d2317cfdbb5bc2f3504664044c993f195"
+            },
+            {
+              "id": "file-yue",
+              "mode": "file",
+              "language": "yue",
+              "input": "example/yue.mp3",
+              "inputSha256": "5098eebc13530a66e4eac1f30d3246e65c9cfc4e096665f9d395aca8eff0d181"
+            },
+            {
+              "id": "file-ja",
+              "mode": "file",
+              "language": "ja",
+              "input": "example/ja.mp3",
+              "inputSha256": "496dbc43b289e1d0d0cb916df9737450bca56acd8aaca046a7a2472363b1be53"
+            },
+            {
+              "id": "file-ko",
+              "mode": "file",
+              "language": "ko",
+              "input": "example/ko.mp3",
+              "inputSha256": "8612f62db8319a6cb4ab4b1d2039bfc32f174f89611889ddafdeb5c0a6070b5f"
+            },
+            {
+              "id": "streaming-en",
+              "mode": "streaming",
+              "language": "en",
+              "input": "example/en.mp3",
+              "inputSha256": "f10378336a4e584f3f63799e62f99d5add3c2a401b51d3abe7d3a3a82f255ada"
+            },
+            {
+              "id": "streaming-zh",
+              "mode": "streaming",
+              "language": "zh",
+              "input": "example/zh.mp3",
+              "inputSha256": "0e64de19e4ff9a02e682955c9112f32d2317cfdbb5bc2f3504664044c993f195"
+            },
+            {
+              "id": "streaming-yue",
+              "mode": "streaming",
+              "language": "yue",
+              "input": "example/yue.mp3",
+              "inputSha256": "5098eebc13530a66e4eac1f30d3246e65c9cfc4e096665f9d395aca8eff0d181"
+            },
+            {
+              "id": "streaming-ja",
+              "mode": "streaming",
+              "language": "ja",
+              "input": "example/ja.mp3",
+              "inputSha256": "496dbc43b289e1d0d0cb916df9737450bca56acd8aaca046a7a2472363b1be53"
+            },
+            {
+              "id": "streaming-ko",
+              "mode": "streaming",
+              "language": "ko",
+              "input": "example/ko.mp3",
+              "inputSha256": "8612f62db8319a6cb4ab4b1d2039bfc32f174f89611889ddafdeb5c0a6070b5f"
+            }
+          ],
+          "notes": [
+            "Use fixed original Python frontend and CTC decoder; explicitly select AXCL instead of its SoC default.",
+            "Reset streaming state between inputs; emulate 100ms chunks as the original CLI, not real microphone streaming.",
+            "No hot words; the original constructor chooses greedy CTC when hot_words=None.",
+            "Compare actual transcripts with separately attributed references; do not use repository example outputs as local results.",
+            "A repository title containing AgenticRAG is not evidence of a RAG pipeline; the supplied workflow is speech recognition.",
+            "The AX630C files are outside the current AX8850 card test; duplicate AX650 paths are byte-identical aliases, not independent runs."
+          ]
+        },
+        "filesBefore": [
+          {
+            "path": "README.md",
+            "sha256": "497d5d87022a29beacea96a8ded42ae5120f15187496d3fa6cbbb7fa10c028ec",
+            "matched": true
+          },
+          {
+            "path": "example/en.mp3",
+            "sha256": "f10378336a4e584f3f63799e62f99d5add3c2a401b51d3abe7d3a3a82f255ada",
+            "matched": true
+          },
+          {
+            "path": "example/ja.mp3",
+            "sha256": "496dbc43b289e1d0d0cb916df9737450bca56acd8aaca046a7a2472363b1be53",
+            "matched": true
+          },
+          {
+            "path": "example/ko.mp3",
+            "sha256": "8612f62db8319a6cb4ab4b1d2039bfc32f174f89611889ddafdeb5c0a6070b5f",
+            "matched": true
+          },
+          {
+            "path": "example/yue.mp3",
+            "sha256": "5098eebc13530a66e4eac1f30d3246e65c9cfc4e096665f9d395aca8eff0d181",
+            "matched": true
+          },
+          {
+            "path": "example/zh.mp3",
+            "sha256": "0e64de19e4ff9a02e682955c9112f32d2317cfdbb5bc2f3504664044c993f195",
+            "matched": true
+          },
+          {
+            "path": "python/SenseVoiceAx.py",
+            "sha256": "0458eb193e9cf803de0ff86c51e3a75d96c87aa47daf058137d96a450afc47e3",
+            "matched": true
+          },
+          {
+            "path": "python/frontend.py",
+            "sha256": "2797cec8586fe6194215a636adcc4674348e6ea4b9d4c9fb093b43a037b8dba7",
+            "matched": true
+          },
+          {
+            "path": "python/main.py",
+            "sha256": "13f306890427b43efb0f3cddd9ba3bb48927ee4ef951fb1e6db8df89cd8ee4cf",
+            "matched": true
+          },
+          {
+            "path": "sensevoice_ax650/am.mvn",
+            "sha256": "29b3c740a2c0cfc6b308126d31d7f265fa2be74f3bb095cd2f143ea970896ae5",
+            "matched": true
+          },
+          {
+            "path": "sensevoice_ax650/chn_jpn_yue_eng_ko_spectok.bpe.model",
+            "sha256": "aa87f86064c3730d799ddf7af3c04659151102cba548bce325cf06ba4da4e6a8",
+            "matched": true
+          },
+          {
+            "path": "sensevoice_ax650/sensevoice.axmodel",
+            "sha256": "c8895199fe0e6b9af1d64f0292a8fccb6ef2167284cb4bd40ae1491ce086797a",
+            "matched": true
+          },
+          {
+            "path": "sensevoice_ax650/streaming_sensevoice.axmodel",
+            "sha256": "d90522c47088c50a7dfe7f8827b8c7ca9a9594785b7c22963615d8ef6742a89c",
+            "matched": true
+          },
+          {
+            "path": "sensevoice_ax650/tokens.txt",
+            "sha256": "71ea48635d18bb2c9528e3a84f32cbfc8efe40bde25d1f89d8b81389694c7b16",
+            "matched": true
+          }
+        ],
+        "filesAfter": [
+          {
+            "path": "README.md",
+            "sha256": "497d5d87022a29beacea96a8ded42ae5120f15187496d3fa6cbbb7fa10c028ec",
+            "matched": true
+          },
+          {
+            "path": "example/en.mp3",
+            "sha256": "f10378336a4e584f3f63799e62f99d5add3c2a401b51d3abe7d3a3a82f255ada",
+            "matched": true
+          },
+          {
+            "path": "example/ja.mp3",
+            "sha256": "496dbc43b289e1d0d0cb916df9737450bca56acd8aaca046a7a2472363b1be53",
+            "matched": true
+          },
+          {
+            "path": "example/ko.mp3",
+            "sha256": "8612f62db8319a6cb4ab4b1d2039bfc32f174f89611889ddafdeb5c0a6070b5f",
+            "matched": true
+          },
+          {
+            "path": "example/yue.mp3",
+            "sha256": "5098eebc13530a66e4eac1f30d3246e65c9cfc4e096665f9d395aca8eff0d181",
+            "matched": true
+          },
+          {
+            "path": "example/zh.mp3",
+            "sha256": "0e64de19e4ff9a02e682955c9112f32d2317cfdbb5bc2f3504664044c993f195",
+            "matched": true
+          },
+          {
+            "path": "python/SenseVoiceAx.py",
+            "sha256": "0458eb193e9cf803de0ff86c51e3a75d96c87aa47daf058137d96a450afc47e3",
+            "matched": true
+          },
+          {
+            "path": "python/frontend.py",
+            "sha256": "2797cec8586fe6194215a636adcc4674348e6ea4b9d4c9fb093b43a037b8dba7",
+            "matched": true
+          },
+          {
+            "path": "python/main.py",
+            "sha256": "13f306890427b43efb0f3cddd9ba3bb48927ee4ef951fb1e6db8df89cd8ee4cf",
+            "matched": true
+          },
+          {
+            "path": "sensevoice_ax650/am.mvn",
+            "sha256": "29b3c740a2c0cfc6b308126d31d7f265fa2be74f3bb095cd2f143ea970896ae5",
+            "matched": true
+          },
+          {
+            "path": "sensevoice_ax650/chn_jpn_yue_eng_ko_spectok.bpe.model",
+            "sha256": "aa87f86064c3730d799ddf7af3c04659151102cba548bce325cf06ba4da4e6a8",
+            "matched": true
+          },
+          {
+            "path": "sensevoice_ax650/sensevoice.axmodel",
+            "sha256": "c8895199fe0e6b9af1d64f0292a8fccb6ef2167284cb4bd40ae1491ce086797a",
+            "matched": true
+          },
+          {
+            "path": "sensevoice_ax650/streaming_sensevoice.axmodel",
+            "sha256": "d90522c47088c50a7dfe7f8827b8c7ca9a9594785b7c22963615d8ef6742a89c",
+            "matched": true
+          },
+          {
+            "path": "sensevoice_ax650/tokens.txt",
+            "sha256": "71ea48635d18bb2c9528e3a84f32cbfc8efe40bde25d1f89d8b81389694c7b16",
+            "matched": true
+          }
+        ],
+        "limitations": [
+          "File chunks are processed without realtime pacing; no microphone/UI/RAG application tested.",
+          "Two distinct AX650 weights; byte-identical nested aliases are not separate executions. AX630C variants excluded."
+        ],
+        "versions": {
+          "numpy": "1.26.4",
+          "librosa": "0.11.0",
+          "kaldi-native-fbank": "1.22.3",
+          "online-fbank": "0.0.4"
+        },
+        "inferenceCompleted": true,
+        "elapsedSeconds": 76.92558883000311,
+        "traceSha256": "5ba4a1db3211591f08cf1cd128889c8265fdb92e0a64e000ae6c1cb86c30bf41",
+        "distinctExecutedWeights": 2,
+        "samples": [
+          {
+            "id": "file-yue",
+            "mode": "file",
+            "language": "yue",
+            "input": "example/yue.mp3",
+            "inputSha256": "5098eebc13530a66e4eac1f30d3246e65c9cfc4e096665f9d395aca8eff0d181",
+            "sampleRate": 16000,
+            "audioSamples": 82944,
+            "durationSeconds": 5.184,
+            "seconds": 2.679017646005377,
+            "rtf": 0.5167858113436299,
+            "transcript": "呢几个字都表达唔到我想讲嘅意思。",
+            "tokenIds": [
+              10880,
+              10482,
+              9957,
+              11767,
+              18387,
+              17282,
+              18191,
+              10995,
+              10533,
+              12624,
+              12504,
+              17629,
+              11146,
+              12519,
+              12388,
+              9729
+            ],
+            "streamUpdates": [],
+            "ctcDecodeEvents": [],
+            "calls": 1,
+            "audioDecodeExcluded": true
+          },
+          {
+            "id": "streaming-yue",
+            "mode": "streaming",
+            "language": "yue",
+            "input": "example/yue.mp3",
+            "inputSha256": "5098eebc13530a66e4eac1f30d3246e65c9cfc4e096665f9d395aca8eff0d181",
+            "sampleRate": 16000,
+            "audioSamples": 82944,
+            "durationSeconds": 5.184,
+            "seconds": 2.331581758997345,
+            "rtf": 0.4497649998065866,
+            "transcript": "呢几几个字都表达唔到我想想讲嘅意意思",
+            "tokenIds": [],
+            "streamUpdates": [
+              {
+                "offsetSamples": 24000,
+                "elapsedSeconds": 0.3473533439973835,
+                "timestamps": [],
+                "text": ""
+              },
+              {
+                "offsetSamples": 33600,
+                "elapsedSeconds": 0.6834097999962978,
+                "timestamps": [
+                  900,
+                  1140
+                ],
+                "text": "呢几"
+              },
+              {
+                "offsetSamples": 43200,
+                "elapsedSeconds": 1.01401410499966,
+                "timestamps": [
+                  900,
+                  1140,
+                  1260,
+                  1440,
+                  1560,
+                  1800
+                ],
+                "text": "呢几几个字都"
+              },
+              {
+                "offsetSamples": 52800,
+                "elapsedSeconds": 1.3441820739972172,
+                "timestamps": [
+                  900,
+                  1140,
+                  1260,
+                  1440,
+                  1560,
+                  1800,
+                  2100,
+                  2220
+                ],
+                "text": "呢几几个字都表达"
+              },
+              {
+                "offsetSamples": 62400,
+                "elapsedSeconds": 1.6757917590002762,
+                "timestamps": [
+                  900,
+                  1140,
+                  1260,
+                  1440,
+                  1560,
+                  1800,
+                  2100,
+                  2220,
+                  2520,
+                  2640,
+                  2820,
+                  2940
+                ],
+                "text": "呢几几个字都表达唔到我想"
+              },
+              {
+                "offsetSamples": 72000,
+                "elapsedSeconds": 2.004740263997519,
+                "timestamps": [
+                  900,
+                  1140,
+                  1260,
+                  1440,
+                  1560,
+                  1800,
+                  2100,
+                  2220,
+                  2520,
+                  2640,
+                  2820,
+                  2940,
+                  3120,
+                  3300,
+                  3420,
+                  3600
+                ],
+                "text": "呢几几个字都表达唔到我想想讲嘅意"
+              },
+              {
+                "offsetSamples": 81600,
+                "elapsedSeconds": 2.331006881999201,
+                "timestamps": [
+                  900,
+                  1140,
+                  1260,
+                  1440,
+                  1560,
+                  1800,
+                  2100,
+                  2220,
+                  2520,
+                  2640,
+                  2820,
+                  2940,
+                  3120,
+                  3300,
+                  3420,
+                  3600,
+                  3720,
+                  3840
+                ],
+                "text": "呢几几个字都表达唔到我想想讲嘅意意思"
+              }
+            ],
+            "ctcDecodeEvents": [
+              {
+                "shape": [
+                  10,
+                  25055
+                ],
+                "sha256": "960659ab0520a8b501555172722fbc8a6bf0d284be92493ce63ec6fba1149334",
+                "isLast": false,
+                "tokens": [],
+                "times": []
+              },
+              {
+                "shape": [
+                  10,
+                  25055
+                ],
+                "sha256": "16baf8b685fdeea1dee20c08aece5c42359995c03248f59438f4f61592e6a80b",
+                "isLast": false,
+                "tokens": [
+                  10880,
+                  10482
+                ],
+                "times": [
+                  15,
+                  19
+                ]
+              },
+              {
+                "shape": [
+                  10,
+                  25055
+                ],
+                "sha256": "379c0ceb8e14aaa2f5d967e2cbdc8acab4a3230f3e23439031c308470b655228",
+                "isLast": false,
+                "tokens": [
+                  10880,
+                  10482,
+                  10482,
+                  9957,
+                  11767,
+                  18387
+                ],
+                "times": [
+                  15,
+                  19,
+                  21,
+                  24,
+                  26,
+                  30
+                ]
+              },
+              {
+                "shape": [
+                  10,
+                  25055
+                ],
+                "sha256": "c3bc414aae3d8e348f51c5daba91af87820a65ea9f18133dd5a1f02ec8080be3",
+                "isLast": false,
+                "tokens": [
+                  10880,
+                  10482,
+                  10482,
+                  9957,
+                  11767,
+                  18387,
+                  17282,
+                  18191
+                ],
+                "times": [
+                  15,
+                  19,
+                  21,
+                  24,
+                  26,
+                  30,
+                  35,
+                  37
+                ]
+              },
+              {
+                "shape": [
+                  10,
+                  25055
+                ],
+                "sha256": "605aef652904be6bec4c8631da15567cfd65b26500d0f136f22b9353501f57b4",
+                "isLast": false,
+                "tokens": [
+                  10880,
+                  10482,
+                  10482,
+                  9957,
+                  11767,
+                  18387,
+                  17282,
+                  18191,
+                  10995,
+                  10533,
+                  12624,
+                  12504
+                ],
+                "times": [
+                  15,
+                  19,
+                  21,
+                  24,
+                  26,
+                  30,
+                  35,
+                  37,
+                  42,
+                  44,
+                  47,
+                  49
+                ]
+              },
+              {
+                "shape": [
+                  10,
+                  25055
+                ],
+                "sha256": "b88f4613bda115bd2c6556f8da333d616292a2fe7f85597723dbc02106a00052",
+                "isLast": false,
+                "tokens": [
+                  10880,
+                  10482,
+                  10482,
+                  9957,
+                  11767,
+                  18387,
+                  17282,
+                  18191,
+                  10995,
+                  10533,
+                  12624,
+                  12504,
+                  12504,
+                  17629,
+                  11146,
+                  12519
+                ],
+                "times": [
+                  15,
+                  19,
+                  21,
+                  24,
+                  26,
+                  30,
+                  35,
+                  37,
+                  42,
+                  44,
+                  47,
+                  49,
+                  52,
+                  55,
+                  57,
+                  60
+                ]
+              },
+              {
+                "shape": [
+                  10,
+                  25055
+                ],
+                "sha256": "c2a9f75c5f1bfe76f4c622304da861433d612e4354df7494abb5aa0e5d4f94dc",
+                "isLast": false,
+                "tokens": [
+                  10880,
+                  10482,
+                  10482,
+                  9957,
+                  11767,
+                  18387,
+                  17282,
+                  18191,
+                  10995,
+                  10533,
+                  12624,
+                  12504,
+                  12504,
+                  17629,
+                  11146,
+                  12519,
+                  12519,
+                  12388
+                ],
+                "times": [
+                  15,
+                  19,
+                  21,
+                  24,
+                  26,
+                  30,
+                  35,
+                  37,
+                  42,
+                  44,
+                  47,
+                  49,
+                  52,
+                  55,
+                  57,
+                  60,
+                  62,
+                  64
+                ]
+              }
+            ],
+            "calls": 7,
+            "audioDecodeExcluded": true
+          }
+        ],
+        "sessions": [
+          {
+            "sampleId": "file-yue",
+            "model": "sensevoice_ax650/sensevoice.axmodel",
+            "sha256": "c8895199fe0e6b9af1d64f0292a8fccb6ef2167284cb4bd40ae1491ce086797a",
+            "provider": "AXCLRTExecutionProvider",
+            "loadSeconds": 3.8385043289963505,
+            "calls": 1,
+            "runMilliseconds": [
+              165.63800800213357
+            ],
+            "allFinite": true,
+            "closed": true
+          },
+          {
+            "sampleId": "streaming-yue",
+            "model": "sensevoice_ax650/streaming_sensevoice.axmodel",
+            "sha256": "d90522c47088c50a7dfe7f8827b8c7ca9a9594785b7c22963615d8ef6742a89c",
+            "provider": "AXCLRTExecutionProvider",
+            "loadSeconds": 3.3083723099989584,
+            "calls": 7,
+            "runMilliseconds": [
+              30.008270005055238,
+              30.041812002309598,
+              30.16139600367751,
+              30.052895002881996,
+              29.933019999589305,
+              29.993395000929013,
+              30.032770002435427
+            ],
+            "allFinite": true,
+            "closed": true
+          }
+        ]
+      },
+      "sourceArchiveSha256": "ee9bfdbb5e7313584796f586376d37dff2fdde11b9d8783542a2f51d009b04ed"
+    },
+    {
+      "label": "日语识别结果",
+      "observation": "两种模式都返回日文；分块结果出现“うう”“女性”“50県”等差异，未完成独立人工听写评估。",
+      "previews": [],
+      "audio": [
+        {
+          "caption": "日语：本次输入音频",
+          "path": "/validation/effects/sensevoice-agenticrag-20261001/ja.mp3"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "模式",
+            "实际转写",
+            "音频时长 / s",
+            "处理耗时 / s",
+            "实时率"
+          ],
+          "rows": [
+            [
+              "整段识别",
+              "うちの中学は弁当制で持っていきない場合は50円の学校販売のパンを買う。",
+              "7.224",
+              "2.704",
+              "0.374"
+            ],
+            [
+              "100ms 分块识别",
+              "ううちの中学は弁当女性で持っていきない場合は50県の学校ご販売のパンを買う",
+              "7.224",
+              "3.696",
+              "0.512"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "modelId": "SenseVoice_AgenticRAG",
+        "revision": "748b06f6b0e43660f2092dbcf158189f543ab88c",
+        "provider": "AXCLRTExecutionProvider",
+        "completed": true,
+        "plan": {
+          "modelId": "SenseVoice_AgenticRAG",
+          "revision": "748b06f6b0e43660f2092dbcf158189f543ab88c",
+          "inferenceAttempted": false,
+          "source": [
+            {
+              "path": "python/main.py",
+              "sha256": "13f306890427b43efb0f3cddd9ba3bb48927ee4ef951fb1e6db8df89cd8ee4cf"
+            },
+            {
+              "path": "python/SenseVoiceAx.py",
+              "sha256": "0458eb193e9cf803de0ff86c51e3a75d96c87aa47daf058137d96a450afc47e3"
+            },
+            {
+              "path": "python/frontend.py",
+              "sha256": "2797cec8586fe6194215a636adcc4674348e6ea4b9d4c9fb093b43a037b8dba7"
+            },
+            {
+              "path": "python/requirements.txt",
+              "sha256": "11b9eb10198c873215811d02a377694e2ce0e0baec7e47c7424f78230fc9afab"
+            }
+          ],
+          "aliases": [
+            {
+              "primary": "sensevoice_ax650/sensevoice.axmodel",
+              "duplicate": "sensevoice_ax650/sensevoice/sensevoice.axmodel",
+              "sha256": "c8895199fe0e6b9af1d64f0292a8fccb6ef2167284cb4bd40ae1491ce086797a",
+              "basis": "Full official download SHA256; one physical weight payload with two repository paths."
+            },
+            {
+              "primary": "sensevoice_ax650/streaming_sensevoice.axmodel",
+              "duplicate": "sensevoice_ax650/sensevoice/streaming_sensevoice.axmodel",
+              "sha256": "d90522c47088c50a7dfe7f8827b8c7ca9a9594785b7c22963615d8ef6742a89c",
+              "basis": "Full official download SHA256; one physical weight payload with two repository paths."
+            }
+          ],
+          "unsupportedOnCurrentCard": [
+            "sensevoice_ax630c/sensevoice.axmodel",
+            "sensevoice_ax630c/streaming_sensevoice.axmodel"
+          ],
+          "plannedProvider": "AXCLRTExecutionProvider",
+          "cases": [
+            {
+              "id": "file-en",
+              "mode": "file",
+              "language": "en",
+              "input": "example/en.mp3",
+              "inputSha256": "f10378336a4e584f3f63799e62f99d5add3c2a401b51d3abe7d3a3a82f255ada"
+            },
+            {
+              "id": "file-zh",
+              "mode": "file",
+              "language": "zh",
+              "input": "example/zh.mp3",
+              "inputSha256": "0e64de19e4ff9a02e682955c9112f32d2317cfdbb5bc2f3504664044c993f195"
+            },
+            {
+              "id": "file-yue",
+              "mode": "file",
+              "language": "yue",
+              "input": "example/yue.mp3",
+              "inputSha256": "5098eebc13530a66e4eac1f30d3246e65c9cfc4e096665f9d395aca8eff0d181"
+            },
+            {
+              "id": "file-ja",
+              "mode": "file",
+              "language": "ja",
+              "input": "example/ja.mp3",
+              "inputSha256": "496dbc43b289e1d0d0cb916df9737450bca56acd8aaca046a7a2472363b1be53"
+            },
+            {
+              "id": "file-ko",
+              "mode": "file",
+              "language": "ko",
+              "input": "example/ko.mp3",
+              "inputSha256": "8612f62db8319a6cb4ab4b1d2039bfc32f174f89611889ddafdeb5c0a6070b5f"
+            },
+            {
+              "id": "streaming-en",
+              "mode": "streaming",
+              "language": "en",
+              "input": "example/en.mp3",
+              "inputSha256": "f10378336a4e584f3f63799e62f99d5add3c2a401b51d3abe7d3a3a82f255ada"
+            },
+            {
+              "id": "streaming-zh",
+              "mode": "streaming",
+              "language": "zh",
+              "input": "example/zh.mp3",
+              "inputSha256": "0e64de19e4ff9a02e682955c9112f32d2317cfdbb5bc2f3504664044c993f195"
+            },
+            {
+              "id": "streaming-yue",
+              "mode": "streaming",
+              "language": "yue",
+              "input": "example/yue.mp3",
+              "inputSha256": "5098eebc13530a66e4eac1f30d3246e65c9cfc4e096665f9d395aca8eff0d181"
+            },
+            {
+              "id": "streaming-ja",
+              "mode": "streaming",
+              "language": "ja",
+              "input": "example/ja.mp3",
+              "inputSha256": "496dbc43b289e1d0d0cb916df9737450bca56acd8aaca046a7a2472363b1be53"
+            },
+            {
+              "id": "streaming-ko",
+              "mode": "streaming",
+              "language": "ko",
+              "input": "example/ko.mp3",
+              "inputSha256": "8612f62db8319a6cb4ab4b1d2039bfc32f174f89611889ddafdeb5c0a6070b5f"
+            }
+          ],
+          "notes": [
+            "Use fixed original Python frontend and CTC decoder; explicitly select AXCL instead of its SoC default.",
+            "Reset streaming state between inputs; emulate 100ms chunks as the original CLI, not real microphone streaming.",
+            "No hot words; the original constructor chooses greedy CTC when hot_words=None.",
+            "Compare actual transcripts with separately attributed references; do not use repository example outputs as local results.",
+            "A repository title containing AgenticRAG is not evidence of a RAG pipeline; the supplied workflow is speech recognition.",
+            "The AX630C files are outside the current AX8850 card test; duplicate AX650 paths are byte-identical aliases, not independent runs."
+          ]
+        },
+        "filesBefore": [
+          {
+            "path": "README.md",
+            "sha256": "497d5d87022a29beacea96a8ded42ae5120f15187496d3fa6cbbb7fa10c028ec",
+            "matched": true
+          },
+          {
+            "path": "example/en.mp3",
+            "sha256": "f10378336a4e584f3f63799e62f99d5add3c2a401b51d3abe7d3a3a82f255ada",
+            "matched": true
+          },
+          {
+            "path": "example/ja.mp3",
+            "sha256": "496dbc43b289e1d0d0cb916df9737450bca56acd8aaca046a7a2472363b1be53",
+            "matched": true
+          },
+          {
+            "path": "example/ko.mp3",
+            "sha256": "8612f62db8319a6cb4ab4b1d2039bfc32f174f89611889ddafdeb5c0a6070b5f",
+            "matched": true
+          },
+          {
+            "path": "example/yue.mp3",
+            "sha256": "5098eebc13530a66e4eac1f30d3246e65c9cfc4e096665f9d395aca8eff0d181",
+            "matched": true
+          },
+          {
+            "path": "example/zh.mp3",
+            "sha256": "0e64de19e4ff9a02e682955c9112f32d2317cfdbb5bc2f3504664044c993f195",
+            "matched": true
+          },
+          {
+            "path": "python/SenseVoiceAx.py",
+            "sha256": "0458eb193e9cf803de0ff86c51e3a75d96c87aa47daf058137d96a450afc47e3",
+            "matched": true
+          },
+          {
+            "path": "python/frontend.py",
+            "sha256": "2797cec8586fe6194215a636adcc4674348e6ea4b9d4c9fb093b43a037b8dba7",
+            "matched": true
+          },
+          {
+            "path": "python/main.py",
+            "sha256": "13f306890427b43efb0f3cddd9ba3bb48927ee4ef951fb1e6db8df89cd8ee4cf",
+            "matched": true
+          },
+          {
+            "path": "sensevoice_ax650/am.mvn",
+            "sha256": "29b3c740a2c0cfc6b308126d31d7f265fa2be74f3bb095cd2f143ea970896ae5",
+            "matched": true
+          },
+          {
+            "path": "sensevoice_ax650/chn_jpn_yue_eng_ko_spectok.bpe.model",
+            "sha256": "aa87f86064c3730d799ddf7af3c04659151102cba548bce325cf06ba4da4e6a8",
+            "matched": true
+          },
+          {
+            "path": "sensevoice_ax650/sensevoice.axmodel",
+            "sha256": "c8895199fe0e6b9af1d64f0292a8fccb6ef2167284cb4bd40ae1491ce086797a",
+            "matched": true
+          },
+          {
+            "path": "sensevoice_ax650/streaming_sensevoice.axmodel",
+            "sha256": "d90522c47088c50a7dfe7f8827b8c7ca9a9594785b7c22963615d8ef6742a89c",
+            "matched": true
+          },
+          {
+            "path": "sensevoice_ax650/tokens.txt",
+            "sha256": "71ea48635d18bb2c9528e3a84f32cbfc8efe40bde25d1f89d8b81389694c7b16",
+            "matched": true
+          }
+        ],
+        "filesAfter": [
+          {
+            "path": "README.md",
+            "sha256": "497d5d87022a29beacea96a8ded42ae5120f15187496d3fa6cbbb7fa10c028ec",
+            "matched": true
+          },
+          {
+            "path": "example/en.mp3",
+            "sha256": "f10378336a4e584f3f63799e62f99d5add3c2a401b51d3abe7d3a3a82f255ada",
+            "matched": true
+          },
+          {
+            "path": "example/ja.mp3",
+            "sha256": "496dbc43b289e1d0d0cb916df9737450bca56acd8aaca046a7a2472363b1be53",
+            "matched": true
+          },
+          {
+            "path": "example/ko.mp3",
+            "sha256": "8612f62db8319a6cb4ab4b1d2039bfc32f174f89611889ddafdeb5c0a6070b5f",
+            "matched": true
+          },
+          {
+            "path": "example/yue.mp3",
+            "sha256": "5098eebc13530a66e4eac1f30d3246e65c9cfc4e096665f9d395aca8eff0d181",
+            "matched": true
+          },
+          {
+            "path": "example/zh.mp3",
+            "sha256": "0e64de19e4ff9a02e682955c9112f32d2317cfdbb5bc2f3504664044c993f195",
+            "matched": true
+          },
+          {
+            "path": "python/SenseVoiceAx.py",
+            "sha256": "0458eb193e9cf803de0ff86c51e3a75d96c87aa47daf058137d96a450afc47e3",
+            "matched": true
+          },
+          {
+            "path": "python/frontend.py",
+            "sha256": "2797cec8586fe6194215a636adcc4674348e6ea4b9d4c9fb093b43a037b8dba7",
+            "matched": true
+          },
+          {
+            "path": "python/main.py",
+            "sha256": "13f306890427b43efb0f3cddd9ba3bb48927ee4ef951fb1e6db8df89cd8ee4cf",
+            "matched": true
+          },
+          {
+            "path": "sensevoice_ax650/am.mvn",
+            "sha256": "29b3c740a2c0cfc6b308126d31d7f265fa2be74f3bb095cd2f143ea970896ae5",
+            "matched": true
+          },
+          {
+            "path": "sensevoice_ax650/chn_jpn_yue_eng_ko_spectok.bpe.model",
+            "sha256": "aa87f86064c3730d799ddf7af3c04659151102cba548bce325cf06ba4da4e6a8",
+            "matched": true
+          },
+          {
+            "path": "sensevoice_ax650/sensevoice.axmodel",
+            "sha256": "c8895199fe0e6b9af1d64f0292a8fccb6ef2167284cb4bd40ae1491ce086797a",
+            "matched": true
+          },
+          {
+            "path": "sensevoice_ax650/streaming_sensevoice.axmodel",
+            "sha256": "d90522c47088c50a7dfe7f8827b8c7ca9a9594785b7c22963615d8ef6742a89c",
+            "matched": true
+          },
+          {
+            "path": "sensevoice_ax650/tokens.txt",
+            "sha256": "71ea48635d18bb2c9528e3a84f32cbfc8efe40bde25d1f89d8b81389694c7b16",
+            "matched": true
+          }
+        ],
+        "limitations": [
+          "File chunks are processed without realtime pacing; no microphone/UI/RAG application tested.",
+          "Two distinct AX650 weights; byte-identical nested aliases are not separate executions. AX630C variants excluded."
+        ],
+        "versions": {
+          "numpy": "1.26.4",
+          "librosa": "0.11.0",
+          "kaldi-native-fbank": "1.22.3",
+          "online-fbank": "0.0.4"
+        },
+        "inferenceCompleted": true,
+        "elapsedSeconds": 76.92558883000311,
+        "traceSha256": "5ba4a1db3211591f08cf1cd128889c8265fdb92e0a64e000ae6c1cb86c30bf41",
+        "distinctExecutedWeights": 2,
+        "samples": [
+          {
+            "id": "file-ja",
+            "mode": "file",
+            "language": "ja",
+            "input": "example/ja.mp3",
+            "inputSha256": "496dbc43b289e1d0d0cb916df9737450bca56acd8aaca046a7a2472363b1be53",
+            "sampleRate": 16000,
+            "audioSamples": 115584,
+            "durationSeconds": 7.224,
+            "seconds": 2.7043391019979026,
+            "rtf": 0.3743548037095657,
+            "transcript": "うちの中学は弁当制で持っていきない場合は50円の学校販売のパンを買う。",
+            "tokenIds": [
+              9752,
+              9779,
+              9792,
+              9959,
+              11779,
+              9793,
+              12228,
+              12273,
+              10535,
+              9785,
+              12781,
+              9781,
+              9784,
+              9750,
+              9759,
+              9788,
+              9750,
+              11437,
+              10811,
+              9793,
+              9695,
+              9690,
+              10424,
+              9792,
+              11779,
+              13462,
+              17799,
+              11513,
+              9792,
+              9879,
+              9913,
+              9827,
+              17809,
+              9752,
+              9729
+            ],
+            "streamUpdates": [],
+            "ctcDecodeEvents": [],
+            "calls": 1,
+            "audioDecodeExcluded": true
+          },
+          {
+            "id": "streaming-ja",
+            "mode": "streaming",
+            "language": "ja",
+            "input": "example/ja.mp3",
+            "inputSha256": "496dbc43b289e1d0d0cb916df9737450bca56acd8aaca046a7a2472363b1be53",
+            "sampleRate": 16000,
+            "audioSamples": 115584,
+            "durationSeconds": 7.224,
+            "seconds": 3.696309225000732,
+            "rtf": 0.5116707122094036,
+            "transcript": "ううちの中学は弁当女性で持っていきない場合は50県の学校ご販売のパンを買う",
+            "tokenIds": [],
+            "streamUpdates": [
+              {
+                "offsetSamples": 24000,
+                "elapsedSeconds": 0.35212911699636606,
+                "timestamps": [
+                  480
+                ],
+                "text": "う"
+              },
+              {
+                "offsetSamples": 33600,
+                "elapsedSeconds": 0.687982572002511,
+                "timestamps": [
+                  480,
+                  660,
+                  720,
+                  840,
+                  960,
+                  1140
+                ],
+                "text": "ううちの中学"
+              },
+              {
+                "offsetSamples": 43200,
+                "elapsedSeconds": 1.0191801300024963,
+                "timestamps": [
+                  480,
+                  660,
+                  720,
+                  840,
+                  960,
+                  1140,
+                  1380,
+                  1560,
+                  1680
+                ],
+                "text": "ううちの中学は弁当"
+              },
+              {
+                "offsetSamples": 52800,
+                "elapsedSeconds": 1.3586181860009674,
+                "timestamps": [
+                  480,
+                  660,
+                  720,
+                  840,
+                  960,
+                  1140,
+                  1380,
+                  1560,
+                  1680,
+                  1860,
+                  1980,
+                  2160
+                ],
+                "text": "ううちの中学は弁当女性で"
+              },
+              {
+                "offsetSamples": 62400,
+                "elapsedSeconds": 1.6917285029994673,
+                "timestamps": [
+                  480,
+                  660,
+                  720,
+                  840,
+                  960,
+                  1140,
+                  1380,
+                  1560,
+                  1680,
+                  1860,
+                  1980,
+                  2160,
+                  2520,
+                  2640,
+                  2700,
+                  2820,
+                  2940
+                ],
+                "text": "ううちの中学は弁当女性で持っていき"
+              },
+              {
+                "offsetSamples": 72000,
+                "elapsedSeconds": 2.024246150002,
+                "timestamps": [
+                  480,
+                  660,
+                  720,
+                  840,
+                  960,
+                  1140,
+                  1380,
+                  1560,
+                  1680,
+                  1860,
+                  1980,
+                  2160,
+                  2520,
+                  2640,
+                  2700,
+                  2820,
+                  2940,
+                  3120,
+                  3240,
+                  3360,
+                  3420,
+                  3540
+                ],
+                "text": "ううちの中学は弁当女性で持っていきない場合は"
+              },
+              {
+                "offsetSamples": 81600,
+                "elapsedSeconds": 2.353293530999508,
+                "timestamps": [
+                  480,
+                  660,
+                  720,
+                  840,
+                  960,
+                  1140,
+                  1380,
+                  1560,
+                  1680,
+                  1860,
+                  1980,
+                  2160,
+                  2520,
+                  2640,
+                  2700,
+                  2820,
+                  2940,
+                  3120,
+                  3240,
+                  3360,
+                  3420,
+                  3540,
+                  3840,
+                  4020
+                ],
+                "text": "ううちの中学は弁当女性で持っていきない場合は50"
+              },
+              {
+                "offsetSamples": 91200,
+                "elapsedSeconds": 2.6905367849976756,
+                "timestamps": [
+                  480,
+                  660,
+                  720,
+                  840,
+                  960,
+                  1140,
+                  1380,
+                  1560,
+                  1680,
+                  1860,
+                  1980,
+                  2160,
+                  2520,
+                  2640,
+                  2700,
+                  2820,
+                  2940,
+                  3120,
+                  3240,
+                  3360,
+                  3420,
+                  3540,
+                  3840,
+                  4020,
+                  4260,
+                  4500,
+                  4620,
+                  4740
+                ],
+                "text": "ううちの中学は弁当女性で持っていきない場合は50県の学校"
+              },
+              {
+                "offsetSamples": 100800,
+                "elapsedSeconds": 3.0215940499983844,
+                "timestamps": [
+                  480,
+                  660,
+                  720,
+                  840,
+                  960,
+                  1140,
+                  1380,
+                  1560,
+                  1680,
+                  1860,
+                  1980,
+                  2160,
+                  2520,
+                  2640,
+                  2700,
+                  2820,
+                  2940,
+                  3120,
+                  3240,
+                  3360,
+                  3420,
+                  3540,
+                  3840,
+                  4020,
+                  4260,
+                  4500,
+                  4620,
+                  4740,
+                  4860,
+                  5040,
+                  5160,
+                  5340
+                ],
+                "text": "ううちの中学は弁当女性で持っていきない場合は50県の学校ご販売の"
+              },
+              {
+                "offsetSamples": 110400,
+                "elapsedSeconds": 3.3619709859995055,
+                "timestamps": [
+                  480,
+                  660,
+                  720,
+                  840,
+                  960,
+                  1140,
+                  1380,
+                  1560,
+                  1680,
+                  1860,
+                  1980,
+                  2160,
+                  2520,
+                  2640,
+                  2700,
+                  2820,
+                  2940,
+                  3120,
+                  3240,
+                  3360,
+                  3420,
+                  3540,
+                  3840,
+                  4020,
+                  4260,
+                  4500,
+                  4620,
+                  4740,
+                  4860,
+                  5040,
+                  5160,
+                  5340,
+                  5520,
+                  5640,
+                  5760,
+                  5880
+                ],
+                "text": "ううちの中学は弁当女性で持っていきない場合は50県の学校ご販売のパンを買"
+              },
+              {
+                "offsetSamples": 115200,
+                "elapsedSeconds": 3.695764098003565,
+                "timestamps": [
+                  480,
+                  660,
+                  720,
+                  840,
+                  960,
+                  1140,
+                  1380,
+                  1560,
+                  1680,
+                  1860,
+                  1980,
+                  2160,
+                  2520,
+                  2640,
+                  2700,
+                  2820,
+                  2940,
+                  3120,
+                  3240,
+                  3360,
+                  3420,
+                  3540,
+                  3840,
+                  4020,
+                  4260,
+                  4500,
+                  4620,
+                  4740,
+                  4860,
+                  5040,
+                  5160,
+                  5340,
+                  5520,
+                  5640,
+                  5760,
+                  5880,
+                  6120
+                ],
+                "text": "ううちの中学は弁当女性で持っていきない場合は50県の学校ご販売のパンを買う"
+              }
+            ],
+            "ctcDecodeEvents": [
+              {
+                "shape": [
+                  10,
+                  25055
+                ],
+                "sha256": "8dc286a15a98bcb6c63c1508903db6a7b9ae1786c3965a9137974babcf4ef597",
+                "isLast": false,
+                "tokens": [
+                  9752
+                ],
+                "times": [
+                  8
+                ]
+              },
+              {
+                "shape": [
+                  10,
+                  25055
+                ],
+                "sha256": "0335adf61a8e4bdf9f6f40a7a7c7f87ded1acca9db207996251e52861c020496",
+                "isLast": false,
+                "tokens": [
+                  9752,
+                  9752,
+                  9779,
+                  9792,
+                  9959,
+                  11779
+                ],
+                "times": [
+                  8,
+                  11,
+                  12,
+                  14,
+                  16,
+                  19
+                ]
+              },
+              {
+                "shape": [
+                  10,
+                  25055
+                ],
+                "sha256": "d8b525486a0e74669b164c4ebf055a52bac707d2dc6cc144d14dba1096948257",
+                "isLast": false,
+                "tokens": [
+                  9752,
+                  9752,
+                  9779,
+                  9792,
+                  9959,
+                  11779,
+                  9793,
+                  12228,
+                  12273
+                ],
+                "times": [
+                  8,
+                  11,
+                  12,
+                  14,
+                  16,
+                  19,
+                  23,
+                  26,
+                  28
+                ]
+              },
+              {
+                "shape": [
+                  10,
+                  25055
+                ],
+                "sha256": "d6686f678452c4ee13e22c306223be7f2fe00a4ed8f3afcb8c6acd31c71e4dc8",
+                "isLast": false,
+                "tokens": [
+                  9752,
+                  9752,
+                  9779,
+                  9792,
+                  9959,
+                  11779,
+                  9793,
+                  12228,
+                  12273,
+                  11585,
+                  12393,
+                  9785
+                ],
+                "times": [
+                  8,
+                  11,
+                  12,
+                  14,
+                  16,
+                  19,
+                  23,
+                  26,
+                  28,
+                  31,
+                  33,
+                  36
+                ]
+              },
+              {
+                "shape": [
+                  10,
+                  25055
+                ],
+                "sha256": "30cc822597da95c45bf7235e22369af570d31c0e3eec4fb8296e698c02ddac2a",
+                "isLast": false,
+                "tokens": [
+                  9752,
+                  9752,
+                  9779,
+                  9792,
+                  9959,
+                  11779,
+                  9793,
+                  12228,
+                  12273,
+                  11585,
+                  12393,
+                  9785,
+                  12781,
+                  9781,
+                  9784,
+                  9750,
+                  9759
+                ],
+                "times": [
+                  8,
+                  11,
+                  12,
+                  14,
+                  16,
+                  19,
+                  23,
+                  26,
+                  28,
+                  31,
+                  33,
+                  36,
+                  42,
+                  44,
+                  45,
+                  47,
+                  49
+                ]
+              },
+              {
+                "shape": [
+                  10,
+                  25055
+                ],
+                "sha256": "7e072da34b600b7fc8ae15c14f3863a7491a71099f0b168ea482b180e75ce02a",
+                "isLast": false,
+                "tokens": [
+                  9752,
+                  9752,
+                  9779,
+                  9792,
+                  9959,
+                  11779,
+                  9793,
+                  12228,
+                  12273,
+                  11585,
+                  12393,
+                  9785,
+                  12781,
+                  9781,
+                  9784,
+                  9750,
+                  9759,
+                  9788,
+                  9750,
+                  11437,
+                  10811,
+                  9793
+                ],
+                "times": [
+                  8,
+                  11,
+                  12,
+                  14,
+                  16,
+                  19,
+                  23,
+                  26,
+                  28,
+                  31,
+                  33,
+                  36,
+                  42,
+                  44,
+                  45,
+                  47,
+                  49,
+                  52,
+                  54,
+                  56,
+                  57,
+                  59
+                ]
+              },
+              {
+                "shape": [
+                  10,
+                  25055
+                ],
+                "sha256": "ef4422c82f65b0c4ff09ec1b02097a3ce107f24ffcdc9bee98ceb894897873cc",
+                "isLast": false,
+                "tokens": [
+                  9752,
+                  9752,
+                  9779,
+                  9792,
+                  9959,
+                  11779,
+                  9793,
+                  12228,
+                  12273,
+                  11585,
+                  12393,
+                  9785,
+                  12781,
+                  9781,
+                  9784,
+                  9750,
+                  9759,
+                  9788,
+                  9750,
+                  11437,
+                  10811,
+                  9793,
+                  9695,
+                  9690
+                ],
+                "times": [
+                  8,
+                  11,
+                  12,
+                  14,
+                  16,
+                  19,
+                  23,
+                  26,
+                  28,
+                  31,
+                  33,
+                  36,
+                  42,
+                  44,
+                  45,
+                  47,
+                  49,
+                  52,
+                  54,
+                  56,
+                  57,
+                  59,
+                  64,
+                  67
+                ]
+              },
+              {
+                "shape": [
+                  10,
+                  25055
+                ],
+                "sha256": "6f1494f116c3125d7fe77bae4a435fde87eb02397083244bc7cc4749bac733dd",
+                "isLast": false,
+                "tokens": [
+                  9752,
+                  9752,
+                  9779,
+                  9792,
+                  9959,
+                  11779,
+                  9793,
+                  12228,
+                  12273,
+                  11585,
+                  12393,
+                  9785,
+                  12781,
+                  9781,
+                  9784,
+                  9750,
+                  9759,
+                  9788,
+                  9750,
+                  11437,
+                  10811,
+                  9793,
+                  9695,
+                  9690,
+                  15208,
+                  9792,
+                  11779,
+                  13462
+                ],
+                "times": [
+                  8,
+                  11,
+                  12,
+                  14,
+                  16,
+                  19,
+                  23,
+                  26,
+                  28,
+                  31,
+                  33,
+                  36,
+                  42,
+                  44,
+                  45,
+                  47,
+                  49,
+                  52,
+                  54,
+                  56,
+                  57,
+                  59,
+                  64,
+                  67,
+                  71,
+                  75,
+                  77,
+                  79
+                ]
+              },
+              {
+                "shape": [
+                  10,
+                  25055
+                ],
+                "sha256": "cd52e236c7b61d3cecf145a1b6f3e93561596b45b253dd98232251d5e6e61bf7",
+                "isLast": false,
+                "tokens": [
+                  9752,
+                  9752,
+                  9779,
+                  9792,
+                  9959,
+                  11779,
+                  9793,
+                  12228,
+                  12273,
+                  11585,
+                  12393,
+                  9785,
+                  12781,
+                  9781,
+                  9784,
+                  9750,
+                  9759,
+                  9788,
+                  9750,
+                  11437,
+                  10811,
+                  9793,
+                  9695,
+                  9690,
+                  15208,
+                  9792,
+                  11779,
+                  13462,
+                  9766,
+                  17799,
+                  11513,
+                  9792
+                ],
+                "times": [
+                  8,
+                  11,
+                  12,
+                  14,
+                  16,
+                  19,
+                  23,
+                  26,
+                  28,
+                  31,
+                  33,
+                  36,
+                  42,
+                  44,
+                  45,
+                  47,
+                  49,
+                  52,
+                  54,
+                  56,
+                  57,
+                  59,
+                  64,
+                  67,
+                  71,
+                  75,
+                  77,
+                  79,
+                  81,
+                  84,
+                  86,
+                  89
+                ]
+              },
+              {
+                "shape": [
+                  10,
+                  25055
+                ],
+                "sha256": "6e12def5a7b1840d381b2626ecd126087b4cc4949386cac6cd904919a337fd41",
+                "isLast": false,
+                "tokens": [
+                  9752,
+                  9752,
+                  9779,
+                  9792,
+                  9959,
+                  11779,
+                  9793,
+                  12228,
+                  12273,
+                  11585,
+                  12393,
+                  9785,
+                  12781,
+                  9781,
+                  9784,
+                  9750,
+                  9759,
+                  9788,
+                  9750,
+                  11437,
+                  10811,
+                  9793,
+                  9695,
+                  9690,
+                  15208,
+                  9792,
+                  11779,
+                  13462,
+                  9766,
+                  17799,
+                  11513,
+                  9792,
+                  9879,
+                  9913,
+                  9827,
+                  17809
+                ],
+                "times": [
+                  8,
+                  11,
+                  12,
+                  14,
+                  16,
+                  19,
+                  23,
+                  26,
+                  28,
+                  31,
+                  33,
+                  36,
+                  42,
+                  44,
+                  45,
+                  47,
+                  49,
+                  52,
+                  54,
+                  56,
+                  57,
+                  59,
+                  64,
+                  67,
+                  71,
+                  75,
+                  77,
+                  79,
+                  81,
+                  84,
+                  86,
+                  89,
+                  92,
+                  94,
+                  96,
+                  98
+                ]
+              },
+              {
+                "shape": [
+                  20,
+                  25055
+                ],
+                "sha256": "4ff46b6b9e524fac1cd046102558543374a8cbe01ccd08b67942e4000befcc4e",
+                "isLast": true,
+                "tokens": [
+                  9752,
+                  9752,
+                  9779,
+                  9792,
+                  9959,
+                  11779,
+                  9793,
+                  12228,
+                  12273,
+                  11585,
+                  12393,
+                  9785,
+                  12781,
+                  9781,
+                  9784,
+                  9750,
+                  9759,
+                  9788,
+                  9750,
+                  11437,
+                  10811,
+                  9793,
+                  9695,
+                  9690,
+                  15208,
+                  9792,
+                  11779,
+                  13462,
+                  9766,
+                  17799,
+                  11513,
+                  9792,
+                  9879,
+                  9913,
+                  9827,
+                  17809,
+                  9752
+                ],
+                "times": [
+                  8,
+                  11,
+                  12,
+                  14,
+                  16,
+                  19,
+                  23,
+                  26,
+                  28,
+                  31,
+                  33,
+                  36,
+                  42,
+                  44,
+                  45,
+                  47,
+                  49,
+                  52,
+                  54,
+                  56,
+                  57,
+                  59,
+                  64,
+                  67,
+                  71,
+                  75,
+                  77,
+                  79,
+                  81,
+                  84,
+                  86,
+                  89,
+                  92,
+                  94,
+                  96,
+                  98,
+                  102
+                ]
+              }
+            ],
+            "calls": 11,
+            "audioDecodeExcluded": true
+          }
+        ],
+        "sessions": [
+          {
+            "sampleId": "file-ja",
+            "model": "sensevoice_ax650/sensevoice.axmodel",
+            "sha256": "c8895199fe0e6b9af1d64f0292a8fccb6ef2167284cb4bd40ae1491ce086797a",
+            "provider": "AXCLRTExecutionProvider",
+            "loadSeconds": 3.779063333000522,
+            "calls": 1,
+            "runMilliseconds": [
+              165.92325900273863
+            ],
+            "allFinite": true,
+            "closed": true
+          },
+          {
+            "sampleId": "streaming-ja",
+            "model": "sensevoice_ax650/streaming_sensevoice.axmodel",
+            "sha256": "d90522c47088c50a7dfe7f8827b8c7ca9a9594785b7c22963615d8ef6742a89c",
+            "provider": "AXCLRTExecutionProvider",
+            "loadSeconds": 3.1428441779935383,
+            "calls": 11,
+            "runMilliseconds": [
+              30.112686996289995,
+              30.05581199977314,
+              30.06222799740499,
+              29.949352006951813,
+              29.872351995436475,
+              29.798561001371127,
+              29.990185998030938,
+              31.0853999981191,
+              29.65505999600282,
+              29.77639399614418,
+              30.00156099733431
+            ],
+            "allFinite": true,
+            "closed": true
+          }
+        ]
+      },
+      "sourceArchiveSha256": "ee9bfdbb5e7313584796f586376d37dff2fdde11b9d8783542a2f51d009b04ed"
+    },
+    {
+      "label": "韩语识别结果",
+      "observation": "两种模式都返回韩文；分块结果存在空格和词语差异，未完成独立人工听写评估。",
+      "previews": [],
+      "audio": [
+        {
+          "caption": "韩语：本次输入音频",
+          "path": "/validation/effects/sensevoice-agenticrag-20261001/ko.mp3"
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "模式",
+            "实际转写",
+            "音频时长 / s",
+            "处理耗时 / s",
+            "实时率"
+          ],
+          "rows": [
+            [
+              "整段识别",
+              "조금만 생각을 하면서 살면 훨씬 편할 거야.",
+              "4.644",
+              "2.692",
+              "0.580"
+            ],
+            [
+              "100ms 分块识别",
+              "조 금만생각 을면서 살 훨씬변할 거야",
+              "4.644",
+              "2.545",
+              "0.548"
+            ]
+          ]
+        }
+      ],
+      "record": {
+        "modelId": "SenseVoice_AgenticRAG",
+        "revision": "748b06f6b0e43660f2092dbcf158189f543ab88c",
+        "provider": "AXCLRTExecutionProvider",
+        "completed": true,
+        "plan": {
+          "modelId": "SenseVoice_AgenticRAG",
+          "revision": "748b06f6b0e43660f2092dbcf158189f543ab88c",
+          "inferenceAttempted": false,
+          "source": [
+            {
+              "path": "python/main.py",
+              "sha256": "13f306890427b43efb0f3cddd9ba3bb48927ee4ef951fb1e6db8df89cd8ee4cf"
+            },
+            {
+              "path": "python/SenseVoiceAx.py",
+              "sha256": "0458eb193e9cf803de0ff86c51e3a75d96c87aa47daf058137d96a450afc47e3"
+            },
+            {
+              "path": "python/frontend.py",
+              "sha256": "2797cec8586fe6194215a636adcc4674348e6ea4b9d4c9fb093b43a037b8dba7"
+            },
+            {
+              "path": "python/requirements.txt",
+              "sha256": "11b9eb10198c873215811d02a377694e2ce0e0baec7e47c7424f78230fc9afab"
+            }
+          ],
+          "aliases": [
+            {
+              "primary": "sensevoice_ax650/sensevoice.axmodel",
+              "duplicate": "sensevoice_ax650/sensevoice/sensevoice.axmodel",
+              "sha256": "c8895199fe0e6b9af1d64f0292a8fccb6ef2167284cb4bd40ae1491ce086797a",
+              "basis": "Full official download SHA256; one physical weight payload with two repository paths."
+            },
+            {
+              "primary": "sensevoice_ax650/streaming_sensevoice.axmodel",
+              "duplicate": "sensevoice_ax650/sensevoice/streaming_sensevoice.axmodel",
+              "sha256": "d90522c47088c50a7dfe7f8827b8c7ca9a9594785b7c22963615d8ef6742a89c",
+              "basis": "Full official download SHA256; one physical weight payload with two repository paths."
+            }
+          ],
+          "unsupportedOnCurrentCard": [
+            "sensevoice_ax630c/sensevoice.axmodel",
+            "sensevoice_ax630c/streaming_sensevoice.axmodel"
+          ],
+          "plannedProvider": "AXCLRTExecutionProvider",
+          "cases": [
+            {
+              "id": "file-en",
+              "mode": "file",
+              "language": "en",
+              "input": "example/en.mp3",
+              "inputSha256": "f10378336a4e584f3f63799e62f99d5add3c2a401b51d3abe7d3a3a82f255ada"
+            },
+            {
+              "id": "file-zh",
+              "mode": "file",
+              "language": "zh",
+              "input": "example/zh.mp3",
+              "inputSha256": "0e64de19e4ff9a02e682955c9112f32d2317cfdbb5bc2f3504664044c993f195"
+            },
+            {
+              "id": "file-yue",
+              "mode": "file",
+              "language": "yue",
+              "input": "example/yue.mp3",
+              "inputSha256": "5098eebc13530a66e4eac1f30d3246e65c9cfc4e096665f9d395aca8eff0d181"
+            },
+            {
+              "id": "file-ja",
+              "mode": "file",
+              "language": "ja",
+              "input": "example/ja.mp3",
+              "inputSha256": "496dbc43b289e1d0d0cb916df9737450bca56acd8aaca046a7a2472363b1be53"
+            },
+            {
+              "id": "file-ko",
+              "mode": "file",
+              "language": "ko",
+              "input": "example/ko.mp3",
+              "inputSha256": "8612f62db8319a6cb4ab4b1d2039bfc32f174f89611889ddafdeb5c0a6070b5f"
+            },
+            {
+              "id": "streaming-en",
+              "mode": "streaming",
+              "language": "en",
+              "input": "example/en.mp3",
+              "inputSha256": "f10378336a4e584f3f63799e62f99d5add3c2a401b51d3abe7d3a3a82f255ada"
+            },
+            {
+              "id": "streaming-zh",
+              "mode": "streaming",
+              "language": "zh",
+              "input": "example/zh.mp3",
+              "inputSha256": "0e64de19e4ff9a02e682955c9112f32d2317cfdbb5bc2f3504664044c993f195"
+            },
+            {
+              "id": "streaming-yue",
+              "mode": "streaming",
+              "language": "yue",
+              "input": "example/yue.mp3",
+              "inputSha256": "5098eebc13530a66e4eac1f30d3246e65c9cfc4e096665f9d395aca8eff0d181"
+            },
+            {
+              "id": "streaming-ja",
+              "mode": "streaming",
+              "language": "ja",
+              "input": "example/ja.mp3",
+              "inputSha256": "496dbc43b289e1d0d0cb916df9737450bca56acd8aaca046a7a2472363b1be53"
+            },
+            {
+              "id": "streaming-ko",
+              "mode": "streaming",
+              "language": "ko",
+              "input": "example/ko.mp3",
+              "inputSha256": "8612f62db8319a6cb4ab4b1d2039bfc32f174f89611889ddafdeb5c0a6070b5f"
+            }
+          ],
+          "notes": [
+            "Use fixed original Python frontend and CTC decoder; explicitly select AXCL instead of its SoC default.",
+            "Reset streaming state between inputs; emulate 100ms chunks as the original CLI, not real microphone streaming.",
+            "No hot words; the original constructor chooses greedy CTC when hot_words=None.",
+            "Compare actual transcripts with separately attributed references; do not use repository example outputs as local results.",
+            "A repository title containing AgenticRAG is not evidence of a RAG pipeline; the supplied workflow is speech recognition.",
+            "The AX630C files are outside the current AX8850 card test; duplicate AX650 paths are byte-identical aliases, not independent runs."
+          ]
+        },
+        "filesBefore": [
+          {
+            "path": "README.md",
+            "sha256": "497d5d87022a29beacea96a8ded42ae5120f15187496d3fa6cbbb7fa10c028ec",
+            "matched": true
+          },
+          {
+            "path": "example/en.mp3",
+            "sha256": "f10378336a4e584f3f63799e62f99d5add3c2a401b51d3abe7d3a3a82f255ada",
+            "matched": true
+          },
+          {
+            "path": "example/ja.mp3",
+            "sha256": "496dbc43b289e1d0d0cb916df9737450bca56acd8aaca046a7a2472363b1be53",
+            "matched": true
+          },
+          {
+            "path": "example/ko.mp3",
+            "sha256": "8612f62db8319a6cb4ab4b1d2039bfc32f174f89611889ddafdeb5c0a6070b5f",
+            "matched": true
+          },
+          {
+            "path": "example/yue.mp3",
+            "sha256": "5098eebc13530a66e4eac1f30d3246e65c9cfc4e096665f9d395aca8eff0d181",
+            "matched": true
+          },
+          {
+            "path": "example/zh.mp3",
+            "sha256": "0e64de19e4ff9a02e682955c9112f32d2317cfdbb5bc2f3504664044c993f195",
+            "matched": true
+          },
+          {
+            "path": "python/SenseVoiceAx.py",
+            "sha256": "0458eb193e9cf803de0ff86c51e3a75d96c87aa47daf058137d96a450afc47e3",
+            "matched": true
+          },
+          {
+            "path": "python/frontend.py",
+            "sha256": "2797cec8586fe6194215a636adcc4674348e6ea4b9d4c9fb093b43a037b8dba7",
+            "matched": true
+          },
+          {
+            "path": "python/main.py",
+            "sha256": "13f306890427b43efb0f3cddd9ba3bb48927ee4ef951fb1e6db8df89cd8ee4cf",
+            "matched": true
+          },
+          {
+            "path": "sensevoice_ax650/am.mvn",
+            "sha256": "29b3c740a2c0cfc6b308126d31d7f265fa2be74f3bb095cd2f143ea970896ae5",
+            "matched": true
+          },
+          {
+            "path": "sensevoice_ax650/chn_jpn_yue_eng_ko_spectok.bpe.model",
+            "sha256": "aa87f86064c3730d799ddf7af3c04659151102cba548bce325cf06ba4da4e6a8",
+            "matched": true
+          },
+          {
+            "path": "sensevoice_ax650/sensevoice.axmodel",
+            "sha256": "c8895199fe0e6b9af1d64f0292a8fccb6ef2167284cb4bd40ae1491ce086797a",
+            "matched": true
+          },
+          {
+            "path": "sensevoice_ax650/streaming_sensevoice.axmodel",
+            "sha256": "d90522c47088c50a7dfe7f8827b8c7ca9a9594785b7c22963615d8ef6742a89c",
+            "matched": true
+          },
+          {
+            "path": "sensevoice_ax650/tokens.txt",
+            "sha256": "71ea48635d18bb2c9528e3a84f32cbfc8efe40bde25d1f89d8b81389694c7b16",
+            "matched": true
+          }
+        ],
+        "filesAfter": [
+          {
+            "path": "README.md",
+            "sha256": "497d5d87022a29beacea96a8ded42ae5120f15187496d3fa6cbbb7fa10c028ec",
+            "matched": true
+          },
+          {
+            "path": "example/en.mp3",
+            "sha256": "f10378336a4e584f3f63799e62f99d5add3c2a401b51d3abe7d3a3a82f255ada",
+            "matched": true
+          },
+          {
+            "path": "example/ja.mp3",
+            "sha256": "496dbc43b289e1d0d0cb916df9737450bca56acd8aaca046a7a2472363b1be53",
+            "matched": true
+          },
+          {
+            "path": "example/ko.mp3",
+            "sha256": "8612f62db8319a6cb4ab4b1d2039bfc32f174f89611889ddafdeb5c0a6070b5f",
+            "matched": true
+          },
+          {
+            "path": "example/yue.mp3",
+            "sha256": "5098eebc13530a66e4eac1f30d3246e65c9cfc4e096665f9d395aca8eff0d181",
+            "matched": true
+          },
+          {
+            "path": "example/zh.mp3",
+            "sha256": "0e64de19e4ff9a02e682955c9112f32d2317cfdbb5bc2f3504664044c993f195",
+            "matched": true
+          },
+          {
+            "path": "python/SenseVoiceAx.py",
+            "sha256": "0458eb193e9cf803de0ff86c51e3a75d96c87aa47daf058137d96a450afc47e3",
+            "matched": true
+          },
+          {
+            "path": "python/frontend.py",
+            "sha256": "2797cec8586fe6194215a636adcc4674348e6ea4b9d4c9fb093b43a037b8dba7",
+            "matched": true
+          },
+          {
+            "path": "python/main.py",
+            "sha256": "13f306890427b43efb0f3cddd9ba3bb48927ee4ef951fb1e6db8df89cd8ee4cf",
+            "matched": true
+          },
+          {
+            "path": "sensevoice_ax650/am.mvn",
+            "sha256": "29b3c740a2c0cfc6b308126d31d7f265fa2be74f3bb095cd2f143ea970896ae5",
+            "matched": true
+          },
+          {
+            "path": "sensevoice_ax650/chn_jpn_yue_eng_ko_spectok.bpe.model",
+            "sha256": "aa87f86064c3730d799ddf7af3c04659151102cba548bce325cf06ba4da4e6a8",
+            "matched": true
+          },
+          {
+            "path": "sensevoice_ax650/sensevoice.axmodel",
+            "sha256": "c8895199fe0e6b9af1d64f0292a8fccb6ef2167284cb4bd40ae1491ce086797a",
+            "matched": true
+          },
+          {
+            "path": "sensevoice_ax650/streaming_sensevoice.axmodel",
+            "sha256": "d90522c47088c50a7dfe7f8827b8c7ca9a9594785b7c22963615d8ef6742a89c",
+            "matched": true
+          },
+          {
+            "path": "sensevoice_ax650/tokens.txt",
+            "sha256": "71ea48635d18bb2c9528e3a84f32cbfc8efe40bde25d1f89d8b81389694c7b16",
+            "matched": true
+          }
+        ],
+        "limitations": [
+          "File chunks are processed without realtime pacing; no microphone/UI/RAG application tested.",
+          "Two distinct AX650 weights; byte-identical nested aliases are not separate executions. AX630C variants excluded."
+        ],
+        "versions": {
+          "numpy": "1.26.4",
+          "librosa": "0.11.0",
+          "kaldi-native-fbank": "1.22.3",
+          "online-fbank": "0.0.4"
+        },
+        "inferenceCompleted": true,
+        "elapsedSeconds": 76.92558883000311,
+        "traceSha256": "5ba4a1db3211591f08cf1cd128889c8265fdb92e0a64e000ae6c1cb86c30bf41",
+        "distinctExecutedWeights": 2,
+        "samples": [
+          {
+            "id": "file-ko",
+            "mode": "file",
+            "language": "ko",
+            "input": "example/ko.mp3",
+            "inputSha256": "8612f62db8319a6cb4ab4b1d2039bfc32f174f89611889ddafdeb5c0a6070b5f",
+            "sampleRate": 16000,
+            "audioSamples": 74304,
+            "durationSeconds": 4.644,
+            "seconds": 2.69225529400137,
+            "rtf": 0.5797276688202778,
+            "transcript": "조금만 생각을 하면서 살면 훨씬 편할 거야.",
+            "tokenIds": [
+              20199,
+              20288,
+              20084,
+              21814,
+              22157,
+              20372,
+              20089,
+              21845,
+              20478,
+              20073,
+              20222,
+              20137,
+              9688
+            ],
+            "streamUpdates": [],
+            "ctcDecodeEvents": [],
+            "calls": 1,
+            "audioDecodeExcluded": true
+          },
+          {
+            "id": "streaming-ko",
+            "mode": "streaming",
+            "language": "ko",
+            "input": "example/ko.mp3",
+            "inputSha256": "8612f62db8319a6cb4ab4b1d2039bfc32f174f89611889ddafdeb5c0a6070b5f",
+            "sampleRate": 16000,
+            "audioSamples": 74304,
+            "durationSeconds": 4.644,
+            "seconds": 2.5453925429974333,
+            "rtf": 0.5481034760976385,
+            "transcript": "조 금만생각 을면서 살 훨씬변할 거야",
+            "tokenIds": [],
+            "streamUpdates": [
+              {
+                "offsetSamples": 24000,
+                "elapsedSeconds": 0.4945765969969216,
+                "timestamps": [],
+                "text": ""
+              },
+              {
+                "offsetSamples": 33600,
+                "elapsedSeconds": 0.8356984529964393,
+                "timestamps": [
+                  840,
+                  1020,
+                  1200
+                ],
+                "text": "조 금만"
+              },
+              {
+                "offsetSamples": 43200,
+                "elapsedSeconds": 1.1768316839952604,
+                "timestamps": [
+                  840,
+                  1020,
+                  1200,
+                  1440,
+                  1560,
+                  1680
+                ],
+                "text": "조 금만생각 을"
+              },
+              {
+                "offsetSamples": 52800,
+                "elapsedSeconds": 1.5179646229953505,
+                "timestamps": [
+                  840,
+                  1020,
+                  1200,
+                  1440,
+                  1560,
+                  1680,
+                  2040,
+                  2280
+                ],
+                "text": "조 금만생각 을면서 살"
+              },
+              {
+                "offsetSamples": 62400,
+                "elapsedSeconds": 1.8514296079956694,
+                "timestamps": [
+                  840,
+                  1020,
+                  1200,
+                  1440,
+                  1560,
+                  1680,
+                  2040,
+                  2280,
+                  2760
+                ],
+                "text": "조 금만생각 을면서 살 훨씬"
+              },
+              {
+                "offsetSamples": 72000,
+                "elapsedSeconds": 2.2022713019978255,
+                "timestamps": [
+                  840,
+                  1020,
+                  1200,
+                  1440,
+                  1560,
+                  1680,
+                  2040,
+                  2280,
+                  2760,
+                  3180,
+                  3360,
+                  3540
+                ],
+                "text": "조 금만생각 을면서 살 훨씬변할 거"
+              },
+              {
+                "offsetSamples": 73600,
+                "elapsedSeconds": 2.5448234979994595,
+                "timestamps": [
+                  840,
+                  1020,
+                  1200,
+                  1440,
+                  1560,
+                  1680,
+                  2040,
+                  2280,
+                  2760,
+                  3180,
+                  3360,
+                  3540,
+                  3660
+                ],
+                "text": "조 금만생각 을면서 살 훨씬변할 거야"
+              }
+            ],
+            "ctcDecodeEvents": [
+              {
+                "shape": [
+                  10,
+                  25055
+                ],
+                "sha256": "da00088f4016d99ff7926496db19c235d238d4fb17531859ccf418963de2d433",
+                "isLast": false,
+                "tokens": [],
+                "times": []
+              },
+              {
+                "shape": [
+                  10,
+                  25055
+                ],
+                "sha256": "fa4dcd2dfd327dd893985b21d23d344b9c3d1302e936de9b124f839346c9669b",
+                "isLast": false,
+                "tokens": [
+                  20199,
+                  20633,
+                  20084
+                ],
+                "times": [
+                  14,
+                  17,
+                  20
+                ]
+              },
+              {
+                "shape": [
+                  10,
+                  25055
+                ],
+                "sha256": "9a70f2a5de4fa143f142e8a95ed227a838ad230581494dd6e85b53f4ab25b680",
+                "isLast": false,
+                "tokens": [
+                  20199,
+                  20633,
+                  20084,
+                  20309,
+                  20565,
+                  124,
+                  20047
+                ],
+                "times": [
+                  14,
+                  17,
+                  20,
+                  24,
+                  26,
+                  27,
+                  28
+                ]
+              },
+              {
+                "shape": [
+                  10,
+                  25055
+                ],
+                "sha256": "ea72d6cf1a60619b2438389483e9248c343786faf0085464fdc0312e4b2ae74b",
+                "isLast": false,
+                "tokens": [
+                  20199,
+                  20633,
+                  20084,
+                  20309,
+                  20565,
+                  124,
+                  20047,
+                  20362,
+                  20372
+                ],
+                "times": [
+                  14,
+                  17,
+                  20,
+                  24,
+                  26,
+                  27,
+                  28,
+                  34,
+                  38
+                ]
+              },
+              {
+                "shape": [
+                  10,
+                  25055
+                ],
+                "sha256": "82ccc8a2c5a498aced016d721b28abf9d5d53fe411329f1cbdf5ddd3313619a8",
+                "isLast": false,
+                "tokens": [
+                  20199,
+                  20633,
+                  20084,
+                  20309,
+                  20565,
+                  124,
+                  20047,
+                  20362,
+                  20372,
+                  21845
+                ],
+                "times": [
+                  14,
+                  17,
+                  20,
+                  24,
+                  26,
+                  27,
+                  28,
+                  34,
+                  38,
+                  46
+                ]
+              },
+              {
+                "shape": [
+                  10,
+                  25055
+                ],
+                "sha256": "d09837ba6ae92e4ce34d1e1c65d9bd33e4a40a0fdf557131e8259f2ac981e70c",
+                "isLast": false,
+                "tokens": [
+                  20199,
+                  20633,
+                  20084,
+                  20309,
+                  20565,
+                  124,
+                  20047,
+                  20362,
+                  20372,
+                  21845,
+                  21062,
+                  20073,
+                  20222
+                ],
+                "times": [
+                  14,
+                  17,
+                  20,
+                  24,
+                  26,
+                  27,
+                  28,
+                  34,
+                  38,
+                  46,
+                  53,
+                  56,
+                  59
+                ]
+              },
+              {
+                "shape": [
+                  17,
+                  25055
+                ],
+                "sha256": "bd797e2406b31112bfb24805187fabea5e14b5c74f5644aa2e8eb950d1e63bf1",
+                "isLast": true,
+                "tokens": [
+                  20199,
+                  20633,
+                  20084,
+                  20309,
+                  20565,
+                  124,
+                  20047,
+                  20362,
+                  20372,
+                  21845,
+                  21062,
+                  20073,
+                  20222,
+                  20137
+                ],
+                "times": [
+                  14,
+                  17,
+                  20,
+                  24,
+                  26,
+                  27,
+                  28,
+                  34,
+                  38,
+                  46,
+                  53,
+                  56,
+                  59,
+                  61
+                ]
+              }
+            ],
+            "calls": 7,
+            "audioDecodeExcluded": true
+          }
+        ],
+        "sessions": [
+          {
+            "sampleId": "file-ko",
+            "model": "sensevoice_ax650/sensevoice.axmodel",
+            "sha256": "c8895199fe0e6b9af1d64f0292a8fccb6ef2167284cb4bd40ae1491ce086797a",
+            "provider": "AXCLRTExecutionProvider",
+            "loadSeconds": 3.82815236299939,
+            "calls": 1,
+            "runMilliseconds": [
+              166.15105199889513
+            ],
+            "allFinite": true,
+            "closed": true
+          },
+          {
+            "sampleId": "streaming-ko",
+            "model": "sensevoice_ax650/streaming_sensevoice.axmodel",
+            "sha256": "d90522c47088c50a7dfe7f8827b8c7ca9a9594785b7c22963615d8ef6742a89c",
+            "provider": "AXCLRTExecutionProvider",
+            "loadSeconds": 3.1377604869994684,
+            "calls": 7,
+            "runMilliseconds": [
+              44.41754800063791,
+              29.923394999059383,
+              33.466870001575444,
+              32.1424060020945,
+              32.35532300459454,
+              32.421531999716535,
+              33.347577998938505
+            ],
+            "allFinite": true,
+            "closed": true
+          }
+        ]
+      },
+      "sourceArchiveSha256": "ee9bfdbb5e7313584796f586376d37dff2fdde11b9d8783542a2f51d009b04ed"
+    }
+  ]
+}

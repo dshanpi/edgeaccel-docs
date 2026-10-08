@@ -1,0 +1,84 @@
+{
+  "modelId": "yolo11-obb",
+  "repo": "AXERA-TECH/yolo11-obb",
+  "revision": "c4b6bb36c9de0f874d3bf5dfaaacda3d1ed2092c",
+  "files": [
+    {
+      "path": "ax_infer.py",
+      "size": 9869,
+      "verifiedHashes": {
+        "sha256": "8fccc3ba5e7619982c227f52a272c5a85bd73a65d206ff68608ef158ee11ba3a"
+      }
+    },
+    {
+      "path": "boats.jpg",
+      "size": 194872,
+      "verifiedHashes": {
+        "sha256": "8c5ada657cf8110a9f8aaac954c1dd96cde0187315b581276c32b0d1863e756f"
+      }
+    },
+    {
+      "path": "650/yolo11l-obb_640x640_npu1.axmodel",
+      "size": 28032611,
+      "verifiedHashes": {
+        "sha256": "caaf00a67c40b994e3b79bcdbdfd7dd7484ddd4ef4d432cae84837e928b76825"
+      }
+    },
+    {
+      "path": "650/yolo11l-obb_640x640_npu3.axmodel",
+      "size": 28750531,
+      "verifiedHashes": {
+        "sha256": "12cf3661d8cfd172bafcf001dd8c1e0711b48a84021411807fb189dd546f44e2"
+      }
+    },
+    {
+      "path": "650/yolo11m-obb_640x640_npu1.axmodel",
+      "size": 22351443,
+      "verifiedHashes": {
+        "sha256": "6c481087ff5ae20463aa0198edca9aa73d9bea38766313c500dab8024acdb8c6"
+      }
+    },
+    {
+      "path": "650/yolo11m-obb_640x640_npu3.axmodel",
+      "size": 22901523,
+      "verifiedHashes": {
+        "sha256": "6b1f8d872f512cc360b40c352770ff93c826ed47f156d0f368c6388c4a929f95"
+      }
+    },
+    {
+      "path": "650/yolo11n-obb_640x640_npu1.axmodel",
+      "size": 3088173,
+      "verifiedHashes": {
+        "sha256": "e0d469d033a1c0a6f0af2fd87af02cabe6f42af5467a433c78d111a318b39b62"
+      }
+    },
+    {
+      "path": "650/yolo11s-obb_640x640_npu1.axmodel",
+      "size": 10483279,
+      "verifiedHashes": {
+        "sha256": "575d02031441f645e18eecadcb97bdaffbefdc87c95bae16e5c30f30c4c8c134"
+      }
+    },
+    {
+      "path": "650/yolo11s-obb_640x640_npu3.axmodel",
+      "size": 10846091,
+      "verifiedHashes": {
+        "sha256": "e14176192888652f2ec74114d68eda88ac6176dab63f4df192e78c188af8bd4a"
+      }
+    },
+    {
+      "path": "650/yolo11x-obb_640x640_npu1.axmodel",
+      "size": 61734245,
+      "verifiedHashes": {
+        "sha256": "686df166c9eb0561ede82c97fb9b6d00a371625db9eca2314f05dcae655dd71f"
+      }
+    },
+    {
+      "path": "650/yolo11x-obb_640x640_npu3.axmodel",
+      "size": 62249829,
+      "verifiedHashes": {
+        "sha256": "57b8aac5c34c62162d8044b5665860f0a8a7bcb2a0efb07ad811f6a422b05885"
+      }
+    }
+  ]
+}

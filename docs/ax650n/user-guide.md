@@ -34,6 +34,6 @@ flowchart LR
 1. 按[设备检查](../usage/device-check.md)保存设备状态。
 2. 按[下载模型](../usage/download-models.md)保存仓库版本、模型与样例图片。
 3. 使用 [YOLO11 检测示例](../models/deploy/yolo11.md)确认真实图片的推理结果。
-4. 根据[模型选择说明](../models/selection.md)逐项增加任务。先运行单模型，再增加视频路数或服务并发。
+4. 根据[模型选择说明](../models/selection.mdx)逐项增加任务。先运行单模型，再增加视频路数或服务并发。
 
 模型可以加载不等于业务效果已通过，单次运行也不等于长期稳定。按[验证模板](../reference/validation.md)分别记录。

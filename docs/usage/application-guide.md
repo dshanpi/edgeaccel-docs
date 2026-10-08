@@ -12,9 +12,9 @@ pagination_next: null
 
 | 需要完成的任务 | 阅读入口 |
 |---|---|
-| 在 Python 程序中加载模型 | [通过 Python 调用算力卡](python.md) |
-| 通过 HTTP 调用文本或多模态服务 | [通过 HTTP 接入大模型](api-service.md) |
-| 将图片推理扩展到文件、摄像头或网络视频流 | [处理视频与接入视频流](video.md) |
+| 用 Python 完成 YOLOv8n 图片检测 | [通过 Python 调用算力卡](python.md) |
+| 通过 HTTP 调用 Qwen3-0.6B 中文问答 | [通过 HTTP 接入大模型](api-service.md) |
+| 将图片推理扩展到本地视频与 HTTP 视频输入 | [处理视频与接入视频流](video.md) |
 | 运行多路检测、分割、深度与跟踪演示 | [AX8850 六路 AI 视频推流](../projects/six-streams.md) |
 
 ## 检查与维护运行环境

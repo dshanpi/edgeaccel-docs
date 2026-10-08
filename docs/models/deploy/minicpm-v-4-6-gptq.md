@@ -162,7 +162,7 @@ PY
 
 ## 查看部署效果
 
-**固定样例已核对** · 2026-09-23 · RK3576 DshanPi A1 + AX8850 8GB M.2。以下输入与输出来自本页固定版本的实际运行。
+**固定样例已核对** · RK3576 DshanPi A1 + AX8850 8GB M.2。以下输入与输出来自本页固定版本的实际运行。
 
 同一张图片的三组固定问答已核对：英文描述识别出三名白色宇航服人物与树林，人数为三人，中文简短描述与画面的大体内容相符。结论只覆盖这张图片和本页三次请求。
 
@@ -225,7 +225,7 @@ There are three people in the image, all wearing astronaut suits. They appear to
 <details>
 <summary>查看样例环境与运行耗时</summary>
 
-环境：RK3576 DshanPi A1 + AX8850 8GB M.2。日期：2026-09-23。模型版本：`7ee5a562b9b5ae6185f2fa05dc343a3416df14f8`。
+环境：RK3576 DshanPi A1 + AX8850 8GB M.2。模型版本：`7ee5a562b9b5ae6185f2fa05dc343a3416df14f8`。
 
 | 组件 | 版本或配置 |
 | --- | --- |
@@ -246,8 +246,6 @@ There are three people in the image, all wearing astronaut suits. They appear to
 
 适用范围：
 
-- 这里只核对人数、服装与大体场景，未开展数据集精度或复杂视觉推理评测。
-- 此版本只实测单张图片；上游视频演示不作为本机视频结果。
 - 仅执行本页列出的短请求，未测试长期稳定性、并发或最大上下文；上游板端性能不作为本机结果。
 
 </details>

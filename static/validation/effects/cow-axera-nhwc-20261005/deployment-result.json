@@ -1,0 +1,97 @@
+{
+  "modelId": "Cow-axera",
+  "revision": "e1b24eb694c6a4420f2e4278dd7e2f77ede3805d",
+  "date": "2026-10-05",
+  "variants": [
+    {
+      "label": "cow · cow_ax650_nhwc_npu3.axmodel",
+      "observation": "三个cow框：左侧黑牛0.94，前景棕牛0.95，后方遮挡黑牛0.76；框与可见目标相符。",
+      "previews": [
+        {
+          "caption": "输入：000000235857.jpg",
+          "path": "/validation/effects/cow-axera-nhwc-20261005/inputs/cow.jpg"
+        },
+        {
+          "caption": "NHWC实际输出：cow",
+          "path": "/validation/effects/cow-axera-nhwc-20261005/outputs/cow.jpg"
+        }
+      ],
+      "tables": [],
+      "record": {
+        "completed": true,
+        "provider": "AXCLRTExecutionProvider",
+        "inferenceEvidence": "fixed-nhwc-vision-samples",
+        "modelId": "Cow-axera",
+        "revision": "e1b24eb694c6a4420f2e4278dd7e2f77ede3805d",
+        "actualCapacity": "16GB",
+        "case": "cow",
+        "inputFile": "000000235857.jpg",
+        "inputSha256": "7682054b9d4649b1bc46ab6d78fd55c50dc9ddece5341ea69259000a94e3c0de",
+        "inputPath": "/validation/effects/cow-axera-nhwc-20261005/inputs/cow.jpg",
+        "inputShape": [
+          1,
+          320,
+          480,
+          3
+        ],
+        "inputLayout": "NHWC",
+        "colorOrder": "RGB from original NCHW preprocessing",
+        "sourceScript": "axmodel_infer_cow_yolov5.py",
+        "sourceScriptSha256": "adb1dbb3c49b0de37685b147c849ca5e6513aecdd4b6e218beb291140af944e5",
+        "adapterSha256": "02657a999a22684b10b8923ae5f3fc934baa05c5dee39e4f9e09ad6a88eef7ca",
+        "customerBundleFiles": {
+          "vision_nhwc.py": "6e52df5f5d63c76e7700e6f184d342a1d714f6e0edbb9b102efa45a4d250efb1",
+          "_vision_nhwc_runtime.py": "02657a999a22684b10b8923ae5f3fc934baa05c5dee39e4f9e09ad6a88eef7ca",
+          "plan.json": "efaf9f158e55093b8cbdd3806ca4934aedddfa01c3146c028b000c709d2a48c5",
+          "io.json": "5eed4a7de8bacc6c5935c3d9057ba8bcfc3683731e57f27aa8660e90f45dbb97"
+        },
+        "originalFilesUnchanged": true,
+        "independentRuns": 3,
+        "rawOutputsExact": true,
+        "visualizationsExact": true,
+        "customerCommandVerified": true,
+        "sessions": [
+          {
+            "model": "AX650/cow_ax650_nhwc_npu3.axmodel",
+            "sha256": "f43839fe52953c29b57f8c6271b9cc29d8283b6fda1953a094d2b97e8f712dbf",
+            "allFinite": true,
+            "runMilliseconds": [
+              8.666026000014426,
+              9.110526999961621,
+              9.362244999920222
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "path": "axmodel_res.jpg",
+            "sha256": "a120bd6f167173a8dc88da2349dfba2e29ab98641a63b63d75efae1d7aed53d3",
+            "shape": [
+              426,
+              640,
+              3
+            ]
+          }
+        ],
+        "semanticObservation": "三个cow框：左侧黑牛0.94，前景棕牛0.95，后方遮挡黑牛0.76；框与可见目标相符。",
+        "calls": [
+          {
+            "inputSha256": "9e1b5d7dc50a9df95da1377c70b7caa5c81f7cb7ceb684281fbecb4dee8a604c",
+            "outputSha256": "978f27f777fcc41beda04dc00fcafc060877a3f185feff6939d2b3f7a57073dd",
+            "milliseconds": 8.666026000014426
+          },
+          {
+            "inputSha256": "9e1b5d7dc50a9df95da1377c70b7caa5c81f7cb7ceb684281fbecb4dee8a604c",
+            "outputSha256": "978f27f777fcc41beda04dc00fcafc060877a3f185feff6939d2b3f7a57073dd",
+            "milliseconds": 9.110526999961621
+          },
+          {
+            "inputSha256": "9e1b5d7dc50a9df95da1377c70b7caa5c81f7cb7ceb684281fbecb4dee8a604c",
+            "outputSha256": "978f27f777fcc41beda04dc00fcafc060877a3f185feff6939d2b3f7a57073dd",
+            "milliseconds": 9.362244999920222
+          }
+        ]
+      }
+    }
+  ]
+}

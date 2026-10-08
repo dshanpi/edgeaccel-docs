@@ -165,9 +165,9 @@ PY
 
 ### context-2k-prefill-1k
 
-**已运行，效果仍需评估** · 2026-09-29 · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
+**已运行，效果仍需评估** · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
 
-三条独立问答与两轮短对话均完成。算术、中文用途说明、JSON和代码回忆符合本次样例要求；首次确认回复多了句号。
+固定问答已返回文本，但短对话回复附加句点，未遵守仅输出 OK 或数字的要求；本次格式要求未通过。
 
 **示例 1：输入**
 
@@ -262,9 +262,9 @@ What code did I ask you to remember? Reply only with the digits.
 
 ### context-2k-prefill-1500
 
-**已运行，效果仍需评估** · 2026-09-29 · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
+**已运行，效果仍需评估** · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
 
-三条独立问答与两轮短对话均完成。算术、中文用途说明、JSON和代码回忆符合本次样例要求；首次确认回复多了句号。
+固定问答已返回文本，但短对话回复附加句点，未遵守仅输出 OK 或数字的要求；本次格式要求未通过。
 
 **示例 1：输入**
 
@@ -359,9 +359,9 @@ What code did I ask you to remember? Reply only with the digits.
 
 ### context-2500-prefill-2k
 
-**已运行，效果仍需评估** · 2026-09-29 · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
+**已运行，效果仍需评估** · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
 
-三条独立问答与两轮短对话均完成。算术、中文用途说明、JSON和代码回忆符合本次样例要求；首次确认回复多了句号。
+固定问答已返回文本，但短对话回复附加句点，未遵守仅输出 OK 或数字的要求；本次格式要求未通过。
 
 **示例 1：输入**
 
@@ -459,7 +459,7 @@ What code did I ask you to remember? Reply only with the digits.
 <details>
 <summary>查看样例环境与运行耗时</summary>
 
-环境：RK3576 + AX8850 16GB M.2。日期：2026-09-29。模型版本：`f93afe51b24b084020f6fd32c666b2e7fd4c7d31`。
+环境：RK3576 + AX8850 16GB M.2。模型版本：`f93afe51b24b084020f6fd32c666b2e7fd4c7d31`。
 
 | 组件 | 版本或配置 |
 | --- | --- |
@@ -475,8 +475,6 @@ What code did I ask you to remember? Reply only with the digits.
 
 适用范围：
 
-- 只覆盖所列短输入，首次确认回复OK.含额外句号；不代表完整题集质量、长上下文或持续运行已通过。
-- 本次使用16GB卡，实际8GB容量需单独回归。
 - 目录名称表示上游编译规格，本次未测最大可用上下文、并发或长期运行。
 
 </details>
@@ -486,7 +484,7 @@ What code did I ask you to remember? Reply only with the digits.
 <details>
 <summary>查看样例环境与运行耗时</summary>
 
-环境：RK3576 + AX8850 16GB M.2。日期：2026-09-29。模型版本：`f93afe51b24b084020f6fd32c666b2e7fd4c7d31`。
+环境：RK3576 + AX8850 16GB M.2。模型版本：`f93afe51b24b084020f6fd32c666b2e7fd4c7d31`。
 
 | 组件 | 版本或配置 |
 | --- | --- |
@@ -502,8 +500,6 @@ What code did I ask you to remember? Reply only with the digits.
 
 适用范围：
 
-- 只覆盖所列短输入，首次确认回复OK.含额外句号；不代表完整题集质量、长上下文或持续运行已通过。
-- 本次使用16GB卡，实际8GB容量需单独回归。
 - 目录名称表示上游编译规格，本次未测最大可用上下文、并发或长期运行。
 
 </details>
@@ -513,7 +509,7 @@ What code did I ask you to remember? Reply only with the digits.
 <details>
 <summary>查看样例环境与运行耗时</summary>
 
-环境：RK3576 + AX8850 16GB M.2。日期：2026-09-29。模型版本：`f93afe51b24b084020f6fd32c666b2e7fd4c7d31`。
+环境：RK3576 + AX8850 16GB M.2。模型版本：`f93afe51b24b084020f6fd32c666b2e7fd4c7d31`。
 
 | 组件 | 版本或配置 |
 | --- | --- |
@@ -529,8 +525,6 @@ What code did I ask you to remember? Reply only with the digits.
 
 适用范围：
 
-- 只覆盖所列短输入，首次确认回复OK.含额外句号；不代表完整题集质量、长上下文或持续运行已通过。
-- 本次使用16GB卡，实际8GB容量需单独回归。
 - 目录名称表示上游编译规格，本次未测最大可用上下文、并发或长期运行。
 
 </details>

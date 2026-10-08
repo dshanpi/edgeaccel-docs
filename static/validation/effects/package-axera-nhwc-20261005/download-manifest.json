@@ -1,0 +1,28 @@
+{
+  "modelId": "Package-axera",
+  "repo": "AXERA-TECH/Package-axera",
+  "revision": "b8943b1189b6e09e7fa819bf43bc7dcaeb8532dd",
+  "files": [
+    {
+      "path": "ax_pkg_infer.py",
+      "bytes": 10505,
+      "verifiedHashes": {
+        "sha256": "a647830ae9ebccda03c3298892fb11f0d96b0e0578b9efba5a15b39a72e1fb20"
+      }
+    },
+    {
+      "path": "package.jpg",
+      "bytes": 116953,
+      "verifiedHashes": {
+        "sha256": "adbe141b305a51d39b0439b2fa9909f4e690458020f194d9a0b4d09d79c35c09"
+      }
+    },
+    {
+      "path": "AX650/ax_ax650_package_algo_model_rgb_nhwc_V2.0.0.axmodel",
+      "bytes": 1382257,
+      "verifiedHashes": {
+        "sha256": "2d47bae80d81890b3e3f6bf391d407a0a27f493ca73b3df197fabcc8dd4f9a4f"
+      }
+    }
+  ]
+}

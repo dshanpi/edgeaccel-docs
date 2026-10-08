@@ -1,0 +1,35 @@
+{
+  "modelId": "Person_car-axera",
+  "repo": "AXERA-TECH/Person_car-axera",
+  "revision": "20e3e18e65c7874da8e6dbe65e248dfb5a48ddde",
+  "files": [
+    {
+      "path": "ax_pcd_infer.py",
+      "bytes": 10094,
+      "verifiedHashes": {
+        "sha256": "8bc6e0f916326f00a4e858d4d91d49bf123c3d144fe8e26d3d95b8e96a1443c3"
+      }
+    },
+    {
+      "path": "car_away_1920x1080.jpg",
+      "bytes": 765627,
+      "verifiedHashes": {
+        "sha256": "fbf29eb4d94167142cc14c92f735f4964e8f21fcbeb2bf82098687821cd8c966"
+      }
+    },
+    {
+      "path": "AX650/ax_ax650_pcd_max_800_480_rgb_nhwc_V2.0.0.axmodel",
+      "bytes": 5860793,
+      "verifiedHashes": {
+        "sha256": "e7db7f38eebb25aac6642746fa61873ec2b38403cf496bfa480e10c7d75104e3"
+      }
+    },
+    {
+      "path": "AX650/ax_ax650_pcd_tiny_algo_rgb_nhwc_V2.0.0.axmodel",
+      "bytes": 762444,
+      "verifiedHashes": {
+        "sha256": "41fb98d1b7adfd82db67621871c6b269567c7bf7a04893f997be1d57cd6ca26b"
+      }
+    }
+  ]
+}

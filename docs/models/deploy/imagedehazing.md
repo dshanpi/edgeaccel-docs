@@ -86,15 +86,15 @@ done
 
 ## 查看部署效果
 
-**已运行，效果仍需评估** · 2026-09-23 · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
+**已运行，效果仍需评估** · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。
 
-AOD-Net、DehazeFormer、FFA-Net、GridDehazeNet、LightDehazeNet、MixDehazeNet 与 GCANet 全部完成样例推理。下方展示各算法实际输出；部分结果偏暗或细节变软。
+七种去雾权重均完成样例推理。部分样例的楼体或山体对比度提高，但也存在暗部过暗、偏色和细节变软；FFA-Net 的输出还改变了原图宽高比，去雾质量尚未通过核对。
 
 以下图片由本次运行生成，点击可查看原尺寸。各算法的输入、模型分辨率和后处理不同，不能直接根据这些样例比较算法优劣。
 
 **AOD-Net**
 
-左为原图，右为去雾输出。山体和天空对比度提高，前景较暗。
+山体、田地和天空的对比度提高，人物与前景明显变暗，衣物和草地的暗部细节减少；主体位置和轮廓保留。
 
 <div className="model-effect-gallery">
 
@@ -109,7 +109,7 @@ AOD-Net、DehazeFormer、FFA-Net、GridDehazeNet、LightDehazeNet、MixDehazeNet
 
 **DehazeFormer**
 
-左为原图，右为去雾输出。灰雾减轻，画面整体偏绿、偏暗。
+树枝周围的灰雾减轻，但整体偏绿、偏暗；不能据此认定恢复了真实颜色。
 
 <div className="model-effect-gallery">
 
@@ -124,7 +124,7 @@ AOD-Net、DehazeFormer、FFA-Net、GridDehazeNet、LightDehazeNet、MixDehazeNet
 
 **FFA-Net**
 
-输出按官方脚本缩放为 512×512。道路场景仍偏暗，图像生成不代表去雾质量已经通过。
+道路、车辆和路牌仍可辨认，但整体较原图更暗，近处车辆和树木的暗部细节损失。输出按官方脚本缩放为 512×512，原图宽高比没有保留。
 
 <div className="model-effect-gallery">
 
@@ -146,7 +146,7 @@ AOD-Net、DehazeFormer、FFA-Net、GridDehazeNet、LightDehazeNet、MixDehazeNet
 
 **GridDehazeNet**
 
-左为原图，右为去雾输出。楼体对比度提高。
+楼体、窗格和远处建筑的对比度提高，红色外墙更鲜明，楼体结构保留；没有无雾参考图，不能判断颜色准确性。
 
 <div className="model-effect-gallery">
 
@@ -161,7 +161,7 @@ AOD-Net、DehazeFormer、FFA-Net、GridDehazeNet、LightDehazeNet、MixDehazeNet
 
 **LightDehazeNet**
 
-左为原图，右为去雾输出。建筑轮廓更明显，黄色色调仍然存在。
+屋檐、红旗和树枝的轮廓更明显，黄色色调仍然存在，前景花坛更暗。
 
 <div className="model-effect-gallery">
 
@@ -176,7 +176,7 @@ AOD-Net、DehazeFormer、FFA-Net、GridDehazeNet、LightDehazeNet、MixDehazeNet
 
 **MixDehazeNet**
 
-左为原图，右为去雾输出。天空颜色更深，但建筑细节变软。
+天空更蓝、建筑对比度提高，但建筑网格、车身和路灯边缘明显变软；清晰度未随去雾同步改善。
 
 <div className="model-effect-gallery">
 
@@ -191,7 +191,7 @@ AOD-Net、DehazeFormer、FFA-Net、GridDehazeNet、LightDehazeNet、MixDehazeNet
 
 **GCANet**
 
-左为原图，右为去雾输出。建筑和绿植对比度提高。
+建筑窗格和绿植更易辨认，主体结构保留；树冠暗部变深，部分阴影细节减少。
 
 <div className="model-effect-gallery">
 
@@ -206,15 +206,15 @@ AOD-Net、DehazeFormer、FFA-Net、GridDehazeNet、LightDehazeNet、MixDehazeNet
 
 **使用时注意：**
 
+- 本次观察到暗部细节减少、偏色或边缘变软；FFA-Net 按原脚本输出正方形，原始宽高比未保留。
 - 每种算法仅使用一张配套图片；没有无雾参考图，未计算 PSNR、SSIM 或完整数据集指标。
-- 使用 16GB 算力卡，未验证 8GB 容量、并发或长期连续运行。
 
 这些结果用于对照部署后的输出，未覆盖完整数据集精度或长期连续运行。
 
 <details>
 <summary>查看样例环境与运行耗时</summary>
 
-环境：RK3576 + AX8850 16GB M.2。日期：2026-09-23。模型版本：`6a15e0cc1436740ccef0e6f0fe50324b2cdef49b`。
+环境：RK3576 + AX8850 16GB M.2。模型版本：`6a15e0cc1436740ccef0e6f0fe50324b2cdef49b`。
 
 | 组件 | 版本或配置 |
 | --- | --- |
@@ -238,7 +238,6 @@ AOD-Net、DehazeFormer、FFA-Net、GridDehazeNet、LightDehazeNet、MixDehazeNet
 
 适用范围：
 
-- 每种算法仅使用一张配套图片；没有无雾参考图，未计算 PSNR、SSIM 或完整数据集指标。
 - 使用 16GB 算力卡，未验证 8GB 容量、并发或长期连续运行。
 
 </details>

@@ -1,0 +1,42 @@
+{
+  "modelId": "yolo26",
+  "repo": "AXERA-TECH/yolo26",
+  "revision": "29a97acdbe26f65c2f786bb32fb75023a0714b69",
+  "files": [
+    {
+      "path": "bus.jpg",
+      "size": 487438,
+      "verifiedHashes": {
+        "sha256": "33b198a1d2839bb9ac4c65d61f9e852196793cae9a0781360859425f6022b69c"
+      }
+    },
+    {
+      "path": "ax650/yolo26l.axmodel",
+      "size": 27341319,
+      "verifiedHashes": {
+        "sha256": "ed7d96431dd1812fa4516971fcc94be1d943228e5eabadf542aeed93e7fb2c79"
+      }
+    },
+    {
+      "path": "ax650/yolo26m.axmodel",
+      "size": 22435073,
+      "verifiedHashes": {
+        "sha256": "67c65847164352837a6b5b3a65aba80cd19752f2022b624d5d3a15fba10f82a6"
+      }
+    },
+    {
+      "path": "ax650/yolo26s.axmodel",
+      "size": 10722861,
+      "verifiedHashes": {
+        "sha256": "5e414680ae60d456b78ff8531cb1437c6d79db861a9124fb01d01461638578e2"
+      }
+    },
+    {
+      "path": "ax650/yolo26x.axmodel",
+      "size": 59086823,
+      "verifiedHashes": {
+        "sha256": "df0972d48edaf4d82fc6b04cf3163ef4f732f4e961c66d0a3f349007820fa3a2"
+      }
+    }
+  ]
+}

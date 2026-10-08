@@ -1,0 +1,105 @@
+{
+  "modelId": "PPOCR_v6",
+  "repo": "AXERA-TECH/PPOCR_v6",
+  "revision": "932f227f22b4f838d2cff2b54161aafe30d77a80",
+  "files": [
+    {
+      "path": "11.jpg",
+      "size": 48680,
+      "verifiedHashes": {
+        "sha256": "2bb78629be3a6b29025d85db3677642c267d0ff176706ab963e8cb0c132df10b"
+      }
+    },
+    {
+      "path": "README.md",
+      "size": 6688,
+      "verifiedHashes": {
+        "sha256": "ec2aae5667045d4023b3764cefd566fbb88e758c1f83e1354d7bdbfb5d2faab0"
+      }
+    },
+    {
+      "path": "config.json",
+      "size": 0,
+      "verifiedHashes": {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "path": "fonts/simfang.ttf",
+      "size": 10576012,
+      "verifiedHashes": {
+        "sha256": "521c6f7546b4eb64fa4b0cd604bbd36333a20a57e388c8e2ad2ad07b9e593864"
+      }
+    },
+    {
+      "path": "onnx/rec_inference.yml",
+      "size": 150579,
+      "verifiedHashes": {
+        "sha256": "ab078671bb49f06228eadccd34f1bb501e157f7a047095ffb943ba81512c77d1"
+      }
+    },
+    {
+      "path": "ppocrv6_ax.py",
+      "size": 29804,
+      "verifiedHashes": {
+        "sha256": "d82da2f43097a9a0b2e0847737c47b564d24723553e1dc6f8e1680b244c828c7"
+      }
+    },
+    {
+      "path": "ppocrv6_onnx.py",
+      "size": 29928,
+      "verifiedHashes": {
+        "sha256": "300968bf52295e1ccf27db35d77c686002cca355e9c0d7474794cf1b35215978"
+      }
+    },
+    {
+      "path": "run_det_ax.py",
+      "size": 33200,
+      "verifiedHashes": {
+        "sha256": "8d3448e0dda2af13b4bce49abbe540b690cc0ff7f089874b22d088eb4d82872d"
+      }
+    },
+    {
+      "path": "run_det_onnx.py",
+      "size": 34112,
+      "verifiedHashes": {
+        "sha256": "50ec485a415a1332661da0941326844d384be884da38dc302d3aa16d24113073"
+      }
+    },
+    {
+      "path": "run_rec_ax.py",
+      "size": 12959,
+      "verifiedHashes": {
+        "sha256": "05144483026079dbdfd867152d2dadcada34722bbe16b04755b8b619d6ce682c"
+      }
+    },
+    {
+      "path": "run_rec_onnx.py",
+      "size": 17034,
+      "verifiedHashes": {
+        "sha256": "74325ebb2a8a94aa9d36d87d5259f84238d03df7ffb0a28e0cd33dc398a63969"
+      }
+    },
+    {
+      "path": "axmodel/ax650/cls_npu3.axmodel",
+      "size": 786685,
+      "verifiedHashes": {
+        "sha256": "db63d3946a4af62533a939a2e7121f595fdac931cddb57413d4f9a3099a0e17a"
+      }
+    },
+    {
+      "path": "axmodel/ax650/det_npu3.axmodel",
+      "size": 4264170,
+      "verifiedHashes": {
+        "sha256": "07e1f5ca9369076b0a7bafeffef2456f24394cfe9beac048e6403cd3f901c885"
+      }
+    },
+    {
+      "path": "axmodel/ax650/rec_npu3.axmodel",
+      "size": 6904074,
+      "verifiedHashes": {
+        "sha256": "722fcd568848065549ed9d6a190c12790eae7ef81e7e5ff593905c302d90432a"
+      }
+    }
+  ]
+}

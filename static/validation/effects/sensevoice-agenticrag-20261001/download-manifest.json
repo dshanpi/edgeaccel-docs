@@ -1,0 +1,135 @@
+{
+  "modelId": "SenseVoice_AgenticRAG",
+  "repo": "AXERA-TECH/SenseVoice_AgenticRAG",
+  "revision": "748b06f6b0e43660f2092dbcf158189f543ab88c",
+  "complete": true,
+  "files": [
+    {
+      "path": "README.md",
+      "size": 4104,
+      "url": "https://huggingface.co/AXERA-TECH/SenseVoice_AgenticRAG/resolve/748b06f6b0e43660f2092dbcf158189f543ab88c/README.md",
+      "verifiedHashes": {
+        "sha256": "497d5d87022a29beacea96a8ded42ae5120f15187496d3fa6cbbb7fa10c028ec",
+        "gitBlob": "ed372464dd33ffe19d38be316898b28f7071f5ec"
+      }
+    },
+    {
+      "path": "example/en.mp3",
+      "size": 57441,
+      "url": "https://huggingface.co/AXERA-TECH/SenseVoice_AgenticRAG/resolve/748b06f6b0e43660f2092dbcf158189f543ab88c/example/en.mp3",
+      "verifiedHashes": {
+        "sha256": "f10378336a4e584f3f63799e62f99d5add3c2a401b51d3abe7d3a3a82f255ada",
+        "gitBlob": "325005e60db535f24f5b3d9504b209704031bdb4"
+      }
+    },
+    {
+      "path": "example/ja.mp3",
+      "size": 57837,
+      "url": "https://huggingface.co/AXERA-TECH/SenseVoice_AgenticRAG/resolve/748b06f6b0e43660f2092dbcf158189f543ab88c/example/ja.mp3",
+      "verifiedHashes": {
+        "sha256": "496dbc43b289e1d0d0cb916df9737450bca56acd8aaca046a7a2472363b1be53",
+        "gitBlob": "b3056dd92c8a0210eb8f786662a4528e31b44942"
+      }
+    },
+    {
+      "path": "example/ko.mp3",
+      "size": 27909,
+      "url": "https://huggingface.co/AXERA-TECH/SenseVoice_AgenticRAG/resolve/748b06f6b0e43660f2092dbcf158189f543ab88c/example/ko.mp3",
+      "verifiedHashes": {
+        "sha256": "8612f62db8319a6cb4ab4b1d2039bfc32f174f89611889ddafdeb5c0a6070b5f",
+        "gitBlob": "3e67ab481230742d41e27adb63f5091cec39a7db"
+      }
+    },
+    {
+      "path": "example/yue.mp3",
+      "size": 31246,
+      "url": "https://huggingface.co/AXERA-TECH/SenseVoice_AgenticRAG/resolve/748b06f6b0e43660f2092dbcf158189f543ab88c/example/yue.mp3",
+      "verifiedHashes": {
+        "sha256": "5098eebc13530a66e4eac1f30d3246e65c9cfc4e096665f9d395aca8eff0d181",
+        "gitBlob": "a67e8f862132e61d867854dd5e6e4d28af57b55a"
+      }
+    },
+    {
+      "path": "example/zh.mp3",
+      "size": 44973,
+      "url": "https://huggingface.co/AXERA-TECH/SenseVoice_AgenticRAG/resolve/748b06f6b0e43660f2092dbcf158189f543ab88c/example/zh.mp3",
+      "verifiedHashes": {
+        "sha256": "0e64de19e4ff9a02e682955c9112f32d2317cfdbb5bc2f3504664044c993f195",
+        "gitBlob": "1ae2c89b29112ee5e23bcebc353ea6687c38e6bd"
+      }
+    },
+    {
+      "path": "python/SenseVoiceAx.py",
+      "size": 12509,
+      "url": "https://huggingface.co/AXERA-TECH/SenseVoice_AgenticRAG/resolve/748b06f6b0e43660f2092dbcf158189f543ab88c/python/SenseVoiceAx.py",
+      "verifiedHashes": {
+        "sha256": "0458eb193e9cf803de0ff86c51e3a75d96c87aa47daf058137d96a450afc47e3",
+        "gitBlob": "305ca0bf42f34b3240b1830982d085bbc1acf6f4"
+      }
+    },
+    {
+      "path": "python/frontend.py",
+      "size": 17726,
+      "url": "https://huggingface.co/AXERA-TECH/SenseVoice_AgenticRAG/resolve/748b06f6b0e43660f2092dbcf158189f543ab88c/python/frontend.py",
+      "verifiedHashes": {
+        "sha256": "2797cec8586fe6194215a636adcc4674348e6ea4b9d4c9fb093b43a037b8dba7",
+        "gitBlob": "5f8873d37da8c08d0e3a51b7b61e46b11339f131"
+      }
+    },
+    {
+      "path": "python/main.py",
+      "size": 2108,
+      "url": "https://huggingface.co/AXERA-TECH/SenseVoice_AgenticRAG/resolve/748b06f6b0e43660f2092dbcf158189f543ab88c/python/main.py",
+      "verifiedHashes": {
+        "sha256": "13f306890427b43efb0f3cddd9ba3bb48927ee4ef951fb1e6db8df89cd8ee4cf",
+        "gitBlob": "9ae6c85a260f4ad68e34ac3bc7930a0926e93ff2"
+      }
+    },
+    {
+      "path": "sensevoice_ax650/am.mvn",
+      "size": 11203,
+      "url": "https://huggingface.co/AXERA-TECH/SenseVoice_AgenticRAG/resolve/748b06f6b0e43660f2092dbcf158189f543ab88c/sensevoice_ax650/am.mvn",
+      "verifiedHashes": {
+        "sha256": "29b3c740a2c0cfc6b308126d31d7f265fa2be74f3bb095cd2f143ea970896ae5",
+        "gitBlob": "681910cd1ab6458b61474cdbf0d1ac5e810f7b0d"
+      }
+    },
+    {
+      "path": "sensevoice_ax650/chn_jpn_yue_eng_ko_spectok.bpe.model",
+      "size": 377341,
+      "url": "https://huggingface.co/AXERA-TECH/SenseVoice_AgenticRAG/resolve/748b06f6b0e43660f2092dbcf158189f543ab88c/sensevoice_ax650/chn_jpn_yue_eng_ko_spectok.bpe.model",
+      "verifiedHashes": {
+        "sha256": "aa87f86064c3730d799ddf7af3c04659151102cba548bce325cf06ba4da4e6a8",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "sensevoice_ax650/sensevoice.axmodel",
+      "size": 263171971,
+      "url": "https://huggingface.co/AXERA-TECH/SenseVoice_AgenticRAG/resolve/748b06f6b0e43660f2092dbcf158189f543ab88c/sensevoice_ax650/sensevoice.axmodel",
+      "verifiedHashes": {
+        "sha256": "c8895199fe0e6b9af1d64f0292a8fccb6ef2167284cb4bd40ae1491ce086797a",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "sensevoice_ax650/streaming_sensevoice.axmodel",
+      "size": 261521642,
+      "url": "https://huggingface.co/AXERA-TECH/SenseVoice_AgenticRAG/resolve/748b06f6b0e43660f2092dbcf158189f543ab88c/sensevoice_ax650/streaming_sensevoice.axmodel",
+      "verifiedHashes": {
+        "sha256": "d90522c47088c50a7dfe7f8827b8c7ca9a9594785b7c22963615d8ef6742a89c",
+        "gitBlob": null
+      }
+    },
+    {
+      "path": "sensevoice_ax650/tokens.txt",
+      "size": 154188,
+      "url": "https://huggingface.co/AXERA-TECH/SenseVoice_AgenticRAG/resolve/748b06f6b0e43660f2092dbcf158189f543ab88c/sensevoice_ax650/tokens.txt",
+      "verifiedHashes": {
+        "sha256": "71ea48635d18bb2c9528e3a84f32cbfc8efe40bde25d1f89d8b81389694c7b16",
+        "gitBlob": "49deb19d92547c9272317f0ef5c4c04ca4516cd9"
+      }
+    }
+  ],
+  "runnerSha256": "c3a9dc7ca1e86e9d14d2a88ed98f21eccfbb65c2e2eeceff7d4184a5ed79e769"
+}

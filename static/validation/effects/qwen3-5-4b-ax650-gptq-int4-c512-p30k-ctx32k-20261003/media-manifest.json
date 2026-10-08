@@ -1,0 +1,522 @@
+{
+  "files": [
+    {
+      "path": "images/horse-dog.jpg",
+      "sha256": "ed22f6b4c8c33e50e391e089ede14e8fa9402c623b09dbcf010e804770698fbb",
+      "size": 123072,
+      "repo": "AXERA-TECH/Qwen3-VL-2B-Instruct",
+      "revision": "b88b51a9b583a5480717de7955a7b10a28dde9d4",
+      "sourcePath": "images/ssd_horse.jpg"
+    },
+    {
+      "path": "images/bus.jpg",
+      "sha256": "92d459a39a9eef03956257cf9fec84114d9e5df8fb9c0662fb257488cdd4f365",
+      "size": 50535,
+      "repo": "AXERA-TECH/Qwen3-VL-2B-Instruct",
+      "revision": "b88b51a9b583a5480717de7955a7b10a28dde9d4",
+      "sourcePath": "images/ssd_car.jpg"
+    },
+    {
+      "path": "images/room.jpg",
+      "sha256": "ffe0f0cec3b2e27aab1967229cdf0a0d7751dcdd5800322f0b8ac0dffb3b8a8d",
+      "size": 161811,
+      "repo": "AXERA-TECH/Qwen3-VL-4B-Instruct",
+      "revision": "052d3999478f8974b736f8663072e9a72aaabbf5",
+      "sourcePath": "01.jpg"
+    },
+    {
+      "path": "video8/frame_0000.jpg",
+      "sha256": "d0cea2769fd052ce3b24c3982a17135dbffd600cd612014c3cffe014c0224ffa",
+      "size": 54099,
+      "sourceCompanion": {
+        "repo": "AXERA-TECH/Qwen3-VL-2B-Instruct",
+        "revision": "b88b51a9b583a5480717de7955a7b10a28dde9d4",
+        "files": [
+          {
+            "path": "images/ssd_horse.jpg",
+            "sha256": "ed22f6b4c8c33e50e391e089ede14e8fa9402c623b09dbcf010e804770698fbb",
+            "size": 123072
+          },
+          {
+            "path": "images/ssd_car.jpg",
+            "sha256": "92d459a39a9eef03956257cf9fec84114d9e5df8fb9c0662fb257488cdd4f365",
+            "size": 50535
+          },
+          {
+            "path": "video/frame_0000.jpg",
+            "sha256": "d0cea2769fd052ce3b24c3982a17135dbffd600cd612014c3cffe014c0224ffa",
+            "size": 54099
+          },
+          {
+            "path": "video/frame_0008.jpg",
+            "sha256": "c812aed3407b41d474d859fedd4d9eaab971482e1dd0e22c5da16a627a740394",
+            "size": 52705
+          },
+          {
+            "path": "video/frame_0016.jpg",
+            "sha256": "3cc72377820bd9c47a41ebcae744acd8b3952b54e02854a9cf0b4a70e49def60",
+            "size": 48877
+          },
+          {
+            "path": "video/frame_0024.jpg",
+            "sha256": "afee75df68ffda9f5ae59b0ba3badf29e56a60acce64554ecc9e49f20854c47c",
+            "size": 49217
+          },
+          {
+            "path": "video/frame_0032.jpg",
+            "sha256": "1cea98a54747fb32c1bf7375aae020b3703ee70da6eb967d1a7d590d9f997038",
+            "size": 49057
+          },
+          {
+            "path": "video/frame_0040.jpg",
+            "sha256": "dc03d027d92549acc1164f01b8450623093b76e3945b9c2eaaa7f0073b827cf5",
+            "size": 45534
+          },
+          {
+            "path": "video/frame_0048.jpg",
+            "sha256": "f1832ad904c7d25423b1389c769a2287815d1b62acee9474403caa18069d7c52",
+            "size": 44930
+          },
+          {
+            "path": "video/frame_0056.jpg",
+            "sha256": "2a000328952b1f092c438f687a55dfaeb822d763b68eb3685ee403c9859d5ebd",
+            "size": 42752
+          }
+        ]
+      }
+    },
+    {
+      "path": "video8/frame_0008.jpg",
+      "sha256": "c812aed3407b41d474d859fedd4d9eaab971482e1dd0e22c5da16a627a740394",
+      "size": 52705,
+      "sourceCompanion": {
+        "repo": "AXERA-TECH/Qwen3-VL-2B-Instruct",
+        "revision": "b88b51a9b583a5480717de7955a7b10a28dde9d4",
+        "files": [
+          {
+            "path": "images/ssd_horse.jpg",
+            "sha256": "ed22f6b4c8c33e50e391e089ede14e8fa9402c623b09dbcf010e804770698fbb",
+            "size": 123072
+          },
+          {
+            "path": "images/ssd_car.jpg",
+            "sha256": "92d459a39a9eef03956257cf9fec84114d9e5df8fb9c0662fb257488cdd4f365",
+            "size": 50535
+          },
+          {
+            "path": "video/frame_0000.jpg",
+            "sha256": "d0cea2769fd052ce3b24c3982a17135dbffd600cd612014c3cffe014c0224ffa",
+            "size": 54099
+          },
+          {
+            "path": "video/frame_0008.jpg",
+            "sha256": "c812aed3407b41d474d859fedd4d9eaab971482e1dd0e22c5da16a627a740394",
+            "size": 52705
+          },
+          {
+            "path": "video/frame_0016.jpg",
+            "sha256": "3cc72377820bd9c47a41ebcae744acd8b3952b54e02854a9cf0b4a70e49def60",
+            "size": 48877
+          },
+          {
+            "path": "video/frame_0024.jpg",
+            "sha256": "afee75df68ffda9f5ae59b0ba3badf29e56a60acce64554ecc9e49f20854c47c",
+            "size": 49217
+          },
+          {
+            "path": "video/frame_0032.jpg",
+            "sha256": "1cea98a54747fb32c1bf7375aae020b3703ee70da6eb967d1a7d590d9f997038",
+            "size": 49057
+          },
+          {
+            "path": "video/frame_0040.jpg",
+            "sha256": "dc03d027d92549acc1164f01b8450623093b76e3945b9c2eaaa7f0073b827cf5",
+            "size": 45534
+          },
+          {
+            "path": "video/frame_0048.jpg",
+            "sha256": "f1832ad904c7d25423b1389c769a2287815d1b62acee9474403caa18069d7c52",
+            "size": 44930
+          },
+          {
+            "path": "video/frame_0056.jpg",
+            "sha256": "2a000328952b1f092c438f687a55dfaeb822d763b68eb3685ee403c9859d5ebd",
+            "size": 42752
+          }
+        ]
+      }
+    },
+    {
+      "path": "video8/frame_0016.jpg",
+      "sha256": "3cc72377820bd9c47a41ebcae744acd8b3952b54e02854a9cf0b4a70e49def60",
+      "size": 48877,
+      "sourceCompanion": {
+        "repo": "AXERA-TECH/Qwen3-VL-2B-Instruct",
+        "revision": "b88b51a9b583a5480717de7955a7b10a28dde9d4",
+        "files": [
+          {
+            "path": "images/ssd_horse.jpg",
+            "sha256": "ed22f6b4c8c33e50e391e089ede14e8fa9402c623b09dbcf010e804770698fbb",
+            "size": 123072
+          },
+          {
+            "path": "images/ssd_car.jpg",
+            "sha256": "92d459a39a9eef03956257cf9fec84114d9e5df8fb9c0662fb257488cdd4f365",
+            "size": 50535
+          },
+          {
+            "path": "video/frame_0000.jpg",
+            "sha256": "d0cea2769fd052ce3b24c3982a17135dbffd600cd612014c3cffe014c0224ffa",
+            "size": 54099
+          },
+          {
+            "path": "video/frame_0008.jpg",
+            "sha256": "c812aed3407b41d474d859fedd4d9eaab971482e1dd0e22c5da16a627a740394",
+            "size": 52705
+          },
+          {
+            "path": "video/frame_0016.jpg",
+            "sha256": "3cc72377820bd9c47a41ebcae744acd8b3952b54e02854a9cf0b4a70e49def60",
+            "size": 48877
+          },
+          {
+            "path": "video/frame_0024.jpg",
+            "sha256": "afee75df68ffda9f5ae59b0ba3badf29e56a60acce64554ecc9e49f20854c47c",
+            "size": 49217
+          },
+          {
+            "path": "video/frame_0032.jpg",
+            "sha256": "1cea98a54747fb32c1bf7375aae020b3703ee70da6eb967d1a7d590d9f997038",
+            "size": 49057
+          },
+          {
+            "path": "video/frame_0040.jpg",
+            "sha256": "dc03d027d92549acc1164f01b8450623093b76e3945b9c2eaaa7f0073b827cf5",
+            "size": 45534
+          },
+          {
+            "path": "video/frame_0048.jpg",
+            "sha256": "f1832ad904c7d25423b1389c769a2287815d1b62acee9474403caa18069d7c52",
+            "size": 44930
+          },
+          {
+            "path": "video/frame_0056.jpg",
+            "sha256": "2a000328952b1f092c438f687a55dfaeb822d763b68eb3685ee403c9859d5ebd",
+            "size": 42752
+          }
+        ]
+      }
+    },
+    {
+      "path": "video8/frame_0024.jpg",
+      "sha256": "afee75df68ffda9f5ae59b0ba3badf29e56a60acce64554ecc9e49f20854c47c",
+      "size": 49217,
+      "sourceCompanion": {
+        "repo": "AXERA-TECH/Qwen3-VL-2B-Instruct",
+        "revision": "b88b51a9b583a5480717de7955a7b10a28dde9d4",
+        "files": [
+          {
+            "path": "images/ssd_horse.jpg",
+            "sha256": "ed22f6b4c8c33e50e391e089ede14e8fa9402c623b09dbcf010e804770698fbb",
+            "size": 123072
+          },
+          {
+            "path": "images/ssd_car.jpg",
+            "sha256": "92d459a39a9eef03956257cf9fec84114d9e5df8fb9c0662fb257488cdd4f365",
+            "size": 50535
+          },
+          {
+            "path": "video/frame_0000.jpg",
+            "sha256": "d0cea2769fd052ce3b24c3982a17135dbffd600cd612014c3cffe014c0224ffa",
+            "size": 54099
+          },
+          {
+            "path": "video/frame_0008.jpg",
+            "sha256": "c812aed3407b41d474d859fedd4d9eaab971482e1dd0e22c5da16a627a740394",
+            "size": 52705
+          },
+          {
+            "path": "video/frame_0016.jpg",
+            "sha256": "3cc72377820bd9c47a41ebcae744acd8b3952b54e02854a9cf0b4a70e49def60",
+            "size": 48877
+          },
+          {
+            "path": "video/frame_0024.jpg",
+            "sha256": "afee75df68ffda9f5ae59b0ba3badf29e56a60acce64554ecc9e49f20854c47c",
+            "size": 49217
+          },
+          {
+            "path": "video/frame_0032.jpg",
+            "sha256": "1cea98a54747fb32c1bf7375aae020b3703ee70da6eb967d1a7d590d9f997038",
+            "size": 49057
+          },
+          {
+            "path": "video/frame_0040.jpg",
+            "sha256": "dc03d027d92549acc1164f01b8450623093b76e3945b9c2eaaa7f0073b827cf5",
+            "size": 45534
+          },
+          {
+            "path": "video/frame_0048.jpg",
+            "sha256": "f1832ad904c7d25423b1389c769a2287815d1b62acee9474403caa18069d7c52",
+            "size": 44930
+          },
+          {
+            "path": "video/frame_0056.jpg",
+            "sha256": "2a000328952b1f092c438f687a55dfaeb822d763b68eb3685ee403c9859d5ebd",
+            "size": 42752
+          }
+        ]
+      }
+    },
+    {
+      "path": "video8/frame_0032.jpg",
+      "sha256": "1cea98a54747fb32c1bf7375aae020b3703ee70da6eb967d1a7d590d9f997038",
+      "size": 49057,
+      "sourceCompanion": {
+        "repo": "AXERA-TECH/Qwen3-VL-2B-Instruct",
+        "revision": "b88b51a9b583a5480717de7955a7b10a28dde9d4",
+        "files": [
+          {
+            "path": "images/ssd_horse.jpg",
+            "sha256": "ed22f6b4c8c33e50e391e089ede14e8fa9402c623b09dbcf010e804770698fbb",
+            "size": 123072
+          },
+          {
+            "path": "images/ssd_car.jpg",
+            "sha256": "92d459a39a9eef03956257cf9fec84114d9e5df8fb9c0662fb257488cdd4f365",
+            "size": 50535
+          },
+          {
+            "path": "video/frame_0000.jpg",
+            "sha256": "d0cea2769fd052ce3b24c3982a17135dbffd600cd612014c3cffe014c0224ffa",
+            "size": 54099
+          },
+          {
+            "path": "video/frame_0008.jpg",
+            "sha256": "c812aed3407b41d474d859fedd4d9eaab971482e1dd0e22c5da16a627a740394",
+            "size": 52705
+          },
+          {
+            "path": "video/frame_0016.jpg",
+            "sha256": "3cc72377820bd9c47a41ebcae744acd8b3952b54e02854a9cf0b4a70e49def60",
+            "size": 48877
+          },
+          {
+            "path": "video/frame_0024.jpg",
+            "sha256": "afee75df68ffda9f5ae59b0ba3badf29e56a60acce64554ecc9e49f20854c47c",
+            "size": 49217
+          },
+          {
+            "path": "video/frame_0032.jpg",
+            "sha256": "1cea98a54747fb32c1bf7375aae020b3703ee70da6eb967d1a7d590d9f997038",
+            "size": 49057
+          },
+          {
+            "path": "video/frame_0040.jpg",
+            "sha256": "dc03d027d92549acc1164f01b8450623093b76e3945b9c2eaaa7f0073b827cf5",
+            "size": 45534
+          },
+          {
+            "path": "video/frame_0048.jpg",
+            "sha256": "f1832ad904c7d25423b1389c769a2287815d1b62acee9474403caa18069d7c52",
+            "size": 44930
+          },
+          {
+            "path": "video/frame_0056.jpg",
+            "sha256": "2a000328952b1f092c438f687a55dfaeb822d763b68eb3685ee403c9859d5ebd",
+            "size": 42752
+          }
+        ]
+      }
+    },
+    {
+      "path": "video8/frame_0040.jpg",
+      "sha256": "dc03d027d92549acc1164f01b8450623093b76e3945b9c2eaaa7f0073b827cf5",
+      "size": 45534,
+      "sourceCompanion": {
+        "repo": "AXERA-TECH/Qwen3-VL-2B-Instruct",
+        "revision": "b88b51a9b583a5480717de7955a7b10a28dde9d4",
+        "files": [
+          {
+            "path": "images/ssd_horse.jpg",
+            "sha256": "ed22f6b4c8c33e50e391e089ede14e8fa9402c623b09dbcf010e804770698fbb",
+            "size": 123072
+          },
+          {
+            "path": "images/ssd_car.jpg",
+            "sha256": "92d459a39a9eef03956257cf9fec84114d9e5df8fb9c0662fb257488cdd4f365",
+            "size": 50535
+          },
+          {
+            "path": "video/frame_0000.jpg",
+            "sha256": "d0cea2769fd052ce3b24c3982a17135dbffd600cd612014c3cffe014c0224ffa",
+            "size": 54099
+          },
+          {
+            "path": "video/frame_0008.jpg",
+            "sha256": "c812aed3407b41d474d859fedd4d9eaab971482e1dd0e22c5da16a627a740394",
+            "size": 52705
+          },
+          {
+            "path": "video/frame_0016.jpg",
+            "sha256": "3cc72377820bd9c47a41ebcae744acd8b3952b54e02854a9cf0b4a70e49def60",
+            "size": 48877
+          },
+          {
+            "path": "video/frame_0024.jpg",
+            "sha256": "afee75df68ffda9f5ae59b0ba3badf29e56a60acce64554ecc9e49f20854c47c",
+            "size": 49217
+          },
+          {
+            "path": "video/frame_0032.jpg",
+            "sha256": "1cea98a54747fb32c1bf7375aae020b3703ee70da6eb967d1a7d590d9f997038",
+            "size": 49057
+          },
+          {
+            "path": "video/frame_0040.jpg",
+            "sha256": "dc03d027d92549acc1164f01b8450623093b76e3945b9c2eaaa7f0073b827cf5",
+            "size": 45534
+          },
+          {
+            "path": "video/frame_0048.jpg",
+            "sha256": "f1832ad904c7d25423b1389c769a2287815d1b62acee9474403caa18069d7c52",
+            "size": 44930
+          },
+          {
+            "path": "video/frame_0056.jpg",
+            "sha256": "2a000328952b1f092c438f687a55dfaeb822d763b68eb3685ee403c9859d5ebd",
+            "size": 42752
+          }
+        ]
+      }
+    },
+    {
+      "path": "video8/frame_0048.jpg",
+      "sha256": "f1832ad904c7d25423b1389c769a2287815d1b62acee9474403caa18069d7c52",
+      "size": 44930,
+      "sourceCompanion": {
+        "repo": "AXERA-TECH/Qwen3-VL-2B-Instruct",
+        "revision": "b88b51a9b583a5480717de7955a7b10a28dde9d4",
+        "files": [
+          {
+            "path": "images/ssd_horse.jpg",
+            "sha256": "ed22f6b4c8c33e50e391e089ede14e8fa9402c623b09dbcf010e804770698fbb",
+            "size": 123072
+          },
+          {
+            "path": "images/ssd_car.jpg",
+            "sha256": "92d459a39a9eef03956257cf9fec84114d9e5df8fb9c0662fb257488cdd4f365",
+            "size": 50535
+          },
+          {
+            "path": "video/frame_0000.jpg",
+            "sha256": "d0cea2769fd052ce3b24c3982a17135dbffd600cd612014c3cffe014c0224ffa",
+            "size": 54099
+          },
+          {
+            "path": "video/frame_0008.jpg",
+            "sha256": "c812aed3407b41d474d859fedd4d9eaab971482e1dd0e22c5da16a627a740394",
+            "size": 52705
+          },
+          {
+            "path": "video/frame_0016.jpg",
+            "sha256": "3cc72377820bd9c47a41ebcae744acd8b3952b54e02854a9cf0b4a70e49def60",
+            "size": 48877
+          },
+          {
+            "path": "video/frame_0024.jpg",
+            "sha256": "afee75df68ffda9f5ae59b0ba3badf29e56a60acce64554ecc9e49f20854c47c",
+            "size": 49217
+          },
+          {
+            "path": "video/frame_0032.jpg",
+            "sha256": "1cea98a54747fb32c1bf7375aae020b3703ee70da6eb967d1a7d590d9f997038",
+            "size": 49057
+          },
+          {
+            "path": "video/frame_0040.jpg",
+            "sha256": "dc03d027d92549acc1164f01b8450623093b76e3945b9c2eaaa7f0073b827cf5",
+            "size": 45534
+          },
+          {
+            "path": "video/frame_0048.jpg",
+            "sha256": "f1832ad904c7d25423b1389c769a2287815d1b62acee9474403caa18069d7c52",
+            "size": 44930
+          },
+          {
+            "path": "video/frame_0056.jpg",
+            "sha256": "2a000328952b1f092c438f687a55dfaeb822d763b68eb3685ee403c9859d5ebd",
+            "size": 42752
+          }
+        ]
+      }
+    },
+    {
+      "path": "video8/frame_0056.jpg",
+      "sha256": "2a000328952b1f092c438f687a55dfaeb822d763b68eb3685ee403c9859d5ebd",
+      "size": 42752,
+      "sourceCompanion": {
+        "repo": "AXERA-TECH/Qwen3-VL-2B-Instruct",
+        "revision": "b88b51a9b583a5480717de7955a7b10a28dde9d4",
+        "files": [
+          {
+            "path": "images/ssd_horse.jpg",
+            "sha256": "ed22f6b4c8c33e50e391e089ede14e8fa9402c623b09dbcf010e804770698fbb",
+            "size": 123072
+          },
+          {
+            "path": "images/ssd_car.jpg",
+            "sha256": "92d459a39a9eef03956257cf9fec84114d9e5df8fb9c0662fb257488cdd4f365",
+            "size": 50535
+          },
+          {
+            "path": "video/frame_0000.jpg",
+            "sha256": "d0cea2769fd052ce3b24c3982a17135dbffd600cd612014c3cffe014c0224ffa",
+            "size": 54099
+          },
+          {
+            "path": "video/frame_0008.jpg",
+            "sha256": "c812aed3407b41d474d859fedd4d9eaab971482e1dd0e22c5da16a627a740394",
+            "size": 52705
+          },
+          {
+            "path": "video/frame_0016.jpg",
+            "sha256": "3cc72377820bd9c47a41ebcae744acd8b3952b54e02854a9cf0b4a70e49def60",
+            "size": 48877
+          },
+          {
+            "path": "video/frame_0024.jpg",
+            "sha256": "afee75df68ffda9f5ae59b0ba3badf29e56a60acce64554ecc9e49f20854c47c",
+            "size": 49217
+          },
+          {
+            "path": "video/frame_0032.jpg",
+            "sha256": "1cea98a54747fb32c1bf7375aae020b3703ee70da6eb967d1a7d590d9f997038",
+            "size": 49057
+          },
+          {
+            "path": "video/frame_0040.jpg",
+            "sha256": "dc03d027d92549acc1164f01b8450623093b76e3945b9c2eaaa7f0073b827cf5",
+            "size": 45534
+          },
+          {
+            "path": "video/frame_0048.jpg",
+            "sha256": "f1832ad904c7d25423b1389c769a2287815d1b62acee9474403caa18069d7c52",
+            "size": 44930
+          },
+          {
+            "path": "video/frame_0056.jpg",
+            "sha256": "2a000328952b1f092c438f687a55dfaeb822d763b68eb3685ee403c9859d5ebd",
+            "size": 42752
+          }
+        ]
+      }
+    }
+  ],
+  "visualReview": {
+    "horse-dog": "Brown-and-white horse with rider; brown dog in foreground.",
+    "bus": "Red double-decker bus in street, woman in foreground and dark car.",
+    "room": "One clearly visible person in dining/living room with wooden floor, windows, table, television."
+  },
+  "videoTimebase": "Eight ordered companion frames; use configured1fps, not claimed original capture timing."
+}
