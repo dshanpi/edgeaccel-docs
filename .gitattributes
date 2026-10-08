@@ -6,3 +6,5 @@
 # Preserve the exact bytes of original attachments and verified evidence.
 /static/resources/** -text
 /static/validation/** -text
+/static/examples/** -text
+/static/projects/** -text
