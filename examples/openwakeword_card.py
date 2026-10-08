@@ -10,6 +10,8 @@ import numpy as np
 p=argparse.ArgumentParser()
 p.add_argument('--model-dir',type=Path,required=True)
 p.add_argument('--output',type=Path,required=True)
+p.add_argument('--audio-dir',type=Path,help='Optional directory of mono PCM16 16 kHz WAV files')
+p.add_argument('--audio-manifest',type=Path,help='Optional JSON: clips with wav, wavSha256 and expectedClassifier')
 p.add_argument('--mode',choices=['wake-word','wake-word-npu-mel','mel-probe'],default='wake-word')
 a=p.parse_args();root=a.model_dir.resolve();out=a.output.resolve();out.mkdir(parents=True,exist_ok=False)
 assert 'AXCLRTExecutionProvider' in axengine.get_available_providers()
@@ -25,6 +27,7 @@ class MeasuredSession:
         assert providers==['AxEngineExecutionProvider']
         start=time.perf_counter();self.session=original(path,providers=['AXCLRTExecutionProvider'])
         self.record={'model':Path(path).relative_to(root).as_posix(),'loadSeconds':time.perf_counter()-start,
+          'modelSha256':hashlib.sha256(Path(path).read_bytes()).hexdigest(),
           'inputs':[{'name':m.name,'shape':list(m.shape),'dtype':str(m.dtype)} for m in self.session.get_inputs()],
           'outputs':[{'name':m.name,'shape':list(m.shape)} for m in self.session.get_outputs()],
           'runMilliseconds':[],'allFinite':True,'outputHashes':[]}
@@ -49,7 +52,16 @@ source=source.replace(needle,'return {\n        "frame_scores": scores,\n       
 ns={'__name__':'openwakeword_official_helpers','__file__':str(root/'scripts/openwakeword_ax.py')}
 exec(compile(source,ns['__file__'],'exec'),ns)
 weights=ns['load_mel_weights'](root/'config/openwakeword_mel_weights.npz')
-audio_files=sorted((root/'audio/openwakeword').glob('*.wav'));assert len(audio_files)==3
+audio_files=sorted((a.audio_dir or root/'audio/openwakeword').glob('*.wav'));assert audio_files
+if a.audio_dir is None:assert len(audio_files)==3
+expectations={}
+if a.audio_manifest:
+    report['audioManifest']=json.loads(a.audio_manifest.read_text(encoding='utf-8'))
+    expectations={row['wav']:row for row in report['audioManifest']['clips']}
+    assert len(expectations)==len(report['audioManifest']['clips'])
+    assert set(expectations)=={path.name for path in audio_files}
+    for path in audio_files:
+        assert hashlib.sha256(path.read_bytes()).hexdigest()==expectations[path.name]['wavSha256']
 silence=out/'silence-4s.wav'
 with wave.open(str(silence),'wb') as f:
     f.setnchannels(1);f.setsampwidth(2);f.setframerate(16000);f.writeframes(np.zeros(64000,dtype='<i2').tobytes())
@@ -76,7 +88,8 @@ if a.mode=='mel-probe':
 else:
     mel_backend='numpy' if a.mode=='wake-word' else 'model'
     sessions=ns['load_sessions'](root/'models/650','axengine',mel_backend)
-    refs=ns['reference_by_audio'](root/'reference/local_inference_results.json')
+    refs=ns['reference_by_audio'](root/'reference/local_inference_results.json') if a.audio_dir is None else {}
+    if a.audio_dir is not None:ns['EXPECTED']={}
     for path in audio_files:
         samples,sr=ns['read_wav'](path);assert sr==16000
         target=out/(path.stem+'-input.wav')
@@ -92,10 +105,27 @@ else:
         row['detectionScores']={key:[max(frame[1:]) if key=='timer_v0.1' else max(frame) for frame in values] for key,values in row['frame_scores'].items()}
         row['thresholdWindows']={key:[i for i,value in enumerate(values) if value>=0.5] for key,values in row['detectionScores'].items()}
         row['triggeredModels']=[key for key,values in row['thresholdWindows'].items() if values]
+        row['timerClassPeaks']={str(i):max(frame[i] for frame in row['frame_scores']['timer_v0.1']) for i in range(1,7)}
+        row['triggeredTimerClasses']=[int(i) for i,value in row['timerClassPeaks'].items() if value>=0.5]
+        if path.name in expectations:
+            expected=expectations[path.name];label=expected['expectedClassifier'];timer=expected.get('expectedTimerClass')
+            row['testExpectation']=expected
+            row['expectedClassifierDetected']=label in row['triggeredModels'] if label else None
+            row['unexpectedTriggeredModels']=[name for name in row['triggeredModels'] if name!=label]
+            row['expectedTimerClassDetected']=timer in row['triggeredTimerClasses'] if timer else None
+            row['sampleExpectationMet']=(row['triggeredModels']==([label] if label else []) and
+                (row['triggeredTimerClasses']==[timer] if timer else True))
+            row['expected_model']=label
+            row['expected_detected']=row['expectedClassifierDetected']
+            row['expected_score']=max(row['detectionScores'][label]) if label else None
+            row['passed']=row['sampleExpectationMet']
         report['results'].append(row);save()
         print(path.name,row['max_scores'],row['triggeredModels'],flush=True)
-    report['functionalChecks']={'alexaDetected':next(r for r in report['results'] if r['audio']=='alexa_test.wav')['expected_detected'],
-      'mycroftDetected':next(r for r in report['results'] if r['audio']=='hey_mycroft_test.wav')['expected_detected'],
-      'silenceNoTrigger':not report['results'][-1]['triggeredModels']}
+    report['functionalChecks']={'silenceNoTrigger':not report['results'][-1]['triggeredModels']}
+    if a.audio_dir is None:
+        report['functionalChecks'].update(alexaDetected=next(r for r in report['results'] if r['audio']=='alexa_test.wav')['expected_detected'],
+          mycroftDetected=next(r for r in report['results'] if r['audio']=='hey_mycroft_test.wav')['expected_detected'])
+    if expectations:
+        report['functionalChecks']['allSuppliedSampleExpectationsMet']=all(r['sampleExpectationMet'] for r in report['results'] if 'testExpectation' in r)
 report['completed']=True;save()
 print(json.dumps({'completed':True,'mode':a.mode,'calls':{s['model']:len(s['runMilliseconds']) for s in report['sessions']}}))

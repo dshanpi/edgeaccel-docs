@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkedgeaccel_docs||=[]).push([[9647],{27725(e,r,s){s.r(r),s.d(r,{default:()=>n});var a=s(74848);s(96540);var c=s(34164),u=s(23891),d=s(19912),l=s(22831),t=s(66838);function n(e){return(0,a.jsx)(d.e3,{className:(0,c.A)(u.G.wrapper.docsPages),children:(0,a.jsx)(t.A,{children:(0,l.v)(e.route.routes)})})}}}]);

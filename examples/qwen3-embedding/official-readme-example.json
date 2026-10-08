@@ -1,0 +1,11 @@
+{
+  "instruction": "Given a web search query, retrieve relevant passages that answer the query",
+  "queries": [
+    "What is the capital of China?",
+    "Explain gravity"
+  ],
+  "documents": [
+    "The capital of China is Beijing.",
+    "Gravity is a force that attracts two bodies towards each other. It gives weight to physical objects and is responsible for the movement of planets around the sun."
+  ]
+}

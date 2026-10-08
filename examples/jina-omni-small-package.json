@@ -1,0 +1,38 @@
+{
+  "file": "jina-omni-small-native-20260930.tar.gz",
+  "sha256": "62006c4ae7448c0eff8c212f1cfac8e88f2c59f02ecddac2df0d4c47d060e591",
+  "files": [
+    {
+      "path": "jina_small_card.py",
+      "sha256": "eba900859382b315583d919002f3a6d7e2d44a567b836284dfdb9ec6c421e74a"
+    },
+    {
+      "path": "jina_small_media_core.py",
+      "sha256": "c3af20c3c836eb6e2d632e2265dcdcc185db5b776a79a3753aa6ad2b8905bb1c"
+    },
+    {
+      "path": "jina_small_native_session.py",
+      "sha256": "d0d0a819e865d88f4eb091b76aeb379800673609fd147c3ac243e6575d84d417"
+    },
+    {
+      "path": "jina_native_bridge.cpp",
+      "sha256": "d917ae8aeb744151c6925c1c0779bd1c7da6e7f8ca45327ec3c61db4adc78109"
+    },
+    {
+      "path": "libjina_native_bridge.so",
+      "sha256": "56cabe2c4eaa851fc89fb3144c745b4429e34b8843572f85858f8add6dcdd4ef"
+    },
+    {
+      "path": "jina-small-native-shapes.json",
+      "sha256": "56eba6de7fbbb8f98dde664c5488a569f5bdcdb9f1bcbe11b4bdbcd7e80962d2"
+    },
+    {
+      "path": "english-short.wav",
+      "sha256": "a03bdeebda024f03f324a9995403e5618ac43a6d95d82961b2b223afc79ee538"
+    },
+    {
+      "path": "audio-manifest.json",
+      "sha256": "55257288a1500e8fe258a8f5815f85c8ffde74565de157e79af5cc75980bee52"
+    }
+  ]
+}

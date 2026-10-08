@@ -1,123 +1,376 @@
-<!doctype html><html lang=zh-Hans dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-models/deploy/moss-transcribe-diarize-0-9b" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>MOSS-Transcribe-Diarize-0.9B 部署指南 · EdgeAccel 文档</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://edgeaccel.100ask.net/docs/models/deploy/moss-transcribe-diarize-0-9b /><meta data-rh=true property=og:locale content=zh_Hans /><meta data-rh=true name=docusaurus_locale content=zh-Hans /><meta data-rh=true name=docsearch:language content=zh-Hans /><meta data-rh=true name=docusaurus_version content=current /><meta data-rh=true name=docusaurus_tag content=docs-default-current /><meta data-rh=true name=docsearch:version content=current /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-current /><meta data-rh=true property=og:title content="MOSS-Transcribe-Diarize-0.9B 部署指南 · EdgeAccel 文档"/><meta data-rh=true name=description content="MOSS-Transcribe-Diarize-0.9B 的 M.2 算力卡部署步骤、配套文件与效果展示。"/><meta data-rh=true property=og:description content="MOSS-Transcribe-Diarize-0.9B 的 M.2 算力卡部署步骤、配套文件与效果展示。"/><link data-rh=true rel=icon href=/img/edgeaccel.svg /><link data-rh=true rel=canonical href=https://edgeaccel.100ask.net/docs/models/deploy/moss-transcribe-diarize-0-9b /><link data-rh=true rel=alternate href=https://edgeaccel.100ask.net/docs/models/deploy/moss-transcribe-diarize-0-9b hreflang=zh-Hans /><link data-rh=true rel=alternate href=https://edgeaccel.100ask.net/docs/models/deploy/moss-transcribe-diarize-0-9b hreflang=x-default /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://edgeaccel.100ask.net/docs/models/deploy/moss-transcribe-diarize-0-9b","name":"MOSS-Transcribe-Diarize-0.9B","position":1}]}</script><link rel=stylesheet href=/assets/css/styles.392c4b40.css /><script src=/assets/js/runtime~main.4f3bebbe.js defer></script><script src=/assets/js/main.cf68feb3.js defer></script></head><body><svg style="display: none;"><defs>
+<!doctype html><html lang=zh-Hans dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-models/deploy/moss-transcribe-diarize-0-9b" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>MOSS-Transcribe-Diarize-0.9B 部署指南 · EdgeAccel 文档</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://edgeaccel.100ask.net/docs/models/deploy/moss-transcribe-diarize-0-9b /><meta data-rh=true property=og:locale content=zh_Hans /><meta data-rh=true name=docusaurus_locale content=zh-Hans /><meta data-rh=true name=docsearch:language content=zh-Hans /><meta data-rh=true name=docusaurus_version content=current /><meta data-rh=true name=docusaurus_tag content=docs-default-current /><meta data-rh=true name=docsearch:version content=current /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-current /><meta data-rh=true property=og:title content="MOSS-Transcribe-Diarize-0.9B 部署指南 · EdgeAccel 文档"/><meta data-rh=true name=description content="MOSS-Transcribe-Diarize-0.9B 的 M.2 算力卡部署步骤、配套文件与效果展示。"/><meta data-rh=true property=og:description content="MOSS-Transcribe-Diarize-0.9B 的 M.2 算力卡部署步骤、配套文件与效果展示。"/><link data-rh=true rel=icon href=/img/edgeaccel.svg /><link data-rh=true rel=canonical href=https://edgeaccel.100ask.net/docs/models/deploy/moss-transcribe-diarize-0-9b /><link data-rh=true rel=alternate href=https://edgeaccel.100ask.net/docs/models/deploy/moss-transcribe-diarize-0-9b hreflang=zh-Hans /><link data-rh=true rel=alternate href=https://edgeaccel.100ask.net/docs/models/deploy/moss-transcribe-diarize-0-9b hreflang=x-default /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://edgeaccel.100ask.net/docs/models/deploy/moss-transcribe-diarize-0-9b","name":"MOSS-Transcribe-Diarize-0.9B","position":1}]}</script><link rel=stylesheet href=/assets/css/styles.093622e7.css /><script src=/assets/js/runtime~main.02f46bb2.js defer></script><script src=/assets/js/main.3cb276e6.js defer></script></head><body><svg style="display: none;"><defs>
 <symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
-<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme-766")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><link rel=preload as=image href=/img/edgeaccel.svg /><div role=region aria-label=跳到主要内容><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>跳到主要内容</a></div><nav aria-label=主导航 class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_m1mJ"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label=切换导航栏 aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/><div class=navbar__logo><img src=/img/edgeaccel.svg alt="" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/img/edgeaccel.svg alt="" class="themedComponent_mlkZ themedComponent--dark_xIcU"/></div><b class="navbar__title text--truncate">EdgeAccel</b></a><a aria-current=page class="navbar__item navbar__link navbar__link--active" href=/docs/>AX8850</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type=button disabled title="system mode" aria-label="切换浅色/暗黑模式（当前为system mode）"><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill=currentColor d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill=currentColor d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill=currentColor d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"/></svg></button></div><div class=navbarSearchContainer_Bca1><div class="navbar__search searchBarContainer_NW3z" dir=ltr><input placeholder=搜索 aria-label=Search class="navbar__search-input searchInput_YFbd" value="" /><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div role=presentation class=navbar-sidebar__backdrop></div></nav><div id=__docusaurus_skipToContent_fallback class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class=docsWrapper_hBAB><button aria-label=回到顶部 class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type=button></button><div class=docRoot_UBD9><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class=sidebarViewport_aRkj><div class="sidebar_njMd sidebarWithHideableNavbar_wUlq"><a tabindex=-1 class=sidebarLogo_isFc href=/><img src=/img/edgeaccel.svg alt="" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/img/edgeaccel.svg alt="" class="themedComponent_mlkZ themedComponent--dark_xIcU"/><b>EdgeAccel</b></a><nav aria-label=文档侧边栏 class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class=menu__link href=/docs/><span class=linkLabel_WmDU>M.2 算力卡使用指南</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class=menu__link href=/docs/ax650n/roadmap><span class=linkLabel_WmDU>算力卡上手路线</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/ax650n/user-guide><span class=categoryLinkLabel_W154>接卡与安装</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=true href=/docs/usage/first-inference><span class=categoryLinkLabel_W154>完成首次推理</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/usage/first-inference><span class=linkLabel_WmDU>脚本运行：首次推理</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/usage/device-check><span class=linkLabel_WmDU>手动操作：检查设备</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/usage/download-models><span class=linkLabel_WmDU>手动操作：下载模型</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/usage/build-samples><span class=linkLabel_WmDU>手动操作：编译示例</span></a></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role=button aria-expanded=true href=/docs/models/selection><span class=categoryLinkLabel_W154>选择与部署模型</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/models/selection><span class=linkLabel_WmDU>按任务和容量选择模型</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/models/catalog><span class=linkLabel_WmDU>模型目录与独立部署文档</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role=button aria-expanded=true tabindex=0 href=/docs/models/deploy/3d-speaker><span class=categoryLinkLabel_W154>模型部署与效果</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role=button aria-expanded=true tabindex=0 href=/docs/models/deploy/3d-speaker><span class=categoryLinkLabel_W154>语音识别与处理</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/models/deploy/3d-speaker><span class=linkLabel_WmDU>3D-Speaker</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/models/deploy/campplus-axera><span class=linkLabel_WmDU>campplus.AXERA</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/models/deploy/diarizen><span class=linkLabel_WmDU>DiariZen</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/models/deploy/fastenhancer-axera><span class=linkLabel_WmDU>fastenhancer.axera</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/models/deploy/fireredasr-aed><span class=linkLabel_WmDU>FireRedASR-AED</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/models/deploy/fs-eend-axera><span class=linkLabel_WmDU>FS-EEND.AXERA</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/models/deploy/gcrn><span class=linkLabel_WmDU>GCRN</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/models/deploy/gtcrn-axera><span class=linkLabel_WmDU>gtcrn.axera</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/models/deploy/h-gtcrn-axera><span class=linkLabel_WmDU>H-GTCRN.AXERA</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/models/deploy/lightweight-speech-denoising-axera><span class=linkLabel_WmDU>Lightweight-Speech-Denoising.axera</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/models/deploy/mel-band-roformer><span class=linkLabel_WmDU>mel_band_roformer</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link menu__link--active" aria-current=page tabindex=0 href=/docs/models/deploy/moss-transcribe-diarize-0-9b><span class=linkLabel_WmDU>MOSS-Transcribe-Diarize-0.9B</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/models/deploy/openwakeword-axera><span class=linkLabel_WmDU>OpenWakeWord.AXERA</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/models/deploy/qwen3-asr-0-6b-ax650-c64-p448-ctx2047><span class=linkLabel_WmDU>Qwen3-ASR-0.6B-AX650-C64-P448-CTX2047</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/models/deploy/rnnoise><span class=linkLabel_WmDU>rnnoise</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/models/deploy/sensevoice><span class=linkLabel_WmDU>SenseVoice</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/models/deploy/sherpa-onnx-kws-axera><span class=linkLabel_WmDU>Sherpa-ONNX-KWS.AXERA</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/models/deploy/silerovad><span class=linkLabel_WmDU>SileroVAD</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/models/deploy/ten-vad><span class=linkLabel_WmDU>ten-vad</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/models/deploy/wakeup-axera><span class=linkLabel_WmDU>WakeUp.axera</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/models/deploy/wenet><span class=linkLabel_WmDU>WeNet</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/models/deploy/whisper><span class=linkLabel_WmDU>Whisper</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/models/deploy/zipformer-axera><span class=linkLabel_WmDU>Zipformer.axera</span></a></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/models/deploy/3d-speaker-meeting-summary><span class=categoryLinkLabel_W154>组合应用</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/models/deploy/abot-recon-axera><span class=categoryLinkLabel_W154>姿态、深度与三维</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/models/deploy/awesome-files><span class=categoryLinkLabel_W154>工具与配套资源</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/models/deploy/bevformer><span class=categoryLinkLabel_W154>视觉检测与分割</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/models/deploy/bge-m3><span class=categoryLinkLabel_W154>OCR、分类与检索</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/models/deploy/chatterbox-onestep><span class=categoryLinkLabel_W154>语音合成</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/models/deploy/codeformer><span class=categoryLinkLabel_W154>图像增强与生成</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/models/deploy/deepseek-r1-distill-qwen-1-5b><span class=categoryLinkLabel_W154>文本生成与翻译</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/models/deploy/fastvlm-0-5b><span class=categoryLinkLabel_W154>多模态理解</span></a></div></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/models/detection><span class=categoryLinkLabel_W154>选择视觉模型</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/models/llm-runtime><span class=categoryLinkLabel_W154>选择文本与多模态模型</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/models/speech-recognition><span class=categoryLinkLabel_W154>选择语音与扩展模型</span></a></div></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist" href=/docs/usage/application-guide><span class=categoryLinkLabel_W154>接入应用与维护</span></a><button aria-label="展开侧边栏分类 '接入应用与维护'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=true href=/docs/projects/six-streams><span class=categoryLinkLabel_W154>项目实战</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex=0 href=/docs/projects/six-streams><span class=categoryLinkLabel_W154>AX8850 六路 AI 视频推流</span></a><button aria-label="展开侧边栏分类 'AX8850 六路 AI 视频推流'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/projects/laya-games><span class=linkLabel_WmDU>Laya 游戏实验室</span></a></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/reference/validation><span class=categoryLinkLabel_W154>检查方法与参考</span></a></div></ul></nav><button type=button title=收起侧边栏 aria-label=收起侧边栏 class="button button--secondary button--outline collapseSidebarButton_PEFL"><svg width=20 height=20 aria-hidden=true class=collapseSidebarButtonIcon_kv0_><g fill=#7a7a7a><path d="M9.992 10.023c0 .2-.062.399-.172.547l-4.996 7.492a.982.982 0 01-.828.454H1c-.55 0-1-.453-1-1 0-.2.059-.403.168-.551l4.629-6.942L.168 3.078A.939.939 0 010 2.528c0-.548.45-.997 1-.997h2.996c.352 0 .649.18.828.45L9.82 9.472c.11.148.172.347.172.55zm0 0"/><path d="M19.98 10.023c0 .2-.058.399-.168.547l-4.996 7.492a.987.987 0 01-.828.454h-3c-.547 0-.996-.453-.996-1 0-.2.059-.403.168-.551l4.625-6.942-4.625-6.945a.939.939 0 01-.168-.55 1 1 0 01.996-.997h3c.348 0 .649.18.828.45l4.996 7.492c.11.148.168.347.168.55zm0 0"/></g></svg></button></div></div></aside><main class=docMainContainer_TBSr><div class="container padding-top--md padding-bottom--lg"><div class=row><div class="col docItemCol_VOVn"><div class=docItemContainer_Djhp><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label=页面路径><ul class=breadcrumbs><li class=breadcrumbs__item><a aria-label=主页面 class=breadcrumbs__link href=/><svg viewBox="0 0 24 24" class=breadcrumbHomeIcon_YNFT><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill=currentColor /></svg></a><li class=breadcrumbs__item><span class=breadcrumbs__link>选择与部署模型</span><li class=breadcrumbs__item><span class=breadcrumbs__link>模型部署与效果</span><li class=breadcrumbs__item><span class=breadcrumbs__link>语音识别与处理</span><li class="breadcrumbs__item breadcrumbs__item--active"><span class=breadcrumbs__link>MOSS-Transcribe-Diarize-0.9B</span></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type=button class="clean-btn tocCollapsibleButton_TO0P">本页总览</button></div><div class="theme-doc-markdown markdown"><header><h1>MOSS-Transcribe-Diarize-0.9B 部署指南</h1></header>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme-766")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><link rel=preload as=image href=/img/edgeaccel.svg /><div role=region aria-label=跳到主要内容><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>跳到主要内容</a></div><nav aria-label=主导航 class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_m1mJ"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label=切换导航栏 aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/><div class=navbar__logo><img src=/img/edgeaccel.svg alt="" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/img/edgeaccel.svg alt="" class="themedComponent_mlkZ themedComponent--dark_xIcU"/></div><b class="navbar__title text--truncate">EdgeAccel</b></a><a aria-current=page class="navbar__item navbar__link navbar__link--active" href=/docs/>AX8850</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type=button disabled title="system mode" aria-label="切换浅色/暗黑模式（当前为system mode）"><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill=currentColor d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill=currentColor d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill=currentColor d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"/></svg></button></div><div class=navbarSearchContainer_Bca1><div class="navbar__search searchBarContainer_NW3z" dir=ltr><input placeholder=搜索 aria-label=Search class="navbar__search-input searchInput_YFbd" value="" /><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div role=presentation class=navbar-sidebar__backdrop></div></nav><div id=__docusaurus_skipToContent_fallback class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class=docsWrapper_hBAB><button aria-label=回到顶部 class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type=button></button><div class=docRoot_UBD9><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class=sidebarViewport_aRkj><div class="sidebar_njMd sidebarWithHideableNavbar_wUlq"><a tabindex=-1 class=sidebarLogo_isFc href=/><img src=/img/edgeaccel.svg alt="" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/img/edgeaccel.svg alt="" class="themedComponent_mlkZ themedComponent--dark_xIcU"/><b>EdgeAccel</b></a><nav aria-label=文档侧边栏 class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class=menu__link href=/docs/><span class=linkLabel_WmDU>M.2 算力卡使用指南</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class=menu__link href=/docs/ax650n/roadmap><span class=linkLabel_WmDU>算力卡上手路线</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/ax650n/user-guide><span class=categoryLinkLabel_W154>接卡与安装</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=true href=/docs/usage/first-inference><span class=categoryLinkLabel_W154>完成首次推理</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/usage/first-inference><span class=linkLabel_WmDU>脚本运行：首次推理</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/usage/device-check><span class=linkLabel_WmDU>手动操作：检查设备</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/usage/download-models><span class=linkLabel_WmDU>手动操作：下载模型</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/usage/build-samples><span class=linkLabel_WmDU>手动操作：编译示例</span></a></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role=button aria-expanded=true href=/docs/models/selection><span class=categoryLinkLabel_W154>选择与部署模型</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/models/selection><span class=linkLabel_WmDU>按任务和容量选择模型</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/models/catalog><span class=linkLabel_WmDU>模型目录与独立部署文档</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/models/detection><span class=categoryLinkLabel_W154>选择视觉模型</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/models/llm-runtime><span class=categoryLinkLabel_W154>选择文本与多模态模型</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/models/speech-recognition><span class=categoryLinkLabel_W154>选择语音与扩展模型</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role=button aria-expanded=true tabindex=0 href=/docs/models/deploy/3d-speaker><span class=categoryLinkLabel_W154>模型部署与效果</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role=button aria-expanded=true tabindex=0 href=/docs/models/deploy/3d-speaker><span class=categoryLinkLabel_W154>语音识别与处理</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/models/deploy/3d-speaker><span class=linkLabel_WmDU>3D-Speaker</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/models/deploy/campplus-axera><span class=linkLabel_WmDU>campplus.AXERA</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/models/deploy/diarizen><span class=linkLabel_WmDU>DiariZen</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/models/deploy/fastenhancer-axera><span class=linkLabel_WmDU>fastenhancer.axera</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/models/deploy/fireredasr-aed><span class=linkLabel_WmDU>FireRedASR-AED</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/models/deploy/fs-eend-axera><span class=linkLabel_WmDU>FS-EEND.AXERA</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/models/deploy/gcrn><span class=linkLabel_WmDU>GCRN</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/models/deploy/gtcrn-axera><span class=linkLabel_WmDU>gtcrn.axera</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/models/deploy/h-gtcrn-axera><span class=linkLabel_WmDU>H-GTCRN.AXERA</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/models/deploy/lightweight-speech-denoising-axera><span class=linkLabel_WmDU>Lightweight-Speech-Denoising.axera</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/models/deploy/mel-band-roformer><span class=linkLabel_WmDU>mel_band_roformer</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link menu__link--active" aria-current=page tabindex=0 href=/docs/models/deploy/moss-transcribe-diarize-0-9b><span class=linkLabel_WmDU>MOSS-Transcribe-Diarize-0.9B</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/models/deploy/openwakeword-axera><span class=linkLabel_WmDU>OpenWakeWord.AXERA</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/models/deploy/qwen3-asr-0-6b-ax650-c64-p448-ctx2047><span class=linkLabel_WmDU>Qwen3-ASR-0.6B-AX650-C64-P448-CTX2047</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/models/deploy/rnnoise><span class=linkLabel_WmDU>rnnoise</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/models/deploy/sensevoice><span class=linkLabel_WmDU>SenseVoice</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/models/deploy/sensevoice-agenticrag><span class=linkLabel_WmDU>SenseVoice_AgenticRAG</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/models/deploy/sherpa-onnx-kws-axera><span class=linkLabel_WmDU>Sherpa-ONNX-KWS.AXERA</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/models/deploy/silerovad><span class=linkLabel_WmDU>SileroVAD</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/models/deploy/ten-vad><span class=linkLabel_WmDU>ten-vad</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/models/deploy/wakeup-axera><span class=linkLabel_WmDU>WakeUp.axera</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/models/deploy/wenet><span class=linkLabel_WmDU>WeNet</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/models/deploy/whisper><span class=linkLabel_WmDU>Whisper</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/docs/models/deploy/zipformer-axera><span class=linkLabel_WmDU>Zipformer.axera</span></a></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/models/deploy/3d-speaker-meeting-summary><span class=categoryLinkLabel_W154>组合应用</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/models/deploy/abot-recon-axera><span class=categoryLinkLabel_W154>姿态、深度与三维</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/models/deploy/awesome-files><span class=categoryLinkLabel_W154>工具与配套资源</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/models/deploy/bevformer><span class=categoryLinkLabel_W154>视觉检测与分割</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/models/deploy/bge-m3><span class=categoryLinkLabel_W154>OCR、分类与检索</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/models/deploy/chatterbox-onestep><span class=categoryLinkLabel_W154>语音合成</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/models/deploy/codeformer><span class=categoryLinkLabel_W154>图像增强与生成</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/models/deploy/deepseek-r1-distill-qwen-1-5b><span class=categoryLinkLabel_W154>文本生成与翻译</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/models/deploy/fastvlm-0-5b><span class=categoryLinkLabel_W154>多模态理解</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/models/deploy/z-image-turbo><span class=categoryLinkLabel_W154>图像生成</span></a></div></ul></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist" href=/docs/usage/application-guide><span class=categoryLinkLabel_W154>接入应用与维护</span></a><button aria-label="展开侧边栏分类 '接入应用与维护'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=true href=/docs/projects/six-streams><span class=categoryLinkLabel_W154>项目实战</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex=0 href=/docs/projects/six-streams><span class=categoryLinkLabel_W154>AX8850 六路 AI 视频推流</span></a><button aria-label="展开侧边栏分类 'AX8850 六路 AI 视频推流'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/projects/laya-games><span class=linkLabel_WmDU>Laya 游戏实验室</span></a></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/reference/validation><span class=categoryLinkLabel_W154>检查方法与参考</span></a></div></ul></nav><button type=button title=收起侧边栏 aria-label=收起侧边栏 class="button button--secondary button--outline collapseSidebarButton_PEFL"><svg width=20 height=20 aria-hidden=true class=collapseSidebarButtonIcon_kv0_><g fill=#7a7a7a><path d="M9.992 10.023c0 .2-.062.399-.172.547l-4.996 7.492a.982.982 0 01-.828.454H1c-.55 0-1-.453-1-1 0-.2.059-.403.168-.551l4.629-6.942L.168 3.078A.939.939 0 010 2.528c0-.548.45-.997 1-.997h2.996c.352 0 .649.18.828.45L9.82 9.472c.11.148.172.347.172.55zm0 0"/><path d="M19.98 10.023c0 .2-.058.399-.168.547l-4.996 7.492a.987.987 0 01-.828.454h-3c-.547 0-.996-.453-.996-1 0-.2.059-.403.168-.551l4.625-6.942-4.625-6.945a.939.939 0 01-.168-.55 1 1 0 01.996-.997h3c.348 0 .649.18.828.45l4.996 7.492c.11.148.168.347.168.55zm0 0"/></g></svg></button></div></div></aside><main class=docMainContainer_TBSr><div class="container padding-top--md padding-bottom--lg"><div class=row><div class="col docItemCol_VOVn"><div class=docItemContainer_Djhp><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label=页面路径><ul class=breadcrumbs><li class=breadcrumbs__item><a aria-label=主页面 class=breadcrumbs__link href=/><svg viewBox="0 0 24 24" class=breadcrumbHomeIcon_YNFT><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill=currentColor /></svg></a><li class=breadcrumbs__item><span class=breadcrumbs__link>选择与部署模型</span><li class=breadcrumbs__item><span class=breadcrumbs__link>模型部署与效果</span><li class=breadcrumbs__item><span class=breadcrumbs__link>语音识别与处理</span><li class="breadcrumbs__item breadcrumbs__item--active"><span class=breadcrumbs__link>MOSS-Transcribe-Diarize-0.9B</span></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type=button class="clean-btn tocCollapsibleButton_TO0P">本页总览</button></div><div class="theme-doc-markdown markdown"><header><h1>MOSS-Transcribe-Diarize-0.9B 部署指南</h1></header>
 <p>MOSS-Transcribe-Diarize-0.9B 用于语音识别。本页说明 M.2 算力卡的接入条件、部署步骤与结果检查方法。</p>
 <blockquote>
-<p>本机尚未实测。需确认 AXCL 适配。</p>
+<p>已实测，效果仍需评估。<a href=#%E6%9F%A5%E7%9C%8B%E9%83%A8%E7%BD%B2%E6%95%88%E6%9E%9C class="">查看部署效果</a>。</p>
 </blockquote>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=准备运行环境>准备运行环境<a href=#准备运行环境 class=hash-link aria-label=准备运行环境的直接链接 title=准备运行环境的直接链接 translate=no>​</a></h2>
-<p>在连接算力卡的 Linux 主机终端执行，RK3576 使用 ARM64 环境。首次部署先完成<a class="" href=/docs/usage/device-check>驱动与设备检查</a>、<a class="" href=/docs/getting-started/prepare>准备主机环境</a>和<a class="" href=/docs/usage/download-models#%E4%BD%BF%E7%94%A8-hugging-face-%E4%B8%8B%E8%BD%BD>下载工具安装</a>。已完成这些步骤可直接下载模型。</p>
+<p>本页效果展示使用 <strong>RK3576 + AX8850 16GB M.2</strong>；其他容量或平台需重新确认模型能否加载并正确运行。</p>
+<p>在连接算力卡的 Linux 主机终端执行，RK3576 使用 ARM64 环境。首次部署先完成<a class="" href=/docs/usage/device-check>驱动与设备检查</a>、<a class="" href=/docs/usage/python>安装 PyAXEngine</a>和<a class="" href=/docs/usage/download-models#%E4%BD%BF%E7%94%A8-hugging-face-%E4%B8%8B%E8%BD%BD>下载工具安装</a>。已完成这些步骤可直接下载模型。</p>
 <p>后文使用设备 0，运行前用 <code>axcl-smi</code> 确认设备可用。</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=确认算力卡接入条件>确认算力卡接入条件<a href=#确认算力卡接入条件 class=hash-link aria-label=确认算力卡接入条件的直接链接 title=确认算力卡接入条件的直接链接 translate=no>​</a></h2>
-<p>该提交的模型文件或示例已收录，尚未核对到可直接用于此 M.2 卡的完整 AXCL 组合。下面给出此模型的接入文件与待完成项目，当前不作为已可运行教程。</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=核对运行配置>核对运行配置<a href=#核对运行配置 class=hash-link aria-label=核对运行配置的直接链接 title=核对运行配置的直接链接 translate=no>​</a></h2>
-<p>配置文件：<code>config.json</code>。</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>项目<th>当前配置<tbody><tr><td>运行时模型名称<td><code>MOSS-Transcribe-Diarize-0.9B</code><tr><td>分词器类型（tokenizer_type）<td><code>MossTranscribeDiarize</code><tr><td>多模态类型（vlm_type）<td><code>MossTranscribeDiarizeVL</code><tr><td>Transformer 层数<td>28<tr><td>分片命名模板<td><code>qwen3_p256_l%d_together.axmodel</code><tr><td>Embedding 模式<td>否</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>配置字段<th>文件路径<th>同提交文件表<tbody><tr><td><code>filename_post_axmodel</code><td><code>qwen3_post.axmodel</code><td>已找到<tr><td><code>filename_tokens_embed</code><td><code>model.embed_tokens.weight.bfloat16.bin</code><td>已找到<tr><td><code>url_tokenizer_model</code><td><code>qwen3_tokenizer.txt</code><td>已找到<tr><td><code>post_config_path</code><td><code>post_config.json</code><td>已找到</table>
-<p>逐层核对 28 个分片，不能用同系列其他版本补缺。文件名检查只能证明文件布局一致，实际张量和后端兼容性仍需加载验证。</p>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=核对本模型的程序入口>核对本模型的程序入口<a href=#核对本模型的程序入口 class=hash-link aria-label=核对本模型的程序入口的直接链接 title=核对本模型的程序入口的直接链接 translate=no>​</a></h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>程序入口<th>接入条件<tbody><tr><td><a href=https://huggingface.co/AXERA-TECH/MOSS-Transcribe-Diarize-0.9B/blob/c627e9bad59af4074d95c4bc24a87483141d5cc7/infer_moss_axengine.py target=_blank rel="noopener noreferrer" class=""><code>infer_moss_axengine.py</code></a><td>使用 PyAXEngine，需显式选择 AXCL 并核对配套输入<tr><td><a href=https://huggingface.co/AXERA-TECH/MOSS-Transcribe-Diarize-0.9B/blob/c627e9bad59af4074d95c4bc24a87483141d5cc7/moss_openai_api.py target=_blank rel="noopener noreferrer" class=""><code>moss_openai_api.py</code></a><td>使用 PyAXEngine，需显式选择 AXCL 并核对配套输入</table>
-<p>修改前备份程序；只切换执行后端，保留本模型的输入处理、输出解码和资源释放。修改后保存源码版本或补丁。</p>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=准备本模型的输入>准备本模型的输入<a href=#准备本模型的输入 class=hash-link aria-label=准备本模型的输入的直接链接 title=准备本模型的输入的直接链接 translate=no>​</a></h3>
-<p>本提交可核对的样本：<code>wav/002.mp3</code>、<code>wav/20200327_2P_lenovo_iphonexr_66902_part00.wav</code>、<code>wav/2speakers_example.wav</code>、<code>wav/R8001_M8004_MS801_5s_to_6m.wav</code>、<code>wav/vad_example.wav</code>。结合模型卡选择输入，结果图片不作为原始输入。</p>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=完成接入后再运行>完成接入后再运行<a href=#完成接入后再运行 class=hash-link aria-label=完成接入后再运行的直接链接 title=完成接入后再运行的直接链接 translate=no>​</a></h3>
-<ol>
-<li class="">确认实际权重编译目标为本卡，检查输入输出的 shape、dtype、布局与批次。</li>
-<li class="">Python 路径使用 <code>AXCLRTExecutionProvider</code>；C++ 路径使用 AXCL 设备初始化和内存接口。依赖 <code>/soc/lib</code> 或芯片板端 runtime 的程序需移植或另行编译。</li>
-<li class="">先用固定输入打通模型加载、执行与输出解码，再检查下节所列效果。</li>
-</ol>
-<p>共用步骤见<a class="" href=/docs/usage/python>Python 接口</a>与<a class="" href=/docs/models/custom-model>自定义模型接入</a>。配套入口确认后，再使用对应程序的参数运行。</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=下载模型与样例>下载模型与样例<a href=#下载模型与样例 class=hash-link aria-label=下载模型与样例的直接链接 title=下载模型与样例的直接链接 translate=no>​</a></h2>
-<p>本页使用 <code>AXERA-TECH/MOSS-Transcribe-Diarize-0.9B</code> 的固定版本。仓库可能包含多个芯片或模型规格，下载前检查磁盘空间。</p>
-<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token assign-left variable" style=color:#36acaa>MODEL_DIR</span><span class="token operator" style=color:#393A34>=~</span><span class="token plain">/edgeaccel/models/moss-transcribe-diarize-0-9b/c627e9bad59a</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"></span><span class="token function" style=color:#d73a49>mkdir</span><span class="token plain"> </span><span class="token parameter variable" style=color:#36acaa>-p</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"</span><span class="token string variable" style=color:#36acaa>$MODEL_DIR</span><span class="token string" style=color:#e3116c>"</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">~/edgeaccel/hf-env/bin/hf download AXERA-TECH/MOSS-Transcribe-Diarize-0.9B </span><span class="token punctuation" style=color:#393A34>\</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  </span><span class="token parameter variable" style=color:#36acaa>--revision</span><span class="token plain"> c627e9bad59af4074d95c4bc24a87483141d5cc7 </span><span class="token punctuation" style=color:#393A34>\</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  --local-dir </span><span class="token string" style=color:#e3116c>"</span><span class="token string variable" style=color:#36acaa>$MODEL_DIR</span><span class="token string" style=color:#e3116c>"</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain"></span><span class="token builtin class-name">cd</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"</span><span class="token string variable" style=color:#36acaa>$MODEL_DIR</span><span class="token string" style=color:#e3116c>"</span><br/></div></code></pre></div></div>
+<p>本页使用 <code>AXERA-TECH/MOSS-Transcribe-Diarize-0.9B</code> 的固定版本。下面下载本页选用的 41 个文件。</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token assign-left variable" style=color:#36acaa>MODEL_DIR</span><span class="token operator" style=color:#393A34>=~</span><span class="token plain">/edgeaccel/models/moss-transcribe-diarize-0-9b/c627e9bad59a</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"></span><span class="token function" style=color:#d73a49>mkdir</span><span class="token plain"> </span><span class="token parameter variable" style=color:#36acaa>-p</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"</span><span class="token string variable" style=color:#36acaa>$MODEL_DIR</span><span class="token string" style=color:#e3116c>"</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">~/edgeaccel/hf-env/bin/hf download AXERA-TECH/MOSS-Transcribe-Diarize-0.9B </span><span class="token punctuation" style=color:#393A34>\</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  </span><span class="token parameter variable" style=color:#36acaa>--include</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"*.axmodel"</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"README.md"</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"config.json"</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"infer_moss_axengine.py"</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"model.embed_tokens.weight.bfloat16.bin"</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"post_config.json"</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"preprocessor_config.json"</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"requirements.txt"</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"tokenizer.json"</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"utils/infer_func.py"</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"wav/002.mp3"</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"wav/2speakers_example.wav"</span><span class="token plain"> </span><span class="token punctuation" style=color:#393A34>\</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  </span><span class="token parameter variable" style=color:#36acaa>--revision</span><span class="token plain"> c627e9bad59af4074d95c4bc24a87483141d5cc7 </span><span class="token punctuation" style=color:#393A34>\</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  --local-dir </span><span class="token string" style=color:#e3116c>"</span><span class="token string variable" style=color:#36acaa>$MODEL_DIR</span><span class="token string" style=color:#e3116c>"</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain"></span><span class="token builtin class-name">cd</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"</span><span class="token string variable" style=color:#36acaa>$MODEL_DIR</span><span class="token string" style=color:#e3116c>"</span><br/></div></code></pre></div></div>
 <p>保留当前终端中的 <code>MODEL_DIR</code> 变量，后续命令沿用此目录。下载受阻或需要离线复制时，见<a class="" href=/docs/usage/download-models>下载方式与文件校验</a>。</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=查看部署效果>查看部署效果<a href=#查看部署效果 class=hash-link aria-label=查看部署效果的直接链接 title=查看部署效果的直接链接 translate=no>​</a></h2>
-<p><strong>本机尚未实测。</strong> 部署后请按以下项目检查输出。</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=准备语音转写依赖>准备语音转写依赖<a href=#准备语音转写依赖 class=hash-link aria-label=准备语音转写依赖的直接链接 title=准备语音转写依赖的直接链接 translate=no>​</a></h2>
+<p>本例在 RK3576 主机连接 AX8850 <strong>16GB M.2 算力卡</strong>上运行，输出转写文本、每段起止时间和说话人编号。选用固定版本的 30 个 AXModel 与 BF16 词嵌入，模型及配套文件约 2.12GB；另需预留 Python 依赖和结果空间。</p>
+<p>激活已安装 <a class="" href=/docs/usage/python>PyAXEngine</a> 的主机虚拟环境：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token builtin class-name">source</span><span class="token plain"> ~/edgeaccel/python-env/bin/activate</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">python </span><span class="token parameter variable" style=color:#36acaa>-m</span><span class="token plain"> pip </span><span class="token function" style=color:#d73a49>install</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>'numpy==1.26.4'</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>'torch==2.5.1'</span><span class="token plain"> </span><span class="token punctuation" style=color:#393A34>\</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  </span><span class="token string" style=color:#e3116c>'transformers==4.51.3'</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>'tokenizers==0.21.4'</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>'ml-dtypes==0.5.3'</span><span class="token plain"> </span><span class="token punctuation" style=color:#393A34>\</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  </span><span class="token string" style=color:#e3116c>'soundfile==0.13.1'</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>'scipy==1.17.1'</span><span class="token plain"> tqdm</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">python </span><span class="token parameter variable" style=color:#36acaa>-c</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"import axengine; print(axengine.get_available_providers())"</span><br/></div></code></pre></div></div>
+<p>输出须包含 <code>AXCLRTExecutionProvider</code>。本例使用 Python 3.12 与 PyAXEngine 0.1.3.rc3；原生 AX650 的 <code>AxEngineExecutionProvider</code> 不适用于本页的 PCIe 算力卡步骤。</p>
+<p>下载<a href=/examples/moss_asr_card.py target=_blank class="">算力卡运行脚本</a>，保存为 <code>~/edgeaccel/moss_asr_card.py</code>。下载<a href=https://raw.githubusercontent.com/dshanpi/edgeaccel-docs/4be3007b9ee57e890bdf4a370a254e5049e4dc86/static/validation/effects/moss-transcribe-diarize-0-9b-20260930/download-manifest.json target=_blank rel="noopener noreferrer" class="">固定文件校验清单</a>，保存为 <code>$MODEL_DIR/download-manifest.json</code>。在 Windows 下载时，将文件复制到 Linux 主机的对应位置。</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=转写双人对话>转写双人对话<a href=#转写双人对话 class=hash-link aria-label=转写双人对话的直接链接 title=转写双人对话的直接链接 translate=no>​</a></h2>
+<p>在连接算力卡的 Linux 主机执行，沿用下载步骤的 <code>MODEL_DIR</code>：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">python ~/edgeaccel/moss_asr_card.py </span><span class="token punctuation" style=color:#393A34>\</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  --model-dir </span><span class="token string" style=color:#e3116c>"</span><span class="token string variable" style=color:#36acaa>$MODEL_DIR</span><span class="token string" style=color:#e3116c>"</span><span class="token plain"> </span><span class="token punctuation" style=color:#393A34>\</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  </span><span class="token parameter variable" style=color:#36acaa>--audio</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"</span><span class="token string variable" style=color:#36acaa>$MODEL_DIR</span><span class="token string" style=color:#e3116c>/wav/2speakers_example.wav"</span><span class="token plain"> </span><span class="token punctuation" style=color:#393A34>\</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  --kv-transfer incremental </span><span class="token punctuation" style=color:#393A34>\</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  </span><span class="token parameter variable" style=color:#36acaa>--output</span><span class="token plain"> ~/edgeaccel/results/moss-meeting-01</span><br/></div></code></pre></div></div>
+<p>输出目录须尚不存在。程序通过官方音频编码和语言模型流程完成转写，成功后生成：</p>
 <ul>
-<li class="">保存输入音频的采样率、通道数和参考转写，逐句比较漏词、错词和语言标记。</li>
-<li class="">流式模式还需检查分块边界和最终文本合并；分别记录端到端耗时与纯模型耗时。</li>
+<li class=""><code>response.json</code>：原始文本、分段结果、token 与分阶段耗时。</li>
+<li class=""><code>deployment-result.json</code>：模型版本、文件校验和执行状态。</li>
+<li class=""><code>calls.jsonl</code>：实际算力卡调用记录。</li>
 </ul>
+<p><code>incremental</code> 首次传输完整历史缓存，随后只更新上一 token 改变的缓存行，减少 PCIe 重复传输。本页效果来自该模式。<code>full</code> 保留官方每次完整传输缓存的行为，可用于同输入对照，运行更慢。</p>
+<p>使用同一仓库的 MP3 样例验证另一段输入：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">python ~/edgeaccel/moss_asr_card.py </span><span class="token punctuation" style=color:#393A34>\</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  --model-dir </span><span class="token string" style=color:#e3116c>"</span><span class="token string variable" style=color:#36acaa>$MODEL_DIR</span><span class="token string" style=color:#e3116c>"</span><span class="token plain"> </span><span class="token punctuation" style=color:#393A34>\</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  </span><span class="token parameter variable" style=color:#36acaa>--audio</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"</span><span class="token string variable" style=color:#36acaa>$MODEL_DIR</span><span class="token string" style=color:#e3116c>/wav/002.mp3"</span><span class="token plain"> </span><span class="token punctuation" style=color:#393A34>\</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  --kv-transfer incremental </span><span class="token punctuation" style=color:#393A34>\</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  </span><span class="token parameter variable" style=color:#36acaa>--output</span><span class="token plain"> ~/edgeaccel/results/moss-mp3-01</span><br/></div></code></pre></div></div>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=查看分段结果>查看分段结果<a href=#查看分段结果 class=hash-link aria-label=查看分段结果的直接链接 title=查看分段结果的直接链接 translate=no>​</a></h2>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">python - </span><span class="token operator" style=color:#393A34>&lt;&lt;</span><span class="token string" style=color:#e3116c>'PY'</span><br/></div><div class=token-line style=color:#393A34><span class="token string" style=color:#e3116c>import json</span><br/></div><div class=token-line style=color:#393A34><span class="token string" style=color:#e3116c>from pathlib import Path</span><br/></div><div class=token-line style=color:#393A34><span class="token string" style=color:#e3116c>folder = Path.home() / 'edgeaccel/results/moss-meeting-01'</span><br/></div><div class=token-line style=color:#393A34><span class="token string" style=color:#e3116c>run = json.loads((folder / 'deployment-result.json').read_text())</span><br/></div><div class=token-line style=color:#393A34><span class="token string" style=color:#e3116c>response = json.loads((folder / 'response.json').read_text())</span><br/></div><div class=token-line style=color:#393A34><span class="token string" style=color:#e3116c>assert run['completed'] and run['terminatedWithEos']</span><br/></div><div class=token-line style=color:#393A34><span class="token string" style=color:#e3116c>assert all(s['providerActual'] == 'AXCLRTExecutionProvider' for s in run['sessions'])</span><br/></div><div class=token-line style=color:#393A34><span class="token string" style=color:#e3116c>print(response['formatted_text'])</span><br/></div><div class=token-line style=color:#393A34><span class="token string" style=color:#e3116c>print('转写流程：', round(run['pipelineSeconds'], 3), 's')</span><br/></div><div class=token-line style=color:#393A34><span class="token string" style=color:#e3116c>PY</span><br/></div></code></pre></div></div>
+<p>每行格式为 <code>[起始秒][结束秒][说话人编号]文本</code>。<code>S01</code>、<code>S02</code> 表示同一段音频内的说话人分组，不能解释为已识别姓名，也不能直接用于跨录音身份匹配。</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=替换输入音频>替换输入音频<a href=#替换输入音频 class=hash-link aria-label=替换输入音频的直接链接 title=替换输入音频的直接链接 translate=no>​</a></h2>
+<p>将 <code>--audio</code> 改为自己的音频路径，并更换输出目录。程序将多声道音频取均值转为单声道、重采样到 16kHz，再按 30 秒分块编码。</p>
+<p>本页展示短音频与官方双人对话的实测输出。更长会议、多说话人重叠、噪声和方言仍需独立评估；程序输出成功不等于文字和说话人标签全部正确。流程耗时包含前处理、模型加载、推理和结果保存，不含 Python 启动、依赖导入及运行前后的文件校验；算力卡调用耗时包含数据传输，不代表纯 NPU 计算时间。</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=查看部署效果>查看部署效果<a href=#查看部署效果 class=hash-link aria-label=查看部署效果的直接链接 title=查看部署效果的直接链接 translate=no>​</a></h2>
+<p><strong>已运行，效果仍需评估</strong> · RK3576 + AX8850 16GB M.2。以下输入与输出来自本页固定版本的实际运行。</p>
+<p>16GB 卡完成双人对话和 MP3 转写，20 个分段时间戳均在音频范围内。双人样例有 70 毫秒预测重叠，MP3 末尾 1.532 秒未覆盖；已展示输入波形和预测时间轴，尚无人工标注确认文字、边界及说话人是否正确。</p>
+<p><strong>官方双人对话 · 51.663 秒</strong></p>
+<p>实际返回 19 段文本，说话人标签为 S01, S02，生成 473 个 token 后遇到 EOS。时间单位为秒。以下保留原始分段输出，可播放输入音频逐句核对。 19 段的起止时间均在音频内，S01/S02 标签按时间先后切换 4 次。第 12、13 段在 34.74–34.81 秒重叠 0.070 秒；可能对应交叠发言，也可能是边界偏差，需要听音或标注确认。 图中波形来自实际输入，彩条仅表示模型生成的文字时间区间，段内可能含停顿，不是逐帧语音活动标注。编号只用于本段录音，不代表跨录音身份。 本次含加载流程的 RTF 大于 1，处理耗时长于录音时长；不能据此当作实时麦克风服务效果。</p>
+<div class=model-effect-gallery>
+<figure>
+<p><a href=/validation/effects/moss-transcribe-diarize-0-9b-20260930/moss-asr-meeting-inc2-timeline.png target=_blank class=""><img decoding=async loading=lazy alt="输入波形与模型预测分段；下图放大 34.74–34.81 秒的预测重叠" src=/validation/effects/moss-transcribe-diarize-0-9b-20260930/moss-asr-meeting-inc2-timeline.png width=1760 height=992 class=img_ev3q /></a></p>
+<figcaption>输入波形与模型预测分段；下图放大 34.74–34.81 秒的预测重叠</figcaption>
+</figure>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>起始秒<th>结束秒<th>说话人<th>实际转写<tbody><tr><td>0.25<td>5.28<td>S01<td>嗯，那么今天我们就简单的进行一下那个新生招聘的。<tr><td>5.32<td>8.21<td>S01<td>嗯，讨论吧，因为现在不是。<tr><td>8.24<td>10.21<td>S01<td>马上就新生到校嘛。<tr><td>10.23<td>13.72<td>S01<td>然后我们社团呢，也需要招聘一些新的社员。<tr><td>13.78<td>16.86<td>S01<td>然后就今天就大概就讨论一下。<tr><td>16.88<td>19.01<td>S01<td>嗯，怎么招聘的内容吧。<tr><td>19.13<td>21.51<td>S01<td>嗯，我们就首先想一下那个。<tr><td>21.53<td>23.54<td>S01<td>招新的地点在哪里吧。<tr><td>24.14<td>27.41<td>S02<td>嗯，地点的话，我们现在可以有三个选择。<tr><td>27.46<td>30.16<td>S02<td>嗯，第一个的话，我们可以选择在。<tr><td>30.20<td>32.01<td>S02<td>操场，因为那儿。<tr><td>32.38<td>34.81<td>S02<td>嗯，学生流动量也挺大的。<tr><td>34.74<td>36.13<td>S01<td>操场的话。<tr><td>36.17<td>38.89<td>S01<td>这这段时间太热了，我怕。<tr><td>38.94<td>40.88<td>S01<td>那个人流量有点少。<tr><td>40.91<td>43.32<td>S02<td>嗯，那我们还可以有第二个选择呀。<tr><td>43.51<td>46.38<td>S02<td>嗯，我们可以在图书馆楼下。<tr><td>46.41<td>48.58<td>S02<td>那里有一块可以遮荫的地方。<tr><td>48.75<td>51.66<td>S01<td>哦，图书馆我觉得应该还可以吧。</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>音频编码<th>文本预填充<th>逐字生成<th>转写流程（含加载）<tbody><tr><td>1.183 s<td>6.632 s<td>142.123 s<td>189.911 s</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>时间范围检查<th>本次结果<tbody><tr><td>时间戳越界<td>0 段<tr><td>预测区间并集<td>49.530 s<tr><td>未落入任何预测分段<td>2.133 s<tr><td>预测分段之间的重叠<td>0.070 s<tr><td>完整流程 / 音频时长（RTF）<td>3.676（包含模型加载）</table>
+<p>播放本次输入音频</p>
+<p><audio controls preload=metadata src=/validation/effects/moss-transcribe-diarize-0-9b-20260930/moss-asr-meeting-inc2.wav aria-label=播放本次输入音频></audio></p>
+<p><a href=/validation/effects/moss-transcribe-diarize-0-9b-20260930/moss-asr-meeting-inc2.wav target=_blank class="">下载音频</a></p>
+<p><strong>官方 MP3 语音 · 29.952 秒</strong></p>
+<p>实际返回 1 段文本，说话人标签为 S01，生成 108 个 token 后遇到 EOS。时间单位为秒。以下保留原始分段输出，可播放输入音频逐句核对。 唯一文字分段覆盖 0.12–28.42 秒，音频总长 29.952 秒；开头 0.120 秒、末尾 1.532 秒未落入文字分段。未覆盖区间不能直接判为静音或漏字。 图中波形来自实际输入，彩条仅表示模型生成的文字时间区间，段内可能含停顿，不是逐帧语音活动标注。编号只用于本段录音，不代表跨录音身份。 本次含加载流程的 RTF 大于 1，处理耗时长于录音时长；不能据此当作实时麦克风服务效果。</p>
+<div class=model-effect-gallery>
+<figure>
+<p><a href=/validation/effects/moss-transcribe-diarize-0-9b-20260930/moss-asr-mp3-inc1-timeline.png target=_blank class=""><img decoding=async loading=lazy alt="输入波形与模型预测分段；下图放大 28.42 秒后的未覆盖区间" src=/validation/effects/moss-transcribe-diarize-0-9b-20260930/moss-asr-mp3-inc1-timeline.png width=1760 height=992 class=img_ev3q /></a></p>
+<figcaption>输入波形与模型预测分段；下图放大 28.42 秒后的未覆盖区间</figcaption>
+</figure>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>起始秒<th>结束秒<th>说话人<th>实际转写<tbody><tr><td>0.12<td>28.42<td>S01<td>种的，那么一般是非本人意愿的，那么单位停保的时候如实给你妻子填写停保原因，或者说呃如果单位停保原因填写错了，导致你妻子生育津贴这个呃申请失业金申请的这个原因，就是非本人意愿中断这个原因不符合的，那么需要提呃申请失业金的时候，提供一个单位开具的解除劳动关系证明，简明具体解除劳动关系原因，证明是非本人意愿的。</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>音频编码<th>文本预填充<th>逐字生成<th>转写流程（含加载）<tbody><tr><td>0.596 s<td>3.620 s<td>38.372 s<td>82.655 s</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>时间范围检查<th>本次结果<tbody><tr><td>时间戳越界<td>0 段<tr><td>预测区间并集<td>28.300 s<tr><td>未落入任何预测分段<td>1.652 s<tr><td>预测分段之间的重叠<td>0.000 s<tr><td>完整流程 / 音频时长（RTF）<td>2.760（包含模型加载）</table>
+<p>播放本次输入音频</p>
+<p><audio controls preload=metadata src=/validation/effects/moss-transcribe-diarize-0-9b-20260930/moss-asr-mp3-inc1.mp3 aria-label=播放本次输入音频></audio></p>
+<p><a href=/validation/effects/3d-speaker-mt-axera-20260930/meeting-mt-natural-a.mp3 target=_blank class="">下载音频</a></p>
+<p><strong>使用时注意：</strong></p>
+<ul>
+<li class="">本次为 16GB 卡的基本运行验证，未完成真实 8GB 容量、并发或长期稳定性回归。</li>
+<li class="">没有独立人工标注稿，未计算字错率、词错率或说话人区分错误率；上游示例输出不作为人工真值。</li>
+</ul>
+<p>这些结果用于对照部署后的输出，未覆盖完整数据集精度或长期连续运行。</p>
+<details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>查看样例环境与运行耗时</summary><div><div class=collapsibleContent_i85q>
+<!-- -->
+<p>环境：RK3576 + AX8850 16GB M.2。模型版本：<code>c627e9bad59af4074d95c4bc24a87483141d5cc7</code>。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>组件<th>版本或配置<tbody><tr><td>主机 / 内核<td>RK3576，约 4GB RAM，6.1.115-vendor-rk35xx<tr><td>AXCL / 驱动<td>V3.16.0_20260729180218<tr><td>固件 / CMM<td>V3.16.0 / 15232 MiB<tr><td>Python 推理<td>Python 3.12 / PyAXEngine 0.1.3.rc3 / NumPy 1.26.4 / AXCLRTExecutionProvider</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>指标<th>实测值<th>计时或统计范围<tbody><tr><td>编译权重<td>30 个子模型实际执行<td>音频编码器、28 层语言模型与输出层。<tr><td>完整音频<td>51.663 秒 WAV / 29.952 秒 MP3<td>分别覆盖两块、单块 30 秒音频编码与分段转写。<tr><td>缓存传输对照<td>2,930 次调用输出逐字节一致<td>官方对话前 12 秒；完整缓存与增量缓存传输均生成相同的 100 个 token。</table>
+<p>适用范围：</p>
+<ul>
+<li class="">说话人编号及时间戳均由模型生成；双人样例有 70 毫秒预测重叠，MP3 末尾未覆盖 1.532 秒。段内可能含停顿，未覆盖区间不等于静音或漏字；编号不能用于跨录音身份认证。</li>
+<li class="">未验证六分钟长录音、重叠说话、噪声、方言或更多说话人的效果。</li>
+<li class="">计时来自当前 Python 文件转写流程，含 PCIe 传输；不代表常驻服务吞吐或实时识别能力。</li>
+</ul>
+</div></div></details>
 <p>遇到加载、内存或后端错误时，按<a class="" href=/docs/usage/troubleshooting>常见问题</a>处理。需要更换输入或接入业务时，按<a class="" href=/docs/reference/validation>检查输出与记录结果</a>保留自己的结果。</p>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>查看文件用途与版本信息</summary><div><div class=collapsibleContent_i85q>
 <!-- -->
@@ -201,6 +454,5 @@
 <li class=""><a href=https://huggingface.co/AXERA-TECH/MOSS-Transcribe-Diarize-0.9B/tree/c627e9bad59af4074d95c4bc24a87483141d5cc7 target=_blank rel="noopener noreferrer" class="">固定版本文件表</a>。</li>
 <li class=""><a href=https://huggingface.co/AXERA-TECH/MOSS-Transcribe-Diarize-0.9B/blob/c627e9bad59af4074d95c4bc24a87483141d5cc7/README.md target=_blank rel="noopener noreferrer" class="">模型卡 / 使用说明</a>。</li>
 <li class=""><a href=https://huggingface.co/AXERA-TECH/MOSS-Transcribe-Diarize-0.9B/blob/c627e9bad59af4074d95c4bc24a87483141d5cc7/infer_moss_axengine.py target=_blank rel="noopener noreferrer" class="">主要程序入口：infer_moss_axengine.py</a>。</li>
-<li class=""><a href=https://github.com/AXERA-TECH/ax-llm.git target=_blank rel="noopener noreferrer" class="">配套项目：AXERA-TECH/ax-llm.git</a>。</li>
 </ul>
-<p>返回<a class="" href=/docs/models/catalog>完整模型目录</a>。</div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href=https://github.com/dshanpi/edgeaccel-docs/tree/main/docs/models/deploy/moss-transcribe-diarize-0-9b.md target=_blank rel="noopener noreferrer" class=theme-edit-this-page><svg fill=currentColor height=20 width=20 viewBox="0 0 40 40" class=iconEdit_Z9Sw aria-hidden=true><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"/></g></svg>编辑此页</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label=文件选项卡><a class="pagination-nav__link pagination-nav__link--prev" href=/docs/models/deploy/mel-band-roformer><div class=pagination-nav__sublabel>上一页</div><div class=pagination-nav__label>mel_band_roformer</div></a><a class="pagination-nav__link pagination-nav__link--next" href=/docs/models/deploy/openwakeword-axera><div class=pagination-nav__sublabel>下一页</div><div class=pagination-nav__label>OpenWakeWord.AXERA</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href=#准备运行环境 class="table-of-contents__link toc-highlight">准备运行环境</a><li><a href=#确认算力卡接入条件 class="table-of-contents__link toc-highlight">确认算力卡接入条件</a><li><a href=#核对运行配置 class="table-of-contents__link toc-highlight">核对运行配置</a><ul><li><a href=#核对本模型的程序入口 class="table-of-contents__link toc-highlight">核对本模型的程序入口</a><li><a href=#准备本模型的输入 class="table-of-contents__link toc-highlight">准备本模型的输入</a><li><a href=#完成接入后再运行 class="table-of-contents__link toc-highlight">完成接入后再运行</a></ul><li><a href=#下载模型与样例 class="table-of-contents__link toc-highlight">下载模型与样例</a><li><a href=#查看部署效果 class="table-of-contents__link toc-highlight">查看部署效果</a><li><a href=#参考资料 class="table-of-contents__link toc-highlight">参考资料</a></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class=footer__title>开始使用</div><ul class="footer__items clean-list"><li class=footer__item><a class=footer__link-item href=/docs/>文档总览</a><li class=footer__item><a class=footer__link-item href=/docs/ax650n/user-guide>算力卡用户指南</a><li class=footer__item><a class=footer__link-item href=/docs/ax650n/roadmap>上手路线</a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>应用与资料</div><ul class="footer__items clean-list"><li class=footer__item><a class=footer__link-item href=/docs/reference/validation>输出检查方法</a><li class=footer__item><a class=footer__link-item href=/docs/models/catalog>模型目录</a><li class=footer__item><a class=footer__link-item href=/docs/downloads>资料下载</a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>项目</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://github.com/dshanpi/edgeaccel-docs target=_blank rel="noopener noreferrer" class=footer__link-item>GitHub<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_nPIU><use href=#theme-svg-external-link /></svg></a></ul></div></div><div class="footer__bottom text--center"><div class=footer__copyright>Copyright © 2026 100askTeam. Built with Docusaurus.</div></div></div></footer></div></body>
+<p>返回<a class="" href=/docs/models/catalog>完整模型目录</a>。</div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href=https://github.com/dshanpi/edgeaccel-docs/tree/main/docs/models/deploy/moss-transcribe-diarize-0-9b.md target=_blank rel="noopener noreferrer" class=theme-edit-this-page><svg fill=currentColor height=20 width=20 viewBox="0 0 40 40" class=iconEdit_Z9Sw aria-hidden=true><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"/></g></svg>编辑此页</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label=文件选项卡><a class="pagination-nav__link pagination-nav__link--prev" href=/docs/models/deploy/mel-band-roformer><div class=pagination-nav__sublabel>上一页</div><div class=pagination-nav__label>mel_band_roformer</div></a><a class="pagination-nav__link pagination-nav__link--next" href=/docs/models/deploy/openwakeword-axera><div class=pagination-nav__sublabel>下一页</div><div class=pagination-nav__label>OpenWakeWord.AXERA</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href=#准备运行环境 class="table-of-contents__link toc-highlight">准备运行环境</a><li><a href=#下载模型与样例 class="table-of-contents__link toc-highlight">下载模型与样例</a><li><a href=#准备语音转写依赖 class="table-of-contents__link toc-highlight">准备语音转写依赖</a><li><a href=#转写双人对话 class="table-of-contents__link toc-highlight">转写双人对话</a><li><a href=#查看分段结果 class="table-of-contents__link toc-highlight">查看分段结果</a><li><a href=#替换输入音频 class="table-of-contents__link toc-highlight">替换输入音频</a><li><a href=#查看部署效果 class="table-of-contents__link toc-highlight">查看部署效果</a><li><a href=#参考资料 class="table-of-contents__link toc-highlight">参考资料</a></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class=footer__title>开始使用</div><ul class="footer__items clean-list"><li class=footer__item><a class=footer__link-item href=/docs/>文档总览</a><li class=footer__item><a class=footer__link-item href=/docs/ax650n/user-guide>算力卡用户指南</a><li class=footer__item><a class=footer__link-item href=/docs/ax650n/roadmap>上手路线</a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>应用与资料</div><ul class="footer__items clean-list"><li class=footer__item><a class=footer__link-item href=/docs/reference/validation>输出检查方法</a><li class=footer__item><a class=footer__link-item href=/docs/models/catalog>模型目录</a><li class=footer__item><a class=footer__link-item href=/docs/downloads>资料下载</a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>项目</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://github.com/dshanpi/edgeaccel-docs target=_blank rel="noopener noreferrer" class=footer__link-item>GitHub<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_nPIU><use href=#theme-svg-external-link /></svg></a></ul></div></div><div class="footer__bottom text--center"><div class=footer__copyright>Copyright © 2026 100askTeam. Built with Docusaurus.</div></div></div></footer></div></body>

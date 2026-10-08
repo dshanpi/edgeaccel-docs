@@ -2,7 +2,8 @@
 
 FBank settings follow modelscope/3D-Speaker speakerlab/process/processor.py:
 80 bins, 16 kHz, dither=0, mean normalization before crop/padding.
-Only the trailing missing frames are padded; existing speech is preserved.
+Features beyond the model's frame limit are cropped from the tail.
+Shorter features are padded only at the end.
 """
 import argparse
 import hashlib
@@ -76,6 +77,7 @@ def main():
             assert len(cpu_shape) in (3, 4), cpu_shape
             refs = [cpu.run(None, {cpu.get_inputs()[0].name: t[:, None] if len(cpu_shape) == 4 else t})[0] for t in tensors]
             item['onnxInputShape'] = cpu_shape
+            item['onnxEmbeddings'] = [v.ravel().tolist() for v in refs]
             item['onnxComparison'] = {'embeddingCosine': [cosine(a,b) for a,b in zip(vectors, refs)],
                                       'sameSpeaker': cosine(refs[0], refs[1]),
                                       'differentSpeaker': cosine(refs[0], refs[2])}

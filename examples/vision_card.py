@@ -247,17 +247,22 @@ def main():
         session = MeasuredSession(str(root / weight))
         meta = session.get_inputs()[0]
         vectors = []
-        for name in ["ILSVRC2012_val_00000001.jpeg", "ILSVRC2012_val_00000005.jpeg", "ILSVRC2012_val_00000001.jpeg"]:
+        for index, name in enumerate(["ILSVRC2012_val_00000001.jpeg", "ILSVRC2012_val_00000005.jpeg", "ILSVRC2012_val_00000001.jpeg"], start=1):
             tensor = upstream.preprocess_image(root / "examples" / name, list(meta.shape))
             values = session.run(None, {meta.name: tensor})
             pool = next(v for v in values if v.ndim == 2 and v.shape[0] == 1)
             vector = pool.reshape(-1)
             vectors.append(vector.copy())
-            np.save(out / (Path(name).stem + ".npy"), vector)
+            vector_file = f"{index:02d}-{Path(name).stem}.npy"
+            np.save(out / vector_file, vector, allow_pickle=False)
             shutil.copy2(root / "examples" / name, out / name)
-            report["results"].append({"input": name, "dimensions": int(vector.size), "norm": float(np.linalg.norm(vector)), "first8": vector[:8].tolist()})
+            report["results"].append({"input": name, "vectorFile": vector_file, "dimensions": int(vector.size), "norm": float(np.linalg.norm(vector)), "first8": vector[:8].tolist()})
+        if any(not np.isfinite(v).all() or np.linalg.norm(v) <= 0 for v in vectors):
+            raise ValueError("DINOv3 returned nonfinite or zero-norm embeddings")
         cosine = lambda a, b: float(np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b)))
         report["cosine"] = {"differentImages": cosine(vectors[0], vectors[1]), "repeatedImage": cosine(vectors[0], vectors[2])}
+        report["repeatComparison"] = {"elementwiseEqual": bool(np.array_equal(vectors[0], vectors[2])),
+                                      "maxAbsDifference": float(np.max(np.abs(vectors[0] - vectors[2])))}
     elif args.task == "mobileclip":
         import torch
         from torchvision import transforms

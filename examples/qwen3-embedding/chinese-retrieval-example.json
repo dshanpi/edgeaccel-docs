@@ -1,0 +1,11 @@
+{
+  "instruction": "Given a web search query, retrieve relevant passages that answer the query",
+  "queries": [
+    "温室湿度过低应该怎么处理？",
+    "画面中的公共汽车是什么颜色？"
+  ],
+  "documents": [
+    "温室湿度低于设定值时，启动加湿设备并适量补水。",
+    "画面中的双层公共汽车是红色的。"
+  ]
+}
