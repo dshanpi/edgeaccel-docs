@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="430" viewBox="0 0 1100 430" role="img" aria-labelledby="title desc">
+  <title id="title">AX8850 M.2 算力卡硬件布局示意</title>
+  <desc id="desc">简化正面布局，从左到右为固定位置、板载内存、AI 主芯片、板载内存、供电区域和 M.2 接口。只展示功能区，不展示器件型号、布线或测试点坐标。</desc>
+  <defs>
+    <pattern id="contacts" width="24" height="10" patternUnits="userSpaceOnUse"><rect width="22" height="6" y="2" fill="#d8b66a"/></pattern>
+    <style>text{font-family:'Microsoft YaHei','Noto Sans SC',sans-serif}.label{fill:#253957;font-size:22px;font-weight:600}.sub{fill:#51677f;font-size:18px}.chip{fill:#f4f8ff;font-size:22px;font-weight:600}.note{fill:#c0d8df;font-size:17px}.line{fill:none;stroke:#7895a7;stroke-width:2}</style>
+  </defs>
+  <rect width="1100" height="430" rx="18" fill="#f2f6fb"/>
+  <text x="44" y="44" class="label">韦东山 AX8850 M.2 算力卡</text>
+  <text x="44" y="75" class="sub">正面主要功能区 · 内存版本：8GB / 16GB</text>
+  <path d="M85 142 H942 V165 H971 V298 H941 V320 H85 V252 A19 19 0 0 0 85 214 Z" fill="#154a4f" stroke="#0d333e" stroke-width="3"/>
+  <circle cx="105" cy="160" r="8" fill="#f2f6fb" stroke="#a0b7b2" stroke-width="5"/>
+  <circle cx="105" cy="302" r="8" fill="#f2f6fb" stroke="#a0b7b2" stroke-width="5"/>
+  <circle cx="925" cy="160" r="8" fill="#f2f6fb" stroke="#a0b7b2" stroke-width="5"/>
+  <circle cx="925" cy="302" r="8" fill="#f2f6fb" stroke="#a0b7b2" stroke-width="5"/>
+  <rect x="952" y="167" width="35" height="106" fill="url(#contacts)"/>
+  <rect x="952" y="290" width="35" height="18" fill="url(#contacts)"/>
+  <path d="M948 274 H989 V289 H948 Z" fill="#f2f6fb"/>
+  <rect x="143" y="167" width="126" height="129" rx="6" fill="#122733" stroke="#6a909e"/>
+  <text x="206" y="238" text-anchor="middle" class="chip">板载内存</text>
+  <rect x="307" y="162" width="155" height="144" rx="7" fill="#10222d" stroke="#91b6bd" stroke-width="2"/>
+  <text x="385" y="216" text-anchor="middle" class="chip">AI 主芯片</text>
+  <text x="385" y="250" text-anchor="middle" class="note">推理 / 媒体处理</text>
+  <rect x="503" y="167" width="126" height="129" rx="6" fill="#122733" stroke="#6a909e"/>
+  <text x="566" y="238" text-anchor="middle" class="chip">板载内存</text>
+  <rect x="667" y="164" width="225" height="138" rx="6" fill="#206069" stroke="#81a9ab" stroke-dasharray="5 5"/>
+  <text x="779" y="238" text-anchor="middle" class="chip">供电区域</text>
+  <path d="M85 233 H48 V355 H135" class="line"/>
+  <text x="145" y="363" class="label">固定位置</text>
+  <path d="M970 189 H1034 V108 H948" class="line"/>
+  <text x="772" y="103" class="label">M.2 M-Key 接口</text>
+  <text x="772" y="130" class="sub">PCIe 通信 / 板卡供电</text>
+  <text x="44" y="407" class="sub">功能区示意，非实物照片或尺寸图；测试点定义见正文。</text>
+</svg>
