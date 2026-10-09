@@ -9,6 +9,7 @@ export default {
       "label": "接卡与安装",
       "collapsed": true,
       "items": [
+        "getting-started/hardware",
         "ax650n/user-guide",
         "getting-started/prepare",
         "ax650n/quick-start/arm64",

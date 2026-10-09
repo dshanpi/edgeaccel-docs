@@ -34,7 +34,7 @@ import {GuideHero, GuideNext} from '@site/src/components/ModelGuideLayout';
 
 ## 选择主机安装入口
 
-先阅读[接卡前的准备事项](getting-started/prepare.md)，确认主机接口、供电、散热和卡容量，再选择对应平台。**运行期间保持算力卡散热风扇开启。**
+先阅读[硬件介绍](getting-started/hardware.md)和[接卡前的准备事项](getting-started/prepare.md)，确认主机接口、供电、散热和卡容量，再选择对应平台。**运行期间保持算力卡散热风扇开启。**
 
 | 连接算力卡的主机 | 安装文档 | 安装后的下一步 |
 |---|---|---|

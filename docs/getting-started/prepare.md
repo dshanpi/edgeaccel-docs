@@ -4,7 +4,7 @@ title: "准备主机与算力卡"
 
 # 准备主机与算力卡
 
-本节适用于首次安装。已能正常运行 AXCL 的主机可直接进入[首次推理](../usage/first-inference.md)。
+本节适用于首次安装。了解板卡接口、内存、功耗与散热要求，请先阅读[硬件介绍](hardware.md)。已能正常运行 AXCL 的主机可直接进入[首次推理](../usage/first-inference.md)。
 
 ## 核对硬件
 
