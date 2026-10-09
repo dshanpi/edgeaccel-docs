@@ -53,13 +53,11 @@ import {GuideHero, GuideNext} from '@site/src/components/ModelGuideLayout';
 
 算力卡通过 **M.2 M-Key 金手指**接入主机。使用配套主机或转接板时，插入并固定板卡即可；金手指同时承担通信、供电、时钟和复位连接。
 
-![AX8850 接口连接示意：主机通过 M.2 提供 PCIe 通信、3.3V 供电、参考时钟和复位；UART 与 USB 调试使用独立测试点](../../static/img/hardware/ax8850-interface-overview.svg)
+![AX8850 接口连接示意：主机通过 M.2 提供 PCIe 通信、3.3V 供电、参考时钟和复位](../../static/img/hardware/ax8850-interface-overview.svg)
 
 **主机通信**：PCIe 2.0 ×2 承担主机与算力卡之间的数据传输。主机安装 AXCL 后，通过运行库或示例程序调用算力卡。
 
 **供电与控制**：主机插槽或适配转接板通过 M.2 提供 3.3V 电源、GND、参考时钟（REFCLK）和复位信号（PERST#），使用配套硬件时无需另接这些信号。
-
-**按需调试**：UART 使用 TP3、TP4，逻辑电平为 1.8V；USB 使用 TP5、TP6 差分信号测试点，未接至 M.2 的 USB 引脚。连接方法见[调试测试点](#识别调试测试点)。图中展示连接关系，测试点位置以实物与配套资料为准。
 
 本卡通过 PCIe 使用 AXCL，不能作为 NVMe 硬盘安装或通过普通 USB 转 NVMe 硬盘盒接入。摄像头、显示器和网线连接主机；芯片支持某种外设功能，并不表示本卡提供相应插座。
 
@@ -132,9 +130,13 @@ flowchart LR
 正常使用只需在上位机安装 AXCL，通过 PCIe 调用算力卡，无需连接调试测试点。
 
 <details>
-<summary>展开 UART / USB 调试测试点说明</summary>
+<summary>展开 UART / USB 调试连接与测试点说明</summary>
 
 板卡预留 UART 与 USB 测试点，用于串口日志查看和配套工具调试。
+
+![UART / USB 调试连接：1.8V 串口适配器与 TP3、TP4 连接并共地，USB 调试使用 TP5、TP6](../../static/img/hardware/ax8850-debug-connections.svg)
+
+图中展示连接关系，测试点位置以实物与配套资料为准。
 
 | 测试点 | 信号 | 用途与连接说明 |
 |---|---|---|
