@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="320" viewBox="0 0 1100 320" role="img" aria-labelledby="title desc">
+  <title id="title">UART 与 USB 调试连接</title>
+  <desc id="desc">TP3 为卡端 UART TX，TP4 为卡端 UART RX，使用 1.8V 电平并共地；USB 的 D+ 和 D− 分别位于 TP5 和 TP6，未连接至 M.2 的 USB 引脚。图中不表示测试点的实物位置。</desc>
+  <defs>
+    <marker id="greenArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9 Z" fill="#247550"/></marker>
+    <marker id="blueArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M1 1 L9 5 L1 9 Z" fill="#476d94"/></marker>
+    <style>
+      text{font-family:'Microsoft YaHei','Noto Sans SC',sans-serif}
+      .title{fill:#213d36;font-size:30px;font-weight:700}
+      .heading{fill:#243d4e;font-size:26px;font-weight:700}
+      .label{fill:#294d40;font-size:25px;font-weight:600}
+      .body{fill:#4e6474;font-size:22px}
+      .small{fill:#526a79;font-size:20px}
+      .white{fill:#f2faf6;font-size:26px;font-weight:700}
+      .light{fill:#c5e0d3;font-size:22px}
+    </style>
+  </defs>
+  <rect width="1100" height="320" rx="20" fill="#f5f8fa"/>
+  <g transform="translate(0,-430)">
+  <text x="44" y="473" class="heading">按需调试 · 独立测试点</text>
+  <text x="44" y="506" class="body">正常部署无需连接，下方为信号说明，不表示焊盘位置。</text>
+  <rect x="44" y="531" width="492" height="184" rx="14" fill="#ffffff" stroke="#d3dde5"/>
+  <text x="68" y="571" class="heading">UART 串口调试</text>
+  <rect x="419" y="548" width="92" height="35" rx="17" fill="#e8eff8"/>
+  <text x="465" y="573" text-anchor="middle" class="label" style="font-size:21px;fill:#365879">1.8V</text>
+  <text x="68" y="614" class="body">TP3：卡端 TX → 适配器 RX</text>
+  <text x="68" y="648" class="body">TP4：卡端 RX ← 适配器 TX</text>
+  <text x="68" y="688" class="small">用于串口日志与交互；适配器需与板卡共地</text>
+  <rect x="564" y="531" width="492" height="184" rx="14" fill="#ffffff" stroke="#d3dde5"/>
+  <text x="588" y="571" class="heading">USB 配套调试</text>
+  <text x="588" y="614" class="body">TP5：D+　　TP6：D−</text>
+  <text x="588" y="648" class="body">配合对应固件和调试工具使用</text>
+  <text x="588" y="688" class="small">未连接至 M.2 的 USB 引脚</text>
+  </g>
+</svg>
