@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="750" viewBox="0 0 1100 750" role="img" aria-labelledby="title desc">
+  <title id="title">AX8850 算力卡接口连接示意</title>
+  <desc id="desc">日常使用：主机与 AX8850 算力卡通过 M.2 M-Key 连接，PCIe 2.0 双通道用于双向数据通信，主机提供 3.3V 电源、公共地、参考时钟和复位。按需调试：TP3 为卡端 UART TX，TP4 为卡端 UART RX，使用 1.8V 电平并共地；USB 的 D+ 和 D− 分别位于 TP5 和 TP6，未连接至 M.2 的 USB 引脚。图中不表示测试点的实物位置。</desc>
+  <defs>
+    <marker id="greenArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9 Z" fill="#247550"/></marker>
+    <marker id="blueArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M1 1 L9 5 L1 9 Z" fill="#476d94"/></marker>
+    <style>
+      text{font-family:'Microsoft YaHei','Noto Sans SC',sans-serif}
+      .title{fill:#213d36;font-size:30px;font-weight:700}
+      .heading{fill:#243d4e;font-size:26px;font-weight:700}
+      .label{fill:#294d40;font-size:25px;font-weight:600}
+      .body{fill:#4e6474;font-size:22px}
+      .small{fill:#526a79;font-size:20px}
+      .white{fill:#f2faf6;font-size:26px;font-weight:700}
+      .light{fill:#c5e0d3;font-size:22px}
+    </style>
+  </defs>
+  <rect width="1100" height="750" rx="20" fill="#f5f8fa"/>
+  <text x="44" y="55" class="title">通过一个 M.2 接口连接主机</text>
+  <rect x="914" y="28" width="142" height="42" rx="21" fill="#e2f0e7"/>
+  <text x="985" y="56" text-anchor="middle" class="label" style="font-size:22px">日常使用</text>
+  <rect x="24" y="95" width="1052" height="325" rx="16" fill="#ffffff" stroke="#d7e5df"/>
+  <text x="550" y="135" text-anchor="middle" class="body">M.2 M-Key 金手指</text>
+  <rect x="60" y="159" width="244" height="206" rx="16" fill="#edf3f6" stroke="#c7d6df"/>
+  <rect x="144" y="182" width="76" height="49" rx="5" fill="#ffffff" stroke="#718b9c" stroke-width="3"/>
+  <path d="M182 232 V244 M160 245 H204" stroke="#718b9c" stroke-width="3" fill="none"/>
+  <text x="182" y="288" text-anchor="middle" class="heading">上位机</text>
+  <text x="182" y="324" text-anchor="middle" class="body">AXCL 驱动与应用</text>
+  <rect x="796" y="159" width="244" height="206" rx="16" fill="#194d3e"/>
+  <rect x="893" y="179" width="50" height="50" rx="6" fill="#32705a" stroke="#a6cbbb" stroke-width="2"/>
+  <path d="M901 173 V179 M917 173 V179 M933 173 V179 M901 229 V235 M917 229 V235 M933 229 V235 M887 187 H893 M887 204 H893 M887 221 H893 M943 187 H949 M943 204 H949 M943 221 H949" stroke="#a6cbbb" stroke-width="2"/>
+  <text x="918" y="288" text-anchor="middle" class="white">AX8850 算力卡</text>
+  <text x="918" y="324" text-anchor="middle" class="light">8GB / 16GB</text>
+  <text x="550" y="185" text-anchor="middle" class="label">PCIe 2.0 ×2 · 数据通信</text>
+  <path d="M333 210 H765" fill="none" stroke="#247550" stroke-width="3" marker-start="url(#greenArrow)" marker-end="url(#greenArrow)"/>
+  <text x="550" y="249" text-anchor="middle" class="body">3.3V 电源 / GND</text>
+  <path d="M333 274 H765" fill="none" stroke="#476d94" stroke-width="3" marker-end="url(#blueArrow)"/>
+  <text x="550" y="312" text-anchor="middle" class="body">REFCLK 时钟 / PERST# 复位</text>
+  <path d="M333 337 H765" fill="none" stroke="#476d94" stroke-width="3" marker-end="url(#blueArrow)"/>
+  <text x="550" y="397" text-anchor="middle" class="small">应用通过 AXCL 调用算力卡的推理与媒体处理能力</text>
+  <text x="44" y="473" class="heading">按需调试 · 独立测试点</text>
+  <text x="44" y="506" class="body">正常部署无需连接，下方为信号说明，不表示焊盘位置。</text>
+  <rect x="44" y="531" width="492" height="184" rx="14" fill="#ffffff" stroke="#d3dde5"/>
+  <text x="68" y="571" class="heading">UART 串口调试</text>
+  <rect x="419" y="548" width="92" height="35" rx="17" fill="#e8eff8"/>
+  <text x="465" y="573" text-anchor="middle" class="label" style="font-size:21px;fill:#365879">1.8V</text>
+  <text x="68" y="614" class="body">TP3：卡端 TX → 适配器 RX</text>
+  <text x="68" y="648" class="body">TP4：卡端 RX ← 适配器 TX</text>
+  <text x="68" y="688" class="small">用于串口日志与交互；适配器需与板卡共地</text>
+  <rect x="564" y="531" width="492" height="184" rx="14" fill="#ffffff" stroke="#d3dde5"/>
+  <text x="588" y="571" class="heading">USB 配套调试</text>
+  <text x="588" y="614" class="body">TP5：D+　　TP6：D−</text>
+  <text x="588" y="648" class="body">配合对应固件和调试工具使用</text>
+  <text x="588" y="688" class="small">未连接至 M.2 的 USB 引脚</text>
+</svg>
