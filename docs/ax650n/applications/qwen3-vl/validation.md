@@ -1,5 +1,8 @@
 ---
 title: "Qwen3-VL-8B 样例结果与版本"
+unlisted: true
+pagination_prev: null
+pagination_next: null
 sidebar_label: "Qwen3-VL-8B 样例结果与版本"
 slug: /ax650n/applications/qwen3-vl/validation
 description: "查看历史 16GB 部署样例、计时范围与固定版本，复现原交付配置。"

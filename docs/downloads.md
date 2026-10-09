@@ -19,7 +19,6 @@ title: "下载软件、模型与配套资料"
 ## 查阅本地配套资料
 
 - [六路 AI 视频推流源码](https://github.com/dshanpi/ax8850-multistream-demo)：[项目使用指南](projects/six-streams.md)、演示录像与原环境实测记录。
-- [Qwen3-VL-8B 历史资料](ax650n/applications/qwen3-vl/usage.md)：原 16GB 环境记录。
 - [RK3576 内核头资料](ax650n/reference/kernel-headers/install.md)：仅适用于其中明确列出的内核版本，不能替代其他内核的 headers。
 
 下载后按[文件校验步骤](usage/download-models.md)核对。历史安装包和附件按原版本提供，使用前先检查适用环境。

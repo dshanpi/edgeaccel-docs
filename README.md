@@ -56,7 +56,7 @@ npm run serve -- --port 3000
 - `docs/projects/`：项目实战入口，包含六路 AI 视频推流总览与 Laya 游戏实验室。
 - `docs/models/`：模型选择、目录及各类部署步骤。
 - `docs/reference/`：验证计划、资料来源与原始附件目录。原始附件目录为 unlisted 页面，不显示在侧栏或站内搜索中，仅保留直接链接；此设置由生成脚本维护。
-- `docs/ax650n/applications/`：已导入的六路项目正文与 Qwen3-VL 记录；保留原文件位置和 URL，导航分别归入项目实战与参考资料。
+- `docs/ax650n/applications/`：已导入的六路项目正文与 Qwen3-VL 记录。六路项目归入项目实战；Qwen3-VL 历史记录隐藏侧栏、搜索及站点地图入口，保留原文件和旧 URL。
 - `docs/ax650n/archive/`：早期版本快照，保留原适用环境。
 - `src/pages/`：首页；`src/css/`：参考站全局样式。
 - `src/components/learning/`、`src/hooks/`：参考站学习路线及浏览器进度组件。

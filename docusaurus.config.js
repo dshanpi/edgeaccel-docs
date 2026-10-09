@@ -48,6 +48,6 @@ const config = {
     hooks: {onBrokenMarkdownLinks: 'throw', onBrokenMarkdownImages: 'throw'},
   },
   themes: ['@docusaurus/theme-mermaid'],
-  plugins: [['@easyops-cn/docusaurus-search-local', {hashed: true, indexBlog: false, language: ['en', 'zh'], ignoreFiles: ['docs/reference/original-files']}]],
+  plugins: [['@easyops-cn/docusaurus-search-local', {hashed: true, indexBlog: false, language: ['en', 'zh'], ignoreFiles: ['docs/reference/original-files', 'docs/ax650n/applications/qwen3-vl/usage', 'docs/ax650n/applications/qwen3-vl/validation']}]],
 };
 export default config;

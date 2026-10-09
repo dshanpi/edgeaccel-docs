@@ -22,8 +22,9 @@ for (const name of ['ModelCatalog', 'ModelSelectionGuide']) {
 const video = fs.readFileSync(path.join(root, 'docs/usage/video.md'), 'utf8');
 assert(!/开发版或演示版/.test(video), 'Stale six-stream project entry');
 const sidebar = fs.readFileSync(path.join(root, 'sidebars.js'), 'utf8');
-const main = sidebar.slice(sidebar.indexOf('"选择与部署模型"'), sidebar.indexOf('"接入应用与维护"'));
-const references = sidebar.slice(sidebar.indexOf('"检查方法与参考"'));
-assert(!main.includes('ax650n/applications/qwen3-vl/'));
-assert(references.includes('ax650n/applications/qwen3-vl/usage'));
+assert(!sidebar.includes('ax650n/applications/qwen3-vl/'), 'Historical Qwen pages must stay out of navigation');
+for (const name of ['usage', 'validation']) {
+  const source = fs.readFileSync(path.join(root, `docs/ax650n/applications/qwen3-vl/${name}.md`), 'utf8');
+  assert(/^unlisted: true$/m.test(source), `Historical Qwen page must be unlisted: ${name}`);
+}
 console.log('Customer documentation audit passed: date presentation and current navigation.');

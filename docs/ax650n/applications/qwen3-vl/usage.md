@@ -1,5 +1,8 @@
 ---
 title: "Qwen3-VL-8B 部署与使用"
+unlisted: true
+pagination_prev: null
+pagination_next: null
 sidebar_label: "Qwen3-VL-8B 部署与使用"
 slug: /ax650n/applications/qwen3-vl/usage
 description: "复现 RK3576 与 AX8850 16GB 的旧版 Qwen3-VL-8B 本地图文和视频帧问答。"

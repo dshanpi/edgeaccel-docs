@@ -139,15 +139,6 @@ export default {
         "reference/validation",
         "reference/glossary",
         "reference/sources",
-        {
-          "type": "category",
-          "label": "历史资料：Qwen3-VL-8B",
-          "collapsed": true,
-          "items": [
-            "ax650n/applications/qwen3-vl/usage",
-            "ax650n/applications/qwen3-vl/validation"
-          ]
-        },
         "downloads"
       ]
     }
