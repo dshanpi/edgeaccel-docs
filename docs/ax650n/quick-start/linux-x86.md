@@ -12,6 +12,8 @@ Linux x86_64 主机　以 Ubuntu 22.04 为例　8GB 与 16GB 版本
 
 **命令在连接算力卡的物理主机 Linux 中执行。** 首次安装先不接卡，完成软件和 PAC 部署后再断电接卡。每一步确认无报错后再继续。
 
+算力卡配套资料：链接: [https://pan.baidu.com/s/1IiO7MG_pfI555qdxRYgHNg?pwd=2pee](https://pan.baidu.com/s/1IiO7MG_pfI555qdxRYgHNg?pwd=2pee) 提取码: 2pee
+
 ## 1 准备安装文件
 
 按卡容量进入下载目录，选择文件名含 **x86_64**、后缀为 **.deb** 的安装包。

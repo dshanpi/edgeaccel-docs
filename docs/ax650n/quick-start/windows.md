@@ -12,14 +12,16 @@ Windows x64 主机　AXCL V3.16.0 Beta
 
 **命令使用管理员权限的 64 位 PowerShell 执行。** 本文以 AXCL 安装目录 `C:\AXCL` 为例。首次安装无需备份默认 PAC。
 
+算力卡配套资料：链接: [https://pan.baidu.com/s/1IiO7MG_pfI555qdxRYgHNg?pwd=2pee](https://pan.baidu.com/s/1IiO7MG_pfI555qdxRYgHNg?pwd=2pee) 提取码: 2pee
+
 ## 1 检查系统并准备文件
 
 按 **Win＋R**，输入 `winver` 查看系统版本。原厂支持 Windows 10 22H2、Windows 11 23H2 及以上的 64 位版本。
 
 | 卡容量 | Windows 安装包 |
 |---|---|
-| 8GB | [下载 8GB Windows 安装器](https://huggingface.co/AXERA-TECH/AXCL/blob/main/V3.16.0_8G/axcl_win64_setup_V3.16.0_20260731020156_NO5288.exe) |
-| 16GB | 使用供货方确认的 Windows 安装包与 16GB 配套 PAC |
+| 8GB | [下载 8GB Windows 安装器](https://huggingface.co/AXERA-TECH/AXCL/blob/main/V3.16.0_8G/axcl_win64_setup_V3.16.0_20260731020156_NO5288.exe)，如果无法下载可以访问上方配套资料中 `03_软件安装包\8GB`目录下的安装包 |
+| 16GB | 访问上方配套资料中 `03_软件安装包\16GB`目录下的安装包 |
 
 公开的 16GB 目录当前仅有 Linux 包。8GB 安装器与 16GB PAC 的组合需供货方确认，不能仅按版本号相同判断兼容。
 
