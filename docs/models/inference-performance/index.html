@@ -1,0 +1,170 @@
+<!doctype html><html lang=zh-Hans dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-models/inference-performance" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>常见模型推理耗时参考 · EdgeAccel 文档</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://edgeaccel.100ask.net/docs/models/inference-performance /><meta data-rh=true property=og:locale content=zh_Hans /><meta data-rh=true name=docusaurus_locale content=zh-Hans /><meta data-rh=true name=docsearch:language content=zh-Hans /><meta data-rh=true name=docusaurus_version content=current /><meta data-rh=true name=docusaurus_tag content=docs-default-current /><meta data-rh=true name=docsearch:version content=current /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-current /><meta data-rh=true property=og:title content="常见模型推理耗时参考 · EdgeAccel 文档"/><meta data-rh=true name=description content="汇总爱芯元智官方视觉、LLM、多模态与语音基准数据，说明推理耗时、首 token 延迟、生成速度及其适用条件。"/><meta data-rh=true property=og:description content="汇总爱芯元智官方视觉、LLM、多模态与语音基准数据，说明推理耗时、首 token 延迟、生成速度及其适用条件。"/><link data-rh=true rel=icon href=/img/edgeaccel.svg /><link data-rh=true rel=canonical href=https://edgeaccel.100ask.net/docs/models/inference-performance /><link data-rh=true rel=alternate href=https://edgeaccel.100ask.net/docs/models/inference-performance hreflang=zh-Hans /><link data-rh=true rel=alternate href=https://edgeaccel.100ask.net/docs/models/inference-performance hreflang=x-default /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://edgeaccel.100ask.net/docs/models/inference-performance","name":"常见模型耗时参考","position":1}]}</script><link rel=stylesheet href=/assets/css/styles.093622e7.css /><script src=/assets/js/runtime~main.743cccb6.js defer></script><script src=/assets/js/main.1347ac82.js defer></script></head><body><svg style="display: none;"><defs>
+<symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme-766")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><link rel=preload as=image href=/img/edgeaccel.svg /><div role=region aria-label=跳到主要内容><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>跳到主要内容</a></div><nav aria-label=主导航 class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_m1mJ"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label=切换导航栏 aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/><div class=navbar__logo><img src=/img/edgeaccel.svg alt="" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/img/edgeaccel.svg alt="" class="themedComponent_mlkZ themedComponent--dark_xIcU"/></div><b class="navbar__title text--truncate">EdgeAccel</b></a><a aria-current=page class="navbar__item navbar__link navbar__link--active" href=/docs/>AX8850</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type=button disabled title="system mode" aria-label="切换浅色/暗黑模式（当前为system mode）"><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill=currentColor d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill=currentColor d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill=currentColor d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"/></svg></button></div><div class=navbarSearchContainer_Bca1><div class="navbar__search searchBarContainer_NW3z" dir=ltr><input placeholder=搜索 aria-label=Search class="navbar__search-input searchInput_YFbd" value="" /><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div role=presentation class=navbar-sidebar__backdrop></div></nav><div id=__docusaurus_skipToContent_fallback class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class=docsWrapper_hBAB><button aria-label=回到顶部 class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type=button></button><div class=docRoot_UBD9><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class=sidebarViewport_aRkj><div class="sidebar_njMd sidebarWithHideableNavbar_wUlq"><a tabindex=-1 class=sidebarLogo_isFc href=/><img src=/img/edgeaccel.svg alt="" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/img/edgeaccel.svg alt="" class="themedComponent_mlkZ themedComponent--dark_xIcU"/><b>EdgeAccel</b></a><nav aria-label=文档侧边栏 class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class=menu__link href=/docs/><span class=linkLabel_WmDU>M.2 算力卡使用指南</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class=menu__link href=/docs/ax650n/roadmap><span class=linkLabel_WmDU>算力卡上手路线</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/getting-started/hardware><span class=categoryLinkLabel_W154>接卡与安装</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=true href=/docs/usage/first-inference><span class=categoryLinkLabel_W154>完成首次推理</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/usage/first-inference><span class=linkLabel_WmDU>脚本运行：首次推理</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/usage/device-check><span class=linkLabel_WmDU>手动操作：检查设备</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/usage/download-models><span class=linkLabel_WmDU>手动操作：下载模型</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/usage/build-samples><span class=linkLabel_WmDU>手动操作：编译示例</span></a></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role=button aria-expanded=true href=/docs/models/selection><span class=categoryLinkLabel_W154>选择与部署模型</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/models/selection><span class=linkLabel_WmDU>按任务和容量选择模型</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/models/catalog><span class=linkLabel_WmDU>模型目录与独立部署文档</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/models/detection><span class=categoryLinkLabel_W154>选择视觉模型</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/models/llm-runtime><span class=categoryLinkLabel_W154>选择文本与多模态模型</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/models/speech-recognition><span class=categoryLinkLabel_W154>选择语音与扩展模型</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/models/deploy/3d-speaker><span class=categoryLinkLabel_W154>模型部署与效果</span></a></div><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current=page tabindex=0 href=/docs/models/inference-performance><span class=linkLabel_WmDU>常见模型耗时参考</span></a></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist" href=/docs/usage/application-guide><span class=categoryLinkLabel_W154>接入应用与维护</span></a><button aria-label="展开侧边栏分类 '接入应用与维护'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=true href=/docs/projects/six-streams><span class=categoryLinkLabel_W154>项目实战</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex=0 href=/docs/projects/six-streams><span class=categoryLinkLabel_W154>AX8850 六路 AI 视频推流</span></a><button aria-label="展开侧边栏分类 'AX8850 六路 AI 视频推流'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/projects/laya-games><span class=linkLabel_WmDU>Laya 游戏实验室</span></a></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/reference/validation><span class=categoryLinkLabel_W154>检查方法与参考</span></a></div></ul></nav><button type=button title=收起侧边栏 aria-label=收起侧边栏 class="button button--secondary button--outline collapseSidebarButton_PEFL"><svg width=20 height=20 aria-hidden=true class=collapseSidebarButtonIcon_kv0_><g fill=#7a7a7a><path d="M9.992 10.023c0 .2-.062.399-.172.547l-4.996 7.492a.982.982 0 01-.828.454H1c-.55 0-1-.453-1-1 0-.2.059-.403.168-.551l4.629-6.942L.168 3.078A.939.939 0 010 2.528c0-.548.45-.997 1-.997h2.996c.352 0 .649.18.828.45L9.82 9.472c.11.148.172.347.172.55zm0 0"/><path d="M19.98 10.023c0 .2-.058.399-.168.547l-4.996 7.492a.987.987 0 01-.828.454h-3c-.547 0-.996-.453-.996-1 0-.2.059-.403.168-.551l4.625-6.942-4.625-6.945a.939.939 0 01-.168-.55 1 1 0 01.996-.997h3c.348 0 .649.18.828.45l4.996 7.492c.11.148.168.347.168.55zm0 0"/></g></svg></button></div></div></aside><main class=docMainContainer_TBSr><div class="container padding-top--md padding-bottom--lg"><div class=row><div class="col docItemCol_VOVn"><div class=docItemContainer_Djhp><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label=页面路径><ul class=breadcrumbs><li class=breadcrumbs__item><a aria-label=主页面 class=breadcrumbs__link href=/><svg viewBox="0 0 24 24" class=breadcrumbHomeIcon_YNFT><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill=currentColor /></svg></a><li class=breadcrumbs__item><span class=breadcrumbs__link>选择与部署模型</span><li class="breadcrumbs__item breadcrumbs__item--active"><span class=breadcrumbs__link>常见模型耗时参考</span></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type=button class="clean-btn tocCollapsibleButton_TO0P">本页总览</button></div><div class="theme-doc-markdown markdown"><header><h1>常见模型推理耗时参考</h1></header>
+<p>处理一张图片需要多久？大模型多久开始回复？本页整理爱芯元智官方公开的 AXCL 基准数据，帮助您在部署 AX8850 应用前估算模型的响应速度。</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=测试条件与适用范围>测试条件与适用范围<a href=#测试条件与适用范围 class=hash-link aria-label=测试条件与适用范围的直接链接 title=测试条件与适用范围的直接链接 translate=no>​</a></h2>
+<p>数据来源于<a href=https://axcl-docs.readthedocs.io/zh-cn/latest/doc_guide_npu_benchmark.html target=_blank rel="noopener noreferrer" class="">官方 AXCL NPU Benchmark</a>。查阅时文档版本为 <strong>AXCL V3.16.0</strong>，工具链为 <strong>Pulsar2 5.1-patch1</strong>；视觉模型使用 <code>axcl_run_model</code>，本页选取 <strong>Batch 1</strong> 数据。</p>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class=admonitionHeading_Gvgb><span class=admonitionIcon_Rf37><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>如何使用这些数据</div><div class=admonitionContent_BuS1><p>以下为官方公开基准，供选型参考，不是本站 AX8850 8GB / 16GB 配置的实测结果或交付指标。原始基准页没有逐项注明卡型号、容量、量化精度、固件及运行程序版本，因此不能据此判断某个模型是否适合您的卡容量。部署配置与效果请同时查看<a class="" href=/docs/models/catalog>模型目录</a>。</div></div>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=视觉模型处理一张图片>视觉模型：处理一张图片<a href=#视觉模型处理一张图片 class=hash-link aria-label=视觉模型：处理一张图片的直接链接 title=视觉模型：处理一张图片的直接链接 translate=no>​</a></h2>
+<p>官方以 IPS（每秒推理图片数）公布结果。下表的毫秒数按 <strong>1000 ÷ IPS</strong> 换算，保留两位小数；计时只覆盖设备端网络推理，不含主机前后处理和 PCIe 数据传输。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>模型<th>输入尺寸<th style=text-align:right>官方速度（IPS）<th style=text-align:right>单张推理耗时（换算，ms）<tbody><tr><td>MobileNetv2<td>224 × 224<td style=text-align:right>1366<td style=text-align:right>0.73<tr><td>ResNet50<td>224 × 224<td style=text-align:right>576<td style=text-align:right>1.74<tr><td>YOLOv5s<td>640 × 640<td style=text-align:right>326<td style=text-align:right>3.07<tr><td>YOLOv8s<td>640 × 640<td style=text-align:right>248<td style=text-align:right>4.03<tr><td>YOLOv11n<td>640 × 640<td style=text-align:right>860<td style=text-align:right>1.16<tr><td>YOLOv11s<td>640 × 640<td style=text-align:right>305<td style=text-align:right>3.28<tr><td>YOLOv11m<td>640 × 640<td style=text-align:right>114<td style=text-align:right>8.77<tr><td>YOLOv11x<td>640 × 640<td style=text-align:right>41<td style=text-align:right>24.39</table>
+<p>来源：<a href=https://axcl-docs.readthedocs.io/zh-cn/latest/doc_guide_npu_benchmark.html#vision-model target=_blank rel="noopener noreferrer" class="">官方 Vision Model 表</a>。</p>
+<p>例如，YOLOv11s 的约 <strong>3.28 ms</strong> 表示模型执行耗时。摄像头采集、解码、缩放、检测框处理、叠图和编码还会增加应用耗时；不能将 305 IPS 直接当作视频输出帧率或多路视频的处理能力。<a class="" href=/docs/projects/six-streams>六路 AI 视频推流</a>需结合完整链路评估。</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=大语言模型多久开始回复>大语言模型：多久开始回复<a href=#大语言模型多久开始回复 class=hash-link aria-label=大语言模型：多久开始回复的直接链接 title=大语言模型：多久开始回复的直接链接 translate=no>​</a></h2>
+<p><strong>TTFT</strong> 是首 token 延迟，反映开始回复前的等待时间；<strong>生成速度</strong>表示后续文本的输出速率。token 是模型的分词单位，不等于一个汉字。</p>
+<p>以下官方测试的提示词长度均为 <strong>128 tokens</strong>。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>模型<th style=text-align:right>官方 TTFT（ms）<th style=text-align:right>官方生成速度（tokens/s）<th style=text-align:right>生成 128 tokens 用时（估算，s）<tbody><tr><td>Qwen2.5-0.5B<td style=text-align:right>80<td style=text-align:right>40<td style=text-align:right>3.20<tr><td>Qwen2.5-1.5B<td style=text-align:right>150<td style=text-align:right>16<td style=text-align:right>8.00<tr><td>Qwen2.5-7B<td style=text-align:right>800<td style=text-align:right>4.8<td style=text-align:right>26.67</table>
+<p>来源：<a href=https://axcl-docs.readthedocs.io/zh-cn/latest/doc_guide_npu_benchmark.html#llm target=_blank rel="noopener noreferrer" class="">官方 LLM 表</a>。最后一列按 <strong>128 ÷ 生成速度</strong> 计算，仅为生成阶段的量级估算，不包含首 token 等待、模型加载或请求排队，也不是完整请求的实测用时。实际生成速度会随上下文长度和配置变化。</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=多模态模型看图并生成回答>多模态模型：看图并生成回答<a href=#多模态模型看图并生成回答 class=hash-link aria-label=多模态模型：看图并生成回答的直接链接 title=多模态模型：看图并生成回答的直接链接 translate=no>​</a></h2>
+<p>视觉语言模型需要先编码图片，再结合提示词生成回答。下表保留官方分项指标：图片输入均为 <strong>384 × 384</strong>，提示词长度均为 <strong>168 tokens</strong>。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>模型<th style=text-align:right>官方图片编码耗时（ms）<th style=text-align:right>官方 TTFT（ms）<th style=text-align:right>官方生成速度（tokens/s）<tbody><tr><td>Qwen3-VL-2B<td style=text-align:right>135<td style=text-align:right>323<td style=text-align:right>14.1<tr><td>Qwen3-VL-4B<td style=text-align:right>143<td style=text-align:right>678<td style=text-align:right>7.0</table>
+<p>来源：<a href=https://axcl-docs.readthedocs.io/zh-cn/latest/doc_guide_npu_benchmark.html#vlm target=_blank rel="noopener noreferrer" class="">官方 VLM 表</a>。原表未说明 TTFT 是否包含图片编码阶段，两个耗时不直接相加。更大图片、多图输入或更长回答需要单独测量。</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=语音识别处理一段音频>语音识别：处理一段音频<a href=#语音识别处理一段音频 class=hash-link aria-label=语音识别：处理一段音频的直接链接 title=语音识别：处理一段音频的直接链接 translate=no>​</a></h2>
+<p><strong>RTF（实时率）= 处理耗时 ÷ 音频时长</strong>，数值越小表示处理越快。下表选择三个语音识别模型，并以 10 秒音频举例。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>模型<th style=text-align:right>官方 RTF<th style=text-align:right>10 秒音频处理耗时（估算，s）<tbody><tr><td>SenseVoice<td style=text-align:right>0.04<td style=text-align:right>0.40<tr><td>Whisper-Tiny<td style=text-align:right>0.08<td style=text-align:right>0.80<tr><td>Whisper-Base<td style=text-align:right>0.11<td style=text-align:right>1.10</table>
+<p>来源：<a href=https://axcl-docs.readthedocs.io/zh-cn/latest/doc_guide_npu_benchmark.html#audio-model target=_blank rel="noopener noreferrer" class="">官方 Audio Model 表</a>。估算值按 <strong>10 × RTF</strong> 计算，不代表流式识别的首字延迟；原表未给出音频样本和完整计时边界。</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=在自己的应用中确认性能>在自己的应用中确认性能<a href=#在自己的应用中确认性能 class=hash-link aria-label=在自己的应用中确认性能的直接链接 title=在自己的应用中确认性能的直接链接 translate=no>​</a></h2>
+<p>选型时先确认模型效果与内存需求，再用实际业务输入测量响应时间。对比测试应固定主机、卡容量、模型与量化版本、AXCL / 固件、输入尺寸或长度，并记录是否包含加载、预处理和后处理。</p>
+<ul>
+<li class=""><strong>图片与视频</strong>：分别测模型耗时和端到端延迟；多路任务需同时运行后再统计。</li>
+<li class=""><strong>文本与多模态</strong>：分别记录首 token 延迟、生成速度、输出长度与峰值内存。</li>
+<li class=""><strong>语音</strong>：记录音频时长、处理耗时；需要实时字幕时另测首字延迟。</li>
+</ul>
+<p>具体方法见<a class="" href=/docs/usage/performance>测量性能与稳定性</a>。准备部署时，返回<a class="" href=/docs/models/selection>按任务和容量选择模型</a>或<a class="" href=/docs/models/catalog>完整模型目录</a>。</div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href=https://github.com/dshanpi/edgeaccel-docs/tree/main/docs/models/inference-performance.md target=_blank rel="noopener noreferrer" class=theme-edit-this-page><svg fill=currentColor height=20 width=20 viewBox="0 0 40 40" class=iconEdit_Z9Sw aria-hidden=true><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"/></g></svg>编辑此页</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label=文件选项卡><a class="pagination-nav__link pagination-nav__link--prev" href=/docs/models/deploy/z-image-turbo><div class=pagination-nav__sublabel>上一页</div><div class=pagination-nav__label>Z-Image-Turbo</div></a><a class="pagination-nav__link pagination-nav__link--next" href=/docs/usage/application-guide><div class=pagination-nav__sublabel>下一页</div><div class=pagination-nav__label>接入应用与维护</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href=#测试条件与适用范围 class="table-of-contents__link toc-highlight">测试条件与适用范围</a><li><a href=#视觉模型处理一张图片 class="table-of-contents__link toc-highlight">视觉模型：处理一张图片</a><li><a href=#大语言模型多久开始回复 class="table-of-contents__link toc-highlight">大语言模型：多久开始回复</a><li><a href=#多模态模型看图并生成回答 class="table-of-contents__link toc-highlight">多模态模型：看图并生成回答</a><li><a href=#语音识别处理一段音频 class="table-of-contents__link toc-highlight">语音识别：处理一段音频</a><li><a href=#在自己的应用中确认性能 class="table-of-contents__link toc-highlight">在自己的应用中确认性能</a></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class=footer__title>开始使用</div><ul class="footer__items clean-list"><li class=footer__item><a class=footer__link-item href=/docs/>文档总览</a><li class=footer__item><a class=footer__link-item href=/docs/ax650n/user-guide>算力卡用户指南</a><li class=footer__item><a class=footer__link-item href=/docs/ax650n/roadmap>上手路线</a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>应用与资料</div><ul class="footer__items clean-list"><li class=footer__item><a class=footer__link-item href=/docs/reference/validation>输出检查方法</a><li class=footer__item><a class=footer__link-item href=/docs/models/catalog>模型目录</a><li class=footer__item><a class=footer__link-item href=/docs/downloads>资料下载</a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>项目</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://github.com/dshanpi/edgeaccel-docs target=_blank rel="noopener noreferrer" class=footer__link-item>GitHub<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_nPIU><use href=#theme-svg-external-link /></svg></a></ul></div></div><div class="footer__bottom text--center"><div class=footer__copyright>Copyright © 2026 100askTeam. Built with Docusaurus.</div></div></div></footer></div></body>
