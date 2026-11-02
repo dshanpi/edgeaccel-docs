@@ -73,7 +73,8 @@ export default {
           "label": "模型部署与效果",
           "collapsed": true,
           "items": modelSidebar
-        }
+        },
+        "models/inference-performance"
       ]
     },
     {
